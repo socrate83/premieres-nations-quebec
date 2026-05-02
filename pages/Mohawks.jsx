@@ -1,0 +1,270 @@
+export default function Mohawks() {
+  const html = `<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Les Mohawks — Kanien'kehá:ka, Peuple du silex</title>
+  <style>
+    @import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700;900&family=Lato:wght@300;400;700&display=swap');
+    :root{
+      --brun-fonce:#2E1A0E;
+      --brun-moyen:#5C3318;
+      --brun-accent:#8B5A2B;
+      --or:#A07810;
+      --or-clair:#C89A20;
+      --rouge-guerre:#8B1A1A;
+      --beige:#F5EDD6;
+      --creme:#FAF6F0;
+      --blanc:#FFFFFF;
+      --texte:#1E1E1E;
+      --texte-doux:#3A3A3A;
+    }
+    *{margin:0;padding:0;box-sizing:border-box}
+    html,body{scroll-behavior:smooth;height:100%;overflow-y:auto}
+    body{font-family:'Lato',sans-serif;background:var(--creme);color:var(--texte);line-height:1.8}
+    .hero{position:relative;width:100%;height:92vh;min-height:520px;overflow:hidden;display:flex;align-items:center;justify-content:center}
+    .hero img{position:absolute;top:0;left:0;width:100%;height:100%;object-fit:cover;filter:brightness(0.45)}
+    .hero-content{position:relative;z-index:2;text-align:center;padding:2rem;max-width:900px}
+    .hero-nation{font-size:0.85rem;letter-spacing:5px;text-transform:uppercase;color:var(--or-clair);font-weight:700;margin-bottom:0.75rem}
+    .hero h1{font-family:'Playfair Display',serif;font-size:clamp(2.8rem,6vw,5.5rem);font-weight:900;color:#fff;text-shadow:2px 4px 24px rgba(0,0,0,0.7);line-height:1.1;margin-bottom:1.2rem}
+    .hero-sub{font-family:'Playfair Display',serif;font-size:1.25rem;color:rgba(255,255,255,0.9);font-style:italic}
+    .scroll-hint{position:absolute;bottom:2rem;left:50%;transform:translateX(-50%);color:rgba(255,255,255,0.6);font-size:0.78rem;letter-spacing:2px;text-transform:uppercase;animation:bob 2s infinite}
+    @keyframes bob{0%,100%{transform:translateX(-50%) translateY(0)}50%{transform:translateX(-50%) translateY(8px)}}
+    .nav{background:var(--brun-fonce);padding:0.9rem 2rem;position:sticky;top:0;z-index:1000;display:flex;gap:1.4rem;justify-content:center;flex-wrap:wrap}
+    .nav a{color:#FFFFFF;text-decoration:none;font-size:0.82rem;letter-spacing:1.5px;text-transform:uppercase;font-weight:700;transition:color 0.2s;cursor:pointer}
+    .nav a:hover{color:var(--or-clair)}
+    .container{max-width:900px;margin:0 auto;padding:0 2rem}
+    .section{padding:5rem 2rem}
+    .section:nth-child(odd){background:var(--blanc)}
+    .section:nth-child(even){background:var(--beige)}
+    .sec-label{font-size:0.73rem;letter-spacing:4px;text-transform:uppercase;color:var(--brun-moyen);font-weight:700;margin-bottom:0.6rem;text-align:center}
+    .sec-title{font-family:'Playfair Display',serif;font-size:clamp(1.9rem,3.5vw,2.8rem);color:var(--brun-fonce);text-align:center;line-height:1.2}
+    .divider{width:56px;height:4px;background:linear-gradient(to right,var(--brun-moyen),var(--or));margin:1.4rem auto 2.8rem;border-radius:2px}
+    p{font-size:1.04rem;line-height:1.9;color:var(--texte-doux);max-width:820px;margin:0 auto 1.5rem}
+    .intro-wrap{background:var(--blanc);padding:4rem 2rem}
+    .intro-card{background:linear-gradient(135deg,var(--brun-fonce),var(--brun-moyen));color:#fff;border-radius:18px;padding:3rem;text-align:center;max-width:820px;margin:0 auto;box-shadow:0 20px 60px rgba(46,26,14,0.3)}
+    .intro-kword{font-family:'Playfair Display',serif;font-size:3rem;color:var(--or-clair);margin-bottom:0.4rem}
+    .intro-card p{font-size:1.1rem;color:#fff;margin-bottom:0;line-height:1.9}
+    .stats{display:flex;justify-content:center;gap:2.5rem;margin-top:2.5rem;flex-wrap:wrap}
+    .stat-n{font-family:'Playfair Display',serif;font-size:2.2rem;font-weight:900;color:var(--or-clair)}
+    .stat-l{font-size:0.78rem;letter-spacing:1.5px;text-transform:uppercase;color:rgba(255,255,255,0.75)}
+    .highlight{background:#FDF8F2;border:2px solid var(--brun-moyen);border-radius:14px;padding:2rem;max-width:820px;margin:2rem auto}
+    .highlight h3{font-family:'Playfair Display',serif;color:var(--brun-fonce);font-size:1.25rem;margin-bottom:1rem}
+    .highlight ul{list-style:none;padding:0}
+    .highlight ul li{padding:0.45rem 0 0.45rem 2rem;position:relative;font-size:0.97rem;color:var(--texte-doux)}
+    .highlight ul li::before{content:'◆';position:absolute;left:0;color:var(--brun-accent);font-size:0.68rem;top:0.72rem}
+    .cards{display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:1.5rem;max-width:860px;margin:2.5rem auto}
+    .card{background:var(--blanc);border-radius:14px;padding:1.8rem 1.5rem;box-shadow:0 4px 20px rgba(0,0,0,0.08);border-top:4px solid var(--brun-moyen);transition:transform 0.2s,box-shadow 0.2s}
+    .card:hover{transform:translateY(-4px);box-shadow:0 12px 36px rgba(0,0,0,0.13)}
+    .card-icon{font-size:2.1rem;margin-bottom:0.9rem}
+    .card h3{font-family:'Playfair Display',serif;font-size:1.15rem;color:var(--brun-fonce);margin-bottom:0.7rem}
+    .card p{font-size:0.93rem;margin:0;color:#444;line-height:1.7}
+    .timeline{position:relative;max-width:760px;margin:1rem auto}
+    .timeline::before{content:'';position:absolute;left:31px;top:0;bottom:0;width:3px;background:linear-gradient(to bottom,var(--brun-moyen),var(--or));border-radius:2px}
+    .tl-item{display:flex;gap:2rem;margin-bottom:2.5rem;align-items:flex-start}
+    .tl-dot{flex-shrink:0;width:64px;height:64px;background:var(--brun-fonce);border:3px solid var(--or-clair);border-radius:50%;display:flex;align-items:center;justify-content:center;font-family:'Playfair Display',serif;font-weight:900;font-size:0.68rem;color:var(--or-clair);text-align:center;line-height:1.2;z-index:1}
+    .tl-box{background:var(--blanc);border-radius:12px;padding:1.5rem;box-shadow:0 4px 18px rgba(0,0,0,0.07);flex:1;border-left:4px solid var(--brun-moyen)}
+    .tl-box h3{font-family:'Playfair Display',serif;font-size:1.18rem;color:var(--brun-fonce);margin-bottom:0.45rem}
+    .tl-box p{font-size:0.95rem;margin:0;color:#444}
+    .comm-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(200px,1fr));gap:1rem;max-width:860px;margin:2rem auto}
+    .comm-card{background:var(--blanc);border-radius:12px;padding:1.2rem 1.4rem;box-shadow:0 3px 14px rgba(0,0,0,0.07);border-left:4px solid var(--brun-moyen)}
+    .comm-card h4{font-family:'Playfair Display',serif;color:var(--brun-fonce);font-size:1rem;margin-bottom:0.3rem}
+    .comm-card p{font-size:0.85rem;color:#555;margin:0}
+    .img-wide{width:100%;max-width:860px;margin:2rem auto;display:block;border-radius:16px;box-shadow:0 10px 36px rgba(0,0,0,0.14)}
+    .img-cap{text-align:center;font-style:italic;font-size:0.85rem;color:#777;margin-top:0.6rem}
+    .quote-sec{background:linear-gradient(135deg,#2E1A0E,#4A2A10);padding:5rem 2rem;text-align:center}
+    .quote-sec blockquote{font-family:'Playfair Display',serif;font-size:clamp(1.3rem,3vw,1.9rem);color:#fff;font-style:italic;max-width:720px;margin:0 auto;line-height:1.65}
+    .quote-src{color:rgba(255,255,255,0.6);font-size:0.85rem;margin-top:1.5rem;letter-spacing:2px;text-transform:uppercase}
+    footer{background:var(--brun-fonce);color:var(--beige);text-align:center;padding:3rem 2rem}
+    footer h3{font-family:'Playfair Display',serif;font-size:1.5rem;color:var(--or-clair);margin-bottom:1rem}
+    footer p{font-size:0.88rem;color:rgba(245,237,214,0.82);max-width:600px;margin:0 auto 0.5rem;line-height:1.7}
+    footer .sources{margin-top:2rem;font-size:0.78rem;color:rgba(245,237,214,0.5)}
+    footer .sources a{color:var(--or-clair);text-decoration:none}
+    @media(max-width:640px){.nav{gap:0.8rem}}
+  </style>
+</head>
+<body>
+  <section class="hero">
+    <img src="https://media.base44.com/images/public/69f23c5b09417d29099136be/18647dec7_generated_image.png" alt="Territoire mohawk — vallée du Saint-Laurent" />
+    <div class="hero-content">
+      <p class="hero-nation">Premières Nations du Québec</p>
+      <h1>Les Mohawks</h1>
+      <p class="hero-sub">Kanien'kehá:ka — « Peuple du pays du silex »</p>
+    </div>
+    <div class="scroll-hint">↓ Découvrir</div>
+  </section>
+
+  <nav class="nav" id="navbar">
+    <a onclick="goTo('origines')">Origines</a>
+    <a onclick="goTo('haudenosaunee')">Haudenosaunee</a>
+    <a onclick="goTo('culture')">Culture</a>
+    <a onclick="goTo('histoire')">Histoire</a>
+    <a onclick="goTo('oka')">Crise d'Oka</a>
+    <a onclick="goTo('communautes')">Communautés</a>
+    <a onclick="goTo('aujourd-hui')">Aujourd'hui</a>
+  </nav>
+
+  <div class="intro-wrap">
+    <div class="intro-card">
+      <div class="intro-kword">Kanien'kehá:ka !</div>
+      <p>Les <strong>Mohawks</strong> — ou <em>Kanien'kehá:ka</em> (« peuple du pays du silex ») dans leur langue — sont la gardienne de la porte orientale de la grande <strong>Confédération des Haudenosaunee</strong> (Ligue iroquoise). Nation guerrière et diplomatique redoutée, ils ont joué un rôle déterminant dans l'histoire de l'Amérique du Nord pendant trois siècles. Aujourd'hui, ils habitent trois communautés au Québec — <strong>Kahnawake, Kanesatake et Akwesasne</strong> — et sont connus pour leur fierté culturelle, leur engagement politique et leur rôle central dans la <strong>Crise d'Oka de 1990</strong>.</p>
+      <div class="stats">
+        <div><div class="stat-n">~15 000</div><div class="stat-l">Mohawks au Québec (2024)</div></div>
+        <div><div class="stat-n">3</div><div class="stat-l">Communautés au Québec</div></div>
+        <div><div class="stat-n">1 des 6</div><div class="stat-l">nations de la Ligue iroquoise</div></div>
+      </div>
+    </div>
+  </div>
+
+  <section class="section" id="origines">
+    <div class="container">
+      <div class="sec-label">Aux racines du monde</div>
+      <h2 class="sec-title">Origines et identité</h2>
+      <div class="divider"></div>
+      <p>Les Mohawks appartiennent à la grande famille linguistique <strong>iroquoienne</strong> — la même que les Wendat (Hurons). Leur langue, le <strong>Kanyen'kéha</strong>, est l'une des six langues de la Confédération des Haudenosaunee. Comme leurs cousins wendat, les Mohawks sont une société <strong>matrilinéaire</strong> : la descendance et le clan se transmettent par la mère, et les femmes occupent un rôle politique fondamental.</p>
+      <p>Le nom <strong>Mohawk</strong> est d'origine algonquienne — il signifierait <em>« mangeurs de chair humaine »</em>, une appellation hostile imposée par leurs ennemis algonquiens. Leur vrai nom, <strong>Kanien'kehá:ka</strong>, signifie <em>« peuple du pays du silex »</em> — une référence aux roches de silex abondantes dans leur territoire originel de la vallée du Mohawk (dans l'État de New York actuel).</p>
+      <div class="highlight">
+        <h3>🌌 Vision du monde mohawk — Ohen:ton Karihwatéhkwen</h3>
+        <ul>
+          <li>L'<strong>Ohen:ton Karihwatéhkwen</strong> (« Les mots qui viennent avant toutes choses ») est la prière d'action de grâces récitée avant chaque rassemblement — un remerciement à tous les êtres vivants, de la Terre jusqu'au Créateur.</li>
+          <li>Les <strong>trois clans principaux</strong> (Tortue, Ours, Loup) structurent la société mohawk. Le clan détermine le groupe social, les alliances matrimoniales et les responsabilités cérémonielles.</li>
+          <li><strong>Skywoman</strong> (Aataentsic) — la Femme-Ciel tombée du monde céleste — est la figure fondatrice. Elle crée la Terre sur le dos d'une tortue géante.</li>
+          <li>Le <strong>wampum à deux rangées</strong> (Kaswentha) symbolise le principe de coexistence entre Autochtones et Européens : deux entités distinctes, naviguant côte à côte sans interférence.</li>
+        </ul>
+      </div>
+    </div>
+  </section>
+
+  <section class="section" id="haudenosaunee">
+    <div class="container">
+      <div class="sec-label">La Grande Ligue</div>
+      <h2 class="sec-title">La Confédération des Haudenosaunee</h2>
+      <div class="divider"></div>
+      <p>Les Mohawks sont l'une des six nations fondatrices de la <strong>Confédération des Haudenosaunee</strong> (aussi appelée Ligue iroquoise ou Confédération des Six Nations) — l'une des plus anciennes démocraties du monde, fondée selon la tradition par le <strong>Peacemaker</strong> (Deganawida) et son porte-parole <strong>Hiawatha</strong>, probablement au 15e ou 16e siècle.</p>
+      <p>Cette confédération regroupait à l'origine cinq nations (Mohawks, Oneidas, Onondagas, Cayugas, Sénécas) — les <strong>Tuscaroras</strong> les rejoignent en 1722, formant les Six Nations. Chaque nation avait un rôle spécifique : les Mohawks gardaient la <em>porte de l'Est</em>, les Sénécas la <em>porte de l'Ouest</em>, et les Onondagas gardaient le <em>feu central</em> de la confédération.</p>
+      <div class="highlight">
+        <h3>🏛️ La Grande Loi de la Paix — Kaianere'kó:wa</h3>
+        <ul>
+          <li>La <strong>Kaianere'kó:wa</strong> (Grande Loi de la Paix) est la constitution orale de la Confédération — l'un des systèmes de gouvernance les plus sophistiqués du monde précolombien.</li>
+          <li>Les décisions se prennent par <strong>consensus</strong> entre les 50 chefs (Royaneh) désignés par les femmes de clan.</li>
+          <li>Plusieurs historiens soutiennent que la <strong>Constitution américaine de 1787</strong> s'est inspirée en partie de la Grande Loi de la Paix — notamment le principe de séparation des pouvoirs.</li>
+          <li>Les <strong>femmes de clan</strong> (Clan Mothers) désignent et destituent les chefs — un féminisme politique millénaire.</li>
+        </ul>
+      </div>
+    </div>
+  </section>
+
+  <section class="section" id="culture">
+    <div class="container">
+      <div class="sec-label">Traditions vivantes</div>
+      <h2 class="sec-title">Culture, langue et traditions</h2>
+      <div class="divider"></div>
+      <div class="cards">
+        <div class="card"><div class="card-icon">🗣️</div><h3>Le Kanyen'kéha</h3><p>La langue mohawk est enseignée dans les écoles de Kahnawake et Kanesatake. Des programmes d'immersion linguistique (Kanien'kehá:ka Onkwawén:na Raotitióhkwa) forment des locuteurs depuis les années 1970. Langue tonale d'une complexité remarquable.</p></div>
+        <div class="card"><div class="card-icon">🏗️</div><h3>Les ironworkers mohawks</h3><p>Depuis 1886, les Mohawks de Kahnawake sont réputés pour leur absence de vertige — ils ont construit les plus grands ponts et gratte-ciel d'Amérique du Nord (pont de Québec, Empire State Building, World Trade Center). Une fierté nationale emblématique.</p></div>
+        <div class="card"><div class="card-icon">🥍</div><h3>Lacrosse — le Sport du Créateur</h3><p>Le lacrosse (Tewaarathon — « petit frère de la guerre ») est un sport sacré inventé par les Haudenosaunee. Utilisé à l'origine dans des cérémonies et pour régler les conflits, il est aujourd'hui un sport olympique. Les Mohawks en sont parmi les meilleurs joueurs au monde.</p></div>
+        <div class="card"><div class="card-icon">🪶</div><h3>Wampum et diplomatie</h3><p>Les ceintures de wampum (perles de coquillage) encodent les traités, les alliances et l'histoire de la nation. Chaque ceinture est un document diplomatique vivant. Les Mohawks sont maîtres dans l'art de la diplomatie par le wampum.</p></div>
+        <div class="card"><div class="card-icon">🌽</div><h3>Les Trois Sœurs</h3><p>Comme leurs cousins wendat, les Mohawks cultivent le maïs, les haricots et la courge — les Trois Sœurs sacrées. L'agriculture est au cœur de leur identité sédentaire, complétée par la chasse et la pêche saisonnières.</p></div>
+        <div class="card"><div class="card-icon">🎨</div><h3>Mohawk Beadwork</h3><p>La broderie de perles mohawk est reconnue mondialement. Les artisanes créent des tableaux, vêtements et objets d'une précision et d'une beauté exceptionnelles. Cette tradition est en plein renouveau chez les jeunes artistes de Kahnawake.</p></div>
+      </div>
+    </div>
+  </section>
+
+  <section class="quote-sec">
+    <blockquote>« Nous sommes les gardiens de la porte orientale. Notre rôle est de protéger notre peuple et de maintenir la paix dans la Grande Ligue. »</blockquote>
+    <p class="quote-src">— Tradition orale mohawk</p>
+  </section>
+
+  <section class="section" id="histoire">
+    <div class="container">
+      <div class="sec-label">Des siècles de résistance</div>
+      <h2 class="sec-title">Histoire et contacts européens</h2>
+      <div class="divider"></div>
+      <div class="timeline">
+        <div class="tl-item">
+          <div class="tl-dot">1609</div>
+          <div class="tl-box"><h3>Premier conflit avec Champlain</h3><p>En 1609, Champlain et ses alliés algonquiens et wendat affrontent les Haudenosaunee au lac Champlain. Les armes à feu françaises causent un choc psychologique immense — et déclenchent une hostilité durable entre les Mohawks et les Français.</p></div>
+        </div>
+        <div class="tl-item">
+          <div class="tl-dot">1640s</div>
+          <div class="tl-box"><h3>Guerres iroquoises</h3><p>Armés par les Hollandais puis les Anglais, les Mohawks et les Haudenosaunee lancent les <em>Guerres iroquoises</em> contre les nations alliées des Français. La Huronie est détruite (1649-1650). Les Mohawks dominent le commerce des fourrures pendant des décennies.</p></div>
+        </div>
+        <div class="tl-item">
+          <div class="tl-dot">1667</div>
+          <div class="tl-box"><h3>Kahnawake — La mission des Sauts</h3><p>Des Mohawks christianisés s'établissent près de Montréal à la mission jésuite de Sault-Saint-Louis (futur Kahnawake). Ils servent d'alliés aux Français lors des guerres contre les colonies anglaises.</p></div>
+        </div>
+        <div class="tl-item">
+          <div class="tl-dot">1701</div>
+          <div class="tl-box"><h3>Grande Paix de Montréal</h3><p>La <strong>Grande Paix de Montréal</strong> (1701) met fin aux guerres iroquoises. 39 nations autochtones signent un traité de paix avec les Français — un événement diplomatique sans précédent. Les Mohawks jouent un rôle central dans cette négociation.</p></div>
+        </div>
+        <div class="tl-item">
+          <div class="tl-dot">1886</div>
+          <div class="tl-box"><h3>Les ironworkers de Kahnawake</h3><p>La construction du pont Victoria franchissant le Saint-Laurent révèle un talent exceptionnel : les Mohawks de Kahnawake n'ont aucune peur des hauteurs. Ils deviennent les ironworkers les plus recherchés d'Amérique du Nord — constructeurs de ponts et gratte-ciel légendaires.</p></div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="section" id="oka">
+    <div class="container">
+      <div class="sec-label">Été 1990</div>
+      <h2 class="sec-title">La Crise d'Oka — 78 jours de résistance</h2>
+      <div class="divider"></div>
+      <p>L'été 1990 a marqué un tournant dans l'histoire des relations entre les Autochtones et les gouvernements canadiens. La <strong>Crise d'Oka</strong> (11 juillet – 26 septembre 1990) a duré <strong>78 jours</strong> et a mobilisé l'attention du monde entier sur les droits territoriaux des Mohawks.</p>
+      <p>Tout commence quand la municipalité d'Oka (Kanesatake) annonce l'expansion d'un terrain de golf sur une <strong>pinède sacrée</strong> que les Mohawks revendiquent depuis le 18e siècle — y compris un cimetière ancestral. Les Warriors mohawks dressent des barricades. Le 11 juillet, la Sûreté du Québec tente de les démanteler de force : un policier est tué dans l'affrontement. La crise s'embrase.</p>
+      <p>L'armée canadienne est déployée. Les Mohawks de Kahnawake bloquent le pont Mercier pendant 78 jours, paralysant la rive sud de Montréal. La résistance des <em>Warriors</em> et leurs masques de camouflage deviennent des icônes mondiales de la lutte autochtone. Le 26 septembre, les Mohawks lèvent les barricades — sans que leurs revendications territoriales soient résolues.</p>
+      <div class="highlight">
+        <h3>⚖️ L'héritage de la Crise d'Oka</h3>
+        <ul>
+          <li>La crise a forcé le gouvernement fédéral à créer la <strong>Commission royale sur les peuples autochtones</strong> (1991-1996) — la plus grande enquête de ce type dans l'histoire canadienne.</li>
+          <li>Elle a mis les <strong>revendications territoriales autochtones</strong> à l'agenda politique national pour la première fois avec une telle force.</li>
+          <li>Les <strong>droits territoriaux de Kanesatake</strong> ne sont toujours pas pleinement résolus — un dossier ouvert depuis plus de 300 ans.</li>
+          <li>Le film documentaire <em>Kanehsatake: 270 Years of Resistance</em> d'Alanis Obomsawin (ONF, 1993) est l'un des documentaires politiques les plus importants de l'histoire canadienne.</li>
+        </ul>
+      </div>
+    </div>
+  </section>
+
+  <section class="section" id="communautes">
+    <div class="container">
+      <div class="sec-label">Les 3 communautés</div>
+      <h2 class="sec-title">Les communautés mohawks du Québec</h2>
+      <div class="divider"></div>
+      <div class="comm-grid">
+        <div class="comm-card"><h4>🏘️ Kahnawake</h4><p>Rive sud de Montréal. La plus grande communauté mohawk du Québec (~8 000 hab.). Célèbre pour ses ironworkers. Conseil mohawk autonome hors de la Loi sur les Indiens.</p></div>
+        <div class="comm-card"><h4>🏘️ Kanesatake</h4><p>Près d'Oka. Territoire revendiqué depuis le 18e siècle. Lieu de la Crise de 1990. Communauté de ~2 000 membres avec revendications territoriales en cours.</p></div>
+        <div class="comm-card"><h4>🏘️ Akwesasne</h4><p>À cheval sur le Québec, l'Ontario et New York. Situation unique : traversée par deux frontières internationales. ~10 000 membres au total. Économie dynamique.</p></div>
+      </div>
+    </div>
+  </section>
+
+  <section class="section" id="aujourd-hui">
+    <div class="container">
+      <div class="sec-label">XXIe siècle</div>
+      <h2 class="sec-title">Les Mohawks aujourd'hui</h2>
+      <div class="divider"></div>
+      <p>Les Mohawks sont l'une des nations autochtones les plus actives politiquement au Canada. <strong>Kahnawake</strong> fonctionne comme un gouvernement quasi autonome — avec ses propres lois, sa propre police (la Police de Kahnawake), son système judiciaire et ses institutions. La communauté a été l'une des premières au Canada à <strong>refuser d'appliquer la Loi sur les Indiens</strong> et à gouverner selon ses propres lois traditionnelles.</p>
+      <p>La <strong>Kahnawake Gaming Commission</strong> a fait de la communauté un pionnier dans l'industrie du jeu en ligne au Canada — générant des revenus considérables investis dans les services communautaires et l'éducation.</p>
+      <div class="cards">
+        <div class="card"><div class="card-icon">🏗️</div><h3>Fierté des ironworkers</h3><p>La tradition des ironworkers de Kahnawake est vivante au 21e siècle. Des Mohawks ont travaillé sur le One World Trade Center à New York après le 11 septembre 2001 — comme leurs ancêtres avaient construit les Twin Towers en 1972.</p></div>
+        <div class="card"><div class="card-icon">🎓</div><h3>Éducation mohawk</h3><p>L'école Kahnawake Survival School propose un programme d'immersion totale en langue mohawk depuis 1978 — l'un des premiers programmes d'immersion autochtone au Canada. Un modèle suivi par des dizaines de nations.</p></div>
+        <div class="card"><div class="card-icon">🏛️</div><h3>Autonomie gouvernementale</h3><p>Kahnawake fonctionne avec sa propre police, son propre code de membership, ses propres lois sur le territoire et le mariage. Un modèle d'autodétermination autochtone qui inspire d'autres communautés à travers le Canada.</p></div>
+      </div>
+    </div>
+  </section>
+
+  <footer>
+    <h3>Kanien'kehá:ka — Les Gardiens de la Porte de l'Est</h3>
+    <p>Cet article a été rédigé avec respect pour la nation mohawk — peuple guerrier, diplomate et bâtisseur.</p>
+    <p>🌐 <a href="https://www.kahnawake.com" target="_blank">kahnawake.com</a> | <a href="https://tourismeautochtone.com" target="_blank">tourismeautochtone.com</a></p>
+    <div class="sources"><strong>Sources :</strong> Gouvernement du Québec (2025) • Encyclopédie canadienne • Commission royale sur les peuples autochtones • ONF — Alanis Obomsawin</div>
+  </footer>
+
+  <script>
+    function goTo(id){var el=document.getElementById(id);if(!el)return;var nav=document.getElementById('navbar');var navH=nav?nav.offsetHeight:0;var top=el.getBoundingClientRect().top+document.documentElement.scrollTop-navH-10;document.documentElement.scrollTop=top;document.body.scrollTop=top;}
+  </script>
+</body>
+</html>`;
+  return <iframe srcDoc={html} style={{width:'100%',height:'100vh',border:'none'}} title="Les Mohawks"/>;
+}
