@@ -1,0 +1,329 @@
+export default function Abenaquis() {
+  const html = `<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Les Abénaquis — Peuple des Terres de l'Aube</title>
+  <style>
+    @import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700;900&family=Lato:wght@300;400;700&display=swap');
+    :root{--brun-terre:#5C3D1E;--brun-clair:#8B5E3C;--ocre:#C47F2B;--beige:#F5ECD7;--creme:#FDF8F0;--vert-foret:#2D5016;--vert-clair:#4A7C2F;--blanc:#FFFFFF;--gris-texte:#2C2C2C}
+    *{margin:0;padding:0;box-sizing:border-box}
+    html,body{scroll-behavior:smooth;height:100%;overflow-y:auto}
+    body{font-family:'Lato',sans-serif;background-color:var(--creme);color:var(--gris-texte);line-height:1.8}
+    .hero{position:relative;width:100%;height:90vh;min-height:500px;overflow:hidden;display:flex;align-items:center;justify-content:center}
+    .hero img{position:absolute;top:0;left:0;width:100%;height:100%;object-fit:cover;object-position:center;filter:brightness(0.55)}
+    .hero-content{position:relative;z-index:2;text-align:center;padding:2rem;max-width:900px}
+    .hero-subtitle{font-family:'Lato',sans-serif;font-weight:300;font-size:1rem;letter-spacing:4px;text-transform:uppercase;color:var(--ocre);margin-bottom:1rem}
+    .hero h1{font-family:'Playfair Display',serif;font-size:clamp(2.5rem,6vw,5rem);font-weight:900;color:var(--blanc);text-shadow:2px 4px 20px rgba(0,0,0,0.5);line-height:1.1;margin-bottom:1.5rem}
+    .hero-tagline{font-size:1.2rem;color:rgba(255,255,255,0.85);font-style:italic;font-family:'Playfair Display',serif}
+    .hero-scroll{position:absolute;bottom:2rem;left:50%;transform:translateX(-50%);z-index:2;color:rgba(255,255,255,0.6);font-size:0.8rem;letter-spacing:2px;text-transform:uppercase;animation:bounce 2s infinite}
+    @keyframes bounce{0%,100%{transform:translateX(-50%) translateY(0)}50%{transform:translateX(-50%) translateY(8px)}}
+    .nav-chapitres{background:var(--brun-terre);padding:1rem 2rem;position:sticky;top:0;z-index:1000;display:flex;gap:1.5rem;justify-content:center;flex-wrap:wrap}
+    .nav-chapitres a{color:var(--beige);text-decoration:none;font-size:0.85rem;letter-spacing:1.5px;text-transform:uppercase;font-weight:700;transition:color 0.3s;cursor:pointer}
+    .nav-chapitres a:hover{color:var(--ocre)}
+    .container{max-width:900px;margin:0 auto;padding:0 2rem}
+    .intro-section{background:var(--blanc);padding:4rem 2rem}
+    .intro-card{background:linear-gradient(135deg,var(--brun-terre),var(--brun-clair));color:var(--blanc);border-radius:16px;padding:3rem;text-align:center;max-width:800px;margin:0 auto;box-shadow:0 20px 60px rgba(92,61,30,0.3)}
+    .intro-card .kword{font-size:3rem;font-family:'Playfair Display',serif;margin-bottom:0.5rem;color:var(--ocre)}
+    .intro-card p{font-size:1.1rem;line-height:1.9;opacity:0.92}
+    .stats-row{display:flex;justify-content:center;gap:2rem;margin-top:2.5rem;flex-wrap:wrap}
+    .stat-item{text-align:center}
+    .stat-number{font-family:'Playfair Display',serif;font-size:2.2rem;font-weight:900;color:var(--ocre)}
+    .stat-label{font-size:0.8rem;text-transform:uppercase;letter-spacing:1.5px;opacity:0.75}
+    .section{padding:5rem 2rem}
+    .section:nth-child(even){background:var(--beige)}
+    .section:nth-child(odd){background:var(--blanc)}
+    .section-header{text-align:center;margin-bottom:3rem}
+    .section-label{font-size:0.75rem;letter-spacing:4px;text-transform:uppercase;color:var(--ocre);font-weight:700;margin-bottom:0.75rem}
+    .section h2{font-family:'Playfair Display',serif;font-size:clamp(1.8rem,3.5vw,2.8rem);color:var(--brun-terre);line-height:1.2}
+    .divider{width:60px;height:4px;background:linear-gradient(to right,var(--ocre),var(--brun-clair));margin:1.5rem auto;border-radius:2px}
+    .section p{font-size:1.05rem;line-height:1.9;color:#3a3a3a;max-width:800px;margin:0 auto 1.5rem auto}
+    .timeline{position:relative;max-width:750px;margin:0 auto;padding:1rem 0}
+    .timeline::before{content:'';position:absolute;left:30px;top:0;bottom:0;width:3px;background:linear-gradient(to bottom,var(--ocre),var(--brun-clair));border-radius:2px}
+    .timeline-item{display:flex;gap:2rem;margin-bottom:2.5rem;align-items:flex-start}
+    .timeline-dot{flex-shrink:0;width:62px;height:62px;background:var(--brun-terre);border:3px solid var(--ocre);border-radius:50%;display:flex;align-items:center;justify-content:center;font-family:'Playfair Display',serif;font-weight:900;font-size:0.7rem;color:var(--ocre);text-align:center;line-height:1.2;z-index:1}
+    .timeline-content{background:var(--blanc);border-radius:12px;padding:1.5rem;box-shadow:0 4px 20px rgba(0,0,0,0.08);flex:1;border-left:4px solid var(--ocre)}
+    .timeline-content h3{font-family:'Playfair Display',serif;font-size:1.2rem;color:var(--brun-terre);margin-bottom:0.5rem}
+    .timeline-content p{font-size:0.97rem;margin:0;color:#444}
+    .img-wide{width:100%;max-width:850px;margin:2rem auto;display:block;border-radius:16px;box-shadow:0 12px 40px rgba(0,0,0,0.15)}
+    .img-caption{text-align:center;font-style:italic;font-size:0.87rem;color:#777;margin-top:0.75rem}
+    .cards-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:1.5rem;max-width:850px;margin:2rem auto}
+    .card{background:var(--blanc);border-radius:14px;padding:2rem 1.5rem;box-shadow:0 4px 20px rgba(0,0,0,0.08);border-top:4px solid var(--ocre);transition:transform 0.2s,box-shadow 0.2s}
+    .card:hover{transform:translateY(-4px);box-shadow:0 12px 40px rgba(0,0,0,0.14)}
+    .card-icon{font-size:2.2rem;margin-bottom:1rem}
+    .card h3{font-family:'Playfair Display',serif;font-size:1.2rem;color:var(--brun-terre);margin-bottom:0.75rem}
+    .card p{font-size:0.95rem;margin:0;color:#555;line-height:1.7}
+    .blockquote-section{background:linear-gradient(135deg,var(--vert-foret),var(--vert-clair));padding:5rem 2rem;text-align:center}
+    .blockquote-section blockquote{font-family:'Playfair Display',serif;font-size:clamp(1.4rem,3vw,2rem);color:var(--blanc);font-style:italic;max-width:700px;margin:0 auto;line-height:1.6}
+    .blockquote-section .quote-source{color:rgba(255,255,255,0.6);font-size:0.9rem;margin-top:1.5rem;letter-spacing:2px;text-transform:uppercase}
+    .highlight-box{background:linear-gradient(135deg,#fff8ee,#fff3d8);border:2px solid var(--ocre);border-radius:14px;padding:2rem;max-width:800px;margin:2rem auto}
+    .highlight-box h3{font-family:'Playfair Display',serif;color:var(--brun-terre);font-size:1.3rem;margin-bottom:1rem}
+    .highlight-box ul{list-style:none;padding:0}
+    .highlight-box ul li{padding:0.5rem 0 0.5rem 2rem;position:relative;font-size:0.97rem;color:#444}
+    .highlight-box ul li::before{content:'◆';position:absolute;left:0;color:var(--ocre);font-size:0.7rem;top:0.75rem}
+    .two-col{display:grid;grid-template-columns:1fr 1fr;gap:3rem;max-width:850px;margin:0 auto;align-items:center}
+    @media(max-width:640px){.two-col{grid-template-columns:1fr}.nav-chapitres{gap:0.8rem}}
+    .two-col img{width:100%;border-radius:14px;box-shadow:0 12px 40px rgba(0,0,0,0.15)}
+    footer{background:var(--brun-terre);color:var(--beige);text-align:center;padding:3rem 2rem}
+    footer h3{font-family:'Playfair Display',serif;font-size:1.5rem;margin-bottom:1rem;color:var(--ocre)}
+    footer p{font-size:0.9rem;opacity:0.75;max-width:600px;margin:0 auto 0.5rem;line-height:1.7}
+    footer .sources{margin-top:2rem;font-size:0.8rem;opacity:0.55}
+    footer .sources a{color:var(--ocre);text-decoration:none}
+  </style>
+</head>
+<body>
+  <section class="hero">
+    <img src="https://media.base44.com/images/public/69f23c5b09417d29099136be/4d050ed37_generated_image.png" alt="Village abénaquis au lever du soleil" />
+    <div class="hero-content">
+      <p class="hero-subtitle">Premières Nations du Québec</p>
+      <h1>Les Abénaquis</h1>
+      <p class="hero-tagline">W8banakiak — Peuple des Terres de l'Aube</p>
+    </div>
+    <div class="hero-scroll">↓ Découvrir</div>
+  </section>
+
+  <nav class="nav-chapitres" id="navbar">
+    <a onclick="goTo('origines')">Origines</a>
+    <a onclick="goTo('territoire')">Territoire</a>
+    <a onclick="goTo('culture')">Culture</a>
+    <a onclick="goTo('histoire')">Histoire</a>
+    <a onclick="goTo('contact')">Contact européen</a>
+    <a onclick="goTo('migrations')">Migrations</a>
+    <a onclick="goTo('resistance')">Résistance</a>
+    <a onclick="goTo('aujourd-hui')">Aujourd'hui</a>
+  </nav>
+
+  <section class="intro-section">
+    <div class="intro-card">
+      <div class="kword">KWAI !</div>
+      <p>Les <strong>Abénaquis</strong> — ou <em>W8banakiak</em> dans leur propre langue — sont l'un des peuples autochtones les plus anciens du nord-est de l'Amérique. Leur nom signifie <strong>« Peuple des terres de l'aube »</strong> ou <strong>« Peuple de l'est »</strong>, en référence à leur territoire ancestral baigné par la lumière du soleil levant. Depuis des millénaires, ils habitent un immense territoire s'étendant de la vallée du Saint-Laurent jusqu'à la Nouvelle-Angleterre.</p>
+      <div class="stats-row">
+        <div class="stat-item"><div class="stat-number">~10 000 ans</div><div class="stat-label">de présence en Amérique du Nord</div></div>
+        <div class="stat-item"><div class="stat-number">3 800+</div><div class="stat-label">Abénaquis au Québec (2024)</div></div>
+        <div class="stat-item"><div class="stat-number">2</div><div class="stat-label">Communautés : Odanak &amp; Wôlinak</div></div>
+      </div>
+    </div>
+  </section>
+
+  <section class="section" id="origines">
+    <div class="container">
+      <div class="section-header">
+        <div class="section-label">Aux racines du temps</div>
+        <h2>Origines et identité</h2>
+        <div class="divider"></div>
+      </div>
+      <p>Les Abénaquis appartiennent à la grande famille <strong>algonquienne</strong>, l'une des plus vastes familles linguistiques et culturelles d'Amérique du Nord. Leurs ancêtres ont peuplé le nord-est de ce continent depuis la fin de la dernière glaciation, il y a environ 10 000 ans, lorsque les glaciers ont reculé et libéré de vastes territoires de chasse, de pêche et de cueillette.</p>
+      <p>La nation abénaquise est traditionnellement divisée en deux grands groupes : les <strong>Abénaquis de l'Est</strong>, qui occupaient principalement ce qui est aujourd'hui l'État du Maine, et les <strong>Abénaquis de l'Ouest</strong>, établis dans le reste de la Nouvelle-Angleterre septentrionale, du New Hampshire jusqu'au lac Champlain.</p>
+      <p>Ensemble avec les <strong>Wolastoqiyik (Malécites), les Passamaquoddy, les Mi'kmaq et les Penobscot</strong>, les Abénaquis ont formé vers 1680 la <strong>Confédération Wabanaki</strong> — une alliance politique et militaire majeure qui a joué un rôle crucial dans les guerres contre les Haudenosaunee (Iroquois) et dans les conflits coloniaux qui ont suivi.</p>
+      <div class="highlight-box">
+        <h3>🌿 Cosmogonie abénaquise : la création du monde</h3>
+        <ul>
+          <li><strong>Gici Niwaskw</strong> (le Grand Esprit ou Créateur) a façonné le monde entier depuis le néant.</li>
+          <li><strong>Tolba</strong>, la Grande Tortue, émerge des eaux pour former la terre ferme.</li>
+          <li><strong>Moskwas</strong>, le rat musqué, plonge dans l'eau pour recueillir la boue qui devient les continents.</li>
+          <li>Selon la légende, les premiers êtres humains ont été sculptés dans le <strong>frêne noir</strong> — l'arbre sacré des Abénaquis.</li>
+          <li><strong>Gluskabe</strong> (ou Glooscap), héros culturel mythique, entretient et transforme le paysage après la création.</li>
+        </ul>
+      </div>
+    </div>
+  </section>
+
+  <section class="section" id="territoire">
+    <div class="container">
+      <div class="section-header">
+        <div class="section-label">Terres ancestrales</div>
+        <h2>Territoire et géographie</h2>
+        <div class="divider"></div>
+      </div>
+      <p>Le territoire traditionnel des Abénaquis était immense. Il couvrait le <strong>sud du Québec</strong> (les rives du Saint-Laurent et les Appalaches), le <strong>nord du Vermont</strong>, le <strong>New Hampshire</strong>, une partie de l'État de New York, et une grande partie du <strong>Maine</strong>. Les grandes rivières — la rivière Saint-François (<em>Alsig8tegw</em>), la rivière Connecticut, la rivière Kennebec et la rivière Penobscot — constituaient les axes de déplacement et de vie de ce peuple.</p>
+      <p>Les Abénaquis étaient profondément liés à leur territoire naturel. Les forêts d'érables, de bouleaux et de <strong>frênes noirs</strong> leur offraient nourriture, matériaux de construction, médecine et matière première pour l'artisanat. Les rivières et les lacs fournissaient du poisson en abondance : saumon, anguille, achigan et truite.</p>
+      <div class="highlight-box">
+        <h3>📍 Communautés actuelles au Québec</h3>
+        <ul>
+          <li><strong>Odanak</strong> (anciennement Saint-François-du-Lac) — sur la rivière Saint-François, près de Sorel. La plus grande communauté abénaquise du Québec.</li>
+          <li><strong>Wôlinak</strong> (anciennement Bécancour) — sur la rive sud du Saint-Laurent, près de Trois-Rivières.</li>
+          <li>Des centaines d'Abénaquis vivent également hors-réserve, partout en Amérique du Nord.</li>
+        </ul>
+      </div>
+    </div>
+  </section>
+
+  <section class="section" id="culture">
+    <div class="container">
+      <div class="section-header">
+        <div class="section-label">Traditions vivantes</div>
+        <h2>Culture, langue et traditions</h2>
+        <div class="divider"></div>
+      </div>
+      <div class="two-col">
+        <div>
+          <p>La culture abénaquise est d'une richesse extraordinaire. Elle repose sur la transmission orale, les cérémonies, les arts, la musique et une relation profonde et spirituelle avec la nature. Les Abénaquis sont reconnus comme d'excellents <strong>artisans</strong> — maîtres dans la fabrication de canots en écorce de bouleau, de raquettes à neige, de mocassins et surtout de <strong>paniers en frêne noir et en foin d'odeur</strong>.</p>
+          <p>La <strong>vannerie</strong> (fabrication de paniers) est l'une des expressions culturelles les plus emblématiques des Abénaquis. Ces paniers, ornés de motifs géométriques précis, ont longtemps été une source économique vitale.</p>
+        </div>
+        <div>
+          <img src="https://media.base44.com/images/public/69f23c5b09417d29099136be/817e860a3_generated_image.png" alt="Artisanat traditionnel abénaquis" />
+          <p class="img-caption">Artisanat traditionnel abénaquis — paniers de frêne noir, écorce de bouleau, broderies perlées</p>
+        </div>
+      </div>
+      <div class="cards-grid">
+        <div class="card"><div class="card-icon">🗣️</div><h3>Langue : l'Aln8ba8dwaw8gan</h3><p>Langue algonquienne utilisant un système orthographique unique avec des chiffres (le « 8 » pour certains sons nasaux). Longtemps considérée en voie de disparition, elle connaît aujourd'hui une renaissance grâce aux aînés et aux programmes d'enseignement communautaires.</p></div>
+        <div class="card"><div class="card-icon">🥁</div><h3>Musique et danse</h3><p>Les tambours, chants et danses sont au cœur des cérémonies abénaquises. Selon la légende, les premiers êtres humains sculptés dans le frêne se sont mis à chanter et à danser dès qu'ils ont touché la terre — c'est pourquoi les Abénaquis continuent de danser.</p></div>
+        <div class="card"><div class="card-icon">🌿</div><h3>Médecine traditionnelle</h3><p>Connaissance approfondie des plantes médicinales du territoire. Feuilles, racines, écorces et baies servaient à soigner les maladies, guérir les blessures et maintenir l'équilibre spirituel des individus et des communautés.</p></div>
+        <div class="card"><div class="card-icon">🏠</div><h3>Habitations traditionnelles</h3><p>Les wigwams — structures en dôme recouvertes d'écorce de bouleau ou de peaux d'animaux. En été, villages près des rivières pour la pêche ; en hiver, dispersion en groupes familiaux pour la chasse et le trappage.</p></div>
+        <div class="card"><div class="card-icon">🚣</div><h3>Canot en écorce de bouleau</h3><p>Mode de déplacement par excellence : léger, rapide et maniable. Sa fabrication était un art transmis de génération en génération, requérant une connaissance précise des matériaux naturels.</p></div>
+        <div class="card"><div class="card-icon">🌽</div><h3>Agriculture et subsistance</h3><p>Les Abénaquis pratiquaient la culture des « Trois Sœurs » : maïs, haricots et courges. Complétée par la chasse (orignal, cerf, castor), la pêche (saumon, anguille) et la cueillette, cette économie mixte assurait alimentation et résilience.</p></div>
+      </div>
+    </div>
+  </section>
+
+  <section class="blockquote-section">
+    <blockquote>« Selon la légende, les premiers hommes et femmes sculptés dans les frênes se mirent à chanter et à danser dès qu'ils touchèrent la terre. C'est pour cette raison que les Abénaquis continuent de chanter et de danser. »</blockquote>
+    <p class="quote-source">— Tradition orale abénaquise, transmise de génération en génération</p>
+  </section>
+
+  <section class="section" id="histoire">
+    <div class="container">
+      <div class="section-header">
+        <div class="section-label">Des millénaires d'histoire</div>
+        <h2>Histoire ancienne et organisation sociale</h2>
+        <div class="divider"></div>
+      </div>
+      <p>Avant l'arrivée des Européens, les Abénaquis vivaient dans une société organisée mais décentralisée. Ils fonctionnaient par <strong>bandes familiales et clans</strong>, chacun lié à un territoire de chasse et de pêche. Les décisions importantes se prenaient par consensus, sous la guidance de <strong>sagamos</strong> (chefs) respectés pour leur sagesse et leurs qualités de médiateur.</p>
+      <p>Les différentes bandes abénaquises partageaient une langue, une cosmologie et des pratiques culturelles communes, mais maintenaient une grande autonomie locale. Elles coexistaient parfois en tension, parfois en alliance, avec leurs voisins algonquiens au nord et les nations iroquoiennes (Haudenosaunee).</p>
+      <p>Au 17e siècle, les Abénaquis entretenaient déjà des réseaux commerciaux étendus avec d'autres nations autochtones, échangeant fourrures, cuivre, coquillages (<strong>wampum</strong>) et biens artisanaux sur de vastes distances.</p>
+      <img src="https://media.base44.com/images/public/69f23c5b09417d29099136be/4d050ed37_generated_image.png" alt="Paysage abénaquis au lever du soleil" class="img-wide" />
+      <p class="img-caption">Reconstitution artistique d'un village abénaquis au bord d'une rivière, au lever du soleil</p>
+    </div>
+  </section>
+
+  <section class="section" id="contact">
+    <div class="container">
+      <div class="section-header">
+        <div class="section-label">XVIe – XVIIe siècles</div>
+        <h2>Le contact avec les Européens</h2>
+        <div class="divider"></div>
+      </div>
+      <p>Les premiers contacts des Abénaquis avec les Européens remontent au début du 16e siècle, avec l'arrivée des pêcheurs et explorateurs français, anglais et basques sur les côtes de la Nouvelle-Angleterre. Ces contacts initiaux étaient souvent commerciaux — fourrures contre outils en métal, tissus et perles de verre.</p>
+      <p>Ces échanges s'avèrent cependant catastrophiques pour les populations autochtones. Les Européens apportaient des <strong>maladies dévastatrices</strong> : variole, rougeole, grippe. Entre 1616 et 1619, une épidémie décima une grande partie des populations côtières abénaquises, réduisant certaines communautés de 75 % à 90 % de leur effectif.</p>
+      <p>Malgré ces ravages, les Abénaquis ont développé des relations diplomatiques complexes avec les Français — alliés potentiels contre les Anglais — tout en maintenant leur indépendance politique.</p>
+      <div class="highlight-box">
+        <h3>⚔️ La Guerre du Roi Philippe (1675-1676)</h3>
+        <ul>
+          <li>Le chef wampanoag <strong>Metacom</strong> (« King Philip ») unit plusieurs nations autochtones contre les colons anglais de Nouvelle-Angleterre.</li>
+          <li>Les Abénaquis de l'Ouest participent au conflit, subissant de lourdes pertes et des destructions massives de leurs villages.</li>
+          <li>La défaite en 1676 provoque un <strong>déplacement massif</strong> des Abénaquis de l'Ouest vers la vallée du Saint-Laurent.</li>
+          <li>Cet événement marque le début de l'installation permanente des Abénaquis au Québec.</li>
+        </ul>
+      </div>
+    </div>
+  </section>
+
+  <section class="section" id="migrations">
+    <div class="container">
+      <div class="section-header">
+        <div class="section-label">1675 – 1748</div>
+        <h2>Les grandes migrations vers le Québec</h2>
+        <div class="divider"></div>
+      </div>
+      <p>La période 1675-1748 est l'une des plus décisives de l'histoire abénaquise. Fuyant la pression anglaise — guerres, dépossession de terres, massacres — les Abénaquis de l'Ouest entreprennent une migration vers le nord, en territoire sous influence française.</p>
+      <div class="timeline">
+        <div class="timeline-item">
+          <div class="timeline-dot">1676–1680</div>
+          <div class="timeline-content"><h3>Premières installations au Québec</h3><p>À la suite de la Guerre du Roi Philippe, des groupes s'établissent d'abord dans la région de Sillery (près de Québec), aux côtés d'autres réfugiés autochtones.</p></div>
+        </div>
+        <div class="timeline-item">
+          <div class="timeline-dot">1700s début</div>
+          <div class="timeline-content"><h3>Établissements permanents concédés</h3><p>La France concède aux Abénaquis des terres dans deux établissements permanents : <strong>Saint-François (futur Odanak)</strong> et <strong>Bécancour (futur Wôlinak)</strong>.</p></div>
+        </div>
+        <div class="timeline-item">
+          <div class="timeline-dot">1704</div>
+          <div class="timeline-content"><h3>Raid de Deerfield</h3><p>Des guerriers abénaquis alliés aux Français participent au célèbre raid sur <strong>Deerfield</strong> (Massachusetts), tuant 56 colons anglais et emmenant 109 captifs vers le Québec.</p></div>
+        </div>
+        <div class="timeline-item">
+          <div class="timeline-dot">1754–1763</div>
+          <div class="timeline-content"><h3>Guerre de Sept Ans et Conquête</h3><p>Les Abénaquis combattent aux côtés des Français. La Conquête britannique de 1763 transforme radicalement leur situation politique.</p></div>
+        </div>
+        <div class="timeline-item">
+          <div class="timeline-dot">1759</div>
+          <div class="timeline-content"><h3>Destruction d'Odanak</h3><p>Des soldats britanniques sous le major <strong>Robert Rogers</strong> attaquent et incendient le village d'Odanak. Ce <strong>Massacre de Saint-François</strong> est l'un des événements les plus traumatiques de la mémoire collective abénaquise.</p></div>
+        </div>
+        <div class="timeline-item">
+          <div class="timeline-dot">XIXe siècle</div>
+          <div class="timeline-content"><h3>Marginalisation et adaptation</h3><p>La Loi sur les Indiens et les politiques d'assimilation réduisent considérablement les droits abénaquis. Les pensionnats indiens arrachent les enfants à leurs familles pour éradiquer la langue et la culture.</p></div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="section" id="resistance">
+    <div class="container">
+      <div class="section-header">
+        <div class="section-label">Survivre et se réaffirmer</div>
+        <h2>Résistance, résilience et revendications</h2>
+        <div class="divider"></div>
+      </div>
+      <p>Malgré des siècles de pression coloniale, de dépossession territoriale, d'assimilation forcée et d'épidémies dévastatrices, les Abénaquis n'ont jamais cessé d'exister en tant que peuple distinct. Leur résilience est remarquable : ils ont su <strong>maintenir leur identité culturelle</strong> tout en s'adaptant aux réalités de chaque époque.</p>
+      <p>Depuis les années 1970, les Abénaquis ont entrepris une <strong>renaissance culturelle et politique</strong> vigoureuse. Des programmes de revitalisation de la langue ont été mis en place et le Musée des Abénakis d'Odanak est aujourd'hui l'un des plus importants musées autochtones du Québec.</p>
+      <p>Depuis <strong>1995</strong>, les Abénaquis d'Odanak et de Wôlinak ont déposé des revendications territoriales formelles auprès du gouvernement fédéral canadien, réclamant la reconnaissance de droits ancestraux sur des territoires retirés sans traité ni compensation.</p>
+      <div class="highlight-box">
+        <h3>🌟 Abénaquis remarquables</h3>
+        <ul>
+          <li><strong>Alanis Obomsawin</strong> — documentariste et chanteuse de renommée internationale, membre de l'Ordre du Canada.</li>
+          <li><strong>Joyce Panadis</strong> — artiste visuelle dont l'œuvre explore l'identité abénaquise contemporaine.</li>
+          <li><strong>Joseph Laurent</strong> — chef, écrivain et enseignant du 19e siècle, auteur d'un important dictionnaire abénaquis-anglais.</li>
+          <li><strong>Christine Sioui-Wawanoloath</strong> — artiste et auteure dont les œuvres célèbrent la culture et la spiritualité wabanaki.</li>
+        </ul>
+      </div>
+    </div>
+  </section>
+
+  <section class="section" id="aujourd-hui">
+    <div class="container">
+      <div class="section-header">
+        <div class="section-label">XXIe siècle</div>
+        <h2>Les Abénaquis aujourd'hui</h2>
+        <div class="divider"></div>
+      </div>
+      <p>En 2024, on compte plus de <strong>3 800 Abénaquis au Québec</strong>, dont environ 411 résident dans les deux communautés officielles d'Odanak et de Wôlinak. Des centaines d'autres vivent en dehors des réserves, partout au Canada et aux États-Unis.</p>
+      <p>La communauté d'<strong>Odanak</strong> accueille l'<strong>Institution Kiuna</strong>, le premier collège consacré exclusivement à l'éducation des Autochtones au Québec — fondamental pour la transmission des savoirs et le renforcement de l'identité culturelle des jeunes Abénaquis.</p>
+      <p>La communauté de <strong>Wôlinak</strong> a développé une économie diversifiée : plantation de pins, usine de produits en fibre de verre, résidence pour personnes âgées et le <strong>Carrefour Wôlinak</strong> (1999), incubateur d'entreprises autochtones et non autochtones.</p>
+      <div class="cards-grid">
+        <div class="card"><div class="card-icon">🏛️</div><h3>Musée des Abénakis</h3><p>Fondé en 1960 à Odanak, l'un des plus importants musées autochtones du Québec. Il conserve et diffuse l'histoire, la culture et l'art des Abénaquis de l'Ouest.</p></div>
+        <div class="card"><div class="card-icon">🎓</div><h3>Institution Kiuna</h3><p>Premier collège destiné spécifiquement aux Autochtones du Québec, situé à Odanak. Programmes adaptés favorisant la réussite scolaire et la valorisation des cultures autochtones.</p></div>
+        <div class="card"><div class="card-icon">⚖️</div><h3>Revendications territoriales</h3><p>Depuis 1995, revendications actives des droits ancestraux. La Confédération Wabanaki, ravivée en 1993, porte ces revendications au niveau continental.</p></div>
+      </div>
+      <p style="margin-top:2rem;font-style:italic;text-align:center;color:#666;">« Leur langue, autrefois considérée comme disparue, connaît une renaissance, marquant ainsi pour les Abénaquis une reconnexion avec leur identité. » — Gouvernement du Québec, 2024</p>
+    </div>
+  </section>
+
+  <footer>
+    <h3>W8banakiak — Le Peuple de l'Aube</h3>
+    <p>Cet article a été rédigé avec respect pour la nation abénaquise et vise à faire connaître leur histoire remarquable au grand public.</p>
+    <p>Les Abénaquis d'Odanak et de Wôlinak invitent les Québécoises et les Québécois à venir les rencontrer et à découvrir leur richesse culturelle.</p>
+    <p>🌐 <a href="https://abenakiheritage.org/fr/" target="_blank">abenakiheritage.org</a> | <a href="https://caodanak.com" target="_blank">caodanak.com</a></p>
+    <div class="sources"><strong>Sources historiques :</strong><br/>Encyclopédie canadienne (Dean Snow, 2024) • Gouvernement du Québec — Profil des nations (2024) • Parcs Canada — Les migrations abénakises en Nouvelle-France (2017) • Musée des Abénakis d'Odanak • Confédération Wabanaki</div>
+  </footer>
+
+  <script>
+    function goTo(id) {
+      var el = document.getElementById(id);
+      if (!el) return;
+      var nav = document.getElementById('navbar');
+      var navH = nav ? nav.offsetHeight : 0;
+      var top = el.getBoundingClientRect().top + document.documentElement.scrollTop - navH - 10;
+      document.documentElement.scrollTop = top;
+      document.body.scrollTop = top;
+    }
+  </script>
+</body>
+</html>`;
+
+  return (
+    <iframe
+      srcDoc={html}
+      style={{ width: '100%', height: '100vh', border: 'none' }}
+      title="Les Abénaquis — Peuple des Terres de l'Aube"
+    />
+  );
+}
