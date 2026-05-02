@@ -1,0 +1,263 @@
+export default function Micmacs() {
+  const html = `<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Les Micmacs — Mi'kmaq, Peuple des Maritimes</title>
+  <style>
+    @import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700;900&family=Lato:wght@300;400;700&display=swap');
+    :root{
+      --ocean:#0D3547;
+      --ocean-moyen:#1A5570;
+      --ocean-accent:#2E7A9E;
+      --sable:#C8960A;
+      --sable-clair:#E8B020;
+      --beige:#F4EDD6;
+      --creme:#F0F7FA;
+      --blanc:#FFFFFF;
+      --texte:#1E1E1E;
+      --texte-doux:#3A3A3A;
+    }
+    *{margin:0;padding:0;box-sizing:border-box}
+    html,body{scroll-behavior:smooth;height:100%;overflow-y:auto}
+    body{font-family:'Lato',sans-serif;background:var(--creme);color:var(--texte);line-height:1.8}
+    .hero{position:relative;width:100%;height:92vh;min-height:520px;overflow:hidden;display:flex;align-items:center;justify-content:center}
+    .hero img{position:absolute;top:0;left:0;width:100%;height:100%;object-fit:cover;filter:brightness(0.45)}
+    .hero-content{position:relative;z-index:2;text-align:center;padding:2rem;max-width:900px}
+    .hero-nation{font-size:0.85rem;letter-spacing:5px;text-transform:uppercase;color:var(--sable-clair);font-weight:700;margin-bottom:0.75rem}
+    .hero h1{font-family:'Playfair Display',serif;font-size:clamp(2.8rem,6vw,5.5rem);font-weight:900;color:#fff;text-shadow:2px 4px 24px rgba(0,0,0,0.7);line-height:1.1;margin-bottom:1.2rem}
+    .hero-sub{font-family:'Playfair Display',serif;font-size:1.25rem;color:rgba(255,255,255,0.9);font-style:italic}
+    .scroll-hint{position:absolute;bottom:2rem;left:50%;transform:translateX(-50%);color:rgba(255,255,255,0.6);font-size:0.78rem;letter-spacing:2px;text-transform:uppercase;animation:bob 2s infinite}
+    @keyframes bob{0%,100%{transform:translateX(-50%) translateY(0)}50%{transform:translateX(-50%) translateY(8px)}}
+    .nav{background:var(--ocean);padding:0.9rem 2rem;position:sticky;top:0;z-index:1000;display:flex;gap:1.4rem;justify-content:center;flex-wrap:wrap}
+    .nav a{color:#FFFFFF;text-decoration:none;font-size:0.82rem;letter-spacing:1.5px;text-transform:uppercase;font-weight:700;transition:color 0.2s;cursor:pointer}
+    .nav a:hover{color:var(--sable-clair)}
+    .container{max-width:900px;margin:0 auto;padding:0 2rem}
+    .section{padding:5rem 2rem}
+    .section:nth-child(odd){background:var(--blanc)}
+    .section:nth-child(even){background:var(--beige)}
+    .sec-label{font-size:0.73rem;letter-spacing:4px;text-transform:uppercase;color:var(--ocean-moyen);font-weight:700;margin-bottom:0.6rem;text-align:center}
+    .sec-title{font-family:'Playfair Display',serif;font-size:clamp(1.9rem,3.5vw,2.8rem);color:var(--ocean);text-align:center;line-height:1.2}
+    .divider{width:56px;height:4px;background:linear-gradient(to right,var(--ocean-moyen),var(--sable));margin:1.4rem auto 2.8rem;border-radius:2px}
+    p{font-size:1.04rem;line-height:1.9;color:var(--texte-doux);max-width:820px;margin:0 auto 1.5rem}
+    .intro-wrap{background:var(--blanc);padding:4rem 2rem}
+    .intro-card{background:linear-gradient(135deg,var(--ocean),var(--ocean-moyen));color:#fff;border-radius:18px;padding:3rem;text-align:center;max-width:820px;margin:0 auto;box-shadow:0 20px 60px rgba(13,53,71,0.3)}
+    .intro-kword{font-family:'Playfair Display',serif;font-size:3rem;color:var(--sable-clair);margin-bottom:0.4rem}
+    .intro-card p{font-size:1.1rem;color:#fff;margin-bottom:0;line-height:1.9}
+    .stats{display:flex;justify-content:center;gap:2.5rem;margin-top:2.5rem;flex-wrap:wrap}
+    .stat-n{font-family:'Playfair Display',serif;font-size:2.2rem;font-weight:900;color:var(--sable-clair)}
+    .stat-l{font-size:0.78rem;letter-spacing:1.5px;text-transform:uppercase;color:rgba(255,255,255,0.75)}
+    .highlight{background:#EEF7FB;border:2px solid var(--ocean-moyen);border-radius:14px;padding:2rem;max-width:820px;margin:2rem auto}
+    .highlight h3{font-family:'Playfair Display',serif;color:var(--ocean);font-size:1.25rem;margin-bottom:1rem}
+    .highlight ul{list-style:none;padding:0}
+    .highlight ul li{padding:0.45rem 0 0.45rem 2rem;position:relative;font-size:0.97rem;color:var(--texte-doux)}
+    .highlight ul li::before{content:'◆';position:absolute;left:0;color:var(--ocean-accent);font-size:0.68rem;top:0.72rem}
+    .cards{display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:1.5rem;max-width:860px;margin:2.5rem auto}
+    .card{background:var(--blanc);border-radius:14px;padding:1.8rem 1.5rem;box-shadow:0 4px 20px rgba(0,0,0,0.08);border-top:4px solid var(--ocean-moyen);transition:transform 0.2s,box-shadow 0.2s}
+    .card:hover{transform:translateY(-4px);box-shadow:0 12px 36px rgba(0,0,0,0.13)}
+    .card-icon{font-size:2.1rem;margin-bottom:0.9rem}
+    .card h3{font-family:'Playfair Display',serif;font-size:1.15rem;color:var(--ocean);margin-bottom:0.7rem}
+    .card p{font-size:0.93rem;margin:0;color:#444;line-height:1.7}
+    .timeline{position:relative;max-width:760px;margin:1rem auto}
+    .timeline::before{content:'';position:absolute;left:31px;top:0;bottom:0;width:3px;background:linear-gradient(to bottom,var(--ocean-moyen),var(--sable));border-radius:2px}
+    .tl-item{display:flex;gap:2rem;margin-bottom:2.5rem;align-items:flex-start}
+    .tl-dot{flex-shrink:0;width:64px;height:64px;background:var(--ocean);border:3px solid var(--sable-clair);border-radius:50%;display:flex;align-items:center;justify-content:center;font-family:'Playfair Display',serif;font-weight:900;font-size:0.68rem;color:var(--sable-clair);text-align:center;line-height:1.2;z-index:1}
+    .tl-box{background:var(--blanc);border-radius:12px;padding:1.5rem;box-shadow:0 4px 18px rgba(0,0,0,0.07);flex:1;border-left:4px solid var(--ocean-moyen)}
+    .tl-box h3{font-family:'Playfair Display',serif;font-size:1.18rem;color:var(--ocean);margin-bottom:0.45rem}
+    .tl-box p{font-size:0.95rem;margin:0;color:#444}
+    .comm-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(200px,1fr));gap:1rem;max-width:860px;margin:2rem auto}
+    .comm-card{background:var(--blanc);border-radius:12px;padding:1.2rem 1.4rem;box-shadow:0 3px 14px rgba(0,0,0,0.07);border-left:4px solid var(--ocean-moyen)}
+    .comm-card h4{font-family:'Playfair Display',serif;color:var(--ocean);font-size:1rem;margin-bottom:0.3rem}
+    .comm-card p{font-size:0.85rem;color:#555;margin:0}
+    .img-wide{width:100%;max-width:860px;margin:2rem auto;display:block;border-radius:16px;box-shadow:0 10px 36px rgba(0,0,0,0.14)}
+    .img-cap{text-align:center;font-style:italic;font-size:0.85rem;color:#777;margin-top:0.6rem}
+    .quote-sec{background:linear-gradient(135deg,#0D3547,#1A4A60);padding:5rem 2rem;text-align:center}
+    .quote-sec blockquote{font-family:'Playfair Display',serif;font-size:clamp(1.3rem,3vw,1.9rem);color:#fff;font-style:italic;max-width:720px;margin:0 auto;line-height:1.65}
+    .quote-src{color:rgba(255,255,255,0.6);font-size:0.85rem;margin-top:1.5rem;letter-spacing:2px;text-transform:uppercase}
+    footer{background:var(--ocean);color:var(--beige);text-align:center;padding:3rem 2rem}
+    footer h3{font-family:'Playfair Display',serif;font-size:1.5rem;color:var(--sable-clair);margin-bottom:1rem}
+    footer p{font-size:0.88rem;color:rgba(244,237,214,0.82);max-width:600px;margin:0 auto 0.5rem;line-height:1.7}
+    footer .sources{margin-top:2rem;font-size:0.78rem;color:rgba(244,237,214,0.5)}
+    footer .sources a{color:var(--sable-clair);text-decoration:none}
+    @media(max-width:640px){.nav{gap:0.8rem}}
+  </style>
+</head>
+<body>
+  <section class="hero">
+    <img src="https://media.base44.com/images/public/69f23c5b09417d29099136be/a2822ac04_generated_image.png" alt="Côte gaspésienne — territoire mi'kmaq" />
+    <div class="hero-content">
+      <p class="hero-nation">Premières Nations du Québec</p>
+      <h1>Les Micmacs</h1>
+      <p class="hero-sub">Mi'kmaq — « Mes amis » · Peuple des côtes et des forêts</p>
+    </div>
+    <div class="scroll-hint">↓ Découvrir</div>
+  </section>
+
+  <nav class="nav" id="navbar">
+    <a onclick="goTo('origines')">Origines</a>
+    <a onclick="goTo('territoire')">Territoire</a>
+    <a onclick="goTo('culture')">Culture</a>
+    <a onclick="goTo('ecriture')">Écriture</a>
+    <a onclick="goTo('histoire')">Histoire</a>
+    <a onclick="goTo('communautes')">Communautés</a>
+    <a onclick="goTo('aujourd-hui')">Aujourd'hui</a>
+  </nav>
+
+  <div class="intro-wrap">
+    <div class="intro-card">
+      <div class="intro-kword">Mi'kmaq !</div>
+      <p>Les <strong>Micmacs</strong> — ou <em>Mi'kmaq</em> (« mes amis » ou « mes alliés ») dans leur langue — sont les gardiens des côtes de la <strong>Gaspésie</strong> et de la <strong>Baie-des-Chaleurs</strong> au Québec. Nation maritime par excellence, ils ont sillonné les eaux du golfe du Saint-Laurent, des côtes atlantiques et de l'Acadie pendant des millénaires. Les Mi'kmaq sont aussi célèbres pour avoir développé l'un des <strong>seuls systèmes d'écriture autochtone précoloniaux</strong> d'Amérique du Nord — le <em>komqwejwi'kasikl</em> (écriture pictographique).</p>
+      <div class="stats">
+        <div><div class="stat-n">~7 000</div><div class="stat-l">Mi'kmaq au Québec (2024)</div></div>
+        <div><div class="stat-n">3</div><div class="stat-l">Communautés au Québec</div></div>
+        <div><div class="stat-n">7 districts</div><div class="stat-l">dans la Confédération Mi'kmaq</div></div>
+      </div>
+    </div>
+  </div>
+
+  <section class="section" id="origines">
+    <div class="container">
+      <div class="sec-label">Aux racines du monde</div>
+      <h2 class="sec-title">Origines et identité</h2>
+      <div class="divider"></div>
+      <p>Les Mi'kmaq appartiennent à la grande famille linguistique <strong>algonquienne</strong>. Leur langue, le <strong>Mi'kmawi'simk</strong>, est parlée à travers toute l'Acadie — Nouvelle-Écosse, Nouveau-Brunswick, Île-du-Prince-Édouard, Terre-Neuve et la Gaspésie québécoise. C'est l'une des langues autochtones les mieux documentées du Canada, grâce notamment aux travaux des missionnaires capucins et récollets dès le 17e siècle.</p>
+      <p>Leur nom traditionnel, <strong>Mi'kmaq</strong>, signifie <em>« mes amis »</em> ou <em>« mes alliés »</em> — une appellation qui reflète leur philosophie d'accueil et de partage. Ils se désignent aussi comme <em>L'nu</em> (« le peuple »). La Gaspésie tire d'ailleurs son nom du mot mi'kmaq <strong>Gespeg</strong> — « à la pointe des terres ».</p>
+      <div class="highlight">
+        <h3>🌌 Vision du monde mi'kmaq — Netukulimk</h3>
+        <ul>
+          <li><strong>Netukulimk</strong> est le concept central de la philosophie mi'kmaq : l'utilisation responsable des ressources naturelles pour satisfaire les besoins actuels sans compromettre ceux des générations futures — un développement durable millénaire.</li>
+          <li><strong>Kluskap</strong> est le héros culturel et transformateur mi'kmaq. Géant bienveillant, il a façonné le paysage, appris la chasse et la pêche aux humains, et combat les forces du mal pour protéger son peuple.</li>
+          <li>La <strong>mer et les côtes</strong> sont des espaces sacrés — sources de nourriture, de médicaments et de spiritualité. Les Mi'kmaq considerent l'océan comme un être vivant à respecter.</li>
+          <li>La <strong>Confédération Mi'kmaq</strong> (Grand Conseil Santé Mawi'omi) est l'une des plus anciennes institutions politiques autochtones du Canada — fondée bien avant l'arrivée des Européens.</li>
+        </ul>
+      </div>
+    </div>
+  </section>
+
+  <section class="section" id="territoire">
+    <div class="container">
+      <div class="sec-label">Mi'kma'ki</div>
+      <h2 class="sec-title">Le territoire ancestral</h2>
+      <div class="divider"></div>
+      <p>Le territoire traditionnel des Mi'kmaq, appelé <strong>Mi'kma'ki</strong>, est l'un des plus vastes parmi les nations algonquiennes de l'est. Il couvre la <strong>Gaspésie</strong> (Gespegewa'gi — « le dernier territoire »), la Nouvelle-Écosse, le Nouveau-Brunswick, l'Île-du-Prince-Édouard, la Côte-Nord du golfe du Saint-Laurent, une partie de Terre-Neuve et le nord du Maine.</p>
+      <p>Au Québec, le territoire mi'kmaq est concentré dans la <strong>péninsule gaspésienne</strong> et la <strong>Baie-des-Chaleurs</strong>. La Gaspésie tire son nom du mot mi'kmaq <em>Gespeg</em> — « à la pointe des terres ». Les Mi'kmaq de Gespegewa'gi sont la nation gardienne de l'extrémité est du Québec.</p>
+      <img src="https://media.base44.com/images/public/69f23c5b09417d29099136be/a2822ac04_generated_image.png" alt="Gaspésie côte mi'kmaq" class="img-wide"/>
+      <p class="img-cap">La Gaspésie — Gespeg, « la pointe des terres » — territoire ancestral mi'kmaq depuis des millénaires</p>
+    </div>
+  </section>
+
+  <section class="section" id="culture">
+    <div class="container">
+      <div class="sec-label">Traditions vivantes</div>
+      <h2 class="sec-title">Culture, mer et forêt</h2>
+      <div class="divider"></div>
+      <p>La culture mi'kmaq est profondément marquée par la <strong>double vocation maritime et forestière</strong>. Selon les saisons, les Mi'kmaq vivaient sur les côtes (pêche, chasse aux mammifères marins, cueillette de mollusques) ou dans les forêts intérieures (chasse au caribou, à l'orignal, au castor). Cette mobilité saisonnière leur permettait d'exploiter pleinement la richesse de leur territoire.</p>
+      <div class="cards">
+        <div class="card"><div class="card-icon">🗣️</div><h3>Le Mi'kmawi'simk</h3><p>La langue mi'kmaq est encore parlée par plusieurs milliers de personnes à travers l'Acadie. Au Québec, des efforts de revitalisation sont menés à Gespeg et Listuguj. La langue est enseignée dans certaines écoles communautaires.</p></div>
+        <div class="card"><div class="card-icon">🚣</div><h3>Maîtres de la mer</h3><p>Les Mi'kmaq naviguaient dans de grands canots d'écorce de bouleau sur les eaux agitées du golfe du Saint-Laurent et de l'Atlantique — atteignant parfois Terre-Neuve. Leur connaissance des courants, des vents et des étoiles était encyclopédique.</p></div>
+        <div class="card"><div class="card-icon">🧺</div><h3>Artisanat — le ash splint</h3><p>La vannerie mi'kmaq — notamment les paniers tressés en frêne (ash splint) décorés de motifs géométriques — est reconnue comme l'une des formes d'artisanat autochtone les plus belles d'Amérique du Nord. Une tradition encore vivante aujourd'hui.</p></div>
+        <div class="card"><div class="card-icon">🥁</div><h3>Powwow et Grand Rassemblement</h3><p>Le Grand Rassemblement mi'kmaq annuel (Grand Council) à Potlotek (Île-du-Cap-Breton) est la réunion politique et spirituelle la plus importante. Les powwow de Listuguj et Gespeg attirent chaque été des milliers de participants.</p></div>
+        <div class="card"><div class="card-icon">🎣</div><h3>Droits de pêche — Marshall</h3><p>La décision Marshall (1999) de la Cour suprême du Canada a reconnu les droits de pêche commerciale des Mi'kmaq de l'Atlantique — basée sur un traité de 1760. Une victoire juridique majeure, source de tensions avec les pêcheurs non-autochtones.</p></div>
+        <div class="card"><div class="card-icon">🌿</div><h3>Médecine et pharmacopée</h3><p>Les Mi'kmaq possèdent une connaissance profonde des plantes médicinales côtières et forestières. Leur pharmacopée traditionnelle — herbes, racines, algues et résines — a fasciné les premiers Européens et contribué à la survie des colons français.</p></div>
+      </div>
+    </div>
+  </section>
+
+  <section class="section" id="ecriture">
+    <div class="container">
+      <div class="sec-label">Une invention unique</div>
+      <h2 class="sec-title">L'écriture mi'kmaq — Komqwejwi'kasikl</h2>
+      <div class="divider"></div>
+      <p>L'une des particularités les plus fascinantes de la culture mi'kmaq est le développement d'un système d'<strong>écriture pictographique</strong> — le <em>komqwejwi'kasikl</em> — qui serait l'un des seuls systèmes d'écriture <strong>précoloniaux</strong> autochtones d'Amérique du Nord.</p>
+      <p>Selon la tradition mi'kmaq, ce système de pictogrammes existait avant l'arrivée des Européens et servait à enregistrer les cérémonies, les récits, les chants et les prières. Au 17e siècle, le missionnaire récollet <strong>Père Chrétien Le Clercq</strong> a adapté et développé ce système pour créer une écriture syllabique, permettant aux Mi'kmaq d'écrire leur langue dans leurs propres caractères — bien avant que d'autres langues autochtones ne soient transcrites.</p>
+      <div class="highlight">
+        <h3>✍️ Le Komqwejwi'kasikl — une écriture unique</h3>
+        <ul>
+          <li>Système de pictogrammes et idéogrammes qui précèderait l'arrivée des Européens selon la tradition orale mi'kmaq.</li>
+          <li>Adapté par le Père Le Clercq en 1675 pour créer une <strong>écriture syllabique</strong> utilisée pour transcrire prières et catéchisme.</li>
+          <li>Utilisé pour rédiger des traités, des lettres et des documents officiels avec les gouvernements coloniaux.</li>
+          <li>Aujourd'hui en cours de <strong>revitalisation</strong> — des chercheurs et des membres de la communauté travaillent à redécouvrir et enseigner ce système d'écriture unique.</li>
+        </ul>
+      </div>
+    </div>
+  </section>
+
+  <section class="quote-sec">
+    <blockquote>« Netukulimk — nous prenons de la nature ce dont nous avons besoin, avec gratitude et respect, pour que les générations futures puissent en bénéficier à leur tour. »</blockquote>
+    <p class="quote-src">— Philosophie traditionnelle mi'kmaq</p>
+  </section>
+
+  <section class="section" id="histoire">
+    <div class="container">
+      <div class="sec-label">Histoire</div>
+      <h2 class="sec-title">Histoire et contacts européens</h2>
+      <div class="divider"></div>
+      <div class="timeline">
+        <div class="tl-item">
+          <div class="tl-dot">1497+</div>
+          <div class="tl-box"><h3>Premiers contacts européens</h3><p>Les Mi'kmaq sont parmi les premiers peuples à rencontrer les Européens — Cabot (1497), Cartier (1534). Dès les années 1500, ils fréquentent les pêcheurs bretons et basques sur les bancs de Terre-Neuve, échangeant fourrures contre outils métalliques.</p></div>
+        </div>
+        <div class="tl-item">
+          <div class="tl-dot">1610</div>
+          <div class="tl-box"><h3>Alliance avec la France — Les Traités de Paix et d'Amitié</h3><p>En 1610, le Grand Chef Membertou est le premier autochtone baptisé en Acadie. Les Mi'kmaq deviennent des alliés stratégiques des Français contre les Anglais — une alliance qui durera 150 ans. Membertou est une figure fondamentale de l'histoire acadienne.</p></div>
+        </div>
+        <div class="tl-item">
+          <div class="tl-dot">1713–1763</div>
+          <div class="tl-box"><h3>Guerres coloniales et déportation acadienne</h3><p>Les guerres franco-anglaises dévastent l'Acadie. La <em>Déportation des Acadiens</em> (1755-1763) expulse les colons français alliés des Mi'kmaq. Ces derniers continuent leur résistance armée contre les Anglais jusqu'aux Traités de Paix et d'Amitié (1760-1761).</p></div>
+        </div>
+        <div class="tl-item">
+          <div class="tl-dot">1760–1761</div>
+          <div class="tl-box"><h3>Traités de Paix et d'Amitié</h3><p>Les Mi'kmaq signent des Traités de Paix et d'Amitié avec les Britanniques — sans céder leur territoire. Ces traités, encore valides aujourd'hui, garantissent leurs droits de chasse, pêche et cueillette. Ils sont au cœur de la décision Marshall (1999).</p></div>
+        </div>
+        <div class="tl-item">
+          <div class="tl-dot">1999</div>
+          <div class="tl-box"><h3>Décision Marshall — Victoire juridique historique</h3><p>La Cour suprême reconnaît le droit des Mi'kmaq à la pêche commerciale basé sur les traités de 1760. Une victoire juridique majeure qui soulève des tensions avec les pêcheurs non-autochtones, encore d'actualité dans les années 2020.</p></div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="section" id="communautes">
+    <div class="container">
+      <div class="sec-label">Les communautés au Québec</div>
+      <h2 class="sec-title">Les communautés mi'kmaq du Québec</h2>
+      <div class="divider"></div>
+      <p>Les Mi'kmaq du Québec sont concentrés en <strong>Gaspésie</strong> et dans la <strong>Baie-des-Chaleurs</strong>. La grande majorité des Mi'kmaq vivent dans les provinces maritimes — le Québec compte trois communautés représentant la nation Gespegewa'gi (« dernier territoire »).</p>
+      <div class="comm-grid">
+        <div class="comm-card"><h4>🏘️ Listuguj</h4><p>Baie-des-Chaleurs — La plus grande communauté mi'kmaq du Québec (~2 500 hab.). En face de Campbellton (N.-B.). Active dans la pêche au saumon.</p></div>
+        <div class="comm-card"><h4>🏘️ Gespeg</h4><p>Gaspé — Communauté récente (~500 membres). Gardienne de la pointe de la Gaspésie. Reconstruction identitaire remarquable depuis les années 1970.</p></div>
+        <div class="comm-card"><h4>🏘️ Gesgapegiag</h4><p>Baie-des-Chaleurs — (Maria) Petite communauté active dans la pêche et le développement culturel. Voisine de Listuguj.</p></div>
+      </div>
+    </div>
+  </section>
+
+  <section class="section" id="aujourd-hui">
+    <div class="container">
+      <div class="sec-label">XXIe siècle</div>
+      <h2 class="sec-title">Les Mi'kmaq aujourd'hui</h2>
+      <div class="divider"></div>
+      <p>Les Mi'kmaq du Québec vivent une <strong>renaissance culturelle et politique remarquable</strong>. Après des décennies de marginalisation, les communautés de Listuguj, Gespeg et Gesgapegiag ont investi dans l'éducation, la culture et l'économie. Le <strong>Netukulimk</strong> — la philosophie de l'utilisation responsable des ressources — guide leur développement économique, notamment dans la pêche durable et l'écotourisme en Gaspésie.</p>
+      <p>La <strong>Décision Marshall</strong> de 1999 a transformé la relation des Mi'kmaq avec la pêche commerciale. Elle a aussi généré des tensions avec les pêcheurs non-autochtones — des conflits qui ont resurgi avec force en 2020 en Nouvelle-Écosse autour de la pêche au homard.</p>
+      <div class="cards">
+        <div class="card"><div class="card-icon">🎣</div><h3>Pêche durable</h3><p>Fort des droits reconnus par la décision Marshall, les Mi'kmaq du Québec développent leurs activités de pêche — saumon à Listuguj, homard, crabe et poissons de fond. La gestion durable des ressources selon le Netukulimk est au cœur de leur approche.</p></div>
+        <div class="card"><div class="card-icon">🌿</div><h3>Écotourisme en Gaspésie</h3><p>Les communautés mi'kmaq développent des offres d'écotourisme culturel en Gaspésie — kayak de mer, interprétation du territoire, artisanat, cuisine traditionnelle. Un développement économique respectueux du territoire ancestral.</p></div>
+        <div class="card"><div class="card-icon">📚</div><h3>Revitalisation linguistique</h3><p>La langue mi'kmaw est enseignée à Listuguj et Gespeg. Des programmes d'immersion et des ressources numériques (applications, dictionnaires en ligne) sont développés pour transmettre la langue aux nouvelles générations.</p></div>
+      </div>
+    </div>
+  </section>
+
+  <footer>
+    <h3>Mi'kmaq — Les Gardiens de Gespeg</h3>
+    <p>Cet article a été rédigé avec respect pour la nation mi'kmaq — peuple de la mer, des côtes et des forêts de la Gaspésie.</p>
+    <p>🌐 <a href="https://tourismeautochtone.com/nations/mikmaq" target="_blank">tourismeautochtone.com</a></p>
+    <div class="sources"><strong>Sources :</strong> Gouvernement du Québec (2025) • Encyclopédie canadienne • Grand Conseil Mi'kmaq • Décision Marshall (1999)</div>
+  </footer>
+
+  <script>
+    function goTo(id){var el=document.getElementById(id);if(!el)return;var nav=document.getElementById('navbar');var navH=nav?nav.offsetHeight:0;var top=el.getBoundingClientRect().top+document.documentElement.scrollTop-navH-10;document.documentElement.scrollTop=top;document.body.scrollTop=top;}
+  </script>
+</body>
+</html>`;
+  return <iframe srcDoc={html} style={{width:'100%',height:'100vh',border:'none'}} title="Les Micmacs — Mi'kmaq"/>;
+}
