@@ -1,0 +1,136 @@
+export default function Audio() {
+  const html = `<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Audio — Les Premières Nations au Québec</title>
+  <style>
+    @import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700;900&family=Lato:wght@300;400;700&display=swap');
+    :root{
+      --noir:#0A0A0A;
+      --sombre:#141414;
+      --or:#C8920A;
+      --or-clair:#E8B020;
+      --rouge:#8B2E2E;
+      --violet:#2D1B4E;
+    }
+    *{margin:0;padding:0;box-sizing:border-box}
+    html,body{height:100%;overflow-y:auto;scroll-behavior:smooth}
+    body{font-family:'Lato',sans-serif;background:var(--noir);color:#fff}
+
+    /* NAV */
+    .top-nav{background:rgba(0,0,0,0.85);backdrop-filter:blur(10px);padding:1rem 2rem;display:flex;justify-content:center;gap:2rem;flex-wrap:wrap;border-bottom:1px solid rgba(255,255,255,0.08);position:sticky;top:0;z-index:100}
+    .top-nav a{color:rgba(255,255,255,0.6);text-decoration:none;font-size:0.8rem;letter-spacing:2px;text-transform:uppercase;font-weight:700;transition:color 0.2s}
+    .top-nav a:hover,.top-nav a.active{color:var(--or-clair)}
+
+    /* HEADER */
+    .page-header{background:linear-gradient(135deg,#0a001a,#1a0a00);padding:5rem 2rem 4rem;text-align:center;border-bottom:1px solid rgba(200,146,10,0.2)}
+    .page-header .eyebrow{font-size:0.78rem;letter-spacing:5px;text-transform:uppercase;color:var(--or-clair);font-weight:700;margin-bottom:1rem}
+    .page-header h1{font-family:'Playfair Display',serif;font-size:clamp(2.5rem,5vw,4rem);font-weight:900;color:#fff;margin-bottom:1rem}
+    .page-header p{font-size:1.05rem;color:rgba(255,255,255,0.65);max-width:620px;margin:0 auto;line-height:1.8}
+    .gold-line{width:56px;height:4px;background:linear-gradient(to right,var(--rouge),var(--or));margin:1.5rem auto 0;border-radius:2px}
+
+    /* COMING SOON */
+    .coming-section{padding:6rem 2rem;text-align:center;max-width:800px;margin:0 auto}
+    .coming-icon{font-size:5rem;margin-bottom:2rem;animation:pulse 2s infinite}
+    @keyframes pulse{0%,100%{transform:scale(1)}50%{transform:scale(1.08)}}
+    .coming-title{font-family:'Playfair Display',serif;font-size:clamp(2rem,4vw,3rem);color:#fff;margin-bottom:1.5rem}
+    .coming-desc{font-size:1.05rem;color:rgba(255,255,255,0.6);line-height:1.9;max-width:580px;margin:0 auto 3rem}
+
+    /* PREVIEW CARDS */
+    .preview-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(250px,1fr));gap:1.5rem;max-width:900px;margin:0 auto 4rem}
+    .preview-card{background:#1A1A1A;border-radius:16px;padding:2rem;border:1px solid rgba(255,255,255,0.06);text-align:center;transition:transform 0.3s}
+    .preview-card:hover{transform:translateY(-4px)}
+    .preview-card .p-icon{font-size:2.5rem;margin-bottom:1rem}
+    .preview-card h3{font-family:'Playfair Display',serif;font-size:1.1rem;color:var(--or-clair);margin-bottom:0.6rem}
+    .preview-card p{font-size:0.88rem;color:rgba(255,255,255,0.5);line-height:1.6}
+    .badge-soon{display:inline-block;background:rgba(200,146,10,0.15);color:var(--or-clair);font-size:0.68rem;letter-spacing:2px;text-transform:uppercase;padding:0.3rem 0.8rem;border-radius:20px;border:1px solid rgba(200,146,10,0.3);margin-top:0.8rem}
+
+    /* NOTIFY */
+    .notify-box{background:linear-gradient(135deg,var(--violet),#1a0a00);border:1px solid rgba(200,146,10,0.2);border-radius:20px;padding:3rem;max-width:600px;margin:0 auto;text-align:center}
+    .notify-box h3{font-family:'Playfair Display',serif;font-size:1.6rem;color:#fff;margin-bottom:0.8rem}
+    .notify-box p{color:rgba(255,255,255,0.6);font-size:0.95rem;margin-bottom:1.5rem;line-height:1.7}
+    .btn-fb{display:inline-flex;align-items:center;gap:0.6rem;background:#1877F2;color:#fff;font-weight:700;font-size:0.88rem;padding:0.85rem 2rem;border-radius:50px;text-decoration:none;transition:background 0.2s,transform 0.2s}
+    .btn-fb:hover{background:#1565d8;transform:translateY(-2px)}
+
+    /* FOOTER */
+    footer{background:#050505;padding:3rem 2rem;text-align:center;border-top:1px solid rgba(255,255,255,0.06);margin-top:4rem}
+    footer p{font-size:0.85rem;color:rgba(255,255,255,0.35);line-height:1.8}
+    footer a{color:var(--or-clair);text-decoration:none}
+    footer a:hover{color:#fff}
+    .footer-nav{display:flex;flex-wrap:wrap;justify-content:center;gap:1rem 2rem;margin:1.5rem 0}
+    .footer-nav a{font-size:0.78rem;letter-spacing:1.5px;text-transform:uppercase;color:rgba(255,255,255,0.4);text-decoration:none;transition:color 0.2s}
+    .footer-nav a:hover{color:var(--or-clair)}
+
+    @media(max-width:600px){.top-nav{gap:1rem}.preview-grid{grid-template-columns:1fr}}
+  </style>
+</head>
+<body>
+
+  <nav class="top-nav">
+    <a href="/Home">🏠 Accueil</a>
+    <a href="/Home#articles">📰 Articles</a>
+    <a href="/Videos">🎬 Vidéos</a>
+    <a href="/Audio" class="active">🎵 Audio</a>
+  </nav>
+
+  <div class="page-header">
+    <div class="eyebrow">Médiathèque</div>
+    <h1>🎵 Audio</h1>
+    <p>Les Premières Nations représentent toutes les nations du Québec. Bientôt, écoutez leurs histoires, leurs chants et leurs voix.</p>
+    <div class="gold-line"></div>
+  </div>
+
+  <div class="coming-section">
+    <div class="coming-icon">🎶</div>
+    <div class="coming-title">Bientôt disponible</div>
+    <div class="coming-desc">
+      Des enregistrements audio uniques — podcasts, chants traditionnels, interviews et récits — seront ajoutés prochainement pour enrichir votre expérience culturelle.
+    </div>
+
+    <div class="preview-grid">
+      <div class="preview-card">
+        <div class="p-icon">🎙️</div>
+        <h3>Podcasts</h3>
+        <p>Des entretiens approfondis avec des membres des Premières Nations sur leur histoire et leur culture.</p>
+        <div class="badge-soon">Bientôt</div>
+      </div>
+      <div class="preview-card">
+        <div class="p-icon">🥁</div>
+        <h3>Chants traditionnels</h3>
+        <p>Les chants sacrés et cérémonials des différentes nations autochtones du Québec.</p>
+        <div class="badge-soon">Bientôt</div>
+      </div>
+      <div class="preview-card">
+        <div class="p-icon">📖</div>
+        <h3>Récits oraux</h3>
+        <p>Les légendes et histoires transmises de génération en génération par la tradition orale.</p>
+        <div class="badge-soon">Bientôt</div>
+      </div>
+    </div>
+
+    <div class="notify-box">
+      <h3>Restez informé</h3>
+      <p>Rejoignez notre groupe Facebook privé pour être averti dès qu'un nouveau contenu audio est publié.</p>
+      <a href="https://www.facebook.com/groups/1451283625021958" target="_blank" class="btn-fb">
+        📘 Rejoindre le groupe Facebook
+      </a>
+    </div>
+  </div>
+
+  <footer>
+    <div class="footer-nav">
+      <a href="/Home">Accueil</a>
+      <a href="/Home#articles">Articles</a>
+      <a href="/Videos">Vidéos</a>
+      <a href="/Audio">Audio</a>
+    </div>
+    <p>© 2025 Les Premières Nations au Québec · Contenu éducatif et culturel</p>
+    <p style="margin-top:0.5rem"><a href="https://www.facebook.com/groups/1451283625021958" target="_blank">Rejoindre notre groupe Facebook</a></p>
+  </footer>
+
+</body>
+</html>`;
+  return <div style={{margin:0,padding:0,height:'100vh'}}><iframe srcDoc={html} style={{width:'100%',height:'100vh',border:'none'}} title="Audio"/></div>;
+}
