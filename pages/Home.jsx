@@ -64,15 +64,6 @@ export default function Home() {
     .card-actions{display:flex;gap:0.5rem;flex-wrap:wrap}
     .btn-read{display:inline-flex;align-items:center;gap:0.3rem;background:var(--or);color:#000;font-weight:700;font-size:0.72rem;letter-spacing:1px;text-transform:uppercase;padding:0.42rem 0.9rem;border-radius:30px;text-decoration:none;transition:background 0.2s,transform 0.2s;cursor:pointer;border:none}
     .btn-read:hover{background:var(--or-clair);transform:translateY(-1px)}
-    .btn-share{display:inline-flex;align-items:center;gap:0.3rem;background:rgba(255,255,255,0.12);color:#fff;font-size:0.72rem;letter-spacing:1px;text-transform:uppercase;padding:0.42rem 0.9rem;border-radius:30px;border:1px solid rgba(255,255,255,0.2);cursor:pointer;transition:background 0.2s;position:relative}
-    .btn-share:hover{background:rgba(255,255,255,0.22)}
-
-    /* SHARE DROPDOWN */
-    .share-menu{display:none;position:absolute;bottom:calc(100% + 6px);left:0;background:#1e1e1e;border:1px solid rgba(255,255,255,0.12);border-radius:10px;min-width:190px;z-index:100;overflow:hidden;box-shadow:0 8px 30px rgba(0,0,0,0.5)}
-    .share-menu.open{display:block}
-    .share-menu a,.share-menu button{display:flex;align-items:center;gap:0.6rem;width:100%;padding:0.65rem 1rem;font-size:0.8rem;color:#fff;text-decoration:none;background:none;border:none;cursor:pointer;transition:background 0.15s;text-align:left}
-    .share-menu a:hover,.share-menu button:hover{background:rgba(255,255,255,0.08)}
-    .share-menu .sep{height:1px;background:rgba(255,255,255,0.08);margin:0.2rem 0}
 
     /* TOAST */
     #toast{position:fixed;bottom:2rem;left:50%;transform:translateX(-50%) translateY(20px);background:var(--or);color:#000;font-weight:700;font-size:0.85rem;padding:0.7rem 1.8rem;border-radius:30px;opacity:0;transition:all 0.3s;z-index:9999;pointer-events:none}
@@ -132,10 +123,10 @@ export default function Home() {
 
   <!-- TOP NAV -->
   <nav class="top-nav">
-    <a href="/Home" class="active">🏠 Accueil</a>
-    <a href="#nations">📰 Articles</a>
-    <a href="/Videos">🎬 Vidéos</a>
-    <a href="/Audio">🎵 Audio</a>
+    <a href="/Home" target="_top" onclick="window.top.location.href='/Home';return false;">🏠 Accueil</a>
+    <a href="#nations" onclick="document.getElementById('nations').scrollIntoView({behavior:'smooth'});return false;">📰 Articles</a>
+    <a href="/Videos" target="_top">🎬 Vidéos</a>
+    <a href="/Audio" target="_top">🎵 Audio</a>
   </nav>
 
   <!-- TOAST -->
@@ -185,13 +176,7 @@ export default function Home() {
           <p class="card-desc">Wôbanakiak — « Peuple de l'aube »</p>
           <div class="card-actions">
             <a class="btn-read" href="/Abenaquis" target="_top">📖 Lire</a>
-            <button class="btn-share" onclick="toggleShare(event,'share-abenaquis')">🔗 Partager ▾</button>
-            <div class="share-menu" id="share-abenaquis">
-              <a href="https://www.facebook.com/sharer/sharer.php?u=https://lucie-app-5fea0268.base44.app/Abenaquis" target="_blank">📘 Partager sur Facebook</a>
-              <a href="https://www.facebook.com/groups/1451283625021958" target="_blank">👥 Publier dans le groupe</a>
-              <div class="sep"></div>
-              <button onclick="copyLink('https://lucie-app-5fea0268.base44.app/Abenaquis')">🔗 Copier le lien</button>
-            </div>
+          </div>
           </div>
         </div>
       </div>
@@ -206,13 +191,7 @@ export default function Home() {
           <p class="card-desc">Anishinaabe — Gardiens de la rivière des Outaouais</p>
           <div class="card-actions">
             <a class="btn-read" href="/Algonquins" target="_top">📖 Lire</a>
-            <button class="btn-share" onclick="toggleShare(event,'share-algonquins')">🔗 Partager ▾</button>
-            <div class="share-menu" id="share-algonquins">
-              <a href="https://www.facebook.com/sharer/sharer.php?u=https://lucie-app-5fea0268.base44.app/Algonquins" target="_blank">📘 Partager sur Facebook</a>
-              <a href="https://www.facebook.com/groups/1451283625021958" target="_blank">👥 Publier dans le groupe</a>
-              <div class="sep"></div>
-              <button onclick="copyLink('https://lucie-app-5fea0268.base44.app/Algonquins')">🔗 Copier le lien</button>
-            </div>
+          </div>
           </div>
         </div>
       </div>
@@ -227,13 +206,7 @@ export default function Home() {
           <p class="card-desc">Nehirowisiwok — Peuple du Nitaskinan</p>
           <div class="card-actions">
             <a class="btn-read" href="/Atikamekw" target="_top">📖 Lire</a>
-            <button class="btn-share" onclick="toggleShare(event,'share-atikamekw')">🔗 Partager ▾</button>
-            <div class="share-menu" id="share-atikamekw">
-              <a href="https://www.facebook.com/sharer/sharer.php?u=https://lucie-app-5fea0268.base44.app/Atikamekw" target="_blank">📘 Partager sur Facebook</a>
-              <a href="https://www.facebook.com/groups/1451283625021958" target="_blank">👥 Publier dans le groupe</a>
-              <div class="sep"></div>
-              <button onclick="copyLink('https://lucie-app-5fea0268.base44.app/Atikamekw')">🔗 Copier le lien</button>
-            </div>
+          </div>
           </div>
         </div>
       </div>
@@ -248,13 +221,7 @@ export default function Home() {
           <p class="card-desc">Eeyou — Peuple de la Baie-James</p>
           <div class="card-actions">
             <a class="btn-read" href="/Cris" target="_top">📖 Lire</a>
-            <button class="btn-share" onclick="toggleShare(event,'share-cris')">🔗 Partager ▾</button>
-            <div class="share-menu" id="share-cris">
-              <a href="https://www.facebook.com/sharer/sharer.php?u=https://lucie-app-5fea0268.base44.app/Cris" target="_blank">📘 Partager sur Facebook</a>
-              <a href="https://www.facebook.com/groups/1451283625021958" target="_blank">👥 Publier dans le groupe</a>
-              <div class="sep"></div>
-              <button onclick="copyLink('https://lucie-app-5fea0268.base44.app/Cris')">🔗 Copier le lien</button>
-            </div>
+          </div>
           </div>
         </div>
       </div>
@@ -269,13 +236,7 @@ export default function Home() {
           <p class="card-desc">Wendat — Gardiens du feu, peuple de l'île</p>
           <div class="card-actions">
             <a class="btn-read" href="/HuronsWendat" target="_top">📖 Lire</a>
-            <button class="btn-share" onclick="toggleShare(event,'share-hurons')">🔗 Partager ▾</button>
-            <div class="share-menu" id="share-hurons">
-              <a href="https://www.facebook.com/sharer/sharer.php?u=https://lucie-app-5fea0268.base44.app/HuronsWendat" target="_blank">📘 Partager sur Facebook</a>
-              <a href="https://www.facebook.com/groups/1451283625021958" target="_blank">👥 Publier dans le groupe</a>
-              <div class="sep"></div>
-              <button onclick="copyLink('https://lucie-app-5fea0268.base44.app/HuronsWendat')">🔗 Copier le lien</button>
-            </div>
+          </div>
           </div>
         </div>
       </div>
@@ -290,13 +251,7 @@ export default function Home() {
           <p class="card-desc">Innu — « Être humain » · Peuple du Nitassinan</p>
           <div class="card-actions">
             <a class="btn-read" href="/Innus" target="_top">📖 Lire</a>
-            <button class="btn-share" onclick="toggleShare(event,'share-innus')">🔗 Partager ▾</button>
-            <div class="share-menu" id="share-innus">
-              <a href="https://www.facebook.com/sharer/sharer.php?u=https://lucie-app-5fea0268.base44.app/Innus" target="_blank">📘 Partager sur Facebook</a>
-              <a href="https://www.facebook.com/groups/1451283625021958" target="_blank">👥 Publier dans le groupe</a>
-              <div class="sep"></div>
-              <button onclick="copyLink('https://lucie-app-5fea0268.base44.app/Innus')">🔗 Copier le lien</button>
-            </div>
+          </div>
           </div>
         </div>
       </div>
@@ -311,13 +266,7 @@ export default function Home() {
           <p class="card-desc">Wolastoqiyik — Peuple de la belle rivière</p>
           <div class="card-actions">
             <a class="btn-read" href="/Malecites" target="_top">📖 Lire</a>
-            <button class="btn-share" onclick="toggleShare(event,'share-malecites')">🔗 Partager ▾</button>
-            <div class="share-menu" id="share-malecites">
-              <a href="https://www.facebook.com/sharer/sharer.php?u=https://lucie-app-5fea0268.base44.app/Malecites" target="_blank">📘 Partager sur Facebook</a>
-              <a href="https://www.facebook.com/groups/1451283625021958" target="_blank">👥 Publier dans le groupe</a>
-              <div class="sep"></div>
-              <button onclick="copyLink('https://lucie-app-5fea0268.base44.app/Malecites')">🔗 Copier le lien</button>
-            </div>
+          </div>
           </div>
         </div>
       </div>
@@ -332,13 +281,7 @@ export default function Home() {
           <p class="card-desc">Mi'kmaq — « Mes amis » · Gardiens de Gespeg</p>
           <div class="card-actions">
             <a class="btn-read" href="/Micmacs" target="_top">📖 Lire</a>
-            <button class="btn-share" onclick="toggleShare(event,'share-micmacs')">🔗 Partager ▾</button>
-            <div class="share-menu" id="share-micmacs">
-              <a href="https://www.facebook.com/sharer/sharer.php?u=https://lucie-app-5fea0268.base44.app/Micmacs" target="_blank">📘 Partager sur Facebook</a>
-              <a href="https://www.facebook.com/groups/1451283625021958" target="_blank">👥 Publier dans le groupe</a>
-              <div class="sep"></div>
-              <button onclick="copyLink('https://lucie-app-5fea0268.base44.app/Micmacs')">🔗 Copier le lien</button>
-            </div>
+          </div>
           </div>
         </div>
       </div>
@@ -353,13 +296,7 @@ export default function Home() {
           <p class="card-desc">Kanien'kehá:ka — Peuple du pays du silex</p>
           <div class="card-actions">
             <a class="btn-read" href="/Mohawks" target="_top">📖 Lire</a>
-            <button class="btn-share" onclick="toggleShare(event,'share-mohawks')">🔗 Partager ▾</button>
-            <div class="share-menu" id="share-mohawks">
-              <a href="https://www.facebook.com/sharer/sharer.php?u=https://lucie-app-5fea0268.base44.app/Mohawks" target="_blank">📘 Partager sur Facebook</a>
-              <a href="https://www.facebook.com/groups/1451283625021958" target="_blank">👥 Publier dans le groupe</a>
-              <div class="sep"></div>
-              <button onclick="copyLink('https://lucie-app-5fea0268.base44.app/Mohawks')">🔗 Copier le lien</button>
-            </div>
+          </div>
           </div>
         </div>
       </div>
@@ -374,13 +311,7 @@ export default function Home() {
           <p class="card-desc">Gens des confins — Gardiens du caribou nordique</p>
           <div class="card-actions">
             <a class="btn-read" href="/Naskapis" target="_top">📖 Lire</a>
-            <button class="btn-share" onclick="toggleShare(event,'share-naskapis')">🔗 Partager ▾</button>
-            <div class="share-menu" id="share-naskapis">
-              <a href="https://www.facebook.com/sharer/sharer.php?u=https://lucie-app-5fea0268.base44.app/Naskapis" target="_blank">📘 Partager sur Facebook</a>
-              <a href="https://www.facebook.com/groups/1451283625021958" target="_blank">👥 Publier dans le groupe</a>
-              <div class="sep"></div>
-              <button onclick="copyLink('https://lucie-app-5fea0268.base44.app/Naskapis')">🔗 Copier le lien</button>
-            </div>
+          </div>
           </div>
         </div>
       </div>
@@ -395,13 +326,7 @@ export default function Home() {
           <p class="card-desc">Inuit — « Êtres humains » · Gardiens du Nunavik</p>
           <div class="card-actions">
             <a class="btn-read" href="/Inuits" target="_top">📖 Lire</a>
-            <button class="btn-share" onclick="toggleShare(event,'share-inuits')">🔗 Partager ▾</button>
-            <div class="share-menu" id="share-inuits">
-              <a href="https://www.facebook.com/sharer/sharer.php?u=https://lucie-app-5fea0268.base44.app/Inuits" target="_blank">📘 Partager sur Facebook</a>
-              <a href="https://www.facebook.com/groups/1451283625021958" target="_blank">👥 Publier dans le groupe</a>
-              <div class="sep"></div>
-              <button onclick="copyLink('https://lucie-app-5fea0268.base44.app/Inuits')">🔗 Copier le lien</button>
-            </div>
+          </div>
           </div>
         </div>
       </div>
@@ -482,33 +407,22 @@ export default function Home() {
   </footer>
 
   <script>
-    const BASE_URL = 'https://lucie-app-5fea0268.base44.app';
-
-    function toggleShare(e, id) {
-      e.stopPropagation();
-      const menu = document.getElementById(id);
-      const isOpen = menu.classList.contains('open');
-      // Fermer tous les menus ouverts
-      document.querySelectorAll('.share-menu.open').forEach(m => m.classList.remove('open'));
-      if (!isOpen) menu.classList.add('open');
-    }
-
     function copyLink(url) {
-      navigator.clipboard.writeText(url).then(() => {
-        const toast = document.getElementById('toast');
-        toast.classList.add('show');
-        setTimeout(() => toast.classList.remove('show'), 2500);
+      navigator.clipboard.writeText(url).then(function() {
+        var t = document.getElementById('toast');
+        t.classList.add('show');
+        setTimeout(function(){ t.classList.remove('show'); }, 2500);
       });
-      document.querySelectorAll('.share-menu.open').forEach(m => m.classList.remove('open'));
     }
-
-    // Fermer les menus en cliquant ailleurs
-    document.addEventListener('click', () => {
-      document.querySelectorAll('.share-menu.open').forEach(m => m.classList.remove('open'));
-    });
   </script>
-
 </body>
-</html>`;
-  return <iframe srcDoc={html} style={{width:'100%',height:'100vh',border:'none'}} title="Peuples Autochtones du Québec"/>;
+</html>\`;
+
+  return (
+    <iframe
+      srcDoc={html}
+      style={{ width: '100%', height: '100vh', border: 'none' }}
+      title="Peuples Autochtones du Québec"
+    />
+  );
 }
