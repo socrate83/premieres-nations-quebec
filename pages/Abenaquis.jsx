@@ -70,6 +70,20 @@ export default function Abenaquis() {
     footer p{font-size:0.9rem;opacity:0.75;max-width:600px;margin:0 auto 0.5rem;line-height:1.7}
     footer .sources{margin-top:2rem;font-size:0.8rem;opacity:0.55}
     footer .sources a{color:var(--ocre);text-decoration:none}
+
+    /* SHARE FOOTER */
+    .share-footer{background:#f5f0e8;border-top:3px solid var(--ocre);padding:3rem 2rem;text-align:center}
+    .share-footer h4{font-family:'Playfair Display',serif;font-size:1.4rem;color:#5a3a1a;margin-bottom:0.5rem}
+    .share-footer p{font-size:0.95rem;color:#5a3a1a;margin-bottom:1.8rem}
+    .share-btns{display:flex;flex-wrap:wrap;justify-content:center;gap:0.9rem}
+    .share-btns a,.share-btns button{display:inline-flex;align-items:center;gap:0.5rem;padding:0.85rem 1.6rem;border-radius:50px;font-size:0.95rem;font-weight:700;text-decoration:none;cursor:pointer;border:none;transition:transform 0.2s,opacity 0.2s;letter-spacing:0.5px}
+    .share-btns a:hover,.share-btns button:hover{transform:translateY(-2px);opacity:0.9}
+    .btn-fb-big{background:#1877F2;color:#fff}
+    .btn-group-big{background:#145dbf;color:#fff}
+    .btn-messenger-big{background:#0084FF;color:#fff}
+    .btn-whatsapp-big{background:#25D366;color:#000}
+    .btn-email-big{background:#555;color:#fff}
+    .btn-copy-big{background:var(--ocre);color:#000}
   </style>
 </head>
 <body>
@@ -296,6 +310,20 @@ export default function Abenaquis() {
       <p style="margin-top:2rem;font-style:italic;text-align:center;color:#666;">« Leur langue, autrefois considérée comme disparue, connaît une renaissance, marquant ainsi pour les Abénaquis une reconnexion avec leur identité. » — Gouvernement du Québec, 2024</p>
     </div>
   </section>
+
+  <div class="share-footer">
+    <h4>📢 Partager cet article</h4>
+    <p>Vous avez aimé ? Faites découvrir les Abénaquis à votre entourage !</p>
+    <div class="share-btns">
+      <a class="btn-fb-big" href="https://www.facebook.com/sharer/sharer.php?u=https://lucie-app-5fea0268.base44.app/Abenaquis" target="_blank">📘 Facebook</a>
+      <a class="btn-group-big" href="https://www.facebook.com/groups/1451283625021958" target="_blank">👥 Groupe FB</a>
+      <a class="btn-messenger-big" href="https://www.facebook.com/dialog/send?link=https://lucie-app-5fea0268.base44.app/Abenaquis&app_id=291494419107518&redirect_uri=https://lucie-app-5fea0268.base44.app/Abenaquis" target="_blank">💬 Messenger</a>
+      <a class="btn-whatsapp-big" href="https://api.whatsapp.com/send?text=D%C3%A9couvre+cet+article+sur+les+Abénaquis+%3A+https://lucie-app-5fea0268.base44.app/Abenaquis" target="_blank">🟢 WhatsApp</a>
+      <a class="btn-email-big" href="mailto:?subject=Article+sur+les+Abénaquis&body=Je+te+partage+cet+article+sur+les+Abénaquis+%3A+https://lucie-app-5fea0268.base44.app/Abenaquis" target="_blank">📧 Courriel</a>
+      <button class="btn-copy-big" onclick="navigator.clipboard.writeText('https://lucie-app-5fea0268.base44.app/Abenaquis').then(function(){var t=document.getElementById('toast-share');t.style.opacity='1';t.style.transform='translateX(-50%) translateY(0)';setTimeout(function(){t.style.opacity='0';t.style.transform='translateX(-50%) translateY(20px)';},2500);})">🔗 Copier le lien</button>
+    </div>
+  </div>
+  <div id="toast-share" style="position:fixed;bottom:2rem;left:50%;transform:translateX(-50%) translateY(20px);background:#C8920A;color:#000;font-weight:700;font-size:0.9rem;padding:0.7rem 2rem;border-radius:30px;opacity:0;transition:all 0.3s;z-index:9999;pointer-events:none">✅ Lien copié !</div>
 
   <footer>
     <h3>W8banakiak — Le Peuple de l'Aube</h3>
