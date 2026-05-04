@@ -46,10 +46,10 @@
     .grid-sec{padding:5rem 2rem;background:#111}
     .grid-title{font-family:'Playfair Display',serif;font-size:clamp(1.8rem,3vw,2.5rem);color:#fff;text-align:center;margin-bottom:0.8rem}
     .grid-sub{text-align:center;color:rgba(255,255,255,0.5);font-size:0.9rem;letter-spacing:2px;text-transform:uppercase;margin-bottom:3rem}
-    .nations-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(260px,320px));gap:1.5rem;max-width:1100px;margin:0 auto;justify-content:center}
+    .nations-grid{display:flex;flex-wrap:wrap;gap:1.5rem;max-width:1100px;margin:0 auto;justify-content:center}
 
     /* NATION CARD */
-    .nation-card{position:relative;border-radius:16px;overflow:hidden;height:220px;background:#1A1A1A;transition:transform 0.3s,box-shadow 0.3s;display:block}
+    .nation-card{position:relative;border-radius:16px;overflow:hidden;width:300px;height:220px;background:#1A1A1A;transition:transform 0.3s,box-shadow 0.3s;display:block;flex-shrink:0}
     .nation-card:hover{transform:translateY(-6px) scale(1.02);box-shadow:0 20px 60px rgba(0,0,0,0.5)}
     .nation-card img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;transition:transform 0.5s}
     .nation-card:hover img{transform:scale(1.08)}
