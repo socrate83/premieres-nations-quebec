@@ -404,5 +404,42 @@
       });
     }
   </script>
+
+  <!-- Bouton flottant question -->
+  <style>
+    #chat-btn{position:fixed;bottom:2rem;right:2rem;width:56px;height:56px;background:var(--or);border-radius:50%;font-size:1.6rem;display:flex;align-items:center;justify-content:center;cursor:pointer;box-shadow:0 4px 15px rgba(0,0,0,0.4);z-index:1000;transition:transform 0.2s}
+    #chat-btn:hover{transform:scale(1.1)}
+    #chat-box{position:fixed;bottom:6rem;right:2rem;width:300px;background:#1a1a1a;border:1px solid var(--or);border-radius:16px;padding:1.2rem;z-index:1000;display:none;box-shadow:0 8px 30px rgba(0,0,0,0.5)}
+    #chat-header{color:var(--or);font-weight:700;margin-bottom:0.8rem;font-size:0.95rem}
+    #chat-input{width:100%;height:100px;background:#111;color:#fff;border:1px solid #444;border-radius:8px;padding:0.6rem;font-size:0.85rem;resize:none;box-sizing:border-box;margin-bottom:0.7rem}
+    #chat-box button{width:100%;padding:0.6rem;border:none;border-radius:8px;cursor:pointer;font-weight:700;font-size:0.85rem;margin-bottom:0.4rem}
+    #chat-box .btn-send{background:var(--or);color:#000}
+    #chat-box .btn-close{background:#333;color:#ccc}
+  </style>
+
+  <div id="chat-btn" onclick="toggleChat()">🪶</div>
+  <div id="chat-box">
+    <div id="chat-header">✉️ Poser une question</div>
+    <textarea id="chat-input" placeholder="Votre question sur les Premières Nations du Québec..."></textarea>
+    <button class="btn-send" onclick="sendQuestion()">Envoyer →</button>
+    <button class="btn-close" onclick="toggleChat()">Fermer</button>
+  </div>
+
+  <script>
+    function toggleChat(){
+      var box = document.getElementById('chat-box');
+      box.style.display = box.style.display === 'block' ? 'none' : 'block';
+    }
+    function sendQuestion(){
+      var q = document.getElementById('chat-input').value.trim();
+      if(!q){ alert('Veuillez entrer une question.'); return; }
+      var subject = encodeURIComponent('Question — Premières Nations du Québec');
+      var body = encodeURIComponent(q);
+      window.location.href = 'mailto:infodunet896@gmail.com?subject=' + subject + '&body=' + body;
+      document.getElementById('chat-input').value = '';
+      toggleChat();
+    }
+  </script>
+
 </body>
-</html>\
+</html>
