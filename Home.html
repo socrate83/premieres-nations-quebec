@@ -1,0 +1,419 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Peuples Autochtones du Québec — Série complète</title>
+  <style>
+    @import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700;900&family=Lato:wght@300;400;700&display=swap');
+    :root{
+      --noir:#0A0A0A;
+      --sombre:#141414;
+      --or:#C8920A;
+      --or-clair:#E8B020;
+      --rouge:#8B2E2E;
+      --texte:#1E1E1E;
+    }
+    *{margin:0;padding:0;box-sizing:border-box}
+    html,body{height:100%;overflow-y:auto;scroll-behavior:smooth}
+    body{font-family:'Lato',sans-serif;background:var(--noir);color:#fff}
+
+    /* HERO */
+    .hero{position:relative;min-height:100vh;display:flex;align-items:center;justify-content:center;overflow:hidden;background:#000}
+    .hero-bg{position:absolute;inset:0;background:url('https://media.base44.com/images/public/69f23c5b09417d29099136be/41afc600c_generated_image.png') center/cover no-repeat;filter:brightness(0.35);transform:scale(1.05);animation:slowzoom 20s ease-in-out infinite alternate}
+    @keyframes slowzoom{from{transform:scale(1.05)}to{transform:scale(1.15)}}
+    .hero-content{position:relative;z-index:2;text-align:center;padding:3rem 2rem;max-width:900px}
+    .hero-eyebrow{font-size:0.8rem;letter-spacing:6px;text-transform:uppercase;color:var(--or-clair);font-weight:700;margin-bottom:1.5rem}
+    .hero h1{font-family:'Playfair Display',serif;font-size:clamp(3rem,7vw,6.5rem);font-weight:900;color:#fff;line-height:1.05;text-shadow:0 4px 30px rgba(0,0,0,0.8);margin-bottom:1.5rem}
+    .hero h1 span{color:var(--or-clair)}
+    .hero-sub{font-family:'Playfair Display',serif;font-size:1.3rem;color:rgba(255,255,255,0.85);font-style:italic;max-width:650px;margin:0 auto 2.5rem;line-height:1.7}
+    .hero-cta{display:inline-block;background:var(--or);color:#000;font-weight:700;font-size:0.9rem;letter-spacing:2px;text-transform:uppercase;padding:1rem 2.5rem;border-radius:50px;cursor:pointer;transition:background 0.2s,transform 0.2s;border:none}
+    .hero-cta:hover{background:var(--or-clair);transform:translateY(-2px)}
+    .hero-scroll{position:absolute;bottom:2.5rem;left:50%;transform:translateX(-50%);color:rgba(255,255,255,0.5);font-size:0.75rem;letter-spacing:3px;text-transform:uppercase;animation:bob 2s infinite}
+    @keyframes bob{0%,100%{transform:translateX(-50%) translateY(0)}50%{transform:translateX(-50%) translateY(8px)}}
+    .stats-bar{background:rgba(255,255,255,0.06);backdrop-filter:blur(10px);display:flex;justify-content:center;gap:4rem;padding:2rem;flex-wrap:wrap;border-bottom:1px solid rgba(255,255,255,0.1)}
+    .stat-item{text-align:center}
+    .stat-n{font-family:'Playfair Display',serif;font-size:2.4rem;font-weight:900;color:var(--or-clair)}
+    .stat-l{font-size:0.75rem;letter-spacing:2px;text-transform:uppercase;color:rgba(255,255,255,0.55);margin-top:0.2rem}
+
+    /* INTRO */
+    .intro-sec{padding:6rem 2rem;text-align:center;background:var(--sombre)}
+    .intro-sec h2{font-family:'Playfair Display',serif;font-size:clamp(1.8rem,3vw,2.6rem);color:#fff;margin-bottom:1.5rem}
+    .intro-sec p{font-size:1.05rem;color:rgba(255,255,255,0.7);max-width:740px;margin:0 auto 1.2rem;line-height:1.9}
+    .gold-line{width:56px;height:4px;background:linear-gradient(to right,var(--rouge),var(--or));margin:1.5rem auto;border-radius:2px}
+
+    /* GRID */
+    .grid-sec{padding:5rem 2rem;background:#111}
+    .grid-title{font-family:'Playfair Display',serif;font-size:clamp(1.8rem,3vw,2.5rem);color:#fff;text-align:center;margin-bottom:0.8rem}
+    .grid-sub{text-align:center;color:rgba(255,255,255,0.5);font-size:0.9rem;letter-spacing:2px;text-transform:uppercase;margin-bottom:3rem}
+    .nations-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(260px,1fr));gap:1.5rem;max-width:1100px;margin:0 auto}
+
+    /* NATION CARD */
+    .nation-card{position:relative;border-radius:16px;overflow:hidden;aspect-ratio:4/3;background:#1A1A1A;transition:transform 0.3s,box-shadow 0.3s;display:block}
+    .nation-card:hover{transform:translateY(-6px) scale(1.02);box-shadow:0 20px 60px rgba(0,0,0,0.5)}
+    .nation-card img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;transition:transform 0.5s}
+    .nation-card:hover img{transform:scale(1.08)}
+    .nation-card .overlay{position:absolute;inset:0;background:linear-gradient(to top,rgba(0,0,0,0.92) 0%,rgba(0,0,0,0.25) 60%,transparent 100%)}
+    .nation-card .card-body{position:absolute;bottom:0;left:0;right:0;padding:1.2rem 1.2rem 1rem}
+    .nation-card .card-tag{font-size:0.65rem;letter-spacing:3px;text-transform:uppercase;color:var(--or-clair);font-weight:700;margin-bottom:0.3rem}
+    .nation-card h3{font-family:'Playfair Display',serif;font-size:1.3rem;color:#fff;line-height:1.2;margin-bottom:0.3rem}
+    .nation-card .card-desc{font-size:0.8rem;color:rgba(255,255,255,0.65);line-height:1.4;margin-bottom:0.8rem}
+
+    /* CARD ACTIONS */
+    .card-actions{display:flex;gap:0.5rem;flex-wrap:wrap}
+    .btn-read{display:inline-flex;align-items:center;gap:0.3rem;background:var(--or);color:#000;font-weight:700;font-size:0.72rem;letter-spacing:1px;text-transform:uppercase;padding:0.42rem 0.9rem;border-radius:30px;text-decoration:none;transition:background 0.2s,transform 0.2s;cursor:pointer;border:none}
+    .btn-read:hover{background:var(--or-clair);transform:translateY(-1px)}
+
+    /* TOAST */
+    #toast{position:fixed;bottom:2rem;left:50%;transform:translateX(-50%) translateY(20px);background:var(--or);color:#000;font-weight:700;font-size:0.85rem;padding:0.7rem 1.8rem;border-radius:30px;opacity:0;transition:all 0.3s;z-index:9999;pointer-events:none}
+    #toast.show{opacity:1;transform:translateX(-50%) translateY(0)}
+
+    /* COMMUNITY BAR */
+    .community-bar{background:linear-gradient(135deg,#1a0a00,#0a1a00);padding:3.5rem 2rem;text-align:center;border-top:1px solid rgba(200,146,10,0.2);border-bottom:1px solid rgba(200,146,10,0.2)}
+    .community-bar h3{font-family:'Playfair Display',serif;font-size:1.7rem;color:var(--or-clair);margin-bottom:0.8rem}
+    .community-bar p{color:rgba(255,255,255,0.65);max-width:580px;margin:0 auto 1.8rem;font-size:0.95rem;line-height:1.7}
+    .community-links{display:flex;justify-content:center;gap:1rem;flex-wrap:wrap}
+    .btn-fb{display:inline-flex;align-items:center;gap:0.6rem;background:#1877F2;color:#fff;font-weight:700;font-size:0.88rem;padding:0.8rem 1.8rem;border-radius:50px;text-decoration:none;transition:background 0.2s,transform 0.2s}
+    .btn-fb:hover{background:#1565d8;transform:translateY(-2px)}
+    .btn-site{display:inline-flex;align-items:center;gap:0.6rem;background:rgba(255,255,255,0.1);color:#fff;font-weight:700;font-size:0.88rem;padding:0.8rem 1.8rem;border-radius:50px;text-decoration:none;border:1px solid rgba(255,255,255,0.2);transition:background 0.2s,transform 0.2s}
+    .btn-site:hover{background:rgba(255,255,255,0.18);transform:translateY(-2px)}
+
+    /* QUOTE */
+    .quote-sec{padding:6rem 2rem;background:linear-gradient(135deg,#0A0010,#0A1A10);text-align:center}
+    .quote-sec blockquote{font-family:'Playfair Display',serif;font-size:clamp(1.3rem,2.5vw,2rem);color:#fff;font-style:italic;max-width:780px;margin:0 auto;line-height:1.7}
+    .quote-src{color:rgba(255,255,255,0.45);font-size:0.82rem;margin-top:1.5rem;letter-spacing:2px;text-transform:uppercase}
+
+    /* FOOTER */
+    footer{background:#050505;padding:4rem 2rem;text-align:center;border-top:1px solid rgba(255,255,255,0.08)}
+    footer h3{font-family:'Playfair Display',serif;font-size:1.6rem;color:var(--or-clair);margin-bottom:1rem}
+    footer p{font-size:0.88rem;color:rgba(255,255,255,0.45);max-width:580px;margin:0 auto 0.6rem;line-height:1.8}
+    footer a{color:var(--or-clair);text-decoration:none}
+    footer a:hover{color:#fff;text-decoration:underline}
+    .footer-nav{display:flex;flex-wrap:wrap;justify-content:center;gap:1rem 2rem;margin:2rem 0;padding:2rem 0;border-top:1px solid rgba(255,255,255,0.06);border-bottom:1px solid rgba(255,255,255,0.06)}
+    .footer-nav a{font-size:0.8rem;letter-spacing:1.5px;text-transform:uppercase;color:rgba(255,255,255,0.45);text-decoration:none;transition:color 0.2s}
+    .footer-nav a:hover{color:var(--or-clair)}
+    .footer-social{display:flex;justify-content:center;gap:1rem;margin:1.5rem 0;flex-wrap:wrap}
+    .footer-social a{display:inline-flex;align-items:center;gap:0.4rem;font-size:0.82rem;color:rgba(255,255,255,0.45);text-decoration:none;padding:0.4rem 1rem;border:1px solid rgba(255,255,255,0.1);border-radius:20px;transition:all 0.2s}
+    .footer-social a:hover{color:#fff;border-color:rgba(255,255,255,0.3)}
+    .copy{font-size:0.75rem;color:rgba(255,255,255,0.2);margin-top:1.5rem}
+
+
+    /* TOP NAV */
+    .top-nav{background:rgba(0,0,0,0.9);backdrop-filter:blur(10px);padding:0.9rem 2rem;display:flex;justify-content:center;gap:2rem;flex-wrap:wrap;border-bottom:1px solid rgba(255,255,255,0.08);position:sticky;top:0;z-index:200}
+    .top-nav a{color:rgba(255,255,255,0.6);text-decoration:none;font-size:0.78rem;letter-spacing:2px;text-transform:uppercase;font-weight:700;transition:color 0.2s}
+    .top-nav a:hover,.top-nav a.active{color:var(--or-clair)}
+
+    /* MEDIA SECTION */
+    .media-sec{padding:5rem 2rem;background:#0d0d0d;text-align:center}
+    .media-sec .grid-title{margin-bottom:0.8rem}
+    .media-cards{display:flex;justify-content:center;gap:1.5rem;flex-wrap:wrap;margin-top:3rem}
+    .media-card{background:#1A1A1A;border-radius:20px;padding:2.5rem 2rem;width:260px;border:1px solid rgba(255,255,255,0.07);text-decoration:none;color:#fff;transition:transform 0.3s,box-shadow 0.3s,border-color 0.3s;display:flex;flex-direction:column;align-items:center;gap:1rem}
+    .media-card:hover{transform:translateY(-8px);box-shadow:0 20px 60px rgba(0,0,0,0.5);border-color:rgba(200,146,10,0.4)}
+    .media-card .m-icon{font-size:3.5rem}
+    .media-card h3{font-family:'Playfair Display',serif;font-size:1.3rem;color:var(--or-clair)}
+    .media-card p{font-size:0.88rem;color:rgba(255,255,255,0.5);line-height:1.6;text-align:center}
+    .media-card .m-badge{font-size:0.7rem;letter-spacing:2px;text-transform:uppercase;background:rgba(200,146,10,0.15);color:var(--or-clair);padding:0.3rem 0.8rem;border-radius:20px;border:1px solid rgba(200,146,10,0.3)}
+
+    @media(max-width:600px){.stats-bar{gap:2rem}.nations-grid{grid-template-columns:1fr}.community-links{flex-direction:column;align-items:center}}
+  </style>
+</head>
+<body>
+
+
+  <!-- TOP NAV -->
+  <nav class="top-nav">
+    <a href="/Home" target="_top" onclick="window.top.location.href='/Home';return false;">🏠 Accueil</a>
+    <a href="#nations" onclick="document.getElementById('nations').scrollIntoView({behavior:'smooth'});return false;">📰 Articles</a>
+    <a href="/Videos" target="_top">🎬 Vidéos</a>
+    <a href="/Audio" target="_top">🎵 Audio</a>
+  </nav>
+
+  <!-- TOAST -->
+  <div id="toast">✓ Lien copié !</div>
+
+  <!-- HERO -->
+  <section class="hero">
+    <div class="hero-bg"></div>
+    <div class="hero-content">
+      <p class="hero-eyebrow">Série complète · 11 nations + Inuits</p>
+      <h1>Peuples<br/>Autochtones<br/>du <span>Québec</span></h1>
+      <p class="hero-sub">Une série d'articles approfondis sur les Premières Nations et les Inuits qui habitent le territoire québécois depuis des millénaires.</p>
+      <button class="hero-cta" onclick="document.getElementById('nations').scrollIntoView({behavior:'smooth'})">Découvrir les nations →</button>
+    </div>
+    <div class="hero-scroll">↓ Explorer</div>
+  </section>
+
+  <!-- STATS BAR -->
+  <div class="stats-bar">
+    <div class="stat-item"><div class="stat-n">11</div><div class="stat-l">Premières Nations</div></div>
+    <div class="stat-item"><div class="stat-n">+1</div><div class="stat-l">Nation Inuite</div></div>
+    <div class="stat-item"><div class="stat-n">~100 000</div><div class="stat-l">Autochtones au Québec</div></div>
+    <div class="stat-item"><div class="stat-n">10 000 ans</div><div class="stat-l">de présence sur ce territoire</div></div>
+  </div>
+
+  <!-- INTRO -->
+  <section class="intro-sec">
+    <h2>Une histoire qui commence bien avant le Québec</h2>
+    <div class="gold-line"></div>
+    <p>Bien avant que Jacques Cartier n'aperçoive les rives du Saint-Laurent en 1534, des dizaines de nations autochtones habitaient ce territoire depuis des millénaires. Chasseurs, agriculteurs, navigateurs, diplomates — chaque peuple a développé une civilisation unique, adaptée à son territoire, profondément liée à la nature et transmise par une tradition orale d'une richesse extraordinaire.</p>
+    <p>Cette série d'articles vous invite à découvrir les <strong>11 Premières Nations</strong> et les <strong>Inuits du Nunavik</strong> — leur histoire, leur culture, leurs traditions et leur place dans le Québec d'aujourd'hui. Une invitation au respect et à la connaissance.</p>
+  </section>
+
+  <!-- NATIONS GRID -->
+  <section class="grid-sec" id="nations">
+    <h2 class="grid-title">Les Nations</h2>
+    <p class="grid-sub">Cliquez sur une nation pour lire son article</p>
+    <div class="nations-grid">
+
+      <!-- ABENAQUIS -->
+      <div class="nation-card">
+        <img src="https://media.base44.com/images/public/69f23c5b09417d29099136be/a6ec7c444_generated_image.png" alt="Abénaquis"/>
+        <div class="overlay"></div>
+        <div class="card-body">
+          <div class="card-tag">Algonquienne · Montérégie</div>
+          <h3>Les Abénaquis</h3>
+          <p class="card-desc">Wôbanakiak — « Peuple de l'aube »</p>
+          <div class="card-actions">
+            <a class="btn-read" href="/Abenaquis" target="_top">📖 Lire</a>
+          </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- ALGONQUINS -->
+      <div class="nation-card">
+        <img src="https://media.base44.com/images/public/69f23c5b09417d29099136be/2561ef1b7_generated_image.png" alt="Algonquins"/>
+        <div class="overlay"></div>
+        <div class="card-body">
+          <div class="card-tag">Algonquienne · Outaouais & Laurentides</div>
+          <h3>Les Algonquins</h3>
+          <p class="card-desc">Anishinaabe — Gardiens de la rivière des Outaouais</p>
+          <div class="card-actions">
+            <a class="btn-read" href="/Algonquins" target="_top">📖 Lire</a>
+          </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- ATIKAMEKW -->
+      <div class="nation-card">
+        <img src="https://media.base44.com/images/public/69f23c5b09417d29099136be/3b05b2d46_generated_image.png" alt="Atikamekw"/>
+        <div class="overlay"></div>
+        <div class="card-body">
+          <div class="card-tag">Algonquienne · Haute-Mauricie</div>
+          <h3>Les Atikamekw</h3>
+          <p class="card-desc">Nehirowisiwok — Peuple du Nitaskinan</p>
+          <div class="card-actions">
+            <a class="btn-read" href="/Atikamekw" target="_top">📖 Lire</a>
+          </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- CRIS -->
+      <div class="nation-card">
+        <img src="https://media.base44.com/images/public/69f23c5b09417d29099136be/f338bd812_generated_image.png" alt="Cris"/>
+        <div class="overlay"></div>
+        <div class="card-body">
+          <div class="card-tag">Algonquienne · Baie-James</div>
+          <h3>Les Cris</h3>
+          <p class="card-desc">Eeyou — Peuple de la Baie-James</p>
+          <div class="card-actions">
+            <a class="btn-read" href="/Cris" target="_top">📖 Lire</a>
+          </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- HURONS-WENDAT -->
+      <div class="nation-card">
+        <img src="https://media.base44.com/images/public/69f23c5b09417d29099136be/cfa23dd96_generated_image.png" alt="Hurons-Wendat"/>
+        <div class="overlay"></div>
+        <div class="card-body">
+          <div class="card-tag">Iroquoienne · Wendake · Québec</div>
+          <h3>Les Hurons-Wendat</h3>
+          <p class="card-desc">Wendat — Gardiens du feu, peuple de l'île</p>
+          <div class="card-actions">
+            <a class="btn-read" href="/HuronsWendat" target="_top">📖 Lire</a>
+          </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- INNUS -->
+      <div class="nation-card">
+        <img src="https://media.base44.com/images/public/69f23c5b09417d29099136be/c2f2d3766_generated_image.png" alt="Innus"/>
+        <div class="overlay"></div>
+        <div class="card-body">
+          <div class="card-tag">Algonquienne · Côte-Nord</div>
+          <h3>Les Innus</h3>
+          <p class="card-desc">Innu — « Être humain » · Peuple du Nitassinan</p>
+          <div class="card-actions">
+            <a class="btn-read" href="/Innus" target="_top">📖 Lire</a>
+          </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- MALECITES -->
+      <div class="nation-card">
+        <img src="https://media.base44.com/images/public/69f23c5b09417d29099136be/5c0074e92_generated_image.png" alt="Malécites"/>
+        <div class="overlay"></div>
+        <div class="card-body">
+          <div class="card-tag">Algonquienne · Bas-Saint-Laurent</div>
+          <h3>Les Malécites</h3>
+          <p class="card-desc">Wolastoqiyik — Peuple de la belle rivière</p>
+          <div class="card-actions">
+            <a class="btn-read" href="/Malecites" target="_top">📖 Lire</a>
+          </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- MICMACS -->
+      <div class="nation-card">
+        <img src="https://media.base44.com/images/public/69f23c5b09417d29099136be/d212a5852_generated_image.png" alt="Micmacs"/>
+        <div class="overlay"></div>
+        <div class="card-body">
+          <div class="card-tag">Algonquienne · Gaspésie</div>
+          <h3>Les Micmacs</h3>
+          <p class="card-desc">Mi'kmaq — « Mes amis » · Gardiens de Gespeg</p>
+          <div class="card-actions">
+            <a class="btn-read" href="/Micmacs" target="_top">📖 Lire</a>
+          </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- MOHAWKS -->
+      <div class="nation-card">
+        <img src="https://media.base44.com/images/public/69f23c5b09417d29099136be/101a12b1b_generated_image.png" alt="Mohawks"/>
+        <div class="overlay"></div>
+        <div class="card-body">
+          <div class="card-tag">Iroquoienne · Vallée du Saint-Laurent</div>
+          <h3>Les Mohawks</h3>
+          <p class="card-desc">Kanien'kehá:ka — Peuple du pays du silex</p>
+          <div class="card-actions">
+            <a class="btn-read" href="/Mohawks" target="_top">📖 Lire</a>
+          </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- NASKAPIS -->
+      <div class="nation-card">
+        <img src="https://media.base44.com/images/public/69f23c5b09417d29099136be/f33531de6_generated_image.png" alt="Naskapis"/>
+        <div class="overlay"></div>
+        <div class="card-body">
+          <div class="card-tag">Algonquienne · Labrador québécois</div>
+          <h3>Les Naskapis</h3>
+          <p class="card-desc">Gens des confins — Gardiens du caribou nordique</p>
+          <div class="card-actions">
+            <a class="btn-read" href="/Naskapis" target="_top">📖 Lire</a>
+          </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- INUITS -->
+      <div class="nation-card">
+        <img src="https://media.base44.com/images/public/69f23c5b09417d29099136be/41afc600c_generated_image.png" alt="Inuits"/>
+        <div class="overlay"></div>
+        <div class="card-body">
+          <div class="card-tag">Inuit · Nunavik · Grand Nord</div>
+          <h3>Les Inuits</h3>
+          <p class="card-desc">Inuit — « Êtres humains » · Gardiens du Nunavik</p>
+          <div class="card-actions">
+            <a class="btn-read" href="/Inuits" target="_top">📖 Lire</a>
+          </div>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+
+  <!-- MEDIA SECTION -->
+  <section class="media-sec" id="medias">
+    <h2 class="grid-title">Médiathèque</h2>
+    <p class="grid-sub">Articles · Vidéos · Audio</p>
+    <div class="media-cards">
+      <a class="media-card" href="#nations">
+        <div class="m-icon">📰</div>
+        <h3>Articles</h3>
+        <p>12 articles approfondis sur les 11 Premières Nations et les Inuits du Québec.</p>
+        <div class="m-badge">12 articles</div>
+      </a>
+      <a class="media-card" href="/Videos">
+        <div class="m-icon">🎬</div>
+        <h3>Vidéos</h3>
+        <p>Des documentaires et reportages sur la culture et l'histoire des peuples autochtones.</p>
+        <div class="m-badge">6 vidéos</div>
+      </a>
+      <a class="media-card" href="/Audio">
+        <div class="m-icon">🎵</div>
+        <h3>Audio</h3>
+        <p>Podcasts, chants traditionnels et récits oraux — bientôt disponibles.</p>
+        <div class="m-badge">Bientôt</div>
+      </a>
+    </div>
+  </section>
+
+  <!-- COMMUNITY BAR -->
+  <section class="community-bar">
+    <h3>🤝 Rejoignez la communauté</h3>
+    <p>Partagez ces articles, discutez, découvrez davantage sur les peuples autochtones du Québec. Rejoignez notre groupe Facebook ou visitez le site de la série.</p>
+    <div class="community-links">
+      <a class="btn-fb" href="https://www.facebook.com/groups/1451283625021958" target="_blank">
+        📘 Rejoindre le groupe Facebook
+      </a>
+      <a class="btn-site" href="https://lucie-app-5fea0268.base44.app" target="_blank">
+        🌐 Site de la série
+      </a>
+    </div>
+  </section>
+
+  <!-- QUOTE -->
+  <section class="quote-sec">
+    <blockquote>« Ces peuples n'appartiennent pas au passé. Ils sont vivants, présents, et leur avenir se construit maintenant — sur les mêmes territoires qu'ils n'ont jamais quittés. »</blockquote>
+    <p class="quote-src">— Série « Peuples Autochtones du Québec »</p>
+  </section>
+
+  <!-- FOOTER -->
+  <footer>
+    <h3>Peuples Autochtones du Québec</h3>
+    <p>Cette série d'articles a été réalisée avec respect pour chacune des nations présentées. Elle vise à faire connaître leur histoire remarquable au grand public québécois et international.</p>
+    <nav class="footer-nav">
+      <a href="/Abenaquis" target="_top">Abénaquis</a>
+      <a href="/Algonquins" target="_top">Algonquins</a>
+      <a href="/Atikamekw" target="_top">Atikamekw</a>
+      <a href="/Cris" target="_top">Cris</a>
+      <a href="/HuronsWendat" target="_top">Hurons-Wendat</a>
+      <a href="/Innus" target="_top">Innus</a>
+      <a href="/Malecites" target="_top">Malécites</a>
+      <a href="/Micmacs" target="_top">Micmacs</a>
+      <a href="/Mohawks" target="_top">Mohawks</a>
+      <a href="/Naskapis" target="_top">Naskapis</a>
+      <a href="/Inuits" target="_top">Inuits</a>
+    </nav>
+    <div class="footer-social">
+      <a href="https://www.facebook.com/groups/1451283625021958" target="_blank">📘 Groupe Facebook</a>
+      <a href="https://lucie-app-5fea0268.base44.app" target="_blank">🌐 Site de la série</a>
+    </div>
+    <p>🌐 <a href="https://tourismeautochtone.com" target="_blank">tourismeautochtone.com</a> · <a href="https://www.quebec.ca/gouvernement/portrait-quebec/premieres-nations-inuits" target="_blank">Gouvernement du Québec</a></p>
+    <h3 style="margin-top:2rem;">❓ Foire aux questions</h3>
+    <p class="copy">FAQ · Série réalisée avec Lucie · Contenu à visée éducative · 2026</p>
+  </footer>
+
+  <script>
+    function copyLink(url) {
+      navigator.clipboard.writeText(url).then(function() {
+        var t = document.getElementById('toast');
+        t.classList.add('show');
+        setTimeout(function(){ t.classList.remove('show'); }, 2500);
+      });
+    }
+  </script>
+</body>
+</html>\
