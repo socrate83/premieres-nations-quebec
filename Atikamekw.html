@@ -122,6 +122,17 @@
     .btn-whatsapp-big{background:#25D366;color:#000}
     .btn-email-big{background:#555;color:#fff}
     .btn-copy-big{background:var(--ocre);color:#000}
+  
+    /* LEGENDES */
+    .legendes-sec{padding:5rem 2rem;background:linear-gradient(180deg,#0d0d0d,#111);text-align:center}
+    .legendes-sec h2{font-family:'Playfair Display',serif;font-size:clamp(1.8rem,3vw,2.4rem);color:#fff;margin-bottom:2.5rem}
+    .legende-grid{display:flex;flex-wrap:wrap;justify-content:center;gap:1.5rem;max-width:1100px;margin:0 auto}
+    .legende-card{background:rgba(255,255,255,0.04);border:1px solid rgba(200,146,10,0.2);border-radius:16px;padding:2rem 1.5rem;width:calc(50% - 1rem);min-width:280px;text-align:left;transition:transform 0.3s,border-color 0.3s}
+    .legende-card:hover{transform:translateY(-4px);border-color:rgba(200,146,10,0.5)}
+    .legende-icon{font-size:2.2rem;margin-bottom:0.8rem}
+    .legende-card h3{font-family:'Playfair Display',serif;font-size:1.15rem;color:var(--or-clair);margin-bottom:0.8rem;line-height:1.3}
+    .legende-card p{font-size:0.88rem;color:rgba(255,255,255,0.72);line-height:1.8}
+    @media(max-width:600px){.legende-card{width:100%}}
   </style>
 </head>
 <body>
@@ -371,7 +382,19 @@
   </div>
   <div id="toast-share" style="position:fixed;bottom:2rem;left:50%;transform:translateX(-50%) translateY(20px);background:#C8920A;color:#000;font-weight:700;font-size:0.9rem;padding:0.7rem 2rem;border-radius:30px;opacity:0;transition:all 0.3s;z-index:9999;pointer-events:none">✅ Lien copié !</div>
 
-  <footer>
+  
+    <section class="legendes-sec">
+      <div class="gold-line"></div>
+      <h2>Légendes, histoires et anecdotes</h2>
+      <div class="legende-grid">
+        <div class="legende-card"><div class="legende-icon">🐻</div><h3>Witiko, l'esprit des grands froids</h3><p>La légende du Witiko (Windigo) est l'une des plus puissantes de la tradition atikamekw. Cet être gigantesque au cœur de glace rôde dans les forêts en hiver, dévorant quiconque s'égare seul. Les aînés transmettaient ce récit non par peur, mais comme enseignement : seule la communauté protège contre les dangers de l'isolement.</p></div>
+        <div class="legende-card"><div class="legende-icon">🌙</div><h3>La femme qui épousa la Lune</h3><p>Un conte atikamekw raconte l'histoire d'une jeune femme qui, admirant chaque nuit la Lune, fut emportée dans le ciel pour devenir l'épouse de l'astre. Elle y découvrit une vie lumineuse mais solitaire. Ce récit enseigne que la beauté de ce qu'on désire peut cacher une profonde solitude.</p></div>
+        <div class="legende-card"><div class="legende-icon">🌲</div><h3>Le pacte avec les animaux</h3><p>Pour les Atikamekw, le territoire (Nitaskinan) est un être vivant. Une tradition veut que les os du premier animal chassé chaque saison soient déposés dans la rivière avec des prières — afin que l'esprit retourne dans le monde souterrain et incite ses congénères à se laisser chasser. Un rite de réciprocité profonde.</p></div>
+        <div class="legende-card"><div class="legende-icon">🎭</div><h3>Anecdote : Une langue jamais colonisée</h3><p>Fait remarquable : l'atikamekw nehiromowin est encore parlé couramment par plus de 90 % de la communauté aujourd'hui. Ce taux exceptionnel est dû en partie aux légendes transmises oralement — chaque récit étant un acte de résistance culturelle.</p></div>
+      </div>
+    </section>
+
+    <footer>
     <h3>Nehirowisiwok — Le Peuple du Nitaskinan</h3>
     <p>Cet article a été rédigé avec respect pour la nation atikamekw et vise à faire connaître leur histoire remarquable au grand public.</p>
     <p>En mémoire de Joyce Echaquan et de tous les Atikamekw qui ont lutté pour préserver leur langue, leur territoire et leur dignité.</p>
