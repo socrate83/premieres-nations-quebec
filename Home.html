@@ -136,6 +136,10 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
     .media-card .m-badge{font-size:0.7rem;letter-spacing:2px;text-transform:uppercase;background:rgba(200,146,10,0.15);color:var(--or-clair);padding:0.3rem 0.8rem;border-radius:20px;border:1px solid rgba(200,146,10,0.3)}
 
     @media(max-width:600px){.stats-bar{gap:2rem}.nations-grid{text-align:center;max-width:1100px;margin:0 auto;padding:0 1rem}.community-links{flex-direction:column;align-items:center}}
+  
+    /* COMPTEUR VISITES */
+    .visit-counter{display:inline-flex;align-items:center;gap:0.6rem;background:rgba(255,255,255,0.04);border:1px solid rgba(200,146,10,0.25);border-radius:30px;padding:0.5rem 1.4rem;margin:1rem auto;font-size:0.82rem;color:rgba(255,255,255,0.55)}
+    .visit-counter span{color:var(--or-clair);font-weight:700;font-size:1rem}
   </style>
 </head>
 <body>
@@ -396,6 +400,10 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 
   <!-- FOOTER -->
   <footer>
+
+    <div class="visit-counter">
+      👁 Visites sur cet appareil : <span id="visit-count">…</span>
+    </div>
     <h3>Peuples Autochtones du Québec</h3>
     <p>Cette série d'articles a été réalisée avec respect pour chacune des nations présentées. Elle vise à faire connaître leur histoire remarquable au grand public québécois et international.</p>
     <nav class="footer-nav">
@@ -466,5 +474,16 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
     }
   </script>
 
+
+  <script>
+    // Compteur de visites simple via localStorage
+    (function(){
+      var key = 'pnq_visits';
+      var visits = parseInt(localStorage.getItem(key) || '0') + 1;
+      localStorage.setItem(key, visits);
+      var el = document.getElementById('visit-count');
+      if(el) el.textContent = visits.toLocaleString('fr-FR');
+    })();
+  </script>
 </body>
 </html>
