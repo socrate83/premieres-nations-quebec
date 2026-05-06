@@ -106,6 +106,17 @@
     .btn-whatsapp-big{background:#25D366;color:#000}
     .btn-email-big{background:#555;color:#fff}
     .btn-copy-big{background:var(--ocre);color:#000}
+  
+    /* LEGENDES */
+    .legendes-sec{padding:5rem 2rem;background:linear-gradient(180deg,#0d0d0d,#111);text-align:center}
+    .legendes-sec h2{font-family:'Playfair Display',serif;font-size:clamp(1.8rem,3vw,2.4rem);color:#fff;margin-bottom:2.5rem}
+    .legende-grid{display:flex;flex-wrap:wrap;justify-content:center;gap:1.5rem;max-width:1100px;margin:0 auto}
+    .legende-card{background:rgba(255,255,255,0.04);border:1px solid rgba(200,146,10,0.2);border-radius:16px;padding:2rem 1.5rem;width:calc(50% - 1rem);min-width:280px;text-align:left;transition:transform 0.3s,border-color 0.3s}
+    .legende-card:hover{transform:translateY(-4px);border-color:rgba(200,146,10,0.5)}
+    .legende-icon{font-size:2.2rem;margin-bottom:0.8rem}
+    .legende-card h3{font-family:'Playfair Display',serif;font-size:1.15rem;color:var(--or-clair);margin-bottom:0.8rem;line-height:1.3}
+    .legende-card p{font-size:0.88rem;color:rgba(255,255,255,0.72);line-height:1.8}
+    @media(max-width:600px){.legende-card{width:100%}}
   </style>
 </head>
 <body>
@@ -291,7 +302,19 @@
   </div>
   <div id="toast-share" style="position:fixed;bottom:2rem;left:50%;transform:translateX(-50%) translateY(20px);background:#C8920A;color:#000;font-weight:700;font-size:0.9rem;padding:0.7rem 2rem;border-radius:30px;opacity:0;transition:all 0.3s;z-index:9999;pointer-events:none">✅ Lien copié !</div>
 
-  <footer>
+  
+    <section class="legendes-sec">
+      <div class="gold-line"></div>
+      <h2>Légendes, histoires et anecdotes</h2>
+      <div class="legende-grid">
+        <div class="legende-card"><div class="legende-icon">🫎</div><h3>Mista'peo — l'âme intérieure</h3><p>Les Naskapis croient que chaque personne possède un Mista'peo (le « Grand Homme intérieur »), une âme-guide qui communique par les rêves. Avant une chasse, le chasseur jeûnait pour recevoir les visions de son Mista'peo — qui lui révélait où se trouvaient les caribous et quel rituel accomplir pour mériter leur présence.</p></div>
+        <div class="legende-card"><div class="legende-icon">🌌</div><h3>La chasse céleste — origine de la Voie lactée</h3><p>Selon une légende naskapie, la Voie lactée est la piste laissée par un chasseur géant poursuivant un ours cosmique à travers le ciel. Les étoiles de la Grande Ourse sont l'ours, les suivantes sont les chasseurs. Chaque automne, le sang de l'ours céleste teindrait les feuilles en rouge.</p></div>
+        <div class="legende-card"><div class="legende-icon">❄️</div><h3>La scapulomancie — lire l'avenir dans les os</h3><p>Les chamanes naskapis chauffaient l'omoplate d'un caribou jusqu'à ce qu'elle craque. Les lignes formées étaient lues comme une carte indiquant la direction des troupeaux. Des études modernes ont démontré que cette méthode prévenait paradoxalement la sur-chasse, car elle introduisait une part d'aléatoire dans les décisions.</p></div>
+        <div class="legende-card"><div class="legende-icon">🎭</div><h3>Anecdote : Le peuple le plus récent</h3><p>Jusqu'en 1956, les Naskapis vivaient entièrement dans la toundra. Leur village de Kawawachikamach, fondé en 1984 seulement, est l'un des plus jeunes du Québec. Malgré cette sédentarisation très récente, les Naskapis ont réussi à maintenir leur langue et traditions avec une vitalité culturelle remarquable.</p></div>
+      </div>
+    </section>
+
+    <footer>
     <h3>Naskapi — Les Gens des Confins du Grand Nord</h3>
     <p>Cet article a été rédigé avec respect pour la nation naskapi — peuple du caribou et des aurores boréales.</p>
     <p>🌐 <a href="https://www.naskapi.ca" target="_blank">naskapi.ca</a> | <a href="https://tourismeautochtone.com" target="_blank">tourismeautochtone.com</a></p>
