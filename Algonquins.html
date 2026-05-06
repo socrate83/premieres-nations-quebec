@@ -137,6 +137,17 @@
     .btn-whatsapp-big{background:#25D366;color:#000}
     .btn-email-big{background:#555;color:#fff}
     .btn-copy-big{background:var(--ocre);color:#000}
+  
+    /* LEGENDES */
+    .legendes-sec{padding:5rem 2rem;background:linear-gradient(180deg,#0d0d0d,#111);text-align:center}
+    .legendes-sec h2{font-family:'Playfair Display',serif;font-size:clamp(1.8rem,3vw,2.4rem);color:#fff;margin-bottom:2.5rem}
+    .legende-grid{display:flex;flex-wrap:wrap;justify-content:center;gap:1.5rem;max-width:1100px;margin:0 auto}
+    .legende-card{background:rgba(255,255,255,0.04);border:1px solid rgba(200,146,10,0.2);border-radius:16px;padding:2rem 1.5rem;width:calc(50% - 1rem);min-width:280px;text-align:left;transition:transform 0.3s,border-color 0.3s}
+    .legende-card:hover{transform:translateY(-4px);border-color:rgba(200,146,10,0.5)}
+    .legende-icon{font-size:2.2rem;margin-bottom:0.8rem}
+    .legende-card h3{font-family:'Playfair Display',serif;font-size:1.15rem;color:var(--or-clair);margin-bottom:0.8rem;line-height:1.3}
+    .legende-card p{font-size:0.88rem;color:rgba(255,255,255,0.72);line-height:1.8}
+    @media(max-width:600px){.legende-card{width:100%}}
   </style>
 </head>
 <body>
@@ -399,7 +410,19 @@
   </div>
   <div id="toast-share" style="position:fixed;bottom:2rem;left:50%;transform:translateX(-50%) translateY(20px);background:#C8920A;color:#000;font-weight:700;font-size:0.9rem;padding:0.7rem 2rem;border-radius:30px;opacity:0;transition:all 0.3s;z-index:9999;pointer-events:none">✅ Lien copié !</div>
 
-  <footer>
+  
+    <section class="legendes-sec">
+      <div class="gold-line"></div>
+      <h2>Légendes, histoires et anecdotes</h2>
+      <div class="legende-grid">
+        <div class="legende-card"><div class="legende-icon">🐭</div><h3>Nanabozho, le Grand Lièvre</h3><p>Dans la cosmologie algonquine, Nanabozho est le héros trickster par excellence — à la fois sage et espiègle. C'est lui qui aurait volé le feu aux dieux pour le donner aux humains, et qui aurait pêché le soleil dans ses filets. Ses aventures enseignent l'humilité, la ruse et la capacité à s'adapter face à l'adversité.</p></div>
+        <div class="legende-card"><div class="legende-icon">🌊</div><h3>La création du monde sur la tortue</h3><p>Selon la tradition anishinabe, la Terre fut créée sur le dos d'une grande tortue. Après un déluge, le rat musqué plongea pour ramener de la terre du fond des eaux — mourant dans l'effort. Ses quelques grains de terre, placés sur la tortue, grandirent jusqu'à former le monde. Cette légende célèbre l'humble sacrifice comme moteur de la création.</p></div>
+        <div class="legende-card"><div class="legende-icon">💨</div><h3>Les quatre vents et leurs gardiens</h3><p>Les Algonquins croient que chaque point cardinal est gardé par un esprit du vent. Le vent du Nord est sévère et purificateur, le Sud apporte chaleur, l'Est symbolise le renouveau, l'Ouest accompagne les âmes. Les chasseurs algonquins invoquaient ces esprits avant chaque expédition pour obtenir leur bienveillance.</p></div>
+        <div class="legende-card"><div class="legende-icon">🎭</div><h3>Anecdote : Champlain impressionné</h3><p>En 1603, Champlain rencontra des chefs algonquins à Tadoussac et fut fasciné par leur éloquence. Le grand chef Anadabijou prononça un discours d'une telle sophistication que Champlain nota : « Ces gens-là entendent mieux la politique que plusieurs de ceux qui se disent civilisés. »</p></div>
+      </div>
+    </section>
+
+    <footer>
     <h3>Anichinabés — Les Racines du Québec</h3>
     <p>Cet article a été rédigé avec respect pour la nation algonquine et vise à faire connaître leur histoire remarquable au grand public.</p>
     <p>Les Algonquins invitent tous les Québécois à venir les rencontrer et à découvrir la richesse de leur culture millénaire.</p>
