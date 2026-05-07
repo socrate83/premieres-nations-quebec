@@ -1,0 +1,436 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>L'Art des Bijoux — Les 11 Premières Nations du Québec</title>
+  <meta name="description" content="Découvrez l'art ancestral de la fabrication de bijoux des 11 Premières Nations du Québec : wampum, piquants de porc-épic, perles, argent et bien plus."/>
+  <meta name="keywords" content="bijoux autochtones, Premières Nations Québec, wampum, piquants de porc-épic, perlage, artisanat autochtone"/>
+  <meta property="og:title" content="L'Art des Bijoux — Les 11 Premières Nations du Québec"/>
+  <meta property="og:description" content="Un voyage au cœur de l'art ancestral de la bijouterie autochtone du Québec."/>
+  <meta property="og:image" content="https://socrate83.github.io/premieres-nations-quebec/images/bijoux-banner.jpg"/>
+  <!-- Google Tag Manager -->
+  <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src='https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);})(window,document,'script','dataLayer','GTM-NJH6MRLZ');</script>
+  <style>
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+    body { font-family: 'Georgia', serif; background: #0a0a0a; color: #f0e6d3; line-height: 1.8; }
+
+    /* NAVIGATION */
+    nav {
+      position: sticky; top: 0; z-index: 100;
+      background: rgba(10,10,10,0.95);
+      border-bottom: 1px solid #8B6914;
+      padding: 0 2rem;
+      display: flex; align-items: center; justify-content: space-between;
+      height: 60px;
+    }
+    .nav-logo { color: #D4AF37; font-size: 1.1rem; font-weight: bold; text-decoration: none; }
+    .nav-links { display: flex; gap: 1.5rem; list-style: none; }
+    .nav-links a { color: #c8b99a; text-decoration: none; font-size: 0.9rem; transition: color 0.3s; }
+    .nav-links a:hover { color: #D4AF37; }
+
+    /* HERO */
+    .hero {
+      background: linear-gradient(135deg, #1a0a00 0%, #2d1b00 40%, #1a0a20 100%);
+      padding: 6rem 2rem 4rem;
+      text-align: center;
+      border-bottom: 2px solid #8B6914;
+      position: relative;
+      overflow: hidden;
+    }
+    .hero::before {
+      content: '◈';
+      position: absolute; top: 20px; left: 50%; transform: translateX(-50%);
+      font-size: 2rem; color: #D4AF37; opacity: 0.4;
+    }
+    .hero-tag {
+      display: inline-block;
+      background: rgba(212,175,55,0.15);
+      border: 1px solid #D4AF37;
+      color: #D4AF37;
+      padding: 0.3rem 1rem;
+      border-radius: 20px;
+      font-size: 0.8rem;
+      letter-spacing: 2px;
+      text-transform: uppercase;
+      margin-bottom: 1.5rem;
+    }
+    .hero h1 {
+      font-size: clamp(2rem, 5vw, 3.5rem);
+      color: #D4AF37;
+      margin-bottom: 1rem;
+      text-shadow: 0 0 30px rgba(212,175,55,0.3);
+    }
+    .hero-subtitle {
+      font-size: 1.1rem;
+      color: #c8b99a;
+      max-width: 600px;
+      margin: 0 auto 2rem;
+      font-style: italic;
+    }
+    .hero-meta {
+      color: #8a7a6a;
+      font-size: 0.85rem;
+      letter-spacing: 1px;
+    }
+
+    /* CONTENU */
+    .container { max-width: 800px; margin: 0 auto; padding: 3rem 2rem; }
+
+    .intro-block {
+      background: linear-gradient(135deg, rgba(212,175,55,0.08), rgba(139,105,20,0.05));
+      border-left: 4px solid #D4AF37;
+      border-radius: 0 12px 12px 0;
+      padding: 2rem;
+      margin-bottom: 3rem;
+      font-size: 1.1rem;
+      color: #e0d4c0;
+    }
+
+    h2 {
+      color: #D4AF37;
+      font-size: 1.5rem;
+      margin: 3rem 0 1rem;
+      padding-bottom: 0.5rem;
+      border-bottom: 1px solid rgba(212,175,55,0.3);
+      display: flex; align-items: center; gap: 0.8rem;
+    }
+    h2 .nation-icon { font-size: 1.2rem; }
+
+    h3 {
+      color: #c8a84b;
+      font-size: 1.1rem;
+      margin: 1.5rem 0 0.5rem;
+    }
+
+    p { margin-bottom: 1.2rem; color: #d4c4ae; }
+
+    .nation-card {
+      background: rgba(255,255,255,0.03);
+      border: 1px solid rgba(212,175,55,0.2);
+      border-radius: 12px;
+      padding: 1.5rem;
+      margin-bottom: 1.5rem;
+      transition: border-color 0.3s, transform 0.2s;
+    }
+    .nation-card:hover {
+      border-color: rgba(212,175,55,0.5);
+      transform: translateY(-2px);
+    }
+    .nation-card .nation-name {
+      color: #D4AF37;
+      font-size: 1.1rem;
+      font-weight: bold;
+      margin-bottom: 0.8rem;
+      display: flex; align-items: center; gap: 0.5rem;
+    }
+    .nation-card p { margin-bottom: 0; font-size: 0.95rem; }
+
+    .materiau-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+      gap: 1rem;
+      margin: 1.5rem 0;
+    }
+    .materiau-item {
+      background: rgba(212,175,55,0.06);
+      border: 1px solid rgba(212,175,55,0.2);
+      border-radius: 8px;
+      padding: 1rem;
+      text-align: center;
+    }
+    .materiau-item .icon { font-size: 2rem; margin-bottom: 0.5rem; }
+    .materiau-item .label { color: #D4AF37; font-size: 0.9rem; font-weight: bold; }
+    .materiau-item .desc { color: #a09080; font-size: 0.8rem; margin-top: 0.3rem; }
+
+    .legende-box {
+      background: linear-gradient(135deg, rgba(80,30,100,0.2), rgba(40,15,60,0.3));
+      border: 1px solid rgba(150,80,200,0.4);
+      border-radius: 12px;
+      padding: 2rem;
+      margin: 2rem 0;
+    }
+    .legende-box h3 {
+      color: #c084fc;
+      margin-top: 0;
+      font-size: 1.2rem;
+      margin-bottom: 1rem;
+    }
+    .legende-box p { color: #d4b8f0; }
+
+    .citation {
+      border-left: 3px solid #D4AF37;
+      padding: 1rem 1.5rem;
+      margin: 2rem 0;
+      background: rgba(212,175,55,0.05);
+      border-radius: 0 8px 8px 0;
+      font-style: italic;
+      color: #c8b99a;
+    }
+
+    /* PARTAGE */
+    .share-section {
+      background: rgba(255,255,255,0.03);
+      border: 1px solid rgba(212,175,55,0.2);
+      border-radius: 16px;
+      padding: 2rem;
+      margin-top: 4rem;
+      text-align: center;
+    }
+    .share-section h3 { color: #D4AF37; margin-bottom: 1.5rem; }
+    .share-buttons { display: flex; flex-wrap: wrap; gap: 0.8rem; justify-content: center; }
+    .share-btn {
+      padding: 0.6rem 1.2rem;
+      border-radius: 8px;
+      border: none;
+      cursor: pointer;
+      font-size: 0.9rem;
+      font-weight: bold;
+      text-decoration: none;
+      display: inline-flex; align-items: center; gap: 0.5rem;
+      transition: opacity 0.3s, transform 0.2s;
+      color: white;
+    }
+    .share-btn:hover { opacity: 0.85; transform: translateY(-2px); }
+    .btn-fb { background: #1877F2; }
+    .btn-fb-group { background: #145dbf; }
+    .btn-wa { background: #25D366; }
+    .btn-copy { background: #555; }
+
+    /* NAVIGATION BAS */
+    .nav-bottom {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      margin-top: 4rem;
+      padding-top: 2rem;
+      border-top: 1px solid rgba(212,175,55,0.2);
+      gap: 1rem;
+      flex-wrap: wrap;
+    }
+    .nav-btn {
+      display: inline-block;
+      padding: 0.7rem 1.5rem;
+      background: rgba(212,175,55,0.1);
+      border: 1px solid rgba(212,175,55,0.3);
+      border-radius: 8px;
+      color: #D4AF37;
+      text-decoration: none;
+      font-size: 0.9rem;
+      transition: all 0.3s;
+    }
+    .nav-btn:hover { background: rgba(212,175,55,0.2); border-color: #D4AF37; }
+
+    footer {
+      text-align: center;
+      padding: 2rem;
+      color: #6a5a4a;
+      font-size: 0.85rem;
+      border-top: 1px solid rgba(255,255,255,0.05);
+      margin-top: 3rem;
+    }
+
+    @media (max-width: 600px) {
+      .nav-links { gap: 1rem; }
+      .hero { padding: 4rem 1.5rem 3rem; }
+      .container { padding: 2rem 1rem; }
+    }
+  </style>
+</head>
+<body>
+<!-- Google Tag Manager (noscript) -->
+<noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-NJH6MRLZ" height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+
+<!-- NAVIGATION -->
+<nav>
+  <a href="index.html" class="nav-logo">🪶 Premières Nations</a>
+  <ul class="nav-links">
+    <li><a href="index.html">Accueil</a></li>
+    <li><a href="index.html#nations">Articles</a></li>
+    <li><a href="Videos.html">Vidéos</a></li>
+    <li><a href="Audio.html">Audio</a></li>
+  </ul>
+</nav>
+
+<!-- HÉRO -->
+<div class="hero">
+  <div class="hero-tag">✦ Art & Culture</div>
+  <h1>L'Art des Bijoux des Premières Nations</h1>
+  <p class="hero-subtitle">Wampum, piquants de porc-épic, perles et argent — un héritage vivant tissé dans la matière</p>
+  <p class="hero-meta">📅 Mai 2026 &nbsp;|&nbsp; 🪶 Les 11 Nations du Québec</p>
+</div>
+
+<!-- CONTENU PRINCIPAL -->
+<div class="container">
+
+  <div class="intro-block">
+    Bien avant l'arrivée des Européens, les peuples autochtones du Québec maîtrisaient l'art de transformer les ressources de la nature en œuvres d'une beauté et d'une signification profondes. Les bijoux n'étaient pas de simples ornements : ils étaient des récits, des marqueurs d'identité, des instruments spirituels et des signes de statut social. Chaque perle enfilée, chaque piquant aplati, chaque coquillage percé portait en lui un message et une mémoire.
+  </div>
+
+  <!-- MATÉRIAUX -->
+  <h2><span class="nation-icon">🌿</span> Les Matériaux du Territoire</h2>
+  <p>Chaque matériau utilisé provenait du territoire vécu et connu. Rien n'était importé de loin sans raison — tout avait une signification et un usage précis.</p>
+
+  <div class="materiau-grid">
+    <div class="materiau-item">
+      <div class="icon">🐚</div>
+      <div class="label">Wampum</div>
+      <div class="desc">Perles de coquillage blanc et pourpre, monnaie diplomatique et sacrée</div>
+    </div>
+    <div class="materiau-item">
+      <div class="icon">🦔</div>
+      <div class="label">Piquants de porc-épic</div>
+      <div class="desc">Teints et aplatis, tissés en motifs géométriques complexes</div>
+    </div>
+    <div class="materiau-item">
+      <div class="icon">💎</div>
+      <div class="label">Perles de verre</div>
+      <div class="desc">Introduites par les Européens au XVIIe siècle, intégrées aux traditions</div>
+    </div>
+    <div class="materiau-item">
+      <div class="icon">🥈</div>
+      <div class="label">Argent</div>
+      <div class="desc">Broches, gorgerins et médaillons — héritage de la traite des fourrures</div>
+    </div>
+    <div class="materiau-item">
+      <div class="icon">🦴</div>
+      <div class="label">Os et ivoire</div>
+      <div class="desc">Sculptés par les Inuits en pendentifs, aiguilles et amulettes</div>
+    </div>
+    <div class="materiau-item">
+      <div class="icon">🌊</div>
+      <div class="label">Cuivre natif</div>
+      <div class="desc">Battu à froid pour créer des ornements aux propriétés spirituelles</div>
+    </div>
+  </div>
+
+  <!-- NATIONS PAR NATION -->
+  <h2><span class="nation-icon">🏔️</span> Nation par Nation</h2>
+  <p>Si les matériaux se croisent parfois d'une nation à l'autre, chaque peuple a développé ses propres techniques, ses propres motifs et ses propres significations.</p>
+
+  <div class="nation-card">
+    <div class="nation-name">🌲 Abénaquis</div>
+    <p>Les Abénaquis étaient reconnus pour leur maîtrise du <strong>perlage sur écorce de bouleau</strong> et leurs broderies florales en piquants de porc-épic. Leurs bijoux portaient souvent des motifs végétaux — fleurs, feuilles et vignes — hérités d'une longue tradition anishinabée. Les femmes abénaquises transmettaient ces techniques de mère en fille, dans un geste à la fois artistique et spirituel.</p>
+  </div>
+
+  <div class="nation-card">
+    <div class="nation-name">🍃 Algonquins (Anishinabeg)</div>
+    <p>Maîtres du <strong>piquants de porc-épic</strong> (quillwork), les Algonquins décoraient colliers, bracelets et sacs de ceinture de motifs géométriques symbolisant les forces de la nature. La couleur des piquants, obtenus par teinture naturelle (baies, racines, ocre), portait une signification spirituelle précise. Après contact avec les Européens, les perles de verre sont venues enrichir ce répertoire sans le remplacer.</p>
+  </div>
+
+  <div class="nation-card">
+    <div class="nation-name">🌊 Atikamekw</div>
+    <p>Les Atikamekw, peuple des forêts boréales de la Haute-Mauricie, excellaient dans la fabrication de bijoux en <strong>os, graines et écorces</strong>. Leurs colliers incorporaient souvent des éléments fauniques — dents de castor, griffes d'ours — dotés d'une forte valeur protectrice. Leur art se caractérise par une sobriété élégante, où chaque élément est chargé de sens.</p>
+  </div>
+
+  <div class="nation-card">
+    <div class="nation-name">🌾 Cris (Eeyou)</div>
+    <p>Les Cris de la Baie-James ont développé un art du <strong>perlage géométrique</strong> d'une grande précision. Les femmes cries, réputées pour leur habileté, réalisaient des ceintures, boucles d'oreilles et colliers en perles de verre aux couleurs vives. Les motifs en losanges et en étoiles sont caractéristiques de leur tradition. La ceinture fléchée crie, tissée de façon complexe, est considérée comme l'une des plus belles expressions de cet art.</p>
+  </div>
+
+  <div class="nation-card">
+    <div class="nation-name">🏺 Hurons-Wendat</div>
+    <p>Les Wendat ont porté l'art du <strong>wampum</strong> à son apogée au Québec. Ces perles tubulaires en coquillage — blanches et pourpres — étaient portées en colliers et bracelets, mais surtout tissées en ceintures diplomatiques scellant les alliances et les traités. Après contact avec les Européens, les orfèvres wendat ont intégré l'argent pour créer des gorgerins (grandes plaques pectorales) d'une finesse remarquable. Wendake demeure aujourd'hui un centre vivant de l'artisanat autochtone au Québec.</p>
+  </div>
+
+  <div class="nation-card">
+    <div class="nation-name">🌲 Innus (Montagnais)</div>
+    <p>Les Innus ornaient leurs vêtements et leurs parures de <strong>broderies en poils d'orignal</strong> et en piquants teints. Leurs bijoux traditionnels, souvent portés lors de cérémonies, mêlaient graines naturelles, os et perles de traite. L'ours, le caribou et l'aigle étaient des motifs récurrents, incarnant les forces protectrices de la forêt boréale et du territoire innu.</p>
+  </div>
+
+  <div class="nation-card">
+    <div class="nation-name">❄️ Inuits</div>
+    <p>Dans le Grand Nord, les Inuits ont sculpté leurs bijoux dans <strong>l'os, l'ivoire de morse, la stéatite (pierre à savon) et le bois flotté</strong>. Les pendentifs représentaient des animaux marins — ours polaire, phoque, baleine — figures centrales de leur univers spirituel et alimentaire. Les femmes portaient des labrets (ornements de lèvres) en pierre ou en os, symboles de statut social. Aujourd'hui, la sculpture inuite est reconnue mondialement et figure parmi les arts autochtones les plus collectionnés.</p>
+  </div>
+
+  <div class="nation-card">
+    <div class="nation-name">🌊 Malécites (Wolastoqiyik)</div>
+    <p>Les Malécites du Bas-Saint-Laurent et de la Gaspésie pratiquaient le <strong>perlage floral</strong> avec une grande délicatesse. Leurs bijoux incorporaient souvent des motifs de fleurs sauvages et de fougères, brodés sur du cuir souple. Les femmes malécites étaient également reconnues pour leur travail sur <strong>l'écorce de bouleau</strong>, qu'elles décoraient de motifs gravés ou ornés de piquants.</p>
+  </div>
+
+  <div class="nation-card">
+    <div class="nation-name">🦔 Micmacs (Mi'kmaq)</div>
+    <p>Les Mi'kmaq sont surnommés <em>"le peuple du porc-épic"</em> en raison de leur maîtrise légendaire du <strong>quillwork</strong>. Le travail en piquants de porc-épic est chez eux un art sacré, traditionnellement réservé aux femmes, avec une dimension spirituelle profonde. Leurs bijoux en piquants tressés sur écorce de bouleau, leurs colliers de coquillages et leurs bracelets en cuivre sont parmi les plus raffinés de toutes les nations de l'Est. Cet art connaît aujourd'hui une véritable renaissance avec de jeunes artistes mi'kmaq.</p>
+  </div>
+
+  <div class="nation-card">
+    <div class="nation-name">🦅 Mohawks (Kanien'kehá:ka)</div>
+    <p>Les Mohawks, Gardiens de la Porte de l'Est de la Confédération haudenosaunee, ont développé l'un des arts de la bijouterie les plus sophistiqués du continent. Maîtres de l'<strong>argent</strong>, ils fabriquaient des broches ornementales, des gorgerins et des brassards en métal repoussé. Leurs <strong>ceintures de wampum</strong> — comme la célèbre ceinture Hiawatha à deux rangées — sont des monuments diplomatiques autant qu'artistiques. Le perlage mohawk contemporain, comme celui de Kiera Pyke d'Akwesasne, intègre des teintures naturelles (noix de Grenoble, baies) dans des créations alliant tradition et modernité.</p>
+  </div>
+
+  <div class="nation-card">
+    <div class="nation-name">🌿 Naskapis</div>
+    <p>Les Naskapis du Labrador et du nord du Québec décoraient leurs vêtements et parures de <strong>peintures géométriques</strong> élaborées et de broderies en poils de caribou. Leurs bijoux, plus sobres que ceux des nations du sud, reflétaient la rigueur de la vie en territoire subarctique. L'os et les dents d'animaux étaient façonnés en amulettes protectrices portées lors des chasses au caribou — pratique centrale à leur identité culturelle.</p>
+  </div>
+
+  <!-- WAMPUM -->
+  <h2><span class="nation-icon">🐚</span> Le Wampum : Bien Plus qu'un Bijou</h2>
+  <p>Le wampum mérite une attention particulière. Ces petites perles tubulaires fabriquées à partir de la coquille de la palourde d'Amérique (<em>Mercenaria mercenaria</em>) n'étaient pas de simples ornements. Tissées en ceintures, elles scellaient les traités, commémoraient les alliances, et transmettaient des récits historiques. Chaque ceinture de wampum était un document vivant — lu et interprété par des porte-paroles qualifiés lors des conseils.</p>
+  <p>La couleur avait une signification précise : le blanc symbolisait la paix, la santé et la pureté ; le pourpre (ou mauve) représentait la mort, la guerre ou des événements graves. L'arrivée des outils en métal européens vers 1620-1625 a standardisé la production des perles, augmentant leur circulation dans tout le Nord-Est américain.</p>
+
+  <div class="citation">
+    "Une ceinture de wampum n'est pas un bijou. C'est une parole, un engagement, une mémoire. Elle se lit comme on lit un visage." — Tradition orale wendat
+  </div>
+
+  <!-- LÉGENDES -->
+  <div class="legende-box">
+    <h3>🌙 Légendes, Histoires et Anecdotes</h3>
+
+    <h3 style="color:#b070e0; font-size:1rem; margin-top:1rem;">La femme araignée et les perles du ciel</h3>
+    <p>Dans la tradition algonquine, c'est l'Araignée Grand-Mère — tisseuse du monde — qui aurait enseigné aux femmes l'art de tisser les piquants de porc-épic. Selon la légende, elle descendit du ciel avec un panier de fils de lumière et montra comment entrelacer les couleurs pour capturer les messages des esprits dans les motifs. Chaque dessin géométrique brodé sur un bijou serait ainsi une prière tissée.</p>
+
+    <h3 style="color:#b070e0; font-size:1rem; margin-top:1.5rem;">Le premier gorgerin mohawk</h3>
+    <p>La légende dit qu'un guerrier mohawk, rentrant d'une longue bataille, trouva à la lisière de la forêt un fragment de lune tombé sur la neige. Il le façonna en plaque polie qu'il porta sur sa poitrine — le premier gorgerin en argent. Cette pièce réfléchissait la lumière de la lune lors des cérémonies nocturnes, faisant croire aux esprits que l'homme portait un morceau du ciel sur lui.</p>
+
+    <h3 style="color:#b070e0; font-size:1rem; margin-top:1.5rem;">Le porc-épic sacré des Mi'kmaq</h3>
+    <p>Chez les Mi'kmaq, le porc-épic est considéré comme un animal-enseignant. On raconte qu'une jeune femme perdue dans la forêt fut guidée par un porc-épic jusqu'à un village ami. En reconnaissance, sa famille apprit l'art du quillwork pour honorer cet animal. Depuis, chaque piquant récolté est accompagné d'une prière de gratitude, et l'animal n'est jamais tué pour ses piquants seuls — on ne prend que ce que la forêt accepte de donner.</p>
+
+    <h3 style="color:#b070e0; font-size:1rem; margin-top:1.5rem;">L'ivoire qui parle — tradition inuite</h3>
+    <p>Dans les communautés inuites, on disait autrefois que l'ivoire de morse "parlait" au sculpteur. L'artiste ne choisissait pas ce qu'il allait créer — il écoutait la forme déjà présente dans la défense et la révélait patiemment. Un pendentif représentant un ours polaire n'était pas "fabriqué" : il était "libéré" de la matière. Cette philosophie, toujours vivante, explique la puissance spirituelle des sculptures inuites contemporaines.</p>
+  </div>
+
+  <!-- RENAISSANCE CONTEMPORAINE -->
+  <h2><span class="nation-icon">✨</span> Une Renaissance Contemporaine</h2>
+  <p>Loin d'être des arts figés dans le passé, les traditions bijoutières des Premières Nations du Québec connaissent aujourd'hui un renouveau vibrant. Des artistes comme <strong>Kiera Pyke (Mohawk, Akwesasne)</strong> combinent piquants de porc-épic teints aux noix et aux baies avec des formes contemporaines pour créer des boucles d'oreilles et médaillons qui font le tour du monde.</p>
+  <p>À <strong>Wendake</strong>, le Musée Huron-Wendat et les boutiques d'artisans perpétuent l'art du wampum et de la broderie. Le <em>Rendez-vous des artisans et artistes de Wendake</em> réunit chaque novembre des créateurs de toutes les nations, témoignant de la vitalité de ces traditions.</p>
+  <p>Des plateformes comme <strong>Artisanat Autochtone</strong> permettent désormais aux artisans de vendre leurs créations directement, sans intermédiaires, garantissant l'authenticité et soutenant les communautés. Chaque achat est accompagné d'une carte d'identification de l'artisan — une façon de tisser un lien direct entre créateur et porteur.</p>
+
+  <div class="citation">
+    "Quand je fais du quillwork, je sens mes ancêtres travailler à travers mes mains. Ce n'est pas de l'artisanat — c'est une conversation avec ceux qui sont partis." — Artiste mi'kmaq contemporaine
+  </div>
+
+  <!-- PARTAGE -->
+  <div class="share-section">
+    <h3>🪶 Partager cet article</h3>
+    <p style="color:#a09080; margin-bottom:1.5rem; font-size:0.9rem;">Aidez à faire connaître le patrimoine des Premières Nations</p>
+    <div class="share-buttons">
+      <a class="share-btn btn-fb" href="https://www.facebook.com/sharer/sharer.php?u=https://socrate83.github.io/premieres-nations-quebec/BijouxPremieresNations.html" target="_blank">
+        📘 Facebook
+      </a>
+      <a class="share-btn btn-fb-group" href="https://www.facebook.com/groups/1451283625021958" target="_blank">
+        👥 Groupe Facebook
+      </a>
+      <a class="share-btn btn-wa" href="https://wa.me/?text=L'art des bijoux des Premières Nations du Québec 🪶 https://socrate83.github.io/premieres-nations-quebec/BijouxPremieresNations.html" target="_blank">
+        💬 WhatsApp
+      </a>
+      <button class="share-btn btn-copy" onclick="navigator.clipboard.writeText('https://socrate83.github.io/premieres-nations-quebec/BijouxPremieresNations.html'); this.textContent='✅ Copié !'">
+        🔗 Copier le lien
+      </button>
+    </div>
+  </div>
+
+  <!-- NAVIGATION BAS -->
+  <div class="nav-bottom">
+    <a href="index.html" class="nav-btn">← Accueil</a>
+    <a href="index.html#nations" class="nav-btn">📚 Tous les articles</a>
+  </div>
+
+</div>
+
+<footer>
+  <p>🪶 Les Premières Nations au Québec — Projet éducatif et culturel</p>
+  <p style="margin-top:0.5rem;">Contact : <a href="mailto:infodunet896@gmail.com" style="color:#D4AF37;">infodunet896@gmail.com</a></p>
+</footer>
+
+</body>
+</html>
