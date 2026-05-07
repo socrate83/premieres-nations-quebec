@@ -230,6 +230,36 @@
       margin-top: 3rem;
     }
 
+
+    /* IMAGES */
+    .article-img {
+      width: 100%;
+      border-radius: 12px;
+      margin: 1.5rem 0;
+      border: 1px solid rgba(212,175,55,0.2);
+      display: block;
+    }
+    .img-caption {
+      text-align: center;
+      font-size: 0.8rem;
+      color: #8a7a6a;
+      font-style: italic;
+      margin-top: -1rem;
+      margin-bottom: 1.5rem;
+    }
+    .img-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 1rem;
+      margin: 1.5rem 0;
+    }
+    .img-grid img {
+      width: 100%;
+      border-radius: 10px;
+      border: 1px solid rgba(212,175,55,0.2);
+    }
+    @media (max-width: 600px) { .img-grid { grid-template-columns: 1fr; } }
+
     @media (max-width: 600px) {
       .nav-links { gap: 1rem; }
       .hero { padding: 4rem 1.5rem 3rem; }
@@ -259,6 +289,14 @@
   <p class="hero-subtitle">Wampum, piquants de porc-épic, perles et argent — un héritage vivant tissé dans la matière</p>
   <p class="hero-meta">📅 Mai 2026 &nbsp;|&nbsp; 🪶 Les 11 Nations du Québec</p>
 </div>
+
+
+  <!-- IMAGE BANNIÈRE -->
+  <div style="max-width:800px;margin:0 auto;padding:0 2rem;">
+    <img src="https://media.base44.com/images/public/69f23c5b09417d29099136be/4a61aabf0_generated_image.png" 
+         class="article-img" alt="Bijoux traditionnels des Premières Nations du Québec" />
+    <p class="img-caption">Bijoux traditionnels autochtones — wampum, piquants de porc-épic, argent et coquillages</p>
+  </div>
 
 <!-- CONTENU PRINCIPAL -->
 <div class="container">
@@ -304,6 +342,12 @@
     </div>
   </div>
 
+
+  <!-- IMAGE WAMPUM -->
+  <img src="https://media.base44.com/images/public/69f23c5b09417d29099136be/c1af84dd7_generated_image.png" 
+       class="article-img" alt="Ceinture wampum haudenosaunee" />
+  <p class="img-caption">Ceinture wampum — perles de coquillage blanc et pourpre tissées en motifs géométriques</p>
+
   <!-- NATIONS PAR NATION -->
   <h2><span class="nation-icon">🏔️</span> Nation par Nation</h2>
   <p>Si les matériaux se croisent parfois d'une nation à l'autre, chaque peuple a développé ses propres techniques, ses propres motifs et ses propres significations.</p>
@@ -325,6 +369,11 @@
 
   <div class="nation-card">
     <div class="nation-name">🌾 Cris (Eeyou)</div>
+  <!-- IMAGE PORTRAIT -->
+  <img src="https://media.base44.com/images/public/69f23c5b09417d29099136be/23952c0c4_generated_image.png" 
+       class="article-img" alt="Femme des Premières Nations portant des bijoux traditionnels" />
+  <p class="img-caption">Parures traditionnelles — collier perlé et broche en argent</p>
+
     <p>Les Cris de la Baie-James ont développé un art du <strong>perlage géométrique</strong> d'une grande précision. Les femmes cries, réputées pour leur habileté, réalisaient des ceintures, boucles d'oreilles et colliers en perles de verre aux couleurs vives. Les motifs en losanges et en étoiles sont caractéristiques de leur tradition. La ceinture fléchée crie, tissée de façon complexe, est considérée comme l'une des plus belles expressions de cet art.</p>
   </div>
 
@@ -345,6 +394,11 @@
 
   <div class="nation-card">
     <div class="nation-name">🌊 Malécites (Wolastoqiyik)</div>
+  <!-- IMAGE PIQUANTS -->
+  <img src="https://media.base44.com/images/public/69f23c5b09417d29099136be/c89b4df10_generated_image.png" 
+       class="article-img" alt="Broderie en piquants de porc-épic sur écorce de bouleau" />
+  <p class="img-caption">Art du quillwork — piquants de porc-épic teints et tissés sur écorce de bouleau</p>
+
     <p>Les Malécites du Bas-Saint-Laurent et de la Gaspésie pratiquaient le <strong>perlage floral</strong> avec une grande délicatesse. Leurs bijoux incorporaient souvent des motifs de fleurs sauvages et de fougères, brodés sur du cuir souple. Les femmes malécites étaient également reconnues pour leur travail sur <strong>l'écorce de bouleau</strong>, qu'elles décoraient de motifs gravés ou ornés de piquants.</p>
   </div>
 
@@ -398,6 +452,12 @@
   <div class="citation">
     "Quand je fais du quillwork, je sens mes ancêtres travailler à travers mes mains. Ce n'est pas de l'artisanat — c'est une conversation avec ceux qui sont partis." — Artiste mi'kmaq contemporaine
   </div>
+
+
+  <!-- IMAGE ARTISTE CONTEMPORAINE -->
+  <img src="https://media.base44.com/images/public/69f23c5b09417d29099136be/477d4f792_generated_image.png" 
+       class="article-img" alt="Artiste autochtone contemporaine créant des bijoux" />
+  <p class="img-caption">Renaissance contemporaine — artistes autochtones du Québec mêlent tradition et modernité</p>
 
   <!-- PARTAGE -->
   <div class="share-section">
