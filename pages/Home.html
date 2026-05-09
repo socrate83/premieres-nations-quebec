@@ -140,6 +140,26 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
     /* COMPTEUR VISITES */
     .visit-counter{display:inline-flex;align-items:center;gap:0.6rem;background:rgba(255,255,255,0.04);border:1px solid rgba(200,146,10,0.25);border-radius:30px;padding:0.5rem 1.4rem;margin:1rem auto;font-size:0.82rem;color:rgba(255,255,255,0.55)}
     .visit-counter span{color:var(--or-clair);font-weight:700;font-size:1rem}
+
+    /* Articles — série blog (catalogue dans la même page) */
+    .article-block-title{font-family:'Playfair Display',serif;font-size:clamp(1.35rem,2.8vw,1.95rem);color:var(--or-clair);text-align:center;margin:2rem 0 0.35rem;line-height:1.25}
+    .nations-sub{margin-bottom:2rem;font-size:0.85rem!important}
+    .serie-blog-wrap{margin-top:3.5rem;padding-top:3rem;border-top:1px solid rgba(255,255,255,0.09)}
+    .serie-blog-wrap#serie-blog{scroll-margin-top:74px}
+    .serie-blog-sub{margin-bottom:1.25rem}
+    .serie-notice{max-width:880px;margin:0 auto 1.5rem;padding:1rem 1.15rem;border-radius:14px;border:1px solid rgba(232,176,32,0.28);background:rgba(200,146,10,0.07);font-size:0.86rem;line-height:1.65;color:rgba(255,255,255,0.78)}
+    .serie-load-err{text-align:center;color:#c98888;font-size:0.9rem;margin-top:1rem}
+    .serie-group{margin-bottom:2.75rem}
+    .serie-head-sm{font-family:'Playfair Display',serif;color:var(--or-clair);font-size:1.12rem;text-align:center;margin-bottom:1.1rem;border-bottom:1px solid rgba(200,146,10,0.25);padding-bottom:0.5rem}
+    .serie-grid-blog{display:grid;grid-template-columns:repeat(auto-fill,minmax(220px,1fr));gap:1rem;max-width:1180px;margin:0 auto}
+    .serie-card{display:flex;flex-direction:column;align-items:flex-start;background:#161616;border:1px solid rgba(255,255,255,0.09);border-radius:14px;padding:1rem;min-height:130px;transition:border-color .2s,transform .2s}
+    .serie-card:hover{border-color:rgba(232,176,32,0.3);transform:translateY(-2px)}
+    .serie-card.featured{border-color:rgba(232,176,32,0.45);background:linear-gradient(155deg,#1f1a12,#161616)}
+    .serie-num{min-width:2rem;height:2rem;display:inline-flex;align-items:center;justify-content:center;background:rgba(200,146,10,0.2);color:var(--or-clair);font-size:0.76rem;font-weight:800;border-radius:8px;margin-bottom:0.5rem}
+    .serie-card h4{font-family:'Playfair Display',serif;font-size:0.98rem;color:#fff;line-height:1.35;margin-bottom:auto;padding-bottom:0.6rem;font-weight:700}
+    a.btn-serie{display:inline-flex;justify-content:center;align-self:stretch;width:100%;box-sizing:border-box;background:var(--or);color:#000;font-weight:700;font-size:0.7rem;letter-spacing:1px;text-transform:uppercase;padding:0.5rem;border-radius:30px;text-decoration:none;margin-top:0.35rem;border:none;cursor:pointer;transition:background .2s}
+    a.btn-serie:hover{background:var(--or-clair)}
+    #articles{scroll-margin-top:72px}
   </style>
 </head>
 <body>
@@ -152,8 +172,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
   <!-- TOP NAV -->
   <nav class="top-nav">
     <a href="index.html"  >🏠 Accueil</a>
-    <a href="#nations" onclick="document.getElementById('nations').scrollIntoView({behavior:'smooth'});return false;">📰 Articles</a>
-    <a href="SerieArticlesBlog.html" >📚 Série blog</a>
+    <a href="#articles" onclick="document.getElementById('articles').scrollIntoView({behavior:'smooth'});return false;">📰 Articles</a>
     <a href="Videos.html" >🎬 Vidéos</a>
     <a href="Audio.html" >🎵 Audio</a>
   </nav>
@@ -168,7 +187,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
       <p class="hero-eyebrow">Série complète · 11 nations + Inuits</p>
       <h1>Peuples<br/>Autochtones<br/>du <span>Québec</span></h1>
       <p class="hero-sub">Une série d'articles approfondis sur les Premières Nations et les Inuits qui habitent le territoire québécois depuis des millénaires.</p>
-      <button class="hero-cta" onclick="document.getElementById('nations').scrollIntoView({behavior:'smooth'})">Découvrir les nations →</button>
+      <button type="button" class="hero-cta" onclick="document.getElementById('articles').scrollIntoView({behavior:'smooth'})">Découvrir les articles →</button>
     </div>
     <div class="hero-scroll">↓ Explorer</div>
   </section>
@@ -189,11 +208,13 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
     <p>Cette série d'articles vous invite à découvrir les <strong>11 Premières Nations</strong> et les <strong>Inuits du Nunavik</strong> — leur histoire, leur culture, leurs traditions et leur place dans le Québec d'aujourd'hui. Une invitation au respect et à la connaissance.</p>
   </section>
 
-  <!-- NATIONS GRID -->
-  <section class="grid-sec" id="nations">
-    <h2 class="grid-title">Les Nations</h2>
-    <p class="grid-sub">Cliquez sur une nation pour lire son article</p>
-    <div class="nations-grid">
+  <!-- ARTICLES — nations Québec + série 55 -->
+  <section class="grid-sec" id="articles">
+    <h2 class="grid-title">Articles</h2>
+    <p class="grid-sub">Fiches dédiées aux peuples du territoire québécois, et série thématique de 55 textes complémentaires (panorama élargi sur le même espace).</p>
+    <h3 class="article-block-title">Nations du Québec</h3>
+    <p class="grid-sub nations-sub">Les 11 Premières Nations et les Inuits du Nunavik — cliquez sur une carte pour ouvrir la fiche.</p>
+    <div class="nations-grid" id="nations">
 
       <!-- ABENAQUIS -->
       <div class="nation-card">
@@ -350,6 +371,14 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
       </div>
 
     </div>
+
+    <div id="serie-blog" class="serie-blog-wrap">
+      <h3 class="article-block-title">Série thématique — 55 articles</h3>
+      <p class="grid-sub serie-blog-sub">Une entrée mise en avant, puis six sous-séries ; chaque titre ouvre l’article correspondant du blog archive.</p>
+      <div class="serie-notice" role="note"><strong>Lecture hors Québec.</strong> Cette partie porte sur des thèmes larges nord-américains / canadiens, en prolongement — pas un doublon des fiches « Nations » ci-dessus.</div>
+      <div id="serie-blog-mount"></div>
+      <p id="serie-blog-load-err" class="serie-load-err" hidden>Réessayer sans bloqueur de contenu ou recharger ; le fichier <code>blog-serie-articles.json</code> est requis au même dossier.</p>
+    </div>
   </section>
 
 
@@ -358,11 +387,11 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
     <h2 class="grid-title">Médiathèque</h2>
     <p class="grid-sub">Articles · Vidéos · Audio</p>
     <div class="media-cards">
-      <a class="media-card" href="#nations">
+      <a class="media-card" href="#articles">
         <div class="m-icon">📰</div>
         <h3>Articles</h3>
-        <p>12 articles approfondis sur les 11 Premières Nations et les Inuits du Québec.</p>
-        <div class="m-badge">12 articles</div>
+        <p>Fiches Québec (11 nations + Inuits) et série élargie de 55 articles sur la même section.</p>
+        <div class="m-badge">Nations + 55 textes</div>
       </a>
       <a class="media-card" href="Videos.html">
         <div class="m-icon">🎬</div>
@@ -379,7 +408,77 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
     </div>
   </section>
 
-
+  <script>
+  (function catalogueSerieBlog() {
+    function hrefFor(base, file) {
+      return base.replace(/\/?$/, '/') + encodeURIComponent(file);
+    }
+    function cardHtmlFix(item, extraClass) {
+      var titleEsc = String(item.title).replace(/&/g, '&amp;').replace(/</g, '&lt;').replace(/"/g, '&quot;');
+      var u = hrefFor(window.__serieBlogBase || '', item.file);
+      return (
+        '<article class="serie-card ' + (extraClass || '') + '"><span class="serie-num" aria-hidden="true">' +
+        String(item.n).replace(/</g, '') +
+        '</span><h4>' +
+        titleEsc +
+        '</h4><a class="btn-serie" href="' +
+        u.replace(/"/g, '&quot;') +
+        '" target="_blank" rel="noopener noreferrer">Lire l’article</a></article>'
+      );
+    }
+    function featuredHtml(fd) {
+      if (!fd) return '';
+      return (
+        '<div class="serie-group"><h4 class="serie-head-sm">Coup de cœur · blog archive</h4><div class="serie-grid-blog">' +
+        cardHtmlFix(fd, 'featured') +
+        '</div></div>'
+      );
+    }
+    function render(data) {
+      window.__serieBlogBase = data.baseUrl || '';
+      var mount = document.getElementById('serie-blog-mount');
+      var err = document.getElementById('serie-blog-load-err');
+      if (!mount) return;
+      var parts = [];
+      data.groups.forEach(function (g, idx) {
+        parts.push(
+          '<div class="serie-group"><h4 class="serie-head-sm">' +
+            String(g.label).replace(/</g, '&lt;') +
+            '</h4><div class="serie-grid-blog">' +
+            g.items.map(function (it) { return cardHtmlFix(it, ''); }).join('') +
+            '</div></div>'
+        );
+        if (idx === 0) parts.push(featuredHtml(data.featured));
+      });
+      mount.innerHTML = parts.join('');
+      if (err) err.hidden = true;
+      if (window.location.hash === '#serie-blog') {
+        requestAnimationFrame(function () {
+          var el = document.getElementById('serie-blog');
+          if (el) el.scrollIntoView({ behavior: 'smooth', block: 'start' });
+        });
+      }
+    }
+    function tryFetch(urls, i) {
+      var err = document.getElementById('serie-blog-load-err');
+      if (i >= urls.length) {
+        if (err) err.hidden = false;
+        return;
+      }
+      fetch(urls[i], { credentials: 'omit', cache: 'no-store' })
+        .then(function (r) { if (!r.ok) throw new Error(); return r.json(); })
+        .then(render)
+        .catch(function () { tryFetch(urls, i + 1); });
+    }
+    if (document.readyState === 'loading') {
+      document.addEventListener('DOMContentLoaded', function () {
+        tryFetch(['blog-serie-articles.json', '/premieres-nations-quebec/blog-serie-articles.json'], 0);
+      });
+    } else {
+      tryFetch(['blog-serie-articles.json', '/premieres-nations-quebec/blog-serie-articles.json'], 0);
+    }
+  })();
+  </script>
 
   <!-- ARTICLE VEDETTE : FEMMES AUTOCHTONES -->
   <section style="padding:5rem 2rem;background:#0d0d0d;">
@@ -530,7 +629,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
           Où puis-je lire les articles complets ?
         </button>
         <div class="faq-answer" hidden>
-          Depuis la section "Les Nations" sur la page d'accueil, cliquez sur le bouton "Lire" de la nation qui vous intéresse. Pour les 55 articles thématiques du blog (<em>série élargie Canada</em>) : voir la page <a href="SerieArticlesBlog.html">Série blog</a>.
+          Allez dans la rubrique <a href="#articles">Articles</a> : faites défiler jusqu’après les cartes des nations pour le bloc « Série thématique — 55 articles ». Les fiches du Québec utilisent les boutons <strong>Lire</strong> sur les cartes <em>Nations</em>.
         </div>
       </div>
       <div class="faq-item">
@@ -692,7 +791,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
       { tier: 'page', keys: ['partage', 'publier', 'reseaux', 'diffusion', 'reseau social'], title: 'Publier sur les réseaux', href: 'Partage.html' },
       { tier: 'page', keys: ['femme', 'femmes', 'matriarche', 'autochtones du quebec piliers'], title: 'Les Femmes Autochtones du Québec — Piliers, Matriarches et Résistantes', href: 'FemmesAutochtones.html' },
       { tier: 'page', keys: ['bijou', 'bijoux', 'art des bijoux', 'perle', 'wampum'], title: 'L\'Art des Bijoux des Premières Nations', href: 'BijouxPremieresNations.html' },
-      { tier: 'page', keys: ['serie blog', '55 articles', 'blog premieres nations', 'articles blog', 'serie canada', 'catalogue blog'], title: 'Catalogue — 55 articles du blog (série élargie)', href: 'SerieArticlesBlog.html' }
+      { tier: 'page', keys: ['serie blog', '55 articles', 'blog premieres nations', 'articles blog', 'serie canada', 'catalogue blog'], title: 'Série — 55 articles (même rubrique Articles)', href: 'Home.html#serie-blog' }
     ];
 
     function assistantHtmlNationList(){
@@ -834,7 +933,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
         var shortTitle = kbHit.title.indexOf('|') !== -1 ? kbHit.title.split('|')[0].trim() : kbHit.title;
         var kbHint =
           kbHit.tier === 'nation'
-            ? 'Une fiche parmi les 11 nations + Inuits (grille Les Nations ci-dessus).'
+            ? 'Une fiche parmi les 11 nations + Inuits (rubrique Articles, grille Nations ci-dessus).'
             : kbHit.href === 'Videos.html'
               ? 'Médiathèque vidéo du projet.'
               : kbHit.href === 'Audio.html'
@@ -851,7 +950,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
       if (raw.indexOf('article') !== -1 || raw.toLowerCase().indexOf('nation') !== -1 || raw.toLowerCase().indexOf('sujet') !== -1) {
         return {
           answered: true,
-          text: "Vous pouvez explorer 11 nations + la nation inuite depuis la section \"Les Nations\". Cliquez sur \"Découvrir les nations\" pour commencer. Pour la liste précise avec titres, écrivez : « Liste des nations » ou utilisez la FAQ."
+          text: "Vous pouvez explorer 11 nations + la nation inuite depuis la rubrique Articles (bouton dans le bandeau du haut). Les 55 articles thématiques sont plus bas sous « Série thématique ». Pour la liste des titres Québec, écrivez : « Liste des nations » ou la FAQ."
         };
       }
       if (q.indexOf('video') !== -1) {
