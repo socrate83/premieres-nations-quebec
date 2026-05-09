@@ -1,8 +1,18 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
-    <loc>https://socrate83.github.io/premieres-nations-quebec/Home.html</loc>
+    <loc>https://socrate83.github.io/premieres-nations-quebec/Presentation.html</loc>
     <priority>1.0</priority>
+    <changefreq>weekly</changefreq>
+  </url>
+  <url>
+    <loc>https://socrate83.github.io/premieres-nations-quebec/</loc>
+    <priority>0.95</priority>
+    <changefreq>weekly</changefreq>
+  </url>
+  <url>
+    <loc>https://socrate83.github.io/premieres-nations-quebec/Home.html</loc>
+    <priority>0.95</priority>
     <changefreq>weekly</changefreq>
   </url>
   <url>
