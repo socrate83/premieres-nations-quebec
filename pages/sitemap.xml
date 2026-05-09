@@ -61,6 +61,11 @@
     <changefreq>monthly</changefreq>
   </url>
   <url>
+    <loc>https://socrate83.github.io/premieres-nations-quebec/SerieArticlesBlog.html</loc>
+    <priority>0.75</priority>
+    <changefreq>monthly</changefreq>
+  </url>
+  <url>
     <loc>https://socrate83.github.io/premieres-nations-quebec/Videos.html</loc>
     <priority>0.7</priority>
     <changefreq>weekly</changefreq>

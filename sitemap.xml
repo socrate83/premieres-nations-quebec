@@ -6,7 +6,7 @@
     <changefreq>weekly</changefreq>
   </url>
   <url>
-    <loc>https://socrate83.github.io/premieres-nations-quebec/Abenaquis.html</loc>
+    <loc>https://socrate83.github.io/premieres-nations-quebec/abenaquis.html</loc>
     <priority>0.9</priority>
     <changefreq>monthly</changefreq>
   </url>
@@ -58,6 +58,11 @@
   <url>
     <loc>https://socrate83.github.io/premieres-nations-quebec/Naskapis.html</loc>
     <priority>0.9</priority>
+    <changefreq>monthly</changefreq>
+  </url>
+  <url>
+    <loc>https://socrate83.github.io/premieres-nations-quebec/SerieArticlesBlog.html</loc>
+    <priority>0.75</priority>
     <changefreq>monthly</changefreq>
   </url>
   <url>
