@@ -171,7 +171,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 
   <!-- TOP NAV -->
   <nav class="top-nav">
-    <a href="index.html"  >🏠 Accueil</a>
+    <a href="Home.html"  >🏠 Accueil</a>
     <a href="#articles" onclick="document.getElementById('articles').scrollIntoView({behavior:'smooth'});return false;">📰 Articles</a>
     <a href="Videos.html" >🎬 Vidéos</a>
     <a href="Audio.html" >🎵 Audio</a>
@@ -799,7 +799,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
         var label = e.title.indexOf('|') !== -1 ? e.title.split('|')[0].trim() : e.title;
         return '<li><a href="' + e.href + '">' + label.replace(/</g, '&lt;') + '</a></li>';
       }).join('');
-      return '<p>Voici les <strong>onze Premières Nations</strong> couvertes + les <strong>Inuits</strong> (Nunavik), avec le titre principal de chaque page :</p><ul style="margin:0.4rem 0 0 1rem;padding:0;line-height:1.45">' + ul + '</ul><p style="margin-top:0.55rem">Titre de ce site (onglet du navigateur) : <strong>Peuples Autochtones du Québec — Les 11 Premières Nations</strong>. Accueil visuel : <a href="index.html">Bienvenue — Peuples Autochtones du Québec</a>.</p>';
+      return '<p>Voici les <strong>onze Premières Nations</strong> couvertes + les <strong>Inuits</strong> (Nunavik), avec le titre principal de chaque page :</p><ul style="margin:0.4rem 0 0 1rem;padding:0;line-height:1.45">' + ul + '</ul><p style="margin-top:0.55rem">Titre de ce site (onglet du navigateur) : <strong>Peuples Autochtones du Québec — Les 11 Premières Nations</strong>. Accueil principal : <a href="Home.html">Home.html</a>.</p>';
     }
 
     function assistantKbScore(q, entry){
