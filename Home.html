@@ -548,6 +548,39 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
           Utilisez l'assistant du site en bas a droite. Si l'assistant ne trouve pas la reponse, le bouton Email s'active automatiquement.
         </div>
       </div>
+      <div class="faq-item">
+        <button class="faq-question" type="button" aria-expanded="false" onclick="toggleFaqItem(this)">
+          Quels sont les titres des articles des 11 Premières Nations et des Inuits ?
+        </button>
+        <div class="faq-answer" hidden>
+          Chaque grande fiche reprend une formule du type « Les [Nation] — Histoire et Culture » (avec la mention Premières Nations du Québec dans l’onglet du navigateur), sauf <strong>Abénaquis</strong> (« Peuple des Terres de l’Aube ») et <strong>Inuits</strong> (« Histoire et Culture »). Titres depuis la grille :
+          <strong>Abénaquis</strong>, Algonquins, Atikamekw, Cris, Hurons-Wendat, Innus, Malécites, Micmacs, Mohawks, Naskapis, Inuits. Liens : <a href="abenaquis.html">Abénaquis</a> · <a href="Algonquins.html">Algonquins</a> · <a href="Atikamekw.html">Atikamekw</a> · <a href="Cris.html">Cris</a> · <a href="HuronsWendat.html">Hurons-Wendat</a> · <a href="Innus.html">Innus</a> · <a href="Malecites.html">Malécites</a> · <a href="Micmacs.html">Micmacs</a> · <a href="Mohawks.html">Mohawks</a> · <a href="Naskapis.html">Naskapis</a> · <a href="Inuits.html">Inuits</a>.
+        </div>
+      </div>
+      <div class="faq-item">
+        <button class="faq-question" type="button" aria-expanded="false" onclick="toggleFaqItem(this)">
+          Où sont les médias vidéos et audio ?
+        </button>
+        <div class="faq-answer" hidden>
+          Menu du haut : <a href="Videos.html">Vidéos</a> (page « Vidéos — Les Premières Nations du Québec ») et <a href="Audio.html">Audio</a> (« Audio — Les Premières Nations du Québec », certains formats peuvent encore être ajoutés). Pour partager un nouvel article sur les réseaux : <a href="Partage.html">Publier</a>.
+        </div>
+      </div>
+      <div class="faq-item">
+        <button class="faq-question" type="button" aria-expanded="false" onclick="toggleFaqItem(this)">
+          Quelles autres grandes pages existe-t-il sur le même thème ?
+        </button>
+        <div class="faq-answer" hidden>
+          <a href="FemmesAutochtones.html">Les Femmes Autochtones du Québec — Piliers, Matriarches et Résistantes</a>. <a href="BijouxPremieresNations.html">L'Art des Bijoux des Premières Nations</a>. <a href="Partage.html">Publier sur les réseaux</a>.
+        </div>
+      </div>
+      <div class="faq-item">
+        <button class="faq-question" type="button" aria-expanded="false" onclick="toggleFaqItem(this)">
+          Comment l'assistant retrouve-t-il une nation ou une média ?
+        </button>
+        <div class="faq-answer" hidden>
+          Dans le chat en bas à droite, utilisez un mot du nom officiel (« Mohawk », « Malécites », « Naskapis », « Inuit », …) ou un mot relié aux médias (« vidéo », « audio », « YouTube », « réseaux »). L’assistant propose un lien vers la page correspondante lorsqu’il la reconnaît.
+        </div>
+      </div>
     </div>
     <p class="copy">FAQ · Contenu à visée éducative · Révision et déploiement avec Cursor · 2026</p>
   </footer>
@@ -593,6 +626,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
     .msg{max-width:88%;padding:0.55rem 0.75rem;border-radius:12px;line-height:1.45;font-size:0.84rem}
     .msg.user{align-self:flex-end;background:#2a2a2a;color:#fff}
     .msg.bot{align-self:flex-start;background:rgba(232,176,32,0.12);border:1px solid rgba(232,176,32,0.28);color:#f2f2f2}
+    .msg.bot a{color:var(--or-clair);text-decoration:underline;font-weight:700}
     .assistant-actions{padding:0.75rem 0.75rem 0;background:#121212}
     .quick-actions{display:flex;gap:0.4rem;flex-wrap:wrap}
     .quick-actions button{background:#1e1e1e;color:rgba(255,255,255,0.85);border:1px solid rgba(255,255,255,0.12);border-radius:999px;padding:0.35rem 0.7rem;font-size:0.75rem;cursor:pointer}
@@ -624,6 +658,8 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
         <button type="button" onclick="quickAsk('Quels sujets je peux lire ?')">Sujets</button>
         <button type="button" onclick="quickAsk('Comment partager le site ?')">Partager</button>
         <button type="button" onclick="quickAsk('Comment poser une vraie question ?')">Question</button>
+        <button type="button" onclick="quickAsk('Liste des nations et titres des articles')">Nations et titres</button>
+        <button type="button" onclick="quickAsk('Où sont les vidéos et les pages médias ?')">Médias</button>
       </div>
     </div>
     <div class="assistant-input-wrap">
@@ -636,6 +672,66 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
   <script>
     var assistantState = { started: false, conversation: [], needsEmailFallback: false };
     var assistantEmail = 'infodunet896@gmail.com';
+
+    /* Base minimale : nations (11 + Inuits) + médias + pages thématiques — mots-clés sans accents côté comparaison */
+    var ASSISTANT_KB = [
+      { tier: 'nation', keys: ['abenaqui', 'abenaki', 'abenakis'], title: 'Les Abénaquis — Peuple des Terres de l\'Aube', href: 'abenaquis.html' },
+      { tier: 'nation', keys: ['algonquin', 'algonquins', 'anishinaabe'], title: 'Les Algonquins — Histoire et Culture | Premières Nations du Québec', href: 'Algonquins.html' },
+      { tier: 'nation', keys: ['atikamekw', 'nehirowisi'], title: 'Les Atikamekw — Histoire et Culture | Premières Nations du Québec', href: 'Atikamekw.html' },
+      { tier: 'nation', keys: ['cris', 'cree', 'eeyou'], title: 'Les Cris — Histoire et Culture | Premières Nations du Québec', href: 'Cris.html' },
+      { tier: 'nation', keys: ['hurons-wendat', 'hurons wendat'], title: 'Les Hurons-Wendat — Histoire et Culture | Premières Nations du Québec', href: 'HuronsWendat.html' },
+      { tier: 'nation', keys: ['innus', 'innu', 'montagnais', 'nitassinan'], title: 'Les Innus — Histoire et Culture | Premières Nations du Québec', href: 'Innus.html' },
+      { tier: 'nation', keys: ['malecite', 'malecites', 'wolastoqiyik', 'wolastoqi'], title: 'Les Malécites — Histoire et Culture | Premières Nations du Québec', href: 'Malecites.html' },
+      { tier: 'nation', keys: ['micmac', 'micmacs', 'mikmaq'], title: 'Les Micmacs — Histoire et Culture | Premières Nations du Québec', href: 'Micmacs.html' },
+      { tier: 'nation', keys: ['mohawk', 'mohawks', 'kanien', 'kanehsatake', 'kahnawake'], title: 'Les Mohawks — Histoire et Culture | Premières Nations du Québec', href: 'Mohawks.html' },
+      { tier: 'nation', keys: ['naskapis', 'naskapi', 'schefferville', 'kawawachikamach'], title: 'Les Naskapis — Histoire et Culture | Premières Nations du Québec', href: 'Naskapis.html' },
+      { tier: 'nation', keys: ['inuit', 'inuits', 'nunavik', 'nunangat', 'inukjuak'], title: 'Les Inuits — Histoire et Culture | Premières Nations du Québec', href: 'Inuits.html' },
+      { tier: 'page', keys: ['video', 'videos', 'youtube', 'documentaire', 'reportage', 'film', 'mediatheque', 'medias', 'media'], title: 'Vidéos — Les Premières Nations du Québec', href: 'Videos.html' },
+      { tier: 'page', keys: ['audio', 'podcast', 'musique', 'ecouter', 'balado'], title: 'Audio — Les Premières Nations du Québec', href: 'Audio.html' },
+      { tier: 'page', keys: ['partage', 'publier', 'reseaux', 'diffusion', 'reseau social'], title: 'Publier sur les réseaux', href: 'Partage.html' },
+      { tier: 'page', keys: ['femme', 'femmes', 'matriarche', 'autochtones du quebec piliers'], title: 'Les Femmes Autochtones du Québec — Piliers, Matriarches et Résistantes', href: 'FemmesAutochtones.html' },
+      { tier: 'page', keys: ['bijou', 'bijoux', 'art des bijoux', 'perle', 'wampum'], title: 'L\'Art des Bijoux des Premières Nations', href: 'BijouxPremieresNations.html' }
+    ];
+
+    function assistantHtmlNationList(){
+      var ul = ASSISTANT_KB.filter(function(e){ return e.tier === 'nation'; }).map(function(e){
+        var label = e.title.indexOf('|') !== -1 ? e.title.split('|')[0].trim() : e.title;
+        return '<li><a href="' + e.href + '">' + label.replace(/</g, '&lt;') + '</a></li>';
+      }).join('');
+      return '<p>Voici les <strong>onze Premières Nations</strong> couvertes + les <strong>Inuits</strong> (Nunavik), avec le titre principal de chaque page :</p><ul style="margin:0.4rem 0 0 1rem;padding:0;line-height:1.45">' + ul + '</ul><p style="margin-top:0.55rem">Titre de ce site (onglet du navigateur) : <strong>Peuples Autochtones du Québec — Les 11 Premières Nations</strong>. Accueil visuel : <a href="index.html">Bienvenue — Peuples Autochtones du Québec</a>.</p>';
+    }
+
+    function assistantKbScore(q, entry){
+      var s = 0;
+      entry.keys.forEach(function(key){
+        var nk = normalizeQuestion(key);
+        if (nk.length < 3) return;
+        if (q.indexOf(nk) !== -1) s += Math.min(nk.length, 12);
+      });
+      return s;
+    }
+
+    function assistantKbBest(q){
+      var best = null;
+      var bestScore = 0;
+      ASSISTANT_KB.forEach(function(entry){
+        var sc = assistantKbScore(q, entry);
+        if (sc > bestScore) {
+          bestScore = sc;
+          best = entry;
+        }
+      });
+      if (best && bestScore >= 4) return best;
+      return null;
+    }
+
+    function assistantWantsNationList(q){
+      return /\b(liste des nations|quelles sont les nations|toutes les nations|toute les nations|enumer|nom des nations|noms des nations|les onze nations|onze nations|11 nations|rappelle les nations|rappel les nations|quels peuples|rappelles-moi les nations|rappelle-moi les nations)\b/.test(q) ||
+        /\b(titre|titres)(\s+d| des)?\s+(des\s+|les\s+|d)?(articles|pages|nations)|\bnoms\s+titres\b/.test(q) ||
+        /\bcombien\b.*\bnations\b|\bnations\b.*\bcombien\b/.test(q) ||
+        (/\bquelles\b/.test(q) && /\bnations\b/.test(q)) ||
+        (/\bcombien\b/.test(q) && /\bnations\b/.test(q) && /\bliste\b|\benumer\b/.test(q));
+    }
 
     function toggleAssistant(){
       var panel = document.getElementById('assistant-panel');
@@ -659,22 +755,101 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
         : "Disponible si l'assistant ne trouve pas la réponse";
     }
 
-    function appendAssistantMessage(role, text){
+    function appendAssistantMessage(role, text, options){
+      options = options || {};
       var wrap = document.getElementById('assistant-messages');
       var msg = document.createElement('div');
       msg.className = 'msg ' + role;
-      msg.textContent = text;
+      if (options.html) {
+        msg.innerHTML = text;
+      } else {
+        msg.textContent = text;
+      }
       wrap.appendChild(msg);
       wrap.scrollTop = wrap.scrollHeight;
-      assistantState.conversation.push({ role: role, text: text });
+      assistantState.conversation.push({
+        role: role,
+        text: options.html ? msg.innerText.replace(/\s+/g, ' ').trim() : text
+      });
+    }
+
+    function normalizeQuestion(s){
+      return s.toLowerCase().normalize('NFD').replace(/[\u0300-\u036f]/g, '').replace(/\s+/g, ' ').trim();
+    }
+
+    function mentionsWendatHuron(q){
+      return q.indexOf('wendat') !== -1 ||
+        q.indexOf('wendats') !== -1 ||
+        q.indexOf('huron') !== -1 ||
+        q.indexOf('hurons') !== -1;
     }
 
     function generateAssistantReply(question){
-      var q = question.toLowerCase();
-      if (q.indexOf('article') !== -1 || q.indexOf('nation') !== -1 || q.indexOf('sujet') !== -1) {
+      var raw = question;
+      var q = normalizeQuestion(question);
+
+      if (assistantWantsNationList(q)) {
+        return { answered: true, text: assistantHtmlNationList(), html: true };
+      }
+
+      /* Hurons-Wendat — contenu tiré de HuronsWendat.html (origines ≠ lieu actuel de vie) */
+      if (mentionsWendatHuron(q)) {
+        var asksCity =
+          /\bville\b|\bwendake\b|\bviv(ent|ront|rai|rez|rons|ras)\b|\bhabit(ent|ez|)\b|\bresid(ent|)|\bou ils\b/.test(q) ||
+          /\b(quelle|quelle\s+est)\s+la\s+ville\b|\bdans\s+quelle\b/.test(q);
+        var asksOrigin =
+          /\bvienn(ent|nts|)|\bvien(ne|nts|)|\bvenir\b|\borigines?\b|\bberceau\b|\bprovien(ne|nts|)/.test(q) ||
+          /\bdou\b|\bdou\s+vienn|\bdou\s+son/.test(q) ||
+          /\bontario\b|\bhuronie\b|\bpeninsule\b|\bgeorg\b/.test(q) ||
+          (/\bou\b/.test(q) && /\bvienn(ent|nts|)|\bvien(ne|nts|)/.test(q));
+
+        var articleHref = 'HuronsWendat.html';
+        var articleLink = '<a href="' + articleHref + '">Voir l\'article « Les Hurons-Wendat »</a>';
+
+        if (asksCity || (/\bwendake\b/).test(q)) {
+          var cityMsg = "Les Hurons-Wendat vivent aujourd'hui surtout à <strong>Wendake</strong> — communauté sur les rives de la rivière Saint-Charles, à quelques kilomètres de la <strong>ville de Québec</strong> (mentionnée sur le site comme à environ une quinzaine de minutes). Wendake est fondée en 1697 (ancienne Jeune-Lorette). Pour le détail : " + articleLink + ".";
+          return { answered: true, text: cityMsg, html: true };
+        }
+        if (asksOrigin || (/\bou\b.*\bendat/).test(q) || /\bendat\b.*\bou\b/.test(q)) {
+          var origMsg = "Les <strong>Wendat</strong> sont un peuple de la famille linguistique <strong>iroquoienne</strong>. Le nom renvoie notamment au <strong>berceau historique</strong> : la région appelée <strong>Huronie</strong> (<strong>péninsule géorgienne</strong>, aujourd'hui en <strong>Ontario</strong>), où ils vivaient en confédération avant la dispersion du milieu du 17e siècle. Une partie des survivantes et survivants migre ensuite vers la région de <strong>Québec</strong> et fonde définitivement <strong>Wendake</strong> en 1697. Source sur le site : " + articleLink + ".";
+          return { answered: true, text: origMsg, html: true };
+        }
+        var genericWendMsg = "Pour les <strong>Hurons-Wendat</strong> (<strong>Wendat</strong>), l'article résume : leur passé en <strong>Huronie</strong> (Ontario) et leur foyer actuel à <strong>Wendake</strong>, près de Québec. Détail : " + articleLink + ".";
+        return { answered: true, text: genericWendMsg, html: true };
+      }
+
+      if (/\b(mediatheque|videos?\s+et\s+audio|page\s+videos?\b|ou\s+sont\s+les\s+videos)\b/.test(q) ||
+        (/\bmedias\b/.test(q) && /\b(ou|rubrique|page|liens?)\b/.test(q))) {
         return {
           answered: true,
-          text: "Vous pouvez explorer 11 nations + la nation inuite depuis la section \"Les Nations\". Cliquez sur \"Découvrir les nations\" pour commencer."
+          text: 'Vidéos : <a href="Videos.html">Vidéos — Les Premières Nations du Québec</a>. Audio : <a href="Audio.html">Audio — Les Premières Nations du Québec</a>. Partage réseaux : <a href="Partage.html">Publier</a>. Femmes Autochtones : <a href="FemmesAutochtones.html">article dédié</a>. Bijoux : <a href="BijouxPremieresNations.html">L\'Art des Bijoux</a>.',
+          html: true
+        };
+      }
+
+      var kbHit = assistantKbBest(q);
+      if (kbHit) {
+        var shortTitle = kbHit.title.indexOf('|') !== -1 ? kbHit.title.split('|')[0].trim() : kbHit.title;
+        var kbHint =
+          kbHit.tier === 'nation'
+            ? 'Une fiche parmi les 11 nations + Inuits (grille Les Nations ci-dessus).'
+            : kbHit.href === 'Videos.html'
+              ? 'Médiathèque vidéo du projet.'
+              : kbHit.href === 'Audio.html'
+                ? 'Lecteurs et contenus sonores du site.'
+                : kbHit.href === 'Partage.html'
+                  ? 'Outils pour préparer vos messages sur les réseaux.'
+                  : kbHit.href === 'FemmesAutochtones.html'
+                    ? 'Texte hors des 11 fiches mais sur le même espace éducatif.'
+                    : 'Page thématique du même site.';
+        var kbMsg = 'Correspondance possible : « ' + kbHint + ' » Ouvrir : <a href="' + kbHit.href + '"><strong>' + shortTitle.replace(/</g, '&lt;') + '</strong></a>.';
+        return { answered: true, text: kbMsg, html: true };
+      }
+
+      if (raw.indexOf('article') !== -1 || raw.toLowerCase().indexOf('nation') !== -1 || raw.toLowerCase().indexOf('sujet') !== -1) {
+        return {
+          answered: true,
+          text: "Vous pouvez explorer 11 nations + la nation inuite depuis la section \"Les Nations\". Cliquez sur \"Découvrir les nations\" pour commencer. Pour la liste précise avec titres, écrivez : « Liste des nations » ou utilisez la FAQ."
         };
       }
       if (q.indexOf('video') !== -1) {
@@ -710,7 +885,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
       }
       appendAssistantMessage('user', question);
       var reply = generateAssistantReply(question);
-      appendAssistantMessage('bot', reply.text);
+      appendAssistantMessage('bot', reply.text, { html: !!reply.html });
       setEmailFallback(!reply.answered);
       input.value = '';
     }
