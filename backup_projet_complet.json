@@ -111,7 +111,9 @@
   },
   "notes_techniques": {
     "hebergement": "GitHub Pages (statique HTML)",
-    "ancien_hebergement": "Base44 App (migré mai 2026)",
+    "outil_edition_principal": "Cursor",
+    "publication": "GitHub Pages (repository premieres-nations-quebec)",
+    "historique_migration": "Ancienne plateforme no-code archivée — mai 2026",
     "liens": "extensions .html obligatoires pour GitHub Pages",
     "supabase_project_ref": "dytdqnpueqdrwbwtnwnw",
     "supabase_url": "https://dytdqnpueqdrwbwtnwnw.supabase.co"
