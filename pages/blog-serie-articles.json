@@ -334,7 +334,7 @@
       ]
     },
     {
-      "label": "Série 6 — articles 51 à 55",
+      "label": "Série 6 — articles 51 à 56",
       "items": [
         {
           "n": "51",
@@ -365,12 +365,18 @@
           "title": "Les Ingénieurs de l'Eau",
           "teaser": "La gestion vitale des ressources hydriques et les défis de l'ingénierie moderne face au climat.",
           "file": "55-les-ingenieurs-de-l-eau.html"
+        },
+        {
+          "n": "56",
+          "title": "Le vent, le ciel et le souffle",
+          "teaser": "Nuages comme calendrier, vent avant l’orage — le ciel vécu comme le reste du territoire, avec les autres fiches spiritualité et sites sacrés du catalogue.",
+          "file": "56-le-vent-le-ciel-et-le-souffle.html"
         }
       ]
     }
   ],
   "stats": {
-    "articlesNumbered": 55,
+    "articlesNumbered": 56,
     "withFeatured": true
   }
 }
