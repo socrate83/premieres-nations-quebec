@@ -1,0 +1,354 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Les Pensionnats Indiens au Québec — Histoire, Traumatismes et Réconciliation</title>
+  <meta name="description" content="Des milliers d'enfants autochtones arrachés à leurs familles, internés dans des pensionnats. L'histoire sombre des pensionnats indiens au Québec et le long chemin vers la réconciliation."/>
+  <meta property="og:title" content="Les Pensionnats Indiens au Québec — Histoire, Traumatismes et Réconciliation"/>
+  <meta property="og:image" content="https://media.base44.com/images/public/69f23c5b09417d29099136be/ace0eb9b9_generated_image.png"/>
+  <style>
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+    body { background: #1a1a1a; color: #f0e6d3; font-family: 'Georgia', serif; line-height: 1.8; }
+
+    nav {
+      background: #111; padding: 14px 32px;
+      display: flex; align-items: center; justify-content: space-between;
+      position: sticky; top: 0; z-index: 100;
+      border-bottom: 2px solid #c8922a;
+    }
+    nav .logo { font-size: 1.1rem; font-weight: bold; color: #c8922a; text-decoration: none; }
+    nav ul { list-style: none; display: flex; gap: 24px; }
+    nav ul li a { color: #f0e6d3; text-decoration: none; font-size: 0.9rem; transition: color 0.2s; }
+    nav ul li a:hover { color: #c8922a; }
+
+    /* HERO */
+    .hero {
+      display: grid; grid-template-columns: 1fr 1fr;
+      min-height: 520px; background: #1e1a15;
+    }
+    .hero-image img { width: 100%; height: 100%; object-fit: cover; display: block; }
+    .hero-content {
+      padding: 60px 48px; display: flex; flex-direction: column;
+      justify-content: center; background: #1e1a15;
+    }
+    .badge {
+      display: inline-flex; align-items: center; gap: 8px;
+      color: #c8922a; font-size: 0.75rem; font-weight: 700;
+      letter-spacing: 2px; text-transform: uppercase; margin-bottom: 28px;
+    }
+    .badge::before { content: '✦'; font-size: 1rem; }
+    .hero-content h1 { font-size: 1.85rem; font-weight: 700; color: #fff; line-height: 1.3; margin-bottom: 20px; }
+    .hero-content .intro { font-size: 1.05rem; color: #d4c4a8; line-height: 1.85; margin-bottom: 36px; }
+    .hero-buttons { display: flex; gap: 16px; flex-wrap: wrap; }
+    .btn-lire {
+      background: #c8922a; color: #fff; padding: 14px 28px;
+      border-radius: 50px; text-decoration: none; font-weight: 700;
+      font-size: 0.9rem; transition: background 0.2s;
+    }
+    .btn-lire:hover { background: #a87320; }
+    .btn-partager {
+      background: #1877f2; color: #fff; padding: 14px 28px;
+      border-radius: 50px; font-weight: 700; font-size: 0.9rem;
+      display: flex; align-items: center; gap: 8px;
+      transition: background 0.2s; cursor: pointer; border: none;
+    }
+    .btn-partager:hover { background: #0e5fc2; }
+
+    /* GALLERY */
+    .gallery { display: grid; grid-template-columns: repeat(3, 1fr); gap: 0; }
+    .gallery img { width: 100%; height: 300px; object-fit: cover; display: block; transition: transform 0.3s; }
+    .gallery img:hover { transform: scale(1.02); }
+
+    /* ARTICLE */
+    .article-container { max-width: 860px; margin: 0 auto; padding: 64px 24px; }
+    .article-container h2 {
+      font-size: 1.65rem; color: #c8922a; margin: 48px 0 16px;
+      border-left: 4px solid #c8922a; padding-left: 16px;
+    }
+    .article-container h3 { font-size: 1.15rem; color: #e8d5b0; margin: 28px 0 10px; }
+    .article-container p { font-size: 1.05rem; color: #d4c4a8; margin-bottom: 18px; }
+    .article-container ul { margin: 16px 0 24px 24px; color: #d4c4a8; }
+    .article-container ul li { margin-bottom: 10px; font-size: 1rem; }
+
+    .quote {
+      border-left: 4px solid #c8922a; background: rgba(200,146,42,0.08);
+      padding: 24px 28px; margin: 32px 0; border-radius: 0 8px 8px 0;
+    }
+    .quote p { font-style: italic; font-size: 1.15rem; color: #e8d5b0; margin: 0; }
+    .quote cite { display: block; margin-top: 12px; font-size: 0.85rem; color: #a08060; }
+
+    .stats-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 20px; margin: 40px 0; }
+    .stat-box {
+      background: #252015; border: 1px solid #3a2e1a;
+      border-radius: 12px; padding: 28px 20px; text-align: center;
+    }
+    .stat-box .number { font-size: 2.2rem; font-weight: 700; color: #c8922a; display: block; }
+    .stat-box .label { font-size: 0.85rem; color: #a09070; margin-top: 6px; }
+
+    .article-image { width: 100%; border-radius: 12px; margin: 36px 0; object-fit: cover; max-height: 420px; }
+    .img-caption { text-align: center; font-size: 0.85em; color: #806040; font-style: italic; margin-top: -24px; margin-bottom: 36px; }
+
+    .highlight {
+      background: #1e1a10; border: 1px solid #3a2e1a;
+      border-left: 5px solid #c8922a; padding: 24px 28px;
+      border-radius: 0 10px 10px 0; margin: 32px 0;
+    }
+    .highlight strong { color: #c8922a; }
+
+    .share-section {
+      background: #252015; border: 1px solid #3a2e1a;
+      border-radius: 16px; padding: 40px; margin: 56px 0; text-align: center;
+    }
+    .share-section h3 { font-size: 1.3rem; color: #e8d5b0; margin-bottom: 8px; }
+    .share-section p { color: #a09070; font-size: 0.9rem; margin-bottom: 28px; }
+    .share-buttons { display: flex; gap: 12px; justify-content: center; flex-wrap: wrap; }
+    .share-btn {
+      display: inline-flex; align-items: center; gap: 8px;
+      padding: 12px 20px; border-radius: 8px; text-decoration: none;
+      font-size: 0.85rem; font-weight: 600; transition: opacity 0.2s; color: #fff;
+    }
+    .share-btn:hover { opacity: 0.85; }
+    .share-btn.facebook { background: #1877f2; }
+    .share-btn.group { background: #4267B2; }
+    .share-btn.messenger { background: #0084ff; }
+    .share-btn.whatsapp { background: #25d366; }
+    .share-btn.email { background: #555; }
+    .share-btn.copy { background: #333; border: 1px solid #555; }
+
+    .article-nav {
+      display: flex; justify-content: space-between; gap: 16px;
+      margin: 48px 0; flex-wrap: wrap;
+    }
+    .article-nav a {
+      background: #252015; border: 1px solid #3a2e1a; color: #c8922a;
+      padding: 14px 24px; border-radius: 10px; text-decoration: none;
+      font-size: 0.9rem; flex: 1; min-width: 160px;
+      text-align: center; transition: background 0.2s;
+    }
+    .article-nav a:hover { background: #2e2516; }
+
+    footer {
+      background: #111; border-top: 2px solid #c8922a;
+      text-align: center; padding: 32px;
+      color: #806040; font-size: 0.85rem;
+    }
+
+    @media (max-width: 768px) {
+      .hero { grid-template-columns: 1fr; }
+      .hero-image { height: 280px; }
+      .hero-content { padding: 32px 20px; }
+      .hero-content h1 { font-size: 1.35rem; }
+      .gallery { grid-template-columns: 1fr; }
+      .gallery img { height: 220px; }
+      .stats-grid { grid-template-columns: 1fr; }
+    }
+  </style>
+</head>
+<body>
+
+<nav>
+  <a href="index.html" class="logo">🪶 Premières Nations du Québec</a>
+  <ul>
+    <li><a href="Home.html">Accueil</a></li>
+    <li><a href="index.html">Articles</a></li>
+    <li><a href="Videos.html">Vidéos</a></li>
+    <li><a href="Audio.html">Audio</a></li>
+  </ul>
+</nav>
+
+<!-- HERO -->
+<section class="hero">
+  <div class="hero-image">
+    <img src="https://media.base44.com/images/public/69f23c5b09417d29099136be/ace0eb9b9_generated_image.png"
+         alt="Pensionnat indien au Québec — bâtiment sombre, hiver"/>
+  </div>
+  <div class="hero-content">
+    <span class="badge">Article du Jour</span>
+    <h1>Les Pensionnats Indiens au Québec — Histoire, Traumatismes et Réconciliation</h1>
+    <p class="intro">De 1840 à 1996, des milliers d'enfants autochtones ont été arrachés à leurs familles et enfermés dans des pensionnats dont l'objectif avoué était de « tuer l'Indien dans l'enfant ». C'est l'un des chapitres les plus sombres de l'histoire du Québec et du Canada. Une vérité qu'on ne peut plus ignorer.</p>
+    <div class="hero-buttons">
+      <a href="#article" class="btn-lire">Lire l'article →</a>
+      <button class="btn-partager" onclick="partagerFacebook()">Partager 📣</button>
+    </div>
+  </div>
+</section>
+
+<!-- GALLERY -->
+<div class="gallery">
+  <img src="https://media.base44.com/images/public/69f23c5b09417d29099136be/17f0f2c9e_generated_image.png"
+       alt="Survivants des pensionnats — cercle de guérison"/>
+  <img src="https://media.base44.com/images/public/69f23c5b09417d29099136be/0d2503d7e_generated_image.png"
+       alt="Chemises oranges — Every Child Matters"/>
+  <img src="https://media.base44.com/images/public/69f23c5b09417d29099136be/ff30c2795_generated_image.png"
+       alt="Site commémoratif pensionnats indiens"/>
+</div>
+
+<!-- ARTICLE -->
+<div id="article" class="article-container">
+
+  <h2>Une politique d'assimilation systématique</h2>
+
+  <p>Le système des pensionnats indiens n'était pas une série d'accidents isolés. C'était une <strong>politique d'État délibérée</strong>, financée par le gouvernement fédéral canadien, administrée en grande partie par des congrégations religieuses catholiques et protestantes, avec un objectif explicite : détruire les cultures autochtones en coupant les enfants de leur famille, de leur langue, de leur identité.</p>
+
+  <p>La phrase du premier ministre Sir John A. Macdonald en 1883 résume l'intention sans ambiguïté : <em>« Enlever l'enfant de l'influence indienne et l'éduquer en anglais dans des institutions où il vivra avec des enfants blancs. »</em> Au Québec, c'est le français et le catholicisme qui remplacèrent l'anglais et le protestantisme — mais la logique d'éradication culturelle fut identique.</p>
+
+  <div class="stats-grid">
+    <div class="stat-box">
+      <span class="number">150 000</span>
+      <span class="label">Enfants autochtones passés dans les pensionnats canadiens entre 1831 et 1996</span>
+    </div>
+    <div class="stat-box">
+      <span class="number">13</span>
+      <span class="label">Pensionnats ayant opéré au Québec et au Labrador, dont plusieurs tenus par les Oblats</span>
+    </div>
+    <div class="stat-box">
+      <span class="number">4 120+</span>
+      <span class="label">Enfants morts dans les pensionnats dont les noms ont été retrouvés à ce jour au Canada</span>
+    </div>
+  </div>
+
+  <h2>Les pensionnats au Québec — les institutions</h2>
+
+  <p>Le Québec comptait plusieurs établissements majeurs qui ont marqué la mémoire des nations autochtones :</p>
+
+  <ul>
+    <li><strong>Pensionnat de Sept-Îles</strong> — pour les enfants innus de la Côte-Nord, géré par les Oblats de Marie-Immaculée</li>
+    <li><strong>Pensionnat de La Tuque</strong> — accueillit des enfants atikamekw, algonquins et innus</li>
+    <li><strong>Pensionnat de Pointe-Bleue (Mashteuiatsh)</strong> — pour les Innus du Lac-Saint-Jean</li>
+    <li><strong>Pensionnat de Fort George (Chisasibi)</strong> — pour les enfants cris de la Baie-James</li>
+    <li><strong>Mission de Kahnawake</strong> — école résidentielle pour les enfants mohawks</li>
+  </ul>
+
+  <img class="article-image"
+       src="https://media.base44.com/images/public/69f23c5b09417d29099136be/ace0eb9b9_generated_image.png"
+       alt="Architecture sombre d'un pensionnat — hiver québécois"/>
+  <p class="img-caption">Des bâtiments austères, loin des territoires ancestraux — une rupture voulue et calculée.</p>
+
+  <h2>La vie à l'intérieur — ce qu'on a tu pendant des décennies</h2>
+
+  <p>Les enfants étaient pris en charge dès l'âge de 4 à 6 ans, parfois enlevés de force par des agents gouvernementaux. Les parents qui refusaient risquaient des amendes ou l'emprisonnement. Une fois arrivés, les enfants se voyaient interdire de parler leur langue maternelle — sous peine de punitions physiques sévères.</p>
+
+  <p>Les témoignages recueillis par la Commission de vérité et réconciliation du Canada (2008-2015) décrivent :</p>
+  <ul>
+    <li>Des coups, des humiliations, des privations de nourriture pour tout usage de la langue autochtone</li>
+    <li>Des abus sexuels systématiques commis par du personnel religieux et administratif</li>
+    <li>Une mortalité élevée due à la tuberculose, à la malnutrition et à la négligence médicale</li>
+    <li>Des enfants enterrés secrètement sur les terrains des pensionnats, sans que les familles ne soient notifiées</li>
+    <li>L'interdiction de tout contact avec la fratrie, même dans le même établissement</li>
+  </ul>
+
+  <div class="quote">
+    <p>« J'avais sept ans. Un homme en robe noire m'a dit que ma langue était celle du diable. Il m'a frappé chaque fois que je prononçais un mot innu. J'ai mis 40 ans à oser reparler ma langue à voix haute. »</p>
+    <cite>— Survivant innu, témoignage CVR, Maliotenam, 2013</cite>
+  </div>
+
+  <h2>Les traumatismes intergénérationnels</h2>
+
+  <img class="article-image"
+       src="https://media.base44.com/images/public/69f23c5b09417d29099136be/17f0f2c9e_generated_image.png"
+       alt="Cercle de guérison pour survivants des pensionnats"/>
+  <p class="img-caption">Des cercles de guérison — pour reconstruire ce que les pensionnats ont brisé.</p>
+
+  <p>L'impact des pensionnats ne s'est pas arrêté à leur fermeture en 1996. Les chercheurs en santé publique documentent des <strong>traumatismes intergénérationnels</strong> qui se transmettent biologiquement et psychologiquement de parent à enfant :</p>
+
+  <ul>
+    <li>Des parents qui ne savent pas comment démontrer de l'affection — parce qu'on ne les a jamais aimés</li>
+    <li>Des parents qui ne parlent plus leur langue à leurs enfants — par honte ou par peur</li>
+    <li>Des taux de dépendance à l'alcool et aux drogues directement liés aux traumatismes non traités</li>
+    <li>Des ruptures familiales en cascade — la déstructuration du foyer comme héritage du pensionnat</li>
+  </ul>
+
+  <div class="highlight">
+    <strong>Chiffre clé :</strong> Les enfants de survivants de pensionnats ont 2,5 fois plus de risques de développer des troubles de santé mentale que les autres Canadiens autochtones. Les petits-enfants de survivants présentent encore des indicateurs de stress post-traumatique mesurables. (Enquête sur la santé des Autochtones, Statistique Canada, 2018)
+  </div>
+
+  <h2>La découverte des tombes — un tournant national</h2>
+
+  <p>En mai 2021, la Première Nation Tk'emlúps te Secwépemc en Colombie-Britannique annonce la découverte de 215 restes d'enfants enfouis sur le terrain de l'ancien pensionnat de Kamloops. Le Canada est sous le choc. En quelques semaines, des milliers de restes supplémentaires sont identifiés sur d'autres sites à travers le pays.</p>
+
+  <p>Au Québec, des recherches sont lancées sur plusieurs anciens sites. La Nation Atikamekw et la communauté innue de Pessamit ont demandé des enquêtes sur les terrains de leurs anciens pensionnats. Les travaux sont en cours.</p>
+
+  <p>Le <strong>30 septembre</strong> est désormais la Journée nationale de la vérité et de la réconciliation — aussi appelée la <em>Journée du chandail orange</em>. Ce jour, des milliers de Canadiens portent le orange en hommage aux enfants qui ne sont jamais rentrés chez eux.</p>
+
+  <img class="article-image"
+       src="https://media.base44.com/images/public/69f23c5b09417d29099136be/0d2503d7e_generated_image.png"
+       alt="Chemises oranges Every Child Matters — mémorial"/>
+  <p class="img-caption">🧡 Every Child Matters — Chaque enfant comptait. Le orange est devenu le symbole mondial de cette vérité.</p>
+
+  <h2>La réconciliation — 94 appels à l'action</h2>
+
+  <p>En 2015, la Commission de vérité et réconciliation du Canada a publié son rapport final avec <strong>94 appels à l'action</strong> — un programme complet de transformation des relations entre le Canada et les peuples autochtones. Neuf ans plus tard, moins de la moitié ont été pleinement mis en œuvre.</p>
+
+  <p>Au Québec, des avancées ont eu lieu :</p>
+  <ul>
+    <li>La loi provinciale C-92 reconnaît le droit des nations autochtones à la compétence sur les services à l'enfance</li>
+    <li>Des programmes de soutien aux survivants et à leurs familles existent dans plusieurs communautés</li>
+    <li>Des centres de guérison comme <strong>Minwashin</strong> (Wendake) offrent thérapies culturellement adaptées</li>
+    <li>Des programmes scolaires intègrent désormais l'histoire des pensionnats dans les curricula québécois</li>
+  </ul>
+
+  <img class="article-image"
+       src="https://media.base44.com/images/public/69f23c5b09417d29099136be/ff30c2795_generated_image.png"
+       alt="Site commémoratif pensionnats indiens au Québec"/>
+  <p class="img-caption">Des mémoriaux surgissent partout au Canada — pour ne jamais oublier.</p>
+
+  <div class="quote">
+    <p>« La réconciliation n'est pas un événement. Ce n'est pas un discours. C'est une relation qui se bâtit chaque jour, dans chaque geste, dans chaque regard. »</p>
+    <cite>— Justice Murray Sinclair, Président de la Commission de vérité et réconciliation du Canada</cite>
+  </div>
+
+  <h2>Ce que chaque Québécois peut faire</h2>
+
+  <p>La réconciliation n'est pas l'affaire des seuls gouvernements. Elle commence dans chaque foyer, chaque école, chaque conversation :</p>
+  <ul>
+    <li>Porter le orange le 30 septembre et expliquer à vos enfants pourquoi</li>
+    <li>Lire les témoignages de survivants (disponibles sur <strong>nctr.ca</strong>)</li>
+    <li>Soutenir les organisations de guérison autochtone dans votre région</li>
+    <li>Apprendre sur quel territoire non cédé vous habitez : <strong>native-land.ca</strong></li>
+    <li>Exiger que vos élus mettent en œuvre les 94 appels à l'action</li>
+  </ul>
+
+  <!-- SHARE -->
+  <div class="share-section">
+    <h3>🪶 Partager cet article</h3>
+    <p>Cette histoire mérite d'être connue — aidez à la diffuser</p>
+    <div class="share-buttons">
+      <a href="https://www.facebook.com/sharer/sharer.php?u=https://socrate83.github.io/premieres-nations-quebec/PensionnatsIndiens.html"
+         target="_blank" class="share-btn facebook">📘 Facebook</a>
+      <a href="https://www.facebook.com/groups/1451283625021958"
+         target="_blank" class="share-btn group">👥 Groupe</a>
+      <a href="fb-messenger://share?link=https://socrate83.github.io/premieres-nations-quebec/PensionnatsIndiens.html"
+         class="share-btn messenger">💬 Messenger</a>
+      <a href="https://wa.me/?text=Les%20Pensionnats%20Indiens%20au%20Québec%20—%20Histoire%2C%20Traumatismes%20et%20Réconciliation%20https://socrate83.github.io/premieres-nations-quebec/PensionnatsIndiens.html"
+         target="_blank" class="share-btn whatsapp">💚 WhatsApp</a>
+      <a href="mailto:?subject=Les%20Pensionnats%20Indiens%20au%20Québec&body=https://socrate83.github.io/premieres-nations-quebec/PensionnatsIndiens.html"
+         class="share-btn email">📧 Email</a>
+      <button onclick="copyLink()" class="share-btn copy">🔗 Copier</button>
+    </div>
+  </div>
+
+  <div class="article-nav">
+    <a href="FemmesAutochtones2.html">← Femmes Autochtones</a>
+    <a href="index.html">Tous les articles →</a>
+  </div>
+
+</div>
+
+<footer>
+  <p>© 2026 Les Premières Nations au Québec — Tous droits réservés</p>
+  <p style="margin-top:8px;">Contact : <a href="mailto:infodunet896@gmail.com" style="color:#c8922a;">infodunet896@gmail.com</a></p>
+</footer>
+
+<script>
+function partagerFacebook() {
+  const url = encodeURIComponent('https://socrate83.github.io/premieres-nations-quebec/PensionnatsIndiens.html');
+  window.open('https://www.facebook.com/sharer/sharer.php?u=' + url, '_blank');
+}
+function copyLink() {
+  navigator.clipboard.writeText('https://socrate83.github.io/premieres-nations-quebec/PensionnatsIndiens.html')
+    .then(() => alert('Lien copié !'));
+}
+</script>
+</body>
+</html>
