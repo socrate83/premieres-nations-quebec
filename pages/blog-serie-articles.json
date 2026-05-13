@@ -1,5 +1,5 @@
 {
-  "baseUrl": "https://socrate83.github.io/Premieres-Nations/",
+  "baseUrl": "https://socrate83.github.io/premieres-nations-quebec/pages/",
   "introNote": "Ces textes proviennent de la série publiée sur le blog « Les Premières Nations » (thèmes nord-américains). Pour des fiches dédiées au territoire québécois, voir la section « Les Nations » sur ce site. Les cartes ouvrent la lecture sur le blog d’origine.",
   "featured": {
     "n": "★",
@@ -269,7 +269,7 @@
       ]
     },
     {
-      "label": "Série 5 — articles 41 à 50",
+      "label": "Série 5 — articles 41 à 51",
       "items": [
         {
           "n": "41",
@@ -330,47 +330,47 @@
           "title": "Héritage vivant et alliances",
           "teaser": "Texte compagnon dans la continuité des récits historiques de la série.",
           "file": "50-heritage-vivant-alliances.html"
+        },
+        {
+          "n": "51",
+          "title": "Le vent, le ciel et le souffle",
+          "teaser": "Nuages comme calendrier, vent avant l’orage — le ciel vécu comme le reste du territoire, avec les autres fiches spiritualité et sites sacrés du catalogue.",
+          "file": "51-le-vent-le-ciel-et-le-souffle.html"
         }
       ]
     },
     {
-      "label": "Série 6 — articles 51 à 56",
+      "label": "Série 6 — articles 52 à 56",
       "items": [
         {
-          "n": "51",
+          "n": "52",
           "title": "Les Architectes du Silence",
           "teaser": "Une immersion au cœur des infrastructures invisibles qui soutiennent notre ère numérique.",
-          "file": "51-les-architectes-du-silence.html"
-        },
-        {
-          "n": "52",
-          "title": "Les Maîtres de la Fibre",
-          "teaser": "L'épopée technologique du transport de la lumière au service de la communication mondiale.",
-          "file": "52-les-maitres-de-la-fibre.html"
+          "file": "52-les-architectes-du-silence.html"
         },
         {
           "n": "53",
-          "title": "Urbanisme Nomade",
-          "teaser": "Redéfinir l'espace urbain à l'heure de la mobilité constante et des structures éphémères.",
-          "file": "53-urbanisme-nomade.html"
+          "title": "Les Maîtres de la Fibre",
+          "teaser": "L'épopée technologique du transport de la lumière au service de la communication mondiale.",
+          "file": "53-les-maitres-de-la-fibre.html"
         },
         {
           "n": "54",
-          "title": "Les Géomètres de la Forêt",
-          "teaser": "Quand la rigueur de la cartographie rencontre la préservation des poumons verts de notre planète.",
-          "file": "54-les-geometres-de-la-foret.html"
+          "title": "Urbanisme Nomade",
+          "teaser": "Redéfinir l'espace urbain à l'heure de la mobilité constante et des structures éphémères.",
+          "file": "54-urbanisme-nomade.html"
         },
         {
           "n": "55",
-          "title": "Les Ingénieurs de l'Eau",
-          "teaser": "La gestion vitale des ressources hydriques et les défis de l'ingénierie moderne face au climat.",
-          "file": "55-les-ingenieurs-de-l-eau.html"
+          "title": "Les Géomètres de la Forêt",
+          "teaser": "Quand la rigueur de la cartographie rencontre la préservation des poumons verts de notre planète.",
+          "file": "55-les-geometres-de-la-foret.html"
         },
         {
           "n": "56",
-          "title": "Le vent, le ciel et le souffle",
-          "teaser": "Nuages comme calendrier, vent avant l’orage — le ciel vécu comme le reste du territoire, avec les autres fiches spiritualité et sites sacrés du catalogue.",
-          "file": "56-le-vent-le-ciel-et-le-souffle.html"
+          "title": "Les Ingénieurs de l'Eau",
+          "teaser": "La gestion vitale des ressources hydriques et les défis de l'ingénierie moderne face au climat.",
+          "file": "56-les-ingenieurs-de-l-eau.html"
         }
       ]
     }

@@ -212,10 +212,10 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
     <p>Cette série d'articles vous invite à découvrir les <strong>11 Premières Nations</strong> et les <strong>Inuits du Nunavik</strong> — leur histoire, leur culture, leurs traditions et leur place dans le Québec d'aujourd'hui. Une invitation au respect et à la connaissance.</p>
   </section>
 
-  <!-- ARTICLES — nations Québec + série 55 -->
+  <!-- ARTICLES — nations Québec + série thématique Les articles -->
   <section class="grid-sec" id="articles">
     <h2 class="grid-title">Articles</h2>
-    <p class="grid-sub">Fiches dédiées aux peuples du territoire québécois, et série thématique de 55 textes complémentaires (panorama élargi sur le même espace).</p>
+    <p class="grid-sub">Fiches dédiées aux peuples du territoire québécois, puis <strong>Les articles</strong>, une série thématique complémentaire (panorama élargi sur le même espace).</p>
     <h3 class="article-block-title">Nations du Québec</h3>
     <p class="grid-sub nations-sub">Les 11 Premières Nations et les Inuits du Nunavik — cliquez sur une carte pour ouvrir la fiche.</p>
     <div class="nations-grid" id="nations">
@@ -376,8 +376,16 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 
     </div>
 
+    <!--
+      Nouvel article numéroté de la série : vérifier l’ensemble (pas seulement le titre).
+      1) pages/blog-serie-articles.json — nouvelle entrée dans le groupe voulu, stats.articlesNumbered au même nombre,
+         et ajuster les libellés des sous-séries (ex. série 5 « articles 41 à 51 », série 6 « articles 52 à 56 »).
+      2) Ici Home.html — 3 occurrences identiques « Série thématique — Les articles (N) » : ce bloc titre h3,
+         la FAQ « Où puis-je lire les articles complets ? », et la chaîne assistant (recherche dans ce fichier :
+         « Série thématique — Les articles » — 3 résultats à aligner sur N).
+    -->
     <div id="serie-blog" class="serie-blog-wrap">
-      <h3 class="article-block-title">Série thématique — 55 articles</h3>
+      <h3 class="article-block-title">Série thématique — Les articles (56)</h3>
       <p class="grid-sub serie-blog-sub">Une entrée mise en avant, puis six sous-séries ; chaque titre ouvre l’article correspondant du blog archive.</p>
       <div class="serie-notice" role="note"><strong>Lecture hors Québec.</strong> Cette partie porte sur des thèmes larges nord-américains / canadiens, en prolongement — pas un doublon des fiches « Nations » ci-dessus.</div>
       <div id="serie-blog-mount"></div>
@@ -394,8 +402,8 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
       <a class="media-card" href="#articles">
         <div class="m-icon">📰</div>
         <h3>Articles</h3>
-        <p>Fiches Québec (11 nations + Inuits) et série élargie de 55 articles sur la même section.</p>
-        <div class="m-badge">Nations + 55 textes</div>
+        <p>Fiches Québec (11 nations + Inuits) et <strong>Les articles</strong> (série thématique) sur la même section.</p>
+        <div class="m-badge">Nations · Les articles</div>
       </a>
       <a class="media-card" href="Videos.html">
         <div class="m-icon">🎬</div>
@@ -486,30 +494,40 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
       }
       var fd = data.featured;
       if (fd) push(fd.n, fd.title, fd.file, ['aines', 'transmission']);
+      var maxFromItems = 0;
       data.groups.forEach(function (g) {
         g.items.forEach(function (it) {
           push(it.n, it.title, it.file);
+          var pv = parseInt(String(it.n), 10);
+          if (!isNaN(pv) && pv > maxFromItems) maxFromItems = pv;
         });
       });
       window.__serieChatIndex = out;
+      var declared = data.stats && typeof data.stats.articlesNumbered === 'number' ? data.stats.articlesNumbered : 0;
+      window.__serieArticlesNumbered = Math.max(maxFromItems, declared);
     }
 
     window.__pnHydrateBlogSerieData = buildSerieChatIndex;
 
     function hrefFor(base, file) {
-      return base.replace(/\/?$/, '/') + encodeURIComponent(file);
+      var fname = String(file || '').replace(/\\/g, '/').replace(/^\/+/, '');
+      if (!fname) return '#';
+      var b = typeof base === 'string' ? base.trim() : '';
+      if (b) return b.replace(/\/?$/, '/') + encodeURIComponent(fname);
+      return fname;
     }
     function cardHtmlFix(item, extraClass) {
       var titleEsc = String(item.title).replace(/&/g, '&amp;').replace(/</g, '&lt;').replace(/"/g, '&quot;');
       var u = hrefFor(window.__serieBlogBase || '', item.file);
+      var href = u === '#' ? String(item.file || '').replace(/"/g, '&quot;') : u.replace(/"/g, '&quot;');
       return (
         '<article class="serie-card ' + (extraClass || '') + '"><span class="serie-num" aria-hidden="true">' +
         String(item.n).replace(/</g, '') +
         '</span><h4>' +
         titleEsc +
         '</h4><a class="btn-serie" href="' +
-        u.replace(/"/g, '&quot;') +
-        '" target="_blank" rel="noopener noreferrer">Lire l’article</a></article>'
+        href +
+        '">Lire l’article</a></article>'
       );
     }
     function featuredHtml(fd) {
@@ -717,7 +735,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
           Où puis-je lire les articles complets ?
         </button>
         <div class="faq-answer" hidden>
-          Allez dans la rubrique <a href="#articles">Articles</a> : faites défiler jusqu’après les cartes des nations pour le bloc « Série thématique — 55 articles ». Les fiches du Québec utilisent les boutons <strong>Lire</strong> sur les cartes <em>Nations</em>.
+          Allez dans la rubrique <a href="#articles">Articles</a> : faites défiler jusqu’après les cartes des nations pour le bloc « Série thématique — Les articles (56) ». Les fiches du Québec utilisent les boutons <strong>Lire</strong> sur les cartes <em>Nations</em>.
         </div>
       </div>
       <div class="faq-item">
@@ -847,7 +865,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
         <button type="button" onclick="quickAsk('Comment partager le site ?')">Partager</button>
         <button type="button" onclick="quickAsk('Comment poser une vraie question ?')">Question</button>
         <button type="button" onclick="quickAsk('Liste des nations et titres des articles')">Nations et titres</button>
-        <button type="button" onclick="quickAsk('Liste des titres et mots-clés de la série 55 articles du blog — affiche tous les titres reliés')">Série 55</button>
+        <button type="button" onclick="quickAsk('Liste des titres et mots-clés de Les articles — série du blog ; afficher tous les titres reliés')">Les articles</button>
         <button type="button" onclick="quickAsk('Où sont les vidéos et les pages médias ?')">Médias</button>
       </div>
     </div>
@@ -899,7 +917,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
       { tier: 'page', keys: ['partage', 'publier', 'reseaux', 'diffusion', 'reseau social'], title: 'Publier sur les réseaux', href: 'Partage.html' },
       { tier: 'page', keys: ['femme', 'femmes', 'matriarche', 'autochtones du quebec piliers'], title: 'Les Femmes Autochtones du Québec — Piliers, Matriarches et Résistantes', href: 'FemmesAutochtones.html' },
       { tier: 'page', keys: ['bijou', 'bijoux', 'art des bijoux', 'perle', 'wampum'], title: 'L\'Art des Bijoux des Premières Nations', href: 'BijouxPremieresNations.html' },
-      { tier: 'page', keys: ['serie blog', '55 articles', 'blog premieres nations', 'articles blog', 'serie canada', 'catalogue blog'], title: 'Série — 55 articles (même rubrique Articles)', href: 'Home.html#serie-blog' }
+      { tier: 'page', keys: ['serie blog', 'les articles', 'blog premieres nations', 'articles blog', 'serie canada', 'catalogue blog'], title: 'Série — Les articles (même rubrique Articles)', href: 'Home.html#serie-blog' }
     ];
 
     function assistantHtmlNationList(){
@@ -991,14 +1009,15 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
     }
 
     function assistantSerieIntent(qn) {
-      return /\bserie\b|cinq\s*cinq|\b55\b|rubrique\s+blog|coup\s+de\s*coeur|coup\s+de\s*c|blog\s+(archive|rubrique)/.test(
+      return /\bserie\b|cinq\s*cinq|\b55\b|\bles\s+articles\b|rubrique\s+blog|coup\s+de\s*coeur|coup\s+de\s*c|blog\s+(archive|rubrique)/.test(
         qn
       );
     }
 
     function assistantWantsSerie55TitleList(q) {
-      if (/\b(liste\s+complete|liste\s+entiere)\b|\btous\s+les\s+titres\b|\becris\s+tous\b/.test(q) && /\b55\b|\bserie\b|cinq/.test(q)) return true;
+      if (/\b(liste\s+complete|liste\s+entiere)\b|\btous\s+les\s+titres\b|\becris\s+tous\b/.test(q) && (/\bles\s+articles\b|\b55\b|\bserie\b|cinq/).test(q)) return true;
       if (/\b55\b/.test(q) && /\btitres?\b|\barticles?\b|\bserie\b|coup\s+de\s+c/.test(q)) return true;
+      if (/\bles\s+articles\b/.test(q) && /\bliste\b|\blister\b|\btitres?\b|\bcatalogue\b|\bmots?\s*-?\s*cles\b/.test(q)) return true;
       if (/\bserie\b|\bserie\s+blog\b/.test(q) && /\bliste\b|\blister\b|\benumere\b|\benumer\b|\bcatalogue\b|\bmots?\s*-?\s*cles\b/.test(q))
         return true;
       return false;
@@ -1008,7 +1027,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
       var base =
         typeof window.__serieBlogBase === 'string' && window.__serieBlogBase.replace(/\s+/g, '') !== ''
           ? window.__serieBlogBase.replace(/\/?$/, '/')
-          : 'https://socrate83.github.io/Premieres-Nations/';
+          : 'https://socrate83.github.io/premieres-nations-quebec/pages/';
       return base + encodeURIComponent(file);
     }
 
@@ -1034,11 +1053,19 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
       var qn = normalizeQuestion(questionRaw);
       var fold = assistantSerieFold(questionRaw);
       if (!fold.length) return null;
-      /* numéros 1–55 */
-      var numm = /\b(?:0)?([1-9]|[12]\d|3\d|4\d|50|51|52|53|54|55)\b/.exec(questionRaw);
+      /* Numéro d’article : plafond lu depuis blog-serie-articles.json (stats.articlesNumbered ou max des fiches). */
+      var maxArt =
+        typeof window.__serieArticlesNumbered === 'number' && window.__serieArticlesNumbered > 0
+          ? window.__serieArticlesNumbered
+          : 999;
+      var numm = /\b(?:0)?([1-9]\d{0,2})\b/.exec(questionRaw);
       if (numm && numm[1]) {
-        for (var a = 0; a < idx.length; a++) {
-          if (idx[a].n === numm[1]) return { hit: idx[a], score: 80 };
+        var ni = parseInt(numm[1], 10);
+        if (!isNaN(ni) && ni >= 1 && ni <= maxArt) {
+          var key = String(ni);
+          for (var a = 0; a < idx.length; a++) {
+            if (idx[a].n === key) return { hit: idx[a], score: 80 };
+          }
         }
       }
       if (
@@ -1091,7 +1118,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
           '" target="_blank" rel="noopener noreferrer">archive</a> · <a href="Home.html#serie-blog">sur cette page</a></li>';
       }
       return (
-        '<p><strong>Coup de ★ puis 55 chapitres</strong> avec titres reliés aux archives du blog.</p>' +
+        '<p><strong>Coup de ★ puis Les articles</strong> (série numérotée) — titres reliés aux archives du blog.</p>' +
           '<ul style="margin:0.35rem 0 0 1rem;padding:0;line-height:1.4;font-size:0.82rem">' +
           li +
           '</ul>'
@@ -1182,7 +1209,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
       if (raw.indexOf('article') !== -1 || raw.toLowerCase().indexOf('nation') !== -1 || raw.toLowerCase().indexOf('sujet') !== -1) {
         return {
           answered: true,
-          text: "Vous pouvez explorer 11 nations + la nation inuite depuis la rubrique Articles (bouton dans le bandeau du haut). Les 55 articles thématiques sont plus bas sous « Série thématique ». Pour la liste des titres Québec, écrivez : « Liste des nations » ou la FAQ."
+          text: "Vous pouvez explorer 11 nations + la nation inuite depuis la rubrique Articles (bouton dans le bandeau du haut). Plus bas, « Série thématique — Les articles (56) ». Pour la liste des titres Québec, écrivez : « Liste des nations » ou la FAQ."
         };
       }
       if (q.indexOf('video') !== -1) {
