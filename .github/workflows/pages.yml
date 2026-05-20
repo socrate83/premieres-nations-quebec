@@ -35,6 +35,11 @@ jobs:
           for f in pages/*.html; do
             sed 's|\.\./assets/|assets/|g' "$f" > "_site/$(basename "$f")"
           done
+          for f in *.html; do
+            if [[ "$(basename "$f")" != "index.html" ]]; then
+              cp -f "$f" "_site/$(basename "$f")"
+            fi
+          done
           for f in pages/*.json; do
             cp -f "$f" _site/
           done

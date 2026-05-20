@@ -4,79 +4,119 @@
   <meta charset="UTF-8"/>
   <meta name="msvalidate.01" content="10222E796BE2EE4F0FC763A4635F65FE"/>
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Audio — Les Premières Nations du Québec</title>
-  <meta name="description" content="Écoutez nos contenus audio sur les peuples autochtones du Québec : langues, chants traditionnels et récits culturels."/>
-  <meta name="keywords" content="audio autochtone, langues autochtones, chants traditionnels, Premières Nations Québec, culture amérindienne"/>
+  <title>Radios autochtones du Québec — Écouter en direct | Les Premières Nations au Québec</title>
+  <meta name="description" content="Écoutez les radios communautaires autochtones du Québec : Mohawks (K103, CKON), Innus et Atikamekw (SOCAM), Wendat FM, Cris, Mi'kmaq et plus — en direct et en ligne."/>
+  <meta name="keywords" content="radio autochtone Québec, CKRK K103, CKON Mohawk, SOCAM Innu, Wendat FM, radio cri, CHRQ Mi'kmaq, Premières Nations"/>
   <meta name="author" content="Jean-Claude Bescher"/>
   <meta name="robots" content="index, follow"/>
-  <meta property="og:title" content="Audio — Les Premières Nations du Québec"/>
-  <meta property="og:description" content="Écoutez nos contenus audio sur les peuples autochtones du Québec : langues, chants traditionnels et récits culturels."/>
+  <meta property="og:title" content="Radios autochtones du Québec — Écouter en direct"/>
+  <meta property="og:description" content="Radios communautaires des nations du Québec : écoute en direct et liens vers chaque station."/>
   <meta property="og:url" content="https://socrate83.github.io/premieres-nations-quebec/Audio.html"/>
   <meta property="og:type" content="website"/>
   <meta property="og:locale" content="fr_FR"/>
   <meta name="twitter:card" content="summary_large_image"/>
-  <meta name="twitter:title" content="Audio — Les Premières Nations du Québec"/>
-  <meta name="twitter:description" content="Écoutez nos contenus audio sur les peuples autochtones du Québec : langues, chants traditionnels et récits culturels."/>
+  <meta name="twitter:title" content="Radios autochtones du Québec"/>
+  <meta name="twitter:description" content="Écoutez les radios des Premières Nations du Québec en direct."/>
   <meta name="twitter:site" content="@JeanClaude89628"/>
   <style>
     @import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700;900&family=Lato:wght@300;400;700&display=swap');
     :root{
       --noir:#0A0A0A;
-      --sombre:#141414;
+      --carte:#1A1A1A;
       --or:#C8920A;
       --or-clair:#E8B020;
       --rouge:#8B2E2E;
       --violet:#2D1B4E;
+      --texte-doux:rgba(255,255,255,0.65);
     }
     *{margin:0;padding:0;box-sizing:border-box}
-    html,body{height:100%;overflow-y:auto;scroll-behavior:smooth}
-    body{font-family:'Lato',sans-serif;background:var(--noir);color:#fff}
+    html,body{scroll-behavior:smooth}
+    body{font-family:'Lato',sans-serif;background:var(--noir);color:#fff;line-height:1.7}
 
-    /* NAV */
     .top-nav{background:rgba(0,0,0,0.85);backdrop-filter:blur(10px);padding:1rem 2rem;display:flex;justify-content:center;gap:2rem;flex-wrap:wrap;border-bottom:1px solid rgba(255,255,255,0.08);position:sticky;top:0;z-index:100}
     .top-nav a{color:rgba(255,255,255,0.6);text-decoration:none;font-size:0.8rem;letter-spacing:2px;text-transform:uppercase;font-weight:700;transition:color 0.2s}
     .top-nav a:hover,.top-nav a.active{color:var(--or-clair)}
 
-    /* HEADER */
-    .page-header{background:linear-gradient(135deg,#0a001a,#1a0a00);padding:5rem 2rem 4rem;text-align:center;border-bottom:1px solid rgba(200,146,10,0.2)}
+    .page-header{background:linear-gradient(135deg,#0a001a,#1a0a00);padding:4.5rem 2rem 3.5rem;text-align:center;border-bottom:1px solid rgba(200,146,10,0.2)}
     .page-header .eyebrow{font-size:0.78rem;letter-spacing:5px;text-transform:uppercase;color:var(--or-clair);font-weight:700;margin-bottom:1rem}
-    .page-header h1{font-family:'Playfair Display',serif;font-size:clamp(2.5rem,5vw,4rem);font-weight:900;color:#fff;margin-bottom:1rem}
-    .page-header p{font-size:1.05rem;color:rgba(255,255,255,0.65);max-width:620px;margin:0 auto;line-height:1.8}
+    .page-header h1{font-family:'Playfair Display',serif;font-size:clamp(2rem,5vw,3.2rem);font-weight:900;color:#fff;margin-bottom:1rem;line-height:1.15}
+    .page-header p{font-size:1.05rem;color:var(--texte-doux);max-width:720px;margin:0 auto;line-height:1.85}
     .gold-line{width:56px;height:4px;background:linear-gradient(to right,var(--rouge),var(--or));margin:1.5rem auto 0;border-radius:2px}
 
-    /* COMING SOON */
-    .coming-section{padding:6rem 2rem;text-align:center;max-width:800px;margin:0 auto}
-    .coming-icon{font-size:5rem;margin-bottom:2rem;animation:pulse 2s infinite}
-    @keyframes pulse{0%,100%{transform:scale(1)}50%{transform:scale(1.08)}}
-    .coming-title{font-family:'Playfair Display',serif;font-size:clamp(2rem,4vw,3rem);color:#fff;margin-bottom:1.5rem}
-    .coming-desc{font-size:1.05rem;color:rgba(255,255,255,0.6);line-height:1.9;max-width:580px;margin:0 auto 3rem}
+    .container{max-width:1000px;margin:0 auto;padding:0 1.5rem}
 
-    /* PREVIEW CARDS */
-    .preview-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(250px,1fr));gap:1.5rem;max-width:900px;margin:0 auto 4rem}
-    .preview-card{background:#1A1A1A;border-radius:16px;padding:2rem;border:1px solid rgba(255,255,255,0.06);text-align:center;transition:transform 0.3s}
-    .preview-card:hover{transform:translateY(-4px)}
-    .preview-card .p-icon{font-size:2.5rem;margin-bottom:1rem}
-    .preview-card h3{font-family:'Playfair Display',serif;font-size:1.1rem;color:var(--or-clair);margin-bottom:0.6rem}
-    .preview-card p{font-size:0.88rem;color:rgba(255,255,255,0.5);line-height:1.6}
-    .badge-soon{display:inline-block;background:rgba(200,146,10,0.15);color:var(--or-clair);font-size:0.68rem;letter-spacing:2px;text-transform:uppercase;padding:0.3rem 0.8rem;border-radius:20px;border:1px solid rgba(200,146,10,0.3);margin-top:0.8rem}
+    .intro-note{background:rgba(200,146,10,0.08);border:1px solid rgba(200,146,10,0.25);border-radius:14px;padding:1.25rem 1.5rem;margin:2.5rem auto 0;font-size:0.92rem;color:var(--texte-doux);max-width:1000px}
+    .intro-note strong{color:var(--or-clair)}
 
-    /* NOTIFY */
-    .notify-box{background:linear-gradient(135deg,var(--violet),#1a0a00);border:1px solid rgba(200,146,10,0.2);border-radius:20px;padding:3rem;max-width:600px;margin:0 auto;text-align:center}
-    .notify-box h3{font-family:'Playfair Display',serif;font-size:1.6rem;color:#fff;margin-bottom:0.8rem}
-    .notify-box p{color:rgba(255,255,255,0.6);font-size:0.95rem;margin-bottom:1.5rem;line-height:1.7}
-    .btn-fb{display:inline-flex;align-items:center;gap:0.6rem;background:#1877F2;color:#fff;font-weight:700;font-size:0.88rem;padding:0.85rem 2rem;border-radius:50px;text-decoration:none;transition:background 0.2s,transform 0.2s}
-    .btn-fb:hover{background:#1565d8;transform:translateY(-2px)}
+    .section-block{padding:3rem 0 1rem}
+    .nation-header{display:flex;align-items:center;gap:1rem;margin-bottom:1.5rem;flex-wrap:wrap}
+    .nation-header h2{font-family:'Playfair Display',serif;font-size:1.75rem;color:#fff}
+    .nation-badge{font-size:0.7rem;letter-spacing:2px;text-transform:uppercase;background:rgba(200,146,10,0.15);color:var(--or-clair);padding:0.35rem 0.9rem;border-radius:20px;border:1px solid rgba(200,146,10,0.35)}
 
-    /* FOOTER */
-    footer{background:#050505;padding:3rem 2rem;text-align:center;border-top:1px solid rgba(255,255,255,0.06);margin-top:4rem}
+    .featured-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(280px,1fr));gap:1.5rem;margin-top:2rem}
+    .radio-card{background:var(--carte);border-radius:16px;padding:1.75rem;border:1px solid rgba(255,255,255,0.07);transition:transform 0.25s,border-color 0.25s}
+    .radio-card:hover{transform:translateY(-3px);border-color:rgba(200,146,10,0.35)}
+    .radio-card.featured{background:linear-gradient(145deg,#1a1208,#1A1A1A);border-color:rgba(200,146,10,0.4)}
+    .radio-call{font-family:'Playfair Display',serif;font-size:1.35rem;color:var(--or-clair);margin-bottom:0.25rem}
+    .radio-freq{font-size:0.85rem;color:rgba(255,255,255,0.45);letter-spacing:1px;margin-bottom:0.75rem}
+    .radio-meta{font-size:0.88rem;color:var(--texte-doux);margin-bottom:1rem;line-height:1.65}
+    .radio-meta span{color:rgba(255,255,255,0.85)}
+    .radio-langs{font-size:0.78rem;color:rgba(200,146,10,0.9);letter-spacing:0.5px;margin-bottom:1rem}
+    .player-wrap{margin:1rem 0;background:#0d0d0d;border-radius:10px;padding:0.75rem;border:1px solid rgba(255,255,255,0.06)}
+    .player-wrap audio{width:100%;height:40px}
+    .player-hint{font-size:0.75rem;color:rgba(255,255,255,0.4);margin-top:0.5rem}
+    .btn-listen{display:inline-flex;align-items:center;gap:0.5rem;background:linear-gradient(135deg,var(--or),#a06808);color:#000;font-weight:700;font-size:0.88rem;padding:0.75rem 1.4rem;border-radius:50px;text-decoration:none;transition:transform 0.2s,opacity 0.2s;margin-top:0.25rem;margin-right:0.5rem}
+    .btn-listen:hover{transform:translateY(-2px);opacity:0.92}
+    .btn-secondary{display:inline-flex;align-items:center;gap:0.4rem;background:transparent;color:var(--or-clair);font-weight:700;font-size:0.82rem;padding:0.65rem 1.1rem;border-radius:50px;text-decoration:none;border:1px solid rgba(200,146,10,0.45);transition:background 0.2s}
+    .btn-secondary:hover{background:rgba(200,146,10,0.12)}
+
+    .stations-compact{display:grid;grid-template-columns:repeat(auto-fill,minmax(220px,1fr));gap:0.85rem;margin-top:1rem}
+    .station-mini{background:#121212;border-radius:10px;padding:1rem 1.1rem;border-left:3px solid var(--or)}
+    .station-mini h4{font-size:0.95rem;color:#fff;margin-bottom:0.2rem}
+    .station-mini .fm{font-size:0.78rem;color:rgba(255,255,255,0.45);margin-bottom:0.5rem}
+    .station-mini a{font-size:0.8rem;color:var(--or-clair);text-decoration:none;font-weight:700}
+    .station-mini a:hover{text-decoration:underline}
+    .station-mini .loc{font-size:0.78rem;color:var(--texte-doux);margin-bottom:0.4rem}
+
+    .network-box{background:linear-gradient(135deg,var(--violet),#1a0a00);border:1px solid rgba(200,146,10,0.25);border-radius:18px;padding:2rem;margin:1rem 0 2rem}
+    .network-box h3{font-family:'Playfair Display',serif;font-size:1.4rem;color:#fff;margin-bottom:0.75rem}
+    .network-box p{color:var(--texte-doux);font-size:0.95rem;margin-bottom:1.25rem}
+
+    .missing-note{background:#121212;border-radius:12px;padding:1.25rem;font-size:0.9rem;color:var(--texte-doux);border:1px dashed rgba(255,255,255,0.12);margin-top:1rem}
+
+    .engagement{background:linear-gradient(135deg,#1a0830,#0a1000);padding:3rem 2rem;text-align:center;margin-top:2rem;border-top:1px solid rgba(200,146,10,0.2)}
+    .engagement h3{font-family:'Playfair Display',serif;font-size:1.5rem;color:var(--or-clair);margin-bottom:1rem}
+    .engagement ul{list-style:none;max-width:560px;margin:0 auto;text-align:left}
+    .engagement li{padding:0.5rem 0 0.5rem 1.5rem;position:relative;color:var(--texte-doux);font-size:0.95rem}
+    .engagement li::before{content:'◆';position:absolute;left:0;color:var(--or);font-size:0.6rem;top:0.85rem}
+
+    .share-footer{background:#111;border-top:2px solid var(--or);padding:2.5rem 2rem;text-align:center}
+    .share-footer h4{font-family:'Playfair Display',serif;color:var(--or-clair);margin-bottom:1rem}
+    .share-btns{display:flex;flex-wrap:wrap;justify-content:center;gap:0.75rem}
+    .share-btns a{display:inline-flex;padding:0.7rem 1.3rem;border-radius:50px;font-size:0.85rem;font-weight:700;text-decoration:none;color:#fff}
+    .btn-fb{background:#1877F2}
+    .btn-wa{background:#25D366;color:#000}
+
+    footer{background:#050505;padding:3rem 2rem;text-align:center;border-top:1px solid rgba(255,255,255,0.06)}
     footer p{font-size:0.85rem;color:rgba(255,255,255,0.35);line-height:1.8}
     footer a{color:var(--or-clair);text-decoration:none}
-    footer a:hover{color:#fff}
     .footer-nav{display:flex;flex-wrap:wrap;justify-content:center;gap:1rem 2rem;margin:1.5rem 0}
-    .footer-nav a{font-size:0.78rem;letter-spacing:1.5px;text-transform:uppercase;color:rgba(255,255,255,0.4);text-decoration:none;transition:color 0.2s}
+    .footer-nav a{font-size:0.78rem;letter-spacing:1.5px;text-transform:uppercase;color:rgba(255,255,255,0.4);text-decoration:none}
     .footer-nav a:hover{color:var(--or-clair)}
 
-    @media(max-width:600px){.top-nav{gap:1rem}.preview-grid{grid-template-columns:1fr}}
+    /* Radio vedette — la plus écoutée */
+    .hero-radio{background:linear-gradient(160deg,#1f1406 0%,#0d0d0d 55%,#0a001a 100%);border:2px solid rgba(200,146,10,0.45);border-radius:22px;padding:2.5rem 2rem;margin:2rem 0 0;text-align:center;box-shadow:0 20px 50px rgba(0,0,0,0.45)}
+    .hero-radio .top-badge{display:inline-block;background:var(--or);color:#000;font-size:0.72rem;font-weight:900;letter-spacing:2.5px;text-transform:uppercase;padding:0.4rem 1rem;border-radius:20px;margin-bottom:1.25rem}
+    .hero-radio h2{font-family:'Playfair Display',serif;font-size:clamp(1.8rem,4vw,2.6rem);color:#fff;margin-bottom:0.35rem}
+    .hero-radio .hero-freq{font-size:1rem;color:var(--or-clair);letter-spacing:2px;margin-bottom:1rem}
+    .hero-radio .hero-desc{font-size:1rem;color:var(--texte-doux);max-width:640px;margin:0 auto 1.5rem;line-height:1.8}
+    .hero-radio .player-wrap{max-width:520px;margin:0 auto 1.25rem}
+    .hero-radio .player-wrap audio{height:48px}
+    .hero-radio .btn-row{display:flex;flex-wrap:wrap;justify-content:center;gap:0.75rem;margin-top:0.5rem}
+    .radio-card.secondary-featured{opacity:0.95;border-color:rgba(255,255,255,0.12)}
+    .radio-card .badge-alt{display:inline-block;font-size:0.68rem;letter-spacing:1.5px;text-transform:uppercase;color:rgba(255,255,255,0.5);margin-bottom:0.5rem}
+
+    @media(max-width:600px){.top-nav{gap:1rem}.featured-grid{grid-template-columns:1fr}.hero-radio{padding:1.75rem 1.25rem}}
   </style>
 </head>
 <body>
@@ -85,50 +125,187 @@
     <a href="index.html">🏠 Accueil</a>
     <a href="index.html#nations">📰 Articles</a>
     <a href="Videos.html">🎬 Vidéos</a>
-    <a href="Audio.html" class="active">🎵 Audio</a>
+    <a href="Audio.html" class="active">📻 Radios</a>
   </nav>
 
   <div class="page-header">
-    <div class="eyebrow">Médiathèque</div>
-    <h1>🎵 Audio</h1>
-    <p>Les Premières Nations représentent toutes les nations du Québec. Bientôt, écoutez leurs histoires, leurs chants et leurs voix.</p>
+    <div class="eyebrow">Médiathèque · Voix des nations</div>
+    <h1>📻 Radios autochtones du Québec</h1>
+    <p>Commencez par <strong>K103.7</strong>, la radio mohawk la plus écoutée au Québec — puis explorez CKON, le réseau SOCAM et les autres voix des nations.</p>
     <div class="gold-line"></div>
   </div>
 
-  <div class="coming-section">
-    <div class="coming-icon">🎶</div>
-    <div class="coming-title">Bientôt disponible</div>
-    <div class="coming-desc">
-      Des enregistrements audio uniques — podcasts, chants traditionnels, interviews et récits — seront ajoutés prochainement pour enrichir votre expérience culturelle.
-    </div>
+  <div class="container">
+    <p class="intro-note">
+      <strong>🪶 Note :</strong> Ces radios sont détenues et animées par les communautés autochtones. Si le lecteur ne démarre pas, ouvrez le <strong>site officiel K103</strong> ou la station de votre choix ci-dessous.
+    </p>
 
-    <div class="preview-grid">
-      <div class="preview-card">
-        <div class="p-icon">🎙️</div>
-        <h3>Podcasts</h3>
-        <p>Des entretiens approfondis avec des membres des Premières Nations sur leur histoire et leur culture.</p>
-        <div class="badge-soon">Bientôt</div>
+    <!-- VEDETTE : K103 — la plus écoutée des deux radios mohawks -->
+    <section class="hero-radio" id="ecouter-maintenant" aria-label="Écouter K103 en direct">
+      <div class="top-badge">★ La plus écoutée · Radio mohawk du Québec</div>
+      <h2>K103.7 — CKRK</h2>
+      <p class="hero-freq">103,7 FM · Kahnawake · Montréal sud</p>
+      <p class="hero-desc">
+        Entre <strong>K103</strong> (Kahnawake) et <strong>CKON</strong> (Akwesasne), c'est <strong>K103</strong> qui attire le plus large auditoire au Québec — proximité de Montréal, programmation variée en kanien'kéha, anglais et français, et une présence quotidienne dans la vie de la communauté depuis 1981.
+      </p>
+      <p style="font-size:0.85rem;font-weight:700;letter-spacing:2px;text-transform:uppercase;color:var(--or-clair);margin-bottom:0.75rem">▶ Lecteur en direct</p>
+      <div class="player-wrap" style="border:2px solid rgba(232,176,32,0.5);background:#1a1208">
+        <audio controls preload="none" src="https://stream.statsradio.com:8092/stream">
+          Votre navigateur ne prend pas en charge la lecture audio.
+        </audio>
+        <p class="player-hint">Cliquez sur ▶ dans la barre grise ci-dessus. Sinon : <a href="https://k1037.com/" target="_blank" rel="noopener" style="color:var(--or-clair)">ouvrir K1037.com</a></p>
       </div>
-      <div class="preview-card">
-        <div class="p-icon">🥁</div>
-        <h3>Chants traditionnels</h3>
-        <p>Les chants sacrés et cérémonials des différentes nations autochtones du Québec.</p>
-        <div class="badge-soon">Bientôt</div>
+      <div class="btn-row">
+        <a class="btn-listen" href="https://k1037.com/" target="_blank" rel="noopener">Site officiel K103</a>
+        <a class="btn-secondary" href="#mohawks-ckon">Écouter aussi CKON 97,3 ↓</a>
       </div>
-      <div class="preview-card">
-        <div class="p-icon">📖</div>
-        <h3>Récits oraux</h3>
-        <p>Les légendes et histoires transmises de génération en génération par la tradition orale.</p>
-        <div class="badge-soon">Bientôt</div>
-      </div>
-    </div>
+    </section>
 
-    <div class="notify-box">
-      <h3>Restez informé</h3>
-      <p>Rejoignez notre groupe Facebook privé pour être averti dès qu'un nouveau contenu audio est publié.</p>
-      <a href="https://www.facebook.com/groups/1451283625021958" target="_blank" class="btn-fb">
-        📘 Rejoindre le groupe Facebook
-      </a>
+    <!-- MOHAWKS — CKON en second -->
+    <section class="section-block" id="mohawks">
+      <div class="nation-header">
+        <h2>Mohawks — l'autre voix</h2>
+        <span class="nation-badge">Kanien'kehá:ka · Haudenosaunee</span>
+      </div>
+      <div class="featured-grid">
+        <article class="radio-card secondary-featured" id="mohawks-ckon">
+          <span class="badge-alt">Deuxième radio mohawk du Québec</span>
+          <div class="radio-call">97.3 CKON</div>
+          <div class="radio-freq">97,3 FM · Akwesasne</div>
+          <p class="radio-langs">Kanien'kéha · Anglais</p>
+          <p class="radio-meta"><span>Mohawk Radio</span> — incontournable à Akwesasne et sur le territoire transfrontalier. Culture, langue et actualité mohawk ; audience très fidèle dans sa communauté.</p>
+          <a class="btn-listen" href="https://ckonfm.com/" target="_blank" rel="noopener">▶ Écouter CKON</a>
+          <a class="btn-secondary" href="http://ckonfm.net/" target="_blank" rel="noopener">Site alternatif</a>
+        </article>
+      </div>
+    </section>
+
+    <!-- INNU + ATIKAMEKW — SOCAM -->
+    <section class="section-block" id="innu-atikamekw">
+      <div class="nation-header">
+        <h2>Innus &amp; Atikamekw</h2>
+        <span class="nation-badge">Réseau SOCAM</span>
+      </div>
+      <div class="network-box">
+        <h3>SOCAM — Société de communication Atikamekw-Montagnais</h3>
+        <p>Fondée en 1983, la SOCAM regroupe <strong>14 stations</strong> dans les communautés atikamekw et innues du Québec et du Labrador. Production en <strong>innu</strong> et en <strong>atikamekw</strong> depuis Wendake ; retransmission par satellite et Internet sur tout le réseau.</p>
+        <a class="btn-listen" href="https://socam.net/" target="_blank" rel="noopener">▶ Réseau SOCAM</a>
+        <a class="btn-secondary" href="https://socam.net/reseaux" target="_blank" rel="noopener">Carte des stations</a>
+        <a class="btn-secondary" href="https://socam.net/programmation" target="_blank" rel="noopener">Programmation</a>
+      </div>
+      <h3 style="font-size:1rem;color:var(--or-clair);letter-spacing:2px;text-transform:uppercase;margin-bottom:0.5rem;">Stations avec écoute en ligne</h3>
+      <div class="stations-compact">
+        <div class="station-mini"><h4>CKAU 104</h4><div class="fm">104 FM</div><div class="loc">Mani-Utenam (Maliotenam)</div><a href="http://www.ckau.com/" target="_blank" rel="noopener">Écouter →</a></div>
+        <div class="station-mini"><h4>CIMB 95,1</h4><div class="fm">95,1 FM</div><div class="loc">Pessamit (Betsiamites)</div><a href="http://www.cimb.fm/live" target="_blank" rel="noopener">Écouter →</a></div>
+        <div class="station-mini"><h4>CHME 94,9</h4><div class="fm">94,9 FM</div><div class="loc">Essipit (Les Escoumins)</div><a href="http://www.chme949.com/player.php" target="_blank" rel="noopener">Écouter →</a></div>
+      </div>
+      <h3 style="font-size:1rem;color:rgba(255,255,255,0.5);letter-spacing:2px;text-transform:uppercase;margin:2rem 0 0.75rem;">Autres stations du réseau (FM locale)</h3>
+      <div class="stations-compact">
+        <div class="station-mini"><h4>CHMK 93,1</h4><div class="fm">Manawan</div></div>
+        <div class="station-mini"><h4>RCWK 89,9</h4><div class="fm">Wemotaci</div></div>
+        <div class="station-mini"><h4>CITK 89,9</h4><div class="fm">Opitciwan</div></div>
+        <div class="station-mini"><h4>CHUK 107,3</h4><div class="fm">Mashteuiatsh</div></div>
+        <div class="station-mini"><h4>CKKE 89,9</h4><div class="fm">Ekuanitshit (Mingan)</div></div>
+        <div class="station-mini"><h4>CFNQ 89,9</h4><div class="fm">Nutashkuan</div></div>
+        <div class="station-mini"><h4>CFLR 89,9</h4><div class="fm">Unamen Shipu (La Romaine)</div></div>
+        <div class="station-mini"><h4>CIBE 89,9</h4><div class="fm">Pakua Shipi</div></div>
+        <div class="station-mini"><h4>CRKA 106,9</h4><div class="fm">Matimekush (Schefferville)</div></div>
+        <div class="station-mini"><h4>CJIK 94,1</h4><div class="fm">Sheshatshiu (Labrador)</div></div>
+        <div class="station-mini"><h4>CJMI 94,1</h4><div class="fm">Natuashish (Labrador)</div></div>
+      </div>
+    </section>
+
+    <!-- HURONS-WENDAT -->
+    <section class="section-block" id="wendat">
+      <div class="nation-header">
+        <h2>Hurons-Wendat</h2>
+        <span class="nation-badge">Wendake</span>
+      </div>
+      <div class="featured-grid">
+        <article class="radio-card">
+          <div class="radio-call">Wendat FM — CIHW</div>
+          <div class="radio-freq">100,3 FM · Wendake</div>
+          <p class="radio-langs">Français · Wendat · Relais SOCAM (innu, atikamekw, cri)</p>
+          <p class="radio-meta">Depuis 1984, la voix de Wendake. Promotion de la culture wendat, des artistes autochtones et de la vie communautaire. Relaie aussi les émissions du réseau SOCAM.</p>
+          <a class="btn-listen" href="https://wendatfm.ca/" target="_blank" rel="noopener">▶ Écouter Wendat FM</a>
+        </article>
+      </div>
+    </section>
+
+    <!-- CRIS -->
+    <section class="section-block" id="cris">
+      <div class="nation-header">
+        <h2>Cris</h2>
+        <span class="nation-badge">Eeyou Istchee</span>
+      </div>
+      <div class="featured-grid">
+        <article class="radio-card">
+          <div class="radio-call">JBCCS — Cree Radio Network</div>
+          <div class="radio-freq">CHFG 101,1 FM · Réseau des 9 communautés cries</div>
+          <p class="radio-langs">Cri · Anglais</p>
+          <p class="radio-meta">Réseau de radio communautaire desservant les communautés cries du Québec (siège à Mistissini). Nouvelles locales, musique et programmation culturelle en langue crie.</p>
+          <a class="btn-listen" href="https://www.creeradio.com/" target="_blank" rel="noopener">▶ Cree Radio en direct</a>
+        </article>
+      </div>
+    </section>
+
+    <!-- MI'KMAQ -->
+    <section class="section-block" id="micmacs">
+      <div class="nation-header">
+        <h2>Micmacs (Mi'kmaq)</h2>
+        <span class="nation-badge">Gaspésie</span>
+      </div>
+      <div class="featured-grid">
+        <article class="radio-card">
+          <div class="radio-call">CHRQ 106,9</div>
+          <div class="radio-freq">106,9 FM · Listuguj</div>
+          <p class="radio-langs">Mi'kmaq · Anglais · Français</p>
+          <p class="radio-meta"><span>« The Heartbeat of the Community »</span> — Gespegewag Communications Society. Nouvelles, événements et segments en mi'kmaq pour la communauté de Listuguj.</p>
+          <a class="btn-listen" href="https://chrq1069.com/" target="_blank" rel="noopener">▶ Écouter CHRQ</a>
+        </article>
+      </div>
+    </section>
+
+    <!-- AUTRES NATIONS -->
+    <section class="section-block" id="autres">
+      <div class="nation-header">
+        <h2>Autres nations du Québec</h2>
+      </div>
+      <p class="missing-note">
+        <strong>Abénaquis, Algonquins, Malécites, Naskapis et Inuits du Nunavik</strong> n'ont pas, à ce jour, de station FM communautaire autochtone dédiée au même titre que les réseaux ci-dessus. Les auditeurs de ces nations peuvent suivre les radios régionales, <a href="https://www.rcinet.ca/" target="_blank" rel="noopener" style="color:var(--or-clair)">Radio-Canada Autochtone (RCI)</a>, ou les webradios des nations voisines. Si vous connaissez une station à ajouter, écrivez-nous via le <a href="https://www.facebook.com/groups/1451283625021958" target="_blank" rel="noopener" style="color:var(--or-clair)">groupe Facebook</a>.
+      </p>
+    </section>
+
+    <!-- À VENIR -->
+    <section class="section-block" id="podcasts">
+      <div class="nation-header">
+        <h2>Bientôt sur cette page</h2>
+      </div>
+      <div class="featured-grid">
+        <div class="radio-card">
+          <div style="font-size:2rem;margin-bottom:0.5rem">🎙️</div>
+          <h3 style="font-family:'Playfair Display',serif;color:var(--or-clair);margin-bottom:0.5rem">Podcasts &amp; récits</h3>
+          <p class="radio-meta">Enregistrements, chants traditionnels et entretiens produits pour ce site — en complément des radios communautaires.</p>
+        </div>
+      </div>
+    </section>
+  </div>
+
+  <section class="engagement">
+    <h3>Pour réfléchir ensemble</h3>
+    <ul>
+      <li>Connaissez-vous une radio autochtone de votre région que nous devrions lister ici ?</li>
+      <li>Quelle émission ou quelle langue aimeriez-vous entendre davantage sur ces ondes ?</li>
+      <li>La radio communautaire joue-t-elle encore un rôle central dans la transmission de la culture, selon vous ?</li>
+    </ul>
+  </section>
+
+  <div class="share-footer">
+    <h4>🪶 Partager cette page</h4>
+    <div class="share-btns">
+      <a class="btn-fb" href="https://www.facebook.com/sharer/sharer.php?u=https://socrate83.github.io/premieres-nations-quebec/Audio.html" target="_blank" rel="noopener">📘 Facebook</a>
+      <a class="btn-fb" href="https://www.facebook.com/groups/1451283625021958" target="_blank" rel="noopener">👥 Groupe</a>
+      <a class="btn-wa" href="https://wa.me/?text=Radios%20autochtones%20du%20Qu%C3%A9bec%20https://socrate83.github.io/premieres-nations-quebec/Audio.html" target="_blank" rel="noopener">WhatsApp</a>
     </div>
   </div>
 
@@ -137,9 +314,10 @@
       <a href="index.html">Accueil</a>
       <a href="index.html#nations">Articles</a>
       <a href="Videos.html">Vidéos</a>
-      <a href="Audio.html">Audio</a>
+      <a href="Audio.html">Radios</a>
     </div>
-    <p>© 2025 Les Premières Nations au Québec · Contenu éducatif et culturel</p>
+    <p>© 2025–2026 Les Premières Nations au Québec · Contenu éducatif et culturel</p>
+    <p style="margin-top:0.5rem">Sources : sites officiels des stations (K103, CKON, SOCAM, Wendat FM, Cree Radio, CHRQ).</p>
     <p style="margin-top:0.5rem"><a href="https://www.facebook.com/groups/1451283625021958" target="_blank">Rejoindre notre groupe Facebook</a></p>
   </footer>
 
