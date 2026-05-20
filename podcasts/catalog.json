@@ -1,0 +1,160 @@
+{
+  "updated": "2026-05-20",
+  "live": [
+    {
+      "id": "rue-atateken-live",
+      "title": "Rue Atateken — en direct",
+      "hosts": "André Dudemaine, Alexandre Nequado · Terres en vues",
+      "schedule": "Mercredis à midi (Facebook Live)",
+      "desc": "Clavardage culturel autochtone : langues, cinéma, littérature, arts. Rediffusion en balado ensuite.",
+      "liveUrl": "https://www.facebook.com/terresenvues",
+      "episodesUrl": "https://rueatateken.podbean.com/",
+      "rssId": "rue-atateken"
+    },
+    {
+      "id": "canal-m",
+      "title": "Canal M — Kwé, Bonjour & radio en direct",
+      "hosts": "Alexis Wawanoloath (Abénaki), Sophie-Claude Miller (Crie)",
+      "schedule": "Émission hebdomadaire + grille en continu",
+      "desc": "La voix de l'inclusion : dialogues avec les Premières Nations, Inuits et Métis.",
+      "liveUrl": "https://canalm.vuesetvoix.com/radio/emission/kwe-bonjour/",
+      "episodesUrl": "https://canalm.vuesetvoix.com/radio/emission/kwe-bonjour/",
+      "rssId": null
+    },
+    {
+      "id": "rci",
+      "title": "Radio-Canada International — Autochtones",
+      "hosts": "RCI",
+      "schedule": "Programmation continue en ligne",
+      "desc": "Actualités et culture des peuples autochtones au Canada, en français.",
+      "liveUrl": "https://www.rcinet.ca/fr/",
+      "episodesUrl": "https://www.rcinet.ca/fr/podcasts/",
+      "rssId": null
+    }
+  ],
+  "podcasts": [
+    {
+      "id": "confluents",
+      "title": "Confluents",
+      "hosts": "Mathieu Lavigne, Catherine Ego · Mission chez nous",
+      "type": "Hebdomadaire",
+      "desc": "Voix des Premiers Peuples et allié·es : vision du monde, art, spiritualité. Diffusé aussi sur Radio VM et Galilée.",
+      "listenUrl": "https://baladoquebec.ca/confluents",
+      "downloadUrl": "https://baladoquebec.ca/confluents",
+      "rssUrl": "https://anchor.fm/s/6b6344d8/podcast/rss",
+      "rssId": "confluents",
+      "platforms": ["BaladoQuébec", "Spotify", "Apple Podcasts"]
+    },
+    {
+      "id": "rue-atateken",
+      "title": "Rue Atateken",
+      "hosts": "André Dudemaine, Alexandre Nequado",
+      "type": "Hebdomadaire + direct",
+      "desc": "Podcast de Terres en vues : cultures autochtones, cinéma, littérature, cuisine, arts.",
+      "listenUrl": "https://rueatateken.podbean.com/",
+      "downloadUrl": "https://rueatateken.podbean.com/",
+      "rssUrl": "https://feed.podbean.com/rueatateken/feed.xml",
+      "rssId": "rue-atateken",
+      "platforms": ["Podbean", "Apple Podcasts"]
+    },
+    {
+      "id": "parole-autochtone",
+      "title": "Parole autochtone",
+      "hosts": "Melissa Mollen Dupuis",
+      "type": "Chronique hebdomadaire",
+      "desc": "Commentaire de l'actualité autochtone et réponses aux questions du public (ICI Première / OHdio).",
+      "listenUrl": "https://ici.radio-canada.ca/ohdio/premiere/emissions/parole-autochtone",
+      "downloadUrl": "https://ici.radio-canada.ca/ohdio/premiere/emissions/parole-autochtone",
+      "rssId": null,
+      "platforms": ["OHdio", "Apple Podcasts"]
+    },
+    {
+      "id": "mamawi",
+      "title": "mâmawi musique",
+      "hosts": "Moe Clark",
+      "type": "Hebdomadaire",
+      "desc": "Musique autochtone contemporaine : chaque épisode met en vedette des artistes des Premières Nations, Inuits et Métis.",
+      "listenUrl": "https://ici.radio-canada.ca/ohdio/premiere/emissions/mamawi-musique",
+      "downloadUrl": "https://ici.radio-canada.ca/ohdio/premiere/emissions/mamawi-musique",
+      "rssId": null,
+      "platforms": ["OHdio", "Apple Podcasts"]
+    },
+    {
+      "id": "kwe-bonjour",
+      "title": "Kwé, Bonjour",
+      "hosts": "Alexis Wawanoloath, Sophie-Claude Miller",
+      "type": "Hebdomadaire",
+      "desc": "Dialogue et respect : réalités des Premières Nations, Inuits et Métis (Canal M).",
+      "listenUrl": "https://canalm.vuesetvoix.com/radio/emission/kwe-bonjour/",
+      "downloadUrl": "https://podcasts.apple.com/fr/podcast/kw%C3%A9-bonjour/id1573480561",
+      "rssId": null,
+      "platforms": ["Canal M", "Apple Podcasts"]
+    },
+    {
+      "id": "voix-autochtones",
+      "title": "Voix autochtones",
+      "hosts": "CKIA 88,3 FM · Québec",
+      "type": "Émission radio",
+      "desc": "Actualités politiques, sociales, culturelles et artistiques des Premières Nations, avec musique autochtone.",
+      "listenUrl": "https://www.ckiafm.org/",
+      "downloadUrl": "https://direct-radio.fr/CKIA-FM-88-3/podcast/Voix-autochtones",
+      "rssId": null,
+      "platforms": ["CKIA", "direct-radio.fr"]
+    },
+    {
+      "id": "histoire-crochie",
+      "title": "Laissez-nous raconter : L'histoire crochie",
+      "hosts": "Marie-Andrée Gill (Innue)",
+      "type": "Balado",
+      "desc": "Réécrit l'histoire du Québec par les mots qui ont marqué les Premiers Peuples (découverte, réserve, sauvage…).",
+      "listenUrl": "https://ici.radio-canada.ca/ohdio/balados/7628/autochtones-traditions-communautes-langue-territoire",
+      "downloadUrl": "https://ici.radio-canada.ca/ohdio/balados/7628/autochtones-traditions-communautes-langue-territoire",
+      "rssId": null,
+      "platforms": ["OHdio"]
+    },
+    {
+      "id": "laisse-moi-raconter",
+      "title": "Laisse-moi te raconter",
+      "hosts": "Océane Kitura Bohémier-Tootoo",
+      "type": "Balado",
+      "desc": "Cultures autochtones à travers objets et symboles : pow-wow, sirop d'érable, tambour…",
+      "listenUrl": "https://ici.radio-canada.ca/ohdio/balados/13361/laisse-moi-te-raconter",
+      "downloadUrl": "https://ici.radio-canada.ca/ohdio/balados/13361/laisse-moi-te-raconter",
+      "rssId": null,
+      "platforms": ["OHdio"]
+    },
+    {
+      "id": "voies-paralleles",
+      "title": "Voies Parallèles",
+      "hosts": "Kijâtai-Alexandra Veillette-Cheezo, Laurence McEvoy",
+      "type": "Documentaire (6 épisodes)",
+      "desc": "Territoire autochtone, justice, jeunesse : balado de Nouveau Monde Productions.",
+      "listenUrl": "https://nouveaumonde.ca/voies-paralleles/",
+      "downloadUrl": "https://nouveaumonde.ca/voies-paralleles/",
+      "rssId": null,
+      "platforms": ["Spotify", "Apple Podcasts"]
+    },
+    {
+      "id": "apatrides",
+      "title": "Les Apatrides Anonymes",
+      "hosts": "CHOQ.ca",
+      "type": "Balado",
+      "desc": "Réflexions sur l'identité, la migration et les réalités autochtones au Québec.",
+      "listenUrl": "https://choq.ca/balados/apatrides-anonymes",
+      "downloadUrl": "https://choq.ca/balados/apatrides-anonymes",
+      "rssId": null,
+      "platforms": ["CHOQ"]
+    },
+    {
+      "id": "espaces-autochtones",
+      "title": "Espaces autochtones",
+      "hosts": "ICI Première",
+      "type": "Émission (fin de semaine)",
+      "desc": "Magazine sur la culture, l'actualité et les arts des peuples autochtones.",
+      "listenUrl": "https://ici.radio-canada.ca/ohdio/premiere/emissions/espaces-autochtones",
+      "downloadUrl": "https://ici.radio-canada.ca/ohdio/premiere/emissions/espaces-autochtones",
+      "rssId": null,
+      "platforms": ["OHdio", "ICI Première"]
+    }
+  ]
+}

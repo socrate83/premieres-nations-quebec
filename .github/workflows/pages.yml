@@ -29,6 +29,7 @@ jobs:
           set -euo pipefail
           mkdir -p _site
           cp -r assets _site/
+          if [[ -d podcasts ]]; then cp -r podcasts _site/; fi
           cp -f index.html sitemap.xml _site/
           sed -i 's|pages/Presentation.html|Presentation.html|g' _site/index.html
           shopt -s nullglob

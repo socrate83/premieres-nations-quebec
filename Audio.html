@@ -116,6 +116,14 @@
     .radio-card.secondary-featured{opacity:0.95;border-color:rgba(255,255,255,0.12)}
     .radio-card .badge-alt{display:inline-block;font-size:0.68rem;letter-spacing:1.5px;text-transform:uppercase;color:rgba(255,255,255,0.5);margin-bottom:0.5rem}
 
+    .podcast-teaser{background:linear-gradient(135deg,#1a0830,#0a1000);border:1px solid rgba(200,146,10,0.3);border-radius:18px;padding:2rem;margin:1rem 0 2rem;text-align:center}
+    .podcast-teaser h3{font-family:'Playfair Display',serif;font-size:1.45rem;color:var(--or-clair);margin-bottom:0.75rem}
+    .podcast-teaser p{color:var(--texte-doux);font-size:0.95rem;max-width:620px;margin:0 auto 1.25rem}
+    .mini-players{display:grid;grid-template-columns:repeat(auto-fit,minmax(280px,1fr));gap:1rem;margin:1.5rem 0;text-align:left}
+    .mini-pod{background:#121212;border-radius:12px;padding:1rem;border-left:3px solid var(--or)}
+    .mini-pod h4{font-size:0.95rem;color:#fff;margin-bottom:0.35rem}
+    .mini-pod .ep{font-size:0.78rem;color:rgba(255,255,255,0.45);margin-bottom:0.5rem}
+
     @media(max-width:600px){.top-nav{gap:1rem}.featured-grid{grid-template-columns:1fr}.hero-radio{padding:1.75rem 1.25rem}}
   </style>
 </head>
@@ -126,6 +134,7 @@
     <a href="index.html#nations">📰 Articles</a>
     <a href="Videos.html">🎬 Vidéos</a>
     <a href="Audio.html" class="active">📻 Radios</a>
+    <a href="podcasts/index.html">🎙️ Podcasts</a>
   </nav>
 
   <div class="page-header">
@@ -276,18 +285,38 @@
       </p>
     </section>
 
-    <!-- À VENIR -->
+    <!-- PODCASTS -->
     <section class="section-block" id="podcasts">
       <div class="nation-header">
-        <h2>Bientôt sur cette page</h2>
+        <h2>Podcasts en français</h2>
+        <span class="nation-badge">Balados · OHdio · Direct</span>
       </div>
-      <div class="featured-grid">
-        <div class="radio-card">
-          <div style="font-size:2rem;margin-bottom:0.5rem">🎙️</div>
-          <h3 style="font-family:'Playfair Display',serif;color:var(--or-clair);margin-bottom:0.5rem">Podcasts &amp; récits</h3>
-          <p class="radio-meta">Enregistrements, chants traditionnels et entretiens produits pour ce site — en complément des radios communautaires.</p>
+      <div class="podcast-teaser">
+        <h3>🎙️ Dossier podcasts Premières Nations</h3>
+        <p>Émissions et balados en français : écoute du <strong>dernier épisode</strong> sur cette page, liens <strong>en direct</strong> et <strong>téléchargement</strong> sur les sites officiels (OHdio, BaladoQuébec, Podbean…).</p>
+        <a class="btn-listen" href="podcasts/index.html">📁 Ouvrir le dossier complet</a>
+      </div>
+      <div class="mini-players">
+        <div class="mini-pod">
+          <h4>Confluents</h4>
+          <p class="ep">Dernier : EP 159 — Elisabeth St-Gelais</p>
+          <div class="player-wrap">
+            <audio controls preload="none" src="https://anchor.fm/s/6b6344d8/podcast/play/119643371/https%3A%2F%2Fd3ctxlq1ktw2nl.cloudfront.net%2Fstaging%2F2026-4-7%2Ff278eaf5-b25b-f91f-8729-6bd44123623f.mp3"></audio>
+          </div>
+          <a class="btn-secondary" href="https://baladoquebec.ca/confluents" target="_blank" rel="noopener">📥 Tous les épisodes</a>
+        </div>
+        <div class="mini-pod">
+          <h4>Rue Atateken</h4>
+          <p class="ep">Direct mercredi midi · rediffusion en balado</p>
+          <div class="player-wrap">
+            <audio controls preload="none" src="https://mcdn.podbean.com/mf/web/3h2b24webb2ikxfz/_pisode_209_avec_Ma_lys_Flamand_Championne_de_la_face_des_internets_2026bnga2-tyu2x6-Optimized.mp3"></audio>
+          </div>
+          <a class="btn-secondary" href="https://rueatateken.podbean.com/" target="_blank" rel="noopener">📥 Télécharger sur Podbean</a>
         </div>
       </div>
+      <p class="missing-note" style="margin-top:1rem">
+        Autres incontournables dans le dossier : <strong>Parole autochtone</strong>, <strong>mâmawi musique</strong>, <strong>Kwé, Bonjour</strong>, <strong>Voix autochtones</strong>, <strong>L'histoire crochie</strong>, <strong>Espaces autochtones</strong>…
+      </p>
     </section>
   </div>
 

@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Podcasts — Premières Nations (français) | Les Premières Nations au Québec</title>
+  <meta name="description" content="Podcasts et émissions en français sur les Premières Nations : écoute en direct, lecteur intégré et liens pour télécharger les épisodes."/>
+  <style>
+    @import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700;900&family=Lato:wght@300;400;700&display=swap');
+    :root{--noir:#0A0A0A;--carte:#1A1A1A;--or:#C8920A;--or-clair:#E8B020;--texte-doux:rgba(255,255,255,0.65)}
+    *{margin:0;padding:0;box-sizing:border-box}
+    body{font-family:'Lato',sans-serif;background:var(--noir);color:#fff;line-height:1.7}
+    .top-nav{background:rgba(0,0,0,0.9);padding:1rem 2rem;display:flex;justify-content:center;gap:1.5rem;flex-wrap:wrap;border-bottom:1px solid rgba(255,255,255,0.08);position:sticky;top:0;z-index:100}
+    .top-nav a{color:rgba(255,255,255,0.6);text-decoration:none;font-size:0.78rem;letter-spacing:2px;text-transform:uppercase;font-weight:700}
+    .top-nav a:hover,.top-nav a.active{color:var(--or-clair)}
+    .page-header{text-align:center;padding:3.5rem 2rem 2.5rem;background:linear-gradient(135deg,#0a001a,#1a0a00);border-bottom:1px solid rgba(200,146,10,0.2)}
+    .page-header h1{font-family:'Playfair Display',serif;font-size:clamp(1.8rem,4vw,2.8rem);margin-bottom:0.75rem}
+    .page-header p{color:var(--texte-doux);max-width:700px;margin:0 auto;font-size:1.02rem}
+    .container{max-width:1000px;margin:0 auto;padding:0 1.5rem 3rem}
+    .folder-banner{background:rgba(200,146,10,0.1);border:1px solid rgba(200,146,10,0.3);border-radius:14px;padding:1.25rem 1.5rem;margin:2rem 0;font-size:0.92rem;color:var(--texte-doux)}
+    .folder-banner strong{color:var(--or-clair)}
+    .section-title{font-family:'Playfair Display',serif;font-size:1.6rem;color:var(--or-clair);margin:2.5rem 0 1rem;padding-bottom:0.5rem;border-bottom:1px solid rgba(200,146,10,0.25)}
+    .pod-grid{display:grid;gap:1.25rem}
+    .pod-card{background:var(--carte);border-radius:16px;padding:1.5rem;border:1px solid rgba(255,255,255,0.07)}
+    .pod-card.live-card{border-color:rgba(200,146,10,0.35);background:linear-gradient(145deg,#1a1208,#1A1A1A)}
+    .pod-card h3{font-family:'Playfair Display',serif;color:#fff;font-size:1.2rem;margin-bottom:0.25rem}
+    .pod-meta{font-size:0.8rem;color:var(--or-clair);letter-spacing:0.5px;margin-bottom:0.6rem}
+    .pod-desc{font-size:0.9rem;color:var(--texte-doux);margin-bottom:1rem}
+    .ep-title{font-size:0.82rem;color:rgba(255,255,255,0.5);margin-bottom:0.5rem;font-style:italic}
+    .player-wrap{background:#0d0d0d;border-radius:10px;padding:0.75rem;margin:0.75rem 0;border:1px solid rgba(232,176,32,0.35)}
+    .player-wrap audio{width:100%;height:42px}
+    .btn-row{display:flex;flex-wrap:wrap;gap:0.5rem}
+    .btn{display:inline-flex;align-items:center;padding:0.65rem 1.2rem;border-radius:50px;font-size:0.82rem;font-weight:700;text-decoration:none;transition:transform 0.2s}
+    .btn:hover{transform:translateY(-2px)}
+    .btn-gold{background:linear-gradient(135deg,var(--or),#a06808);color:#000}
+    .btn-outline{color:var(--or-clair);border:1px solid rgba(200,146,10,0.45)}
+    .btn-outline:hover{background:rgba(200,146,10,0.12)}
+    .platforms{font-size:0.75rem;color:rgba(255,255,255,0.4);margin-top:0.75rem}
+    .loading{color:var(--texte-doux);text-align:center;padding:2rem}
+    footer{text-align:center;padding:2.5rem;color:rgba(255,255,255,0.35);font-size:0.85rem;border-top:1px solid rgba(255,255,255,0.06);margin-top:2rem}
+    footer a{color:var(--or-clair)}
+  </style>
+</head>
+<body>
+  <nav class="top-nav">
+    <a href="../index.html">🏠 Accueil</a>
+    <a href="../Audio.html">📻 Radios</a>
+    <a href="index.html" class="active">🎙️ Podcasts</a>
+  </nav>
+
+  <header class="page-header">
+    <p style="font-size:0.75rem;letter-spacing:4px;text-transform:uppercase;color:var(--or-clair);margin-bottom:0.75rem">Dossier · Français · Premières Nations</p>
+    <h1>🎙️ Podcasts &amp; émissions en direct</h1>
+    <p>Écoutez ici le dernier épisode quand le flux le permet, ou ouvrez le <strong>dossier de téléchargement</strong> sur la plateforme officielle de chaque créateur.</p>
+  </header>
+
+  <div class="container">
+    <div class="folder-banner">
+      <strong>📁 Dossier de téléchargement :</strong> les épisodes ne sont pas hébergés sur ce site (droits d'auteur). Chaque carte propose un lien <strong>« Télécharger / tous les épisodes »</strong> vers OHdio, BaladoQuébec, Podbean, Canal M, etc., où vous pouvez enregistrer les MP3 officiellement.
+    </div>
+
+    <h2 class="section-title">🔴 En direct ou presque en direct</h2>
+    <div id="live-grid" class="pod-grid"></div>
+
+    <h2 class="section-title">📻 Balados &amp; chroniques (à la demande)</h2>
+    <div id="pod-grid" class="pod-grid"><p class="loading">Chargement du catalogue…</p></div>
+  </div>
+
+  <footer>
+    <p><a href="../Audio.html">← Retour aux radios communautaires</a></p>
+    <p style="margin-top:0.75rem">© Les Premières Nations au Québec · Liens vers les producteurs officiels</p>
+  </footer>
+
+  <script>
+  (function () {
+    const liveEl = document.getElementById('live-grid');
+    const podEl = document.getElementById('pod-grid');
+
+    function btn(label, href, cls) {
+      return '<a class="btn ' + (cls || 'btn-gold') + '" href="' + href + '" target="_blank" rel="noopener">' + label + '</a>';
+    }
+
+    function player(ep) {
+      if (!ep || !ep.audio) return '';
+      return '<p class="ep-title">Dernier épisode : ' + escapeHtml(ep.title) + '</p>' +
+        '<div class="player-wrap"><audio controls preload="none" src="' + escapeAttr(ep.audio) + '">Lecteur audio</audio></div>';
+    }
+
+    function escapeHtml(s) {
+      return String(s).replace(/&/g,'&amp;').replace(/</g,'&lt;').replace(/>/g,'&gt;');
+    }
+    function escapeAttr(s) {
+      return String(s).replace(/&/g,'&amp;').replace(/"/g,'&quot;');
+    }
+
+    function renderCard(item, ep, isLive) {
+      const live = isLive ? ' live-card' : '';
+      let html = '<article class="pod-card' + live + '">';
+      html += '<h3>' + escapeHtml(item.title) + '</h3>';
+      html += '<p class="pod-meta">' + escapeHtml(item.hosts) + (item.schedule ? ' · ' + escapeHtml(item.schedule) : '') + (item.type ? ' · ' + escapeHtml(item.type) : '') + '</p>';
+      html += '<p class="pod-desc">' + escapeHtml(item.desc) + '</p>';
+      if (ep) html += player(ep);
+      html += '<div class="btn-row">';
+      if (item.liveUrl) html += btn('▶ En direct / site', item.liveUrl, 'btn-gold');
+      if (item.listenUrl && item.listenUrl !== item.liveUrl) html += btn('🎧 Écouter', item.listenUrl, 'btn-outline');
+      const dl = item.downloadUrl || item.episodesUrl || item.listenUrl;
+      if (dl) html += btn('📥 Télécharger / épisodes', dl, 'btn-outline');
+      html += '</div>';
+      if (item.platforms && item.platforms.length) {
+        html += '<p class="platforms">Plateformes : ' + item.platforms.map(escapeHtml).join(' · ') + '</p>';
+      }
+      html += '</article>';
+      return html;
+    }
+
+    Promise.all([
+      fetch('catalog.json').then(r => r.json()),
+      fetch('latest-episodes.json').then(r => r.json()).catch(() => ({}))
+    ]).then(function (data) {
+      const catalog = data[0];
+      const latest = data[1] || {};
+
+      liveEl.innerHTML = catalog.live.map(function (item) {
+        const ep = item.rssId && latest[item.rssId] && !latest[item.rssId].error ? latest[item.rssId] : null;
+        return renderCard(item, ep, true);
+      }).join('');
+
+      podEl.innerHTML = catalog.podcasts.map(function (item) {
+        const ep = item.rssId && latest[item.rssId] && !latest[item.rssId].error ? latest[item.rssId] : null;
+        return renderCard(item, ep, false);
+      }).join('');
+    }).catch(function () {
+      podEl.innerHTML = '<p class="loading">Impossible de charger le catalogue. <a href="catalog.json" style="color:var(--or-clair)">Voir catalog.json</a></p>';
+    });
+  })();
+  </script>
+</body>
+</html>
