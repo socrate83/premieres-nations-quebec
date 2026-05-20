@@ -1,0 +1,419 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>#52 - Le Vêtement Autochtone — Peaux, Fibres et Savoir-Faire Millénaires</title>
+    <meta name="description" content="Avant les colonisateurs, les peuples autochtones du Québec maîtrisaient un art vestimentaire millénaire : tannage, broderie au porc-épic, fourrures, mocassins. Un savoir transmis de mère en fille depuis des millénaires.">
+    <style>
+        * { box-sizing: border-box; margin: 0; padding: 0; }
+        body { font-family: Georgia, serif; background-color: #fcfaf7; color: #333; line-height: 1.8; }
+
+        /* HERO */
+        .hero {
+            display: flex;
+            flex-wrap: wrap;
+            min-height: 480px;
+            background: #1a1a1a;
+        }
+        .hero-img {
+            flex: 1;
+            min-width: 280px;
+            max-width: 50%;
+            overflow: hidden;
+        }
+        .hero-img img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            display: block;
+        }
+        .hero-text {
+            flex: 1;
+            min-width: 280px;
+            padding: 3rem 2.5rem;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            background: linear-gradient(135deg, #1a1a1a, #2c1a0e);
+        }
+        .badge {
+            display: inline-block;
+            font-size: 0.7rem;
+            letter-spacing: 3px;
+            text-transform: uppercase;
+            color: #E8B020;
+            font-weight: 700;
+            margin-bottom: 1rem;
+        }
+        .hero-text h1 {
+            font-family: 'Georgia', serif;
+            font-size: 1.9rem;
+            color: #fff;
+            line-height: 1.25;
+            margin-bottom: 1.2rem;
+        }
+        .hero-text .intro {
+            color: rgba(255,255,255,0.7);
+            font-size: 0.95rem;
+            line-height: 1.7;
+            margin-bottom: 1.8rem;
+        }
+        .btn-row { display: flex; gap: 1rem; flex-wrap: wrap; }
+        .btn-primary {
+            background: #C8920A;
+            color: #000;
+            font-weight: 700;
+            font-size: 0.8rem;
+            letter-spacing: 1px;
+            text-transform: uppercase;
+            padding: 0.6rem 1.5rem;
+            border-radius: 30px;
+            text-decoration: none;
+        }
+        .btn-fb {
+            background: #1877F2;
+            color: #fff;
+            font-weight: 700;
+            font-size: 0.8rem;
+            padding: 0.6rem 1.2rem;
+            border-radius: 30px;
+            text-decoration: none;
+        }
+
+        /* CONTENU */
+        .content { max-width: 820px; margin: 0 auto; padding: 3rem 1.5rem; }
+        .meta { color: #888; font-size: 0.88rem; font-style: italic; border-bottom: 1px solid #ddd; padding-bottom: 1rem; margin-bottom: 2rem; }
+        .lead {
+            font-size: 1.15em;
+            font-weight: bold;
+            color: #2c5530;
+            border: 2px solid #d4a574;
+            padding: 25px;
+            margin: 0 0 2.5rem;
+            font-style: italic;
+            background: #fff;
+            border-radius: 10px;
+        }
+        h2 {
+            color: #2c5530;
+            margin: 3rem 0 1rem;
+            border-left: 6px solid #d4a574;
+            padding-left: 20px;
+            font-variant: small-caps;
+            font-size: 1.6em;
+        }
+        p { margin-bottom: 1.2rem; }
+        ul { margin: 0 0 1.5rem 1.5rem; }
+        ul li { margin-bottom: 0.5rem; }
+
+        .highlight {
+            background: #f4ece4;
+            padding: 25px;
+            border-radius: 12px;
+            border-right: 8px solid #2c5530;
+            margin: 2rem 0;
+        }
+        .quote {
+            font-style: italic;
+            color: #444;
+            border-left: 4px double #d4a574;
+            padding-left: 30px;
+            margin: 2rem 3rem;
+            font-size: 1.1em;
+        }
+
+        /* IMAGES */
+        .img-float-right {
+            float: right;
+            margin: 0 0 20px 25px;
+            width: 270px;
+            border-radius: 10px;
+            box-shadow: 0 4px 12px rgba(0,0,0,0.15);
+        }
+        .img-center {
+            display: block;
+            margin: 2rem auto;
+            width: 100%;
+            max-width: 600px;
+            border-radius: 12px;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.15);
+        }
+        .img-caption {
+            text-align: center;
+            font-size: 0.82em;
+            color: #999;
+            font-style: italic;
+            margin-top: -1rem;
+            margin-bottom: 2rem;
+        }
+        .clearfix::after { content: ""; display: table; clear: both; }
+
+        /* GALERIE */
+        .gallery {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+            gap: 1rem;
+            margin: 2.5rem 0;
+        }
+        .gallery-item { border-radius: 10px; overflow: hidden; border: 1px solid rgba(200,146,10,0.3); }
+        .gallery-item img { width: 100%; height: 160px; object-fit: cover; display: block; }
+        .gallery-item p { padding: 0.5rem; font-size: 0.78rem; color: #666; text-align: center; font-style: italic; }
+
+        /* STAT */
+        .stat-box {
+            text-align: center;
+            background: linear-gradient(135deg, #2c5530, #1a3a1f);
+            color: white;
+            padding: 2rem;
+            border-radius: 15px;
+            margin: 2.5rem 0;
+        }
+        .stat-box span { font-size: 2.2em; font-weight: bold; display: block; color: #d4a574; margin-bottom: 0.5rem; }
+
+        /* PARTAGE */
+        .share-section {
+            background: #1a1a1a;
+            color: #fff;
+            padding: 2.5rem;
+            border-radius: 15px;
+            margin-top: 3rem;
+            text-align: center;
+        }
+        .share-section h3 { color: #E8B020; margin-bottom: 1.2rem; font-size: 1.1rem; letter-spacing: 2px; text-transform: uppercase; }
+        .share-buttons { display: flex; gap: 0.8rem; flex-wrap: wrap; justify-content: center; }
+        .share-buttons a {
+            padding: 0.6rem 1.2rem;
+            border-radius: 25px;
+            font-size: 0.82rem;
+            font-weight: 700;
+            text-decoration: none;
+        }
+        .s-fb { background: #1877F2; color: #fff; }
+        .s-fbg { background: #E8B020; color: #000; }
+        .s-wa { background: #25D366; color: #fff; }
+        .s-em { background: #555; color: #fff; }
+
+        /* NAV */
+        .nav-art {
+            display: flex;
+            justify-content: space-between;
+            margin: 3rem 0 1rem;
+            flex-wrap: wrap;
+            gap: 0.8rem;
+        }
+        .nav-art a {
+            text-decoration: none;
+            background: #2c5530;
+            color: white;
+            padding: 0.6rem 1.3rem;
+            border-radius: 6px;
+            font-size: 0.88rem;
+        }
+
+        .hashtags {
+            background: #f0f0f0;
+            padding: 1.2rem 1.5rem;
+            font-size: 0.85em;
+            border-radius: 8px;
+            color: #555;
+            margin-top: 2rem;
+            line-height: 2;
+        }
+        .sources {
+            margin-top: 2rem;
+            padding: 1.5rem;
+            background: #eee;
+            border-radius: 5px;
+            font-size: 0.85em;
+            color: #666;
+        }
+
+        @media (max-width: 600px) {
+            .hero-img { max-width: 100%; }
+            .hero-text h1 { font-size: 1.4rem; }
+            .img-float-right { float: none; width: 100%; margin: 0 0 1rem; }
+            .quote { margin: 1.5rem 0; }
+        }
+    </style>
+</head>
+<body>
+
+<!-- HERO SPLIT -->
+<div class="hero">
+    <div class="hero-img">
+        <img src="https://media.base44.com/images/public/69f23c5b09417d29099136be/905468e9a_generated_image.png"
+             alt="Femme autochtone tannant une peau en forêt boréale québécoise" />
+    </div>
+    <div class="hero-text">
+        <span class="badge">✦ Savoir-Faire &amp; Traditions — 20 mai 2026</span>
+        <h1>#52 — Le Vêtement Autochtone<br>Peaux, Fibres et Savoir-Faire Millénaires</h1>
+        <p class="intro">Avant les colonisateurs, les peuples autochtones du Québec maîtrisaient un art vestimentaire d'une sophistication absolue — tannage à la cervelle, broderie au porc-épic, fourrures d'hiver. Un savoir transmis de mère en fille depuis des millénaires.</p>
+        <div class="btn-row">
+            <a href="#contenu" class="btn-primary">Lire l'article ↓</a>
+            <a href="https://www.facebook.com/groups/1451283625021958" target="_blank" class="btn-fb">Partager 📢</a>
+        </div>
+    </div>
+</div>
+
+<!-- CONTENU -->
+<div class="content" id="contenu">
+
+    <div class="meta">
+        Série <em>Peuples Autochtones du Québec</em> — Article #52 | 20 mai 2026<br>
+        Groupe Facebook : <a href="https://www.facebook.com/groups/1451283625021958" target="_blank">Les Premières Nations au Québec</a>
+    </div>
+
+    <div class="lead">
+        « Quand une femme cousait un vêtement, elle n'assemblait pas seulement des peaux — elle transmettait à celui qui le porterait sa protection, son amour et la mémoire de toutes les femmes qui avaient cousu avant elle. » — Transmission orale attikamekw
+    </div>
+
+    <div class="clearfix">
+        <img src="https://media.base44.com/images/public/69f23c5b09417d29099136be/c71f5f0b1_generated_image.png"
+             alt="Broderie au piquant de porc-épic sur peau de daim" class="img-float-right" />
+        <p>Avant l'arrivée des Européens, les peuples autochtones du Québec avaient développé un art vestimentaire d'une <strong>sophistication absolue</strong> — parfaitement adapté aux rigueurs du territoire, riche de symboles culturels et spirituels, transmis de mère en fille sur des millénaires.</p>
+        <p>Un vêtement autochtone n'était jamais anodin. Il racontait qui était son porteur, à quelle nation il appartenait, quel rang il occupait dans la communauté. Porté par un guerrier, il parlait de ses exploits. Porté par une femme le jour de ses noces, il racontait l'histoire de sa lignée. Porté par un enfant, il le plaçait sous la protection des esprits.</p>
+        <p>Du mocassin à la grande robe cérémonielle, chaque pièce était le résultat de dizaines d'heures de travail, de savoirs botaniques, de protocoles spirituels et d'une connaissance intime des animaux du territoire.</p>
+    </div>
+
+    <h2>1. La Peau — Première Matière du Monde</h2>
+
+    <p>La peau de caribou, d'orignal, de castor et de loutre constituait la base du vestiaire des nations forestières du Québec. Mais transformer une peau brute en vêtement souple et durable était un processus long et exigeant — un savoir entier transmis sur des générations.</p>
+
+    <p>Chez les <strong>Innus et les Naskapis</strong>, le tannage à la cervelle de l'animal était la technique maîtresse. Après l'abattage, la peau était d'abord grattée avec un os plat pour retirer les poils et la graisse résiduelle. Elle était ensuite enduite de cervelle — riche en lipides naturels — qui pénétrait les fibres et les assouplissait en profondeur. Tendue sur un cadre de branches, elle était ensuite travaillée pendant des heures, parfois des jours entiers, en tirant, tordant, assouplissant sans relâche jusqu'à obtenir un cuir d'une douceur exceptionnelle.</p>
+
+    <div class="highlight">
+        <strong>Le fumage — secret de l'imperméabilité :</strong> Une fois tannée, la peau était suspendue au-dessus d'un feu de bois pourri. La fumée pénétrait les fibres et les imprégnait de composés naturels qui empêchaient la peau de durcir après le mouillage — problème fatal dans le Nord. Cette technique, développée des millénaires avant que les chimistes européens ne comprennent pourquoi elle fonctionnait, est un chef-d'œuvre de génie empirique.
+    </div>
+
+    <p>Chez les <strong>Cris et les Attikamekw</strong>, la peau d'orignal était privilégiée pour les mocassins et les jambières — plus épaisse et plus résistante à l'humidité des sous-bois denses. La peau de caribou, plus légère et plus souple, servait aux vêtements portés à même le corps pour maximiser la chaleur.</p>
+
+    <h2>2. Les Fibres — Du Tendon à l'Ortie</h2>
+
+    <img src="https://media.base44.com/images/public/69f23c5b09417d29099136be/068f0dfd3_generated_image.png"
+         alt="Mocassins et vêtements d'hiver en fourrure des Premières Nations" class="img-center" />
+    <p class="img-caption">Mocassins en peau de caribou, mitaines en fourrure de castor — chaque pièce représente des dizaines d'heures de travail artisanal.</p>
+
+    <p>Les nations du Saint-Laurent — <strong>Hurons-Wendat et Mohawks</strong> — maîtrisaient également le travail des fibres végétales. L'ortie sauvage, récoltée à l'automne après les premières gelées, était rouie dans l'eau courante pendant plusieurs semaines pour décomposer la partie verte et libérer les fibres longues. Ces fibres étaient ensuite filées à la main et tissées en étoffes légères pour les vêtements d'été.</p>
+
+    <p>Mais le fil le plus précieux restait le tendon d'orignal ou de caribou. Prélevé le long de la colonne vertébrale de l'animal, il était séché puis effiloché en fils fins d'une résistance exceptionnelle. Ce fil naturel possède une propriété remarquable : il se rétracte légèrement au contact de l'humidité, resserrant automatiquement la couture et la rendant imperméable — une innovation que les fabricants de vêtements techniques modernes n'ont redécouverte qu'au XXe siècle.</p>
+
+    <blockquote class="quote">
+        « Nos aiguilles étaient en os d'oiseau, nos fils en nerf de bête, nos patrons gravés dans la mémoire. Nous n'avions besoin de rien d'autre pour vêtir nos familles contre les grands froids. » — Parole d'une Aînée innue
+    </blockquote>
+
+    <h2>3. La Broderie au Porc-épic — Un Art Sacré</h2>
+
+    <div class="clearfix">
+        <img src="https://media.base44.com/images/public/69f23c5b09417d29099136be/9f6ed0a82_generated_image.png"
+             alt="Femme wendat en robe décorée et ceinture wampum" class="img-float-right" />
+        <p>Avant l'introduction des perles de verre européennes au XVIIe siècle, la broderie au piquant de porc-épic était l'art décoratif textile le plus élaboré des Premières Nations. Les piquants — jusqu'à 30 000 sur un seul animal — étaient récoltés avec soin, puis triés par taille.</p>
+        <p>Ils étaient ensuite teints avec des pigments naturels d'une précision botanique impressionnante : la racine de garance produisait des rouges profonds, les baies de sureau des violets intenses, l'écorce d'aulne des bruns chauds, certaines mousses des verts délicats. Les recettes de teinture étaient des secrets de femmes, jalousement gardés et transmis.</p>
+        <p>Avant d'être cousus, les piquants étaient aplatis entre les dents de l'artisane — une technique qui les rendait plats, souples et faciles à courber en motifs complexes. Les dessins géométriques qui en résultaient n'étaient pas purement décoratifs : ils encodaient des informations sur l'appartenance clanique, le statut social, les relations avec le monde spirituel.</p>
+    </div>
+
+    <p>Chez les <strong>Algonquins et les Abénaquis</strong>, les motifs de broderie étaient hérités matrilinéairement — une fille recevait les motifs de sa mère, qui les tenait de sa propre mère. Reconnaître les motifs permettait d'identifier à quelle famille appartenait le porteur du vêtement, même à plusieurs journées de marche de son territoire.</p>
+
+    <h2>4. S'Habiller selon les Saisons — Un Système Intelligent</h2>
+
+    <p>Le vestiaire autochtone était pensé en couches, comme un système de régulation thermique parfaitement adapté au climat québécois :</p>
+
+    <ul>
+        <li><strong>Printemps / Été</strong> : tunique légère en peau tannée blanche, jambières courtes, mocassins bas à semelle souple pour sentir le sol</li>
+        <li><strong>Automne</strong> : vêtements en peau d'orignal plus épaisse, doublure en fourrure de lapin ou de petit gibier, mocassins à semelle plus rigide</li>
+        <li><strong>Hiver</strong> : parka en peau de caribou portée poil à l'intérieur pour emprisonner l'air chaud, mitaines en peau de castor, chapeau en fourrure de loutre ou de renard</li>
+        <li><strong>Grand froid arctique (Inuits)</strong> : double couche — une première peau poil vers l'intérieur, une seconde poil vers l'extérieur, créant une enveloppe thermique quasi parfaite</li>
+    </ul>
+
+    <div class="stat-box">
+        <span>-40°C</span>
+        Température que les vêtements traditionnels inuits permettaient de supporter sans feu de camp, grâce à une ingéniosité textile développée sur 5 000 ans d'adaptation au Grand Nord.
+    </div>
+
+    <p>Les explorateurs polaires européens du XIXe siècle — Amundsen, Nansen — l'ont compris à leurs dépens : ceux qui ont survécu dans l'Arctique sont ceux qui ont abandonné leurs équipements "modernes" et adopté les vêtements inuits. Le <em>qulittaq</em> (parka inuit) reste à ce jour l'un des vêtements les plus thermiquement efficaces jamais conçus.</p>
+
+    <h2>5. Le Vêtement comme Langage</h2>
+
+    <p>Chaque détail vestimentaire était porteur d'un sens précis, lisible par quiconque partageait le même code culturel :</p>
+
+    <ul>
+        <li>Les <strong>ceintures wampum</strong> des Iroquoiens encodaient des traités, des généalogies et des récits historiques en perles de coquillage disposées selon un code précis</li>
+        <li>La <strong>coiffure en crête mohawk</strong> (<em>scalp lock</em>) identifiait les guerriers en temps de guerre — un marqueur d'identité et d'engagement</li>
+        <li>Les <strong>mocassins à motifs différents</strong> signalaient la nation d'origine : les Micmacs avaient leurs courbes florales, les Cris leurs géométries abstraites, les Innus leurs lignes brisées caractéristiques</li>
+        <li>Le <strong>deuil</strong> se marquait par un vêtement volontairement non décoré, porté pendant une période définie par la communauté avant le retour progressif aux ornements</li>
+        <li>Le <strong>vêtement cérémoniel</strong> n'était porté que lors des grandes occasions — pow-wow, mariages, traités — et rangé avec soin le reste du temps</li>
+    </ul>
+
+    <h2>6. Légendes — L'Esprit qui a Enseigné aux Femmes</h2>
+
+    <img src="https://media.base44.com/images/public/69f23c5b09417d29099136be/53dcaccfd_generated_image.png"
+         alt="Chasseur innu en tenue hivernale traditionnelle complète" class="img-center" />
+    <p class="img-caption">Un chasseur innu en tenue hivernale complète — parka en peau de caribou, bottes imperméables, mitaines en castor. Un système vestimentaire qui permettait de survivre à -40°C.</p>
+
+    <p>Une légende attikamekw raconte que c'est <strong>Meskemat</strong>, l'Esprit de la Forêt, qui a enseigné aux femmes l'art du tannage. Un hiver particulièrement sévère, une jeune femme ne savait comment protéger ses enfants du froid. Meskemat lui apparut sous la forme d'un orignal et se donna à elle. Alors qu'elle regardait la carcasse sans savoir quoi faire, une voix venue du vent lui murmura : « Prends sa cervelle. Frotte sa peau. Tends-la. Travaille-la. Fume-la. Elle te donnera ce dont tu as besoin. »</p>
+
+    <p>Depuis, tanner une peau est un acte de <strong>gratitude profonde</strong> envers l'animal et envers la Terre. Ne jamais gaspiller une peau est une loi non écrite mais absolue dans toutes les nations chasseresses du Québec.</p>
+
+    <blockquote class="quote">
+        « L'animal qui se donne à toi n'est pas vaincu. Il accepte de te vêtir et de te nourrir. Ta responsabilité, c'est d'honorer ce don jusqu'au dernier poil de sa peau. » — Transmission orale innue
+    </blockquote>
+
+    <p>La transmission de ce savoir était strictement féminine dans la plupart des nations. Une jeune fille commençait à apprendre à 7 ou 8 ans — d'abord à gratter, puis à assouplir, puis à couper selon des patrons entièrement mémorisés, puis enfin à coudre et à décorer. Une femme qui n'avait pas maîtrisé cet art ne pouvait pas assurer la survie de sa famille dans les grands froids du Québec.</p>
+
+    <h2>7. Un Héritage Vivant</h2>
+
+    <p>Aujourd'hui, des artisanes dans les communautés innues, attikamekw, cries et mohawks perpétuent cet art avec fierté. Les mocassins en peau de caribou, les mitaines brodées au fil de perles colorées, les tuniques décorées de motifs ancestraux connaissent une renaissance remarquable — portés lors des pow-wows, exposés dans des galeries d'art autochtone, enseignés dans les centres culturels communautaires.</p>
+
+    <p>Des artisanes comme <strong>Meky Ottawa</strong> (Algonquine) ou les couturières de Wendake perpétuent et réinventent ces techniques en les intégrant dans la mode contemporaine — prouvant que ce savoir n'est pas un artefact du passé, mais un art vivant, adaptatif, fier de ses racines.</p>
+
+    <p>Le vêtement traditionnel autochtone n'est pas un costume. C'est une <strong>armure identitaire</strong>, une déclaration d'appartenance à un territoire et à un peuple, et un pont vivant entre les générations qui ont cousu avant et celles qui coudront encore.</p>
+
+    <!-- GALERIE -->
+    <div class="gallery">
+        <div class="gallery-item">
+            <img src="https://media.base44.com/images/public/69f23c5b09417d29099136be/905468e9a_generated_image.png" alt="Tannage de peau en forêt boréale" />
+            <p>Tannage traditionnel — forêt boréale</p>
+        </div>
+        <div class="gallery-item">
+            <img src="https://media.base44.com/images/public/69f23c5b09417d29099136be/c71f5f0b1_generated_image.png" alt="Broderie au porc-épic sur peau de daim" />
+            <p>Broderie au piquant de porc-épic</p>
+        </div>
+        <div class="gallery-item">
+            <img src="https://media.base44.com/images/public/69f23c5b09417d29099136be/068f0dfd3_generated_image.png" alt="Mocassins et fourrures traditionnels" />
+            <p>Mocassins et fourrures d'hiver</p>
+        </div>
+        <div class="gallery-item">
+            <img src="https://media.base44.com/images/public/69f23c5b09417d29099136be/9f6ed0a82_generated_image.png" alt="Femme wendat en robe wampum" />
+            <p>Robe cérémonielle wendat</p>
+        </div>
+    </div>
+
+    <!-- PARTAGE -->
+    <div class="share-section">
+        <h3>Partager cet article</h3>
+        <div class="share-buttons">
+            <a href="https://www.facebook.com/sharer/sharer.php?u=https://socrate83.github.io/premieres-nations-quebec/article52.html" target="_blank" class="s-fb">📘 Facebook</a>
+            <a href="https://www.facebook.com/groups/1451283625021958" target="_blank" class="s-fbg">👥 Groupe Facebook</a>
+            <a href="https://wa.me/?text=Le%20vêtement%20autochtone%20%E2%80%94%20un%20art%20millénaire%20%3A%20https://socrate83.github.io/premieres-nations-quebec/article52.html" target="_blank" class="s-wa">💬 WhatsApp</a>
+            <a href="mailto:?subject=Article%20sur%20le%20vêtement%20autochtone&body=https://socrate83.github.io/premieres-nations-quebec/article52.html" class="s-em">✉️ Email</a>
+        </div>
+    </div>
+
+    <!-- NAVIGATION -->
+    <div class="nav-art">
+        <a href="article51.html">← #51 Article précédent</a>
+        <a href="Home.html">🏠 Accueil</a>
+        <a href="article53.html">#53 Suivant →</a>
+    </div>
+
+    <div class="hashtags">
+        <strong>Mots-clés :</strong> #PremièresNations #Québec #VêtementAutochtone #Tannage #BroderiePorc-épic #Mocassins #HuronsWendat #Innus #Cris #Attikamekw #SavoirFaire #CultureAutochtone #AvantLaColonisation #ArtisanatAutochtone #Réconciliation
+    </div>
+
+    <div class="sources">
+        <strong>Sources :</strong> Musée canadien de l'histoire — Collections textiles autochtones ; ICRAMT — Institut culturel et éducatif montagnais ; Université de Montréal — Ethnographie des Premières Nations ; Assemblée des Premières Nations du Québec et du Labrador (APNQL) ; Musée huron-wendat de Wendake.
+    </div>
+
+</div>
+</body>
+</html>

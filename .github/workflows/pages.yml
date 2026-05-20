@@ -1,0 +1,46 @@
+name: Deploy GitHub Pages
+
+on:
+  push:
+    branches: [main]
+  workflow_dispatch:
+
+permissions:
+  contents: read
+  pages: write
+  id-token: write
+
+concurrency:
+  group: pages
+  cancel-in-progress: false
+
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/configure-pages@v5
+      - name: Assembler le site (pages/ → racine publique)
+        shell: bash
+        run: |
+          set -euo pipefail
+          mkdir -p _site
+          cp -r assets _site/
+          cp -f index.html sitemap.xml _site/
+          sed -i 's|pages/Presentation.html|Presentation.html|g' _site/index.html
+          shopt -s nullglob
+          for f in pages/*.html; do
+            sed 's|\.\./assets/|assets/|g' "$f" > "_site/$(basename "$f")"
+          done
+          for f in pages/*.json; do
+            cp -f "$f" _site/
+          done
+          if [[ -f pages/BingSiteAuth.xml ]]; then cp -f pages/BingSiteAuth.xml _site/; fi
+      - uses: actions/upload-pages-artifact@v3
+        with:
+          path: _site
+      - id: deployment
+        uses: actions/deploy-pages@v4

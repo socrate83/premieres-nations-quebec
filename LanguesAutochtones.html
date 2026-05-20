@@ -1,0 +1,343 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Les Langues Autochtones du Québec — Revitalisation et Résistance</title>
+  <meta name="description" content="Les 11 langues autochtones du Québec : innu, cri, mohawk, wendat, malécite et autres. Revitalisation, enseignement, patrimoine linguistique."/>
+  <meta name="keywords" content="langues autochtones Québec, innu, cri, mohawk, wendat, linguistique, revitalisation des langues, Premières Nations"/>
+  <meta property="og:title" content="Les Langues Autochtones du Québec — Revitalisation et Résistance"/>
+  <meta property="og:description" content="Neuf langues autochtones survivent au Québec. Découvrez comment les Premières Nations les revitalisent face à l'extinction."/>
+  <!-- Google Tag Manager -->
+  <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src='https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);})(window,document,'script','dataLayer','GTM-NJH6MRLZ');</script>
+  <style>
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+    body { font-family: 'Georgia', serif; background: #0a0a0a; color: #f0e6d3; line-height: 1.8; }
+
+    nav {
+      position: sticky; top: 0; z-index: 100;
+      background: rgba(10,10,10,0.97);
+      border-bottom: 1px solid #8B6914;
+      padding: 0 2rem;
+      display: flex; align-items: center; justify-content: space-between;
+      height: 60px;
+    }
+    .nav-logo { color: #D4AF37; font-size: 1.1rem; font-weight: bold; text-decoration: none; }
+    .nav-links { display: flex; gap: 1.5rem; list-style: none; }
+    .nav-links a { color: #c8b99a; text-decoration: none; font-size: 0.9rem; transition: color 0.3s; }
+    .nav-links a:hover { color: #D4AF37; }
+
+    .hero {
+      background: linear-gradient(135deg, #0a1010 0%, #0a1a20 50%, #001010 100%);
+      padding: 4rem 2rem 3rem;
+      text-align: center;
+      border-bottom: 2px solid #8B6914;
+    }
+    .hero-tag {
+      display: inline-block;
+      background: rgba(212,175,55,0.15);
+      border: 1px solid #D4AF37;
+      color: #D4AF37;
+      padding: 0.3rem 1rem;
+      border-radius: 20px;
+      font-size: 0.8rem;
+      letter-spacing: 2px;
+      text-transform: uppercase;
+      margin-bottom: 1.5rem;
+    }
+    .hero h1 {
+      font-size: clamp(1.8rem, 4.5vw, 3rem);
+      color: #D4AF37;
+      margin-bottom: 1rem;
+      text-shadow: 0 0 30px rgba(212,175,55,0.3);
+      line-height: 1.25;
+    }
+    .hero-subtitle {
+      font-size: 1.05rem;
+      color: #c8b99a;
+      max-width: 620px;
+      margin: 0 auto 1.5rem;
+      font-style: italic;
+    }
+    .hero-meta { color: #8a7a6a; font-size: 0.85rem; letter-spacing: 1px; }
+
+    .container { max-width: 800px; margin: 0 auto; padding: 3rem 2rem; }
+
+    .intro-block {
+      background: linear-gradient(135deg, rgba(212,175,55,0.08), rgba(139,105,20,0.05));
+      border-left: 4px solid #D4AF37;
+      border-radius: 0 12px 12px 0;
+      padding: 2rem;
+      margin-bottom: 3rem;
+      font-size: 1.05rem;
+      color: #e0d4c0;
+    }
+
+    h2 {
+      color: #D4AF37;
+      font-size: 1.5rem;
+      margin: 3rem 0 1rem;
+      padding-bottom: 0.5rem;
+      border-bottom: 1px solid rgba(212,175,55,0.3);
+    }
+    h3 { color: #c8a84b; font-size: 1.1rem; margin: 1.5rem 0 0.5rem; }
+    p { margin-bottom: 1.2rem; color: #d4c4ae; }
+    strong { color: #e8d4a0; }
+
+    .article-img {
+      width: 100%; border-radius: 12px;
+      margin: 1.5rem 0;
+      border: 1px solid rgba(212,175,55,0.25);
+      display: block;
+      background: #1a1a1a;
+      min-height: 300px;
+    }
+    .img-caption {
+      text-align: center; font-size: 0.8rem;
+      color: #8a7a6a; font-style: italic;
+      margin-top: -0.8rem; margin-bottom: 1.5rem;
+    }
+
+    .langue-card {
+      background: rgba(255,255,255,0.03);
+      border: 1px solid rgba(212,175,55,0.2);
+      border-radius: 12px;
+      padding: 1.5rem;
+      margin-bottom: 1.5rem;
+    }
+    .langue-card .lang-name { color: #D4AF37; font-weight: bold; margin-bottom: 0.5rem; }
+    .langue-card p { margin-bottom: 0.5rem; font-size: 0.95rem; }
+    .locuteurs { font-size: 0.85rem; color: #8a7a6a; font-style: italic; margin-top: 0.5rem; }
+
+    .stats-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 1rem;
+      margin: 2rem 0;
+    }
+    .stat-box {
+      background: rgba(212,175,55,0.1);
+      border: 1px solid rgba(212,175,55,0.3);
+      border-radius: 10px;
+      padding: 1.5rem;
+      text-align: center;
+    }
+    .stat-box .number { font-size: 2rem; color: #D4AF37; font-weight: bold; }
+    .stat-box .label { font-size: 0.85rem; color: #8a7a6a; margin-top: 0.5rem; }
+
+    .citation {
+      border-left: 3px solid #D4AF37;
+      padding: 1rem 1.5rem; margin: 2rem 0;
+      background: rgba(212,175,55,0.05);
+      border-radius: 0 8px 8px 0;
+      font-style: italic; color: #c8b99a;
+    }
+
+    .share-section {
+      background: rgba(255,255,255,0.03);
+      border: 1px solid rgba(212,175,55,0.2);
+      border-radius: 16px;
+      padding: 2rem; margin-top: 4rem;
+      text-align: center;
+    }
+    .share-section h3 { color: #D4AF37; margin-bottom: 1.5rem; }
+    .share-buttons { display: flex; flex-wrap: wrap; gap: 0.8rem; justify-content: center; }
+    .share-btn {
+      padding: 0.6rem 1.2rem; border-radius: 8px; border: none;
+      cursor: pointer; font-size: 0.9rem; font-weight: bold;
+      text-decoration: none;
+      display: inline-flex; align-items: center; gap: 0.5rem;
+      transition: opacity 0.3s, transform 0.2s; color: white;
+    }
+    .share-btn:hover { opacity: 0.85; transform: translateY(-2px); }
+    .btn-fb { background: #1877F2; }
+    .btn-fb-group { background: #145dbf; }
+    .btn-wa { background: #25D366; color: #000; }
+    .btn-copy { background: #555; }
+
+    .nav-bottom {
+      display: flex; justify-content: space-between; align-items: center;
+      margin-top: 4rem; padding-top: 2rem;
+      border-top: 1px solid rgba(212,175,55,0.2);
+      gap: 1rem; flex-wrap: wrap;
+    }
+    .nav-btn {
+      display: inline-block; padding: 0.7rem 1.5rem;
+      background: rgba(212,175,55,0.1);
+      border: 1px solid rgba(212,175,55,0.3);
+      border-radius: 8px; color: #D4AF37;
+      text-decoration: none; font-size: 0.9rem; transition: all 0.3s;
+    }
+    .nav-btn:hover { background: rgba(212,175,55,0.2); border-color: #D4AF37; }
+
+    footer {
+      text-align: center; padding: 2rem;
+      color: #6a5a4a; font-size: 0.85rem;
+      border-top: 1px solid rgba(255,255,255,0.05);
+      margin-top: 3rem;
+    }
+
+    @media (max-width: 600px) {
+      .stats-grid { grid-template-columns: 1fr; }
+      .nav-links { gap: 0.8rem; }
+    }
+  </style>
+</head>
+<body>
+<noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-NJH6MRLZ" height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+
+<nav>
+  <a href="index.html" class="nav-logo">🪶 Premières Nations</a>
+  <ul class="nav-links">
+    <li><a href="index.html">Accueil</a></li>
+    <li><a href="index.html#nations">Articles</a></li>
+    <li><a href="Videos.html">Vidéos</a></li>
+    <li><a href="Audio.html">Audio</a></li>
+  </ul>
+</nav>
+
+<div class="hero">
+  <div class="hero-tag">✦ Culture &amp; Langue</div>
+  <h1>Les Langues Autochtones du Québec<br/>Revitalisation et Résistance</h1>
+  <p class="hero-subtitle">Neuf langues survivent. Des centaines d'initiatives luttent pour les sauver de l'extinction et les transmettre aux générations futures.</p>
+  <p class="hero-meta">📅 17 mai 2026 &nbsp;|&nbsp; 🪶 Les Premières Nations du Québec</p>
+</div>
+
+<div class="container">
+
+  <div class="intro-block">
+    Avant la colonisation, le Québec résonnait de plus de 11 langues autochtones distinctes — chacune porteuse d'une vision du monde, de savoirs ancestraux et de millénaires d'histoire. Aujourd'hui, neuf d'entre elles survivent, mais dans une fragilité extrême. La revitalisation linguistique est devenue l'une des priorités les plus urgentes des Premières Nations du Québec.
+  </div>
+
+  <h2>📊 L'État des Lieux Linguistique</h2>
+
+  <div class="stats-grid">
+    <div class="stat-box">
+      <div class="number">9</div>
+      <div class="label">Langues autochtones parlées au Québec</div>
+    </div>
+    <div class="stat-box">
+      <div class="number">3</div>
+      <div class="label">Familles linguistiques distinctes</div>
+    </div>
+  </div>
+
+  <p>Le Québec compte trois grandes familles linguistiques autochtones :</p>
+  <p><strong>Algonquienne</strong> — Innu, Cri, Algonquin, Atikamekw, Malécite, Mi'kmaq, Naskapi<br/>
+  <strong>Iroquoienne</strong> — Mohawk, Wendat, Huron<br/>
+  <strong>Esquimau-Aléoute</strong> — Inuktitut (Inuit)</p>
+
+  <p>Deux langues — le Wendat et le Wolastoqey (Malécite) — sont pratiquement éteintes mais connaissent des efforts de revitalisation. L'Inuktitut est en danger critique.</p>
+
+  <h2>🗣️ Nation par Nation — Les Langues Vivantes</h2>
+
+  <div class="langue-card">
+    <div class="lang-name">🌲 Innu (Montagnais)</div>
+    <p>Parlée par environ <strong>16 000 locuteurs</strong>, l'innu demeure l'une des langues autochtones les plus vitales du Québec. Des écoles d'immersion fonctionnent dans les communautés innu (Innu-Aimun). Des artistes comme <strong>Florent Vollant</strong> (Innu d'Uashat mak Maliotenam) composent en innu, créant une modernité linguistique.</p>
+    <div class="locuteurs">~16 000 locuteurs | État : Fragile mais actif</div>
+  </div>
+
+  <div class="langue-card">
+    <div class="lang-name">🦅 Cri (Eeyou)</div>
+    <p>L'eeyou chi est parlé par environ <strong>13 000 Cris</strong> dans la région de la Baie-James. Le dialecte s'est diversifié géographiquement mais reste relativement cohésif. Des outils numériques — applications mobiles, dictionnaires en ligne — facilitent l'apprentissage chez les jeunes Cris.</p>
+    <div class="locuteurs">~13 000 locuteurs | État : Stable</div>
+  </div>
+
+  <div class="langue-card">
+    <div class="lang-name">🦅 Mohawk (Kanien'kéha)</div>
+    <p>Le kanien'kéha est parlé par environ <strong>12 000 à 15 000 Mohawks</strong> — principalement à Kahnawake et Akwesasne. Des écoles d'immersion (comme la Kanien'kehà:ka Onkwawén:na Raotitiohkwa School à Kahnawake) fonctionnent depuis les années 1980. Le gouvernement québécois reconnaît le kanien'kéha comme langue officielle de Kahnawake.</p>
+    <div class="locuteurs">~14 000 locuteurs | État : Relativement stable</div>
+  </div>
+
+  <div class="langue-card">
+    <div class="lang-name">🌿 Algonquin (Anicinabemowin)</div>
+    <p>Parlée par environ <strong>3 000 à 4 000 Algonquins</strong>, l'anicinabemowin a décliné dramatiquement au cours du XXe siècle. Des efforts de revitalisation intensifs sont en cours : écoles d'immersion à Kitigan Zibi et en Outaouais, création de ressources pédagogiques, ateliers communautaires.</p>
+    <div class="locuteurs">~3 500 locuteurs | État : Critique — revitalisation en cours</div>
+  </div>
+
+  <div class="langue-card">
+    <div class="lang-name">🌊 Atikamekw (Atikamekw Nehiromowin)</div>
+    <p>Environ <strong>5 500 Atikamekw</strong> parlent leur langue, principalement en Haute-Mauricie (Manawan, Matachewan, Wemotaci). Une Université de l'Atikamekw Nehiromowin a vu le jour pour renforcer la transmission intergénérationnelle et la fierté linguistique.</p>
+    <div class="locuteurs">~5 500 locuteurs | État : Fragile mais mobilisée</div>
+  </div>
+
+  <div class="langue-card">
+    <div class="lang-name">🪶 Mi'kmaq (Mi'kmaki)</div>
+    <p>Parlée par environ <strong>3 000 à 4 000 Mi'kmaq</strong> au Québec et dans les Maritimes, le mi'kmaki connaît une renaissance grâce à des initiatives like l'application Rosetta Stone Mi'kmaq et des programmes d'immersion. Le symbolisme alphabétique unique mi'kmaq (syllabaire) est particulièrement valorisé.</p>
+    <div class="locuteurs">~3 500 locuteurs | État : Revitalisation active</div>
+  </div>
+
+  <div class="langue-card">
+    <div class="lang-name">🌾 Abénaquis (Abenaki)</div>
+    <p>Moins de <strong>500 locuteurs</strong> restent. Le programme d'immersion de Odanak travaille d'arrache-pied pour revitaliser l'abénaki par des ateliers communautaires, des enregistrements d'aînés et la création de matériel pédagogique numérique.</p>
+    <div class="locuteurs">~400-500 locuteurs | État : Critique</div>
+  </div>
+
+  <div class="langue-card">
+    <div class="lang-name">❄️ Inuktitut</div>
+    <p>Parlé par environ <strong>10 000 Inuits</strong> au Nunavik (nord québécois), l'inuktitut existe en plusieurs dialectes régionaux. Bien que moins menacé que d'autres langues autochtones, il fait face à la pression de l'anglais. Des programmes radiophoniques en inuktitut et des écoles d'immersion opèrent au Nunavik.</p>
+    <div class="locuteurs">~10 000 locuteurs | État : Relativement stable</div>
+  </div>
+
+  <h2>⚠️ Les Langues Critiquement Menacées</h2>
+
+  <div class="langue-card">
+    <div class="lang-name">🏺 Wendat (Wyandot)</div>
+    <p>Pratiquement éteinte au cours du XXe siècle — seulement quelques aînés parlaient le wendat dans les années 1980 — la langue connaît une revitalisation spectaculaire. Environ <strong>500 apprenants actifs</strong> et un <strong>premier locuteur natif d'origine dans 30 ans</strong> pourrait naître à Wendake d'ici 2030. Le Conseil de la Nation Wendat finance une immersion totale pour les enfants.</p>
+    <div class="locuteurs">~50-100 locuteurs fluides (aînés) + 500 apprenants | État : Renaissance en cours</div>
+  </div>
+
+  <div class="langue-card">
+    <div class="lang-name">🌊 Malécite (Wolastoqey Latuwewakon)</div>
+    <p>Seulement quelques aînés restent comme locuteurs natifs. Depuis 2015, une revitalisation sérieuse est en marche : école d'immersion Malécite à Kahnawake, dictionnaire numérique, ateliers intergénérationnels. Objectif ambitieux : créer une nouvelle génération de locuteurs d'ici 2035.</p>
+    <div class="locuteurs">~20-50 locuteurs natifs | État : Revitalisation critique en cours</div>
+  </div>
+
+  <h2>🌱 Les Initiatives de Revitalisation</h2>
+
+  <h3>Immersion Scolaire Totale</h3>
+  <p>Les écoles d'immersion sont au cœur de la stratégie. À <strong>Kahnawake</strong>, la Kanien'kehà:ka Onkwawén:na Raotitiohkwa School fonctionne depuis 1979 — tous les cours se donnent en kanien'kéha. À <strong>Wendake</strong>, le projet wendat d'immersion totale a reçu un financement majeur du gouvernement du Québec.</p>
+
+  <h3>Centres d'Amitié Autochtones</h3>
+  <p>Thirty-three centres financés à travers le Canada — dont plusieurs au Québec — offrent des cours de langue gratuits ou à coût réduit, accessibles aux autochtones en milieu urbain. Ces espaces deviennent des noyaux de transmission culturelle.</p>
+
+  <h3>Ressources Numériques</h3>
+  <p>Applications mobiles, dictionnaires en ligne, podcasts — la technologie modernise la transmission. Des initiatives comme <strong>FirstVoices</strong> offrent des plateformes collaboratives permettant aux communautés de documenter et d'enseigner leurs langues.</p>
+
+  <div class="citation">
+    « Notre langue est notre identité. Sans elle, nous perdons nos histoires, nos savoirs, notre connexion à la terre. Revitaliser notre langue, c'est nous revitaliser nous-mêmes. »<br/>
+    <span style="font-size:0.85rem;color:#8a7a6a;">— Chef communautaire, Initiative de revitalisation linguistique du Québec</span>
+  </div>
+
+  <!-- PARTAGE -->
+  <div class="share-section">
+    <h3>🪶 Partager cet article</h3>
+    <p style="color:#a09080;font-size:0.9rem;margin-bottom:1.5rem;">Soutenez la revitalisation des langues autochtones du Québec</p>
+    <div class="share-buttons">
+      <a class="share-btn btn-fb"
+         href="https://www.facebook.com/sharer/sharer.php?u=https://socrate83.github.io/premieres-nations-quebec/LanguesAutochtones.html"
+         target="_blank">📘 Facebook</a>
+      <a class="share-btn btn-fb-group"
+         href="https://www.facebook.com/groups/1451283625021958"
+         target="_blank">👥 Groupe Facebook</a>
+      <a class="share-btn btn-wa"
+         href="https://wa.me/?text=Les%20Langues%20Autochtones%20du%20Québec%20-%20Revitalisation%20https://socrate83.github.io/premieres-nations-quebec/LanguesAutochtones.html"
+         target="_blank">💬 WhatsApp</a>
+      <button class="share-btn btn-copy" onclick="navigator.clipboard.writeText(window.location.href);alert('Lien copié !')">🔗 Copier le lien</button>
+    </div>
+  </div>
+
+  <!-- NAVIGATION -->
+  <div class="nav-bottom">
+    <a href="FemmesAutochtones.html" class="nav-btn">← Article précédent</a>
+    <a href="index.html" class="nav-btn">🏠 Accueil</a>
+  </div>
+
+</div>
+
+<footer>
+  <p>🪶 Les Premières Nations au Québec — Projet éducatif et culturel</p>
+  <p>Contact : <a href="mailto:infodunet896@gmail.com">infodunet896@gmail.com</a></p>
+</footer>
+</body>
+</html>

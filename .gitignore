@@ -1,0 +1,7 @@
+_gh_push_tmp/
+_gh_clone/
+backups/
+.DS_Store
+Thumbs.db
+*.log
+.agents/
