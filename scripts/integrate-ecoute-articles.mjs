@@ -77,13 +77,15 @@ function wrapBlogArticle(html) {
   return html.replace(bodyRe, '<body' + attrs + '>\n' + inner + '\n</body>');
 }
 
-/** Pages nation : sections + intro dans <article> */
+/** Pages nation : intro + toutes les sections dans <article> */
 function wrapNationPage(html) {
   if (html.includes('<article class="article-ecoute"')) return html;
 
-  const introIdx = html.search(/<section class="intro-section"/i);
-  const containerIdx = html.search(/<div class="container"/i);
-  const startIdx = introIdx >= 0 ? introIdx : containerIdx;
+  const introWrap = html.search(/<div class="intro-wrap"/i);
+  const introSection = html.search(/<section class="intro-section"/i);
+  const firstSection = html.search(/<section class="section"/i);
+  const startIdx =
+    introWrap >= 0 ? introWrap : introSection >= 0 ? introSection : firstSection;
   if (startIdx < 0) return wrapBlogArticle(html);
 
   const footerIdx = html.search(/<footer[\s>]/i);

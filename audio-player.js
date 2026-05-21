@@ -37,7 +37,11 @@
 
     var h1InArticle = articleEl.querySelector('h1');
     var h1Page = document.querySelector('.hero h1, .hero-banner + * h1, header h1');
-    var mountAfter = h1InArticle || h1Page;
+    var mountAfter =
+      h1Page ||
+      h1InArticle ||
+      articleEl.querySelector('.intro-card, .intro-kword, h2') ||
+      articleEl.firstElementChild;
 
     mountControls(mountAfter || articleEl.firstElementChild);
     loadVoices();
