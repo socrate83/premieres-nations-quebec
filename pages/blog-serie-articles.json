@@ -1,0 +1,358 @@
+{
+  "baseUrl": "",
+  "introNote": "Série thématique sur les Premières Nations (thèmes nord-américains et canadiens). Chaque carte ouvre l’article complet sur ce site.",
+  "featured": {
+    "n": "★",
+    "title": "La Famille et les Premières Nations",
+    "teaser": "Les structures familiales, le respect des aînés et la transmission des savoirs.",
+    "file": "famille-premieres-nations.html"
+  },
+  "groups": [
+    {
+      "label": "Série 1 — articles 1 à 10",
+      "items": [
+        {
+          "n": "1",
+          "title": "Spiritualité et Nature",
+          "teaser": "Le lien sacré entre les Premières Nations et la nature, la spiritualité profondément ancrée dans l'environnement.",
+          "file": "01-spiritualite-nature-premieres-nations.html"
+        },
+        {
+          "n": "2",
+          "title": "Les Peuples des Plaines et le Bison",
+          "teaser": "La vie nomade des peuples des plaines et leur relation sacrée avec le bison.",
+          "file": "02-peuples-plaines-bison.html"
+        },
+        {
+          "n": "3",
+          "title": "La Côte Ouest : Potlatch et Totems",
+          "teaser": "Les traditions du potlatch et l'art fascinant des totems de la côte pacifique.",
+          "file": "03-cote-ouest-potlatch-totems.html"
+        },
+        {
+          "n": "4",
+          "title": "La Démocratie Iroquoise",
+          "teaser": "Le système de gouvernance de la Confédération iroquoise et son influence.",
+          "file": "04-iroquois-democratie.html"
+        },
+        {
+          "n": "5",
+          "title": "Médecine Traditionnelle",
+          "teaser": "Les pratiques de guérison et la pharmacopée traditionnelle des Premières Nations.",
+          "file": "05-medecine-traditionnelle.html"
+        },
+        {
+          "n": "6",
+          "title": "Art et Artisanat",
+          "teaser": "Les expressions artistiques : vannerie, poterie, orfèvrerie et travail du cuir.",
+          "file": "06-art-artisanat.html"
+        },
+        {
+          "n": "7",
+          "title": "Les Femmes et le Pouvoir",
+          "teaser": "Le rôle des femmes dans les sociétés traditionnelles et leur influence.",
+          "file": "07-femmes-pouvoir.html"
+        },
+        {
+          "n": "8",
+          "title": "Traités et Diplomatie",
+          "teaser": "Les traités signés et les négociations diplomatiques avec les colons.",
+          "file": "08-traite-diplomatie.html"
+        },
+        {
+          "n": "9",
+          "title": "Résistance et Survivance",
+          "teaser": "La résilience culturelle face aux défis historiques et contemporains.",
+          "file": "09-resistance-survivance.html"
+        },
+        {
+          "n": "10",
+          "title": "L'Astronomie et la Navigation",
+          "teaser": "Les connaissances célestes, les observatoires naturels et la navigation par les étoiles.",
+          "file": "10-astronomie-navigation.html"
+        }
+      ]
+    },
+    {
+      "label": "Série 2 — articles 11 à 20",
+      "items": [
+        {
+          "n": "11",
+          "title": "Qui sont les Métis ?",
+          "teaser": "Un peuple distinct au cœur du Canada.",
+          "file": "11-qui-sont-les-metis.html"
+        },
+        {
+          "n": "12",
+          "title": "Les Langues Autochtones",
+          "teaser": "Des trésors linguistiques menacés de disparition.",
+          "file": "12-langues-autochtones.html"
+        },
+        {
+          "n": "13",
+          "title": "Les Conteurs et leurs Histoires",
+          "teaser": "Les mythes, légendes et le trickster.",
+          "file": "13-mythes-et-legendes.html"
+        },
+        {
+          "n": "14",
+          "title": "La Cuisine Traditionnelle Autochtone",
+          "teaser": "Saveurs du territoire et traditions culinaires.",
+          "file": "14-cuisine-traditionnelle.html"
+        },
+        {
+          "n": "15",
+          "title": "Le Lacrosse : Le Jeu des Créateurs",
+          "teaser": "Du rituel sacré au sport national d'été.",
+          "file": "15-lacrosse-jeu-createurs.html"
+        },
+        {
+          "n": "16",
+          "title": "Les Sites Sacrés et Lieux de Pouvoir",
+          "teaser": "Où la terre et le ciel se rencontrent.",
+          "file": "16-sites-sacres.html"
+        },
+        {
+          "n": "17",
+          "title": "Les Premières Nations Aujourd'hui",
+          "teaser": "Entre traditions et modernité.",
+          "file": "17-premieres-nations-aujourdhui.html"
+        },
+        {
+          "n": "18",
+          "title": "Les Rites de Passage",
+          "teaser": "Naître, grandir et traverser les seuils de la vie.",
+          "file": "18-rites-de-passage.html"
+        },
+        {
+          "n": "19",
+          "title": "La Musique et les Chants Traditionnels",
+          "teaser": "La voix des ancêtres résonne encore.",
+          "file": "19-musique-chants-traditionnels.html"
+        },
+        {
+          "n": "20",
+          "title": "L'Art Rupestre",
+          "teaser": "Messages gravés dans la pierre par les ancêtres.",
+          "file": "20-art-rupestre.html"
+        }
+      ]
+    },
+    {
+      "label": "Série 3 — articles 21 à 30",
+      "items": [
+        {
+          "n": "21",
+          "title": "Les Clans et les Systèmes de Parenté",
+          "teaser": "L'organisation sociale des Premières Nations.",
+          "file": "21-clans-systemes-parente.html"
+        },
+        {
+          "n": "22",
+          "title": "La Vannerie et les Paniers Traditionnels",
+          "teaser": "Un art millénaire tissé de patience et de savoir-faire.",
+          "file": "22-vannerie-paniers.html"
+        },
+        {
+          "n": "23",
+          "title": "Les Premières Nations et l'Environnement",
+          "teaser": "Gardiens de la terre depuis des millénaires.",
+          "file": "23-environnement-ecologie.html"
+        },
+        {
+          "n": "24",
+          "title": "Les Chamanes et les Hommes/Femmes Médecine",
+          "teaser": "Guérisseurs entre le monde visible et l'invisible.",
+          "file": "24-chamanes-medecine.html"
+        },
+        {
+          "n": "25",
+          "title": "Les Danses Traditionnelles",
+          "teaser": "Le mouvement comme prière et célébration.",
+          "file": "25-danses-traditionnelles.html"
+        },
+        {
+          "n": "26",
+          "title": "Les Tatouages et la Peinture Corporelle",
+          "teaser": "Identité, statut et spiritualité sur la peau.",
+          "file": "26-tatouages-peinture.html"
+        },
+        {
+          "n": "27",
+          "title": "L'Éducation Autochtone Hier et Aujourd'hui",
+          "teaser": "Transmission des savoirs et défis contemporains.",
+          "file": "27-education-autochtone.html"
+        },
+        {
+          "n": "28",
+          "title": "Les Femmes Autochtones",
+          "teaser": "Matriarcats, pouvoir ancestral et voix contemporaines.",
+          "file": "28-femmes-autochtones.html"
+        },
+        {
+          "n": "29",
+          "title": "Les Premières Nations et la Guerre",
+          "teaser": "Guerriers, stratèges et soldats canadiens.",
+          "file": "29-guerre-militaire.html"
+        },
+        {
+          "n": "30",
+          "title": "Le Wampum - Ceintures de Protocole",
+          "teaser": "Paroles tissées dans des perles de coquillage.",
+          "file": "30-wampum-ceintures.html"
+        }
+      ]
+    },
+    {
+      "label": "Série 4 — articles 31 à 40",
+      "items": [
+        {
+          "n": "31",
+          "title": "Les Clans et Systèmes de Parenté",
+          "teaser": "Structures sociales ancestrales des peuples du Nord-Est.",
+          "file": "31-clans-parente-premieres-nations.html"
+        },
+        {
+          "n": "32",
+          "title": "Les Épidémies Avant Cartier",
+          "teaser": "Quand le Québec était déjà un paysage de fantômes avant l'arrivée des Européens.",
+          "file": "32-epidemies-avant-cartier.html"
+        },
+        {
+          "n": "33",
+          "title": "Les Noms de Lieux du Québec Décodés",
+          "teaser": "Ce que les noms autochtones révèlent sur notre territoire.",
+          "file": "33-noms-lieux-quebec-decodes.html"
+        },
+        {
+          "n": "34",
+          "title": "Les Devoirs des Grands-Parents",
+          "teaser": "Les super-héros des Premières Nations.",
+          "file": "34-devoirs-grands-parents.html"
+        },
+        {
+          "n": "35",
+          "title": "Les Navigateurs de la Forêt",
+          "teaser": "Se déplacer sans carte, sans boussole, sans GPS.",
+          "file": "35-navigateurs-foret.html"
+        },
+        {
+          "n": "36",
+          "title": "Le Commerce sans Monnaie",
+          "teaser": "Les routes d'échanges qui traversaient le continent avant l'euro et le dollar.",
+          "file": "36-route-commerces-sans-monnaie.html"
+        },
+        {
+          "n": "37",
+          "title": "Les Esclaves Autochtones",
+          "teaser": "La face cachée des guerres de captifs entre Premières Nations.",
+          "file": "37-esclaves-autochtones.html"
+        },
+        {
+          "n": "38",
+          "title": "L'Enfance chez les Premières Nations",
+          "teaser": "Une éducation sans banc ni cartable, où la communauté enseigne.",
+          "file": "38-enfance-premieres-nations.html"
+        },
+        {
+          "n": "39",
+          "title": "Les Routes Commerciales Autochtones",
+          "teaser": "Le commerce sans monnaie qui reliait l'Atlantique aux Rocheuses.",
+          "file": "39-routes-commerciales.html"
+        },
+        {
+          "n": "40",
+          "title": "Le Feu sans Allumettes",
+          "teaser": "L'art ancestral du feu par friction : patience, technique et sagesse.",
+          "file": "40-feu-sans-allumettes.html"
+        }
+      ]
+    },
+    {
+      "label": "Série 5 — articles 41 à 51",
+      "items": [
+        {
+          "n": "41",
+          "title": "Les Rêves : Messagers de l'Invisible",
+          "teaser": "Quand les songes sont des instructions et le sommeil un voyage sacré.",
+          "file": "41-reves-messagers-invisibles.html"
+        },
+        {
+          "n": "42",
+          "title": "Les Prophéties de la Grande Paix",
+          "teaser": "Comment une vision a créé la première démocratie de l'Amérique du Nord.",
+          "file": "42-prophéties-grande-paix.html"
+        },
+        {
+          "n": "43",
+          "title": "La Torture chez les Iroquois",
+          "teaser": "Mythes coloniaux et réalités historiques d'une pratique ritualisée.",
+          "file": "43-torture-iroquois-mythes-realites.html"
+        },
+        {
+          "n": "44",
+          "title": "Trois-Rivières : La Ville qui a Sauvé le Canada",
+          "teaser": "Savez-vous pourquoi cette ville a changé le destin du Québec ?",
+          "file": "44-trois-rivieres-capitale-poesie.html"
+        },
+        {
+          "n": "45",
+          "title": "L'Amérindianisation des Français",
+          "teaser": "Savez-vous que les Français sont devenus 'Amérindiens' avant de rester Français au Québec ?",
+          "file": "45-amirindianisation-francais.html"
+        },
+        {
+          "n": "46",
+          "title": "Les Truchements Oubliés",
+          "teaser": "Connaissez-vous ces précurseurs qui ont fondé le Canada avant les coureurs des bois ?",
+          "file": "46-truchements-precurseurs.html"
+        },
+        {
+          "n": "47",
+          "title": "Les Ojibwés Sauveurs du Canada",
+          "teaser": "Quelle nation autochtone a sauvé le Canada français de la faillite en 1660 ?",
+          "file": "47-radisson-groseilliers-alliance.html"
+        },
+        {
+          "n": "48",
+          "title": "L'Appel des Bois",
+          "teaser": "Pourquoi 80% des jeunes Canadiens préféraient-ils vivre chez les Amérindiens en 1685 ?",
+          "file": "48-appel-des-bois-liberte.html"
+        },
+        {
+          "n": "49",
+          "title": "La Grande Paix de Montréal 1701",
+          "teaser": "Savez-vous quel 'sacrifice' a fondé la plus grande alliance de paix de l'Histoire ?",
+          "file": "49-grande-paix-montreal-1701.html"
+        },
+        {
+          "n": "50",
+          "title": "Héritage vivant et alliances",
+          "teaser": "Texte compagnon dans la continuité des récits historiques de la série.",
+          "file": "50-heritage-vivant-alliances.html"
+        },
+        {
+          "n": "51",
+          "title": "Le vent, le ciel et le souffle",
+          "teaser": "Nuages comme calendrier, vent avant l’orage — le ciel vécu comme le reste du territoire, avec les autres fiches spiritualité et sites sacrés du catalogue.",
+          "file": "51-le-vent-le-ciel-et-le-souffle.html"
+        }
+      ]
+    },
+    {
+      "label": "Série 6 — articles 52 à 52",
+      "items": [
+        {
+          "n": "52",
+          "title": "Les Architectes du Silence",
+          "teaser": "Écoute, conseil et respect du lieu : le silence comme savoir des Premières Nations, avec les fiches spiritualité et sites sacrés du catalogue.",
+          "file": "52-les-architectes-du-silence.html"
+        }
+      ]
+    }
+  ],
+  "stats": {
+    "articlesNumbered": 52,
+    "withFeatured": true
+  }
+}
