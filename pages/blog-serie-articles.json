@@ -1,6 +1,6 @@
 {
   "baseUrl": "pages/",
-  "introNote": "Série thématique sur les Premières Nations (thèmes nord-américains et canadiens). Chaque carte ouvre l’article complet sur ce site.",
+  "introNote": "Tous les articles numérotés du site (#1 à #72 et les prochains) : une seule grille. Les nouveaux numéros s’ajoutent dans pages/blog-serie-articles.json et pages/articleNN.html.",
   "featured": {
     "n": "★",
     "title": "La Famille et les Premières Nations",
@@ -340,19 +340,155 @@
       ]
     },
     {
-      "label": "Série 6 — articles 52 à 52",
+      "label": "Série 6 — articles 52 à 56",
       "items": [
         {
           "n": "52",
-          "title": "Les Architectes du Silence",
-          "teaser": "Écoute, conseil et respect du lieu : le silence comme savoir des Premières Nations, avec les fiches spiritualité et sites sacrés du catalogue.",
-          "file": "52-les-architectes-du-silence.html"
+          "title": "Le Vêtement Autochtone — Peaux, Fibres et Savoir-Faire Millénaires",
+          "teaser": "Avant les colonisateurs, les peuples autochtones du Québec maîtrisaient un art vestimentaire millénaire : tannage, broderie au porc-épic, fourrures, mocassins. Un savoir transmis de mère en fille depuis des millénaires.",
+          "file": "article52.html"
+        },
+        {
+          "n": "53",
+          "title": "L'Habitat Traditionnel — Wigwam, Maison Longue et Tipi avant la Colonisation",
+          "teaser": "Wigwam algonquin, maison longue wendat, iglou inuit, tipi cri — les habitations des Premières Nations du Québec étaient des chefs-d'œuvre d'adaptation au territoire, bien avant l'arrivée des Européens.",
+          "file": "article53.html"
+        },
+        {
+          "n": "54",
+          "title": "Les Sentiers et la Connaissance du Territoire — Naviguer sans Cartes",
+          "teaser": "Avant les colonisateurs, les peuples autochtones du Québec connaissaient leur territoire avec une précision stupéfiante — lire les étoiles, les vents, les arbres, les rivières. Une science du territoire transmise oralement depuis des millénaires.",
+          "file": "article54.html"
+        },
+        {
+          "n": "55",
+          "title": "Le Canot — Âme des Rivières et Chef-d'Œuvre de l'Ingéniosité Autochtone",
+          "teaser": "Le canot d'écorce de bouleau des Premières Nations du Québec — chef-d'œuvre d'ingéniosité, construit sans métal ni scie, capable de naviguer sur les lacs et les rapides. Une technologie millénaire qui a changé l'histoire du continent.",
+          "file": "article55.html"
+        },
+        {
+          "n": "56",
+          "title": "La Médecine Traditionnelle Autochtone — Plantes, Guérisseurs et Savoirs Millénaires",
+          "teaser": "Avant les colonisateurs, les peuples autochtones du Québec disposaient d'une pharmacopée végétale d'une richesse stupéfiante — thé du Labrador, cèdre, achillée, gingembre sauvage. Une médecine holistique transmise oralement depuis des millénaires.",
+          "file": "article56.html"
+        }
+      ]
+    },
+    {
+      "label": "Série 7 — articles 57 à 62",
+      "items": [
+        {
+          "n": "57",
+          "title": "La Sexualité sans Culpabilité : Quand le corps n'était pas sale",
+          "teaser": "Avant l'arrivée des missionnaires, les peuples autochtones avaient une vision saine, équilibrée et sans tabou de la sexualité et du corps humain.",
+          "file": "article57.html"
+        },
+        {
+          "n": "58",
+          "title": "Les Drogues sans Addiction : Quand les substances guérissaient",
+          "teaser": "Le tabac sacré, le peyote, le chanvre : comment les peuples autochtones utilisaient les substances psychoactives comme médecines — sans créer de dépendance.",
+          "file": "article58.html"
+        },
+        {
+          "n": "59",
+          "title": "La Mort sans Peur : Quand mourir faisait partie de la vie",
+          "teaser": "Comment les peuples autochtones du Québec apprivoisaient la mort, choisissaient parfois leur moment et l'intégraient naturellement dans le cycle de la vie.",
+          "file": "article59.html"
+        },
+        {
+          "n": "60",
+          "title": "La Nourriture sans Supermarché : Quand manger prenait 6 heures par jour",
+          "teaser": "La gastronomie autochtone du Québec : chasse, cueillette, pêche et préparation comme actes spirituels — à l'opposé de notre fast-food industriel.",
+          "file": "article60.html"
+        },
+        {
+          "n": "61",
+          "title": "L'Enfance sans Chambre : Quand les enfants dormaient avec 20 personnes",
+          "teaser": "Les enfants autochtones grandissaient sans chambre individuelle — dans un cocon communautaire qui les rendait autonomes, équilibrés et reliés au monde.",
+          "file": "article61.html"
+        },
+        {
+          "n": "62",
+          "title": "Le Silence sans Téléphone : Quand ne rien faire était sacré",
+          "teaser": "Les peuples autochtones du Québec pratiquaient le silence comme art de vivre. Ce que nous appelons ennui, ils l'appelaient contemplation — source de sagesse.",
+          "file": "article62.html"
+        }
+      ]
+    },
+    {
+      "label": "Série 8 — articles 63 à 71",
+      "items": [
+        {
+          "n": "63",
+          "title": "Les 11 Nations du Québec : un voyage à travers leurs racines et leurs territoires",
+          "teaser": "Portrait complet des 11 Premières Nations du Québec : origines, territoires, populations et signification de leurs noms.",
+          "file": "article63.html"
+        },
+        {
+          "n": "64",
+          "title": "Langues vivantes, langues menacées : le panorama linguistique des Premières Nations québécoises",
+          "teaser": "11 nations, 11 langues, des millénaires de sagesse orale — et une course contre la montre pour les sauver de l'oubli.",
+          "file": "article64.html"
+        },
+        {
+          "n": "65",
+          "title": "Artisanat au cœur du territoire : bijoux, sculptures et textiles des Premières Nations",
+          "teaser": "Artisanat au cœur du territoire : bijoux, sculptures et textiles des Premières Nations",
+          "file": "article65.html"
+        },
+        {
+          "n": "66",
+          "title": "De la bannique au saumon fumé : la cuisine autochtone du Québec entre tradition et modernité",
+          "teaser": "De la bannique au saumon fumé : la cuisine autochtone du Québec entre tradition et modernité",
+          "file": "article66.html"
+        },
+        {
+          "n": "67",
+          "title": "Rituels qui rassemblent : pow-wow, tente à sudation et traditions vivantes",
+          "teaser": "Rituels qui rassemblent : pow-wow, tente à sudation et traditions vivantes",
+          "file": "article67.html"
+        },
+        {
+          "n": "68",
+          "title": "Visages d'une résistance : portraits de figures marquantes des Premières Nations du Québec",
+          "teaser": "Visages d'une résistance : portraits de figures marquantes des Premières Nations du Québec",
+          "file": "article68.html"
+        },
+        {
+          "n": "69",
+          "title": "Tourisme autochtone responsable : découvrir les communautés tout en les respectant",
+          "teaser": "Tourisme autochtone responsable : découvrir les communautés tout en les respectant",
+          "file": "article69.html"
+        },
+        {
+          "n": "70",
+          "title": "Défis et perspectives : les enjeux contemporains des Premières Nations du Québec",
+          "teaser": "Défis et perspectives : les enjeux contemporains des Premières Nations du Québec",
+          "file": "article70.html"
+        },
+        {
+          "n": "71",
+          "title": "Les Cérémonies Sacrées des Peuples Autochtones du Québec — Rituels, Transmission et Renouveau",
+          "teaser": "Pow-wow, tambour, loge de sudation, quête de vision, rites de passage... Plongez au cœur de la vie spirituelle des 11 nations autochtones du Québec.",
+          "file": "article71.html"
+        }
+      ]
+    },
+    {
+      "label": "Série 9 — article 72 et suivants",
+      "items": [
+        {
+          "n": "72",
+          "title": "L'Alimentation Traditionnelle Autochtone du Québec — Territoire, Mémoire et Renaissance",
+          "teaser": "Chasse, pêche, cueillette, sagamité, banique... Plongez dans les systèmes alimentaires traditionnels des 11 nations autochtones du Québec et leur renaissance gastronomique contemporaine.",
+          "file": "article72.html"
         }
       ]
     }
   ],
   "stats": {
-    "articlesNumbered": 52,
-    "withFeatured": true
+    "articlesNumbered": 72,
+    "withFeatured": true,
+    "nextArticle": 73
   }
 }
