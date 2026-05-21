@@ -58,6 +58,22 @@
       null;
   }
 
+  function homeHref() {
+    var script = document.querySelector('script[src*="audio-player"]');
+    if (script && script.src) {
+      try {
+        return new URL('Home.html', script.src).pathname;
+      } catch (e) {
+        /* ignore */
+      }
+    }
+    var parts = (window.location.pathname || '').split('/').filter(Boolean);
+    if (parts.length > 1) {
+      return '../Home.html';
+    }
+    return 'Home.html';
+  }
+
   function mountControls(anchor) {
     if (!anchor || articleEl.querySelector('.ecoute-controls')) return;
 
@@ -65,6 +81,12 @@
     controlsEl.className = 'ecoute-controls';
     controlsEl.setAttribute('role', 'toolbar');
     controlsEl.setAttribute('aria-label', 'Écouter cet article');
+
+    var accueil = document.createElement('a');
+    accueil.className = 'ecoute-accueil';
+    accueil.href = homeHref();
+    accueil.textContent = '← Accueil';
+    accueil.setAttribute('aria-label', 'Retour à l’accueil du site');
 
     var label = document.createElement('span');
     label.className = 'ecoute-label';
@@ -88,6 +110,7 @@
     statusEl.setAttribute('aria-live', 'polite');
     statusEl.textContent = 'Utilise la synthèse vocale de votre navigateur (aucun coût).';
 
+    controlsEl.appendChild(accueil);
     controlsEl.appendChild(label);
     controlsEl.appendChild(btnPlay);
     controlsEl.appendChild(btnStop);
