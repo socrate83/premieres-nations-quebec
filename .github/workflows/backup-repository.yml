@@ -1,0 +1,44 @@
+# Sauvegarde automatique du dépôt (artifact téléchargeable 90 jours)
+name: Sauvegarde du dépôt
+
+on:
+  workflow_dispatch:
+  schedule:
+    - cron: '0 6 * * 0'
+
+permissions:
+  contents: read
+
+jobs:
+  backup:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+
+      - name: Créer le bundle Git
+        run: |
+          STAMP=$(date -u +%Y-%m-%d_%H-%M-%S)
+          git bundle create "backup-${STAMP}.bundle" --all
+          echo "STAMP=${STAMP}" >> "$GITHUB_ENV"
+          git rev-parse HEAD > "backup-${STAMP}-commit.txt"
+          echo "https://socrate83.github.io/premieres-nations-quebec/" > "backup-${STAMP}-site.txt"
+
+      - name: Archiver les fichiers du site
+        run: |
+          tar czf "backup-${STAMP}-fichiers.tar.gz" \
+            --exclude='.git' \
+            --exclude='node_modules' \
+            .
+
+      - name: Publier l'artifact de sauvegarde
+        uses: actions/upload-artifact@v4
+        with:
+          name: sauvegarde-${{ env.STAMP }}
+          path: |
+            backup-*.bundle
+            backup-*-commit.txt
+            backup-*-site.txt
+            backup-*-fichiers.tar.gz
+          retention-days: 90
