@@ -31,6 +31,8 @@ jobs:
           cp -r assets _site/
           if [[ -d podcasts ]]; then cp -r podcasts _site/; fi
           cp -f index.html sitemap.xml _site/
+          [[ -f style.css ]] && cp -f style.css _site/
+          [[ -f audio-player.js ]] && cp -f audio-player.js _site/
           sed -i 's|pages/Presentation.html|Presentation.html|g' _site/index.html
           shopt -s nullglob
           for f in pages/*.html; do

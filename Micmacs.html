@@ -119,6 +119,7 @@
     .legende-card p{font-size:0.88rem;color:rgba(255,255,255,0.72);line-height:1.8}
     @media(max-width:600px){.legende-card{width:100%}}
   </style>
+  <link rel="stylesheet" href="style.css">
 </head>
 <body>
   <section class="hero">
@@ -154,7 +155,8 @@
   </div>
 
   <section class="section" id="origines">
-    <div class="container">
+    <article class="article-ecoute">
+<div class="container">
       <div class="sec-label">Aux racines du monde</div>
       <h2 class="sec-title">Origines et identité</h2>
       <div class="divider"></div>
@@ -310,7 +312,9 @@
       </div>
     </section>
 
-    <footer>
+    
+</article>
+<footer>
     <h3>Mi'kmaq — Les Gardiens de Gespeg</h3>
     <p>Cet article a été rédigé avec respect pour la nation mi'kmaq — peuple de la mer, des côtes et des forêts de la Gaspésie.</p>
     <p>🌐 <a href="https://tourismeautochtone.com/nations/mikmaq" target="_blank">tourismeautochtone.com</a></p>
@@ -320,5 +324,6 @@
   <script>
     function goTo(id){var el=document.getElementById(id);if(!el)return;var nav=document.getElementById('navbar');var navH=nav?nav.offsetHeight:0;var top=el.getBoundingClientRect().top+document.documentElement.scrollTop-navH-10;document.documentElement.scrollTop=top;document.body.scrollTop=top;}
   </script>
+  <script src="audio-player.js" defer></script>
 </body>
 </html>

@@ -121,6 +121,7 @@
     .legende-card p{font-size:0.88rem;color:rgba(255,255,255,0.72);line-height:1.8}
     @media(max-width:600px){.legende-card{width:100%}}
   </style>
+  <link rel="stylesheet" href="style.css">
 </head>
 <body>
   <section class="hero">
@@ -156,7 +157,8 @@
   </div>
 
   <section class="section" id="origines">
-    <div class="container">
+    <article class="article-ecoute">
+<div class="container">
       <div class="sec-label">Aux racines du monde arctique</div>
       <h2 class="sec-title">Origines et identité</h2>
       <div class="divider"></div>
@@ -328,7 +330,9 @@
       </div>
     </section>
 
-    <footer>
+    
+</article>
+<footer>
     <h3>Inuit — Les Gardiens du Grand Nord</h3>
     <p>Cet article clôt notre série sur les 11 Premières Nations et les Inuits du Québec. Un hommage à leur résilience, leur génie et leur beauté culturelle.</p>
     <p>🌐 <a href="https://www.krg.ca" target="_blank">krg.ca</a> | <a href="https://tourismeautochtone.com/nations/inuits" target="_blank">tourismeautochtone.com</a></p>
@@ -338,5 +342,6 @@
   <script>
     function goTo(id){var el=document.getElementById(id);if(!el)return;var nav=document.getElementById('navbar');var navH=nav?nav.offsetHeight:0;var top=el.getBoundingClientRect().top+document.documentElement.scrollTop-navH-10;document.documentElement.scrollTop=top;document.body.scrollTop=top;}
   </script>
+  <script src="audio-player.js" defer></script>
 </body>
 </html>

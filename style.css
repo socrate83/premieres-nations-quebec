@@ -1,0 +1,106 @@
+/**
+ * Styles — Lecteur vocal « Écouter cet article »
+ * À lier en complément du CSS inline de chaque page.
+ */
+.ecoute-controls {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 0.65rem 1rem;
+  margin: 1.25rem 0 1.75rem;
+  padding: 1rem 1.25rem;
+  border-radius: 14px;
+  background: linear-gradient(135deg, rgba(200, 146, 10, 0.12), rgba(92, 61, 30, 0.08));
+  border: 1px solid rgba(200, 146, 10, 0.35);
+  box-shadow: 0 4px 18px rgba(0, 0, 0, 0.12);
+}
+
+.ecoute-controls .ecoute-label {
+  font-family: 'Lato', 'Georgia', sans-serif;
+  font-size: 0.78rem;
+  font-weight: 700;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  color: #c8920a;
+  margin-right: 0.25rem;
+}
+
+.ecoute-btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.45rem;
+  padding: 0.65rem 1.25rem;
+  border: none;
+  border-radius: 50px;
+  font-family: 'Lato', 'Georgia', sans-serif;
+  font-size: 0.88rem;
+  font-weight: 700;
+  letter-spacing: 0.5px;
+  cursor: pointer;
+  transition: transform 0.2s ease, opacity 0.2s ease, box-shadow 0.2s ease;
+}
+
+.ecoute-btn:hover:not(:disabled) {
+  transform: translateY(-2px);
+}
+
+.ecoute-btn:disabled {
+  opacity: 0.45;
+  cursor: not-allowed;
+}
+
+.ecoute-btn-ecouter {
+  background: linear-gradient(135deg, #c8920a, #8b5e3c);
+  color: #1a1a1a;
+  box-shadow: 0 2px 10px rgba(200, 146, 10, 0.35);
+}
+
+.ecoute-btn-arreter {
+  background: rgba(30, 30, 30, 0.85);
+  color: #f5ecd7;
+  border: 1px solid rgba(200, 146, 10, 0.4);
+}
+
+.ecoute-status {
+  flex: 1 1 100%;
+  font-family: 'Lato', 'Georgia', sans-serif;
+  font-size: 0.82rem;
+  color: rgba(80, 60, 40, 0.85);
+  min-height: 1.2em;
+}
+
+/* Pages à fond sombre (articles thématiques) */
+body.ecoute-sombre .ecoute-controls {
+  background: linear-gradient(135deg, rgba(212, 175, 55, 0.1), rgba(20, 20, 20, 0.6));
+  border-color: rgba(212, 175, 55, 0.35);
+}
+
+body.ecoute-sombre .ecoute-controls .ecoute-label {
+  color: #e8b020;
+}
+
+body.ecoute-sombre .ecoute-status {
+  color: rgba(240, 230, 211, 0.65);
+}
+
+body.ecoute-sombre .ecoute-btn-arreter {
+  background: rgba(0, 0, 0, 0.5);
+  color: #f0e6d3;
+}
+
+@media (max-width: 520px) {
+  .ecoute-controls {
+    flex-direction: column;
+    align-items: stretch;
+  }
+
+  .ecoute-btn {
+    justify-content: center;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .ecoute-btn {
+    transition: none;
+  }
+}
