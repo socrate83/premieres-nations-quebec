@@ -914,7 +914,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
           .then(render)
           .catch(function () { tryFetch(urls, i + 1); });
       }
-      function start() { tryFetch(['blog-serie-articles.json'], 0); }
+      function start() { tryFetch(['pages/blog-serie-articles.json', 'blog-serie-articles.json'], 0); }
       if (document.readyState === 'loading') document.addEventListener('DOMContentLoaded', start);
       else start();
     })();

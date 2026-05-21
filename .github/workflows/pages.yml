@@ -28,7 +28,7 @@ jobs:
         run: |
           set -euo pipefail
           mkdir -p _site
-          cp -r assets _site/
+          if [[ -d assets ]]; then cp -r assets _site/; fi
           if [[ -d podcasts ]]; then cp -r podcasts _site/; fi
           cp -f index.html sitemap.xml _site/
           [[ -f style.css ]] && cp -f style.css _site/
