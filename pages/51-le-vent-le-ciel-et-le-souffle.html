@@ -45,12 +45,27 @@
   </style>
 </head>
 <body>
+<style id="pn-nav-accueil-style">
+.pn-nav-accueil{position:sticky;top:0;z-index:500;display:flex;flex-wrap:wrap;gap:0.5rem 1rem;align-items:center;justify-content:center;padding:0.65rem 1rem;background:#141414;border-bottom:2px solid #c8920a;font-family:'Lato',Georgia,system-ui,sans-serif}
+.pn-nav-accueil a{color:#e8b020;text-decoration:none;font-weight:700;font-size:0.82rem;padding:0.45rem 1rem;border-radius:50px;border:1px solid rgba(232,176,32,0.4);transition:background .2s,color .2s}
+.pn-nav-accueil a:hover{background:#c8920a;color:#000}
+.pn-nav-accueil a.pn-nav-accueil__home{background:#c8920a;color:#000;border-color:#c8920a}
+.pn-nav-accueil--light{background:#f4efe6;border-bottom:2px solid #8b4513}
+.pn-nav-accueil--light a{color:#2c5530;border-color:rgba(44,85,48,0.35)}
+.pn-nav-accueil--light a:hover{background:#2c5530;color:#fff}
+.pn-nav-accueil--light a.pn-nav-accueil__home{background:#2c5530;color:#fff}
+</style>
+<nav class="pn-nav-accueil" aria-label="Navigation">
+  <a class="pn-nav-accueil__home" href="../Home.html">← Retour à l'accueil</a>
+  <a href="../Home.html#serie-blog">📚 Tous les articles</a>
+</nav>
+
 <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-NJH6MRLZ" height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 <nav>
-  <a class="logo" href="index.html">Premières Nations</a>
+  <a class="logo" href="../Home.html">Premières Nations</a>
   <span>
-    <a href="Home.html#serie-blog">Série du blog</a>
-    <a href="index.html#nations">Nations du Québec</a>
+    <a href="../Home.html#serie-blog">Série du blog</a>
+    <a href="../Home.html#nations">Nations du Québec</a>
   </span>
 </nav>
 <header class="hero">
@@ -95,8 +110,8 @@
     <button type="button" class="sb" onclick="navigator.clipboard.writeText('https://socrate83.github.io/premieres-nations-quebec/pages/51-le-vent-le-ciel-et-le-souffle.html');this.textContent='Copié';">Copier le lien</button>
   </div>
   <div class="navb">
-    <a href="Home.html#serie-blog">Liste série</a>
-    <a href="index.html">Accueil nations</a>
+    <a href="../Home.html#serie-blog">Liste série</a>
+    <a href="../Home.html">Accueil nations</a>
   </div>
 </div>
 <footer>

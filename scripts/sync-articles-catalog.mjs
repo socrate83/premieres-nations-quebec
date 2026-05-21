@@ -110,3 +110,4 @@ catalog.baseUrl = 'pages/';
 
 fs.writeFileSync(catalogPath, JSON.stringify(catalog, null, 2) + '\n', 'utf8');
 console.log('Catalogue:', maxPublished, 'articles, groupes:', catalog.groups.length);
+console.log('Exécutez ensuite : node scripts/add-nav-accueil.mjs');
