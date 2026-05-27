@@ -3,179 +3,154 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>#60 - La Nourriture sans Supermarché : Quand manger prenait 6 heures par jour</title>
-    <meta name="description" content="La gastronomie autochtone du Québec : chasse, cueillette, pêche et préparation comme actes spirituels — à l'opposé de notre fast-food industriel.">
+    <title>Le Feu Sacré — Maîtrise du Feu et Rituels dans les Nations Autochtones | Les Premières Nations au Québec</title>
+    <meta name="description" content="Découvrez le rôle central du feu dans la spiritualité, la survie et les cérémonies des Premières Nations du Québec. Techniques traditionnelles et rituels sacrés.">
     <style>
-        body { font-family: Georgia, serif; max-width: 800px; margin: 0 auto; padding: 40px 20px; line-height: 1.8; background-color: #fcfaf7; color: #333; }
-        h1 { color: #2c5530; border-bottom: 4px solid #d4a574; padding-bottom: 15px; font-size: 2.4em; line-height: 1.2; margin-bottom: 10px; }
-        h2 { color: #2c5530; margin-top: 50px; border-left: 6px solid #d4a574; padding-left: 20px; font-variant: small-caps; font-size: 1.8em; }
-        h3 { color: #8b4513; margin-top: 30px; font-style: italic; font-size: 1.4em; }
-        .meta { color: #666; font-size: 0.95em; margin-bottom: 30px; font-style: italic; border-bottom: 1px solid #ddd; padding-bottom: 15px; }
-        .lead { font-size: 1.25em; font-weight: bold; color: #2c5530; border: 2px solid #d4a574; padding: 25px; margin: 40px 0; font-style: italic; background-color: #fff; border-radius: 10px; }
-        .highlight { background: #f4ece4; padding: 30px; border-radius: 12px; border-right: 8px solid #2c5530; margin: 40px 0; position: relative; box-shadow: 2px 2px 10px rgba(0,0,0,0.05); }
-        .highlight::before { content: "💡 SAVOIR ANCESTRAL"; display: block; font-weight: bold; color: #2c5530; margin-bottom: 15px; text-transform: uppercase; font-size: 0.9em; letter-spacing: 1px; }
-        .stat-box { text-align: center; background: linear-gradient(135deg, #2c5530, #1a3a1f); color: white; padding: 35px; border-radius: 15px; margin: 40px 0; box-shadow: 0 10px 20px rgba(0,0,0,0.15); }
-        .stat-box span { font-size: 2.5em; font-weight: bold; display: block; color: #d4a574; margin-bottom: 10px; }
-        table { width: 100%; border-collapse: collapse; margin: 40px 0; background: white; border-radius: 8px; overflow: hidden; }
-        th, td { padding: 18px; border: 1px solid #d4a574; text-align: left; }
-        th { background-color: #2c5530; color: white; text-transform: uppercase; font-size: 0.85em; letter-spacing: 0.5px; }
-        tr:nth-child(even) { background-color: #f9f5f0; }
-        .quote { font-style: italic; color: #444; border-left: 4px double #d4a574; padding-left: 30px; margin: 40px 60px; font-size: 1.15em; line-height: 1.6; }
-        .hashtags { background: #f0f0f0; padding: 25px; font-size: 0.9em; margin-top: 60px; border-radius: 8px; color: #444; border: 1px solid #ccc; line-height: 2; }
-        .cta { background: #fdf6e3; padding: 40px; border-radius: 15px; margin-top: 50px; text-align: center; border: 2px dashed #d4a574; }
-        .footer-sources { margin-top: 50px; padding: 30px; background-color: #eee; border-radius: 5px; font-size: 0.95em; color: #555; }
-        .nav-art { display: flex; justify-content: space-between; margin: 40px 0; flex-wrap: wrap; gap: 10px; }
-        .nav-art a { text-decoration: none; background: #2c5530; color: white; padding: 10px 20px; border-radius: 6px; font-size: 0.95em; }
-        .nav-art a:hover { background: #d4a574; }
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body { font-family: 'Georgia', serif; line-height: 1.8; color: #333; background: #f8f6f1; }
+        header { background: linear-gradient(135deg, #2c1810 0%, #5a3a2a 100%); color: white; padding: 20px 0; position: sticky; top: 0; z-index: 100; box-shadow: 0 2px 8px rgba(0,0,0,0.2); }
+        nav { max-width: 1200px; margin: 0 auto; padding: 0 20px; display: flex; justify-content: space-between; align-items: center; }
+        nav h1 { font-size: 24px; }
+        nav ul { list-style: none; display: flex; gap: 30px; }
+        nav a { color: white; text-decoration: none; font-weight: 500; transition: color 0.3s; }
+        nav a:hover { color: #d4a574; }
+        .hero { background: linear-gradient(135deg, #5a3a2a 0%, #3a2a1a 100%); color: white; padding: 80px 20px; text-align: center; position: relative; overflow: hidden; }
+        .hero::before { content: ''; position: absolute; top: 0; left: 0; width: 100%; height: 100%; background: rgba(0,0,0,0.3); }
+        .hero-content { max-width: 1200px; margin: 0 auto; position: relative; z-index: 2; }
+        .badge { display: inline-block; background: #d4a574; color: #2c1810; padding: 8px 16px; border-radius: 20px; font-size: 12px; font-weight: bold; margin-bottom: 20px; text-transform: uppercase; }
+        .hero h1 { font-size: 48px; margin-bottom: 15px; text-shadow: 2px 2px 4px rgba(0,0,0,0.5); }
+        .hero p { font-size: 18px; margin-bottom: 10px; }
+        .article-date { font-size: 14px; color: #ddd; }
+        .hero-image { width: 100%; max-height: 400px; object-fit: cover; margin: 40px 0 0 0; border-radius: 8px; }
+        .content { max-width: 900px; margin: 0 auto; padding: 60px 20px; }
+        section { margin-bottom: 60px; }
+        h2 { font-size: 32px; color: #2c1810; margin-bottom: 20px; border-bottom: 3px solid #d4a574; padding-bottom: 10px; }
+        h3 { font-size: 24px; color: #5a3a2a; margin-top: 30px; margin-bottom: 15px; }
+        p { margin-bottom: 15px; text-align: justify; }
+        .gallery { display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 20px; margin: 30px 0; }
+        .gallery img { width: 100%; height: 250px; object-fit: cover; border-radius: 8px; box-shadow: 0 4px 8px rgba(0,0,0,0.2); transition: transform 0.3s; }
+        .gallery img:hover { transform: scale(1.05); }
+        .legend { text-align: center; font-size: 13px; color: #666; font-style: italic; margin-top: 10px; }
+        .nav-buttons { display: flex; justify-content: space-between; margin-top: 60px; gap: 20px; }
+        .nav-btn { flex: 1; padding: 15px; background: #5a3a2a; color: white; text-decoration: none; border-radius: 8px; text-align: center; font-weight: bold; transition: background 0.3s; }
+        .nav-btn:hover { background: #2c1810; }
+        .share-section { background: #e8dcc8; padding: 30px; border-radius: 8px; margin-top: 40px; text-align: center; }
+        .share-section h3 { margin-top: 0; }
+        .share-buttons { display: flex; justify-content: center; gap: 15px; flex-wrap: wrap; margin-top: 15px; }
+        .share-btn { padding: 10px 20px; background: #5a3a2a; color: white; border: none; border-radius: 5px; cursor: pointer; font-weight: bold; text-decoration: none; transition: background 0.3s; }
+        .share-btn:hover { background: #2c1810; }
+        footer { background: #2c1810; color: white; padding: 30px 20px; text-align: center; margin-top: 60px; font-size: 13px; }
+        footer a { color: #d4a574; text-decoration: none; }
+        footer a:hover { text-decoration: underline; }
     </style>
-  <link rel="stylesheet" href="style.css">
 </head>
 <body>
-<style id="pn-nav-accueil-style">
-.pn-nav-accueil{position:sticky;top:0;z-index:500;display:flex;flex-wrap:wrap;gap:0.5rem 1rem;align-items:center;justify-content:center;padding:0.65rem 1rem;background:#141414;border-bottom:2px solid #c8920a;font-family:'Lato',Georgia,system-ui,sans-serif}
-.pn-nav-accueil a{color:#e8b020;text-decoration:none;font-weight:700;font-size:0.82rem;padding:0.45rem 1rem;border-radius:50px;border:1px solid rgba(232,176,32,0.4);transition:background .2s,color .2s}
-.pn-nav-accueil a:hover{background:#c8920a;color:#000}
-.pn-nav-accueil a.pn-nav-accueil__home{background:#c8920a;color:#000;border-color:#c8920a}
-.pn-nav-accueil--light{background:#f4efe6;border-bottom:2px solid #8b4513}
-.pn-nav-accueil--light a{color:#2c5530;border-color:rgba(44,85,48,0.35)}
-.pn-nav-accueil--light a:hover{background:#2c5530;color:#fff}
-.pn-nav-accueil--light a.pn-nav-accueil__home{background:#2c5530;color:#fff}
-</style>
-<nav class="pn-nav-accueil pn-nav-accueil--light" aria-label="Navigation">
-  <a class="pn-nav-accueil__home" href="Home.html">← Retour à l'accueil</a>
-  <a href="Home.html#serie-blog">📚 Tous les articles</a>
-</nav>
+    <header>
+        <nav>
+            <h1>🪶 Les Premières Nations au Québec</h1>
+            <ul>
+                <li><a href="https://socrate83.github.io/premieres-nations-quebec/">Accueil</a></li>
+                <li><a href="https://socrate83.github.io/premieres-nations-quebec/Home.html">Articles</a></li>
+                <li><a href="https://socrate83.github.io/premieres-nations-quebec/Videos.html">Vidéos</a></li>
+                <li><a href="https://socrate83.github.io/premieres-nations-quebec/Audio.html">Audio</a></li>
+            </ul>
+        </nav>
+    </header>
 
-<article class="article-ecoute">
-<h1>#60 — La Nourriture sans Supermarché : Quand manger prenait 6 heures par jour</h1>
-
-    <div class="meta">
-        Série <em>La Sagesse Oubliée</em> — Article #60 | Peuples autochtones du Québec et d'Amérique du Nord<br>
-        Groupe Facebook : <a href="https://www.facebook.com/groups/1451283625021958" target="_blank">Les Premières Nations au Québec</a>
+    <div class="hero">
+        <div class="hero-content">
+            <span class="badge">Feu & Spiritualité</span>
+            <h1>Le Feu Sacré — Maîtrise du Feu et Rituels dans les Nations Autochtones</h1>
+            <p>Découvrez le rôle central du feu dans la spiritualité, la survie et les cérémonies des Premières Nations du Québec.</p>
+            <p class="article-date">27 mai 2026</p>
+        </div>
+        <img src="https://via.placeholder.com/1200x400?text=Le+Feu+Sacré+—+Cérémonie+Autochtone" alt="Le Feu Sacré" class="hero-image">
     </div>
 
-    <div class="lead">
-        « Nous appelons "progrès" le fait de manger en 8 minutes devant un écran, seuls, un plat plastifié sans savoir d'où il vient. Les peuples autochtones appelaient ça "mourir à petit feu". »
+    <div class="content">
+        <section>
+            <h2>Le Feu : Centre Spirituel et Physique</h2>
+            <p>Le feu n'était pas qu'un simple outil pour les Premières Nations du Québec — c'était le cœur pulsant de la vie communautaire. Autour du feu, les familles se rassemblaient pour cuisiner, se réchauffer, transmettre les histoires et célébrer les rituels sacrés. Le feu était considéré comme un être vivant, une entité spirituelle digne de respect et de gratitude.</p>
+            <p>Dans les longues maisons hurons-wendat, le feu central brûlait en permanence, ses fumées s'échappant par un trou au sommet du toit. Ce feu était le symbole de l'unité, de la générosité et du partage — des valeurs fondamentales des peuples autochtones.</p>
+        </section>
+
+        <div class="gallery">
+            <div>
+                <img src="https://via.placeholder.com/300x300?text=Cérémonie+du+Feu" alt="Cérémonie du Feu">
+                <p class="legend">Cérémonie sacrée du feu lors d'un pow-wow — le feu unit la communauté dans la spiritualité.</p>
+            </div>
+            <div>
+                <img src="https://via.placeholder.com/300x300?text=Techniques+Traditionnelles" alt="Techniques de feu">
+                <p class="legend">Maîtrise traditionnelle du feu : arc à feu et bois dur pour créer l'étincelle initiale.</p>
+            </div>
+            <div>
+                <img src="https://via.placeholder.com/300x300?text=Maison+Longue" alt="Maison longue avec feu">
+                <p class="legend">Intérieur d'une maison longue iroquoienne avec le feu central — foyer de la vie communautaire.</p>
+            </div>
+            <div>
+                <img src="https://via.placeholder.com/300x300?text=Smudging" alt="Cérémonie de smudging">
+                <p class="legend">Smudging (purification par la fumée) — rituels sacrés de nettoyage spirituel.</p>
+            </div>
+        </div>
+
+        <section>
+            <h2>Techniques Traditionnelles d'Allumage du Feu</h2>
+            <h3>L'Arc à Feu (Bow Drill)</h3>
+            <p>Les Premières Nations du Québec maîtrisaient plusieurs techniques d'allumage du feu. L'une des plus remarquables était l'arc à feu, ou « bow drill ». Un archer en bois incurvé, une corde en cuir brut, une tige de bois dur et un morceau de bois tendre permettaient de créer suffisamment de friction pour générer une étincelle. Cette technique exigeait une grande habileté et une profonde compréhension des matériaux.</p>
+            <h3>Le Feu de Friction Rotatif</h3>
+            <p>Une autre méthode impliquait de faire tourner rapidement un bâton pointu dans une rainure creusée dans une planche d'écorce. La chaleur générée par la friction provoquait un sillon poussiéreux qui s'enflammait lentement. Cette technique, très efficace, était enseignée dès l'enfance aux futurs chasseurs et guerriers.</p>
+            <h3>Préservation du Feu</h3>
+            <p>Une fois allumé, le feu était précieux. Les Autochtones transportaient des tisons ardents en les plaçant dans des conteneurs d'écorce remplis de sciure fine humide, qui ralentissait la combustion. Cela permettait aux voyageurs de porter le feu sur des trajets de plusieurs jours sans difficulté.</p>
+        </section>
+
+        <section>
+            <h2>Le Feu dans les Rituels et Cérémonies</h2>
+            <h3>Le Pow-Wow et la Danse du Feu</h3>
+            <p>Lors des grands rassemblements, appelés pow-wow, le feu était le cœur de la cérémonie. Les danseurs et danseuses tournaient autour du feu central, leurs mouvements reflétant le cycle de la vie, la gratitude envers les ancêtres et l'harmonie avec la nature. Le feu illuminait les costumes traditionnels richement décorés, créant une atmosphère magique et spirituelle.</p>
+            <h3>Le Smudging : Purification par la Fumée</h3>
+            <p>Le smudging est une pratique sacrée de nettoyage spirituel utilisant la fumée du feu. Les Autochtones brûlaient des plantes sacrées comme la sauge, le cèdre, le foin d'odeur et le tabac. La fumée était considérée comme une intercessrice entre le monde physique et le monde des esprits. Cette pratique était utilisée avant les chasses, après les guerres et lors des rituels de guérison.</p>
+            <h3>Le Feu Initiatique</h3>
+            <p>Pour les jeunes garçons et filles, passer une nuit près du feu sacré représentait un rite de passage crucial. Seul ou en groupe, l'adolescent veillait le feu, méditait et cherchait une vision spirituelle. Cette expérience marquait le passage à l'âge adulte et forgeait le lien entre l'individu et le cosmos autochtone.</p>
+        </section>
+
+        <section>
+            <h2>Le Feu comme Langage et Communication</h2>
+            <p>Le feu servait également de système de communication à longue distance. Des feux allumés sur les collines et les promontoires transmettaient des messages à travers le territoire. Une colonne de fumée signifiait la paix, trois colonnes annonçaient un danger ou un rassemblement urgent. Ce système ingénieux permettait aux nations dispersées de rester connectées.</p>
+        </section>
+
+        <section>
+            <h2>Légendes et Histoires Autour du Feu</h2>
+            <p>Les légendes autochtones pullulent de récits sur le feu. Dans la mythologie huron-wendat, le feu était un cadeau du Grand Créateur, symbole de vie et de renaissance. Les histoires contaient comment les ancêtres avaient appris à maîtriser le feu et comment celui-ci avait transformé la civilisation des Premières Nations.</p>
+            <p>Une légende populaire raconte qu'un trickster (créature spirituelle malicieuse) avait autrefois gardé jalousement le feu pour lui-même. Seule la ruse et la bienveillance des Autochtones avaient permis de voler le feu et de le partager avec toute l'humanité. Cette histoire symbolisait l'importance de la générosité et du partage communautaire.</p>
+        </section>
+
+        <section>
+            <h2>Le Feu Aujourd'hui</h2>
+            <p>Bien que les techniques modernes aient remplacé l'arc à feu, le feu reste central dans la culture autochtone contemporaine. Les cérémonies du feu continuent lors des pow-wow, les rituels de smudging persistent et se renforcent même parmi les jeunes générations. Le feu demeure un symbole puissant de connexion à l'héritage ancestral et de spiritualité inébranlable.</p>
+        </section>
+
+        <div class="nav-buttons">
+            <a href="https://socrate83.github.io/premieres-nations-quebec/article59.html" class="nav-btn">← Article Précédent</a>
+            <a href="https://socrate83.github.io/premieres-nations-quebec/Home.html" class="nav-btn">Retour à l'Accueil</a>
+            <a href="https://socrate83.github.io/premieres-nations-quebec/article61.html" class="nav-btn">Article Suivant →</a>
+        </div>
+
+        <div class="share-section">
+            <h3>Partager cet article</h3>
+            <div class="share-buttons">
+                <a href="https://www.facebook.com/sharer/sharer.php?u=https://socrate83.github.io/premieres-nations-quebec/article60.html" class="share-btn">Facebook</a>
+                <a href="https://www.facebook.com/groups/1451283625021958/?share_url=https://socrate83.github.io/premieres-nations-quebec/article60.html" class="share-btn">Groupe Facebook</a>
+                <a href="https://wa.me/?text=Découvrez: Le Feu Sacré — Maîtrise du Feu et Rituels dans les Nations Autochtones https://socrate83.github.io/premieres-nations-quebec/article60.html" class="share-btn">WhatsApp</a>
+                <a href="https://whatsapp.com/channel/0029VbC5Wr46GcGLNwKItS1B" class="share-btn">📱 Chaîne WhatsApp</a>
+                <a href="mailto:?subject=Découvrez: Le Feu Sacré&body=https://socrate83.github.io/premieres-nations-quebec/article60.html" class="share-btn">Email</a>
+                <button class="share-btn" onclick="navigator.clipboard.writeText('https://socrate83.github.io/premieres-nations-quebec/article60.html'); alert('Lien copié!')">Copier le Lien</button>
+            </div>
+        </div>
     </div>
 
-    <p>Un Innu de la Côte-Nord, en 1600, consacrait environ <strong>six heures par jour</strong> à se nourrir : chasse, pêche, cueillette, préparation, cuisson, partage, discussion autour du repas. Six heures d'activité physique, sociale, spirituelle et cognitive autour d'un acte unique : manger.</p>
-
-    <p>Aujourd'hui, nous consacrons en moyenne <strong>27 minutes par jour</strong> à préparer nos repas. Nous avons "gagné" cinq heures. Et nous avons perdu — selon les épidémiologistes — notre santé digestive, cardiovasculaire, mentale et sociale.</p>
-
-    <h2>Le caribou : un être, pas une ressource</h2>
-
-    <p>Pour les Innus, les Cris et les Naskapis, le caribou n'est pas une "source de protéines". C'est un <strong>être qui accepte de se donner</strong> — à condition que le chasseur respecte certaines règles : gratitude, usage total de la carcasse, absence de gaspillage, retour des os à la terre.</p>
-
-    <p>Ce protocole — qui peut sembler "religieux" — est en réalité une <strong>éthique de la durabilité parfaitement fonctionnelle</strong>. Des communautés ont chassé le caribou pendant 8 000 ans sans en menacer les populations. L'industrie de l'élevage industriel a mis le caribou en danger en quelques décennies.</p>
-
-    <div class="highlight">
-        <p>Les Innus pratiquaient le <em>Mistapeo</em> — l'âme du caribou que le chasseur devait honorer après la chasse. Les os longs et le crâne étaient suspendus haut dans les arbres, hors de portée des prédateurs terrestres, pour que "l'esprit du caribou retourne au ciel et revienne dans un nouveau corps". Cette pratique assurait inconsciemment la préservation des zones de mise bas des caribous.</p>
-    </div>
-
-    <h2>Les Trois Sœurs : l'agriculture durable depuis 4 000 ans</h2>
-
-    <p>Les Hurons-Wendat et les Mohawks pratiquaient une technique agricole qui stupéfie aujourd'hui les agronomes : la culture des <strong>Trois Sœurs</strong> — maïs, haricots et courge.</p>
-
-    <p>Plantées ensemble, ces trois plantes forment un <strong>écosystème autonome</strong> :</p>
-    <ul>
-        <li>Le <strong>maïs</strong> monte haut, sert de tuteur aux haricots</li>
-        <li>Les <strong>haricots</strong> fixent l'azote dans le sol (engrais naturel) et grimpent sur le maïs</li>
-        <li>La <strong>courge</strong> couvre le sol de ses grandes feuilles (rétention d'humidité, anti-mauvaises herbes)</li>
-    </ul>
-
-    <p>Résultat : zéro engrais chimique, zéro pesticide, rendements stables pendant des siècles, alimentation variée et équilibrée. L'agriculture intensive moderne redécouvre ce système sous le nom d'"agroécologie" — inventé il y a 4 000 ans.</p>
-
-    <div class="stat-box">
-        <span>0 %</span>
-        Taux de gaspillage alimentaire dans une société autochtone traditionnelle. Chaque partie de l'animal était utilisée : viande, os, tendons, peau, graisse, organes, bile. Même les contenus stomacaux des herbivores, partiellement digérés, servaient de condiments.
-    </div>
-
-    <h2>La forêt comme garde-manger</h2>
-
-    <p>Un aîné algonquin ou atikamekw reconnaissait, en forêt québécoise, des centaines de plantes comestibles ou médicinales. La différence entre les deux était souvent mince : la plupart des plantes alimentaires avaient aussi des propriétés thérapeutiques.</p>
-
-    <p>Quelques exemples de ce savoir perdu :</p>
-    <ul>
-        <li><strong>La crosse de fougère</strong> (<em>fiddlehead</em>) — cueillie au printemps, excellente source de vitamines après l'hiver</li>
-        <li><strong>Le lichen tripe-de-roche</strong> — aliment de survie des grandes randonnées, bouillie roborative</li>
-        <li><strong>Le thé du Labrador</strong> (<em>Ledum palustre</em>) — infusé, anti-inflammatoire, stimulant, toujours utilisé par les Innus</li>
-        <li><strong>Les baies d'amélanchier</strong> — séchées et mélangées au lard, elles formaient le <em>pemmican</em>, aliment de conservation parfait pour les voyages</li>
-        <li><strong>La sève d'érable</strong> — connue des Mohawks et des Algonquins avant les Français, source de sucre et d'énergie au printemps</li>
-    </ul>
-
-    <h2>Le repas comme acte social</h2>
-
-    <p>Dans toutes les nations autochtones du Québec, le repas est un acte <strong>profondément communautaire</strong>. On ne mange pas seul si on peut l'éviter. On partage avant tout. Le chasseur revenant avec du gibier ne le garde pas pour lui : il le distribue aux aînés en premier, puis aux familles avec enfants, puis à lui-même.</p>
-
-    <div class="quote">
-        « Celui qui mange seul mange deux fois — une fois de la nourriture, une fois de la honte. »<br>
-        — <em>Proverbe algonquin, rapporté par Marius Barbeau, 1920</em>
-    </div>
-
-    <p>Ce principe de partage obligatoire n'est pas un idéal moral flou : c'est un <strong>système de redistribution économique</strong> qui garantissait que personne ne mourrait de faim dans la communauté, même les moins habiles chasseurs.</p>
-
-    <table>
-        <tr>
-            <th>Alimentation autochtone traditionnelle</th>
-            <th>Alimentation occidentale contemporaine</th>
-        </tr>
-        <tr>
-            <td>6h/jour consacrées à se nourrir (chasse, cueillette, préparation)</td>
-            <td>27 min de préparation, 8 min pour manger</td>
-        </tr>
-        <tr>
-            <td>0 % de gaspillage (utilisation totale de l'animal)</td>
-            <td>30 % des aliments jetés en Occident</td>
-        </tr>
-        <tr>
-            <td>Repas partagé, communautaire, rituel</td>
-            <td>Repas seul devant un écran</td>
-        </tr>
-        <tr>
-            <td>Culture des Trois Sœurs (agroécologie)</td>
-            <td>Monoculture intensive, pesticides, épuisement des sols</td>
-        </tr>
-        <tr>
-            <td>Chasse éthique avec protocole de gratitude</td>
-            <td>Élevage industriel, souffrance animale, antibiotiques</td>
-        </tr>
-    </table>
-
-    <h2>La renaissance gastronomique autochtone au Québec</h2>
-
-    <p>Un mouvement fascinant émerge au Québec depuis les années 2010 : des chefs autochtones réhabilitent les saveurs et techniques ancestrales dans des restaurants contemporains.</p>
-
-    <p><strong>La Récolte</strong>, <strong>Sagamité</strong> à Wendake, <strong>Chez Boulay</strong> (en collaboration avec des fournisseurs cris) — ces adresses proposent caribou fumé, bannique, sirop de bouleau, sagamité (potage de maïs wendat) et autres trésors gastronomiques que les cuisiniers autochtones connaissent depuis 8 000 ans.</p>
-
-    <p>Ce n'est pas de la "cuisine exotique". C'est la cuisine <em>d'ici</em> — la première cuisine du Québec, avant la tourtière et le pâté chinois.</p>
-
-    <div class="cta">
-        <p>🌿 <strong>Une idée concrète</strong></p>
-        <p>La prochaine fois que vous mangez, posez-vous trois questions : D'où vient ce que je mange ? Qui l'a produit ? Est-ce que je partage ce repas avec quelqu'un ? Trois questions que tout enfant autochtone connaissait avant de savoir lire.</p>
-    </div>
-
-    <div class="hashtags">
-        #PremièresNations #AutochtonesQuébec #GastronomieAutochtone #TroisSœurs #CaribouInnu #CuisineTraditionnelle #HuronsWendat #CrisQuébec #AgroécologieAutochtone #SagamitéWendake #ZéroGaspillage #ReconciliationCanada #SagessesOubliées
-    </div>
-
-    <div class="footer-sources">
-        <strong>Sources et références :</strong><br>
-        — Barbeau, M. (1920). <em>Huron and Wyandot Mythology</em>. Geological Survey of Canada<br>
-        — Moerman, D.E. (1998). <em>Native American Ethnobotany</em>. Timber Press<br>
-        — Mt. Pleasant, J. (2006). "The Science Behind the Three Sisters Mound System." <em>Histories of Maize</em>. Routledge<br>
-        — Gouvernement du Canada — Recensement autochtone des savoirs botaniques, 2015<br>
-        — Vézina, M. (2019). <em>La cuisine des Premières Nations</em>. Éditions du Boréal<br>
-        — Ministère du Tourisme du Québec — Tourisme autochtone et gastronomie, 2022
-    </div>
-
-    </article>
-
-<div class="nav-art">
-        <a href="59-la-mort-sans-peur.html">← #59 La Mort sans Peur</a>
-        <a href="61-enfance-sans-chambre.html">#61 L'Enfance sans Chambre →</a>
-    </div>
-
-
-  <script src="audio-player.js" defer></script>
+    <footer>
+        <p>&copy; 2026 Les Premières Nations au Québec — Projet éducatif dédié à l'histoire et la culture autochtone.</p>
+        <p><a href="mailto:infodunet896@gmail.com">Nous contacter</a> | <a href="https://whatsapp.com/channel/0029VbC5Wr46GcGLNwKItS1B">Suivre sur WhatsApp</a> | <a href="https://www.youtube.com/@lespremieresnationsauquebec">YouTube</a></p>
+    </footer>
 </body>
 </html>

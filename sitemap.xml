@@ -61,6 +61,16 @@
     <changefreq>monthly</changefreq>
   </url>
   <url>
+    <loc>https://socrate83.github.io/premieres-nations-quebec/article58.html</loc>
+    <priority>0.9</priority>
+    <changefreq>monthly</changefreq>
+  </url>
+  <url>
+    <loc>https://socrate83.github.io/premieres-nations-quebec/article59.html</loc>
+    <priority>0.9</priority>
+    <changefreq>monthly</changefreq>
+  </url>
+  <url>
     <loc>https://socrate83.github.io/premieres-nations-quebec/Videos.html</loc>
     <priority>0.7</priority>
     <changefreq>weekly</changefreq>
@@ -70,4 +80,9 @@
     <priority>0.7</priority>
     <changefreq>weekly</changefreq>
   </url>
-</urlset>
+</urlset>  <url>
+    <loc>https://socrate83.github.io/premieres-nations-quebec/article60.html</loc>
+    <lastmod>2026-05-27</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
