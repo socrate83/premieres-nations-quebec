@@ -107,8 +107,10 @@
             margin: 25px 0;
         }
     </style>
+  <link rel="stylesheet" href="style.css">
 </head>
 <body>
+
 <style id="pn-nav-accueil-style">
 .pn-nav-accueil{position:sticky;top:0;z-index:500;display:flex;flex-wrap:wrap;gap:0.5rem 1rem;align-items:center;justify-content:center;padding:0.65rem 1rem;background:#141414;border-bottom:2px solid #c8920a;font-family:'Lato',Georgia,system-ui,sans-serif}
 .pn-nav-accueil a{color:#e8b020;text-decoration:none;font-weight:700;font-size:0.82rem;padding:0.45rem 1rem;border-radius:50px;border:1px solid rgba(232,176,32,0.4);transition:background .2s,color .2s}
@@ -120,14 +122,17 @@
 .pn-nav-accueil--light a.pn-nav-accueil__home{background:#2c5530;color:#fff}
 </style>
 <nav class="pn-nav-accueil" aria-label="Navigation">
-  <a class="pn-nav-accueil__home" href="../Home.html">← Retour à l'accueil</a>
-  <a href="../Home.html#serie-blog">📚 Tous les articles</a>
+  <a class="pn-nav-accueil__home" href="Home.html">← Retour à l'accueil</a>
+  <a href="Articles.html">📚 Tous les articles</a>
 </nav>
 
-    <h1>La spiritualité et la nature chez les Premières Nations</h1>
+    <article class="article-ecoute">
+<h1>La spiritualité et la nature chez les Premières Nations</h1>
     <p class="subtitle">Quand la terre est mère et que chaque créature porte une âme</p>
 
-    <hr>
+    
+</article>
+<hr>
 
     <h2><span class="emoji-icon">🌍</span>Une vision sacrée du monde</h2>
     <p>Pour les Premières Nations, la nature n'est pas un décor. Ce n'est pas une ressource à exploiter. <strong>La nature est sacrée</strong>. Chaque montagne, chaque rivière, chaque arbre, chaque animal possède une essence spirituelle, une âme, une conscience.</p>
@@ -265,5 +270,7 @@
         <span>#AnimauxSacrés</span>
         <span>#GrandEsprit</span>
     </div>
+
+  <script src="audio-player.js" defer></script>
 </body>
 </html>

@@ -121,8 +121,10 @@
             font-style: normal;
         }
     </style>
+  <link rel="stylesheet" href="style.css">
 </head>
 <body>
+
 <style id="pn-nav-accueil-style">
 .pn-nav-accueil{position:sticky;top:0;z-index:500;display:flex;flex-wrap:wrap;gap:0.5rem 1rem;align-items:center;justify-content:center;padding:0.65rem 1rem;background:#141414;border-bottom:2px solid #c8920a;font-family:'Lato',Georgia,system-ui,sans-serif}
 .pn-nav-accueil a{color:#e8b020;text-decoration:none;font-weight:700;font-size:0.82rem;padding:0.45rem 1rem;border-radius:50px;border:1px solid rgba(232,176,32,0.4);transition:background .2s,color .2s}
@@ -134,14 +136,17 @@
 .pn-nav-accueil--light a.pn-nav-accueil__home{background:#2c5530;color:#fff}
 </style>
 <nav class="pn-nav-accueil" aria-label="Navigation">
-  <a class="pn-nav-accueil__home" href="../Home.html">← Retour à l'accueil</a>
-  <a href="../Home.html#serie-blog">📚 Tous les articles</a>
+  <a class="pn-nav-accueil__home" href="Home.html">← Retour à l'accueil</a>
+  <a href="Articles.html">📚 Tous les articles</a>
 </nav>
 
-    <h1>🧺 L'Art de la Vannerie : Quand la Nature Devient Tresse</h1>
+    <article class="article-ecoute">
+<h1>🧺 L'Art de la Vannerie : Quand la Nature Devient Tresse</h1>
     <p class="subtitle">Des mains qui dansent avec l'écorce, créant des paniers qui racontent des histoires millénaires</p>
 
-    <hr>
+    
+</article>
+<hr>
 
     <p>Dans la lumière filtrée d'une forêt pluviale de la Colombie-Britannique, une aînée huronne-Wendat manipule avec une délicatesse infinie des lamelles d'écorce de cèdre. Ses doigts usés par le temps, mais étrangement souples, entrelacent, croisent, tressent. Elle ne regarde pas ses mains. Elle sait. <strong>Ses doigts portent la mémoire de centaines d'années.</strong></p>
 
@@ -338,5 +343,7 @@
         <span>#Cèdre</span>
         <span>#Transmission</span>
     </div>
+
+  <script src="audio-player.js" defer></script>
 </body>
 </html>

@@ -21,11 +21,11 @@ const NAV_STYLE = `<style id="pn-nav-accueil-style">
 
 function navHtml(homeHref, light) {
   const cls = light ? 'pn-nav-accueil pn-nav-accueil--light' : 'pn-nav-accueil';
-  const serie = `${homeHref}#serie-blog`;
+  const articlesHref = homeHref.startsWith('../') ? '../Articles.html' : 'Articles.html';
   return `${NAV_STYLE}
 <nav class="${cls}" aria-label="Navigation">
   <a class="pn-nav-accueil__home" href="${homeHref}">← Retour à l'accueil</a>
-  <a href="${serie}">📚 Tous les articles</a>
+  <a href="${articlesHref}">📚 Tous les articles (1–72)</a>
 </nav>`;
 }
 
@@ -35,7 +35,8 @@ function isLightTheme(html) {
 
 function fixHomeLinks(html, homeHref) {
   let out = html
-    .replace(/href=["']Home\.html#serie-blog["']/gi, `href="${homeHref}#serie-blog"`)
+    .replace(/href=["']Home\.html#serie-blog["']/gi, 'href="Articles.html"')
+    .replace(/href=["']\.\.\/Home\.html#serie-blog["']/gi, 'href="Articles.html"')
     .replace(/href=["']Home\.html["']/gi, `href="${homeHref}"`)
     .replace(/href=["']index\.html#nations["']/gi, `href="${homeHref}#nations"`)
     .replace(/href=["']index\.html["']/gi, `href="${homeHref}"`);

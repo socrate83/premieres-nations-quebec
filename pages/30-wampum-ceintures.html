@@ -136,8 +136,10 @@
             margin: 5px;
         }
     </style>
+  <link rel="stylesheet" href="style.css">
 </head>
 <body>
+
 <style id="pn-nav-accueil-style">
 .pn-nav-accueil{position:sticky;top:0;z-index:500;display:flex;flex-wrap:wrap;gap:0.5rem 1rem;align-items:center;justify-content:center;padding:0.65rem 1rem;background:#141414;border-bottom:2px solid #c8920a;font-family:'Lato',Georgia,system-ui,sans-serif}
 .pn-nav-accueil a{color:#e8b020;text-decoration:none;font-weight:700;font-size:0.82rem;padding:0.45rem 1rem;border-radius:50px;border:1px solid rgba(232,176,32,0.4);transition:background .2s,color .2s}
@@ -149,14 +151,17 @@
 .pn-nav-accueil--light a.pn-nav-accueil__home{background:#2c5530;color:#fff}
 </style>
 <nav class="pn-nav-accueil" aria-label="Navigation">
-  <a class="pn-nav-accueil__home" href="../Home.html">← Retour à l'accueil</a>
-  <a href="../Home.html#serie-blog">📚 Tous les articles</a>
+  <a class="pn-nav-accueil__home" href="Home.html">← Retour à l'accueil</a>
+  <a href="Articles.html">📚 Tous les articles</a>
 </nav>
 
-    <h1>📿 Et si des perles pouvaient sceller la paix entre des nations ?</h1>
+    <article class="article-ecoute">
+<h1>📿 Et si des perles pouvaient sceller la paix entre des nations ?</h1>
     <p class="subtitle">Le Wampum — Paroles tissées, traités vivants, mémoire ancestrale</p>
 
-    <hr>
+    
+</article>
+<hr>
 
     <p>L'automne 1645. Le longhouse du village de Kanienkeh (territoire Mohawk, aujourd'hui en État de New York et Ontario). Une assemblée se tient autour du feu central. Des délégués de cinq nations sont présents : Mohawk, Oneida, Onondaga, Cayuga, et Seneca. Des tensions ont éclaté. Des disputes territoriales menacent l'unité de la Grande Loi de Paix.</p>
 
@@ -287,5 +292,7 @@
         <span>#Histoire</span>
         <span>#Renaissance</span>
     </div>
+
+  <script src="audio-player.js" defer></script>
 </body>
 </html>

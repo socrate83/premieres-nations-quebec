@@ -77,8 +77,10 @@
 
     @media(max-width:600px){.videos-grid{grid-template-columns:1fr}.top-nav{gap:1rem}}
   </style>
+  <link rel="stylesheet" href="style.css">
 </head>
 <body>
+
 
   <nav class="top-nav">
     <a href="index.html">🏠 Accueil</a>
@@ -89,7 +91,8 @@
 
   <div class="page-header">
     <div class="eyebrow">Médiathèque</div>
-    <h1>🎬 Vidéos</h1>
+    <article class="article-ecoute">
+<h1>🎬 Vidéos</h1>
     <p>Les Premières Nations représentent toutes les nations du Québec. Explorez leur histoire, leur culture et leurs traditions à travers nos vidéos.</p>
     <div class="gold-line"></div>
   </div>
@@ -188,5 +191,9 @@
     <p style="margin-top:0.5rem"><a href="https://www.facebook.com/groups/1451283625021958" target="_blank">Rejoindre notre groupe Facebook</a></p>
   </footer>
 
+
+</article>
+
+  <script src="audio-player.js" defer></script>
 </body>
 </html>

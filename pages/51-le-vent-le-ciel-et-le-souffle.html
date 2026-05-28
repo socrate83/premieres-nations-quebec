@@ -43,8 +43,10 @@
     footer { text-align: center; padding: 1.75rem 1rem; font-size: 0.78rem; color: #656056; border-top: 1px solid rgba(180,155,105,0.12); }
     footer a { color: #c9a962; }
   </style>
+  <link rel="stylesheet" href="style.css">
 </head>
 <body>
+
 <style id="pn-nav-accueil-style">
 .pn-nav-accueil{position:sticky;top:0;z-index:500;display:flex;flex-wrap:wrap;gap:0.5rem 1rem;align-items:center;justify-content:center;padding:0.65rem 1rem;background:#141414;border-bottom:2px solid #c8920a;font-family:'Lato',Georgia,system-ui,sans-serif}
 .pn-nav-accueil a{color:#e8b020;text-decoration:none;font-weight:700;font-size:0.82rem;padding:0.45rem 1rem;border-radius:50px;border:1px solid rgba(232,176,32,0.4);transition:background .2s,color .2s}
@@ -56,21 +58,22 @@
 .pn-nav-accueil--light a.pn-nav-accueil__home{background:#2c5530;color:#fff}
 </style>
 <nav class="pn-nav-accueil" aria-label="Navigation">
-  <a class="pn-nav-accueil__home" href="../Home.html">← Retour à l'accueil</a>
-  <a href="../Home.html#serie-blog">📚 Tous les articles</a>
+  <a class="pn-nav-accueil__home" href="Home.html">← Retour à l'accueil</a>
+  <a href="Articles.html">📚 Tous les articles</a>
 </nav>
 
 <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-NJH6MRLZ" height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 <nav>
-  <a class="logo" href="../Home.html">Premières Nations</a>
+  <a class="logo" href="Home.html">Premières Nations</a>
   <span>
-    <a href="../Home.html#serie-blog">Série du blog</a>
+    <a href="Articles.html">Série du blog</a>
     <a href="../Home.html#nations">Nations du Québec</a>
   </span>
 </nav>
 <header class="hero">
   <div class="tag">Article 51 · catalogue « Les Premières Nations »</div>
-  <h1>Le vent, le ciel et le souffle</h1>
+  <article class="article-ecoute">
+<h1>Le vent, le ciel et le souffle</h1>
   <p class="sub">Même fil que dans la série : spiritualité nouée au territoire, sites où la Terre monte jusqu’au ciel (article 16 du catalogue), voyage des corps célestes (article 10). Ici : <strong>l’air</strong>, porteur de saison, odeur et voix.</p>
   <p class="meta">Mai 2026 · Les visuels correspondent au thème ciel et air ; crédits sous chaque figure.</p>
 </header>
@@ -110,13 +113,17 @@
     <button type="button" class="sb" onclick="navigator.clipboard.writeText('https://socrate83.github.io/premieres-nations-quebec/pages/51-le-vent-le-ciel-et-le-souffle.html');this.textContent='Copié';">Copier le lien</button>
   </div>
   <div class="navb">
-    <a href="../Home.html#serie-blog">Liste série</a>
-    <a href="../Home.html">Accueil nations</a>
+    <a href="Articles.html">Liste série</a>
+    <a href="Home.html">Accueil nations</a>
   </div>
 </div>
 <footer>
   <p>Série « Peuples Autochtones du Québec » — article 51</p>
   <p><a href="mailto:infodunet896@gmail.com">infodunet896@gmail.com</a></p>
 </footer>
+
+</article>
+
+  <script src="audio-player.js" defer></script>
 </body>
 </html>

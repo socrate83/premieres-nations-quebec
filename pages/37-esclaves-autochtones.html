@@ -141,8 +141,10 @@
             border-radius: 0 0 8px 8px;
         }
     </style>
+  <link rel="stylesheet" href="style.css">
 </head>
 <body>
+
 <style id="pn-nav-accueil-style">
 .pn-nav-accueil{position:sticky;top:0;z-index:500;display:flex;flex-wrap:wrap;gap:0.5rem 1rem;align-items:center;justify-content:center;padding:0.65rem 1rem;background:#141414;border-bottom:2px solid #c8920a;font-family:'Lato',Georgia,system-ui,sans-serif}
 .pn-nav-accueil a{color:#e8b020;text-decoration:none;font-weight:700;font-size:0.82rem;padding:0.45rem 1rem;border-radius:50px;border:1px solid rgba(232,176,32,0.4);transition:background .2s,color .2s}
@@ -154,14 +156,17 @@
 .pn-nav-accueil--light a.pn-nav-accueil__home{background:#2c5530;color:#fff}
 </style>
 <nav class="pn-nav-accueil" aria-label="Navigation">
-  <a class="pn-nav-accueil__home" href="../Home.html">← Retour à l'accueil</a>
-  <a href="../Home.html#serie-blog">📚 Tous les articles</a>
+  <a class="pn-nav-accueil__home" href="Home.html">← Retour à l'accueil</a>
+  <a href="Articles.html">📚 Tous les articles</a>
 </nav>
 
-    <h1>⛓️ Les Esclaves Autochtones</h1>
+    <article class="article-ecoute">
+<h1>⛓️ Les Esclaves Autochtones</h1>
     <p class="subtitle">Savez-vous que les guerres entre Premières Nations généraient des captifs par milliers ?</p>
 
-    <hr>
+    
+</article>
+<hr>
 
   <figure>
        <img src="images/captifs.png" alt="Les captifs">
@@ -376,5 +381,7 @@
     <p style="text-align: center; margin-top: 40px; font-style: italic; color: #666;">
         Partagez vos réflexions en commentaires ! 🪶
     </p>
+
+  <script src="audio-player.js" defer></script>
 </body>
 </html>

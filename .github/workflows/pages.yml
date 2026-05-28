@@ -36,7 +36,12 @@ jobs:
           sed -i 's|pages/Presentation.html|Presentation.html|g' _site/index.html
           shopt -s nullglob
           for f in pages/*.html; do
-            sed 's|\.\./assets/|assets/|g' "$f" > "_site/$(basename "$f")"
+            sed -e 's|\.\./assets/|assets/|g' \
+                -e 's|\.\./style\.css|style.css|g' \
+                -e 's|\.\./audio-player\.js|audio-player.js|g' \
+                -e 's|\.\./Home\.html|Home.html|g' \
+                -e 's|\.\./Articles\.html|Articles.html|g' \
+                "$f" > "_site/$(basename "$f")"
           done
           for f in *.html; do
             if [[ "$(basename "$f")" != "index.html" ]]; then
