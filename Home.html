@@ -385,23 +385,23 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
     <h2 class="grid-title">Médiathèque</h2>
     <p class="grid-sub">Articles · Vidéos · Audio</p>
     <div class="media-cards">
-      <a class="media-card" href="#nations">
+      <a class="media-card" href="#serie-blog" id="media-card-articles">
         <div class="m-icon">📰</div>
         <h3>Articles</h3>
-        <p>12 articles approfondis sur les 11 Premières Nations et les Inuits du Québec.</p>
-        <div class="m-badge">12 articles</div>
+        <p id="media-articles-desc">Série numérotée sur les Premières Nations et les Inuits du Québec — lecture vocale sur chaque texte.</p>
+        <div class="m-badge" id="media-articles-badge">… articles</div>
       </a>
-      <a class="media-card" href="Videos.html">
+      <a class="media-card" href="Videos.html" id="media-card-videos">
         <div class="m-icon">🎬</div>
         <h3>Vidéos</h3>
-        <p>Des documentaires et reportages sur la culture et l'histoire des peuples autochtones.</p>
-        <div class="m-badge">6 vidéos</div>
+        <p id="media-videos-desc">Documentaires et reportages sur la culture et l'histoire des peuples autochtones.</p>
+        <div class="m-badge" id="media-videos-badge">… vidéos</div>
       </a>
-      <a class="media-card" href="Audio.html">
-        <div class="m-icon">🎵</div>
+      <a class="media-card" href="Audio.html" id="media-card-audio">
+        <div class="m-icon">📻</div>
         <h3>Audio</h3>
-        <p>Podcasts, chants traditionnels et récits oraux — bientôt disponibles.</p>
-        <div class="m-badge">Bientôt</div>
+        <p id="media-audio-desc">Radios communautaires, podcasts et écoute en direct.</p>
+        <div class="m-badge" id="media-audio-badge">Radios · Podcasts</div>
       </a>
     </div>
   </section>
@@ -707,6 +707,55 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
     }
   </script>
 
+
+  <script>
+    (function () {
+      function articleCountFromCatalog(data) {
+        var max = 0;
+        (data.groups || []).forEach(function (g) {
+          (g.items || []).forEach(function (it) {
+            var n = parseInt(String(it.n), 10);
+            if (!isNaN(n) && n > max) max = n;
+          });
+        });
+        var declared = data.stats && typeof data.stats.articlesNumbered === 'number' ? data.stats.articlesNumbered : 0;
+        return Math.max(max, declared);
+      }
+      function updateMediatheque() {
+        var artDesc = document.getElementById('media-articles-desc');
+        var artBadge = document.getElementById('media-articles-badge');
+        var vidDesc = document.getElementById('media-videos-desc');
+        var vidBadge = document.getElementById('media-videos-badge');
+        var audDesc = document.getElementById('media-audio-desc');
+        var audBadge = document.getElementById('media-audio-badge');
+        function fetchJson(urls, i, cb) {
+          if (i >= urls.length) return;
+          fetch(urls[i], { credentials: 'omit', cache: 'no-store' })
+            .then(function (r) { if (!r.ok) throw new Error(); return r.json(); })
+            .then(cb)
+            .catch(function () { fetchJson(urls, i + 1, cb); });
+        }
+        fetchJson(['blog-serie-articles.json', 'pages/blog-serie-articles.json'], 0, function (data) {
+          var n = articleCountFromCatalog(data);
+          if (artBadge) artBadge.textContent = n + ' article' + (n > 1 ? 's' : '');
+          if (artDesc) artDesc.textContent = 'Série #' + (data.stats && data.stats.nextArticle ? '1 à ' + (data.stats.nextArticle - 1) : '1 à ' + n) + ' — histoire, culture et spiritualité, avec lecture vocale (▶ Écouter).';
+        });
+        fetchJson(['videos-catalog.json'], 0, function (data) {
+          var n = (data.stats && data.stats.count) || (data.videos && data.videos.length) || 0;
+          if (vidBadge) vidBadge.textContent = n + ' vidéo' + (n > 1 ? 's' : '');
+        });
+        fetchJson(['podcasts/catalog.json'], 0, function (data) {
+          var pods = (data.podcasts && data.podcasts.length) || 0;
+          var live = (data.live && data.live.length) || 0;
+          var radios = (data.stats && data.stats.radiosCommunity) || 8;
+          if (audBadge) audBadge.textContent = radios + ' radios · ' + pods + ' podcasts · ' + live + ' directs';
+          if (audDesc) audDesc.textContent = 'Radios communautaires du Québec, balados en français et émissions en direct — écoute sur Audio.html et le dossier podcasts.';
+        });
+      }
+      if (document.readyState === 'loading') document.addEventListener('DOMContentLoaded', updateMediatheque);
+      else updateMediatheque();
+    })();
+  </script>
 
   <script>
     (function () {

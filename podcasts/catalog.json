@@ -1,5 +1,9 @@
 {
-  "updated": "2026-05-20",
+  "updated": "2026-05-28",
+  "stats": {
+    "radiosCommunity": 8,
+    "note": "Stations communautaires présentées sur Audio.html (K103, CKON, SOCAM, Wendat FM, etc.)"
+  },
   "live": [
     {
       "id": "rue-atateken-live",

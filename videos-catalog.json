@@ -1,0 +1,45 @@
+{
+  "updated": "2026-05-28",
+  "youtubeChannel": "https://www.youtube.com/@lespremieresnationsauquebec",
+  "videos": [
+    {
+      "youtubeId": "64ZuacXCSTM",
+      "tag": "Toutes nations",
+      "title": "Les Gardiens de l'héritage amérindien",
+      "description": "Un regard profond sur le rôle des gardiens de la mémoire et des traditions au sein des Premières Nations du Québec."
+    },
+    {
+      "youtubeId": "_I_kk_QJUdU",
+      "tag": "Toutes nations",
+      "title": "Les Amérindiens étaient déjà là bien avant",
+      "description": "Retour sur la présence millénaire des peuples autochtones sur le continent américain, bien avant l'arrivée des Européens."
+    },
+    {
+      "youtubeId": "gEExMaWxl2g",
+      "tag": "Culture · Agriculture",
+      "title": "L'histoire du maïs multicolore",
+      "description": "L'incroyable histoire du maïs multicolore, une création autochtone qui témoigne du savoir ancestral en agriculture."
+    },
+    {
+      "youtubeId": "pDoa2QwdUg0",
+      "tag": "Introduction · Culture",
+      "title": "Bienvenue dans notre exploration",
+      "description": "Une invitation fascinante à découvrir la vie, la culture et les traditions des Amérindiens du Québec."
+    },
+    {
+      "youtubeId": "EJzVzEI1wFk",
+      "tag": "Hurons-Wendat",
+      "title": "Les Hurons-Wendat",
+      "description": "Plongée dans l'univers des Wendat, peuple de l'île, gardiens du feu et bâtisseurs de la Confédération Wendat."
+    },
+    {
+      "youtubeId": "qKSHMThVDDA",
+      "tag": "Toutes nations · Message",
+      "title": "Message de Dan Georges",
+      "description": "Un message touchant et inspirant adressé à tous ceux qui souhaitent mieux comprendre les peuples autochtones."
+    }
+  ],
+  "stats": {
+    "count": 6
+  }
+}

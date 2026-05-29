@@ -99,76 +99,10 @@
 
   <div class="videos-section">
     <div class="section-title">Toutes les nations</div>
-    <div class="section-sub">Documentaires · Histoires · Traditions</div>
+    <div class="section-sub" id="videos-count-sub">Documentaires · Histoires · Traditions</div>
 
-    <div class="videos-grid">
-
-      <div class="video-card">
-        <div class="video-embed">
-          <iframe src="https://www.youtube.com/embed/64ZuacXCSTM" title="Les Gardiens de l'héritage amérindien" allowfullscreen loading="lazy"></iframe>
-        </div>
-        <div class="video-info">
-          <div class="video-tag">Toutes nations</div>
-          <div class="video-title">Les Gardiens de l'héritage amérindien</div>
-          <div class="video-desc">Un regard profond sur le rôle des gardiens de la mémoire et des traditions au sein des Premières Nations du Québec.</div>
-        </div>
-      </div>
-
-      <div class="video-card">
-        <div class="video-embed">
-          <iframe src="https://www.youtube.com/embed/_I_kk_QJUdU" title="Les Amérindiens d'Amérique étaient déjà là bien avant" allowfullscreen loading="lazy"></iframe>
-        </div>
-        <div class="video-info">
-          <div class="video-tag">Toutes nations</div>
-          <div class="video-title">Les Amérindiens étaient déjà là bien avant</div>
-          <div class="video-desc">Retour sur la présence millénaire des peuples autochtones sur le continent américain, bien avant l'arrivée des Européens.</div>
-        </div>
-      </div>
-
-      <div class="video-card">
-        <div class="video-embed">
-          <iframe src="https://www.youtube.com/embed/gEExMaWxl2g" title="L'histoire du maïs multicolore créé par un amérindien" allowfullscreen loading="lazy"></iframe>
-        </div>
-        <div class="video-info">
-          <div class="video-tag">Culture · Agriculture</div>
-          <div class="video-title">L'histoire du maïs multicolore</div>
-          <div class="video-desc">L'incroyable histoire du maïs multicolore, une création autochtone qui témoigne du savoir ancestral en agriculture.</div>
-        </div>
-      </div>
-
-      <div class="video-card">
-        <div class="video-embed">
-          <iframe src="https://www.youtube.com/embed/pDoa2QwdUg0" title="Bienvenue à notre exploration de la culture amérindienne" allowfullscreen loading="lazy"></iframe>
-        </div>
-        <div class="video-info">
-          <div class="video-tag">Introduction · Culture</div>
-          <div class="video-title">Bienvenue dans notre exploration</div>
-          <div class="video-desc">Une invitation fascinante à découvrir la vie, la culture et les traditions des Amérindiens du Québec.</div>
-        </div>
-      </div>
-
-      <div class="video-card">
-        <div class="video-embed">
-          <iframe src="https://www.youtube.com/embed/EJzVzEI1wFk" title="Les Hurons-Wendat" allowfullscreen loading="lazy"></iframe>
-        </div>
-        <div class="video-info">
-          <div class="video-tag">Hurons-Wendat</div>
-          <div class="video-title">Les Hurons-Wendat</div>
-          <div class="video-desc">Plongée dans l'univers des Wendat, peuple de l'île, gardiens du feu et bâtisseurs de la Confédération Wendat.</div>
-        </div>
-      </div>
-
-      <div class="video-card">
-        <div class="video-embed">
-          <iframe src="https://www.youtube.com/embed/qKSHMThVDDA" title="Message de Dan Georges" allowfullscreen loading="lazy"></iframe>
-        </div>
-        <div class="video-info">
-          <div class="video-tag">Toutes nations · Message</div>
-          <div class="video-title">Message de Dan Georges</div>
-          <div class="video-desc">Un message touchant et inspirant adressé à tous ceux qui souhaitent mieux comprendre les peuples autochtones.</div>
-        </div>
-      </div>
-
+    <div class="videos-grid" id="videos-grid-mount">
+      <p style="color:rgba(255,255,255,0.5);grid-column:1/-1;text-align:center;">Chargement des vidéos…</p>
     </div>
 
     <div class="yt-banner">
@@ -195,5 +129,46 @@
 </article>
 
   <script src="audio-player.js" defer></script>
+  <script>
+  (function () {
+    var mount = document.getElementById('videos-grid-mount');
+    var sub = document.getElementById('videos-count-sub');
+    if (!mount) return;
+    function esc(s) {
+      return String(s).replace(/&/g, '&amp;').replace(/</g, '&lt;').replace(/"/g, '&quot;');
+    }
+    function render(data) {
+      var list = data.videos || [];
+      if (sub) sub.textContent = list.length + ' vidéo' + (list.length > 1 ? 's' : '') + ' · Documentaires · Histoires · Traditions';
+      if (!list.length) {
+        mount.innerHTML = '<p style="color:#c98888;text-align:center;grid-column:1/-1;">Catalogue vide — ajoutez une entrée dans <code>videos-catalog.json</code>.</p>';
+        return;
+      }
+      mount.innerHTML = list.map(function (v) {
+        var id = esc(v.youtubeId);
+        var title = esc(v.title);
+        return (
+          '<div class="video-card"><div class="video-embed">' +
+          '<iframe src="https://www.youtube.com/embed/' + id + '" title="' + title + '" allowfullscreen loading="lazy"></iframe>' +
+          '</div><div class="video-info"><div class="video-tag">' + esc(v.tag) + '</div>' +
+          '<div class="video-title">' + title + '</div><div class="video-desc">' + esc(v.description) + '</div></div></div>'
+        );
+      }).join('');
+      var yt = document.querySelector('.yt-banner .btn-yt');
+      if (yt && data.youtubeChannel) yt.href = data.youtubeChannel;
+    }
+    function tryFetch(urls, i) {
+      if (i >= urls.length) {
+        mount.innerHTML = '<p style="color:#c98888;text-align:center;grid-column:1/-1;">Impossible de charger videos-catalog.json</p>';
+        return;
+      }
+      fetch(urls[i], { credentials: 'omit', cache: 'no-store' })
+        .then(function (r) { if (!r.ok) throw new Error(); return r.json(); })
+        .then(render)
+        .catch(function () { tryFetch(urls, i + 1); });
+    }
+    tryFetch(['videos-catalog.json'], 0);
+  })();
+  </script>
 </body>
 </html>

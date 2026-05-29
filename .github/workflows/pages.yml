@@ -52,6 +52,9 @@ jobs:
           for f in pages/*.json; do
             cp -f "$f" _site/
           done
+          for f in videos-catalog.json blog-serie-articles.json; do
+            [[ -f "$f" ]] && cp -f "$f" _site/
+          done
           if [[ -f pages/BingSiteAuth.xml ]]; then cp -f pages/BingSiteAuth.xml _site/; fi
       - uses: actions/upload-pages-artifact@v3
         with:
