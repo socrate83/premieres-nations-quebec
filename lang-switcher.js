@@ -156,6 +156,7 @@
     updateSwitcherActive();
     if (typeof window.pnUpdateMediathequeI18n === 'function') window.pnUpdateMediathequeI18n();
     if (typeof window.pnUpdateVideosI18n === 'function') window.pnUpdateVideosI18n();
+    if (typeof window.pnApplyNationI18n === 'function') window.pnApplyNationI18n(currentLang);
   }
 
   function loadAndApply(code) {

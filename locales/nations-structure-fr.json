@@ -1,0 +1,570 @@
+{
+  "nations": [
+    {
+      "id": "abenaquis",
+      "file": "Abenaquis.html",
+      "metaTitle": "Les Abénaquis — Peuple des Terres de l'Aube",
+      "heroNation": "Premières Nations du Québec",
+      "heroTitle": "Les Abénaquis",
+      "heroTagline": "W8banakiak — Peuple des Terres de l'Aube",
+      "nav": [
+        "Origines",
+        "Territoire",
+        "Culture",
+        "Histoire",
+        "Contact européen",
+        "Migrations",
+        "Résistance",
+        "Aujourd'hui"
+      ],
+      "sections": [
+        {
+          "id": "origines",
+          "label": "Aux racines du temps",
+          "title": "Origines et identité"
+        },
+        {
+          "id": "territoire",
+          "label": "Terres ancestrales",
+          "title": "Territoire et géographie"
+        },
+        {
+          "id": "culture",
+          "label": "Traditions vivantes",
+          "title": "Culture, langue et traditions"
+        },
+        {
+          "id": "histoire",
+          "label": "Des millénaires d'histoire",
+          "title": "Histoire ancienne et organisation sociale"
+        },
+        {
+          "id": "contact",
+          "label": "XVIe – XVIIe siècles",
+          "title": "Le contact avec les Européens"
+        },
+        {
+          "id": "migrations",
+          "label": "1675 – 1748",
+          "title": "Les grandes migrations vers le Québec"
+        },
+        {
+          "id": "resistance",
+          "label": "Survivre et se réaffirmer",
+          "title": "Résistance, résilience et revendications"
+        },
+        {
+          "id": "aujourd-hui",
+          "label": "XXIe siècle",
+          "title": "Les Abénaquis aujourd'hui"
+        }
+      ],
+      "introHtml": "Les <strong>Abénaquis</strong> — ou <em>W8banakiak</em> dans leur propre langue — sont l'un des peuples autochtones les plus anciens du nord-est de l'Amérique. Leur nom signifie <strong>« Peuple des terres de l'aube »</strong> ou <strong>« Peuple de l'est »</strong>, en référence à leur territoire ancestral baigné par la lumière du soleil levant. Depuis des millénaires, ils habitent un immense territoire s'étendant de la vallée du Saint-Laurent jusqu'à la Nouvelle-Angleterre."
+    },
+    {
+      "id": "algonquins",
+      "file": "Algonquins.html",
+      "metaTitle": "Les Algonquins — Histoire et Culture | Premières Nations du Québec",
+      "heroNation": "Premières Nations du Québec",
+      "heroTitle": "Les Algonquins",
+      "heroTagline": "Anichinabés — Les Hommes de la Bonne Voie",
+      "nav": [],
+      "sections": [
+        {
+          "id": "origines",
+          "label": "Aux racines du monde",
+          "title": "Origines et identité"
+        },
+        {
+          "id": "territoire",
+          "label": "Terres sacrées",
+          "title": "Territoire et géographie"
+        },
+        {
+          "id": "culture",
+          "label": "Traditions vivantes",
+          "title": "Culture, langue et traditions"
+        },
+        {
+          "id": "histoire",
+          "label": "Des millénaires d'histoire",
+          "title": "Histoire ancienne et organisation sociale"
+        },
+        {
+          "id": "contact",
+          "label": "XVIe – XVIIe siècles",
+          "title": "Le contact avec les Européens"
+        },
+        {
+          "id": "colonisation",
+          "label": "XVIIe – XIXe siècles",
+          "title": "L'impact de la colonisation"
+        },
+        {
+          "id": "resistance",
+          "label": "Survivre et renaître",
+          "title": "Résistance, résilience et revendications"
+        },
+        {
+          "id": "communautes",
+          "label": "Les 9 communautés",
+          "title": "Les communautés algonquines du Québec"
+        },
+        {
+          "id": "aujourd-hui",
+          "label": "XXIe siècle",
+          "title": "Les Algonquins aujourd'hui"
+        }
+      ],
+      "introHtml": "Les <strong>Algonquins</strong> — ou <em>Anichinabés</em> en leur propre langue — sont l'un des peuples fondateurs du Québec. Leur nom signifie <strong>« Les hommes de la bonne voie »</strong> ou <strong>« Les hommes purs »</strong>. Depuis des millénaires, ils habitent les forêts boréales et les territoires de lacs et de rivières de l'Outaouais et de l'Abitibi-Témiscamingue, gardiens d'un territoire immense qu'ils ont façonné et protégé à travers les siècles."
+    },
+    {
+      "id": "atikamekw",
+      "file": "Atikamekw.html",
+      "metaTitle": "Les Atikamekw — Histoire et Culture | Premières Nations du Québec",
+      "heroNation": "Premières Nations du Québec",
+      "heroTitle": "Les Atikamekw",
+      "heroTagline": "Nehirowisiwok — Peuple de la rivière propre",
+      "nav": [],
+      "sections": [
+        {
+          "id": "origines",
+          "label": "Aux racines du monde",
+          "title": "Origines et identité"
+        },
+        {
+          "id": "territoire",
+          "label": "Nitaskinan",
+          "title": "Le territoire ancestral"
+        },
+        {
+          "id": "saisons",
+          "label": "Rythmes de vie",
+          "title": "Les six saisons traditionnelles"
+        },
+        {
+          "id": "culture",
+          "label": "Traditions vivantes",
+          "title": "Culture, langue et traditions"
+        },
+        {
+          "id": "histoire",
+          "label": "Des millénaires d'histoire",
+          "title": "Histoire ancienne et organisation sociale"
+        },
+        {
+          "id": "colonisation",
+          "label": "XVIIe – XXe siècles",
+          "title": "L'impact de la colonisation"
+        },
+        {
+          "id": "resistance",
+          "label": "Survivre et renaître",
+          "title": "Résistance, résilience et revendications"
+        },
+        {
+          "id": "communautes",
+          "label": "Les 3 communautés",
+          "title": "Les communautés atikamekw"
+        },
+        {
+          "id": "aujourd-hui",
+          "label": "XXIe siècle",
+          "title": "Les Atikamekw aujourd'hui"
+        }
+      ],
+      "introHtml": "Les <strong>Atikamekw</strong> — ou <em>Nehirowisiwok</em> en leur propre langue — habitent le cœur de la forêt boréale québécoise depuis des millénaires. Leur nom signifie <strong>« poisson blanc »</strong> ou, selon certaines traditions, <strong>« peuple de la rivière propre »</strong>. Gardiens du <em>Nitaskinan</em> — leur territoire ancestral — ils ont développé une civilisation unique, profondément liée aux rythmes de la forêt, aux cycles de l'eau et à la sagesse des ancêtres."
+    },
+    {
+      "id": "cris",
+      "file": "Cris.html",
+      "metaTitle": "Les Cris — Histoire et Culture | Premières Nations du Québec",
+      "heroNation": "Premières Nations du Québec",
+      "heroTitle": "Les Cris",
+      "heroTagline": "Eeyou Istchee — Le Peuple de la Baie-James",
+      "nav": [],
+      "sections": [
+        {
+          "id": "origines",
+          "label": "Aux racines du monde",
+          "title": "Origines et identité"
+        },
+        {
+          "id": "territoire",
+          "label": "Eeyou Istchee",
+          "title": "Un territoire immense"
+        },
+        {
+          "id": "culture",
+          "label": "Traditions vivantes",
+          "title": "Culture, langue et traditions"
+        },
+        {
+          "id": "histoire",
+          "label": "Des millénaires d'histoire",
+          "title": "Histoire ancienne"
+        },
+        {
+          "id": "baie-james",
+          "label": "1971 – 1975",
+          "title": "La lutte pour la Baie-James"
+        },
+        {
+          "id": "paix-braves",
+          "label": "2002",
+          "title": "La Paix des Braves"
+        },
+        {
+          "id": "communautes",
+          "label": "Les 9 communautés",
+          "title": "Les communautés cries"
+        },
+        {
+          "id": "aujourd-hui",
+          "label": "XXIe siècle",
+          "title": "Les Cris aujourd'hui"
+        }
+      ],
+      "introHtml": "Les <strong>Cris</strong> — ou <em>Eeyou</em> (« le vrai peuple ») dans leur langue — sont l'une des nations autochtones les plus puissantes et les mieux organisées du Québec. Gardiens de l'immense territoire d'<strong>Eeyou Istchee</strong> (« la terre du peuple ») autour de la Baie-James, ils ont su, mieux que quiconque, négocier leur place dans le Québec moderne tout en préservant leur identité et leurs traditions millénaires. La <strong>Convention de la Baie James (1975)</strong> et la <stro"
+    },
+    {
+      "id": "huronswendat",
+      "file": "HuronsWendat.html",
+      "metaTitle": "Les Hurons-Wendat — Histoire et Culture | Premières Nations du Québec",
+      "heroNation": "Premières Nations du Québec",
+      "heroTitle": "Les Hurons-Wendat",
+      "heroTagline": "Wendat — « Peuple de l'île » · Gardiens du feu",
+      "nav": [],
+      "sections": [
+        {
+          "id": "origines",
+          "label": "Aux racines du monde",
+          "title": "Origines et identité"
+        },
+        {
+          "id": "confédération",
+          "label": "Organisation politique",
+          "title": "La Confédération Wendat"
+        },
+        {
+          "id": "culture",
+          "label": "Traditions vivantes",
+          "title": "Culture, art et traditions"
+        },
+        {
+          "id": "trois-soeurs",
+          "label": "Agriculture sacrée",
+          "title": "Les Trois Sœurs — Dioni'ha"
+        },
+        {
+          "id": "histoire",
+          "label": "Alliance avec la France",
+          "title": "Les Wendat et la Nouvelle-France"
+        },
+        {
+          "id": "dispersion",
+          "label": "1649 – La catastrophe",
+          "title": "La Dispersion wendat"
+        },
+        {
+          "id": "wendake",
+          "label": "La communauté",
+          "title": "Wendake — Un joyau près de Québec"
+        },
+        {
+          "id": "aujourd-hui",
+          "label": "XXIe siècle",
+          "title": "Les Hurons-Wendat aujourd'hui"
+        }
+      ],
+      "introHtml": "Les <strong>Hurons-Wendat</strong> — ou simplement <em>Wendat</em> (« peuple de l'île » ou « habitants de la péninsule ») — sont l'une des nations autochtones les plus fascinantes et les plus influentes de l'histoire du Québec et du Canada. Contrairement à leurs voisins algonquiens nomades, les Wendat étaient des <strong>agriculteurs sédentaires</strong> vivant dans des villages fortifiés pouvant accueillir plusieurs milliers de personnes. Leur <strong>Confédération Wendat</strong> — regroupant "
+    },
+    {
+      "id": "innus",
+      "file": "Innus.html",
+      "metaTitle": "Les Innus — Histoire et Culture | Premières Nations du Québec",
+      "heroNation": "Premières Nations du Québec",
+      "heroTitle": "Les Innus",
+      "heroTagline": "Innu — « Être humain » · Peuple du Nitassinan",
+      "nav": [],
+      "sections": [
+        {
+          "id": "origines",
+          "label": "Aux racines du monde",
+          "title": "Origines et identité"
+        },
+        {
+          "id": "territoire",
+          "label": "Nitassinan",
+          "title": "Le territoire ancestral"
+        },
+        {
+          "id": "culture",
+          "label": "Traditions vivantes",
+          "title": "Culture, langue et traditions"
+        },
+        {
+          "id": "caribou",
+          "label": "L'animal sacré",
+          "title": "Le caribou — Atiku, le don de vie"
+        },
+        {
+          "id": "histoire",
+          "label": "Depuis la nuit des temps",
+          "title": "Histoire ancienne"
+        },
+        {
+          "id": "colonisation",
+          "label": "XVIIe – XXe siècles",
+          "title": "L'impact de la colonisation"
+        },
+        {
+          "id": "communautes",
+          "label": "Les 9 communautés",
+          "title": "Les communautés innues"
+        },
+        {
+          "id": "aujourd-hui",
+          "label": "XXIe siècle",
+          "title": "Les Innus aujourd'hui"
+        }
+      ],
+      "introHtml": "Les <strong>Innus</strong> sont la <strong>nation autochtone la plus populeuse du Québec</strong>. Leur nom signifie simplement <em>« être humain »</em> — une désignation humble et profonde. Autrefois appelés <em>Montagnais</em> par les Français (en raison des montagnes côtières du Saint-Laurent), ils habitent le vaste territoire du <strong>Nitassinan</strong> — « notre terre » — qui s'étend de la Côte-Nord jusqu'au Labrador. Nomades par excellence, grands chasseurs de caribou, navigateurs du fl"
+    },
+    {
+      "id": "malecites",
+      "file": "Malecites.html",
+      "metaTitle": "Les Malécites — Histoire et Culture | Premières Nations du Québec",
+      "heroNation": "Premières Nations du Québec",
+      "heroTitle": "Les Malécites",
+      "heroTagline": "Wolastoqiyik — « Peuple de la belle rivière »",
+      "nav": [],
+      "sections": [
+        {
+          "id": "origines",
+          "label": "Aux racines du monde",
+          "title": "Origines et identité"
+        },
+        {
+          "id": "territoire",
+          "label": "La Belle Rivière",
+          "title": "Le territoire — Wolastoq"
+        },
+        {
+          "id": "culture",
+          "label": "Traditions vivantes",
+          "title": "Culture, langue et traditions"
+        },
+        {
+          "id": "wapanaki",
+          "label": "Alliance des nations",
+          "title": "La Confédération Wapanaki"
+        },
+        {
+          "id": "histoire",
+          "label": "Histoire",
+          "title": "Une histoire de résistance"
+        },
+        {
+          "id": "viger",
+          "label": "La communauté",
+          "title": "Viger — Une renaissance"
+        },
+        {
+          "id": "aujourd-hui",
+          "label": "XXIe siècle",
+          "title": "Les Malécites aujourd'hui"
+        }
+      ],
+      "introHtml": "Les <strong>Malécites</strong> — ou <em>Wolastoqiyik</em> (« peuple de la belle rivière brillante ») dans leur langue — sont la plus petite nation autochtone du Québec, mais l'une des plus attachantes par son histoire et sa résilience. Gardiens de la rivière <strong>Wolastoq</strong> (le fleuve Saint-Jean) et du Bas-Saint-Laurent québécois, ils ont maintenu leur identité à travers des siècles de difficultés, de déplacements et de marginalisation. Aujourd'hui, la communauté de <strong>Viger</stro"
+    },
+    {
+      "id": "micmacs",
+      "file": "Micmacs.html",
+      "metaTitle": "Les Micmacs — Histoire et Culture | Premières Nations du Québec",
+      "heroNation": "Premières Nations du Québec",
+      "heroTitle": "Les Micmacs",
+      "heroTagline": "Mi'kmaq — « Mes amis » · Peuple des côtes et des forêts",
+      "nav": [],
+      "sections": [
+        {
+          "id": "origines",
+          "label": "Aux racines du monde",
+          "title": "Origines et identité"
+        },
+        {
+          "id": "territoire",
+          "label": "Mi'kma'ki",
+          "title": "Le territoire ancestral"
+        },
+        {
+          "id": "culture",
+          "label": "Traditions vivantes",
+          "title": "Culture, mer et forêt"
+        },
+        {
+          "id": "ecriture",
+          "label": "Une invention unique",
+          "title": "L'écriture mi'kmaq — Komqwejwi'kasikl"
+        },
+        {
+          "id": "histoire",
+          "label": "Histoire",
+          "title": "Histoire et contacts européens"
+        },
+        {
+          "id": "communautes",
+          "label": "Les communautés au Québec",
+          "title": "Les communautés mi'kmaq du Québec"
+        },
+        {
+          "id": "aujourd-hui",
+          "label": "XXIe siècle",
+          "title": "Les Mi'kmaq aujourd'hui"
+        }
+      ],
+      "introHtml": "Les <strong>Micmacs</strong> — ou <em>Mi'kmaq</em> (« mes amis » ou « mes alliés ») dans leur langue — sont les gardiens des côtes de la <strong>Gaspésie</strong> et de la <strong>Baie-des-Chaleurs</strong> au Québec. Nation maritime par excellence, ils ont sillonné les eaux du golfe du Saint-Laurent, des côtes atlantiques et de l'Acadie pendant des millénaires. Les Mi'kmaq sont aussi célèbres pour avoir développé l'un des <strong>seuls systèmes d'écriture autochtone précoloniaux</strong> d'Amér"
+    },
+    {
+      "id": "mohawks",
+      "file": "Mohawks.html",
+      "metaTitle": "Les Mohawks — Histoire et Culture | Premières Nations du Québec",
+      "heroNation": "Premières Nations du Québec",
+      "heroTitle": "Les Mohawks",
+      "heroTagline": "Kanien'kehá:ka — « Peuple du pays du silex »",
+      "nav": [],
+      "sections": [
+        {
+          "id": "origines",
+          "label": "Aux racines du monde",
+          "title": "Origines et identité"
+        },
+        {
+          "id": "haudenosaunee",
+          "label": "La Grande Ligue",
+          "title": "La Confédération des Haudenosaunee"
+        },
+        {
+          "id": "culture",
+          "label": "Traditions vivantes",
+          "title": "Culture, langue et traditions"
+        },
+        {
+          "id": "histoire",
+          "label": "Des siècles de résistance",
+          "title": "Histoire et contacts européens"
+        },
+        {
+          "id": "oka",
+          "label": "Été 1990",
+          "title": "La Crise d'Oka — 78 jours de résistance"
+        },
+        {
+          "id": "communautes",
+          "label": "Les 3 communautés",
+          "title": "Les communautés mohawks du Québec"
+        },
+        {
+          "id": "aujourd-hui",
+          "label": "XXIe siècle",
+          "title": "Les Mohawks aujourd'hui"
+        }
+      ],
+      "introHtml": "Les <strong>Mohawks</strong> — ou <em>Kanien'kehá:ka</em> (« peuple du pays du silex ») dans leur langue — sont la gardienne de la porte orientale de la grande <strong>Confédération des Haudenosaunee</strong> (Ligue iroquoise). Nation guerrière et diplomatique redoutée, ils ont joué un rôle déterminant dans l'histoire de l'Amérique du Nord pendant trois siècles. Aujourd'hui, ils habitent trois communautés au Québec — <strong>Kahnawake, Kanesatake et Akwesasne</strong> — et sont connus pour leur "
+    },
+    {
+      "id": "naskapis",
+      "file": "Naskapis.html",
+      "metaTitle": "Les Naskapis — Histoire et Culture | Premières Nations du Québec",
+      "heroNation": "Premières Nations du Québec",
+      "heroTitle": "Les Naskapis",
+      "heroTagline": "Innu-Naskapi — Gardiens du Grand Nord et du caribou",
+      "nav": [],
+      "sections": [
+        {
+          "id": "origines",
+          "label": "Aux racines du monde",
+          "title": "Origines et identité"
+        },
+        {
+          "id": "territoire",
+          "label": "Le Grand Nord québécois",
+          "title": "Un territoire de bout du monde"
+        },
+        {
+          "id": "caribou",
+          "label": "L'animal sacré",
+          "title": "Le caribou — Centre de l'univers naskapi"
+        },
+        {
+          "id": "culture",
+          "label": "Traditions vivantes",
+          "title": "Culture, langue et traditions"
+        },
+        {
+          "id": "histoire",
+          "label": "Histoire",
+          "title": "Histoire et contacts européens"
+        },
+        {
+          "id": "kawawachikamach",
+          "label": "La communauté",
+          "title": "Kawawachikamach — Village du Grand Nord"
+        },
+        {
+          "id": "aujourd-hui",
+          "label": "XXIe siècle",
+          "title": "Les Naskapis aujourd'hui"
+        }
+      ],
+      "introHtml": "Les <strong>Naskapis</strong> sont le peuple le plus nordique des Premières Nations du Québec — gardiens des immenses plateaux subarctiques du <strong>Labrador québécois</strong>. Cousins proches des Innus, ils ont poussé leur mode de vie nomade à l'extrême, suivant les grands troupeaux de caribous pendant des millénaires dans l'un des territoires les plus inhospitaliers de la planète. Leur ville moderne, <strong>Kawawachikamach</strong>, construite en 1984 près de Schefferville, est l'une des c"
+    },
+    {
+      "id": "inuits",
+      "file": "Inuits.html",
+      "metaTitle": "Les Inuits — Histoire et Culture | Premières Nations du Québec",
+      "heroNation": "Peuples autochtones du Québec",
+      "heroTitle": "Les Inuits",
+      "heroTagline": "Inuit — « Êtres humains » · Gardiens du Nunavik",
+      "nav": [],
+      "sections": [
+        {
+          "id": "origines",
+          "label": "Aux racines du monde arctique",
+          "title": "Origines et identité"
+        },
+        {
+          "id": "nunavik",
+          "label": "Notre terre",
+          "title": "Le Nunavik — « La grande terre »"
+        },
+        {
+          "id": "culture",
+          "label": "Génie arctique",
+          "title": "Culture, langue et traditions"
+        },
+        {
+          "id": "igloo",
+          "label": "Génie de la survie",
+          "title": "L'igloo, le qajaq et l'ulu"
+        },
+        {
+          "id": "histoire",
+          "label": "Histoire",
+          "title": "Histoire et contacts européens"
+        },
+        {
+          "id": "communautes",
+          "label": "Les 14 villages",
+          "title": "Les communautés du Nunavik"
+        },
+        {
+          "id": "aujourd-hui",
+          "label": "XXIe siècle",
+          "title": "Les Inuits aujourd'hui"
+        }
+      ],
+      "introHtml": "Les <strong>Inuits</strong> — <em>Inuit</em> signifie simplement <em>« êtres humains »</em> — sont les habitants du <strong>Nunavik</strong>, le Grand Nord québécois au-delà du 55e parallèle. Ce peuple arctique unique, distinct des Premières Nations par sa langue (l'inuktitut, non algonquienne) et sa culture, a développé pendant 4 000 ans les techniques de survie les plus sophistiquées jamais imaginées dans les environnements les plus hostiles de la planète. L'igloo, le qajaq (kayak), l'ulu, le "
+    }
+  ]
+}

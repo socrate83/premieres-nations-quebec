@@ -77,7 +77,8 @@
     "read": "📖 Read",
     "listen": "▶ Listen",
     "share": "Share",
-    "articleNotice": "This article is published in French. For an English or Spanish translation, contact the group administrator."
+    "articleNotice": "This article is published in French. For an English or Spanish translation, contact the group administrator.",
+    "nationNotice": "Titles, navigation and introduction are translated; the detailed body of the page remains in French."
   },
   "media": {
     "articlesBadge": "{n} articles",
