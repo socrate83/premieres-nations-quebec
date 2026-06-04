@@ -127,22 +127,23 @@
     @media(max-width:600px){.top-nav{gap:1rem}.featured-grid{grid-template-columns:1fr}.hero-radio{padding:1.75rem 1.25rem}}
   </style>
   <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="lang-switcher.css">
 </head>
-<body>
+<body data-i18n-title="audioPage.metaTitle">
 
 
   <nav class="top-nav">
-    <a href="index.html">🏠 Accueil</a>
-    <a href="index.html#nations">📰 Articles</a>
-    <a href="Videos.html">🎬 Vidéos</a>
-    <a href="Audio.html" class="active">📻 Radios</a>
-    <a href="podcasts/index.html">🎙️ Podcasts</a>
+    <a href="index.html" data-i18n="nav.home">🏠 Accueil</a>
+    <a href="Articles.html" data-i18n="nav.articles">📚 Articles</a>
+    <a href="Videos.html" data-i18n="nav.videos">🎬 Vidéos</a>
+    <a href="Audio.html" class="active" data-i18n="nav.audio">📻 Radios</a>
+    <a href="podcasts/index.html" data-i18n="nav.podcasts">🎙️ Podcasts</a>
   </nav>
 
   <div class="page-header">
-    <div class="eyebrow">Médiathèque · Voix des nations</div>
+    <div class="eyebrow" data-i18n="audioPage.header">Médiathèque · Voix des nations</div>
     <article class="article-ecoute">
-<h1>📻 Radios autochtones du Québec</h1>
+<h1 data-i18n="audioPage.title">📻 Radios autochtones du Québec</h1>
     <p>Commencez par <strong>K103.7</strong>, la radio mohawk la plus écoutée au Québec — puis explorez CKON, le réseau SOCAM et les autres voix des nations.</p>
     <div class="gold-line"></div>
   </div>
@@ -357,5 +358,6 @@
 </article>
 
   <script src="audio-player.js" defer></script>
+  <script src="lang-switcher.js" defer></script>
 </body>
 </html>

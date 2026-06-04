@@ -24,8 +24,8 @@ function navHtml(homeHref, light) {
   const articlesHref = homeHref.startsWith('../') ? '../Articles.html' : 'Articles.html';
   return `${NAV_STYLE}
 <nav class="${cls}" aria-label="Navigation">
-  <a class="pn-nav-accueil__home" href="${homeHref}">← Retour à l'accueil</a>
-  <a href="${articlesHref}">📚 Tous les articles (1–72)</a>
+  <a class="pn-nav-accueil__home" href="${homeHref}" data-i18n="nav.backHome">← Retour à l'accueil</a>
+  <a href="${articlesHref}" data-i18n="nav.allArticles">📚 Tous les articles (1–72)</a>
 </nav>`;
 }
 

@@ -1,0 +1,57 @@
+/* Sélecteur de langue — coin supérieur droit */
+#pn-lang-switcher {
+  position: fixed;
+  top: 0.65rem;
+  right: 0.75rem;
+  z-index: 10050;
+  display: flex;
+  align-items: center;
+  gap: 0.35rem;
+  font-family: 'Lato', system-ui, sans-serif;
+  font-size: 0.72rem;
+  font-weight: 700;
+  letter-spacing: 0.05em;
+}
+#pn-lang-switcher .pn-lang-label {
+  color: rgba(255, 255, 255, 0.45);
+  text-transform: uppercase;
+  margin-right: 0.15rem;
+}
+#pn-lang-switcher button {
+  border: 1px solid rgba(232, 176, 32, 0.45);
+  background: rgba(20, 20, 20, 0.92);
+  color: #e8b020;
+  padding: 0.38rem 0.65rem;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: background 0.2s, color 0.2s, border-color 0.2s;
+  backdrop-filter: blur(8px);
+}
+#pn-lang-switcher button:hover {
+  background: rgba(200, 146, 10, 0.25);
+  color: #fff;
+}
+#pn-lang-switcher button.is-active {
+  background: #c8920a;
+  color: #000;
+  border-color: #c8920a;
+}
+.pn-i18n-notice {
+  background: linear-gradient(135deg, #1a1208, #1a1a2e);
+  border: 1px solid rgba(200, 146, 10, 0.4);
+  border-radius: 10px;
+  padding: 0.85rem 1.1rem;
+  margin: 0.75rem 1rem 1rem;
+  font-size: 0.88rem;
+  line-height: 1.55;
+  color: rgba(255, 255, 255, 0.85);
+  text-align: center;
+}
+.pn-nav-accueil--light + .pn-i18n-notice,
+body.ecoute-sombre .pn-i18n-notice {
+  color: #e8e4dc;
+}
+@media (max-width: 480px) {
+  #pn-lang-switcher .pn-lang-label { display: none; }
+  #pn-lang-switcher { top: 0.45rem; right: 0.45rem; }
+}

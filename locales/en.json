@@ -1,0 +1,90 @@
+{
+  "meta": {
+    "siteTitle": "Indigenous Peoples of Quebec — The 11 First Nations",
+    "siteDescription": "History, culture and languages of the 11 Indigenous nations and Inuit of Quebec."
+  },
+  "lang": {
+    "label": "Language",
+    "fr": "FR",
+    "en": "EN",
+    "es": "ES"
+  },
+  "nav": {
+    "home": "🏠 Home",
+    "articles": "📚 Articles 1–72",
+    "nations": "📰 Nations",
+    "videos": "🎬 Videos",
+    "audio": "📻 Audio",
+    "podcasts": "🎙️ Podcasts",
+    "backHome": "← Home",
+    "allArticles": "📚 All articles (1–72)"
+  },
+  "home": {
+    "heroEyebrow": "Full series · 11 nations + Inuit",
+    "heroTitle": "Indigenous<br/>Peoples<br/>of <span>Quebec</span>",
+    "heroSub": "An in-depth article series on the First Nations and Inuit who have lived on Quebec territory for millennia.",
+    "heroCta": "Discover the nations →",
+    "heroScroll": "↓ Explore",
+    "statFN": "First Nations",
+    "statInuit": "Inuit Nation",
+    "statPop": "Indigenous people in Quebec",
+    "statYears": "of presence on this land",
+    "introTitle": "A history that begins long before Quebec",
+    "introP1": "Long before Jacques Cartier reached the St. Lawrence in 1534, dozens of Indigenous nations had lived on this territory for millennia. Hunters, farmers, navigators, diplomats — each people developed a unique civilization, rooted in the land and passed down through extraordinarily rich oral traditions.",
+    "introP2": "This series invites you to discover the 11 First Nations and the Inuit of Nunavik — their history, culture, traditions and place in Quebec today. An invitation to respect and understanding.",
+    "nationsTitle": "The Nations",
+    "nationsSub": "Click a nation to read its article",
+    "serieTitle": "Thematic series — Articles (72)",
+    "serieSub": "Nine sub-series from #1 to #72: spirituality, history, Quebec know-how, forgotten wisdom, living culture… Each card opens the full article.",
+    "serieNotice": "All articles in one place. Entries #1–#51, then #52–#72 on Quebec — listen button (▶ Listen) on each page.",
+    "serieNoticeLink": "Full list →",
+    "serieFeatured": "Featured",
+    "serieRead": "Read article",
+    "mediaTitle": "Media library",
+    "mediaSub": "Articles · Videos · Audio",
+    "mediaArticles": "Articles",
+    "mediaVideos": "Videos",
+    "mediaAudio": "Audio",
+    "communityTitle": "🤝 Join the community",
+    "communityP": "Share these articles, discuss, and learn more about Indigenous peoples in Quebec.",
+    "communityFb": "📘 Join the Facebook group",
+    "communitySite": "🌐 Series website",
+    "seeAllArticles": "📚 See all articles (#1 to #72) →"
+  },
+  "articlesPage": {
+    "title": "📚 All articles",
+    "intro": "Numbered series #1 to #72 — each article includes read-aloud (▶ Listen).",
+    "metaTitle": "All articles (1–72) — First Nations of Quebec"
+  },
+  "videosPage": {
+    "title": "🎬 Videos",
+    "header": "Media library",
+    "sub": "First Nations of Quebec — documentaries and reports.",
+    "sectionTitle": "All nations",
+    "loading": "Loading videos…",
+    "metaTitle": "Videos — First Nations of Quebec"
+  },
+  "audioPage": {
+    "title": "📻 Indigenous radio stations in Quebec",
+    "header": "Media library · Voices of the nations",
+    "metaTitle": "Indigenous radio — First Nations of Quebec"
+  },
+  "podcastsPage": {
+    "title": "🎙️ Podcasts & live shows",
+    "metaTitle": "Podcasts — First Nations (French)"
+  },
+  "common": {
+    "read": "📖 Read",
+    "listen": "▶ Listen",
+    "share": "Share",
+    "articleNotice": "This article is published in French. For an English or Spanish translation, contact the group administrator."
+  },
+  "media": {
+    "articlesBadge": "{n} articles",
+    "videosBadge": "{n} videos",
+    "audioBadge": "{radios} radios · {pods} podcasts · {live} live",
+    "articlesDesc": "Series #{range} — history, culture and spirituality, with read-aloud (▶ Listen).",
+    "videosDesc": "Documentaries and reports on Indigenous culture and history.",
+    "audioDesc": "Community radio in Quebec, podcasts and live shows — listen on Audio page."
+  }
+}

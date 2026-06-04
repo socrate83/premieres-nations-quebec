@@ -78,31 +78,32 @@
     @media(max-width:600px){.videos-grid{grid-template-columns:1fr}.top-nav{gap:1rem}}
   </style>
   <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="lang-switcher.css">
 </head>
-<body>
+<body data-i18n-title="videosPage.metaTitle">
 
 
   <nav class="top-nav">
-    <a href="index.html">🏠 Accueil</a>
-    <a href="index.html#nations">📰 Articles</a>
-    <a href="Videos.html" class="active">🎬 Vidéos</a>
-    <a href="Audio.html">🎵 Audio</a>
+    <a href="index.html" data-i18n="nav.home">🏠 Accueil</a>
+    <a href="Articles.html" data-i18n="nav.articles">📚 Articles</a>
+    <a href="Videos.html" class="active" data-i18n="nav.videos">🎬 Vidéos</a>
+    <a href="Audio.html" data-i18n="nav.audio">📻 Audio</a>
   </nav>
 
   <div class="page-header">
-    <div class="eyebrow">Médiathèque</div>
+    <div class="eyebrow" data-i18n="videosPage.header">Médiathèque</div>
     <article class="article-ecoute">
-<h1>🎬 Vidéos</h1>
-    <p>Les Premières Nations représentent toutes les nations du Québec. Explorez leur histoire, leur culture et leurs traditions à travers nos vidéos.</p>
+<h1 data-i18n="videosPage.title">🎬 Vidéos</h1>
+    <p data-i18n="videosPage.sub">Les Premières Nations du Québec — documentaires et reportages.</p>
     <div class="gold-line"></div>
   </div>
 
   <div class="videos-section">
-    <div class="section-title">Toutes les nations</div>
+    <div class="section-title" data-i18n="videosPage.sectionTitle">Toutes les nations</div>
     <div class="section-sub" id="videos-count-sub">Documentaires · Histoires · Traditions</div>
 
     <div class="videos-grid" id="videos-grid-mount">
-      <p style="color:rgba(255,255,255,0.5);grid-column:1/-1;text-align:center;">Chargement des vidéos…</p>
+      <p style="color:rgba(255,255,255,0.5);grid-column:1/-1;text-align:center;" data-i18n="videosPage.loading">Chargement des vidéos…</p>
     </div>
 
     <div class="yt-banner">
@@ -129,6 +130,7 @@
 </article>
 
   <script src="audio-player.js" defer></script>
+  <script src="lang-switcher.js" defer></script>
   <script>
   (function () {
     var mount = document.getElementById('videos-grid-mount');
@@ -139,7 +141,21 @@
     }
     function render(data) {
       var list = data.videos || [];
-      if (sub) sub.textContent = list.length + ' vidéo' + (list.length > 1 ? 's' : '') + ' · Documentaires · Histoires · Traditions';
+      if (sub) {
+        var tpl = typeof window.pnT === 'function'
+          ? window.pnT('media.videosBadge', { n: list.length })
+          : list.length + ' vidéos';
+        sub.textContent = tpl + ' · Documentaires · Histoires · Traditions';
+      }
+      window.pnUpdateVideosI18n = function () {
+        if (sub && window.__pnVideoListLen != null) {
+          var t = typeof window.pnT === 'function'
+            ? window.pnT('media.videosBadge', { n: window.__pnVideoListLen })
+            : window.__pnVideoListLen + ' vidéos';
+          sub.textContent = t + ' · Documentaires · Histoires · Traditions';
+        }
+      };
+      window.__pnVideoListLen = list.length;
       if (!list.length) {
         mount.innerHTML = '<p style="color:#c98888;text-align:center;grid-column:1/-1;">Catalogue vide — ajoutez une entrée dans <code>videos-catalog.json</code>.</p>';
         return;

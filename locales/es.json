@@ -1,0 +1,90 @@
+{
+  "meta": {
+    "siteTitle": "Pueblos Indígenas de Québec — Las 11 Primeras Naciones",
+    "siteDescription": "Historia, cultura y lenguas de las 11 naciones indígenas y los Inuit de Québec."
+  },
+  "lang": {
+    "label": "Idioma",
+    "fr": "FR",
+    "en": "EN",
+    "es": "ES"
+  },
+  "nav": {
+    "home": "🏠 Inicio",
+    "articles": "📚 Artículos 1–72",
+    "nations": "📰 Naciones",
+    "videos": "🎬 Videos",
+    "audio": "📻 Audio",
+    "podcasts": "🎙️ Podcasts",
+    "backHome": "← Inicio",
+    "allArticles": "📚 Todos los artículos (1–72)"
+  },
+  "home": {
+    "heroEyebrow": "Serie completa · 11 naciones + Inuit",
+    "heroTitle": "Pueblos<br/>Indígenas<br/>de <span>Québec</span>",
+    "heroSub": "Una serie de artículos sobre las Primeras Naciones y los Inuit que habitan el territorio de Québec desde hace milenios.",
+    "heroCta": "Descubrir las naciones →",
+    "heroScroll": "↓ Explorar",
+    "statFN": "Primeras Naciones",
+    "statInuit": "Nación Inuit",
+    "statPop": "Pueblos indígenas en Québec",
+    "statYears": "de presencia en este territorio",
+    "introTitle": "Una historia que comienza mucho antes de Québec",
+    "introP1": "Mucho antes de que Jacques Cartier llegara al San Lorenzo en 1534, decenas de naciones indígenas habitaban este territorio desde hace milenios. Cazadores, agricultores, navegantes, diplomáticos — cada pueblo desarrolló una civilización única, ligada a la naturaleza y transmitida por una riquísima tradición oral.",
+    "introP2": "Esta serie le invita a descubrir las 11 Primeras Naciones y los Inuit del Nunavik — su historia, cultura, tradiciones y lugar en el Québec de hoy. Una invitación al respeto y al conocimiento.",
+    "nationsTitle": "Las Naciones",
+    "nationsSub": "Haga clic en una nación para leer su artículo",
+    "serieTitle": "Serie temática — Artículos (72)",
+    "serieSub": "Nueve subseries del #1 al #72: espiritualidad, historia, saberes de Québec, sabiduría olvidada, cultura viva… Cada tarjeta abre el artículo completo.",
+    "serieNotice": "Todos los artículos en un solo lugar. Fichas #1–#51, luego #52–#72 sobre Québec — lectura en voz alta (▶ Escuchar) en cada página.",
+    "serieNoticeLink": "Lista completa →",
+    "serieFeatured": "Destacado",
+    "serieRead": "Leer artículo",
+    "mediaTitle": "Mediateca",
+    "mediaSub": "Artículos · Videos · Audio",
+    "mediaArticles": "Artículos",
+    "mediaVideos": "Videos",
+    "mediaAudio": "Audio",
+    "communityTitle": "🤝 Únase a la comunidad",
+    "communityP": "Comparta estos artículos, comente y descubra más sobre los pueblos indígenas de Québec.",
+    "communityFb": "📘 Unirse al grupo de Facebook",
+    "communitySite": "🌐 Sitio de la serie",
+    "seeAllArticles": "📚 Ver todos los artículos (#1 a #72) →"
+  },
+  "articlesPage": {
+    "title": "📚 Todos los artículos",
+    "intro": "Serie numerada #1 a #72 — cada artículo incluye lectura en voz alta (▶ Escuchar).",
+    "metaTitle": "Todos los artículos (1–72) — Primeras Naciones de Québec"
+  },
+  "videosPage": {
+    "title": "🎬 Videos",
+    "header": "Mediateca",
+    "sub": "Primeras Naciones de Québec — documentales y reportajes.",
+    "sectionTitle": "Todas las naciones",
+    "loading": "Cargando videos…",
+    "metaTitle": "Videos — Primeras Naciones de Québec"
+  },
+  "audioPage": {
+    "title": "📻 Radios indígenas de Québec",
+    "header": "Mediateca · Voces de las naciones",
+    "metaTitle": "Radios indígenas — Primeras Naciones de Québec"
+  },
+  "podcastsPage": {
+    "title": "🎙️ Podcasts y emisiones en directo",
+    "metaTitle": "Podcasts — Primeras Naciones (francés)"
+  },
+  "common": {
+    "read": "📖 Leer",
+    "listen": "▶ Escuchar",
+    "share": "Compartir",
+    "articleNotice": "Este artículo está publicado en francés. Para una traducción al inglés o al español, contacte al administrador del grupo."
+  },
+  "media": {
+    "articlesBadge": "{n} artículos",
+    "videosBadge": "{n} videos",
+    "audioBadge": "{radios} radios · {pods} podcasts · {live} en directo",
+    "articlesDesc": "Serie #{range} — historia, cultura y espiritualidad, con lectura en voz alta (▶ Escuchar).",
+    "videosDesc": "Documentales y reportajes sobre la cultura e historia indígena.",
+    "audioDesc": "Radios comunitarias de Québec, podcasts y emisiones en directo."
+  }
+}

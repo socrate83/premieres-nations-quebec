@@ -1,0 +1,90 @@
+{
+  "meta": {
+    "siteTitle": "Peuples Autochtones du Québec — Les 11 Premières Nations",
+    "siteDescription": "Histoire, culture et langues des 11 nations autochtones et des Inuits du Québec."
+  },
+  "lang": {
+    "label": "Langue",
+    "fr": "FR",
+    "en": "EN",
+    "es": "ES"
+  },
+  "nav": {
+    "home": "🏠 Accueil",
+    "articles": "📚 Articles 1–72",
+    "nations": "📰 Nations",
+    "videos": "🎬 Vidéos",
+    "audio": "📻 Audio",
+    "podcasts": "🎙️ Podcasts",
+    "backHome": "← Accueil",
+    "allArticles": "📚 Tous les articles (1–72)"
+  },
+  "home": {
+    "heroEyebrow": "Série complète · 11 nations + Inuits",
+    "heroTitle": "Peuples<br/>Autochtones<br/>du <span>Québec</span>",
+    "heroSub": "Une série d'articles approfondis sur les Premières Nations et les Inuits qui habitent le territoire québécois depuis des millénaires.",
+    "heroCta": "Découvrir les nations →",
+    "heroScroll": "↓ Explorer",
+    "statFN": "Premières Nations",
+    "statInuit": "Nation Inuite",
+    "statPop": "Autochtones au Québec",
+    "statYears": "de présence sur ce territoire",
+    "introTitle": "Une histoire qui commence bien avant le Québec",
+    "introP1": "Bien avant que Jacques Cartier n'aperçoive les rives du Saint-Laurent en 1534, des dizaines de nations autochtones habitaient ce territoire depuis des millénaires. Chasseurs, agriculteurs, navigateurs, diplomates — chaque peuple a développé une civilisation unique, adaptée à son territoire, profondément liée à la nature et transmise par une tradition orale d'une richesse extraordinaire.",
+    "introP2": "Cette série d'articles vous invite à découvrir les 11 Premières Nations et les Inuits du Nunavik — leur histoire, leur culture, leurs traditions et leur place dans le Québec d'aujourd'hui. Une invitation au respect et à la connaissance.",
+    "nationsTitle": "Les Nations",
+    "nationsSub": "Cliquez sur une nation pour lire son article",
+    "serieTitle": "Série thématique — Les articles (72)",
+    "serieSub": "Neuf sous-séries de #1 à #72 : spiritualité, histoire, savoir-faire québécois, Sagesse Oubliée, culture vivante… Chaque carte ouvre l'article complet.",
+    "serieNotice": "Tous les articles au même endroit. Fiches #1–#51, puis #52–#72 sur le Québec — lecture vocale sur chaque page.",
+    "serieNoticeLink": "Liste complète →",
+    "serieFeatured": "Coup de cœur",
+    "serieRead": "Lire l'article",
+    "mediaTitle": "Médiathèque",
+    "mediaSub": "Articles · Vidéos · Audio",
+    "mediaArticles": "Articles",
+    "mediaVideos": "Vidéos",
+    "mediaAudio": "Audio",
+    "communityTitle": "🤝 Rejoignez la communauté",
+    "communityP": "Partagez ces articles, discutez, découvrez davantage sur les peuples autochtones du Québec.",
+    "communityFb": "📘 Rejoindre le groupe Facebook",
+    "communitySite": "🌐 Site de la série",
+    "seeAllArticles": "📚 Voir tous les articles (#1 à #72) →"
+  },
+  "articlesPage": {
+    "title": "📚 Tous les articles",
+    "intro": "Série numérotée #1 à #72 — chaque article propose la lecture vocale (▶ Écouter).",
+    "metaTitle": "Tous les articles (1–72) — Premières Nations du Québec"
+  },
+  "videosPage": {
+    "title": "🎬 Vidéos",
+    "header": "Médiathèque",
+    "sub": "Les Premières Nations du Québec — documentaires et reportages.",
+    "sectionTitle": "Toutes les nations",
+    "loading": "Chargement des vidéos…",
+    "metaTitle": "Vidéos — Premières Nations du Québec"
+  },
+  "audioPage": {
+    "title": "📻 Radios autochtones du Québec",
+    "header": "Médiathèque · Voix des nations",
+    "metaTitle": "Radios autochtones du Québec — Premières Nations"
+  },
+  "podcastsPage": {
+    "title": "🎙️ Podcasts & émissions en direct",
+    "metaTitle": "Podcasts — Premières Nations (français)"
+  },
+  "common": {
+    "read": "📖 Lire",
+    "listen": "▶ Écouter",
+    "share": "Partager",
+    "articleNotice": "Cet article est publié en français. Pour une traduction en anglais ou en espagnol, contactez l'administrateur du groupe."
+  },
+  "media": {
+    "articlesBadge": "{n} articles",
+    "videosBadge": "{n} vidéos",
+    "audioBadge": "{radios} radios · {pods} podcasts · {live} directs",
+    "articlesDesc": "Série #{range} — histoire, culture et spiritualité, avec lecture vocale (▶ Écouter).",
+    "videosDesc": "Documentaires et reportages sur la culture et l'histoire des peuples autochtones.",
+    "audioDesc": "Radios communautaires du Québec, balados en français et émissions en direct."
+  }
+}

@@ -22,14 +22,15 @@
     .articles-group p { margin: 0.35rem 0 0; font-size: 0.88rem; color: #857b66; }
     .articles-item--featured { list-style: none; margin-bottom: 2rem; padding: 1rem; background: rgba(201,169,98,0.08); border-radius: 8px; border: 1px solid rgba(201,169,98,0.25); }
   </style>
+  <link rel="stylesheet" href="lang-switcher.css">
 </head>
-<body>
+<body data-i18n-title="articlesPage.metaTitle">
   <nav class="pn-top" aria-label="Navigation">
-    <a href="Home.html">← Accueil</a>
-    <a href="Audio.html">🎧 Audio</a>
+    <a href="Home.html" data-i18n="nav.backHome">← Accueil</a>
+    <a href="Audio.html" data-i18n="nav.audio">📻 Audio</a>
   </nav>
-  <h1>📚 Tous les articles</h1>
-  <p class="intro">Série numérotée #1 à #72 — chaque article propose la lecture vocale (▶ Écouter).</p>
+  <h1 data-i18n="articlesPage.title">📚 Tous les articles</h1>
+  <p class="intro" data-i18n="articlesPage.intro">Série numérotée #1 à #72 — chaque article propose la lecture vocale (▶ Écouter).</p>
   <ul class="articles-catalog">
 <li class="articles-item articles-item--featured"><a href="famille-premieres-nations.html"><span class="n">★</span> La Famille et les Premières Nations</a><p>Les structures familiales, le respect des aînés et la transmission des savoirs.</p></li>
 <li class="articles-group"><h2>Série 1 — articles 1 à 10</h2><ol>
@@ -123,5 +124,6 @@
 <li><a href="article72.html"><span class="n">#72</span> L'Alimentation Traditionnelle Autochtone du Québec — Territoire, Mémoire et Renaissance</a><p>Chasse, pêche, cueillette, sagamité, banique... Plongez dans les systèmes alimentaires traditionnels des 11 nations autochtones du Québec et leur renaissance gastronomique contemporaine.</p></li>
 </ol></li>
   </ul>
+  <script src="lang-switcher.js" defer></script>
 </body>
 </html>

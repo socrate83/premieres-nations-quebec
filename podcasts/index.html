@@ -40,17 +40,18 @@
     footer{text-align:center;padding:2.5rem;color:rgba(255,255,255,0.35);font-size:0.85rem;border-top:1px solid rgba(255,255,255,0.06);margin-top:2rem}
     footer a{color:var(--or-clair)}
   </style>
+  <link rel="stylesheet" href="../lang-switcher.css">
 </head>
-<body>
+<body data-i18n-title="podcastsPage.metaTitle">
   <nav class="top-nav">
-    <a href="../index.html">🏠 Accueil</a>
-    <a href="../Audio.html">📻 Radios</a>
-    <a href="index.html" class="active">🎙️ Podcasts</a>
+    <a href="../index.html" data-i18n="nav.home">🏠 Accueil</a>
+    <a href="../Audio.html" data-i18n="nav.audio">📻 Radios</a>
+    <a href="index.html" class="active" data-i18n="nav.podcasts">🎙️ Podcasts</a>
   </nav>
 
   <header class="page-header">
-    <p style="font-size:0.75rem;letter-spacing:4px;text-transform:uppercase;color:var(--or-clair);margin-bottom:0.75rem">Dossier · Français · Premières Nations</p>
-    <h1>🎙️ Podcasts &amp; émissions en direct</h1>
+    <p style="font-size:0.75rem;letter-spacing:4px;text-transform:uppercase;color:var(--or-clair);margin-bottom:0.75rem">Dossier · Premières Nations</p>
+    <h1 data-i18n="podcastsPage.title">🎙️ Podcasts &amp; émissions en direct</h1>
     <p>Écoutez ici le dernier épisode quand le flux le permet, ou ouvrez le <strong>dossier de téléchargement</strong> sur la plateforme officielle de chaque créateur.</p>
   </header>
 
@@ -134,5 +135,6 @@
     });
   })();
   </script>
+  <script src="../lang-switcher.js" defer></script>
 </body>
 </html>
