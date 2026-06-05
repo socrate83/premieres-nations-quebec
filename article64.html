@@ -33,9 +33,10 @@
     </style>
   <link rel="stylesheet" href="style.css">
   <link rel="stylesheet" href="lang-switcher.css">
+    <script src="article-i18n.js" defer></script>
   <script src="lang-switcher.js" defer></script>
 </head>
-<body>
+<body data-pn-article-slug="article64">
 <style id="pn-nav-accueil-style">
 .pn-nav-accueil{position:sticky;top:0;z-index:500;display:flex;flex-wrap:wrap;gap:0.5rem 1rem;align-items:center;justify-content:center;padding:0.65rem 1rem;background:#141414;border-bottom:2px solid #c8920a;font-family:'Lato',Georgia,system-ui,sans-serif}
 .pn-nav-accueil a{color:#e8b020;text-decoration:none;font-weight:700;font-size:0.82rem;padding:0.45rem 1rem;border-radius:50px;border:1px solid rgba(232,176,32,0.4);transition:background .2s,color .2s}
@@ -51,6 +52,8 @@
   <a href="Articles.html" data-i18n="nav.allArticles">📚 Tous les articles</a>
 </nav>
 
+
+<div id="pn-article-root" data-pn-article-slug="article64">
 <article class="article-ecoute">
 <h1>#64 — Langues vivantes, langues menacées : le panorama linguistique des Premières Nations québécoises</h1>
 
@@ -74,7 +77,7 @@
 <table>
     <tr><th>Nation</th><th>Langue</th><th>Famille linguistique</th><th>Locuteurs estimés</th><th>Vitalité</th></tr>
     <tr><td>Cris</td><td>Cri (Eeyou)</td><td>Algonquienne</td><td>~17 000</td><td class="statut-ok">✅ Vigoureuse</td></tr>
-    <tr><td>Inuits</td><td>Inuktitut</td><td>Esquimau-aléoute</td><td>~11 000</td><td class="statut-ok">✅ Vigoureuse</td></tr>
+    <tr><td>Inuit</td><td>Inuktitut</td><td>Esquimau-aléoute</td><td>~11 000</td><td class="statut-ok">✅ Vigoureuse</td></tr>
     <tr><td>Atikamekw</td><td>Atikamekw</td><td>Algonquienne</td><td>~6 000</td><td class="statut-ok">✅ Bien préservée</td></tr>
     <tr><td>Innus</td><td>Innu-aimun</td><td>Algonquienne</td><td>~11 000</td><td class="statut-ok">✅ Bien préservée</td></tr>
     <tr><td>Naskapis</td><td>Naskapi</td><td>Algonquienne</td><td>~1 000</td><td class="statut-warn">⚠️ Vulnérable</td></tr>
@@ -141,8 +144,7 @@
     <a href="article63.html">← #63 Les 11 Nations</a>
     <a href="article65.html">#65 Artisanat →</a>
 </div>
-
-
-  <script src="audio-player.js" defer></script>
+</div>
+<script src="audio-player.js" defer></script>
 </body>
 </html>

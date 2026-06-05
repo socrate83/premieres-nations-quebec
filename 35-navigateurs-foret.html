@@ -147,9 +147,10 @@
     </style>
   <link rel="stylesheet" href="style.css">
   <link rel="stylesheet" href="lang-switcher.css">
+    <script src="article-i18n.js" defer></script>
   <script src="lang-switcher.js" defer></script>
 </head>
-<body>
+<body data-pn-article-slug="35-navigateurs-foret">
 
 <style id="pn-nav-accueil-style">
 .pn-nav-accueil{position:sticky;top:0;z-index:500;display:flex;flex-wrap:wrap;gap:0.5rem 1rem;align-items:center;justify-content:center;padding:0.65rem 1rem;background:#141414;border-bottom:2px solid #c8920a;font-family:'Lato',Georgia,system-ui,sans-serif}
@@ -166,7 +167,9 @@
   <a href="Articles.html" data-i18n="nav.allArticles">📚 Tous les articles</a>
 </nav>
 
-    <article class="article-ecoute">
+    
+<div id="pn-article-root" data-pn-article-slug="35-navigateurs-foret">
+<article class="article-ecoute">
 <h1>🧭 Les Navigateurs de la Forêt</h1>
     <p class="subtitle">Savez-vous comment on traversait la forêt sans carte, sans boussole, sans GPS ?</p>
 
@@ -399,7 +402,7 @@
     <p style="text-align: center; margin-top: 40px; font-style: italic; color: #666;">
         Partagez vos réflexions en commentaires ! 🧭
     </p>
-
-  <script src="audio-player.js" defer></script>
+</div>
+<script src="audio-player.js" defer></script>
 </body>
 </html>

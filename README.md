@@ -1,6 +1,6 @@
 # Les Premières Nations du Québec 🪶
 
-Série éducative sur les **11 Premières Nations et les Inuits du Québec**.
+Série éducative sur les **11 Premières Nations et les Inuit du Québec**.
 
 🌐 **Site** : https://socrate83.github.io/premieres-nations-quebec  
 📘 **Groupe Facebook** : https://www.facebook.com/groups/1451283625021958  

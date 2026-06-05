@@ -1,0 +1,27 @@
+---
+description: Après chaque modification du site, commit/push GitHub Pages et donner le lien public
+alwaysApply: true
+---
+
+# Déploiement et vérification obligatoires
+
+Après **toute modification** des fichiers du site (HTML, JSON, JS, CSS, workflows, locales) :
+
+1. **Terminer le travail** demandé par l'utilisateur.
+2. **Commit + push** sur `main` (sauf si l'utilisateur dit explicitement de ne pas pousser).
+3. **Toujours** conclure la réponse avec le lien public pour vérifier le résultat.
+
+## Liens publics (GitHub Pages)
+
+- **Accueil / index** : https://socrate83.github.io/premieres-nations-quebec/Home.html
+- **Nations** : https://socrate83.github.io/premieres-nations-quebec/Home.html#nations
+- **Articles** : https://socrate83.github.io/premieres-nations-quebec/Articles.html
+- **Page Inuit** : https://socrate83.github.io/premieres-nations-quebec/Inuits.html
+
+Indiquer aussi la **page précise** modifiée quand ce n'est pas l'accueil.
+
+## Notes
+
+- Le déploiement GitHub Pages prend en général **1 à 3 minutes** après le push.
+- Nom du peuple : **Inuit** / **les Inuit** (pas « Inuits ») ; le fichier URL reste `Inuits.html`.
+- Ne pas demander à l'utilisateur de répéter « mettre en ligne » ou « donner le lien » — c'est automatique.

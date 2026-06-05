@@ -96,6 +96,7 @@
   }
 
   function injectArticleNotice() {
+    if (document.getElementById('pn-article-root')) return;
     var notice = get(T, 'common.articleNotice');
     if (!notice || currentLang === 'fr') {
       var old = document.getElementById('pn-i18n-article-notice');
@@ -157,6 +158,7 @@
     if (typeof window.pnUpdateMediathequeI18n === 'function') window.pnUpdateMediathequeI18n();
     if (typeof window.pnUpdateVideosI18n === 'function') window.pnUpdateVideosI18n();
     if (typeof window.pnApplyNationI18n === 'function') window.pnApplyNationI18n(currentLang);
+    if (typeof window.pnApplyArticleI18n === 'function') window.pnApplyArticleI18n(currentLang);
   }
 
   function loadAndApply(code) {

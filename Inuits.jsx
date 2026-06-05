@@ -1,10 +1,10 @@
-export default function Inuits() {
+export default function Inuit() {
   const html = `<!DOCTYPE html>
 <html lang="fr">
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Les Inuits — Nunavik, Peuple de l'Arctique</title>
+  <title>Les Inuit — Nunavik, Peuple de l'Arctique</title>
   <style>
     @import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700;900&family=Lato:wght@300;400;700&display=swap');
     :root{
@@ -104,7 +104,7 @@ export default function Inuits() {
     <img src="https://media.base44.com/images/public/69f23c5b09417d29099136be/41afc600c_generated_image.png" alt="Nunavik — territoire inuit sous les aurores boréales" />
     <div class="hero-content">
       <p class="hero-nation">Peuples autochtones du Québec</p>
-      <h1>Les Inuits</h1>
+      <h1>Les Inuit</h1>
       <p class="hero-sub">Inuit — « Êtres humains » · Gardiens du Nunavik</p>
     </div>
     <div class="scroll-hint">↓ Découvrir</div>
@@ -123,9 +123,9 @@ export default function Inuits() {
   <div class="intro-wrap">
     <div class="intro-card">
       <div class="intro-kword">Inuit !</div>
-      <p>Les <strong>Inuits</strong> — <em>Inuit</em> signifie simplement <em>« êtres humains »</em> — sont les habitants du <strong>Nunavik</strong>, le Grand Nord québécois au-delà du 55e parallèle. Ce peuple arctique unique, distinct des Premières Nations par sa langue (l'inuktitut, non algonquienne) et sa culture, a développé pendant 4 000 ans les techniques de survie les plus sophistiquées jamais imaginées dans les environnements les plus hostiles de la planète. L'igloo, le qajaq (kayak), l'ulu, le traîneau à chiens — autant d'inventions génialement adaptées à l'Arctique que le monde entier a adoptées.</p>
+      <p>Les <strong>Inuit</strong> — <em>Inuit</em> signifie simplement <em>« êtres humains »</em> — sont les habitants du <strong>Nunavik</strong>, le Grand Nord québécois au-delà du 55e parallèle. Ce peuple arctique unique, distinct des Premières Nations par sa langue (l'inuktitut, non algonquienne) et sa culture, a développé pendant 4 000 ans les techniques de survie les plus sophistiquées jamais imaginées dans les environnements les plus hostiles de la planète. L'igloo, le qajaq (kayak), l'ulu, le traîneau à chiens — autant d'inventions génialement adaptées à l'Arctique que le monde entier a adoptées.</p>
       <div class="stats">
-        <div><div class="stat-n">~13 000</div><div class="stat-l">Inuits au Nunavik (2024)</div></div>
+        <div><div class="stat-n">~13 000</div><div class="stat-l">Inuit au Nunavik (2024)</div></div>
         <div><div class="stat-n">14</div><div class="stat-l">Villages au Nunavik</div></div>
         <div><div class="stat-n">507 000 km²</div><div class="stat-l">Surface du Nunavik</div></div>
       </div>
@@ -137,13 +137,13 @@ export default function Inuits() {
       <div class="sec-label">Aux racines du monde arctique</div>
       <h2 class="sec-title">Origines et identité</h2>
       <div class="divider"></div>
-      <p>Les Inuits sont les descendants de la culture <strong>Thulé</strong> — une civilisation arctique qui s'est répandue depuis l'Alaska vers l'est à travers tout le Canada arctique et jusqu'au Groenland il y a environ <strong>1 000 ans</strong>. Ils ont supplanté les peuples de la culture <strong>Dorset</strong> (les « Tunit »), qui occupaient l'Arctique depuis environ 2 500 ans avant notre ère.</p>
-      <p>Les Inuits font partie d'une grande famille circumpolaire — les peuples <strong>Inuit-Yupik-Unangan</strong> — qui s'étend de la Sibérie à l'Alaska, au Canada et au Groenland. Leur langue, <strong>l'Inuktitut</strong>, est une langue polysynthétique distincte de toutes les familles linguistiques des Premières Nations — une langue dans laquelle on peut exprimer une phrase entière en un seul mot.</p>
-      <p>Le terme <strong>Esquimau</strong> (utilisé par les Européens) est aujourd'hui considéré péjoratif au Canada. Les Inuits préfèrent leur vrai nom — <em>Inuit</em>, « les êtres humains ».</p>
+      <p>Les Inuit sont les descendants de la culture <strong>Thulé</strong> — une civilisation arctique qui s'est répandue depuis l'Alaska vers l'est à travers tout le Canada arctique et jusqu'au Groenland il y a environ <strong>1 000 ans</strong>. Ils ont supplanté les peuples de la culture <strong>Dorset</strong> (les « Tunit »), qui occupaient l'Arctique depuis environ 2 500 ans avant notre ère.</p>
+      <p>Les Inuit font partie d'une grande famille circumpolaire — les peuples <strong>Inuit-Yupik-Unangan</strong> — qui s'étend de la Sibérie à l'Alaska, au Canada et au Groenland. Leur langue, <strong>l'Inuktitut</strong>, est une langue polysynthétique distincte de toutes les familles linguistiques des Premières Nations — une langue dans laquelle on peut exprimer une phrase entière en un seul mot.</p>
+      <p>Le terme <strong>Esquimau</strong> (utilisé par les Européens) est aujourd'hui considéré péjoratif au Canada. Les Inuit préfèrent leur vrai nom — <em>Inuit</em>, « les êtres humains ».</p>
       <div class="highlight">
         <h3>🌌 Vision du monde inuit — Sila</h3>
         <ul>
-          <li><strong>Sila</strong> est le concept central de la cosmologie inuite — à la fois l'air, le vent, la météo, l'intelligence universelle et l'âme du monde. Respecter Sila, c'est vivre en harmonie avec l'Arctique.</li>
+          <li><strong>Sila</strong> est le concept central de la cosmologie inuit — à la fois l'air, le vent, la météo, l'intelligence universelle et l'âme du monde. Respecter Sila, c'est vivre en harmonie avec l'Arctique.</li>
           <li><strong>Inua</strong> est l'esprit qui réside dans tous les êtres et phénomènes naturels — animaux, vents, glaces, aurores boréales. Chaque chose a son inua.</li>
           <li>Les <strong>angakkuit</strong> (chamans) communiquent avec les esprits pour guérir les malades, apaiser les animaux offensés et prédire le temps. Leur rôle est central dans la survie de la communauté.</li>
           <li>L'<strong>Inuit Qaujimajatuqangit</strong> (IQ — savoir traditionnel inuit) est le corpus de connaissances ancestrales qui guide tous les aspects de la vie — de la chasse à la gouvernance.</li>
@@ -160,7 +160,7 @@ export default function Inuits() {
       <p>Le <strong>Nunavik</strong> (« la grande terre » en inuktitut) couvre <strong>507 000 km²</strong> — soit un tiers de la superficie totale du Québec. Ce territoire immense s'étend au nord du 55e parallèle, de la Baie-James à l'ouest jusqu'au Labrador à l'est, et de la frontière avec la région de la Côte-Nord au sud jusqu'aux côtes de la Baie d'Hudson, du Détroit d'Hudson et de la Baie d'Ungava au nord.</p>
       <p>Le Nunavik est un territoire de toundra arctique et subarctique — paysage de lacs, de rivières, de tourbières, de pergélisol et de côtes rocheuses. En hiver, les températures descendent régulièrement à <strong>-40°C</strong> ; en été, le soleil ne se couche presque pas. Les <strong>aurores boréales</strong> illuminent les nuits d'hiver de couleurs fantastiques.</p>
       <img src="https://media.base44.com/images/public/69f23c5b09417d29099136be/41afc600c_generated_image.png" alt="Nunavik sous les aurores boréales" class="img-wide"/>
-      <p class="img-cap">Le Nunavik — 507 000 km² de toundra arctique, terre des Inuits depuis 4 000 ans</p>
+      <p class="img-cap">Le Nunavik — 507 000 km² de toundra arctique, terre des Inuit depuis 4 000 ans</p>
     </div>
   </section>
 
@@ -170,9 +170,9 @@ export default function Inuits() {
       <h2 class="sec-title">Culture, langue et traditions</h2>
       <div class="divider"></div>
       <div class="cards">
-        <div class="card"><div class="card-icon">🗣️</div><h3>L'Inuktitut</h3><p>Langue polysynthétique unique, l'inuktitut est parlé par la majorité des Inuits du Nunavik. Il s'écrit en syllabique (caractères inventés au 19e siècle) ou en alphabet latin. Le Nunavik est l'une des régions canadiennes où la langue autochtone est la plus vitale parmi les jeunes.</p></div>
-        <div class="card"><div class="card-icon">🎭</div><h3>Throat singing — Katajjaq</h3><p>Le chant de gorge (katajjaq) est une forme musicale unique aux Inuites — pratiquée en paires de femmes face à face, créant des sons et des rythmes hypnotiques. Reconnu par l'UNESCO comme patrimoine immatériel, il connaît un renouveau mondial.</p></div>
-        <div class="card"><div class="card-icon">🗿</div><h3>Sculpture inuit</h3><p>La sculpture inuit en stéatite (pierre à savon), en os de baleine et en ivoire de morse est reconnue mondialement. Les artistes inuits du Nunavik — dont plusieurs de Puvirnituq — sont exposés dans les plus grands musées du monde. Un art millénaire devenu contemporain.</p></div>
+        <div class="card"><div class="card-icon">🗣️</div><h3>L'Inuktitut</h3><p>Langue polysynthétique unique, l'inuktitut est parlé par la majorité des Inuit du Nunavik. Il s'écrit en syllabique (caractères inventés au 19e siècle) ou en alphabet latin. Le Nunavik est l'une des régions canadiennes où la langue autochtone est la plus vitale parmi les jeunes.</p></div>
+        <div class="card"><div class="card-icon">🎭</div><h3>Throat singing — Katajjaq</h3><p>Le chant de gorge (katajjaq) est une forme musicale unique aux inuit — pratiquée en paires de femmes face à face, créant des sons et des rythmes hypnotiques. Reconnu par l'UNESCO comme patrimoine immatériel, il connaît un renouveau mondial.</p></div>
+        <div class="card"><div class="card-icon">🗿</div><h3>Sculpture inuit</h3><p>La sculpture inuit en stéatite (pierre à savon), en os de baleine et en ivoire de morse est reconnue mondialement. Les artistes inuit du Nunavik — dont plusieurs de Puvirnituq — sont exposés dans les plus grands musées du monde. Un art millénaire devenu contemporain.</p></div>
         <div class="card"><div class="card-icon">🐋</div><h3>Chasse et pêche</h3><p>La chasse au phoque, au béluga, au caribou, à l'ours polaire, et la pêche à l'omble chevalier et au turbot sont encore des activités vitales — alimentaires et culturelles. La muktuk (peau et graisse de béluga) et le mattak (peau crue de narval) sont des mets traditionnels essentiels.</p></div>
         <div class="card"><div class="card-icon">🏃</div><h3>Jeux arctiques</h3><p>Les Jeux arctiques d'hiver (Arctic Winter Games) rassemblent les peuples circumpolaires dans des épreuves traditionnelles : saut à la cheville, lancer de harpon, tir au couteau, biathlon inuit. Ces jeux maintiennent vivants les savoir-faire ancestraux.</p></div>
         <div class="card"><div class="card-icon">🎨</div><h3>Estampes de Cape Dorset</h3><p>La coopérative de Cape Dorset (Nunavut) a révélé l'art graphique inuit au monde dès les années 1950. Au Nunavik, des artistes de Puvirnituq et Inukjuak perpétuent cette tradition d'estampes colorées aux thèmes de chasse, de vie quotidienne et de légendes.</p></div>
@@ -185,9 +185,9 @@ export default function Inuits() {
       <div class="sec-label">Génie de la survie</div>
       <h2 class="sec-title">L'igloo, le qajaq et l'ulu</h2>
       <div class="divider"></div>
-      <p>Les Inuits ont développé des technologies de survie arctique d'une ingéniosité stupéfiante — des inventions si parfaites qu'elles sont toujours utilisées aujourd'hui, et ont inspiré des technologies modernes.</p>
+      <p>Les Inuit ont développé des technologies de survie arctique d'une ingéniosité stupéfiante — des inventions si parfaites qu'elles sont toujours utilisées aujourd'hui, et ont inspiré des technologies modernes.</p>
       <div class="highlight">
-        <h3>🏗️ Les grandes inventions inuites</h3>
+        <h3>🏗️ Les grandes inventions inuit</h3>
         <ul>
           <li><strong>Igloo (Iglu)</strong> — abri en blocs de neige construit en spirale. Température intérieure jusqu'à +16°C quand il fait -40°C dehors. Sa forme en dôme géodésique est aérodynamiquement parfaite et a inspiré l'architecture moderne.</li>
           <li><strong>Qajaq (kayak)</strong> — embarcation individuelle en peaux de phoque tendue sur ossature de bois ou d'os. Étanche, rapide, hydrodynamique — le kayak moderne est une copie directe du qajaq inuit.</li>
@@ -201,7 +201,7 @@ export default function Inuits() {
 
   <section class="quote-sec">
     <blockquote>« Sila est partout — dans le vent, dans la neige, dans la lumière des aurores. Quand vous respectez Sila, l'Arctique vous protège. »</blockquote>
-    <p class="quote-src">— Sagesse inuite traditionnelle</p>
+    <p class="quote-src">— Sagesse inuit traditionnelle</p>
   </section>
 
   <section class="section" id="histoire">
@@ -212,27 +212,27 @@ export default function Inuits() {
       <div class="timeline">
         <div class="tl-item">
           <div class="tl-dot">1000 av. J.-C.</div>
-          <div class="tl-box"><h3>Culture Dorset</h3><p>Les ancêtres Dorset occupent l'Arctique québécois depuis ~2 500 ans av. J.-C. Premiers sculpteurs inuits reconnus, ils laissent des œuvres en ivoire et en os d'une beauté saisissante.</p></div>
+          <div class="tl-box"><h3>Culture Dorset</h3><p>Les ancêtres Dorset occupent l'Arctique québécois depuis ~2 500 ans av. J.-C. Premiers sculpteurs inuit reconnus, ils laissent des œuvres en ivoire et en os d'une beauté saisissante.</p></div>
         </div>
         <div class="tl-item">
           <div class="tl-dot">1000 apr. J.-C.</div>
-          <div class="tl-box"><h3>Culture Thulé — Ancêtres des Inuits</h3><p>La culture Thulé, venue d'Alaska, s'étend vers l'est et remplace la culture Dorset. Ces chasseurs de baleines géantes utilisaient le qajaq, le traîneau à chiens et maîtrisaient la technologie de l'igloo.</p></div>
+          <div class="tl-box"><h3>Culture Thulé — Ancêtres des Inuit</h3><p>La culture Thulé, venue d'Alaska, s'étend vers l'est et remplace la culture Dorset. Ces chasseurs de baleines géantes utilisaient le qajaq, le traîneau à chiens et maîtrisaient la technologie de l'igloo.</p></div>
         </div>
         <div class="tl-item">
           <div class="tl-dot">1600s</div>
-          <div class="tl-box"><h3>Baleiniers européens</h3><p>Les baleiniers basques, hollandais et anglais fréquentent les côtes du Nunavik. Ces contacts apportent maladies (décimant les communautés), mais aussi outils métalliques que les Inuits intègrent brillamment dans leur technologie.</p></div>
+          <div class="tl-box"><h3>Baleiniers européens</h3><p>Les baleiniers basques, hollandais et anglais fréquentent les côtes du Nunavik. Ces contacts apportent maladies (décimant les communautés), mais aussi outils métalliques que les Inuit intègrent brillamment dans leur technologie.</p></div>
         </div>
         <div class="tl-item">
           <div class="tl-dot">1912</div>
-          <div class="tl-box"><h3>Annexion au Québec</h3><p>Le territoire du Nunavik est officiellement annexé au Québec en 1912 (Loi sur l'extension des frontières du Québec), sans consultation des Inuits. Postes de la CBH, missions catholiques et anglicanes s'établissent progressivement.</p></div>
+          <div class="tl-box"><h3>Annexion au Québec</h3><p>Le territoire du Nunavik est officiellement annexé au Québec en 1912 (Loi sur l'extension des frontières du Québec), sans consultation des Inuit. Postes de la CBH, missions catholiques et anglicanes s'établissent progressivement.</p></div>
         </div>
         <div class="tl-item">
           <div class="tl-dot">1950–1970</div>
-          <div class="tl-box"><h3>Sédentarisation forcée et numéros E</h3><p>Le gouvernement fédéral impose la sédentarisation dans des villages permanents. Les Inuits reçoivent des disques de cuivre numérotés (numéros E) en remplacement de leurs noms — une déshumanisation documentée. Les pensionnats arrachent les enfants à leurs familles.</p></div>
+          <div class="tl-box"><h3>Sédentarisation forcée et numéros E</h3><p>Le gouvernement fédéral impose la sédentarisation dans des villages permanents. Les Inuit reçoivent des disques de cuivre numérotés (numéros E) en remplacement de leurs noms — une déshumanisation documentée. Les pensionnats arrachent les enfants à leurs familles.</p></div>
         </div>
         <div class="tl-item">
           <div class="tl-dot">1975</div>
-          <div class="tl-box"><h3>Convention de la Baie James</h3><p>Les Inuits du Nunavik signent la Convention de la Baie James avec les Cris — obtenant droits territoriaux, compensations et autonomie institutionnelle naissante.</p></div>
+          <div class="tl-box"><h3>Convention de la Baie James</h3><p>Les Inuit du Nunavik signent la Convention de la Baie James avec les Cris — obtenant droits territoriaux, compensations et autonomie institutionnelle naissante.</p></div>
         </div>
       </div>
     </div>
@@ -266,37 +266,37 @@ export default function Inuits() {
   <section class="section" id="aujourd-hui">
     <div class="container">
       <div class="sec-label">XXIe siècle</div>
-      <h2 class="sec-title">Les Inuits aujourd'hui</h2>
+      <h2 class="sec-title">Les Inuit aujourd'hui</h2>
       <div class="divider"></div>
-      <p>Avec environ <strong>13 000 personnes</strong> réparties dans 14 villages, les Inuits du Nunavik sont gouvernés par la <strong>Kativik Regional Government (KRG)</strong> — créée par la Convention de la Baie James. La KRG gère les transports, le logement, l'environnement et d'autres services régionaux.</p>
-      <p>Le <strong>changement climatique</strong> est la menace existentielle la plus urgente pour les Inuits. La fonte du pergélisol déstabilise les fondations des maisons, la glace de mer se forme plus tard et fond plus tôt — rendant la chasse traditionnelle plus dangereuse. Les routes de glace entre villages disparaissent. Les Inuits sont en première ligne de la crise climatique mondiale.</p>
-      <p>En 2020, les Inuits du Nunavik ont présenté leur projet d'<strong>autonomie gouvernementale</strong> — le <em>Nunavik Inuit Land Claims Agreement</em> de 2008 leur ayant déjà accordé des droits marins étendus. La création d'un gouvernement régional inuit autonome est l'objectif politique central des prochaines décennies.</p>
+      <p>Avec environ <strong>13 000 personnes</strong> réparties dans 14 villages, les Inuit du Nunavik sont gouvernés par la <strong>Kativik Regional Government (KRG)</strong> — créée par la Convention de la Baie James. La KRG gère les transports, le logement, l'environnement et d'autres services régionaux.</p>
+      <p>Le <strong>changement climatique</strong> est la menace existentielle la plus urgente pour les Inuit. La fonte du pergélisol déstabilise les fondations des maisons, la glace de mer se forme plus tard et fond plus tôt — rendant la chasse traditionnelle plus dangereuse. Les routes de glace entre villages disparaissent. Les Inuit sont en première ligne de la crise climatique mondiale.</p>
+      <p>En 2020, les Inuit du Nunavik ont présenté leur projet d'<strong>autonomie gouvernementale</strong> — le <em>Nunavik Inuit Land Claims Agreement</em> de 2008 leur ayant déjà accordé des droits marins étendus. La création d'un gouvernement régional inuit autonome est l'objectif politique central des prochaines décennies.</p>
       <div class="cards">
-        <div class="card"><div class="card-icon">🌡️</div><h3>Changement climatique</h3><p>Le Nunavik se réchauffe 3 fois plus vite que la moyenne mondiale. Fonte du pergélisol, disparition de la glace de mer, déstabilisation des écosystèmes arctiques — les Inuits subissent de plein fouet une crise qu'ils n'ont pas créée mais pour laquelle leur mode de vie millénaire n'a pas de réponse.</p></div>
-        <div class="card"><div class="card-icon">🏛️</div><h3>Vers l'autonomie gouvernementale</h3><p>Après la Convention de la Baie James (1975) et l'Entente sur les revendications territoriales des Inuits du Nunavik (2008), les Inuits négocient un gouvernement régional autonome. Un processus historique en cours.</p></div>
-        <div class="card"><div class="card-icon">🎨</div><h3>Art inuit mondial</h3><p>Les sculpteurs et artistes inuits du Nunavik sont exposés dans les plus grands musées et galeries du monde. L'art inuit est devenu l'une des formes d'expression autochtone les plus reconnues et les mieux valorisées au plan international.</p></div>
+        <div class="card"><div class="card-icon">🌡️</div><h3>Changement climatique</h3><p>Le Nunavik se réchauffe 3 fois plus vite que la moyenne mondiale. Fonte du pergélisol, disparition de la glace de mer, déstabilisation des écosystèmes arctiques — les Inuit subissent de plein fouet une crise qu'ils n'ont pas créée mais pour laquelle leur mode de vie millénaire n'a pas de réponse.</p></div>
+        <div class="card"><div class="card-icon">🏛️</div><h3>Vers l'autonomie gouvernementale</h3><p>Après la Convention de la Baie James (1975) et l'Entente sur les revendications territoriales des Inuit du Nunavik (2008), les Inuit négocient un gouvernement régional autonome. Un processus historique en cours.</p></div>
+        <div class="card"><div class="card-icon">🎨</div><h3>Art inuit mondial</h3><p>Les sculpteurs et artistes inuit du Nunavik sont exposés dans les plus grands musées et galeries du monde. L'art inuit est devenu l'une des formes d'expression autochtone les plus reconnues et les mieux valorisées au plan international.</p></div>
       </div>
     </div>
   </section>
 
   <div class="share-footer">
     <h4>📢 Partager cet article</h4>
-    <p>Vous avez aimé ? Faites découvrir les Inuits à votre entourage !</p>
+    <p>Vous avez aimé ? Faites découvrir les Inuit à votre entourage !</p>
     <div class="share-btns">
-      <a class="btn-fb-big" href="https://www.facebook.com/sharer/sharer.php?u=https://lucie-app-5fea0268.base44.app/Inuits" target="_blank">📘 Facebook</a>
+      <a class="btn-fb-big" href="https://www.facebook.com/sharer/sharer.php?u=https://lucie-app-5fea0268.base44.app/Inuit" target="_blank">📘 Facebook</a>
       <a class="btn-group-big" href="https://www.facebook.com/groups/1451283625021958" target="_blank">👥 Groupe FB</a>
-      <a class="btn-messenger-big" href="https://www.facebook.com/dialog/send?link=https://lucie-app-5fea0268.base44.app/Inuits&app_id=291494419107518&redirect_uri=https://lucie-app-5fea0268.base44.app/Inuits" target="_blank">💬 Messenger</a>
-      <a class="btn-whatsapp-big" href="https://api.whatsapp.com/send?text=D%C3%A9couvre+cet+article+sur+les+Inuits+%3A+https://lucie-app-5fea0268.base44.app/Inuits" target="_blank">🟢 WhatsApp</a>
-      <a class="btn-email-big" href="mailto:?subject=Article+sur+les+Inuits&body=Je+te+partage+cet+article+sur+les+Inuits+%3A+https://lucie-app-5fea0268.base44.app/Inuits" target="_blank">📧 Courriel</a>
-      <button class="btn-copy-big" onclick="navigator.clipboard.writeText('https://lucie-app-5fea0268.base44.app/Inuits').then(function(){var t=document.getElementById('toast-share');t.style.opacity='1';t.style.transform='translateX(-50%) translateY(0)';setTimeout(function(){t.style.opacity='0';t.style.transform='translateX(-50%) translateY(20px)';},2500);})">🔗 Copier le lien</button>
+      <a class="btn-messenger-big" href="https://www.facebook.com/dialog/send?link=https://lucie-app-5fea0268.base44.app/Inuit&app_id=291494419107518&redirect_uri=https://lucie-app-5fea0268.base44.app/Inuit" target="_blank">💬 Messenger</a>
+      <a class="btn-whatsapp-big" href="https://api.whatsapp.com/send?text=D%C3%A9couvre+cet+article+sur+les+Inuit+%3A+https://lucie-app-5fea0268.base44.app/Inuit" target="_blank">🟢 WhatsApp</a>
+      <a class="btn-email-big" href="mailto:?subject=Article+sur+les+Inuit&body=Je+te+partage+cet+article+sur+les+Inuit+%3A+https://lucie-app-5fea0268.base44.app/Inuit" target="_blank">📧 Courriel</a>
+      <button class="btn-copy-big" onclick="navigator.clipboard.writeText('https://lucie-app-5fea0268.base44.app/Inuit').then(function(){var t=document.getElementById('toast-share');t.style.opacity='1';t.style.transform='translateX(-50%) translateY(0)';setTimeout(function(){t.style.opacity='0';t.style.transform='translateX(-50%) translateY(20px)';},2500);})">🔗 Copier le lien</button>
     </div>
   </div>
   <div id="toast-share" style="position:fixed;bottom:2rem;left:50%;transform:translateX(-50%) translateY(20px);background:#C8920A;color:#000;font-weight:700;font-size:0.9rem;padding:0.7rem 2rem;border-radius:30px;opacity:0;transition:all 0.3s;z-index:9999;pointer-events:none">✅ Lien copié !</div>
 
   <footer>
     <h3>Inuit — Les Gardiens du Grand Nord</h3>
-    <p>Cet article clôt notre série sur les 11 Premières Nations et les Inuits du Québec. Un hommage à leur résilience, leur génie et leur beauté culturelle.</p>
-    <p>🌐 <a href="https://www.krg.ca" target="_blank">krg.ca</a> | <a href="https://tourismeautochtone.com/nations/inuits" target="_blank">tourismeautochtone.com</a></p>
+    <p>Cet article clôt notre série sur les 11 Premières Nations et les Inuit du Québec. Un hommage à leur résilience, leur génie et leur beauté culturelle.</p>
+    <p>🌐 <a href="https://www.krg.ca" target="_blank">krg.ca</a> | <a href="https://tourismeautochtone.com/nations/inuit" target="_blank">tourismeautochtone.com</a></p>
     <div class="sources"><strong>Sources :</strong> Gouvernement du Québec (2025) • Kativik Regional Government • Convention de la Baie James (1975) • Encyclopédie canadienne • Makivik Corporation</div>
   </footer>
 
@@ -305,5 +305,5 @@ export default function Inuits() {
   </script>
 </body>
 </html>`;
-  return <iframe srcDoc={html} style={{width:'100%',height:'100vh',border:'none'}} title="Les Inuits — Nunavik"/>;
+  return <iframe srcDoc={html} style={{width:'100%',height:'100vh',border:'none'}} title="Les Inuit — Nunavik"/>;
 }

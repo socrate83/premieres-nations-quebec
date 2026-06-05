@@ -520,11 +520,11 @@
       "introHtml": "Les <strong>Naskapis</strong> sont le peuple le plus nordique des Premières Nations du Québec — gardiens des immenses plateaux subarctiques du <strong>Labrador québécois</strong>. Cousins proches des Innus, ils ont poussé leur mode de vie nomade à l'extrême, suivant les grands troupeaux de caribous pendant des millénaires dans l'un des territoires les plus inhospitaliers de la planète. Leur ville moderne, <strong>Kawawachikamach</strong>, construite en 1984 près de Schefferville, est l'une des c"
     },
     {
-      "id": "inuits",
+      "id": "inuit",
       "file": "Inuits.html",
-      "metaTitle": "Les Inuits — Histoire et Culture | Premières Nations du Québec",
+      "metaTitle": "Les Inuit — Histoire et Culture | Premières Nations du Québec",
       "heroNation": "Peuples autochtones du Québec",
-      "heroTitle": "Les Inuits",
+      "heroTitle": "Les Inuit",
       "heroTagline": "Inuit — « Êtres humains » · Gardiens du Nunavik",
       "nav": [],
       "sections": [
@@ -561,10 +561,10 @@
         {
           "id": "aujourd-hui",
           "label": "XXIe siècle",
-          "title": "Les Inuits aujourd'hui"
+          "title": "Les Inuit aujourd'hui"
         }
       ],
-      "introHtml": "Les <strong>Inuits</strong> — <em>Inuit</em> signifie simplement <em>« êtres humains »</em> — sont les habitants du <strong>Nunavik</strong>, le Grand Nord québécois au-delà du 55e parallèle. Ce peuple arctique unique, distinct des Premières Nations par sa langue (l'inuktitut, non algonquienne) et sa culture, a développé pendant 4 000 ans les techniques de survie les plus sophistiquées jamais imaginées dans les environnements les plus hostiles de la planète. L'igloo, le qajaq (kayak), l'ulu, le "
+      "introHtml": "Les <strong>Inuit</strong> — <em>Inuit</em> signifie simplement <em>« êtres humains »</em> — sont les habitants du <strong>Nunavik</strong>, le Grand Nord québécois au-delà du 55e parallèle. Ce peuple arctique unique, distinct des Premières Nations par sa langue (l'inuktitut, non algonquienne) et sa culture, a développé pendant 4 000 ans les techniques de survie les plus sophistiquées jamais imaginées dans les environnements les plus hostiles de la planète. L'igloo, le qajaq (kayak), l'ulu, le "
     }
   ]
 }

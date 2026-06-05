@@ -1969,17 +1969,17 @@
       }
     },
     {
-      "id": "inuits",
+      "id": "inuit",
       "file": "Inuits.html",
       "fr": {
-        "metaTitle": "Les Inuits — Histoire et Culture | Premières Nations du Québec",
+        "metaTitle": "Les Inuit — Histoire et Culture | Premières Nations du Québec",
         "heroNation": "Peuples autochtones du Québec",
-        "heroTitle": "Les Inuits",
+        "heroTitle": "Les Inuit",
         "heroTagline": "Inuit — « Êtres humains » · Gardiens du Nunavik",
         "scroll": "↓ Découvrir",
         "card": {
           "tag": "Inuit · Nunavik · Grand Nord",
-          "name": "Les Inuits",
+          "name": "Les Inuit",
           "desc": "Inuit — « Êtres humains » · Gardiens du Nunavik"
         },
         "nav": [
@@ -2025,10 +2025,10 @@
           {
             "id": "aujourd-hui",
             "label": "XXIe siècle",
-            "title": "Les Inuits aujourd'hui"
+            "title": "Les Inuit aujourd'hui"
           }
         ],
-        "introHtml": "Les <strong>Inuits</strong> — <em>Inuit</em> signifie simplement <em>« êtres humains »</em> — sont les habitants du <strong>Nunavik</strong>, le Grand Nord québécois au-delà du 55e parallèle. Ce peuple arctique unique, distinct des Premières Nations par sa langue (l'inuktitut, non algonquienne) et sa culture, a développé pendant 4 000 ans les techniques de survie les plus sophistiquées jamais imaginées dans les environnements les plus hostiles de la planète. L'igloo, le qajaq (kayak), l'ulu, le "
+        "introHtml": "Les <strong>Inuit</strong> — <em>Inuit</em> signifie simplement <em>« êtres humains »</em> — sont les habitants du <strong>Nunavik</strong>, le Grand Nord québécois au-delà du 55e parallèle. Ce peuple arctique unique, distinct des Premières Nations par sa langue (l'inuktitut, non algonquienne) et sa culture, a développé pendant 4 000 ans les techniques de survie les plus sophistiquées jamais imaginées dans les environnements les plus hostiles de la planète. L'igloo, le qajaq (kayak), l'ulu, le "
       },
       "en": {
         "metaTitle": "The Inuit — History and Culture | First Nations of Quebec",
@@ -2084,7 +2084,7 @@
           {
             "id": "aujourd-hui",
             "label": "21st century",
-            "title": "Les Inuits today"
+            "title": "The Inuit today"
           }
         ],
         "introHtml": "The <strong>Inuit</strong> — <em>Inuit</em> means simply <em>“human beings”</em> — inhabit <strong>Nunavik</strong>, Quebec’s Far North beyond the 55th parallel. Over 4,000 years they developed among the most sophisticated survival techniques on the planet."
@@ -2143,7 +2143,7 @@
           {
             "id": "aujourd-hui",
             "label": "Siglo XXI",
-            "title": "Les Inuits hoy"
+            "title": "Los Inuit hoy"
           }
         ],
         "introHtml": "Los <strong>Inuit</strong> — <em>Inuit</em> significa <em>« seres humanos »</em> — habitan el <strong>Nunavik</strong>, el Gran Norte de Québec más allá del paralelo 55."

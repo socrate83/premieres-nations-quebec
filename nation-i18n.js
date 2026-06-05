@@ -1,10 +1,13 @@
 /**
- * Traductions des 11 pages nations + cartes accueil (locales/nations.json).
+ * Traductions des 11 pages nations + cartes accueil.
+ * Corps complet : locales/nations-bodies/{id}.json
  */
 (function () {
   'use strict';
 
   var cache = null;
+  var bodyCache = {};
+  var frBodySnapshot = null;
   var currentLang = 'fr';
 
   function assetPrefix() {
@@ -35,6 +38,28 @@
     return tryLoad(0);
   }
 
+  function fetchNationBody(id) {
+    if (bodyCache[id]) return bodyCache[id];
+    var prefix = assetPrefix();
+    var urls = [
+      prefix + '/locales/nations-bodies/' + id + '.json',
+      'locales/nations-bodies/' + id + '.json',
+      '../locales/nations-bodies/' + id + '.json',
+    ];
+    bodyCache[id] = (function tryLoad(i) {
+      if (i >= urls.length) return Promise.resolve(null);
+      return fetch(urls[i], { cache: 'no-store' })
+        .then(function (r) {
+          if (!r.ok) throw new Error();
+          return r.json();
+        })
+        .catch(function () {
+          return tryLoad(i + 1);
+        });
+    })(0);
+    return bodyCache[id];
+  }
+
   function nationEntry(data, id) {
     if (!data || !data.nations) return null;
     for (var i = 0; i < data.nations.length; i++) {
@@ -46,6 +71,16 @@
   function packFor(entry, lang) {
     if (!entry) return null;
     return entry[lang] || entry.fr;
+  }
+
+  function nationRoot() {
+    return document.getElementById('pn-nation-root');
+  }
+
+  function saveFrBodySnapshot() {
+    if (frBodySnapshot) return;
+    var root = nationRoot();
+    if (root) frBodySnapshot = root.innerHTML;
   }
 
   function applyHomeCards(data, lang) {
@@ -71,7 +106,7 @@
     return '';
   }
 
-  function applyNationPage(entry, pack, lang) {
+  function applyNationChrome(pack) {
     if (!pack) return;
     document.title = pack.metaTitle || document.title;
 
@@ -101,8 +136,83 @@
         else if (pack.nav[i]) a.textContent = pack.nav[i];
       });
     }
+  }
 
-    if (pack.sections) {
+  function showNotice(lang, hasFullBody) {
+    var partialId = 'pn-i18n-nation-notice';
+    var machineId = 'pn-i18n-machine-notice';
+
+    function remove(id) {
+      var el = document.getElementById(id);
+      if (el) el.remove();
+    }
+
+    if (lang === 'fr') {
+      remove(partialId);
+      remove(machineId);
+      return;
+    }
+
+    remove(partialId);
+
+    if (!hasFullBody) {
+      var notice =
+        typeof window.pnT === 'function'
+          ? window.pnT('common.nationNotice') || window.pnT('common.articleNotice')
+          : null;
+      if (!notice) return;
+      var anchor = document.querySelector('.intro-section, .intro-wrap, .intro-card, article.article-ecoute');
+      if (!anchor) return;
+      var box = document.getElementById(partialId);
+      if (!box) {
+        box = document.createElement('div');
+        box.id = partialId;
+        box.className = 'pn-i18n-notice';
+        box.setAttribute('role', 'note');
+        anchor.parentNode.insertBefore(box, anchor);
+      }
+      box.textContent = notice;
+      remove(machineId);
+      return;
+    }
+
+    remove(partialId);
+    var msg =
+      typeof window.pnT === 'function' ? window.pnT('common.machineTranslationNotice') : null;
+    if (!msg) return;
+    var root = nationRoot() || document.querySelector('article.article-ecoute');
+    if (!root || !root.parentNode) return;
+    var mbox = document.getElementById(machineId);
+    if (!mbox) {
+      mbox = document.createElement('div');
+      mbox.id = machineId;
+      mbox.className = 'pn-i18n-notice';
+      mbox.setAttribute('role', 'note');
+      root.parentNode.insertBefore(mbox, root);
+    }
+    mbox.textContent = msg;
+  }
+
+  function applyNationPage(entry, pack, lang, bodyData) {
+    applyNationChrome(pack);
+    saveFrBodySnapshot();
+
+    var root = nationRoot();
+    var fullBody = bodyData && bodyData[lang] && bodyData[lang].html;
+
+    if (lang === 'fr' && frBodySnapshot && root) {
+      root.innerHTML = frBodySnapshot;
+      showNotice('fr', true);
+      return;
+    }
+
+    if (fullBody && root) {
+      root.innerHTML = fullBody;
+      showNotice(lang, true);
+      return;
+    }
+
+    if (pack && pack.sections) {
       pack.sections.forEach(function (s) {
         var sec = document.getElementById(s.id);
         if (!sec) return;
@@ -117,38 +227,9 @@
       document.querySelector('.intro-card > p') ||
       document.querySelector('.intro-wrap .intro-card p') ||
       document.querySelector('.intro-section .intro-card p');
-    if (introP && pack.introHtml) introP.innerHTML = pack.introHtml;
+    if (introP && pack && pack.introHtml) introP.innerHTML = pack.introHtml;
 
-    injectNationNotice(lang);
-  }
-
-  function injectNationNotice(lang) {
-    var notice =
-      typeof window.pnT === 'function'
-        ? window.pnT('common.nationNotice') || window.pnT('common.articleNotice')
-        : null;
-    if (!notice && lang !== 'fr') {
-      notice =
-        lang === 'en'
-          ? 'Section titles and introduction are translated; the full article body remains in French.'
-          : 'Los títulos de sección y la introducción están traducidos; el cuerpo del artículo permanece en francés.';
-    }
-    if (!notice || lang === 'fr') {
-      var old = document.getElementById('pn-i18n-nation-notice');
-      if (old) old.remove();
-      return;
-    }
-    var anchor = document.querySelector('.intro-section, .intro-wrap, .intro-card, article.article-ecoute');
-    if (!anchor) return;
-    var box = document.getElementById('pn-i18n-nation-notice');
-    if (!box) {
-      box = document.createElement('div');
-      box.id = 'pn-i18n-nation-notice';
-      box.className = 'pn-i18n-notice';
-      box.setAttribute('role', 'note');
-      anchor.parentNode.insertBefore(box, anchor);
-    }
-    box.textContent = notice;
+    showNotice(lang, false);
   }
 
   window.pnApplyNationI18n = function (lang) {
@@ -159,7 +240,9 @@
       var id = document.body && document.body.getAttribute('data-pn-nation');
       if (!id) return;
       var entry = nationEntry(data, id);
-      applyNationPage(entry, packFor(entry, currentLang), currentLang);
+      return fetchNationBody(id).then(function (bodyData) {
+        applyNationPage(entry, packFor(entry, currentLang), currentLang, bodyData);
+      });
     });
   };
 })();

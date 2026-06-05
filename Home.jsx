@@ -136,9 +136,9 @@ export default function Home() {
   <section class="hero">
     <div class="hero-bg"></div>
     <div class="hero-content">
-      <p class="hero-eyebrow">Série complète · 11 nations + Inuits</p>
+      <p class="hero-eyebrow">Série complète · 11 nations + Inuit</p>
       <h1>Peuples<br/>Autochtones<br/>du <span>Québec</span></h1>
-      <p class="hero-sub">Une série d'articles approfondis sur les Premières Nations et les Inuits qui habitent le territoire québécois depuis des millénaires.</p>
+      <p class="hero-sub">Une série d'articles approfondis sur les Premières Nations et les Inuit qui habitent le territoire québécois depuis des millénaires.</p>
       <button class="hero-cta" onclick="document.getElementById('nations').scrollIntoView({behavior:'smooth'})">Découvrir les nations →</button>
     </div>
     <div class="hero-scroll">↓ Explorer</div>
@@ -147,7 +147,7 @@ export default function Home() {
   <!-- STATS BAR -->
   <div class="stats-bar">
     <div class="stat-item"><div class="stat-n">11</div><div class="stat-l">Premières Nations</div></div>
-    <div class="stat-item"><div class="stat-n">+1</div><div class="stat-l">Nation Inuite</div></div>
+    <div class="stat-item"><div class="stat-n">+1</div><div class="stat-l">Nation Inuit</div></div>
     <div class="stat-item"><div class="stat-n">~100 000</div><div class="stat-l">Autochtones au Québec</div></div>
     <div class="stat-item"><div class="stat-n">10 000 ans</div><div class="stat-l">de présence sur ce territoire</div></div>
   </div>
@@ -157,7 +157,7 @@ export default function Home() {
     <h2>Une histoire qui commence bien avant le Québec</h2>
     <div class="gold-line"></div>
     <p>Bien avant que Jacques Cartier n'aperçoive les rives du Saint-Laurent en 1534, des dizaines de nations autochtones habitaient ce territoire depuis des millénaires. Chasseurs, agriculteurs, navigateurs, diplomates — chaque peuple a développé une civilisation unique, adaptée à son territoire, profondément liée à la nature et transmise par une tradition orale d'une richesse extraordinaire.</p>
-    <p>Cette série d'articles vous invite à découvrir les <strong>11 Premières Nations</strong> et les <strong>Inuits du Nunavik</strong> — leur histoire, leur culture, leurs traditions et leur place dans le Québec d'aujourd'hui. Une invitation au respect et à la connaissance.</p>
+    <p>Cette série d'articles vous invite à découvrir les <strong>11 Premières Nations</strong> et les <strong>Inuit du Nunavik</strong> — leur histoire, leur culture, leurs traditions et leur place dans le Québec d'aujourd'hui. Une invitation au respect et à la connaissance.</p>
   </section>
 
   <!-- NATIONS GRID -->
@@ -318,14 +318,14 @@ export default function Home() {
 
       <!-- INUITS -->
       <div class="nation-card">
-        <img src="https://media.base44.com/images/public/69f23c5b09417d29099136be/41afc600c_generated_image.png" alt="Inuits"/>
+        <img src="https://media.base44.com/images/public/69f23c5b09417d29099136be/41afc600c_generated_image.png" alt="Inuit"/>
         <div class="overlay"></div>
         <div class="card-body">
           <div class="card-tag">Inuit · Nunavik · Grand Nord</div>
-          <h3>Les Inuits</h3>
+          <h3>Les Inuit</h3>
           <p class="card-desc">Inuit — « Êtres humains » · Gardiens du Nunavik</p>
           <div class="card-actions">
-            <a class="btn-read" href="/Inuits" target="_top">📖 Lire</a>
+            <a class="btn-read" href="/Inuits.html" target="_top">📖 Lire</a>
           </div>
           </div>
         </div>
@@ -343,7 +343,7 @@ export default function Home() {
       <a class="media-card" href="#nations">
         <div class="m-icon">📰</div>
         <h3>Articles</h3>
-        <p>12 articles approfondis sur les 11 Premières Nations et les Inuits du Québec.</p>
+        <p>12 articles approfondis sur les 11 Premières Nations et les Inuit du Québec.</p>
         <div class="m-badge">12 articles</div>
       </a>
       <a class="media-card" href="/Videos">
@@ -396,7 +396,7 @@ export default function Home() {
       <a href="/Micmacs" target="_top">Micmacs</a>
       <a href="/Mohawks" target="_top">Mohawks</a>
       <a href="/Naskapis" target="_top">Naskapis</a>
-      <a href="/Inuits" target="_top">Inuits</a>
+      <a href="/Inuits.html" target="_top">Inuit</a>
     </nav>
     <div class="footer-social">
       <a href="https://www.facebook.com/groups/1451283625021958" target="_blank">📘 Groupe Facebook</a>

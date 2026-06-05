@@ -191,7 +191,7 @@ export default function Cris() {
       <h2 class="sec-title">Histoire ancienne</h2>
       <div class="divider"></div>
       <p>Les Cris habitent Eeyou Istchee depuis environ 5 000 ans. Leur société traditionnelle est organisée en <strong>groupes de chasse familiaux</strong> semi-nomades, chaque famille étendue gérant un territoire de chasse ancestral. L'été, les familles se rassemblaient au bord de la Baie-James pour la pêche, les échanges et les cérémonies. L'automne venu, elles se dispersaient dans la forêt pour l'hiver.</p>
-      <p>Les Cris entretenaient des réseaux d'échange avec les Inuits au nord (Whapmagoostui est d'ailleurs la seule communauté où Cris et Inuits cohabitent), les Innus à l'est et les Algonquins au sud. Ces relations commerciales et diplomatiques leur ont permis de maintenir leur position centrale dans le nord du Québec pendant des siècles.</p>
+      <p>Les Cris entretenaient des réseaux d'échange avec les Inuit au nord (Whapmagoostui est d'ailleurs la seule communauté où Cris et Inuit cohabitent), les Innus à l'est et les Algonquins au sud. Ces relations commerciales et diplomatiques leur ont permis de maintenir leur position centrale dans le nord du Québec pendant des siècles.</p>
       <p>Le contact avec les Européens — d'abord les explorateurs de la <strong>Compagnie de la Baie d'Hudson</strong> au 17e siècle — transforme progressivement leur économie. Les comptoirs de traite deviennent des points d'ancrage, et les Cris intègrent rapidement les outils métalliques, les armes à feu et les marchandises européennes dans leur mode de vie.</p>
     </div>
   </section>
@@ -202,7 +202,7 @@ export default function Cris() {
       <h2 class="sec-title">La lutte pour la Baie-James</h2>
       <div class="divider"></div>
       <p>En <strong>1971</strong>, le gouvernement du Québec annonce la construction du plus grand projet hydroélectrique de l'histoire canadienne — le <strong>Complexe La Grande</strong> — en plein cœur du territoire cri, sans consultation préalable. La réaction des Cris est immédiate et déterminée : sous la direction de <strong>Billy Diamond</strong>, ils portent leur cause devant les tribunaux.</p>
-      <p>En 1973, le juge Albert Malouf leur donne raison et ordonne l'arrêt des travaux — une victoire historique rapidement suspendue en appel. Mais la pression politique et médiatique est telle que le gouvernement Bourassa accepte de négocier. Après deux ans de négociations épuisantes, les Cris et les Inuits signent en <strong>novembre 1975</strong> la <strong>Convention de la Baie James et du Nord québécois (CBJNQ)</strong>.</p>
+      <p>En 1973, le juge Albert Malouf leur donne raison et ordonne l'arrêt des travaux — une victoire historique rapidement suspendue en appel. Mais la pression politique et médiatique est telle que le gouvernement Bourassa accepte de négocier. Après deux ans de négociations épuisantes, les Cris et les Inuit signent en <strong>novembre 1975</strong> la <strong>Convention de la Baie James et du Nord québécois (CBJNQ)</strong>.</p>
       <div class="highlight">
         <h3>📜 La Convention de la Baie James (1975) — un tournant historique</h3>
         <ul>
@@ -249,7 +249,7 @@ export default function Cris() {
         <div class="comm-card"><h4>🏘️ Eastmain</h4><p>Baie-James — Sur la rivière Eastmain. Village modèle en développement durable.</p></div>
         <div class="comm-card"><h4>🏘️ Wemindji</h4><p>Baie-James — « Les peintures de roches ». Communauté active dans la conservation.</p></div>
         <div class="comm-card"><h4>🏘️ Oujé-Bougoumou</h4><p>Intérieur — Village inauguré en 1993, prix des Nations Unies. Chef-d'œuvre architectural de Douglas Cardinal.</p></div>
-        <div class="comm-card"><h4>🏘️ Whapmagoostui</h4><p>Baie-d'Hudson — La plus nordique. Partage son territoire avec les Inuits de Kuujjuarapik.</p></div>
+        <div class="comm-card"><h4>🏘️ Whapmagoostui</h4><p>Baie-d'Hudson — La plus nordique. Partage son territoire avec les Inuit de Kuujjuarapik.</p></div>
       </div>
     </div>
   </section>

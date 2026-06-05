@@ -18,7 +18,7 @@ const FILES = {
   'Micmacs.html': 'micmacs',
   'Mohawks.html': 'mohawks',
   'Naskapis.html': 'naskapis',
-  'Inuits.html': 'inuits',
+  'Inuits.html': 'inuit',
 };
 
 const NATION_SCRIPT =

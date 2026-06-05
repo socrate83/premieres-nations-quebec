@@ -57,9 +57,9 @@ const homeCards = {
     name: 'Les Naskapis',
     desc: 'Gens des confins — Gardiens du caribou nordique',
   },
-  inuits: {
+  inuit: {
     tag: 'Inuit · Nunavik · Grand Nord',
-    name: 'Les Inuits',
+    name: 'Les Inuit',
     desc: 'Inuit — « Êtres humains » · Gardiens du Nunavik',
   },
 };
@@ -178,7 +178,7 @@ const cardEn = {
   micmacs: { tag: 'Algonquian · Gaspésie', name: 'The Mi\'kmaq', desc: 'Mi\'kmaq — “My friends” · Guardians of Gespeg' },
   mohawks: { tag: 'Iroquoian · St. Lawrence Valley', name: 'The Mohawk', desc: 'Kanien\'kehá:ka — People of the flint country' },
   naskapis: { tag: 'Algonquian · Quebec Labrador', name: 'The Naskapi', desc: 'People of the far north — Caribou guardians' },
-  inuits: { tag: 'Inuit · Nunavik · Far North', name: 'The Inuit', desc: 'Inuit — “Human beings” · Guardians of Nunavik' },
+  inuit: { tag: 'Inuit · Nunavik · Far North', name: 'The Inuit', desc: 'Inuit — “Human beings” · Guardians of Nunavik' },
 };
 
 const cardEs = {
@@ -192,7 +192,7 @@ const cardEs = {
   micmacs: { tag: 'Algonquiana · Gaspesia', name: 'Los Mi\'kmaq', desc: 'Mi\'kmaq — « Mis amigos » · Guardianes de Gespeg' },
   mohawks: { tag: 'Iroquesa · Valle del San Lorenzo', name: 'Los Mohawk', desc: 'Kanien\'kehá:ka — Pueblo del país del pedernal' },
   naskapis: { tag: 'Algonquiana · Labrador quebequense', name: 'Los Naskapi', desc: 'Gente de los confines — Guardianes del caribú' },
-  inuits: { tag: 'Inuit · Nunavik · Gran Norte', name: 'Los Inuit', desc: 'Inuit — « Seres humanos » · Guardianes del Nunavik' },
+  inuit: { tag: 'Inuit · Nunavik · Gran Norte', name: 'Los Inuit', desc: 'Inuit — « Seres humanos » · Guardianes del Nunavik' },
 };
 
 const introEn = {
@@ -216,7 +216,7 @@ const introEn = {
     'The <strong>Mohawk</strong> — <em>Kanien\'kehá:ka</em> (“people of the flint country”) — are the eastern gatekeepers of the great <strong>Haudenosaunee</strong> (Iroquois) Confederacy. They live in three Quebec communities: <strong>Kahnawake, Kanesatake and Akwesasne</strong>.',
   naskapis:
     'The <strong>Naskapi</strong> are the northernmost Indigenous people of Quebec — guardians of the vast subarctic plateaus of <strong>Quebec Labrador</strong>. Close cousins of the Innu, they followed great caribou herds for millennia.',
-  inuits:
+  inuit:
     'The <strong>Inuit</strong> — <em>Inuit</em> means simply <em>“human beings”</em> — inhabit <strong>Nunavik</strong>, Quebec’s Far North beyond the 55th parallel. Over 4,000 years they developed among the most sophisticated survival techniques on the planet.',
 };
 
@@ -241,7 +241,7 @@ const introEs = {
     'Los <strong>Mohawk</strong> — <em>Kanien\'kehá:ka</em> — son los guardianes orientales de la gran <strong>Confederación Haudenosaunee</strong>. Habitan tres comunidades en Québec.',
   naskapis:
     'Los <strong>Naskapi</strong> son el pueblo indígena más septentrional de Québec — guardianes de los vastos plateaux subárticos del <strong>Labrador quebequense</strong>.',
-  inuits:
+  inuit:
     'Los <strong>Inuit</strong> — <em>Inuit</em> significa <em>« seres humanos »</em> — habitan el <strong>Nunavik</strong>, el Gran Norte de Québec más allá del paralelo 55.',
 };
 
@@ -258,7 +258,7 @@ function metaEn(fr, id) {
     micmacs: 'The Mi\'kmaq — History and Culture',
     mohawks: 'The Mohawk — History and Culture',
     naskapis: 'The Naskapi — History and Culture',
-    inuits: 'The Inuit — History and Culture',
+    inuit: 'The Inuit — History and Culture',
   };
   return (names[id] || base) + ' | First Nations of Quebec';
 }
@@ -275,7 +275,7 @@ function metaEs(fr, id) {
     micmacs: 'Los Mi\'kmaq — Historia y cultura',
     mohawks: 'Los Mohawk — Historia y cultura',
     naskapis: 'Los Naskapi — Historia y cultura',
-    inuits: 'Los Inuit — Historia y cultura',
+    inuit: 'Los Inuit — Historia y cultura',
   };
   return (names[id] || fr) + ' | Primeras Naciones de Québec';
 }

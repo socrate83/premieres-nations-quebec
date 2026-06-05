@@ -15,16 +15,16 @@ function fixHtml(html) {
     .replace(/\.\.\/assets\//g, 'assets/')
     .replace(/href=["']\.\.\/style\.css["']/gi, 'href="style.css"')
     .replace(/src=["']\.\.\/audio-player\.js["']/gi, 'src="audio-player.js"')
+    .replace(/src=["']\.\.\/article-i18n\.js["']/gi, 'src="article-i18n.js"')
+    .replace(/src=["']\.\.\/lang-switcher\.js["']/gi, 'src="lang-switcher.js"')
+    .replace(/href=["']\.\.\/lang-switcher\.css["']/gi, 'href="lang-switcher.css"')
     .replace(/href=["']\.\.\/Home\.html/gi, 'href="Home.html')
     .replace(/href=["']\.\.\/Articles\.html/gi, 'href="Articles.html');
 }
 
-const skipIfRootArticle = /^article(5[2-9]|[6-7]\d|72)\.html$/i;
-
 let n = 0;
 for (const name of fs.readdirSync(pagesDir)) {
   if (!name.endsWith('.html')) continue;
-  if (skipIfRootArticle.test(name) && fs.existsSync(path.join(root, name))) continue;
   const html = fixHtml(fs.readFileSync(path.join(pagesDir, name), 'utf8'));
   fs.writeFileSync(path.join(root, name), html, 'utf8');
   n++;

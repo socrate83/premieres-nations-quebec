@@ -1,7 +1,7 @@
 {
   "meta": {
     "siteTitle": "Peuples Autochtones du Québec — Les 11 Premières Nations",
-    "siteDescription": "Histoire, culture et langues des 11 nations autochtones et des Inuits du Québec."
+    "siteDescription": "Histoire, culture et langues des 11 nations autochtones et des Inuit du Québec."
   },
   "lang": {
     "label": "Langue",
@@ -20,18 +20,18 @@
     "allArticles": "📚 Tous les articles (1–72)"
   },
   "home": {
-    "heroEyebrow": "Série complète · 11 nations + Inuits",
+    "heroEyebrow": "Série complète · 11 nations + Inuit",
     "heroTitle": "Peuples<br/>Autochtones<br/>du <span>Québec</span>",
-    "heroSub": "Une série d'articles approfondis sur les Premières Nations et les Inuits qui habitent le territoire québécois depuis des millénaires.",
+    "heroSub": "Une série d'articles approfondis sur les Premières Nations et les Inuit qui habitent le territoire québécois depuis des millénaires.",
     "heroCta": "Découvrir les nations →",
     "heroScroll": "↓ Explorer",
     "statFN": "Premières Nations",
-    "statInuit": "Nation Inuite",
+    "statInuit": "Nation Inuit",
     "statPop": "Autochtones au Québec",
     "statYears": "de présence sur ce territoire",
     "introTitle": "Une histoire qui commence bien avant le Québec",
     "introP1": "Bien avant que Jacques Cartier n'aperçoive les rives du Saint-Laurent en 1534, des dizaines de nations autochtones habitaient ce territoire depuis des millénaires. Chasseurs, agriculteurs, navigateurs, diplomates — chaque peuple a développé une civilisation unique, adaptée à son territoire, profondément liée à la nature et transmise par une tradition orale d'une richesse extraordinaire.",
-    "introP2": "Cette série d'articles vous invite à découvrir les 11 Premières Nations et les Inuits du Nunavik — leur histoire, leur culture, leurs traditions et leur place dans le Québec d'aujourd'hui. Une invitation au respect et à la connaissance.",
+    "introP2": "Cette série d'articles vous invite à découvrir les 11 Premières Nations et les Inuit du Nunavik — leur histoire, leur culture, leurs traditions et leur place dans le Québec d'aujourd'hui. Une invitation au respect et à la connaissance.",
     "nationsTitle": "Les Nations",
     "nationsSub": "Cliquez sur une nation pour lire son article",
     "serieTitle": "Série thématique — Les articles (72)",
@@ -77,8 +77,9 @@
     "read": "📖 Lire",
     "listen": "▶ Écouter",
     "share": "Partager",
-    "articleNotice": "Cet article est publié en français. Pour une traduction en anglais ou en espagnol, contactez l'administrateur du groupe.",
-    "nationNotice": "Titres, navigation et introduction sont traduits ; le corps détaillé de la page reste en français."
+    "articleNotice": "Traduction non disponible pour cet article. Le texte reste en français.",
+    "nationNotice": "Titres, navigation et introduction sont traduits ; le corps détaillé de la page reste en français.",
+    "machineTranslationNotice": "Traduction automatique du texte — la version française fait foi."
   },
   "media": {
     "articlesBadge": "{n} articles",
