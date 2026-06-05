@@ -53,36 +53,41 @@ function stripTags(s) {
   return s.replace(/<[^>]+>/g, ' ').replace(/\s+/g, ' ').trim();
 }
 
+function hasNestedBlocks(inner) {
+  return /<(p|div|h[1-6]|ul|ol|li|table|section|article|blockquote)\b/i.test(inner);
+}
+
+function replaceOnce(haystack, needle, repl) {
+  const i = haystack.indexOf(needle);
+  if (i < 0) return haystack;
+  return haystack.slice(0, i) + repl + haystack.slice(i + needle.length);
+}
+
 export async function translateHtml(html, target, opts = {}) {
   const delay = opts.delayMs ?? 120;
   if (!html || html.length < 20) return html;
 
-  const re = /(<(p|h[1-6]|li|blockquote|td|th|div|span|strong|em|a|caption)[^>]*>)([\s\S]*?)(<\/\2>)/gi;
   let result = html;
-  const blocks = [...html.matchAll(re)];
 
-  for (const m of blocks) {
-    const plain = stripTags(m[3]);
-    if (plain.length < 3) continue;
-    const tt = await googleTranslate(plain, target);
-    const repl = m[1] + tt + m[4];
-    if (repl !== m[0]) result = result.replace(m[0], repl);
-    await sleep(delay);
-  }
+  const patterns = [
+    /<(h[1-6])([^>]*)>([^<]+)<\/\1>/gi,
+    /<(p|li|td|th|dt|dd|blockquote|caption)([^>]*)>([\s\S]*?)<\/\1>/gi,
+    /<(div)([^>]*class="[^"]*(?:section-label|stat-label|stat-number|timeline-year|timeline-content|kword)[^"]*"[^>]*)>([^<]+)<\/\1>/gi,
+    /<(span)([^>]*class="[^"]*(?:img-caption|quote-source)[^"]*"[^>]*)>([^<]+)<\/\1>/gi,
+  ];
 
-  // Titres h2/h3 sans balise interne : <h2>Texte</h2>
-  result = result.replace(/<(h[1-6])([^>]*)>([^<]+)<\/\1>/gi, async function () {
-    /* sync only — handled below */
-  });
-
-  const headRe = /<(h[1-6])([^>]*)>([^<][\s\S]*?)<\/\1>/gi;
-  const heads = [...result.matchAll(headRe)];
-  for (const m of heads) {
-    const plain = stripTags(m[3]);
-    if (plain.length < 3 || plain.length > 500) continue;
-    const tt = await googleTranslate(plain, target);
-    result = result.replace(m[0], '<' + m[1] + m[2] + '>' + tt + '</' + m[1] + '>');
-    await sleep(delay);
+  for (const re of patterns) {
+    const blocks = [...result.matchAll(re)];
+    for (const m of blocks) {
+      const inner = m[3];
+      if (re.source.includes('p|li') && hasNestedBlocks(inner)) continue;
+      const plain = /<[^>]+>/.test(inner) ? stripTags(inner) : inner.trim();
+      if (plain.length < 2) continue;
+      const tt = await googleTranslate(plain, target);
+      const repl = '<' + m[1] + m[2] + '>' + tt + '</' + m[1] + '>';
+      if (repl !== m[0]) result = replaceOnce(result, m[0], repl);
+      await sleep(delay);
+    }
   }
 
   return result;

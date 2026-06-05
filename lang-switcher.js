@@ -76,6 +76,23 @@
 
   window.pnApplyI18n = applyAll;
 
+  function applyNationCardFields() {
+    var cards = get(T, 'home.nationCards');
+    if (!cards) return;
+    document.querySelectorAll('[data-i18n-nation][data-i18n-field]').forEach(function (el) {
+      var id = el.getAttribute('data-i18n-nation');
+      var field = el.getAttribute('data-i18n-field');
+      var c = cards[id];
+      if (!c || c[field] == null) return;
+      el.textContent = c[field];
+    });
+    document.querySelectorAll('.nation-card[data-pn-nation-id] img').forEach(function (img) {
+      var card = img.closest('.nation-card');
+      var id = card && card.getAttribute('data-pn-nation-id');
+      if (cards[id] && cards[id].alt) img.setAttribute('alt', cards[id].alt);
+    });
+  }
+
   function applyDataI18n() {
     document.querySelectorAll('[data-i18n]').forEach(function (el) {
       var v = get(T, el.getAttribute('data-i18n'));
@@ -89,6 +106,7 @@
       var v = get(T, el.getAttribute('data-i18n-placeholder'));
       if (v != null) el.setAttribute('placeholder', v);
     });
+    applyNationCardFields();
   }
 
   function applyMeta() {
@@ -99,24 +117,6 @@
       var t = get(T, 'meta.siteTitle');
       if (t) document.title = t;
     }
-  }
-
-  function applyNationHomeCards() {
-    var cards = get(T, 'home.nationCards');
-    if (!cards) return;
-    document.querySelectorAll('.nation-card[data-pn-nation-id]').forEach(function (card) {
-      var id = card.getAttribute('data-pn-nation-id');
-      var c = cards[id];
-      if (!c) return;
-      var tag = card.querySelector('.card-tag');
-      var h3 = card.querySelector('h3');
-      var desc = card.querySelector('.card-desc');
-      var img = card.querySelector('img');
-      if (tag && c.tag) tag.textContent = c.tag;
-      if (h3 && c.name) h3.textContent = c.name;
-      if (desc && c.desc) desc.textContent = c.desc;
-      if (img && c.alt) img.setAttribute('alt', c.alt);
-    });
   }
 
   function translateReadButtons() {
@@ -188,7 +188,6 @@
   function applyAll() {
     applyDataI18n();
     applyMeta();
-    applyNationHomeCards();
     translateReadButtons();
     injectArticleNotice();
     updateSwitcherActive();
