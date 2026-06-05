@@ -2,15 +2,18 @@
   "common": {
     "fr": {
       "scroll": "↓ Découvrir",
-      "heroNation": "Premières Nations du Québec"
+      "heroNation": "Premières Nations du Québec",
+      "read": "📖 Lire"
     },
     "en": {
       "scroll": "↓ Discover",
-      "heroNation": "First Nations of Quebec"
+      "heroNation": "First Nations of Quebec",
+      "read": "📖 Read"
     },
     "es": {
       "scroll": "↓ Descubrir",
-      "heroNation": "Pueblos indígenas de Québec"
+      "heroNation": "Pueblos indígenas de Québec",
+      "read": "📖 Leer"
     }
   },
   "nations": [
@@ -26,7 +29,8 @@
         "card": {
           "tag": "Algonquienne · Montérégie",
           "name": "Les Abénaquis",
-          "desc": "Wôbanakiak — « Peuple de l'aube »"
+          "desc": "Wôbanakiak — « Peuple de l'aube »",
+          "alt": "Abénaquis"
         },
         "nav": [
           "Origines",
@@ -91,7 +95,8 @@
         "card": {
           "tag": "Algonquian · Montérégie",
           "name": "The Abenaki",
-          "desc": "Wôbanakiak — “People of the Dawn”"
+          "desc": "Wôbanakiak — “People of the Dawn”",
+          "alt": "Abenaki"
         },
         "nav": [
           "Origins",
@@ -156,7 +161,8 @@
         "card": {
           "tag": "Algonquiana · Montérégie",
           "name": "Los Abenaki",
-          "desc": "Wôbanakiak — « Pueblo del amanecer »"
+          "desc": "Wôbanakiak — « Pueblo del amanecer »",
+          "alt": "Abenaki"
         },
         "nav": [
           "Orígenes",
@@ -225,7 +231,8 @@
         "card": {
           "tag": "Algonquienne · Outaouais & Laurentides",
           "name": "Les Algonquins",
-          "desc": "Anishinaabe — Gardiens de la rivière des Outaouais"
+          "desc": "Anishinaabe — Gardiens de la rivière des Outaouais",
+          "alt": "Algonquins"
         },
         "nav": [
           "Origines",
@@ -296,7 +303,8 @@
         "card": {
           "tag": "Algonquian · Outaouais & Laurentians",
           "name": "The Algonquin",
-          "desc": "Anishinaabe — Guardians of the Ottawa River"
+          "desc": "Anishinaabe — Guardians of the Ottawa River",
+          "alt": "Algonquin"
         },
         "nav": [
           "Origins",
@@ -367,7 +375,8 @@
         "card": {
           "tag": "Algonquiana · Outaouais y Laurentides",
           "name": "Los Algonquin",
-          "desc": "Anishinaabe — Guardianes del río Outaouais"
+          "desc": "Anishinaabe — Guardianes del río Outaouais",
+          "alt": "Algonquin"
         },
         "nav": [
           "Orígenes",
@@ -442,7 +451,8 @@
         "card": {
           "tag": "Algonquienne · Haute-Mauricie",
           "name": "Les Atikamekw",
-          "desc": "Nehirowisiwok — Peuple du Nitaskinan"
+          "desc": "Nehirowisiwok — Peuple du Nitaskinan",
+          "alt": "Atikamekw"
         },
         "nav": [
           "Origines",
@@ -513,7 +523,8 @@
         "card": {
           "tag": "Algonquian · Upper Mauricie",
           "name": "The Atikamekw",
-          "desc": "Nehirowisiwok — People of Nitaskinan"
+          "desc": "Nehirowisiwok — People of Nitaskinan",
+          "alt": "Atikamekw"
         },
         "nav": [
           "Origins",
@@ -584,7 +595,8 @@
         "card": {
           "tag": "Algonquiana · Alta Mauricie",
           "name": "Los Atikamekw",
-          "desc": "Nehirowisiwok — Pueblo del Nitaskinan"
+          "desc": "Nehirowisiwok — Pueblo del Nitaskinan",
+          "alt": "Atikamekw"
         },
         "nav": [
           "Orígenes",
@@ -659,7 +671,8 @@
         "card": {
           "tag": "Algonquienne · Baie-James",
           "name": "Les Cris",
-          "desc": "Eeyou — Peuple de la Baie-James"
+          "desc": "Eeyou — Peuple de la Baie-James",
+          "alt": "Cris"
         },
         "nav": [
           "Origines",
@@ -724,7 +737,8 @@
         "card": {
           "tag": "Algonquian · James Bay",
           "name": "The Cree",
-          "desc": "Eeyou — People of James Bay"
+          "desc": "Eeyou — People of James Bay",
+          "alt": "Cree"
         },
         "nav": [
           "Origins",
@@ -789,7 +803,8 @@
         "card": {
           "tag": "Algonquiana · Bahía James",
           "name": "Los Cree",
-          "desc": "Eeyou — Pueblo de la Bahía James"
+          "desc": "Eeyou — Pueblo de la Bahía James",
+          "alt": "Cree"
         },
         "nav": [
           "Orígenes",
@@ -858,7 +873,8 @@
         "card": {
           "tag": "Iroquoienne · Wendake · Québec",
           "name": "Les Hurons-Wendat",
-          "desc": "Wendat — Gardiens du feu, peuple de l'île"
+          "desc": "Wendat — Gardiens du feu, peuple de l'île",
+          "alt": "Hurons-Wendat"
         },
         "nav": [
           "Origines",
@@ -923,7 +939,8 @@
         "card": {
           "tag": "Iroquoian · Wendake · Quebec",
           "name": "The Huron-Wendat",
-          "desc": "Wendat — Keepers of the fire"
+          "desc": "Wendat — Keepers of the fire, people of the island",
+          "alt": "Huron-Wendat"
         },
         "nav": [
           "Origins",
@@ -988,7 +1005,8 @@
         "card": {
           "tag": "Iroquesa · Wendake · Québec",
           "name": "Los Huron-Wendat",
-          "desc": "Wendat — Guardianes del fuego"
+          "desc": "Wendat — Guardianes del fuego, pueblo de la isla",
+          "alt": "Huron-Wendat"
         },
         "nav": [
           "Orígenes",
@@ -1057,7 +1075,8 @@
         "card": {
           "tag": "Algonquienne · Côte-Nord",
           "name": "Les Innus",
-          "desc": "Innu — « Être humain » · Peuple du Nitassinan"
+          "desc": "Innu — « Être humain » · Peuple du Nitassinan",
+          "alt": "Innus"
         },
         "nav": [
           "Origines",
@@ -1122,7 +1141,8 @@
         "card": {
           "tag": "Algonquian · North Shore",
           "name": "The Innu",
-          "desc": "Innu — “Human beings” · People of Nitassinan"
+          "desc": "Innu — “Human beings” · People of Nitassinan",
+          "alt": "Innu"
         },
         "nav": [
           "Origins",
@@ -1187,7 +1207,8 @@
         "card": {
           "tag": "Algonquiana · Costa Norte",
           "name": "Los Innu",
-          "desc": "Innu — « Seres humanos » · Pueblo del Nitassinan"
+          "desc": "Innu — « Seres humanos » · Pueblo del Nitassinan",
+          "alt": "Innu"
         },
         "nav": [
           "Orígenes",
@@ -1256,7 +1277,8 @@
         "card": {
           "tag": "Algonquienne · Bas-Saint-Laurent",
           "name": "Les Malécites",
-          "desc": "Wolastoqiyik — Peuple de la belle rivière"
+          "desc": "Wolastoqiyik — Peuple de la belle rivière",
+          "alt": "Malécites"
         },
         "nav": [
           "Origines",
@@ -1315,7 +1337,8 @@
         "card": {
           "tag": "Algonquian · Lower St. Lawrence",
           "name": "The Maliseet",
-          "desc": "Wolastoqiyik — People of the beautiful river"
+          "desc": "Wolastoqiyik — People of the beautiful river",
+          "alt": "Maliseet"
         },
         "nav": [
           "Origins",
@@ -1374,7 +1397,8 @@
         "card": {
           "tag": "Algonquiana · Bajo San Lorenzo",
           "name": "Los Maliseet",
-          "desc": "Wolastoqiyik — Pueblo del hermoso río"
+          "desc": "Wolastoqiyik — Pueblo del hermoso río",
+          "alt": "Maliseet"
         },
         "nav": [
           "Orígenes",
@@ -1437,7 +1461,8 @@
         "card": {
           "tag": "Algonquienne · Gaspésie",
           "name": "Les Micmacs",
-          "desc": "Mi'kmaq — « Mes amis » · Gardiens de Gespeg"
+          "desc": "Mi'kmaq — « Mes amis » · Gardiens de Gespeg",
+          "alt": "Micmacs"
         },
         "nav": [
           "Origines",
@@ -1496,7 +1521,8 @@
         "card": {
           "tag": "Algonquian · Gaspésie",
           "name": "The Mi'kmaq",
-          "desc": "Mi'kmaq — “My friends” · Guardians of Gespeg"
+          "desc": "Mi'kmaq — “My friends” · Guardians of Gespeg",
+          "alt": "Mi'kmaq"
         },
         "nav": [
           "Origins",
@@ -1555,7 +1581,8 @@
         "card": {
           "tag": "Algonquiana · Gaspesia",
           "name": "Los Mi'kmaq",
-          "desc": "Mi'kmaq — « Mis amigos » · Guardianes de Gespeg"
+          "desc": "Mi'kmaq — « Mis amigos » · Guardianes de Gespeg",
+          "alt": "Mi'kmaq"
         },
         "nav": [
           "Orígenes",
@@ -1618,7 +1645,8 @@
         "card": {
           "tag": "Iroquoienne · Vallée du Saint-Laurent",
           "name": "Les Mohawks",
-          "desc": "Kanien'kehá:ka — Peuple du pays du silex"
+          "desc": "Kanien'kehá:ka — Peuple du pays du silex",
+          "alt": "Mohawks"
         },
         "nav": [
           "Origines",
@@ -1677,7 +1705,8 @@
         "card": {
           "tag": "Iroquoian · St. Lawrence Valley",
           "name": "The Mohawk",
-          "desc": "Kanien'kehá:ka — People of the flint country"
+          "desc": "Kanien'kehá:ka — People of the flint country",
+          "alt": "Mohawk"
         },
         "nav": [
           "Origins",
@@ -1736,7 +1765,8 @@
         "card": {
           "tag": "Iroquesa · Valle del San Lorenzo",
           "name": "Los Mohawk",
-          "desc": "Kanien'kehá:ka — Pueblo del país del pedernal"
+          "desc": "Kanien'kehá:ka — Pueblo del país del pedernal",
+          "alt": "Mohawk"
         },
         "nav": [
           "Orígenes",
@@ -1799,7 +1829,8 @@
         "card": {
           "tag": "Algonquienne · Labrador québécois",
           "name": "Les Naskapis",
-          "desc": "Gens des confins — Gardiens du caribou nordique"
+          "desc": "Gens des confins — Gardiens du caribou nordique",
+          "alt": "Naskapis"
         },
         "nav": [
           "Origines",
@@ -1858,7 +1889,8 @@
         "card": {
           "tag": "Algonquian · Quebec Labrador",
           "name": "The Naskapi",
-          "desc": "People of the far north — Caribou guardians"
+          "desc": "People of the far north — Caribou guardians",
+          "alt": "Naskapi"
         },
         "nav": [
           "Origins",
@@ -1917,7 +1949,8 @@
         "card": {
           "tag": "Algonquiana · Labrador quebequense",
           "name": "Los Naskapi",
-          "desc": "Gente de los confines — Guardianes del caribú"
+          "desc": "Gente de los confines — Guardianes del caribú",
+          "alt": "Naskapi"
         },
         "nav": [
           "Orígenes",
@@ -1980,7 +2013,8 @@
         "card": {
           "tag": "Inuit · Nunavik · Grand Nord",
           "name": "Les Inuit",
-          "desc": "Inuit — « Êtres humains » · Gardiens du Nunavik"
+          "desc": "Inuit — « Êtres humains » · Gardiens du Nunavik",
+          "alt": "Inuit"
         },
         "nav": [
           "Origines",
@@ -2039,7 +2073,8 @@
         "card": {
           "tag": "Inuit · Nunavik · Far North",
           "name": "The Inuit",
-          "desc": "Inuit — “Human beings” · Guardians of Nunavik"
+          "desc": "Inuit — “Human beings” · Guardians of Nunavik",
+          "alt": "Inuit"
         },
         "nav": [
           "Origins",
@@ -2084,7 +2119,7 @@
           {
             "id": "aujourd-hui",
             "label": "21st century",
-            "title": "The Inuit today"
+            "title": "Les Inuit today"
           }
         ],
         "introHtml": "The <strong>Inuit</strong> — <em>Inuit</em> means simply <em>“human beings”</em> — inhabit <strong>Nunavik</strong>, Quebec’s Far North beyond the 55th parallel. Over 4,000 years they developed among the most sophisticated survival techniques on the planet."
@@ -2098,7 +2133,8 @@
         "card": {
           "tag": "Inuit · Nunavik · Gran Norte",
           "name": "Los Inuit",
-          "desc": "Inuit — « Seres humanos » · Guardianes del Nunavik"
+          "desc": "Inuit — « Seres humanos » · Guardianes del Nunavik",
+          "alt": "Inuit"
         },
         "nav": [
           "Orígenes",
@@ -2143,7 +2179,7 @@
           {
             "id": "aujourd-hui",
             "label": "Siglo XXI",
-            "title": "Los Inuit hoy"
+            "title": "Les Inuit hoy"
           }
         ],
         "introHtml": "Los <strong>Inuit</strong> — <em>Inuit</em> significa <em>« seres humanos »</em> — habitan el <strong>Nunavik</strong>, el Gran Norte de Québec más allá del paralelo 55."

@@ -83,17 +83,32 @@
     if (root) frBodySnapshot = root.innerHTML;
   }
 
+  function cardReadLabel(data, lang) {
+    if (typeof window.pnT === 'function') {
+      var t = window.pnT('common.read');
+      if (t && t !== 'common.read') return t;
+    }
+    if (data && data.common && data.common[lang] && data.common[lang].read) return data.common[lang].read;
+    return null;
+  }
+
   function applyHomeCards(data, lang) {
-    document.querySelectorAll('[data-pn-nation-id]').forEach(function (card) {
+    var readLabel = cardReadLabel(data, lang);
+    document.querySelectorAll('.nation-card[data-pn-nation-id]').forEach(function (card) {
       var entry = nationEntry(data, card.getAttribute('data-pn-nation-id'));
       var pack = packFor(entry, lang);
       if (!pack || !pack.card) return;
+      var c = pack.card;
       var tag = card.querySelector('.card-tag');
       var h3 = card.querySelector('h3');
       var desc = card.querySelector('.card-desc');
-      if (tag) tag.textContent = pack.card.tag;
-      if (h3) h3.textContent = pack.card.name;
-      if (desc) desc.textContent = pack.card.desc;
+      var img = card.querySelector('img');
+      var btn = card.querySelector('.btn-read');
+      if (tag) tag.textContent = c.tag;
+      if (h3) h3.textContent = c.name;
+      if (desc) desc.textContent = c.desc;
+      if (img && c.alt) img.setAttribute('alt', c.alt);
+      if (btn && readLabel) btn.textContent = readLabel;
     });
   }
 

@@ -172,7 +172,11 @@ const cardEn = {
   algonquins: { tag: 'Algonquian · Outaouais & Laurentians', name: 'The Algonquin', desc: 'Anishinaabe — Guardians of the Ottawa River' },
   atikamekw: { tag: 'Algonquian · Upper Mauricie', name: 'The Atikamekw', desc: 'Nehirowisiwok — People of Nitaskinan' },
   cris: { tag: 'Algonquian · James Bay', name: 'The Cree', desc: 'Eeyou — People of James Bay' },
-  huronswendat: { tag: 'Iroquoian · Wendake · Quebec', name: 'The Huron-Wendat', desc: 'Wendat — Keepers of the fire' },
+  huronswendat: {
+    tag: 'Iroquoian · Wendake · Quebec',
+    name: 'The Huron-Wendat',
+    desc: 'Wendat — Keepers of the fire, people of the island',
+  },
   innus: { tag: 'Algonquian · North Shore', name: 'The Innu', desc: 'Innu — “Human beings” · People of Nitassinan' },
   malecites: { tag: 'Algonquian · Lower St. Lawrence', name: 'The Maliseet', desc: 'Wolastoqiyik — People of the beautiful river' },
   micmacs: { tag: 'Algonquian · Gaspésie', name: 'The Mi\'kmaq', desc: 'Mi\'kmaq — “My friends” · Guardians of Gespeg' },
@@ -186,7 +190,11 @@ const cardEs = {
   algonquins: { tag: 'Algonquiana · Outaouais y Laurentides', name: 'Los Algonquin', desc: 'Anishinaabe — Guardianes del río Outaouais' },
   atikamekw: { tag: 'Algonquiana · Alta Mauricie', name: 'Los Atikamekw', desc: 'Nehirowisiwok — Pueblo del Nitaskinan' },
   cris: { tag: 'Algonquiana · Bahía James', name: 'Los Cree', desc: 'Eeyou — Pueblo de la Bahía James' },
-  huronswendat: { tag: 'Iroquesa · Wendake · Québec', name: 'Los Huron-Wendat', desc: 'Wendat — Guardianes del fuego' },
+  huronswendat: {
+    tag: 'Iroquesa · Wendake · Québec',
+    name: 'Los Huron-Wendat',
+    desc: 'Wendat — Guardianes del fuego, pueblo de la isla',
+  },
   innus: { tag: 'Algonquiana · Costa Norte', name: 'Los Innu', desc: 'Innu — « Seres humanos » · Pueblo del Nitassinan' },
   malecites: { tag: 'Algonquiana · Bajo San Lorenzo', name: 'Los Maliseet', desc: 'Wolastoqiyik — Pueblo del hermoso río' },
   micmacs: { tag: 'Algonquiana · Gaspesia', name: 'Los Mi\'kmaq', desc: 'Mi\'kmaq — « Mis amigos » · Guardianes de Gespeg' },
@@ -280,8 +288,17 @@ function metaEs(fr, id) {
   return (names[id] || fr) + ' | Primeras Naciones de Québec';
 }
 
+function cardWithAlt(card) {
+  if (!card) return card;
+  return {
+    ...card,
+    alt: card.alt || card.name.replace(/^(Les |The |Los |Las )/i, ''),
+  };
+}
+
 function buildLang(n, lang) {
-  const card = lang === 'fr' ? homeCards[n.id] : lang === 'en' ? cardEn[n.id] : cardEs[n.id];
+  const raw = lang === 'fr' ? homeCards[n.id] : lang === 'en' ? cardEn[n.id] : cardEs[n.id];
+  const card = cardWithAlt(raw);
   const html = fs.readFileSync(path.join(root, n.file), 'utf8');
   let nav = n.nav;
   if (!nav.length) {
@@ -315,9 +332,9 @@ function buildLang(n, lang) {
 
 const out = {
   common: {
-    fr: { scroll: '↓ Découvrir', heroNation: 'Premières Nations du Québec' },
-    en: { scroll: '↓ Discover', heroNation: 'First Nations of Quebec' },
-    es: { scroll: '↓ Descubrir', heroNation: 'Pueblos indígenas de Québec' },
+    fr: { scroll: '↓ Découvrir', heroNation: 'Premières Nations du Québec', read: '📖 Lire' },
+    en: { scroll: '↓ Discover', heroNation: 'First Nations of Quebec', read: '📖 Read' },
+    es: { scroll: '↓ Descubrir', heroNation: 'Pueblos indígenas de Québec', read: '📖 Leer' },
   },
   nations: frStruct.nations.map((n) => ({
     id: n.id,
