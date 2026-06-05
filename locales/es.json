@@ -141,6 +141,17 @@
     "title": "🎙️ Podcasts y emisiones en directo",
     "metaTitle": "Podcasts — Primeras Naciones (francés)"
   },
+  "nationShare": {
+    "title": "📢 Compartir este artículo",
+    "facebook": "📘 Facebook",
+    "groupFb": "👥 Grupo FB",
+    "messenger": "💬 Messenger",
+    "whatsapp": "🟢 WhatsApp",
+    "email": "📧 Correo",
+    "copyLink": "🔗 Copiar enlace",
+    "linkCopied": "✅ ¡Enlace copiado!",
+    "legendesTitle": "Leyendas, historias y anécdotas"
+  },
   "common": {
     "read": "📖 Leer",
     "listen": "▶ Escuchar",

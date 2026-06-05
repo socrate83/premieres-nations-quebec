@@ -64,6 +64,7 @@ const P_CAP_RE =
   /<p class="(?:img-cap|img-caption|quote-src|quote-source)"([^>]*)>([^<]*)<\/p>/gi;
 
 const HEADING_RE = /<(h[2-4])([^>]*)>([^<]+)<\/\1>/gi;
+const STRONG_RE = /<strong>([^<]+)<\/strong>/gi;
 const LI_RE = /<li([^>]*)>([\s\S]*?)<\/li>/gi;
 const P_RE = /<p([^>]*)>([\s\S]*?)<\/p>/gi;
 const BLOCKQUOTE_RE = /<blockquote([^>]*)>([^<]+)<\/blockquote>/gi;
@@ -102,6 +103,7 @@ export async function translateHtml(html, target, opts = {}) {
       kind: 'p',
     })),
     ...collectMatches(html, BLOCKQUOTE_RE, 2).map((j) => ({ ...j, kind: 'blockquote' })),
+    ...collectMatches(html, STRONG_RE, 1).map((j) => ({ ...j, kind: 'strong' })),
   ];
 
   jobs.sort((a, b) => b.index - a.index);
@@ -115,6 +117,7 @@ export async function translateHtml(html, target, opts = {}) {
     else if (job.kind === 'p') repl = `<p${job.parts[1]}>${tt}</p>`;
     else if (job.kind === 'li') repl = `<li${job.parts[1]}>${tt}</li>`;
     else if (job.kind === 'blockquote') repl = `<blockquote${job.parts[1]}>${tt}</blockquote>`;
+    else if (job.kind === 'strong') repl = `<strong>${tt}</strong>`;
     else repl = tt;
     result = result.slice(0, job.index) + repl + result.slice(job.index + job.len);
     await sleep(delay);

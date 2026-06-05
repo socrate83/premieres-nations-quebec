@@ -141,6 +141,17 @@
     "title": "🎙️ Podcasts & live shows",
     "metaTitle": "Podcasts — First Nations (French)"
   },
+  "nationShare": {
+    "title": "📢 Share this article",
+    "facebook": "📘 Facebook",
+    "groupFb": "👥 FB Group",
+    "messenger": "💬 Messenger",
+    "whatsapp": "🟢 WhatsApp",
+    "email": "📧 Email",
+    "copyLink": "🔗 Copy link",
+    "linkCopied": "✅ Link copied!",
+    "legendesTitle": "Legends, stories and anecdotes"
+  },
   "common": {
     "read": "📖 Read",
     "listen": "▶ Listen",

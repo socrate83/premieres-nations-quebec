@@ -42,6 +42,11 @@ function extractNationBody(html) {
   return artM ? artM[1].trim() : '';
 }
 
+function extractNationTail(html) {
+  const tailM = html.match(/<div id="pn-nation-tail"[^>]*>([\s\S]*?)<\/div>\s*(?=<script\b)/i);
+  return tailM ? tailM[1].trim() : '';
+}
+
 for (const nation of NATIONS) {
   if (onlySet && !onlySet.has(nation.id)) continue;
 
@@ -59,16 +64,24 @@ for (const nation of NATIONS) {
 
   const html = fs.readFileSync(fp, 'utf8');
   const body = extractNationBody(html);
+  const tail = extractNationTail(html);
   if (!body || body.length < 100) {
     console.warn('empty body', nation.id);
     continue;
   }
 
-  console.log('translate', nation.id, '(' + body.length + ' chars)…');
+  console.log('translate', nation.id, 'body', body.length, 'tail', tail.length, '…');
   const enHtml = await translateHtml(body, 'en', { delayMs: 100 });
   const esHtml = await translateHtml(body, 'es', { delayMs: 100 });
+  const enTail = tail ? await translateHtml(tail, 'en', { delayMs: 100 }) : '';
+  const esTail = tail ? await translateHtml(tail, 'es', { delayMs: 100 }) : '';
 
-  const doc = { id: nation.id, file: nation.file, en: { html: enHtml }, es: { html: esHtml } };
+  const doc = {
+    id: nation.id,
+    file: nation.file,
+    en: { html: enHtml, tail: enTail },
+    es: { html: esHtml, tail: esTail },
+  };
   fs.writeFileSync(outPath, JSON.stringify(doc) + '\n', 'utf8');
   console.log('  →', outPath);
 }

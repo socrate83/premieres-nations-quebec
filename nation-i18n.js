@@ -8,6 +8,7 @@
   var cache = null;
   var bodyCache = {};
   var frBodySnapshot = null;
+  var frTailSnapshot = null;
   var currentLang = 'fr';
 
   function localeBase() {
@@ -89,10 +90,30 @@
     return document.getElementById('pn-nation-root');
   }
 
+  function nationTail() {
+    return document.getElementById('pn-nation-tail');
+  }
+
   function saveFrBodySnapshot() {
     if (frBodySnapshot) return;
     var root = nationRoot();
     if (root) frBodySnapshot = root.innerHTML;
+  }
+
+  function saveFrTailSnapshot() {
+    if (frTailSnapshot) return;
+    var tail = nationTail();
+    if (tail) frTailSnapshot = tail.innerHTML;
+  }
+
+  function applyTailChrome() {
+    var tail = nationTail();
+    if (!tail || typeof window.pnT !== 'function') return;
+    tail.querySelectorAll('[data-i18n]').forEach(function (el) {
+      var key = el.getAttribute('data-i18n');
+      var v = window.pnT(key);
+      if (v && v !== key) el.textContent = v;
+    });
   }
 
   function cardReadLabel(data, lang) {
@@ -220,21 +241,38 @@
     mbox.textContent = msg;
   }
 
+  function applyNationTail(lang, bodyData) {
+    saveFrTailSnapshot();
+    var tail = nationTail();
+    if (!tail) return;
+    var translated = bodyData && bodyData[lang] && bodyData[lang].tail;
+    if (lang === 'fr' && frTailSnapshot) {
+      tail.innerHTML = frTailSnapshot;
+    } else if (translated) {
+      tail.innerHTML = translated;
+    }
+    applyTailChrome();
+  }
+
   function applyNationPage(entry, pack, lang, bodyData) {
     applyNationChrome(pack);
     saveFrBodySnapshot();
+    saveFrTailSnapshot();
 
     var root = nationRoot();
     var fullBody = bodyData && bodyData[lang] && bodyData[lang].html;
+    var hasFull = !!(fullBody || (lang === 'fr' && frBodySnapshot));
 
     if (lang === 'fr' && frBodySnapshot && root) {
       root.innerHTML = frBodySnapshot;
-      showNotice('fr', true);
+      applyNationTail('fr', bodyData);
+      showNotice('fr', hasFull);
       return;
     }
 
     if (fullBody && root) {
       root.innerHTML = fullBody;
+      applyNationTail(lang, bodyData);
       showNotice(lang, true);
       return;
     }
@@ -256,6 +294,7 @@
       document.querySelector('.intro-section .intro-card p');
     if (introP && pack && pack.introHtml) introP.innerHTML = pack.introHtml;
 
+    applyNationTail(lang, bodyData);
     showNotice(lang, false);
   }
 
