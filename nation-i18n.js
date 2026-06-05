@@ -10,16 +10,33 @@
   var frBodySnapshot = null;
   var currentLang = 'fr';
 
-  function assetPrefix() {
+  function localeBase() {
     var p = location.pathname || '';
     if (/\/podcasts\//i.test(p)) return '..';
+    if (/\/pages\//i.test(p)) return '..';
+    var parts = p.split('/').filter(Boolean);
+    var last = parts[parts.length - 1] || '';
+    if (parts.length >= 2 && /\.html?$/i.test(last)) {
+      return '/' + parts.slice(0, -1).join('/');
+    }
+    if (parts.length >= 1 && !/\.[a-z0-9]+$/i.test(last)) {
+      return '/' + parts.join('/');
+    }
     return '';
+  }
+
+  function localeFetchUrls(relativePath) {
+    var base = localeBase();
+    var urls = [];
+    if (base && base.indexOf('/') === 0) urls.push(base + '/' + relativePath);
+    urls.push(relativePath);
+    if (base === '..') urls.push('../' + relativePath);
+    return urls;
   }
 
   function fetchNations() {
     if (cache) return Promise.resolve(cache);
-    var prefix = assetPrefix();
-    var urls = [prefix + '/locales/nations.json', 'locales/nations.json', '../locales/nations.json'];
+    var urls = localeFetchUrls('locales/nations.json');
     function tryLoad(i) {
       if (i >= urls.length) return Promise.resolve(null);
       return fetch(urls[i], { cache: 'no-store' })
@@ -40,12 +57,7 @@
 
   function fetchNationBody(id) {
     if (bodyCache[id]) return bodyCache[id];
-    var prefix = assetPrefix();
-    var urls = [
-      prefix + '/locales/nations-bodies/' + id + '.json',
-      'locales/nations-bodies/' + id + '.json',
-      '../locales/nations-bodies/' + id + '.json',
-    ];
+    var urls = localeFetchUrls('locales/nations-bodies/' + id + '.json');
     bodyCache[id] = (function tryLoad(i) {
       if (i >= urls.length) return Promise.resolve(null);
       return fetch(urls[i], { cache: 'no-store' })

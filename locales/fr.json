@@ -49,7 +49,75 @@
     "communityP": "Partagez ces articles, discutez, découvrez davantage sur les peuples autochtones du Québec.",
     "communityFb": "📘 Rejoindre le groupe Facebook",
     "communitySite": "🌐 Site de la série",
-    "seeAllArticles": "📚 Voir tous les articles (#1 à #72) →"
+    "seeAllArticles": "📚 Voir tous les articles (#1 à #72) →",
+    "nationCards": {
+      "abenaquis": {
+        "tag": "Algonquienne · Montérégie",
+        "name": "Les Abénaquis",
+        "desc": "Wôbanakiak — « Peuple de l'aube »",
+        "alt": "Abénaquis"
+      },
+      "algonquins": {
+        "tag": "Algonquienne · Outaouais & Laurentides",
+        "name": "Les Algonquins",
+        "desc": "Anishinaabe — Gardiens de la rivière des Outaouais",
+        "alt": "Algonquins"
+      },
+      "atikamekw": {
+        "tag": "Algonquienne · Haute-Mauricie",
+        "name": "Les Atikamekw",
+        "desc": "Nehirowisiwok — Peuple du Nitaskinan",
+        "alt": "Atikamekw"
+      },
+      "cris": {
+        "tag": "Algonquienne · Baie-James",
+        "name": "Les Cris",
+        "desc": "Eeyou — Peuple de la Baie-James",
+        "alt": "Cris"
+      },
+      "huronswendat": {
+        "tag": "Iroquoienne · Wendake · Québec",
+        "name": "Les Hurons-Wendat",
+        "desc": "Wendat — Gardiens du feu, peuple de l'île",
+        "alt": "Hurons-Wendat"
+      },
+      "innus": {
+        "tag": "Algonquienne · Côte-Nord",
+        "name": "Les Innus",
+        "desc": "Innu — « Être humain » · Peuple du Nitassinan",
+        "alt": "Innus"
+      },
+      "malecites": {
+        "tag": "Algonquienne · Bas-Saint-Laurent",
+        "name": "Les Malécites",
+        "desc": "Wolastoqiyik — Peuple de la belle rivière",
+        "alt": "Malécites"
+      },
+      "micmacs": {
+        "tag": "Algonquienne · Gaspésie",
+        "name": "Les Micmacs",
+        "desc": "Mi'kmaq — « Mes amis » · Gardiens de Gespeg",
+        "alt": "Micmacs"
+      },
+      "mohawks": {
+        "tag": "Iroquoienne · Vallée du Saint-Laurent",
+        "name": "Les Mohawks",
+        "desc": "Kanien'kehá:ka — Peuple du pays du silex",
+        "alt": "Mohawks"
+      },
+      "naskapis": {
+        "tag": "Algonquienne · Labrador québécois",
+        "name": "Les Naskapis",
+        "desc": "Gens des confins — Gardiens du caribou nordique",
+        "alt": "Naskapis"
+      },
+      "inuit": {
+        "tag": "Inuit · Nunavik · Grand Nord",
+        "name": "Les Inuit",
+        "desc": "Inuit — « Êtres humains » · Gardiens du Nunavik",
+        "alt": "Inuit"
+      }
+    }
   },
   "articlesPage": {
     "title": "📚 Tous les articles",

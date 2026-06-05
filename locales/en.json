@@ -49,7 +49,75 @@
     "communityP": "Share these articles, discuss, and learn more about Indigenous peoples in Quebec.",
     "communityFb": "📘 Join the Facebook group",
     "communitySite": "🌐 Series website",
-    "seeAllArticles": "📚 See all articles (#1 to #72) →"
+    "seeAllArticles": "📚 See all articles (#1 to #72) →",
+    "nationCards": {
+      "abenaquis": {
+        "tag": "Algonquian · Montérégie",
+        "name": "The Abenaki",
+        "desc": "Wôbanakiak — “People of the Dawn”",
+        "alt": "Abenaki"
+      },
+      "algonquins": {
+        "tag": "Algonquian · Outaouais & Laurentians",
+        "name": "The Algonquin",
+        "desc": "Anishinaabe — Guardians of the Ottawa River",
+        "alt": "Algonquin"
+      },
+      "atikamekw": {
+        "tag": "Algonquian · Upper Mauricie",
+        "name": "The Atikamekw",
+        "desc": "Nehirowisiwok — People of Nitaskinan",
+        "alt": "Atikamekw"
+      },
+      "cris": {
+        "tag": "Algonquian · James Bay",
+        "name": "The Cree",
+        "desc": "Eeyou — People of James Bay",
+        "alt": "Cree"
+      },
+      "huronswendat": {
+        "tag": "Iroquoian · Wendake · Quebec",
+        "name": "The Huron-Wendat",
+        "desc": "Wendat — Keepers of the fire, people of the island",
+        "alt": "Huron-Wendat"
+      },
+      "innus": {
+        "tag": "Algonquian · North Shore",
+        "name": "The Innu",
+        "desc": "Innu — “Human beings” · People of Nitassinan",
+        "alt": "Innu"
+      },
+      "malecites": {
+        "tag": "Algonquian · Lower St. Lawrence",
+        "name": "The Maliseet",
+        "desc": "Wolastoqiyik — People of the beautiful river",
+        "alt": "Maliseet"
+      },
+      "micmacs": {
+        "tag": "Algonquian · Gaspésie",
+        "name": "The Mi'kmaq",
+        "desc": "Mi'kmaq — “My friends” · Guardians of Gespeg",
+        "alt": "Mi'kmaq"
+      },
+      "mohawks": {
+        "tag": "Iroquoian · St. Lawrence Valley",
+        "name": "The Mohawk",
+        "desc": "Kanien'kehá:ka — People of the flint country",
+        "alt": "Mohawk"
+      },
+      "naskapis": {
+        "tag": "Algonquian · Quebec Labrador",
+        "name": "The Naskapi",
+        "desc": "People of the far north — Caribou guardians",
+        "alt": "Naskapi"
+      },
+      "inuit": {
+        "tag": "Inuit · Nunavik · Far North",
+        "name": "The Inuit",
+        "desc": "Inuit — “Human beings” · Guardians of Nunavik",
+        "alt": "Inuit"
+      }
+    }
   },
   "articlesPage": {
     "title": "📚 All articles",

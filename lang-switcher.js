@@ -7,10 +7,28 @@
   var LANGS = ['fr', 'en', 'es'];
   var STORAGE_KEY = 'pnq_lang';
 
-  function assetPrefix() {
+  function localeBase() {
     var p = location.pathname || '';
     if (/\/podcasts\//i.test(p)) return '..';
+    if (/\/pages\//i.test(p)) return '..';
+    var parts = p.split('/').filter(Boolean);
+    var last = parts[parts.length - 1] || '';
+    if (parts.length >= 2 && /\.html?$/i.test(last)) {
+      return '/' + parts.slice(0, -1).join('/');
+    }
+    if (parts.length >= 1 && !/\.[a-z0-9]+$/i.test(last)) {
+      return '/' + parts.join('/');
+    }
     return '';
+  }
+
+  function localeFetchUrls(relativePath) {
+    var base = localeBase();
+    var urls = [];
+    if (base && base.indexOf('/') === 0) urls.push(base + '/' + relativePath);
+    urls.push(relativePath);
+    if (base === '..') urls.push('../' + relativePath);
+    return urls;
   }
 
   function getLang() {
@@ -83,6 +101,24 @@
     }
   }
 
+  function applyNationHomeCards() {
+    var cards = get(T, 'home.nationCards');
+    if (!cards) return;
+    document.querySelectorAll('.nation-card[data-pn-nation-id]').forEach(function (card) {
+      var id = card.getAttribute('data-pn-nation-id');
+      var c = cards[id];
+      if (!c) return;
+      var tag = card.querySelector('.card-tag');
+      var h3 = card.querySelector('h3');
+      var desc = card.querySelector('.card-desc');
+      var img = card.querySelector('img');
+      if (tag && c.tag) tag.textContent = c.tag;
+      if (h3 && c.name) h3.textContent = c.name;
+      if (desc && c.desc) desc.textContent = c.desc;
+      if (img && c.alt) img.setAttribute('alt', c.alt);
+    });
+  }
+
   function translateReadButtons() {
     var read = get(T, 'common.read');
     if (!read) return;
@@ -152,6 +188,7 @@
   function applyAll() {
     applyDataI18n();
     applyMeta();
+    applyNationHomeCards();
     translateReadButtons();
     injectArticleNotice();
     updateSwitcherActive();
@@ -164,12 +201,7 @@
   function loadAndApply(code) {
     currentLang = code;
     setLang(code);
-    var prefix = assetPrefix();
-    var urls = [
-      prefix + '/locales/' + code + '.json',
-      'locales/' + code + '.json',
-      '../locales/' + code + '.json',
-    ];
+    var urls = localeFetchUrls('locales/' + code + '.json');
     function tryLoad(i) {
       if (i >= urls.length) return;
       fetch(urls[i], { cache: 'no-store' })

@@ -49,7 +49,75 @@
     "communityP": "Comparta estos artículos, comente y descubra más sobre los pueblos indígenas de Québec.",
     "communityFb": "📘 Unirse al grupo de Facebook",
     "communitySite": "🌐 Sitio de la serie",
-    "seeAllArticles": "📚 Ver todos los artículos (#1 a #72) →"
+    "seeAllArticles": "📚 Ver todos los artículos (#1 a #72) →",
+    "nationCards": {
+      "abenaquis": {
+        "tag": "Algonquiana · Montérégie",
+        "name": "Los Abenaki",
+        "desc": "Wôbanakiak — « Pueblo del amanecer »",
+        "alt": "Abenaki"
+      },
+      "algonquins": {
+        "tag": "Algonquiana · Outaouais y Laurentides",
+        "name": "Los Algonquin",
+        "desc": "Anishinaabe — Guardianes del río Outaouais",
+        "alt": "Algonquin"
+      },
+      "atikamekw": {
+        "tag": "Algonquiana · Alta Mauricie",
+        "name": "Los Atikamekw",
+        "desc": "Nehirowisiwok — Pueblo del Nitaskinan",
+        "alt": "Atikamekw"
+      },
+      "cris": {
+        "tag": "Algonquiana · Bahía James",
+        "name": "Los Cree",
+        "desc": "Eeyou — Pueblo de la Bahía James",
+        "alt": "Cree"
+      },
+      "huronswendat": {
+        "tag": "Iroquesa · Wendake · Québec",
+        "name": "Los Huron-Wendat",
+        "desc": "Wendat — Guardianes del fuego, pueblo de la isla",
+        "alt": "Huron-Wendat"
+      },
+      "innus": {
+        "tag": "Algonquiana · Costa Norte",
+        "name": "Los Innu",
+        "desc": "Innu — « Seres humanos » · Pueblo del Nitassinan",
+        "alt": "Innu"
+      },
+      "malecites": {
+        "tag": "Algonquiana · Bajo San Lorenzo",
+        "name": "Los Maliseet",
+        "desc": "Wolastoqiyik — Pueblo del hermoso río",
+        "alt": "Maliseet"
+      },
+      "micmacs": {
+        "tag": "Algonquiana · Gaspesia",
+        "name": "Los Mi'kmaq",
+        "desc": "Mi'kmaq — « Mis amigos » · Guardianes de Gespeg",
+        "alt": "Mi'kmaq"
+      },
+      "mohawks": {
+        "tag": "Iroquesa · Valle del San Lorenzo",
+        "name": "Los Mohawk",
+        "desc": "Kanien'kehá:ka — Pueblo del país del pedernal",
+        "alt": "Mohawk"
+      },
+      "naskapis": {
+        "tag": "Algonquiana · Labrador quebequense",
+        "name": "Los Naskapi",
+        "desc": "Gente de los confines — Guardianes del caribú",
+        "alt": "Naskapi"
+      },
+      "inuit": {
+        "tag": "Inuit · Nunavik · Gran Norte",
+        "name": "Los Inuit",
+        "desc": "Inuit — « Seres humanos » · Guardianes del Nunavik",
+        "alt": "Inuit"
+      }
+    }
   },
   "articlesPage": {
     "title": "📚 Todos los artículos",

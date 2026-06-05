@@ -347,3 +347,21 @@ const out = {
 
 fs.writeFileSync(path.join(root, 'locales', 'nations.json'), JSON.stringify(out, null, 2) + '\n', 'utf8');
 console.log('locales/nations.json généré —', out.nations.length, 'nations.');
+
+function buildNationCardsMap(lang) {
+  const src = lang === 'fr' ? homeCards : lang === 'en' ? cardEn : cardEs;
+  const map = {};
+  for (const id of Object.keys(homeCards)) {
+    map[id] = cardWithAlt(src[id]);
+  }
+  return map;
+}
+
+for (const lang of ['fr', 'en', 'es']) {
+  const localePath = path.join(root, 'locales', `${lang}.json`);
+  const locale = JSON.parse(fs.readFileSync(localePath, 'utf8'));
+  locale.home = locale.home || {};
+  locale.home.nationCards = buildNationCardsMap(lang);
+  fs.writeFileSync(localePath, JSON.stringify(locale, null, 2) + '\n', 'utf8');
+}
+console.log('home.nationCards injecté dans fr.json, en.json, es.json');
