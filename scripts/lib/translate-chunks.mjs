@@ -1,5 +1,5 @@
 /**
- * Traduction FR → EN/ES (Google Translate + préservation HTML par blocs).
+ * Traduction FR → EN/ES — préserve la structure HTML des pages nations.
  */
 const sleep = (ms) => new Promise((r) => setTimeout(r, ms));
 
@@ -53,41 +53,71 @@ function stripTags(s) {
   return s.replace(/<[^>]+>/g, ' ').replace(/\s+/g, ' ').trim();
 }
 
-function hasNestedBlocks(inner) {
+function hasBlockNesting(inner) {
   return /<(p|div|h[1-6]|ul|ol|li|table|section|article|blockquote)\b/i.test(inner);
 }
 
-function replaceOnce(haystack, needle, repl) {
-  const i = haystack.indexOf(needle);
-  if (i < 0) return haystack;
-  return haystack.slice(0, i) + repl + haystack.slice(i + needle.length);
+const DIV_LABEL_RE =
+  /<div class="(?:sec-label|section-label|intro-kword|kword|stat-n|stat-l|stat-number|stat-label|tl-dot|card-icon|timeline-dot|timeline-year|timeline-content)"([^>]*)>([^<]*)<\/div>/gi;
+
+const P_CAP_RE =
+  /<p class="(?:img-cap|img-caption|quote-src|quote-source)"([^>]*)>([^<]*)<\/p>/gi;
+
+const HEADING_RE = /<(h[2-4])([^>]*)>([^<]+)<\/\1>/gi;
+const LI_RE = /<li([^>]*)>([\s\S]*?)<\/li>/gi;
+const P_RE = /<p([^>]*)>([\s\S]*?)<\/p>/gi;
+const BLOCKQUOTE_RE = /<blockquote([^>]*)>([^<]+)<\/blockquote>/gi;
+
+function collectMatches(html, re, groupIdx, opts = {}) {
+  const out = [];
+  re.lastIndex = 0;
+  let m;
+  while ((m = re.exec(html)) !== null) {
+    const inner = m[groupIdx];
+    if (opts.skipBlockNesting && hasBlockNesting(inner)) continue;
+    const plain = opts.allowInlineTags ? stripTags(inner) : inner.trim();
+    if (plain.length < 2) continue;
+    out.push({ index: m.index, len: m[0].length, plain, raw: m[0], parts: m });
+  }
+  return out;
+}
+
+function rebuildOpenClose(raw, translated) {
+  const open = raw.slice(0, raw.indexOf('>') + 1);
+  const close = raw.slice(raw.lastIndexOf('<'));
+  return open + translated + close;
 }
 
 export async function translateHtml(html, target, opts = {}) {
   const delay = opts.delayMs ?? 120;
   if (!html || html.length < 20) return html;
 
-  let result = html;
-
-  const patterns = [
-    /<(h[1-6])([^>]*)>([^<]+)<\/\1>/gi,
-    /<(p|li|td|th|dt|dd|blockquote|caption)([^>]*)>([\s\S]*?)<\/\1>/gi,
-    /<(div)([^>]*class="[^"]*(?:section-label|stat-label|stat-number|timeline-year|timeline-content|kword)[^"]*"[^>]*)>([^<]+)<\/\1>/gi,
-    /<(span)([^>]*class="[^"]*(?:img-caption|quote-source)[^"]*"[^>]*)>([^<]+)<\/\1>/gi,
+  const jobs = [
+    ...collectMatches(html, HEADING_RE, 3).map((j) => ({ ...j, kind: 'heading' })),
+    ...collectMatches(html, DIV_LABEL_RE, 2).map((j) => ({ ...j, kind: 'div' })),
+    ...collectMatches(html, P_CAP_RE, 2).map((j) => ({ ...j, kind: 'p-cap' })),
+    ...collectMatches(html, LI_RE, 2, { allowInlineTags: true }).map((j) => ({ ...j, kind: 'li' })),
+    ...collectMatches(html, P_RE, 2, { allowInlineTags: true, skipBlockNesting: true }).map((j) => ({
+      ...j,
+      kind: 'p',
+    })),
+    ...collectMatches(html, BLOCKQUOTE_RE, 2).map((j) => ({ ...j, kind: 'blockquote' })),
   ];
 
-  for (const re of patterns) {
-    const blocks = [...result.matchAll(re)];
-    for (const m of blocks) {
-      const inner = m[3];
-      if (re.source.includes('p|li') && hasNestedBlocks(inner)) continue;
-      const plain = /<[^>]+>/.test(inner) ? stripTags(inner) : inner.trim();
-      if (plain.length < 2) continue;
-      const tt = await googleTranslate(plain, target);
-      const repl = '<' + m[1] + m[2] + '>' + tt + '</' + m[1] + '>';
-      if (repl !== m[0]) result = replaceOnce(result, m[0], repl);
-      await sleep(delay);
-    }
+  jobs.sort((a, b) => b.index - a.index);
+
+  let result = html;
+  for (const job of jobs) {
+    const tt = await googleTranslate(job.plain, target);
+    let repl;
+    if (job.kind === 'heading') repl = `<${job.parts[1]}${job.parts[2]}>${tt}</${job.parts[1]}>`;
+    else if (job.kind === 'div' || job.kind === 'p-cap') repl = rebuildOpenClose(job.raw, tt);
+    else if (job.kind === 'p') repl = `<p${job.parts[1]}>${tt}</p>`;
+    else if (job.kind === 'li') repl = `<li${job.parts[1]}>${tt}</li>`;
+    else if (job.kind === 'blockquote') repl = `<blockquote${job.parts[1]}>${tt}</blockquote>`;
+    else repl = tt;
+    result = result.slice(0, job.index) + repl + result.slice(job.index + job.len);
+    await sleep(delay);
   }
 
   return result;
