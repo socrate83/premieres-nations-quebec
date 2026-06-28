@@ -22,6 +22,7 @@ const FILES = [
   'FemmesAutochtones2.html',
   'LanguesAutochtones.html',
   'PensionnatsIndiens.html',
+  'Audio.html',
 ];
 
 function extractRootInner(html) {
