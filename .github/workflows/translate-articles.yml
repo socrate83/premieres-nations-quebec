@@ -1,0 +1,63 @@
+# Traduction automatique des articles (EN + ES) par lots, la nuit.
+# Chaque exécution traduit les N prochains articles non encore traduits,
+# écrit locales/articles/{slug}.json, puis commite sur main (ce qui déclenche
+# le déploiement GitHub Pages). Conçu pour finir les 72 articles en ~1 lot/nuit.
+name: Traduire les articles (nocturne)
+
+on:
+  workflow_dispatch:
+    inputs:
+      count:
+        description: "Nombre d'articles à traduire pour cette exécution"
+        required: false
+        default: '10'
+  schedule:
+    # 07:00 UTC chaque jour (~03:00 au Québec, l'été). « La nuit ».
+    - cron: '0 7 * * *'
+
+permissions:
+  contents: write
+
+concurrency:
+  group: translate-articles
+  cancel-in-progress: false
+
+jobs:
+  translate:
+    runs-on: ubuntu-latest
+    timeout-minutes: 180
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '20'
+
+      - name: Déterminer le prochain lot d'articles à traduire
+        id: batch
+        run: |
+          COUNT="${{ github.event.inputs.count || '10' }}"
+          SLUGS="$(node scripts/next-untranslated.mjs "$COUNT")"
+          echo "slugs=$SLUGS" >> "$GITHUB_OUTPUT"
+          if [ -z "$SLUGS" ]; then
+            echo "Tous les articles sont déjà traduits — rien à faire."
+          else
+            echo "Lot à traduire : $SLUGS"
+          fi
+
+      - name: Traduire le lot (EN + ES)
+        if: steps.batch.outputs.slugs != ''
+        run: node scripts/build-article-translations.mjs --only "${{ steps.batch.outputs.slugs }}"
+
+      - name: Commiter et publier les traductions
+        if: steps.batch.outputs.slugs != ''
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "github-actions[bot]@users.noreply.github.com"
+          git add locales/articles/*.json
+          if git diff --cached --quiet; then
+            echo "Aucun changement à commiter."
+          else
+            git commit -m "Traduction auto (nocturne) : ${{ steps.batch.outputs.slugs }}"
+            git push
+          fi
