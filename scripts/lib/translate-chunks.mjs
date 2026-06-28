@@ -108,7 +108,18 @@ async function translateInline(inner, target) {
     const core = tok.slice(lead.length, tok.length - trail.length);
     out.push(lead + (await googleTranslate(core, target)) + trail);
   }
-  return out.join('');
+  return normalizeEmphasisSpacing(out.join(''));
+}
+
+/**
+ * Rétablit l'espace manquant quand une élision française (« l' », « d' »…) colle
+ * un mot en emphase à sa traduction (ex. « the<strong>aspirin » → « the <strong>aspirin »).
+ * Ne touche pas <sup>/<sub> (ex. « m<sup>2</sup> » doit rester collé).
+ */
+function normalizeEmphasisSpacing(s) {
+  return s
+    .replace(/([A-Za-zÀ-ÿ0-9])(<(?:strong|em|b|i|a)\b)/g, '$1 $2')
+    .replace(/(<\/(?:strong|em|b|i|a)>)([A-Za-zÀ-ÿ0-9])/g, '$1 $2');
 }
 
 export async function translateHtml(html, target, opts = {}) {
