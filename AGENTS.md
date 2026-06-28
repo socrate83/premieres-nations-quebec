@@ -58,6 +58,16 @@ Chaque article charge son corps traduit depuis `locales/articles/{slug}.json`
 - **Cartes vidéos** (`Videos.html`, depuis `videos-catalog.json`) : traduites via
   `locales/videos-i18n.json` (hook `window.pnUpdateVideosI18n` appelé par
   `lang-switcher.js`). Régénérer avec `node scripts/build-videos-i18n.mjs`.
+- **Cartes podcasts** (`podcasts/index.html`, depuis `podcasts/catalog.json`) :
+  desc/type/schedule traduits via `locales/podcasts-i18n.json` (hook
+  `window.pnUpdateMediathequeI18n`). Régénérer : `node scripts/build-podcasts-i18n.mjs`.
+- **Liens de partage des articles** : `article-share.js` injecte une barre de partage
+  (FB/X/WhatsApp/Copier) sur toute page ayant `#pn-article-root` (sauf si `.share-section`
+  existe déjà). L'ajouter aux pages : `node scripts/inject-article-share.mjs`. Libellés
+  mis à jour via `window.pnUpdateShareBar` (hook `lang-switcher.js`).
+- **Lecture audio (synthèse vocale)** : désactivée temporairement via le drapeau
+  `DISABLED` en haut de `audio-player.js` (gênait les traductions). Repasser à `false`
+  pour réactiver.
   ⚠️ `build-article-translations.mjs` n'écrit ce fichier que SANS `--only` ; en mode
   lot, utiliser le script dédié.
 - **Automatisé** : le workflow `Traduire les articles (nocturne)`
