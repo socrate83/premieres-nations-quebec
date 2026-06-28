@@ -52,6 +52,11 @@ Chaque article charge son corps traduit depuis `locales/articles/{slug}.json`
   (traduction automatique via l'API Google Translate ; lent, ~5 min/article — délais
   volontaires pour éviter le throttling).
 - Lot suivant non traduit : `node scripts/next-untranslated.mjs [N]` (slugs séparés par virgules).
+- **Titres des cartes** (grille d'articles sur `Home.html`) : traduits via
+  `locales/blog-serie-i18n.json` (chargé par `applyBlogCards` dans `article-i18n.js`).
+  Régénérer avec `node scripts/build-blog-cards-i18n.mjs` (titres + teasers seulement).
+  ⚠️ `build-article-translations.mjs` n'écrit ce fichier que SANS `--only` ; en mode
+  lot, utiliser le script dédié.
 - **Automatisé** : le workflow `Traduire les articles (nocturne)`
   (`.github/workflows/translate-articles.yml`) traduit chaque nuit le prochain lot et
   **commite sur `main`** (déclenche le déploiement). Déclenchable à la main via
