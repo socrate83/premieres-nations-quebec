@@ -62,6 +62,16 @@ Chaque article charge son corps traduit depuis `locales/articles/{slug}.json`
   **commite sur `main`** (déclenche le déploiement). Déclenchable à la main via
   « Run workflow » (entrée `count`).
 
+### Audit & pages hors catalogue
+- Audit de couverture i18n de tout le site : `node scripts/audit-site-i18n.mjs`
+  (liste pages sans commutateur, corps non traduits, pages « autonomes »).
+- Pages hors catalogue (ex. `PensionnatsIndiens.html`, `BijouxPremieresNations.html`) :
+  les câbler avec `node scripts/wire-standalone-i18n.mjs` (enveloppe l'`<article
+  class="article-ecoute">` dans `<div id="pn-article-root" data-pn-article-slug>` +
+  injecte `article-i18n.js`), puis traduire avec `node scripts/translate-extra-pages.mjs`.
+  ⚠️ Ne pas câbler les pages **interactives** (ex. `Partage.html`) : le remplacement
+  d'`innerHTML` au changement de langue casserait leurs scripts.
+
 ### Checks (no test framework)
 There is no lint/test runner. The read-only audit scripts are the closest thing to checks:
 
