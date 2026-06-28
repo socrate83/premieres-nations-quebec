@@ -195,6 +195,7 @@
     if (typeof window.pnUpdateVideosI18n === 'function') window.pnUpdateVideosI18n();
     if (typeof window.pnApplyNationI18n === 'function') window.pnApplyNationI18n(currentLang);
     if (typeof window.pnApplyArticleI18n === 'function') window.pnApplyArticleI18n(currentLang);
+    if (typeof window.pnUpdateShareBar === 'function') window.pnUpdateShareBar();
   }
 
   function loadAndApply(code) {
