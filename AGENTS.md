@@ -10,6 +10,11 @@ See `README.md` for the project overview and public links.
 **Langue de communication :** le mainteneur préfère que les agents lui répondent
 **toujours en français**.
 
+**Gestion de GitHub :** le mainteneur ne touche pas à GitHub. L'agent gère tout de
+bout en bout — il **commite et pousse directement sur `main`** (ce qui déclenche le
+déploiement Pages) plutôt que de laisser des PR à fusionner — et fournit ensuite le
+**lien public** pour vérifier.
+
 
 This is a **pure static HTML/CSS/JS site**. There is **no `package.json`, no lockfile, and no
 third-party dependencies** — every `scripts/*.mjs` file uses only Node.js built-in modules
