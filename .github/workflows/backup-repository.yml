@@ -27,10 +27,21 @@ jobs:
 
       - name: Archiver les fichiers du site
         run: |
-          tar czf "backup-${STAMP}-fichiers.tar.gz" \
+          set -uo pipefail
+          # On écrit l'archive HORS de l'arborescence sauvegardée. Sinon le fichier
+          # de sortie est créé dans le répertoire courant pendant que tar le lit, ce
+          # qui provoque « tar: .: file changed as we read it » et un échec (code 1).
+          ARCHIVE="${RUNNER_TEMP}/backup-${STAMP}-fichiers.tar.gz"
+          status=0
+          tar czf "$ARCHIVE" \
             --exclude='.git' \
             --exclude='node_modules' \
-            .
+            --exclude='./backup-*.bundle' \
+            . || status=$?
+          # tar : 0 = OK, 1 = avertissement bénin (fichier modifié pendant la lecture),
+          # >= 2 = erreur fatale.
+          if [ "$status" -ge 2 ]; then exit "$status"; fi
+          mv "$ARCHIVE" "backup-${STAMP}-fichiers.tar.gz"
 
       - name: Publier l'artifact de sauvegarde
         uses: actions/upload-artifact@v4
