@@ -6,6 +6,11 @@
   'use strict';
 
   /** Vitesse « narration posée » pour récits historiques */
+  // Lecture audio des articles DÉSACTIVÉE temporairement (demande Jean-Claude) :
+  // la synthèse vocale interférait avec les traductions. Pour réactiver, repasser
+  // DISABLED à false.
+  var DISABLED = true;
+
   var RATE = 0.92;
   var PITCH = 1;
   var LANG = 'fr-FR';
@@ -21,6 +26,7 @@
   var speaking = false;
 
   function init() {
+    if (DISABLED) return;
     articleEl = document.querySelector('article.article-ecoute');
     if (!articleEl) return;
 
