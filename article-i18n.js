@@ -85,6 +85,14 @@
     box.textContent = notice;
   }
 
+  function reinitAudio() {
+    // Le lecteur audio est injecté en JS dans <article class="article-ecoute">.
+    // Après remplacement du innerHTML (changement de langue), il faut le remonter.
+    if (typeof window.pnInitAudioPlayer === 'function') {
+      setTimeout(window.pnInitAudioPlayer, 0);
+    }
+  }
+
   function applyArticle(lang) {
     slug = articleSlug();
     var root = articleRoot();
@@ -97,6 +105,7 @@
       if (frSnapshot.title) document.title = frSnapshot.title;
       setNotice('fr', true);
       showMachineNotice('fr');
+      reinitAudio();
       return Promise.resolve(true);
     }
 
@@ -110,6 +119,7 @@
       if (pack.title) document.title = pack.title;
       setNotice(lang, true);
       showMachineNotice(lang);
+      reinitAudio();
       return true;
     });
   }

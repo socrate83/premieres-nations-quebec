@@ -225,6 +225,10 @@
     if (statusEl) statusEl.textContent = msg;
   }
 
+  // Exposé pour permettre un remontage après un changement de langue
+  // (article-i18n.js remplace le innerHTML, ce qui retire les contrôles injectés).
+  window.pnInitAudioPlayer = init;
+
   if (document.readyState === 'loading') {
     document.addEventListener('DOMContentLoaded', init);
   } else {

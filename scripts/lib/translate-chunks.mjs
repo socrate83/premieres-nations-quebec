@@ -63,8 +63,7 @@ const DIV_LABEL_RE =
 const P_CAP_RE =
   /<p class="(?:img-cap|img-caption|quote-src|quote-source)"([^>]*)>([^<]*)<\/p>/gi;
 
-const HEADING_RE = /<(h[2-4])([^>]*)>([^<]+)<\/\1>/gi;
-const STRONG_RE = /<strong>([^<]+)<\/strong>/gi;
+const HEADING_RE = /<(h[1-4])([^>]*)>([^<]+)<\/\1>/gi;
 const LI_RE = /<li([^>]*)>([\s\S]*?)<\/li>/gi;
 const P_RE = /<p([^>]*)>([\s\S]*?)<\/p>/gi;
 const BLOCKQUOTE_RE = /<blockquote([^>]*)>([^<]+)<\/blockquote>/gi;
@@ -83,42 +82,73 @@ function collectMatches(html, re, groupIdx, opts = {}) {
   return out;
 }
 
-function rebuildOpenClose(raw, translated) {
-  const open = raw.slice(0, raw.indexOf('>') + 1);
-  const close = raw.slice(raw.lastIndexOf('<'));
-  return open + translated + close;
+/**
+ * Traduit le contenu interne d'un bloc en PRÉSERVANT les balises inline
+ * (<strong>, <a>, <em>, <br>…). On découpe sur les balises et on ne traduit
+ * que les segments de texte : aucune balise n'est jamais cassée ni réordonnée.
+ */
+async function translateInline(inner, target) {
+  if (!inner || !inner.trim()) return inner;
+  if (inner.indexOf('<') === -1) {
+    return await googleTranslate(inner, target);
+  }
+  const tokens = inner.split(/(<[^>]+>)/g);
+  const out = [];
+  for (const tok of tokens) {
+    if (!tok) continue;
+    if (tok[0] === '<' || !tok.trim()) {
+      out.push(tok);
+      continue;
+    }
+    // Préserver les espaces de début/fin (Google les rogne) pour ne pas
+    // coller le texte aux balises inline voisines (<strong>, <a>…).
+    const lead = tok.match(/^\s*/)[0];
+    const trail = tok.match(/\s*$/)[0];
+    const core = tok.slice(lead.length, tok.length - trail.length);
+    out.push(lead + (await googleTranslate(core, target)) + trail);
+  }
+  return out.join('');
 }
 
 export async function translateHtml(html, target, opts = {}) {
   const delay = opts.delayMs ?? 120;
   if (!html || html.length < 20) return html;
 
-  const jobs = [
-    ...collectMatches(html, HEADING_RE, 3).map((j) => ({ ...j, kind: 'heading' })),
-    ...collectMatches(html, DIV_LABEL_RE, 2).map((j) => ({ ...j, kind: 'div' })),
-    ...collectMatches(html, P_CAP_RE, 2).map((j) => ({ ...j, kind: 'p-cap' })),
-    ...collectMatches(html, LI_RE, 2, { allowInlineTags: true }).map((j) => ({ ...j, kind: 'li' })),
-    ...collectMatches(html, P_RE, 2, { allowInlineTags: true, skipBlockNesting: true }).map((j) => ({
-      ...j,
-      kind: 'p',
-    })),
-    ...collectMatches(html, BLOCKQUOTE_RE, 2).map((j) => ({ ...j, kind: 'blockquote' })),
-    ...collectMatches(html, STRONG_RE, 1).map((j) => ({ ...j, kind: 'strong' })),
+  const collectors = [
+    [HEADING_RE, 3, {}],
+    [DIV_LABEL_RE, 2, {}],
+    [P_CAP_RE, 2, {}],
+    [LI_RE, 2, { allowInlineTags: true }],
+    [P_RE, 2, { allowInlineTags: true, skipBlockNesting: true }],
+    [BLOCKQUOTE_RE, 2, {}],
   ];
 
-  jobs.sort((a, b) => b.index - a.index);
+  let jobs = [];
+  for (const [re, gi, o] of collectors) {
+    jobs = jobs.concat(collectMatches(html, re, gi, o));
+  }
+
+  // Éliminer les chevauchements : on garde le bloc le plus externe / le premier.
+  jobs.sort((a, b) => a.index - b.index || b.len - a.len);
+  const kept = [];
+  let lastEnd = -1;
+  for (const j of jobs) {
+    if (j.index >= lastEnd) {
+      kept.push(j);
+      lastEnd = j.index + j.len;
+    }
+  }
+
+  // Appliquer de la fin vers le début pour que les index restent valides.
+  kept.sort((a, b) => b.index - a.index);
 
   let result = html;
-  for (const job of jobs) {
-    const tt = await googleTranslate(job.plain, target);
-    let repl;
-    if (job.kind === 'heading') repl = `<${job.parts[1]}${job.parts[2]}>${tt}</${job.parts[1]}>`;
-    else if (job.kind === 'div' || job.kind === 'p-cap') repl = rebuildOpenClose(job.raw, tt);
-    else if (job.kind === 'p') repl = `<p${job.parts[1]}>${tt}</p>`;
-    else if (job.kind === 'li') repl = `<li${job.parts[1]}>${tt}</li>`;
-    else if (job.kind === 'blockquote') repl = `<blockquote${job.parts[1]}>${tt}</blockquote>`;
-    else if (job.kind === 'strong') repl = `<strong>${tt}</strong>`;
-    else repl = tt;
+  for (const job of kept) {
+    const raw = job.raw;
+    const open = raw.slice(0, raw.indexOf('>') + 1);
+    const close = raw.slice(raw.lastIndexOf('<'));
+    const inner = raw.slice(open.length, raw.length - close.length);
+    const repl = open + (await translateInline(inner, target)) + close;
     result = result.slice(0, job.index) + repl + result.slice(job.index + job.len);
     await sleep(delay);
   }
