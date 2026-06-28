@@ -44,6 +44,19 @@ repo root (rewriting `../assets/` → `assets/`, etc.) and regenerates `blog-ser
 build/deploy step, not something to run casually during local dev. The root-level `*.html` files
 are the deployed copies; the editable sources live under `pages/`.
 
+### Traductions des articles (EN / ES)
+Chaque article charge son corps traduit depuis `locales/articles/{slug}.json`
+(via `article-i18n.js`) ; le slug = `data-pn-article-slug` ou le nom de fichier sans
+`.html`. Sans JSON, la page affiche « traduction non disponible » et reste en français.
+- Générer/regénérer : `node scripts/build-article-translations.mjs --only <slug1,slug2,…>`
+  (traduction automatique via l'API Google Translate ; lent, ~5 min/article — délais
+  volontaires pour éviter le throttling).
+- Lot suivant non traduit : `node scripts/next-untranslated.mjs [N]` (slugs séparés par virgules).
+- **Automatisé** : le workflow `Traduire les articles (nocturne)`
+  (`.github/workflows/translate-articles.yml`) traduit chaque nuit le prochain lot et
+  **commite sur `main`** (déclenche le déploiement). Déclenchable à la main via
+  « Run workflow » (entrée `count`).
+
 ### Checks (no test framework)
 There is no lint/test runner. The read-only audit scripts are the closest thing to checks:
 
