@@ -7,6 +7,9 @@ See `README.md` for the project overview and public links.
 
 ## Cursor Cloud specific instructions
 
+**Nom de l'agent :** le mainteneur a nommé son agent **Socrate**. L'agent peut se
+présenter / se désigner sous ce nom.
+
 **Langue de communication :** le mainteneur préfère que les agents lui répondent
 **toujours en français**.
 
