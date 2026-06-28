@@ -64,6 +64,7 @@ const P_CAP_RE =
   /<p class="(?:img-cap|img-caption|quote-src|quote-source)"([^>]*)>([^<]*)<\/p>/gi;
 
 const HEADING_RE = /<(h[1-4])([^>]*)>([^<]+)<\/\1>/gi;
+const STRONG_RE = /<strong>([^<]+)<\/strong>/gi;
 const LI_RE = /<li([^>]*)>([\s\S]*?)<\/li>/gi;
 const P_RE = /<p([^>]*)>([\s\S]*?)<\/p>/gi;
 const BLOCKQUOTE_RE = /<blockquote([^>]*)>([^<]+)<\/blockquote>/gi;
@@ -121,6 +122,9 @@ export async function translateHtml(html, target, opts = {}) {
     [LI_RE, 2, { allowInlineTags: true }],
     [P_RE, 2, { allowInlineTags: true, skipBlockNesting: true }],
     [BLOCKQUOTE_RE, 2, {}],
+    // Les <strong> autonomes (hors <p>/<li>) : ceux imbriqués dans un bloc
+    // déjà collecté seront écartés par le filtre anti-chevauchement ci-dessous.
+    [STRONG_RE, 1, {}],
   ];
 
   let jobs = [];
