@@ -7,6 +7,10 @@ See `README.md` for the project overview and public links.
 
 ## Cursor Cloud specific instructions
 
+**Langue de communication :** le mainteneur préfère que les agents lui répondent
+**toujours en français**.
+
+
 This is a **pure static HTML/CSS/JS site**. There is **no `package.json`, no lockfile, and no
 third-party dependencies** — every `scripts/*.mjs` file uses only Node.js built-in modules
 (`fs`, `path`, `url`, `child_process`, `https`). Node.js (v22) and Python 3 are preinstalled, so
