@@ -55,6 +55,9 @@ Chaque article charge son corps traduit depuis `locales/articles/{slug}.json`
 - **Titres des cartes** (grille d'articles sur `Home.html`) : traduits via
   `locales/blog-serie-i18n.json` (chargé par `applyBlogCards` dans `article-i18n.js`).
   Régénérer avec `node scripts/build-blog-cards-i18n.mjs` (titres + teasers seulement).
+- **Cartes vidéos** (`Videos.html`, depuis `videos-catalog.json`) : traduites via
+  `locales/videos-i18n.json` (hook `window.pnUpdateVideosI18n` appelé par
+  `lang-switcher.js`). Régénérer avec `node scripts/build-videos-i18n.mjs`.
   ⚠️ `build-article-translations.mjs` n'écrit ce fichier que SANS `--only` ; en mode
   lot, utiliser le script dédié.
 - **Automatisé** : le workflow `Traduire les articles (nocturne)`
