@@ -166,8 +166,42 @@
       });
   }
 
+  function blogCardParts(card) {
+    return {
+      h: card.querySelector('h4, h3, .serie-card-title'),
+      p: card.querySelector('p, .serie-card-teaser'),
+    };
+  }
+
+  function snapshotBlogCardsFr() {
+    // Mémorise le texte FR d'origine (une seule fois par carte) afin de pouvoir
+    // le restaurer : sinon, revenir au français laisse les cartes figées dans la
+    // dernière langue choisie (EN/ES).
+    document.querySelectorAll('.serie-card-blog[data-pn-article-file]').forEach(function (card) {
+      var parts = blogCardParts(card);
+      if (parts.h && card.getAttribute('data-pn-fr-title') === null) {
+        card.setAttribute('data-pn-fr-title', parts.h.textContent);
+      }
+      if (parts.p && card.getAttribute('data-pn-fr-teaser') === null) {
+        card.setAttribute('data-pn-fr-teaser', parts.p.textContent);
+      }
+    });
+  }
+
   function applyBlogCards(lang) {
-    if (lang === 'fr') return;
+    snapshotBlogCardsFr();
+
+    if (lang === 'fr') {
+      document.querySelectorAll('.serie-card-blog[data-pn-article-file]').forEach(function (card) {
+        var parts = blogCardParts(card);
+        var frTitle = card.getAttribute('data-pn-fr-title');
+        var frTeaser = card.getAttribute('data-pn-fr-teaser');
+        if (parts.h && frTitle !== null) parts.h.textContent = frTitle;
+        if (parts.p && frTeaser !== null) parts.p.textContent = frTeaser;
+      });
+      return;
+    }
+
     fetchBlogCatalogI18n(lang).then(function (data) {
       if (!data || !data[lang]) return;
       var map = data[lang];
@@ -175,10 +209,9 @@
         var file = card.getAttribute('data-pn-article-file');
         var t = map[file];
         if (!t) return;
-        var h = card.querySelector('h4, h3, .serie-card-title');
-        var p = card.querySelector('p, .serie-card-teaser');
-        if (h && t.title) h.textContent = t.title;
-        if (p && t.teaser) p.textContent = t.teaser;
+        var parts = blogCardParts(card);
+        if (parts.h && t.title) parts.h.textContent = t.title;
+        if (parts.p && t.teaser) parts.p.textContent = t.teaser;
       });
     });
   }
