@@ -148,12 +148,63 @@
         sub.textContent = tpl + ' · Documentaires · Histoires · Traditions';
       }
       window.pnUpdateVideosI18n = function () {
+        var lang = document.documentElement.lang;
+        if (lang !== 'en' && lang !== 'es') lang = 'fr';
         if (sub && window.__pnVideoListLen != null) {
           var t = typeof window.pnT === 'function'
             ? window.pnT('media.videosBadge', { n: window.__pnVideoListLen })
             : window.__pnVideoListLen + ' vidéos';
           sub.textContent = t + ' · Documentaires · Histoires · Traditions';
         }
+        var cards = document.querySelectorAll('.video-card[data-pn-video-id]');
+        if (!cards.length) return;
+        // Mémoriser le texte FR d'origine (une fois) pour pouvoir le restaurer.
+        cards.forEach(function (card) {
+          if (card.getAttribute('data-fr-done')) return;
+          var tg = card.querySelector('.video-tag');
+          var ti = card.querySelector('.video-title');
+          var de = card.querySelector('.video-desc');
+          if (tg) card.setAttribute('data-fr-tag', tg.textContent);
+          if (ti) card.setAttribute('data-fr-title', ti.textContent);
+          if (de) card.setAttribute('data-fr-desc', de.textContent);
+          card.setAttribute('data-fr-done', '1');
+        });
+        if (lang === 'fr') {
+          cards.forEach(function (card) {
+            var tg = card.querySelector('.video-tag');
+            var ti = card.querySelector('.video-title');
+            var de = card.querySelector('.video-desc');
+            if (tg && card.getAttribute('data-fr-tag') !== null) tg.textContent = card.getAttribute('data-fr-tag');
+            if (ti && card.getAttribute('data-fr-title') !== null) ti.textContent = card.getAttribute('data-fr-title');
+            if (de && card.getAttribute('data-fr-desc') !== null) de.textContent = card.getAttribute('data-fr-desc');
+          });
+          return;
+        }
+        function applyMap(map) {
+          cards.forEach(function (card) {
+            var m = map && map[card.getAttribute('data-pn-video-id')];
+            if (!m) return;
+            var tg = card.querySelector('.video-tag');
+            var ti = card.querySelector('.video-title');
+            var de = card.querySelector('.video-desc');
+            if (tg && m.tag) tg.textContent = m.tag;
+            if (ti && m.title) ti.textContent = m.title;
+            if (de && m.description) de.textContent = m.description;
+          });
+        }
+        window.__pnVideoI18n = window.__pnVideoI18n || {};
+        if (window.__pnVideoI18n[lang]) { applyMap(window.__pnVideoI18n[lang]); return; }
+        var urls = ['locales/videos-i18n.json', '../locales/videos-i18n.json'];
+        (function tryLoad(i) {
+          if (i >= urls.length) return;
+          fetch(urls[i], { cache: 'no-store' })
+            .then(function (r) { if (!r.ok) throw new Error(); return r.json(); })
+            .then(function (data) {
+              window.__pnVideoI18n[lang] = (data && data[lang]) || {};
+              applyMap(window.__pnVideoI18n[lang]);
+            })
+            .catch(function () { tryLoad(i + 1); });
+        })(0);
       };
       window.__pnVideoListLen = list.length;
       if (!list.length) {
@@ -164,7 +215,7 @@
         var id = esc(v.youtubeId);
         var title = esc(v.title);
         return (
-          '<div class="video-card"><div class="video-embed">' +
+          '<div class="video-card" data-pn-video-id="' + id + '"><div class="video-embed">' +
           '<iframe src="https://www.youtube.com/embed/' + id + '" title="' + title + '" allowfullscreen loading="lazy"></iframe>' +
           '</div><div class="video-info"><div class="video-tag">' + esc(v.tag) + '</div>' +
           '<div class="video-title">' + title + '</div><div class="video-desc">' + esc(v.description) + '</div></div></div>'
@@ -172,6 +223,7 @@
       }).join('');
       var yt = document.querySelector('.yt-banner .btn-yt');
       if (yt && data.youtubeChannel) yt.href = data.youtubeChannel;
+      if (typeof window.pnUpdateVideosI18n === 'function') window.pnUpdateVideosI18n();
     }
     function tryFetch(urls, i) {
       if (i >= urls.length) {

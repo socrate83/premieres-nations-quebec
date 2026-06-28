@@ -49,14 +49,16 @@ jobs:
         if: steps.batch.outputs.slugs != ''
         run: node scripts/build-article-translations.mjs --only "${{ steps.batch.outputs.slugs }}"
 
-      - name: Régénérer les titres de cartes (EN + ES)
-        run: node scripts/build-blog-cards-i18n.mjs
+      - name: Régénérer les titres de cartes + vidéos (EN + ES)
+        run: |
+          node scripts/build-blog-cards-i18n.mjs
+          node scripts/build-videos-i18n.mjs
 
       - name: Commiter et publier les traductions
         run: |
           git config user.name "github-actions[bot]"
           git config user.email "github-actions[bot]@users.noreply.github.com"
-          git add locales/articles/*.json locales/blog-serie-i18n.json
+          git add locales/articles/*.json locales/blog-serie-i18n.json locales/videos-i18n.json
           if git diff --cached --quiet; then
             echo "Aucun changement à commiter."
           else
