@@ -52,18 +52,18 @@
   <header class="page-header">
     <p style="font-size:0.75rem;letter-spacing:4px;text-transform:uppercase;color:var(--or-clair);margin-bottom:0.75rem">Dossier · Premières Nations</p>
     <h1 data-i18n="podcastsPage.title">🎙️ Podcasts &amp; émissions en direct</h1>
-    <p>Écoutez ici le dernier épisode quand le flux le permet, ou ouvrez le <strong>dossier de téléchargement</strong> sur la plateforme officielle de chaque créateur.</p>
+    <p data-i18n-html="podcastsPage.sub">Écoutez ici le dernier épisode quand le flux le permet, ou ouvrez le <strong>dossier de téléchargement</strong> sur la plateforme officielle de chaque créateur.</p>
   </header>
 
   <div class="container">
-    <div class="folder-banner">
+    <div class="folder-banner" data-i18n-html="podcastsPage.banner">
       <strong>📁 Dossier de téléchargement :</strong> les épisodes ne sont pas hébergés sur ce site (droits d'auteur). Chaque carte propose un lien <strong>« Télécharger / tous les épisodes »</strong> vers OHdio, BaladoQuébec, Podbean, Canal M, etc., où vous pouvez enregistrer les MP3 officiellement.
     </div>
 
-    <h2 class="section-title">🔴 En direct ou presque en direct</h2>
+    <h2 class="section-title" data-i18n="podcastsPage.liveTitle">🔴 En direct ou presque en direct</h2>
     <div id="live-grid" class="pod-grid"></div>
 
-    <h2 class="section-title">📻 Balados &amp; chroniques (à la demande)</h2>
+    <h2 class="section-title" data-i18n="podcastsPage.podTitle">📻 Balados &amp; chroniques (à la demande)</h2>
     <div id="pod-grid" class="pod-grid"><p class="loading">Chargement du catalogue…</p></div>
   </div>
 
@@ -73,6 +73,48 @@
   </footer>
 
   <script>
+  // Traduction des cartes podcasts (desc/type/schedule) — sans toucher aux audios.
+  // Hook appelé par lang-switcher.js (pnUpdateMediathequeI18n). FR = restauration.
+  (function () {
+    var podCache = {};
+    function curLang() {
+      var l = document.documentElement.lang;
+      return (l === 'en' || l === 'es') ? l : 'fr';
+    }
+    function applyPods(map) {
+      document.querySelectorAll('.pod-card[data-pn-pod-id]').forEach(function (card) {
+        var id = card.getAttribute('data-pn-pod-id');
+        var hosts = card.getAttribute('data-fr-hosts') || '';
+        var sched = card.getAttribute('data-fr-schedule') || '';
+        var type = card.getAttribute('data-fr-type') || '';
+        var desc = card.getAttribute('data-fr-desc') || '';
+        var tr = map && map[id];
+        if (tr) {
+          if (tr.schedule) sched = tr.schedule;
+          if (tr.type) type = tr.type;
+          if (tr.desc) desc = tr.desc;
+        }
+        var meta = card.querySelector('.pod-meta');
+        var d = card.querySelector('.pod-desc');
+        if (meta) meta.textContent = hosts + (sched ? ' · ' + sched : '') + (type ? ' · ' + type : '');
+        if (d) d.textContent = desc;
+      });
+    }
+    window.pnUpdateMediathequeI18n = function () {
+      if (!document.querySelector('.pod-card[data-pn-pod-id]')) return;
+      var lang = curLang();
+      if (lang === 'fr') { applyPods(null); return; }
+      if (podCache[lang]) { applyPods(podCache[lang]); return; }
+      var urls = ['../locales/podcasts-i18n.json', 'locales/podcasts-i18n.json'];
+      (function tryLoad(i) {
+        if (i >= urls.length) return;
+        fetch(urls[i], { cache: 'no-store' })
+          .then(function (r) { if (!r.ok) throw new Error(); return r.json(); })
+          .then(function (data) { podCache[lang] = (data && data[lang]) || {}; applyPods(podCache[lang]); })
+          .catch(function () { tryLoad(i + 1); });
+      })(0);
+    };
+  })();
   (function () {
     const liveEl = document.getElementById('live-grid');
     const podEl = document.getElementById('pod-grid');
@@ -96,7 +138,11 @@
 
     function renderCard(item, ep, isLive) {
       const live = isLive ? ' live-card' : '';
-      let html = '<article class="pod-card' + live + '">';
+      let html = '<article class="pod-card' + live + '" data-pn-pod-id="' + escapeAttr(item.id || '') +
+        '" data-fr-hosts="' + escapeAttr(item.hosts || '') +
+        '" data-fr-schedule="' + escapeAttr(item.schedule || '') +
+        '" data-fr-type="' + escapeAttr(item.type || '') +
+        '" data-fr-desc="' + escapeAttr(item.desc || '') + '">';
       html += '<h3>' + escapeHtml(item.title) + '</h3>';
       html += '<p class="pod-meta">' + escapeHtml(item.hosts) + (item.schedule ? ' · ' + escapeHtml(item.schedule) : '') + (item.type ? ' · ' + escapeHtml(item.type) : '') + '</p>';
       html += '<p class="pod-desc">' + escapeHtml(item.desc) + '</p>';
@@ -130,6 +176,8 @@
         const ep = item.rssId && latest[item.rssId] && !latest[item.rssId].error ? latest[item.rssId] : null;
         return renderCard(item, ep, false);
       }).join('');
+
+      if (typeof window.pnUpdateMediathequeI18n === 'function') window.pnUpdateMediathequeI18n();
     }).catch(function () {
       podEl.innerHTML = '<p class="loading">Impossible de charger le catalogue. <a href="catalog.json" style="color:var(--or-clair)">Voir catalog.json</a></p>';
     });

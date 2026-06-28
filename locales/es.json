@@ -139,7 +139,11 @@
   },
   "podcastsPage": {
     "title": "🎙️ Podcasts y emisiones en directo",
-    "metaTitle": "Podcasts — Primeras Naciones (francés)"
+    "metaTitle": "Podcasts — Primeras Naciones (francés)",
+    "sub": "Escuche aquí el último episodio cuando el flujo lo permita, o abra la <strong>carpeta de descargas</strong> en la plataforma oficial de cada creador.",
+    "banner": "<strong>📁 Carpeta de descargas:</strong> los episodios no están alojados en este sitio (derechos de autor). Cada tarjeta ofrece un enlace <strong>«Descargar / todos los episodios»</strong> a OHdio, BaladoQuébec, Podbean, Canal M, etc., donde puede guardar los MP3 oficialmente.",
+    "liveTitle": "🔴 En vivo o casi en vivo",
+    "podTitle": "📻 Podcasts y columnas (a demanda)"
   },
   "nationShare": {
     "title": "📢 Compartir este artículo",

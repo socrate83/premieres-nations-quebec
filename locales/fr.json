@@ -139,7 +139,11 @@
   },
   "podcastsPage": {
     "title": "🎙️ Podcasts & émissions en direct",
-    "metaTitle": "Podcasts — Premières Nations (français)"
+    "metaTitle": "Podcasts — Premières Nations (français)",
+    "sub": "Écoutez ici le dernier épisode quand le flux le permet, ou ouvrez le <strong>dossier de téléchargement</strong> sur la plateforme officielle de chaque créateur.",
+    "banner": "<strong>📁 Dossier de téléchargement :</strong> les épisodes ne sont pas hébergés sur ce site (droits d'auteur). Chaque carte propose un lien <strong>« Télécharger / tous les épisodes »</strong> vers OHdio, BaladoQuébec, Podbean, Canal M, etc., où vous pouvez enregistrer les MP3 officiellement.",
+    "liveTitle": "🔴 En direct ou presque en direct",
+    "podTitle": "📻 Balados & chroniques (à la demande)"
   },
   "nationShare": {
     "title": "📢 Partager cet article",

@@ -139,7 +139,11 @@
   },
   "podcastsPage": {
     "title": "🎙️ Podcasts & live shows",
-    "metaTitle": "Podcasts — First Nations (French)"
+    "metaTitle": "Podcasts — First Nations (French)",
+    "sub": "Listen to the latest episode here when the stream allows, or open the <strong>download folder</strong> on each creator's official platform.",
+    "banner": "<strong>📁 Download folder:</strong> episodes are not hosted on this site (copyright). Each card offers a <strong>“Download / all episodes”</strong> link to OHdio, BaladoQuébec, Podbean, Canal M, etc., where you can officially save the MP3s.",
+    "liveTitle": "🔴 Live or almost live",
+    "podTitle": "📻 Podcasts & columns (on demand)"
   },
   "nationShare": {
     "title": "📢 Share this article",

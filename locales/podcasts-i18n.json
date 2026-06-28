@@ -1,0 +1,146 @@
+{
+  "en": {
+    "rue-atateken-live": {
+      "desc": "Indigenous cultural chat: languages, cinema, literature, arts. Podcast rebroadcast afterwards.",
+      "type": "",
+      "schedule": "Wednesdays at noon (Facebook Live)"
+    },
+    "canal-m": {
+      "desc": "The voice of inclusion: dialogues with First Nations, Inuit and Métis.",
+      "type": "",
+      "schedule": "Weekly broadcast + continuous schedule"
+    },
+    "rci": {
+      "desc": "News and culture of indigenous peoples in Canada, in French.",
+      "type": "",
+      "schedule": "Continuous online programming"
+    },
+    "confluents": {
+      "desc": "Voices of the First Peoples and allies: worldview, art, spirituality. Also broadcast on Radio VM and Galilée.",
+      "type": "Weekly",
+      "schedule": ""
+    },
+    "rue-atateken": {
+      "desc": "Terres en vue podcast: indigenous cultures, cinema, literature, cuisine, arts.",
+      "type": "Weekly + direct",
+      "schedule": ""
+    },
+    "parole-autochtone": {
+      "desc": "Commentary on indigenous news and answers to questions from the public (ICI Première / OHdio).",
+      "type": "Weekly column",
+      "schedule": ""
+    },
+    "mamawi": {
+      "desc": "Contemporary Indigenous music: each episode features First Nations, Inuit and Métis artists.",
+      "type": "Weekly",
+      "schedule": ""
+    },
+    "kwe-bonjour": {
+      "desc": "Dialogue and respect: realities of First Nations, Inuit and Métis (Canal M).",
+      "type": "Weekly",
+      "schedule": ""
+    },
+    "voix-autochtones": {
+      "desc": "Political, social, cultural and artistic news from the First Nations, with indigenous music.",
+      "type": "Radio show",
+      "schedule": ""
+    },
+    "histoire-crochie": {
+      "desc": "Rewrites the history of Quebec with the words that marked the First Peoples (discovery, reserve, savage, etc.).",
+      "type": "Podcast",
+      "schedule": ""
+    },
+    "laisse-moi-raconter": {
+      "desc": "Indigenous cultures through objects and symbols: powwow, maple syrup, drum…",
+      "type": "Podcast",
+      "schedule": ""
+    },
+    "voies-paralleles": {
+      "desc": "Indigenous territory, justice, youth: podcast from Nouveau Monde Productions.",
+      "type": "Documentary (6 episodes)",
+      "schedule": ""
+    },
+    "apatrides": {
+      "desc": "Reflections on identity, migration and indigenous realities in Quebec.",
+      "type": "Podcast",
+      "schedule": ""
+    },
+    "espaces-autochtones": {
+      "desc": "Magazine on the culture, news and arts of indigenous peoples.",
+      "type": "Show (weekend)",
+      "schedule": ""
+    }
+  },
+  "es": {
+    "rue-atateken-live": {
+      "desc": "Charla cultural indígena: lenguas, cine, literatura, artes. Retransmisión del podcast posteriormente.",
+      "type": "",
+      "schedule": "Miércoles al mediodía (Facebook Live)"
+    },
+    "canal-m": {
+      "desc": "La voz de la inclusión: diálogos con las Primeras Naciones, los Inuit y los Métis.",
+      "type": "",
+      "schedule": "Emisión semanal + programación continua"
+    },
+    "rci": {
+      "desc": "Noticias y cultura de los pueblos indígenas de Canadá, en francés.",
+      "type": "",
+      "schedule": "Programación continua en línea."
+    },
+    "confluents": {
+      "desc": "Voces de los Pueblos Originarios y aliados: cosmovisión, arte, espiritualidad. También transmitido por Radio VM y Galilée.",
+      "type": "Semanalmente",
+      "schedule": ""
+    },
+    "rue-atateken": {
+      "desc": "Podcast Terres en vue: culturas indígenas, cine, literatura, gastronomía, artes.",
+      "type": "Semanal + directo",
+      "schedule": ""
+    },
+    "parole-autochtone": {
+      "desc": "Comentario sobre noticias indígenas y respuestas a preguntas del público (ICI Première / OHdio).",
+      "type": "columna semanal",
+      "schedule": ""
+    },
+    "mamawi": {
+      "desc": "Música indígena contemporánea: cada episodio presenta artistas de las Primeras Naciones, Inuit y Métis.",
+      "type": "Semanalmente",
+      "schedule": ""
+    },
+    "kwe-bonjour": {
+      "desc": "Diálogo y respeto: realidades de las Primeras Naciones, Inuit y Métis (Canal M).",
+      "type": "Semanalmente",
+      "schedule": ""
+    },
+    "voix-autochtones": {
+      "desc": "Actualidad política, social, cultural y artística de las Primeras Naciones, con música indígena.",
+      "type": "programa de radio",
+      "schedule": ""
+    },
+    "histoire-crochie": {
+      "desc": "Reescribe la historia de Quebec con las palabras que marcaron a los Primeros Pueblos (descubrimiento, reserva, salvaje, etc.).",
+      "type": "Podcast",
+      "schedule": ""
+    },
+    "laisse-moi-raconter": {
+      "desc": "Las culturas indígenas a través de objetos y símbolos: powwow, jarabe de arce, tambor…",
+      "type": "Podcast",
+      "schedule": ""
+    },
+    "voies-paralleles": {
+      "desc": "Territorio indígena, justicia, juventud: podcast de Nouveau Monde Productions.",
+      "type": "Documental (6 episodios)",
+      "schedule": ""
+    },
+    "apatrides": {
+      "desc": "Reflexiones sobre identidad, migración y realidades indígenas en Quebec.",
+      "type": "Podcast",
+      "schedule": ""
+    },
+    "espaces-autochtones": {
+      "desc": "Revista sobre cultura, actualidad y artes de los pueblos indígenas.",
+      "type": "Espectáculo (fin de semana)",
+      "schedule": ""
+    }
+  }
+}
