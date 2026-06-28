@@ -1,0 +1,590 @@
+{
+  "en": {
+    "famille-premieres-nations.html": {
+      "title": "Family and First Nations",
+      "teaser": "Family structures, respect for elders and the transmission of knowledge."
+    },
+    "01-spiritualite-nature-premieres-nations.html": {
+      "title": "Spirituality and Nature",
+      "teaser": "The sacred connection between First Nations and nature, the spirituality deeply rooted in the environment."
+    },
+    "02-peuples-plaines-bison.html": {
+      "title": "The Plains Peoples and the Bison",
+      "teaser": "The nomadic life of the peoples of the plains and their sacred relationship with the bison."
+    },
+    "03-cote-ouest-potlatch-totems.html": {
+      "title": "The West Coast: Potlatch and Totem Poles",
+      "teaser": "The potlatch traditions and fascinating totem art of the Pacific Coast."
+    },
+    "04-iroquois-democratie.html": {
+      "title": "Iroquois Democracy",
+      "teaser": "The system of governance of the Iroquois Confederacy and its influence."
+    },
+    "05-medecine-traditionnelle.html": {
+      "title": "Traditional Medicine",
+      "teaser": "Healing practices and traditional medicine of the First Nations."
+    },
+    "06-art-artisanat.html": {
+      "title": "Art and Craft",
+      "teaser": "Artistic expressions: basketry, pottery, goldsmithing and leatherwork."
+    },
+    "07-femmes-pouvoir.html": {
+      "title": "Women and Power",
+      "teaser": "The role of women in traditional societies and their influence."
+    },
+    "08-traite-diplomatie.html": {
+      "title": "Treaties and Diplomacy",
+      "teaser": "Signed treaties and diplomatic negotiations with the settlers."
+    },
+    "09-resistance-survivance.html": {
+      "title": "Resistance and Survival",
+      "teaser": "Cultural resilience in the face of historical and contemporary challenges."
+    },
+    "10-astronomie-navigation.html": {
+      "title": "Astronomy and Navigation",
+      "teaser": "Celestial knowledge, natural observatories and navigation by the stars."
+    },
+    "11-qui-sont-les-metis.html": {
+      "title": "Who are the Métis?",
+      "teaser": "A distinct people in the heart of Canada."
+    },
+    "12-langues-autochtones.html": {
+      "title": "Indigenous Languages",
+      "teaser": "Linguistic treasures threatened with disappearance."
+    },
+    "13-mythes-et-legendes.html": {
+      "title": "Storytellers and their Stories",
+      "teaser": "Myths, legends and the trickster."
+    },
+    "14-cuisine-traditionnelle.html": {
+      "title": "Traditional Indigenous Cuisine",
+      "teaser": "Territorial flavors and culinary traditions."
+    },
+    "15-lacrosse-jeu-createurs.html": {
+      "title": "Lacrosse: The Game of Creators",
+      "teaser": "From sacred ritual to national summer sport."
+    },
+    "16-sites-sacres.html": {
+      "title": "Sacred Sites and Places of Power",
+      "teaser": "Where earth and sky meet."
+    },
+    "17-premieres-nations-aujourdhui.html": {
+      "title": "First Nations Today",
+      "teaser": "Between tradition and modernity."
+    },
+    "18-rites-de-passage.html": {
+      "title": "Rites of Passage",
+      "teaser": "Being born, growing up and crossing the thresholds of life."
+    },
+    "19-musique-chants-traditionnels.html": {
+      "title": "Traditional Music and Songs",
+      "teaser": "The voice of the ancestors still resonates."
+    },
+    "20-art-rupestre.html": {
+      "title": "Rock Art",
+      "teaser": "Messages engraved in stone by ancestors."
+    },
+    "21-clans-systemes-parente.html": {
+      "title": "Clans and Kinship Systems",
+      "teaser": "The social organization of the First Nations."
+    },
+    "22-vannerie-paniers.html": {
+      "title": "Basketry and Traditional Baskets",
+      "teaser": "An age-old art woven with patience and know-how."
+    },
+    "23-environnement-ecologie.html": {
+      "title": "First Nations and the Environment",
+      "teaser": "Guardians of the earth for millennia."
+    },
+    "24-chamanes-medecine.html": {
+      "title": "Shamans and Medicine Men/Women",
+      "teaser": "Healers between the visible and invisible world."
+    },
+    "25-danses-traditionnelles.html": {
+      "title": "Traditional Dances",
+      "teaser": "Movement as prayer and celebration."
+    },
+    "26-tatouages-peinture.html": {
+      "title": "Tattoos and Body Painting",
+      "teaser": "Identity, status and spirituality on the skin."
+    },
+    "27-education-autochtone.html": {
+      "title": "Indigenous Education Yesterday and Today",
+      "teaser": "Transmission of knowledge and contemporary challenges."
+    },
+    "28-femmes-autochtones.html": {
+      "title": "Indigenous Women",
+      "teaser": "Matriarchies, ancestral power and contemporary voices."
+    },
+    "29-guerre-militaire.html": {
+      "title": "First Nations and War",
+      "teaser": "Canadian warriors, strategists and soldiers."
+    },
+    "30-wampum-ceintures.html": {
+      "title": "The Wampum - Protocol Belts",
+      "teaser": "Words woven into shell beads."
+    },
+    "31-clans-parente-premieres-nations.html": {
+      "title": "Clans and Kinship Systems",
+      "teaser": "Ancestral social structures of the peoples of the Northeast."
+    },
+    "32-epidemies-avant-cartier.html": {
+      "title": "Epidemics Before Cartier",
+      "teaser": "When Quebec was already a landscape of ghosts before the arrival of Europeans."
+    },
+    "33-noms-lieux-quebec-decodes.html": {
+      "title": "Quebec Place Names Decoded",
+      "teaser": "What indigenous names reveal about our territory."
+    },
+    "34-devoirs-grands-parents.html": {
+      "title": "Duties of Grandparents",
+      "teaser": "First Nations superheroes."
+    },
+    "35-navigateurs-foret.html": {
+      "title": "The Forest Navigators",
+      "teaser": "Traveling without a map, without a compass, without GPS."
+    },
+    "36-route-commerces-sans-monnaie.html": {
+      "title": "Commerce without Money",
+      "teaser": "The trade routes that crossed the continent before the euro and the dollar."
+    },
+    "37-esclaves-autochtones.html": {
+      "title": "Native Slaves",
+      "teaser": "The hidden face of captive wars between First Nations."
+    },
+    "38-enfance-premieres-nations.html": {
+      "title": "Childhood among the First Nations",
+      "teaser": "An education without benches or schoolbags, where the community teaches."
+    },
+    "39-routes-commerciales.html": {
+      "title": "Indigenous Trade Routes",
+      "teaser": "The currencyless trade that linked the Atlantic to the Rockies."
+    },
+    "40-feu-sans-allumettes.html": {
+      "title": "Fire without Matches",
+      "teaser": "The ancestral art of fire by friction: patience, technique and wisdom."
+    },
+    "41-reves-messagers-invisibles.html": {
+      "title": "Dreams: Messengers of the Invisible",
+      "teaser": "When dreams are instructions and sleep a sacred journey."
+    },
+    "42-prophéties-grande-paix.html": {
+      "title": "The Prophecies of the Great Peace",
+      "teaser": "How a vision created North America's first democracy."
+    },
+    "43-torture-iroquois-mythes-realites.html": {
+      "title": "Torture among the Iroquois",
+      "teaser": "Colonial myths and historical realities of a ritualized practice."
+    },
+    "44-trois-rivieres-capitale-poesie.html": {
+      "title": "Trois-Rivières: The City that Saved Canada",
+      "teaser": "Do you know why this city changed the destiny of Quebec?"
+    },
+    "45-amirindianisation-francais.html": {
+      "title": "The Amerindianization of the French",
+      "teaser": "Do you know that the French became 'Native Americans' before remaining French in Quebec?"
+    },
+    "46-truchements-precurseurs.html": {
+      "title": "The Forgotten Ways",
+      "teaser": "Do you know these precursors who founded Canada before the Coureurs des Bois?"
+    },
+    "47-radisson-groseilliers-alliance.html": {
+      "title": "The Ojibwe Saviors of Canada",
+      "teaser": "Which indigenous nation saved French Canada from bankruptcy in 1660?"
+    },
+    "48-appel-des-bois-liberte.html": {
+      "title": "The Call of the Woods",
+      "teaser": "Why did 80% of young Canadians prefer to live with Native Americans in 1685?"
+    },
+    "49-grande-paix-montreal-1701.html": {
+      "title": "The Great Peace of Montreal 1701",
+      "teaser": "Do you know what 'sacrifice' founded the greatest peace alliance in history?"
+    },
+    "50-heritage-vivant-alliances.html": {
+      "title": "Living heritage and alliances",
+      "teaser": "Companion text in the continuity of the historical stories of the series."
+    },
+    "51-le-vent-le-ciel-et-le-souffle.html": {
+      "title": "The wind, the sky and the breath",
+      "teaser": "Clouds like calendar, wind before the storm — the sky experienced like the rest of the territory, with the other spirituality sheets and sacred sites in the catalog."
+    },
+    "article52.html": {
+      "title": "Indigenous Clothing — Millennial Skins, Fibers and Know-How",
+      "teaser": "Before the colonizers, the indigenous peoples of Quebec mastered an ancient art of clothing: tanning, porcupine embroidery, furs, moccasins. Knowledge passed down from mother to daughter for millennia."
+    },
+    "article53.html": {
+      "title": "Traditional Housing — Wigwam, Longhouse and Tipi before Colonization",
+      "teaser": "Algonquin wigwam, Wendat longhouse, Inuit igloo, Cree teepee — the dwellings of the First Nations of Quebec were masterpieces of adaptation to the territory, long before the arrival of Europeans."
+    },
+    "article54.html": {
+      "title": "Trails and Knowledge of the Territory — Navigating without Maps",
+      "teaser": "Before the colonizers, the indigenous peoples of Quebec knew their territory with astonishing precision — reading the stars, the winds, the trees, the rivers. A science of the territory transmitted orally for millennia."
+    },
+    "article55.html": {
+      "title": "The Canoe — Soul of the Rivers and Masterpiece of Indigenous Ingenuity",
+      "teaser": "The birch bark canoe of the First Nations of Quebec — a masterpiece of ingenuity, built without metal or saw, capable of navigating lakes and rapids. An age-old technology that changed the history of the continent."
+    },
+    "article56.html": {
+      "title": "Traditional Indigenous Medicine — Plants, Healers and Millennial Knowledge",
+      "teaser": "Before the colonizers, the indigenous peoples of Quebec had a plant pharmacopoeia of astonishing richness at their disposal — Labrador tea, cedar, yarrow, wild ginger. A holistic medicine passed down orally for millennia."
+    },
+    "article57.html": {
+      "title": "Sexuality without Guilt: When the body was not dirty",
+      "teaser": "Before the arrival of missionaries, indigenous peoples had a healthy, balanced and taboo-free vision of sexuality and the human body."
+    },
+    "article58.html": {
+      "title": "Drugs without Addiction: When Substances Cured",
+      "teaser": "Sacred tobacco, peyote, hemp: how indigenous peoples used psychoactive substances as medicines — without creating dependence."
+    },
+    "article59.html": {
+      "title": "Death Without Fear: When dying was part of life",
+      "teaser": "How the indigenous peoples of Quebec tamed death, sometimes chose their moment and integrated it naturally into the cycle of life."
+    },
+    "article60.html": {
+      "title": "Food without a Supermarket: When eating took 6 hours a day",
+      "teaser": "The indigenous gastronomy of Quebec: hunting, gathering, fishing and preparation as spiritual acts — the opposite of our industrial fast food."
+    },
+    "article61.html": {
+      "title": "Childhood without a Room: When children slept with 20 people",
+      "teaser": "Indigenous children grew up without individual rooms — in a community cocoon that made them independent, balanced and connected to the world."
+    },
+    "article62.html": {
+      "title": "Silence without a Phone: When doing nothing was sacred",
+      "teaser": "The indigenous peoples of Quebec practiced silence as an art of living. What we call boredom, they called contemplation — a source of wisdom."
+    },
+    "article63.html": {
+      "title": "The 11 Nations of Quebec: a journey through their roots and their territories",
+      "teaser": "Complete portrait of the 11 First Nations of Quebec: origins, territories, populations and meaning of their names."
+    },
+    "article64.html": {
+      "title": "Modern languages, endangered languages: the linguistic panorama of Quebec First Nations",
+      "teaser": "11 nations, 11 languages, millennia of oral wisdom — and a race against time to save them from oblivion."
+    },
+    "article65.html": {
+      "title": "Crafts in the heart of the territory: jewelry, sculptures and textiles from the First Nations",
+      "teaser": "Crafts in the heart of the territory: jewelry, sculptures and textiles from the First Nations"
+    },
+    "article66.html": {
+      "title": "From bannock to smoked salmon: Quebec's indigenous cuisine between tradition and modernity",
+      "teaser": "From bannock to smoked salmon: Quebec's indigenous cuisine between tradition and modernity"
+    },
+    "article67.html": {
+      "title": "Rituals that bring people together: powwow, sweat lodge and living traditions",
+      "teaser": "Rituals that bring people together: powwow, sweat lodge and living traditions"
+    },
+    "article68.html": {
+      "title": "Faces of a resistance: portraits of significant figures from the First Nations of Quebec",
+      "teaser": "Faces of a resistance: portraits of significant figures from the First Nations of Quebec"
+    },
+    "article69.html": {
+      "title": "Responsible indigenous tourism: discovering communities while respecting them",
+      "teaser": "Responsible indigenous tourism: discovering communities while respecting them"
+    },
+    "article70.html": {
+      "title": "Challenges and perspectives: contemporary issues facing the First Nations of Quebec",
+      "teaser": "Challenges and perspectives: contemporary issues facing the First Nations of Quebec"
+    },
+    "article71.html": {
+      "title": "The Sacred Ceremonies of the Indigenous Peoples of Quebec — Rituals, Transmission and Renewal",
+      "teaser": "Powwow, drumming, sweat lodge, vision quest, rites of passage... Immerse yourself in the heart of the spiritual life of the 11 indigenous nations of Quebec."
+    },
+    "article72.html": {
+      "title": "Traditional Indigenous Food of Quebec — Territory, Memory and Renaissance",
+      "teaser": "Hunting, fishing, gathering, sagamitis, bannock... Immerse yourself in the traditional food systems of the 11 indigenous nations of Quebec and their contemporary gastronomic renaissance."
+    }
+  },
+  "es": {
+    "famille-premieres-nations.html": {
+      "title": "Familia y Primeras Naciones",
+      "teaser": "Estructuras familiares, respeto a los mayores y transmisión de conocimientos."
+    },
+    "01-spiritualite-nature-premieres-nations.html": {
+      "title": "Espiritualidad y naturaleza",
+      "teaser": "La conexión sagrada entre las Primeras Naciones y la naturaleza, la espiritualidad profundamente arraigada en el medio ambiente."
+    },
+    "02-peuples-plaines-bison.html": {
+      "title": "Los pueblos de las llanuras y el bisonte",
+      "teaser": "La vida nómada de los pueblos de las llanuras y su relación sagrada con el bisonte."
+    },
+    "03-cote-ouest-potlatch-totems.html": {
+      "title": "La costa oeste: potlatch y tótems",
+      "teaser": "Las tradiciones potlatch y el fascinante arte tótem de la costa del Pacífico."
+    },
+    "04-iroquois-democratie.html": {
+      "title": "Democracia iroquesa",
+      "teaser": "El sistema de gobierno de la Confederación Iroquesa y su influencia."
+    },
+    "05-medecine-traditionnelle.html": {
+      "title": "Medicina Tradicional",
+      "teaser": "Prácticas curativas y medicina tradicional de las Primeras Naciones."
+    },
+    "06-art-artisanat.html": {
+      "title": "Arte y artesanía",
+      "teaser": "Expresiones artísticas: cestería, alfarería, orfebrería y marroquinería."
+    },
+    "07-femmes-pouvoir.html": {
+      "title": "Mujeres y poder",
+      "teaser": "El papel de la mujer en las sociedades tradicionales y su influencia."
+    },
+    "08-traite-diplomatie.html": {
+      "title": "Tratados y diplomacia",
+      "teaser": "Se firmaron tratados y negociaciones diplomáticas con los colonos."
+    },
+    "09-resistance-survivance.html": {
+      "title": "Resistencia y supervivencia",
+      "teaser": "Resiliencia cultural frente a los desafíos históricos y contemporáneos."
+    },
+    "10-astronomie-navigation.html": {
+      "title": "Astronomía y Navegación",
+      "teaser": "Conocimiento celeste, observatorios naturales y navegación por las estrellas."
+    },
+    "11-qui-sont-les-metis.html": {
+      "title": "¿Quiénes son los métis?",
+      "teaser": "Un pueblo distinto en el corazón de Canadá."
+    },
+    "12-langues-autochtones.html": {
+      "title": "Lenguas Indígenas",
+      "teaser": "Tesoros lingüísticos amenazados de desaparición."
+    },
+    "13-mythes-et-legendes.html": {
+      "title": "Los narradores y sus historias",
+      "teaser": "Mitos, leyendas y el embaucador."
+    },
+    "14-cuisine-traditionnelle.html": {
+      "title": "Cocina Indígena Tradicional",
+      "teaser": "Sabores territoriales y tradiciones culinarias."
+    },
+    "15-lacrosse-jeu-createurs.html": {
+      "title": "Lacrosse: el juego de los creadores",
+      "teaser": "De ritual sagrado a deporte nacional de verano."
+    },
+    "16-sites-sacres.html": {
+      "title": "Sitios sagrados y lugares de poder",
+      "teaser": "Donde la tierra y el cielo se encuentran."
+    },
+    "17-premieres-nations-aujourdhui.html": {
+      "title": "Las Primeras Naciones Hoy",
+      "teaser": "Entre tradición y modernidad."
+    },
+    "18-rites-de-passage.html": {
+      "title": "Ritos de iniciación",
+      "teaser": "Nacer, crecer y cruzar los umbrales de la vida."
+    },
+    "19-musique-chants-traditionnels.html": {
+      "title": "Música y canciones tradicionales",
+      "teaser": "La voz de los ancestros todavía resuena."
+    },
+    "20-art-rupestre.html": {
+      "title": "Arte Rupestre",
+      "teaser": "Mensajes grabados en piedra por los antepasados."
+    },
+    "21-clans-systemes-parente.html": {
+      "title": "Clanes y sistemas de parentesco",
+      "teaser": "La organización social de las Primeras Naciones."
+    },
+    "22-vannerie-paniers.html": {
+      "title": "Cestería y Cestas Tradicionales",
+      "teaser": "Un arte milenario tejido con paciencia y saber hacer."
+    },
+    "23-environnement-ecologie.html": {
+      "title": "Las Primeras Naciones y el Medio Ambiente",
+      "teaser": "Guardianes de la tierra desde hace milenios."
+    },
+    "24-chamanes-medecine.html": {
+      "title": "Chamanes y Medicina Hombres/Mujeres",
+      "teaser": "Curanderos entre el mundo visible y el invisible."
+    },
+    "25-danses-traditionnelles.html": {
+      "title": "Danzas Tradicionales",
+      "teaser": "El movimiento como oración y celebración."
+    },
+    "26-tatouages-peinture.html": {
+      "title": "Tatuajes y pintura corporal",
+      "teaser": "Identidad, estatus y espiritualidad en la piel."
+    },
+    "27-education-autochtone.html": {
+      "title": "La educación indígena ayer y hoy",
+      "teaser": "Transmisión de conocimientos y desafíos contemporáneos."
+    },
+    "28-femmes-autochtones.html": {
+      "title": "Mujeres Indígenas",
+      "teaser": "Matriarcados, poder ancestral y voces contemporáneas."
+    },
+    "29-guerre-militaire.html": {
+      "title": "Las Primeras Naciones y la Guerra",
+      "teaser": "Guerreros, estrategas y soldados canadienses."
+    },
+    "30-wampum-ceintures.html": {
+      "title": "The Wampum - Cinturones de protocolo",
+      "teaser": "Palabras tejidas en cuentas de concha."
+    },
+    "31-clans-parente-premieres-nations.html": {
+      "title": "Clanes y sistemas de parentesco",
+      "teaser": "Estructuras sociales ancestrales de los pueblos del Nordeste."
+    },
+    "32-epidemies-avant-cartier.html": {
+      "title": "Epidemias antes de Cartier",
+      "teaser": "Cuando Quebec ya era un paisaje de fantasmas antes de la llegada de los europeos."
+    },
+    "33-noms-lieux-quebec-decodes.html": {
+      "title": "Nombres de lugares de Quebec decodificados",
+      "teaser": "Lo que los nombres indígenas revelan sobre nuestro territorio."
+    },
+    "34-devoirs-grands-parents.html": {
+      "title": "Deberes de los abuelos",
+      "teaser": "Superhéroes de las Primeras Naciones."
+    },
+    "35-navigateurs-foret.html": {
+      "title": "Los navegantes del bosque",
+      "teaser": "Viajar sin mapa, sin brújula, sin GPS."
+    },
+    "36-route-commerces-sans-monnaie.html": {
+      "title": "Comercio sin dinero",
+      "teaser": "Las rutas comerciales que atravesaron el continente antes que el euro y el dólar."
+    },
+    "37-esclaves-autochtones.html": {
+      "title": "esclavos nativos",
+      "teaser": "La cara oculta de las guerras cautivas entre las Primeras Naciones."
+    },
+    "38-enfance-premieres-nations.html": {
+      "title": "La infancia entre las Primeras Naciones",
+      "teaser": "Una educación sin bancas ni mochilas, donde la comunidad enseña."
+    },
+    "39-routes-commerciales.html": {
+      "title": "Rutas comerciales indígenas",
+      "teaser": "El comercio sin moneda que unía el Atlántico con las Montañas Rocosas."
+    },
+    "40-feu-sans-allumettes.html": {
+      "title": "Fuego sin cerillas",
+      "teaser": "El arte ancestral del fuego por fricción: paciencia, técnica y sabiduría."
+    },
+    "41-reves-messagers-invisibles.html": {
+      "title": "Sueños: Mensajeros de lo invisible",
+      "teaser": "Cuando los sueños son instrucciones y el sueño un viaje sagrado."
+    },
+    "42-prophéties-grande-paix.html": {
+      "title": "Las profecías de la gran paz",
+      "teaser": "Cómo una visión creó la primera democracia de América del Norte."
+    },
+    "43-torture-iroquois-mythes-realites.html": {
+      "title": "Tortura entre los iroqueses",
+      "teaser": "Mitos coloniales y realidades históricas de una práctica ritualizada."
+    },
+    "44-trois-rivieres-capitale-poesie.html": {
+      "title": "Trois-Rivières: la ciudad que salvó a Canadá",
+      "teaser": "¿Sabes por qué esta ciudad cambió el destino de Quebec?"
+    },
+    "45-amirindianisation-francais.html": {
+      "title": "La amerindianización de los franceses",
+      "teaser": "¿Sabía que los franceses se convirtieron en \"nativos americanos\" antes de seguir siendo franceses en Quebec?"
+    },
+    "46-truchements-precurseurs.html": {
+      "title": "Los caminos olvidados",
+      "teaser": "¿Conoce a estos precursores que fundaron Canadá antes que los Coureurs des Bois?"
+    },
+    "47-radisson-groseilliers-alliance.html": {
+      "title": "Los salvadores ojibwe de Canadá",
+      "teaser": "¿Qué nación indígena salvó al Canadá francés de la bancarrota en 1660?"
+    },
+    "48-appel-des-bois-liberte.html": {
+      "title": "La llamada del bosque",
+      "teaser": "¿Por qué el 80% de los jóvenes canadienses prefería vivir con los nativos americanos en 1685?"
+    },
+    "49-grande-paix-montreal-1701.html": {
+      "title": "La Gran Paz de Montreal 1701",
+      "teaser": "¿Sabes qué 'sacrificio' fundó la mayor alianza de paz de la historia?"
+    },
+    "50-heritage-vivant-alliances.html": {
+      "title": "Patrimonio vivo y alianzas",
+      "teaser": "Texto complementario en la continuidad de los relatos históricos de la serie."
+    },
+    "51-le-vent-le-ciel-et-le-souffle.html": {
+      "title": "El viento, el cielo y el aliento.",
+      "teaser": "Nubes como calendario, viento antes de la tormenta: el cielo se vive como el resto del territorio, con las otras hojas de espiritualidad y lugares sagrados del catálogo."
+    },
+    "article52.html": {
+      "title": "Ropa indígena: pieles, fibras y conocimientos milenarios",
+      "teaser": "Antes de los colonizadores, los pueblos indígenas de Quebec dominaban un antiguo arte de la confección: el curtido, el bordado de puercoespín, las pieles y los mocasines. El conocimiento se transmite de madre a hija durante milenios."
+    },
+    "article53.html": {
+      "title": "Vivienda tradicional: Wigwam, Longhouse y Tipi antes de la colonización",
+      "teaser": "Wigwam algonquino, casa comunal Wendat, iglú inuit, tipi cree: las viviendas de las Primeras Naciones de Quebec fueron obras maestras de adaptación al territorio, mucho antes de la llegada de los europeos."
+    },
+    "article54.html": {
+      "title": "Senderos y Conocimiento del Territorio — Navegando sin Mapas",
+      "teaser": "Antes de los colonizadores, los pueblos indígenas de Quebec conocían su territorio con una precisión asombrosa: leían las estrellas, los vientos, los árboles, los ríos. Una ciencia del territorio transmitida oralmente desde hace milenios."
+    },
+    "article55.html": {
+      "title": "La canoa: alma de los ríos y obra maestra del ingenio indígena",
+      "teaser": "La canoa de corteza de abedul de las Primeras Naciones de Quebec: una obra maestra de ingenio, construida sin metal ni sierra, capaz de navegar lagos y rápidos. Una tecnología milenaria que cambió la historia del continente."
+    },
+    "article56.html": {
+      "title": "Medicina tradicional indígena: plantas, curanderos y conocimientos milenarios",
+      "teaser": "Antes de los colonizadores, los pueblos indígenas de Quebec tenían a su disposición una farmacopea vegetal de asombrosa riqueza: té de labrador, cedro, milenrama y jengibre silvestre. Una medicina holística transmitida por vía oral durante milenios."
+    },
+    "article57.html": {
+      "title": "Sexualidad sin culpa: Cuando el cuerpo no estaba sucio",
+      "teaser": "Antes de la llegada de los misioneros, los pueblos indígenas tenían una visión sana, equilibrada y libre de tabúes de la sexualidad y el cuerpo humano."
+    },
+    "article58.html": {
+      "title": "Drogas sin adicción: cuando las sustancias se curan",
+      "teaser": "Tabaco sagrado, peyote, cáñamo: cómo los pueblos indígenas utilizaban sustancias psicoactivas como medicinas, sin crear dependencia."
+    },
+    "article59.html": {
+      "title": "Muerte sin miedo: cuando morir era parte de la vida",
+      "teaser": "Cómo los pueblos indígenas de Quebec domesticaron la muerte, eligieron a veces su momento y la integraron de forma natural en el ciclo de la vida."
+    },
+    "article60.html": {
+      "title": "Comida sin Supermercado: Cuando comer tomaba 6 horas al día",
+      "teaser": "La gastronomía indígena de Quebec: caza, recolección, pesca y preparación como actos espirituales, lo opuesto a nuestra comida rápida industrial."
+    },
+    "article61.html": {
+      "title": "Infancia sin habitación: Cuando los niños dormían con 20 personas",
+      "teaser": "Los niños indígenas crecieron sin habitaciones individuales, en un capullo comunitario que los hizo independientes, equilibrados y conectados con el mundo."
+    },
+    "article62.html": {
+      "title": "Silencio sin teléfono: cuando no hacer nada era sagrado",
+      "teaser": "Los pueblos indígenas de Quebec practicaban el silencio como arte de vivir. Lo que llamamos aburrimiento, ellos lo llamaron contemplación, una fuente de sabiduría."
+    },
+    "article63.html": {
+      "title": "Las 11 Naciones de Quebec: un viaje por sus raíces y sus territorios",
+      "teaser": "Retrato completo de las 11 Primeras Naciones de Quebec: orígenes, territorios, poblaciones y significado de sus nombres."
+    },
+    "article64.html": {
+      "title": "Lenguas modernas, lenguas en peligro de extinción: el panorama lingüístico de las Primeras Naciones de Quebec",
+      "teaser": "11 naciones, 11 idiomas, milenios de sabiduría oral y una carrera contra el tiempo para salvarlos del olvido."
+    },
+    "article65.html": {
+      "title": "Artesanía en el corazón del territorio: joyas, esculturas y textiles de las Primeras Naciones",
+      "teaser": "Artesanía en el corazón del territorio: joyas, esculturas y textiles de las Primeras Naciones"
+    },
+    "article66.html": {
+      "title": "Del bannock al salmón ahumado: la cocina indígena de Quebec entre tradición y modernidad",
+      "teaser": "Del bannock al salmón ahumado: la cocina indígena de Quebec entre tradición y modernidad"
+    },
+    "article67.html": {
+      "title": "Rituales que unen a las personas: powwow, sauna y tradiciones vivas",
+      "teaser": "Rituales que unen a las personas: powwow, sauna y tradiciones vivas"
+    },
+    "article68.html": {
+      "title": "Rostros de una resistencia: retratos de personajes significativos de las Primeras Naciones de Quebec",
+      "teaser": "Rostros de una resistencia: retratos de personajes significativos de las Primeras Naciones de Quebec"
+    },
+    "article69.html": {
+      "title": "Turismo indígena responsable: descubrir comunidades respetándolas",
+      "teaser": "Turismo indígena responsable: descubrir comunidades respetándolas"
+    },
+    "article70.html": {
+      "title": "Desafíos y perspectivas: cuestiones contemporáneas que enfrentan las Primeras Naciones de Quebec",
+      "teaser": "Desafíos y perspectivas: cuestiones contemporáneas que enfrentan las Primeras Naciones de Quebec"
+    },
+    "article71.html": {
+      "title": "Las ceremonias sagradas de los pueblos indígenas de Quebec: rituales, transmisión y renovación",
+      "teaser": "Powwow, tambores, cabaña de sudor, búsqueda de visiones, ritos de iniciación... Sumérgete en el corazón de la vida espiritual de las 11 naciones indígenas de Quebec."
+    },
+    "article72.html": {
+      "title": "Comida tradicional indígena de Quebec: territorio, memoria y renacimiento",
+      "teaser": "Caza, pesca, recolección, sagamitis, bannock... Sumérgete en los sistemas alimentarios tradicionales de las 11 naciones indígenas de Quebec y su renacimiento gastronómico contemporáneo."
+    }
+  }
+}
