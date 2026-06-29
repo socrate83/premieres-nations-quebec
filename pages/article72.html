@@ -15,6 +15,10 @@
         .img-float-right { float: right; margin: 0 0 20px 25px; width: 270px; border-radius: 10px; box-shadow: 0 4px 12px rgba(0,0,0,0.15); }
         .img-center { display: block; margin: 30px auto; width: 100%; max-width: 580px; border-radius: 12px; box-shadow: 0 4px 15px rgba(0,0,0,0.2); }
         .img-caption { text-align: center; font-size: 0.85em; color: #888; font-style: italic; margin-top: 6px; margin-bottom: 20px; }
+        .gallery { display: grid; grid-template-columns: repeat(auto-fit, minmax(180px, 1fr)); gap: 1rem; margin: 35px 0; }
+        .gallery-item { border-radius: 10px; overflow: hidden; border: 1px solid rgba(212,165,116,0.45); }
+        .gallery-item img { width: 100%; height: 160px; object-fit: cover; display: block; }
+        .gallery-item p { padding: 0.5rem; font-size: 0.78rem; color: #666; text-align: center; font-style: italic; margin: 0; }
         .clearfix::after { content: ""; display: table; clear: both; }
         .stat-box { text-align: center; background: linear-gradient(135deg, #2c5530, #1a3a1f); color: white; padding: 30px; border-radius: 15px; margin: 35px 0; box-shadow: 0 8px 20px rgba(0,0,0,0.15); }
         .stat-box span { font-size: 2.2em; font-weight: bold; display: block; color: #d4a574; margin-bottom: 8px; }
@@ -28,11 +32,12 @@
         .food-box h3 { color: #2c5530; margin-top: 0; font-size: 1.2em; }
     </style>
   <link rel="stylesheet" href="style.css">
-  <link rel="stylesheet" href="../lang-switcher.css">
-    <script src="../article-i18n.js" defer></script>
-  <script src="../lang-switcher.js" defer></script>
+  <link rel="stylesheet" href="lang-switcher.css">
+    <script src="article-i18n.js" defer></script>
+    <script src="article-share.js" defer></script>
+<script src="lang-switcher.js" defer></script>
 </head>
-<body>
+<body data-pn-article-slug="article72">
 <style id="pn-nav-accueil-style">
 .pn-nav-accueil{position:sticky;top:0;z-index:500;display:flex;flex-wrap:wrap;gap:0.5rem 1rem;align-items:center;justify-content:center;padding:0.65rem 1rem;background:#141414;border-bottom:2px solid #c8920a;font-family:'Lato',Georgia,system-ui,sans-serif}
 .pn-nav-accueil a{color:#e8b020;text-decoration:none;font-weight:700;font-size:0.82rem;padding:0.45rem 1rem;border-radius:50px;border:1px solid rgba(232,176,32,0.4);transition:background .2s,color .2s}
@@ -48,6 +53,8 @@
   <a href="Articles.html" data-i18n="nav.allArticles">📚 Tous les articles</a>
 </nav>
 
+
+<div id="pn-article-root" data-pn-article-slug="article72">
 <article class="article-ecoute">
 <h1>#72 — L'Alimentation Traditionnelle Autochtone du Québec<br><span style="font-size:0.7em;color:#d4a574;">Territoire, Mémoire et Renaissance</span></h1>
 
@@ -66,6 +73,9 @@
     <p>Plus de <strong>250 espèces de plantes et d'animaux sauvages</strong> composaient la mosaïque alimentaire des Premières Nations du Canada. Chaque nation possédait ses recettes, ses rituels de préparation, ses protocoles de partage et ses savoirs de conservation — transmis oralement de génération en génération.</p>
     <p>Aujourd'hui, ce patrimoine connaît une renaissance extraordinaire — dans les communautés, dans les restaurants gastronomiques et dans les cuisines familiales qui redécouvrent des saveurs oubliées.</p>
 </div>
+
+<img src="https://media.base44.com/images/public/69f23c5b09417d29099136be/3cd00d9da_generated_image.png" alt="Plats traditionnels autochtones du Québec — chasse, pêche et cueillette" class="img-center">
+<p class="img-caption">La mosaïque alimentaire des onze nations — un patrimoine vivant transmis de génération en génération.</p>
 
 <h2>1. Les Fondements — Chasser, Pêcher, Cueillir</h2>
 
@@ -108,10 +118,15 @@
     <li>Sirop d'érable — les Abénaquis et Algonquins maîtrisaient l'érablière bien avant les colons français</li>
 </ul>
 
+<div class="clearfix">
+    <img src="https://media.base44.com/images/public/69f23c5b09417d29099136be/8f71d4e8e_generated_image.png" alt="Cueillette de plantes sauvages en forêt boréale québécoise" class="img-float-right">
+    <p>Au printemps, les <strong>crosses de fougère</strong> marquent le retour des verdures ; en été, bleuets et framboises remplissent paniers et séchoirs ; à l'automne, les érablières s'animent. Chaque saison ouvre un calendrier de récolte que les Aînés enseignent encore aux jeunes — non pas comme un hobby, mais comme une <strong>carte du territoire vivant</strong>.</p>
+</div>
+
 <h2>3. La Sagamité et la Banique — Les Plats Emblématiques</h2>
 
 <div class="clearfix">
-    <img src="https://media.base44.com/images/public/69f23c5b09417d29099136be/860f042d8_generated_image.png" alt="Préparation de la banique autochtone" class="img-float-right">
+    <img src="https://media.base44.com/images/public/69f23c5b09417d29099136be/cfa23dd96_generated_image.png" alt="Communauté huronne-wendat — maïs, courge et haricot, la Triade des Trois-Sœurs" class="img-float-right">
     <p>La <em>sagamité</em> est l'un des plats les plus anciens et les plus répandus. Ce bouillon épais à base de maïs concassé, de viande ou de poisson, enrichi de courges et de haricots, constituait le repas de base des nations agricoles comme les <strong>Hurons-Wendat et les Mohawks</strong>.</p>
     <p>Les Wendat cultivaient la <strong>Trois-Sœurs</strong> — la triade sacrée du maïs, de la courge et du haricot — avec une sophistication agronomique remarquable. Ces trois plantes se protégeaient mutuellement : le maïs tuteurait les haricots, qui fixaient l'azote dans le sol, tandis que les larges feuilles des courges limitaient les mauvaises herbes.</p>
 </div>
@@ -122,9 +137,17 @@
 
 <p>La <strong>banique</strong> — pain plat frit à la poêle ou cuit sur des pierres — est souvent présentée comme un aliment "traditionnel" autochtone. En réalité, la banique est un emprunt post-contact à la farine européenne, adopté et complètement approprié par les nations dès le XVIIIe siècle. Elle est aujourd'hui indissociable de la culture culinaire de nombreuses communautés.</p>
 
+<div class="clearfix">
+    <img src="https://media.base44.com/images/public/69f23c5b09417d29099136be/860f042d8_generated_image.png" alt="Préparation de la banique autochtone au feu de camp" class="img-float-right">
+    <p>Cuire la banique au feu de camp, la partager en cercle, l'accompagner de gibier ou de confiture de chicouté — ces gestes simples recréent aujourd'hui le lien entre cuisine familiale et mémoire collective dans de nombreuses communautés.</p>
+</div>
+
 <h2>4. Les Inuit — Une Alimentation du Grand Nord</h2>
 
-<p>Les <strong>Inuit du Nunavik</strong> ont développé le système alimentaire le plus adapté aux conditions extrêmes de la planète. Dans un environnement où les plantes comestibles sont rarissimes, les Inuit ont trouvé leurs vitamines là où personne d'autre n'aurait pensé chercher.</p>
+<div class="clearfix">
+    <img src="https://media.base44.com/images/public/69f23c5b09417d29099136be/41afc600c_generated_image.png" alt="Famille inuit du Nunavik — alimentation et territoire arctique" class="img-float-right">
+    <p>Les <strong>Inuit du Nunavik</strong> ont développé le système alimentaire le plus adapté aux conditions extrêmes de la planète. Dans un environnement où les plantes comestibles sont rarissimes, les Inuit ont trouvé leurs vitamines là où personne d'autre n'aurait pensé chercher.</p>
+</div>
 
 <div class="highlight">
     <strong>Le Muktuk :</strong> La peau et la graisse de baleine boréale constituent une source extraordinaire de vitamines C et D dans un environnement sans agrumes. Les Inuit ne souffraient pas du scorbut — contrairement aux explorateurs européens qui les côtoyaient. Le <em>nipku</em> (viande de caribou séchée à l'air arctique) et le poisson fermenté sont d'autres piliers de l'alimentation inuit — des chef-d'œuvres de génie alimentaire développés sans réfrigération.
@@ -148,6 +171,8 @@
 
 <div class="food-box">
     <h3>🍽️ La gastronomie autochtone contemporaine au Québec</h3>
+    <img src="https://media.base44.com/images/public/69f23c5b09417d29099136be/c243f8dbf_generated_image.png" alt="Village huron-wendat de Wendake — cœur de la renaissance gastronomique" class="img-center">
+    <p class="img-caption">Wendake — où la cuisine wendat rencontre la gastronomie contemporaine.</p>
     <p><strong>Minwashin</strong> (Wendake) — Ce restaurant huron-wendat propose une cuisine fusion qui marie les techniques wendat à la gastronomie française. Gibier, poissons du territoire, plantes sauvages. Une expérience gastronomique unique à 20 minutes de Québec.</p>
     <p><strong>Mankanots</strong> (Wendake) — Cuisine traditionnelle wendat servie dans un cadre authentique, au cœur de la seule nation huronne-wendat à avoir conservé son territoire originel.</p>
     <p><strong>Les marchés autochtones</strong> — À Montréal, des marchés saisonniers proposent sirop d'érable fumé, thé de Labrador, viande de bison, confitures de chicoutés.</p>
@@ -159,11 +184,33 @@
 
 <p>Chez les <strong>Algonquins</strong>, une légende raconte que c'est l'Esprit de l'Érable qui a révélé aux humains le secret du sirop. Un jour de fin d'hiver, une femme remarqua que l'eau coulant d'une entaille dans un érable avait un goût sucré. Elle fit bouillir cette eau et obtint un sirop doré. Depuis, les érablières sont des lieux sacrés — et la première coulée de sève au printemps est célébrée comme un renouveau.</p>
 
-<p>Chez les <strong>Innus</strong>, il existe un protocole strict entourant la première prise de l'année. Les os du premier caribou chassé ne doivent jamais être jetés aux chiens — ils sont déposés avec soin dans une rivière ou suspendus dans un arbre, pour honorer l'esprit de l'animal et s'assurer qu'il accepte de revenir.</p>
+<div class="clearfix">
+    <img src="https://media.base44.com/images/public/69f23c5b09417d29099136be/3cd00d9da_generated_image.png" alt="Récolte traditionnelle de la sève d'érable au Québec" class="img-float-right">
+    <p>Chez les <strong>Innus</strong>, il existe un protocole strict entourant la première prise de l'année. Les os du premier caribou chassé ne doivent jamais être jetés aux chiens — ils sont déposés avec soin dans une rivière ou suspendus dans un arbre, pour honorer l'esprit de l'animal et s'assurer qu'il accepte de revenir.</p>
+</div>
 
 <blockquote class="quote">
     « L'animal qui se donne à toi n'est pas vaincu. Il accepte de te nourrir. Ta responsabilité, c'est de ne jamais gaspiller ce don. » — Transmission orale innue
 </blockquote>
+
+<div class="gallery">
+    <div class="gallery-item">
+        <img src="https://media.base44.com/images/public/69f23c5b09417d29099136be/67d41d587_generated_image.png" alt="Festin traditionnel autochtone" />
+        <p>Festin communautaire</p>
+    </div>
+    <div class="gallery-item">
+        <img src="https://media.base44.com/images/public/69f23c5b09417d29099136be/95344eab7_generated_image.png" alt="Pêche au filet sur une rivière" />
+        <p>Pêche traditionnelle</p>
+    </div>
+    <div class="gallery-item">
+        <img src="https://media.base44.com/images/public/69f23c5b09417d29099136be/860f042d8_generated_image.png" alt="Banique autochtone" />
+        <p>Banique au feu</p>
+    </div>
+    <div class="gallery-item">
+        <img src="https://media.base44.com/images/public/69f23c5b09417d29099136be/f4e772403_generated_image.png" alt="Cuisine autochtone contemporaine" />
+        <p>Renaissance culinaire</p>
+    </div>
+</div>
 
 <div class="cta">
     <strong>🌿 Envie d'en savoir plus ?</strong><br>
@@ -179,14 +226,13 @@
 <div class="nav-art">
     <a href="article71.html">← #71 Cérémonies Sacrées</a>
     <a href="Home.html">🏠 Accueil</a>
-    <a href="#" style="background:#ccc;cursor:not-allowed;">#73 À venir →</a>
+    <a href="73-l-ours-gardien-des-mondes.html">#73 L'Ours →</a>
 </div>
 
 <div class="footer-sources">
     <strong>Sources :</strong> INSPQ — L'alimentation des Premières Nations et des Inuit au Québec (2016) ; CCNSE — Préparation et conservation sécuritaires des aliments autochtones (2009) ; Université Laval FSI — Vers la souveraineté alimentaire des communautés autochtones ; Tourisme Autochtone Québec — tourismeautochtone.com ; Atlas des peuples autochtones du Canada.
 </div>
-
-
-  <script src="audio-player.js" defer></script>
+</div>
+<script src="audio-player.js" defer></script>
 </body>
 </html>

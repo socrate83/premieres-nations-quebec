@@ -494,13 +494,19 @@
           "title": "Le Saumon, Frère qui Revient — Symbole sacré des rivières des Premières Nations du Québec",
           "teaser": "Montaison, cérémonies du premier saumon, tabac et réciprocité : le messager des rivières chez les Innu, Mi'kmaq, Malécites et les nations du Québec.",
           "file": "74-le-saumon.html"
+        },
+        {
+          "n": "75",
+          "title": "L'Aigle, Messager des Cieux — Symbole sacré des Premières Nations du Québec",
+          "teaser": "Plumes sacrées, vision et lien entre terre et ciel : le rôle spirituel de l'aigle chez les Anishinabeg, Hurons-Wendat, Innu et les nations du Québec.",
+          "file": "75-l-aigle.html"
         }
       ]
     }
   ],
   "stats": {
-    "articlesNumbered": 74,
+    "articlesNumbered": 75,
     "withFeatured": true,
-    "nextArticle": 75
+    "nextArticle": 76
   }
 }
