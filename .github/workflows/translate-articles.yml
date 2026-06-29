@@ -1,18 +1,17 @@
-# Traduction automatique des articles (EN + ES) par lots, la nuit.
-# Chaque exécution traduit les N prochains articles non encore traduits,
-# écrit locales/articles/{slug}.json, puis commite sur main (ce qui déclenche
-# le déploiement GitHub Pages). Conçu pour finir les 72 articles en ~1 lot/nuit.
+# Traduction EN + ES — automatique sur les serveurs GitHub (ne bloque pas votre PC).
+# Un article par exécution, dans l'ordre numérique (#15, puis #16, #17…).
+# Après commit, le déploiement Pages met le site à jour.
 name: Traduire les articles (nocturne)
 
 on:
   workflow_dispatch:
     inputs:
       count:
-        description: "Nombre d'articles à traduire pour cette exécution"
+        description: "Nombre d'articles pour cette exécution (défaut 5, ordre #15, #16…)"
         required: false
-        default: '10'
+        default: '5'
   schedule:
-    # 07:00 UTC chaque jour (~03:00 au Québec, l'été). « La nuit ».
+    # Chaque jour ~03:00 (Québec, été) — 1 article non traduit, le plus petit numéro d'abord.
     - cron: '0 7 * * *'
 
 permissions:
@@ -25,7 +24,7 @@ concurrency:
 jobs:
   translate:
     runs-on: ubuntu-latest
-    timeout-minutes: 180
+    timeout-minutes: 45
     steps:
       - uses: actions/checkout@v4
 
@@ -33,29 +32,31 @@ jobs:
         with:
           node-version: '20'
 
-      - name: Déterminer le prochain lot d'articles à traduire
+      - name: Prochain numéro à traduire (#15, #16…)
         id: batch
         run: |
-          COUNT="${{ github.event.inputs.count || '10' }}"
+          COUNT="${{ github.event.inputs.count || '5' }}"
           SLUGS="$(node scripts/next-untranslated.mjs "$COUNT")"
           echo "slugs=$SLUGS" >> "$GITHUB_OUTPUT"
           if [ -z "$SLUGS" ]; then
-            echo "Tous les articles sont déjà traduits — rien à faire."
+            echo "Tous les articles numérotés sont traduits."
           else
-            echo "Lot à traduire : $SLUGS"
+            echo "Traduction (ordre numérique) : $SLUGS"
           fi
 
-      - name: Traduire le lot (EN + ES)
+      - name: Traduire EN + ES
         if: steps.batch.outputs.slugs != ''
         run: node scripts/build-article-translations.mjs --only "${{ steps.batch.outputs.slugs }}"
 
-      - name: Régénérer les titres de cartes + vidéos + podcasts (EN + ES)
+      - name: Mettre à jour cartes / vidéos / podcasts (EN + ES)
+        if: steps.batch.outputs.slugs != ''
         run: |
           node scripts/build-blog-cards-i18n.mjs
           node scripts/build-videos-i18n.mjs
           node scripts/build-podcasts-i18n.mjs
 
-      - name: Commiter et publier les traductions
+      - name: Publier sur main (déclenche GitHub Pages)
+        if: steps.batch.outputs.slugs != ''
         run: |
           git config user.name "github-actions[bot]"
           git config user.email "github-actions[bot]@users.noreply.github.com"
@@ -63,6 +64,6 @@ jobs:
           if git diff --cached --quiet; then
             echo "Aucun changement à commiter."
           else
-            git commit -m "Traduction auto (nocturne) : ${{ steps.batch.outputs.slugs || 'cartes' }}"
+            git commit -m "Traduction auto : ${{ steps.batch.outputs.slugs }}"
             git push
           fi

@@ -1,0 +1,11 @@
+PREMIÈRES NATIONS DU QUÉBEC — dossier TRAVAIL
+=============================================
+
+  brouillons/         textes bruts, idées, memoire_projet_rows.json
+  a-retravailler/     #73 Ours, FemmesAutochtones2
+  prets-a-publier/    ENVOYER-SUR-GITHUB.md
+  publies/            archive après mise en ligne
+
+Site : https://socrate83.github.io/premieres-nations-quebec/
+
+(Un seul endroit pour vos textes — plus de doublons à la racine.)

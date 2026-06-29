@@ -70,10 +70,10 @@ Chaque article charge son corps traduit depuis `locales/articles/{slug}.json`
   pour réactiver.
   ⚠️ `build-article-translations.mjs` n'écrit ce fichier que SANS `--only` ; en mode
   lot, utiliser le script dédié.
-- **Automatisé** : le workflow `Traduire les articles (nocturne)`
-  (`.github/workflows/translate-articles.yml`) traduit chaque nuit le prochain lot et
-  **commite sur `main`** (déclenche le déploiement). Déclenchable à la main via
-  « Run workflow » (entrée `count`).
+- **Automatisé (GitHub, arrière-plan — ne pas lancer sur le PC de Jean-Claude)** :
+  workflow `Traduire les articles (nocturne)` — **1 article par nuit**, ordre numérique
+  (#15, puis #16, #17… via `scripts/next-untranslated.mjs`). Commite sur `main` → Pages.
+  Ne jamais exécuter `build-article-translations.mjs` en local sauf demande explicite.
 
 ### Audit & pages hors catalogue
 - Audit de couverture i18n de tout le site : `node scripts/audit-site-i18n.mjs`
