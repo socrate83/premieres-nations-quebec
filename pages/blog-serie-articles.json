@@ -482,13 +482,19 @@
           "title": "L'Alimentation Traditionnelle Autochtone du Québec — Territoire, Mémoire et Renaissance",
           "teaser": "Chasse, pêche, cueillette, sagamité, banique... Plongez dans les systèmes alimentaires traditionnels des 11 nations autochtones du Québec et leur renaissance gastronomique contemporaine.",
           "file": "article72.html"
+        },
+        {
+          "n": "73",
+          "title": "L'Ours, Gardien des Mondes — Symbole sacré des Premières Nations du Québec",
+          "teaser": "Cheveux sacrés, tabac, rêves et réconciliation : le rôle spirituel de l'ours chez les Innu, Anishinabeg, Atikamekw et les nations du Québec.",
+          "file": "73-l-ours-gardien-des-mondes.html"
         }
       ]
     }
   ],
   "stats": {
-    "articlesNumbered": 72,
+    "articlesNumbered": 73,
     "withFeatured": true,
-    "nextArticle": 73
+    "nextArticle": 74
   }
 }
