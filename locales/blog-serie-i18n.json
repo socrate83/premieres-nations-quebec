@@ -142,7 +142,7 @@
     },
     "35-navigateurs-foret.html": {
       "title": "The Forest Navigators",
-      "teaser": "Traveling without a map, without a compass, without GPS."
+      "teaser": "Traveling without a map, without a compass, without a GPS."
     },
     "36-route-commerces-sans-monnaie.html": {
       "title": "Commerce without Money",
@@ -213,7 +213,7 @@
       "teaser": "Before the colonizers, the indigenous peoples of Quebec mastered an ancient art of clothing: tanning, porcupine embroidery, furs, moccasins. Knowledge passed down from mother to daughter for millennia."
     },
     "article53.html": {
-      "title": "Traditional Housing — Wigwam, Longhouse and Tipi before Colonization",
+      "title": "Traditional Housing — Wigwam, Longhouse and Teepee before Colonization",
       "teaser": "Algonquin wigwam, Wendat longhouse, Inuit igloo, Cree teepee — the dwellings of the First Nations of Quebec were masterpieces of adaptation to the territory, long before the arrival of Europeans."
     },
     "article54.html": {
@@ -229,7 +229,7 @@
       "teaser": "Before the colonizers, the indigenous peoples of Quebec had a plant pharmacopoeia of astonishing richness at their disposal — Labrador tea, cedar, yarrow, wild ginger. A holistic medicine passed down orally for millennia."
     },
     "article57.html": {
-      "title": "Sexuality without Guilt: When the body was not dirty",
+      "title": "Guilt-Free Sexuality: When the Body Wasn't Dirty",
       "teaser": "Before the arrival of missionaries, indigenous peoples had a healthy, balanced and taboo-free vision of sexuality and the human body."
     },
     "article58.html": {
@@ -293,12 +293,12 @@
       "teaser": "Hunting, fishing, gathering, sagamitis, bannock... Immerse yourself in the traditional food systems of the 11 indigenous nations of Quebec and their contemporary gastronomic renaissance."
     },
     "73-l-ours-gardien-des-mondes.html": {
-      "title": "The Bear, Guardian of Worlds — Sacred Symbol of the First Nations of Quebec",
+      "title": "The Bear, Guardian of the Worlds — Sacred symbol of the First Nations of Quebec",
       "teaser": "Sacred hair, tobacco, dreams and reconciliation: the spiritual role of the bear among the Innu, Anishinabeg, Atikamekw and the nations of Quebec."
     },
     "74-le-saumon.html": {
-      "title": "The Salmon, Brother Who Returns — Sacred Symbol of the Rivers of the First Nations of Quebec",
-      "teaser": "Upriver run, first salmon ceremonies, tobacco and reciprocity: the messenger of the rivers among the Innu, Mi'kmaq, Maliseet and the nations of Quebec."
+      "title": "Salmon, Returning Brother — Sacred symbol of the rivers of the First Nations of Quebec",
+      "teaser": "Rising, first salmon ceremonies, tobacco and reciprocity: the messenger of the rivers among the Innu, Mi'kmaq, Maliseet and the nations of Quebec."
     }
   },
   "es": {
@@ -515,7 +515,7 @@
       "teaser": "Antes de los colonizadores, los pueblos indígenas de Quebec dominaban un antiguo arte de la confección: el curtido, el bordado de puercoespín, las pieles y los mocasines. El conocimiento se transmite de madre a hija durante milenios."
     },
     "article53.html": {
-      "title": "Vivienda tradicional: Wigwam, Longhouse y Tipi antes de la colonización",
+      "title": "Vivienda tradicional: tienda india, casa comunal y tipi antes de la colonización",
       "teaser": "Wigwam algonquino, casa comunal Wendat, iglú inuit, tipi cree: las viviendas de las Primeras Naciones de Quebec fueron obras maestras de adaptación al territorio, mucho antes de la llegada de los europeos."
     },
     "article54.html": {
@@ -531,7 +531,7 @@
       "teaser": "Antes de los colonizadores, los pueblos indígenas de Quebec tenían a su disposición una farmacopea vegetal de asombrosa riqueza: té de labrador, cedro, milenrama y jengibre silvestre. Una medicina holística transmitida por vía oral durante milenios."
     },
     "article57.html": {
-      "title": "Sexualidad sin culpa: Cuando el cuerpo no estaba sucio",
+      "title": "Sexualidad libre de culpa: cuando el cuerpo no estaba sucio",
       "teaser": "Antes de la llegada de los misioneros, los pueblos indígenas tenían una visión sana, equilibrada y libre de tabúes de la sexualidad y el cuerpo humano."
     },
     "article58.html": {
@@ -551,7 +551,7 @@
       "teaser": "Los niños indígenas crecieron sin habitaciones individuales, en un capullo comunitario que los hizo independientes, equilibrados y conectados con el mundo."
     },
     "article62.html": {
-      "title": "Silencio sin teléfono: cuando no hacer nada era sagrado",
+      "title": "Silencio sin teléfono: Cuando no hacer nada era sagrado",
       "teaser": "Los pueblos indígenas de Quebec practicaban el silencio como arte de vivir. Lo que llamamos aburrimiento, ellos lo llamaron contemplación, una fuente de sabiduría."
     },
     "article63.html": {
@@ -596,11 +596,11 @@
     },
     "73-l-ours-gardien-des-mondes.html": {
       "title": "El Oso, Guardián de los Mundos — Símbolo sagrado de las Primeras Naciones de Quebec",
-      "teaser": "Pelos sagrados, tabaco, sueños y reconciliación: el papel espiritual del oso entre los Innu, Anishinabeg, Atikamekw y las naciones de Quebec."
+      "teaser": "Cabello sagrado, tabaco, sueños y reconciliación: el papel espiritual del oso entre los Innu, Anishinabeg, Atikamekw y las naciones de Quebec."
     },
     "74-le-saumon.html": {
-      "title": "El Salmón, Hermano que Regresa — Símbolo sagrado de los ríos de las Primeras Naciones de Quebec",
-      "teaser": "Desove, ceremonias del primer salmón, tabaco y reciprocidad: el mensajero de los ríos entre los Innu, Mi'kmaq, Maliseet y las naciones de Quebec."
+      "title": "Salmón, hermano que regresa: símbolo sagrado de los ríos de las Primeras Naciones de Quebec",
+      "teaser": "Levantamiento, primeras ceremonias del salmón, tabaco y reciprocidad: el mensajero de los ríos entre los Innu, Mi'kmaq, Maliseet y las naciones de Quebec."
     }
   }
 }
