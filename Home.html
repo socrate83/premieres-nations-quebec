@@ -805,10 +805,11 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
         window.__serieArticlesNumbered = Math.max(maxFromItems, declared);
       }
       function hrefFor(item) {
+        var fname = String(item.file || '').replace(/\\/g, '/').replace(/^\/+/, '').replace(/^pages\//, '');
+        if (fname) return fname;
         var n = String(item.n || '');
         if (n && n !== '★' && /^\d+$/.test(n)) return 'article' + n + '.html';
-        var fname = String(item.file || '').replace(/\\/g, '/').replace(/^\/+/, '').replace(/^pages\//, '');
-        return fname || '#';
+        return '#';
       }
       function cardHtmlFix(item, extraClass) {
         var titleEsc = String(item.title).replace(/&/g, '&amp;').replace(/</g, '&lt;').replace(/"/g, '&quot;');
