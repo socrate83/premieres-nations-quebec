@@ -122,7 +122,8 @@
   "articlesPage": {
     "title": "📚 All articles",
     "intro": "Numbered series #1 to #77 — each article includes read-aloud (▶ Listen).",
-    "metaTitle": "All articles (1–77) — First Nations of Quebec"
+    "metaTitle": "All articles (1–77) — First Nations of Quebec",
+    "seriesHeading": "Series {num} — articles {start} to {end}"
   },
   "videosPage": {
     "title": "🎬 Videos",

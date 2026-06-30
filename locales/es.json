@@ -122,7 +122,8 @@
   "articlesPage": {
     "title": "📚 Todos los artículos",
     "intro": "Serie numerada #1 a #77 — cada artículo incluye lectura en voz alta (▶ Escuchar).",
-    "metaTitle": "Todos los artículos (1–77) — Primeras Naciones de Québec"
+    "metaTitle": "Todos los artículos (1–77) — Primeras Naciones de Québec",
+    "seriesHeading": "Serie {num} — artículos {start} a {end}"
   },
   "videosPage": {
     "title": "🎬 Videos",

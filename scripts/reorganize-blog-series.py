@@ -60,17 +60,25 @@ def generate_catalog_html(catalog):
     if catalog.get("featured"):
         f = catalog["featured"]
         rows.append(
-            f'<li class="articles-item articles-item--featured">'
-            f'<a href="{escape(f["file"])}"><span class="n">★</span> {escape(f["title"])}</a>'
-            f'<p>{escape(f.get("teaser", ""))}</p></li>'
+            f'<li class="articles-item articles-item--featured" data-pn-article-file="{escape(f["file"])}">'
+            f'<a href="{escape(f["file"])}"><span class="n">★</span> '
+            f'<span class="pn-catalog-title">{escape(f["title"])}</span></a>'
+            f'<p class="pn-catalog-teaser">{escape(f.get("teaser", ""))}</p></li>'
         )
     for g in catalog["groups"]:
-        rows.append(f'<li class="articles-group"><h2>{escape(g["label"])}</h2><ol>')
+        nums = [int(str(it["n"])) for it in g["items"]]
+        start, end = min(nums), max(nums)
+        rows.append(
+            f'<li class="articles-group"><h2 data-pn-range-start="{start}" data-pn-range-end="{end}">'
+            f'{escape(g["label"])}</h2><ol>'
+        )
         for it in g["items"]:
             href = it.get("file", "#")
             rows.append(
-                f'<li><a href="{escape(href)}"><span class="n">#{escape(it["n"])}</span> '
-                f'{escape(it["title"])}</a><p>{escape(it.get("teaser", ""))}</p></li>'
+                f'<li data-pn-article-file="{escape(href)}">'
+                f'<a href="{escape(href)}"><span class="n">#{escape(it["n"])}</span> '
+                f'<span class="pn-catalog-title">{escape(it["title"])}</span></a>'
+                f'<p class="pn-catalog-teaser">{escape(it.get("teaser", ""))}</p></li>'
             )
         rows.append("</ol></li>")
     return "\n".join(rows)
