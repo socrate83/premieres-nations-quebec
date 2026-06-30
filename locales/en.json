@@ -11,13 +11,13 @@
   },
   "nav": {
     "home": "🏠 Home",
-    "articles": "📚 Articles 1–72",
+    "articles": "📚 Articles 1–76",
     "nations": "📰 Nations",
     "videos": "🎬 Videos",
     "audio": "📻 Audio",
     "podcasts": "🎙️ Podcasts",
     "backHome": "← Home",
-    "allArticles": "📚 All articles (1–72)"
+    "allArticles": "📚 All articles (1–76)"
   },
   "home": {
     "heroEyebrow": "Full series · 11 nations + Inuit",
@@ -34,9 +34,9 @@
     "introP2": "This series invites you to discover the 11 First Nations and the Inuit of Nunavik — their history, culture, traditions and place in Quebec today. An invitation to respect and understanding.",
     "nationsTitle": "The Nations",
     "nationsSub": "Click a nation to read its article",
-    "serieTitle": "Thematic series — Articles (72)",
-    "serieSub": "Nine sub-series from #1 to #72: spirituality, history, Quebec know-how, forgotten wisdom, living culture… Each card opens the full article.",
-    "serieNotice": "All articles in one place. Entries #1–#51, then #52–#72 on Quebec — listen button (▶ Listen) on each page.",
+    "serieTitle": "Thematic series — Articles (76)",
+    "serieSub": "Nine sub-series from #1 to #76: spirituality, history, Quebec know-how, forgotten wisdom, living culture… Each card opens the full article.",
+    "serieNotice": "All articles in one place. Entries #1–#51, then #52–#76 on Quebec — listen button (▶ Listen) on each page.",
     "serieNoticeLink": "Full list →",
     "serieFeatured": "Featured",
     "serieRead": "Read article",
@@ -49,7 +49,7 @@
     "communityP": "Share these articles, discuss, and learn more about Indigenous peoples in Quebec.",
     "communityFb": "📘 Join the Facebook group",
     "communitySite": "🌐 Series website",
-    "seeAllArticles": "📚 See all articles (#1 to #72) →",
+    "seeAllArticles": "📚 See all articles (#1 to #76) →",
     "nationCards": {
       "abenaquis": {
         "tag": "Algonquian · Montérégie",
@@ -121,8 +121,8 @@
   },
   "articlesPage": {
     "title": "📚 All articles",
-    "intro": "Numbered series #1 to #72 — each article includes read-aloud (▶ Listen).",
-    "metaTitle": "All articles (1–72) — First Nations of Quebec"
+    "intro": "Numbered series #1 to #76 — each article includes read-aloud (▶ Listen).",
+    "metaTitle": "All articles (1–76) — First Nations of Quebec"
   },
   "videosPage": {
     "title": "🎬 Videos",

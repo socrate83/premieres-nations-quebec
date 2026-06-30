@@ -11,13 +11,13 @@
   },
   "nav": {
     "home": "🏠 Inicio",
-    "articles": "📚 Artículos 1–72",
+    "articles": "📚 Artículos 1–76",
     "nations": "📰 Naciones",
     "videos": "🎬 Videos",
     "audio": "📻 Audio",
     "podcasts": "🎙️ Podcasts",
     "backHome": "← Inicio",
-    "allArticles": "📚 Todos los artículos (1–72)"
+    "allArticles": "📚 Todos los artículos (1–76)"
   },
   "home": {
     "heroEyebrow": "Serie completa · 11 naciones + Inuit",
@@ -34,9 +34,9 @@
     "introP2": "Esta serie le invita a descubrir las 11 Primeras Naciones y los Inuit del Nunavik — su historia, cultura, tradiciones y lugar en el Québec de hoy. Una invitación al respeto y al conocimiento.",
     "nationsTitle": "Las Naciones",
     "nationsSub": "Haga clic en una nación para leer su artículo",
-    "serieTitle": "Serie temática — Artículos (72)",
-    "serieSub": "Nueve subseries del #1 al #72: espiritualidad, historia, saberes de Québec, sabiduría olvidada, cultura viva… Cada tarjeta abre el artículo completo.",
-    "serieNotice": "Todos los artículos en un solo lugar. Fichas #1–#51, luego #52–#72 sobre Québec — lectura en voz alta (▶ Escuchar) en cada página.",
+    "serieTitle": "Serie temática — Artículos (76)",
+    "serieSub": "Nueve subseries del #1 al #76: espiritualidad, historia, saberes de Québec, sabiduría olvidada, cultura viva… Cada tarjeta abre el artículo completo.",
+    "serieNotice": "Todos los artículos en un solo lugar. Fichas #1–#51, luego #52–#76 sobre Québec — lectura en voz alta (▶ Escuchar) en cada página.",
     "serieNoticeLink": "Lista completa →",
     "serieFeatured": "Destacado",
     "serieRead": "Leer artículo",
@@ -49,7 +49,7 @@
     "communityP": "Comparta estos artículos, comente y descubra más sobre los pueblos indígenas de Québec.",
     "communityFb": "📘 Unirse al grupo de Facebook",
     "communitySite": "🌐 Sitio de la serie",
-    "seeAllArticles": "📚 Ver todos los artículos (#1 a #72) →",
+    "seeAllArticles": "📚 Ver todos los artículos (#1 a #76) →",
     "nationCards": {
       "abenaquis": {
         "tag": "Algonquiana · Montérégie",
@@ -121,8 +121,8 @@
   },
   "articlesPage": {
     "title": "📚 Todos los artículos",
-    "intro": "Serie numerada #1 a #72 — cada artículo incluye lectura en voz alta (▶ Escuchar).",
-    "metaTitle": "Todos los artículos (1–72) — Primeras Naciones de Québec"
+    "intro": "Serie numerada #1 a #76 — cada artículo incluye lectura en voz alta (▶ Escuchar).",
+    "metaTitle": "Todos los artículos (1–76) — Primeras Naciones de Québec"
   },
   "videosPage": {
     "title": "🎬 Videos",

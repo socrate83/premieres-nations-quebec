@@ -21,6 +21,12 @@ STRUCTURE
   scripts/                 Index des scripts Python (fichiers réels dans scripts/)
     article-76-index.txt                — liste et rôle de chaque script #76
 
+Après chaque NOUVEL article publié :
+  1. Mettre à jour blog-serie-articles.json (stats.articlesNumbered)
+  2. Lancer : python scripts/sync-article-count-i18n.py
+     (ou : node scripts/sync-article-count-i18n.mjs)
+     → met à jour « Articles 1–N » en haut du site (FR / EN / ES)
+
 TRAVAIL/ reste pour :
   brouillons/         idées, textes bruts non structurés
   a-retravailler/     articles en cours
