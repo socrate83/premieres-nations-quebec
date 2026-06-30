@@ -1,6 +1,6 @@
 {
   "baseUrl": "",
-  "introNote": "Tous les articles numérotés du site (#1 à #72 et les prochains) : une seule grille. Les nouveaux numéros s’ajoutent dans pages/blog-serie-articles.json et pages/articleNN.html.",
+  "introNote": "Tous les articles numérotés du site (#1 à #76 et les prochains) : séries de 10 articles (Série 1 = #1–#10, Série 2 = #11–#20, …). Mettre à jour via scripts/reorganize-blog-series.py après chaque nouveau numéro.",
   "featured": {
     "n": "★",
     "title": "La Famille et les Premières Nations",
@@ -269,7 +269,7 @@
       ]
     },
     {
-      "label": "Série 5 — articles 41 à 51",
+      "label": "Série 5 — articles 41 à 50",
       "items": [
         {
           "n": "41",
@@ -330,18 +330,18 @@
           "title": "Héritage vivant et alliances",
           "teaser": "Texte compagnon dans la continuité des récits historiques de la série.",
           "file": "50-heritage-vivant-alliances.html"
-        },
+        }
+      ]
+    },
+    {
+      "label": "Série 6 — articles 51 à 60",
+      "items": [
         {
           "n": "51",
           "title": "Le vent, le ciel et le souffle",
           "teaser": "Nuages comme calendrier, vent avant l’orage — le ciel vécu comme le reste du territoire, avec les autres fiches spiritualité et sites sacrés du catalogue.",
           "file": "51-le-vent-le-ciel-et-le-souffle.html"
-        }
-      ]
-    },
-    {
-      "label": "Série 6 — articles 52 à 56",
-      "items": [
+        },
         {
           "n": "52",
           "title": "Le Vêtement Autochtone — Peaux, Fibres et Savoir-Faire Millénaires",
@@ -371,12 +371,7 @@
           "title": "La Médecine Traditionnelle Autochtone — Plantes, Guérisseurs et Savoirs Millénaires",
           "teaser": "Avant les colonisateurs, les peuples autochtones du Québec disposaient d'une pharmacopée végétale d'une richesse stupéfiante — thé du Labrador, cèdre, achillée, gingembre sauvage. Une médecine holistique transmise oralement depuis des millénaires.",
           "file": "article56.html"
-        }
-      ]
-    },
-    {
-      "label": "Série 7 — articles 57 à 62",
-      "items": [
+        },
         {
           "n": "57",
           "title": "La Sexualité sans Culpabilité : Quand le corps n'était pas sale",
@@ -400,7 +395,12 @@
           "title": "La Nourriture sans Supermarché : Quand manger prenait 6 heures par jour",
           "teaser": "La gastronomie autochtone du Québec : chasse, cueillette, pêche et préparation comme actes spirituels — à l'opposé de notre fast-food industriel.",
           "file": "article60.html"
-        },
+        }
+      ]
+    },
+    {
+      "label": "Série 7 — articles 61 à 70",
+      "items": [
         {
           "n": "61",
           "title": "L'Enfance sans Chambre : Quand les enfants dormaient avec 20 personnes",
@@ -412,12 +412,7 @@
           "title": "Le Silence sans Téléphone : Quand ne rien faire était sacré",
           "teaser": "Les peuples autochtones du Québec pratiquaient le silence comme art de vivre. Ce que nous appelons ennui, ils l'appelaient contemplation — source de sagesse.",
           "file": "article62.html"
-        }
-      ]
-    },
-    {
-      "label": "Série 8 — articles 63 à 71",
-      "items": [
+        },
         {
           "n": "63",
           "title": "Les 11 Nations du Québec : un voyage à travers leurs racines et leurs territoires",
@@ -465,18 +460,18 @@
           "title": "Défis et perspectives : les enjeux contemporains des Premières Nations du Québec",
           "teaser": "Défis et perspectives : les enjeux contemporains des Premières Nations du Québec",
           "file": "article70.html"
-        },
+        }
+      ]
+    },
+    {
+      "label": "Série 8 — articles 71 à 76",
+      "items": [
         {
           "n": "71",
           "title": "Les Cérémonies Sacrées des Peuples Autochtones du Québec — Rituels, Transmission et Renouveau",
           "teaser": "Pow-wow, tambour, loge de sudation, quête de vision, rites de passage... Plongez au cœur de la vie spirituelle des 11 nations autochtones du Québec.",
           "file": "article71.html"
-        }
-      ]
-    },
-    {
-      "label": "Série 9 — article 72 et suivants",
-      "items": [
+        },
         {
           "n": "72",
           "title": "L'Alimentation Traditionnelle Autochtone du Québec — Territoire, Mémoire et Renaissance",

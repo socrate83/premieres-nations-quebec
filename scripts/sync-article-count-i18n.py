@@ -20,8 +20,14 @@ PATCHES = {
         "nav.articles": f"📚 Articles 1–{n}",
         "nav.allArticles": f"📚 Tous les articles (1–{n})",
         "home.serieTitle": f"Série thématique — Les articles ({n})",
-        "home.serieSub": f"Neuf sous-séries de #1 à #{n} : spiritualité, histoire, savoir-faire québécois, Sagesse Oubliée, culture vivante… Chaque carte ouvre l'article complet.",
-        "home.serieNotice": f"Tous les articles au même endroit. Fiches #1–#51, puis #52–#{n} sur le Québec — lecture vocale sur chaque page.",
+        "home.serieSub": (
+            f"{(n + 9) // 10} séries de dix articles (#1 à #{n}) : spiritualité, histoire, "
+            "savoir-faire québécois, Sagesse Oubliée, culture vivante… Chaque carte ouvre l'article complet."
+        ),
+        "home.serieNotice": (
+            f"Tous les articles au même endroit. Série 1 (#1–#10) à Série {(n + 9) // 10} "
+            f"(#{((n - 1) // 10) * 10 + 1}–#{n}) — lecture vocale sur chaque page."
+        ),
         "home.seeAllArticles": f"📚 Voir tous les articles (#1 à #{n}) →",
         "articlesPage.intro": f"Série numérotée #1 à #{n} — chaque article propose la lecture vocale (▶ Écouter).",
         "articlesPage.metaTitle": f"Tous les articles (1–{n}) — Premières Nations du Québec",
@@ -30,8 +36,14 @@ PATCHES = {
         "nav.articles": f"📚 Articles 1–{n}",
         "nav.allArticles": f"📚 All articles (1–{n})",
         "home.serieTitle": f"Thematic series — Articles ({n})",
-        "home.serieSub": f"Nine sub-series from #1 to #{n}: spirituality, history, Quebec know-how, forgotten wisdom, living culture… Each card opens the full article.",
-        "home.serieNotice": f"All articles in one place. Entries #1–#51, then #52–#{n} on Quebec — listen button (▶ Listen) on each page.",
+        "home.serieSub": (
+            f"{(n + 9) // 10} series of ten articles (#1 to #{n}): spirituality, history, "
+            "Quebec know-how, forgotten wisdom, living culture… Each card opens the full article."
+        ),
+        "home.serieNotice": (
+            f"All articles in one place. Series 1 (#1–#10) to Series {(n + 9) // 10} "
+            f"(#{((n - 1) // 10) * 10 + 1}–#{n}) — listen button (▶ Listen) on each page."
+        ),
         "home.seeAllArticles": f"📚 See all articles (#1 to #{n}) →",
         "articlesPage.intro": f"Numbered series #1 to #{n} — each article includes read-aloud (▶ Listen).",
         "articlesPage.metaTitle": f"All articles (1–{n}) — First Nations of Quebec",
@@ -40,8 +52,14 @@ PATCHES = {
         "nav.articles": f"📚 Artículos 1–{n}",
         "nav.allArticles": f"📚 Todos los artículos (1–{n})",
         "home.serieTitle": f"Serie temática — Artículos ({n})",
-        "home.serieSub": f"Nueve subseries del #1 al #{n}: espiritualidad, historia, saberes de Québec, sabiduría olvidada, cultura viva… Cada tarjeta abre el artículo completo.",
-        "home.serieNotice": f"Todos los artículos en un solo lugar. Fichas #1–#51, luego #52–#{n} sobre Québec — lectura en voz alta (▶ Escuchar) en cada página.",
+        "home.serieSub": (
+            f"{(n + 9) // 10} series de diez artículos (#1 a #{n}): espiritualidad, historia, "
+            "saberes de Québec, sabiduría olvidada, cultura viva… Cada tarjeta abre el artículo completo."
+        ),
+        "home.serieNotice": (
+            f"Todos los artículos en un solo lugar. Serie 1 (#1–#10) a Serie {(n + 9) // 10} "
+            f"(#{((n - 1) // 10) * 10 + 1}–#{n}) — lectura en voz alta (▶ Escuchar) en cada página."
+        ),
         "home.seeAllArticles": f"📚 Ver todos los artículos (#1 a #{n}) →",
         "articlesPage.intro": f"Serie numerada #1 a #{n} — cada artículo incluye lectura en voz alta (▶ Escuchar).",
         "articlesPage.metaTitle": f"Todos los artículos (1–{n}) — Primeras Naciones de Québec",
@@ -81,9 +99,9 @@ def main():
         for key, val in fn(n).items():
             set_nested(data, key, val)
         path.write_text(json.dumps(data, ensure_ascii=False, indent=2) + "\n", encoding="utf-8")
-        print(f"locales/{lang}.json → 1–{n}")
+        print(f"locales/{lang}.json -> 1-{n}")
     patch_html(n)
-    print(f"Home.html + Articles.html → 1–{n}")
+    print(f"Home.html + Articles.html -> 1-{n}")
     print(f"Source: stats.articlesNumbered = {n}")
 
 
