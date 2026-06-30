@@ -1,5 +1,5 @@
 # Traduction EN + ES — automatique sur les serveurs GitHub (ne bloque pas votre PC).
-# Un article par exécution, dans l'ordre numérique (#15, puis #16, #17…).
+# Jusqu'à 10 articles par nuit, dans l'ordre numérique (#30, #31…).
 # Après commit, le déploiement Pages met le site à jour.
 name: Traduire les articles (nocturne)
 
@@ -7,11 +7,11 @@ on:
   workflow_dispatch:
     inputs:
       count:
-        description: "Nombre d'articles pour cette exécution (défaut 5, ordre #15, #16…)"
+        description: "Nombre d'articles pour cette exécution (défaut 10, ordre numérique)"
         required: false
-        default: '5'
+        default: '10'
   schedule:
-    # Chaque jour ~03:00 (Québec, été) — 1 article non traduit, le plus petit numéro d'abord.
+    # Chaque jour ~03:00 (Québec, été) — 10 articles non traduits, plus petit numéro d'abord.
     - cron: '0 7 * * *'
 
 permissions:
@@ -24,7 +24,7 @@ concurrency:
 jobs:
   translate:
     runs-on: ubuntu-latest
-    timeout-minutes: 45
+    timeout-minutes: 90
     steps:
       - uses: actions/checkout@v4
 
@@ -35,7 +35,7 @@ jobs:
       - name: Prochain numéro à traduire (#15, #16…)
         id: batch
         run: |
-          COUNT="${{ github.event.inputs.count || '5' }}"
+          COUNT="${{ github.event.inputs.count || '10' }}"
           SLUGS="$(node scripts/next-untranslated.mjs "$COUNT")"
           echo "slugs=$SLUGS" >> "$GITHUB_OUTPUT"
           if [ -z "$SLUGS" ]; then
