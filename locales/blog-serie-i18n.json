@@ -307,6 +307,10 @@
     "76-les-outils-de-chasse.html": {
       "title": "Hunting Tools and Techniques — A living report across Quebec's eleven nations",
       "teaser": "Bows, canoes, traps and tobacco protocols: a territory-by-territory report among the Innu, Atikamekw, Mi'kmaq, Wendat and the nations of Quebec."
+    },
+    "77-les-techniques-de-peche.html": {
+      "title": "Fishing Techniques — Pierre le Fouineur's Notebook No. 2",
+      "teaser": "Harpoons, traps, nets and tobacco protocols: a notebook on fishing among the Innu, Atikamekw, Mi'kmaq, Wendat and the nations of Quebec."
     }
   },
   "es": {
@@ -617,6 +621,10 @@
     "76-les-outils-de-chasse.html": {
       "title": "Herramientas y Técnicas de Caza — Reportaje vivo de las once naciones de Quebec",
       "teaser": "Arcos, canoas, trampas y protocolos del tabaco: un reportaje de territorio en territorio entre los Innu, Atikamekw, Mi'kmaq, Wendat y las naciones de Quebec."
+    },
+    "77-les-techniques-de-peche.html": {
+      "title": "Técnicas de Pesca — Cuaderno n° 2 de Pierre le Fouineur",
+      "teaser": "Arpones, nasas, redes y protocolos del tabaco: un cuaderno sobre la pesca entre los Innu, Atikamekw, Mi'kmaq, Wendat y las naciones de Quebec."
     }
   }
 }
