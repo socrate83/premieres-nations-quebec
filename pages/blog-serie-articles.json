@@ -500,13 +500,19 @@
           "title": "L'Aigle, Messager des Cieux — Symbole sacré des Premières Nations du Québec",
           "teaser": "Plumes sacrées, vision et lien entre terre et ciel : le rôle spirituel de l'aigle chez les Anishinabeg, Hurons-Wendat, Innu et les nations du Québec.",
           "file": "75-l-aigle.html"
+        },
+        {
+          "n": "76",
+          "title": "Les Outils et Techniques de Chasse — Reportage vivant des onze nations du Québec",
+          "teaser": "Arcs, canots, pièges et protocoles du tabac : un reportage de territoire en territoire chez les Innu, Atikamekw, Mi'kmaq, Wendat et les nations du Québec.",
+          "file": "76-les-outils-de-chasse.html"
         }
       ]
     }
   ],
   "stats": {
-    "articlesNumbered": 75,
+    "articlesNumbered": 76,
     "withFeatured": true,
-    "nextArticle": 76
+    "nextArticle": 77
   }
 }
