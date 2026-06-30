@@ -8,14 +8,13 @@ SRC = ROOT / "TRAVAIL/a-retravailler/76- Les outils de chasse.html.html"
 OUT = ROOT / "76-les-outils-de-chasse.html"
 PAGES_OUT = ROOT / "pages/76-les-outils-de-chasse.html"
 
-B44 = "https://media.base44.com/images/public/69f23c5b09417d29099136be"
 IMG = {
-    "chasseur": f"{B44}/3e6d1ca90_generated_image.png",
-    "peche": f"{B44}/95344eab7_generated_image.png",
-    "portage": f"{B44}/d496f380b_generated_image.png",
-    "canot": f"{B44}/4df202100_generated_image.png",
-    "kayak": f"{B44}/707dff608_generated_image.png",
-    "construction": f"{B44}/86687604f_generated_image.png",
+    "chasseur": "images/articles/76-chasseur-innu.png",
+    "peche": "images/articles/76-peche-filet.png",
+    "portage": "images/articles/76-portage-canot.png",
+    "canot": "images/articles/76-canot-riviere.png",
+    "kayak": "images/articles/76-kayak-inuit.png",
+    "construction": "images/articles/76-construction-canot.png",
 }
 
 HEAD = """<!DOCTYPE html>
