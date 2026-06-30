@@ -1,0 +1,31 @@
+INFO — dossier de référence (Jean-Claude / Socrate)
+==================================================
+
+Ce dossier regroupe les textes de présentation, gabarits et notes
+sur les scripts techniques — sans mélanger avec TRAVAIL/ (brouillons
+bruts à publier).
+
+Site : https://socrate83.github.io/premieres-nations-quebec/
+
+STRUCTURE
+---------
+
+  carnets-pierre/          Série « Les Carnets de Pierre »
+    portrait-pierre-le-fouineur.txt   — histoire complète (référence)
+    gabarit-ouverture-site.txt        — blocs HTML/texte pour chaque carnet sur le site
+
+  publication-groupe/      Annonces Facebook (groupe Les Premières Nations au Québec)
+    76-chasse-script-facebook.txt     — post prêt pour l'article #76
+    gabarit-carnet-groupe.txt           — modèle pour carnets n° 2, 3…
+
+  scripts/                 Index des scripts Python (fichiers réels dans scripts/)
+    article-76-index.txt                — liste et rôle de chaque script #76
+
+TRAVAIL/ reste pour :
+  brouillons/         idées, textes bruts non structurés
+  a-retravailler/     articles en cours
+  prets-a-publier/    checklist avant GitHub
+  publies/            archive après mise en ligne
+
+Quand un carnet est publié : copier le script groupe dans publication-groupe/
+avec le numéro d'article (ex. 77-peche-script-facebook.txt).

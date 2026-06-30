@@ -1,0 +1,37 @@
+INDEX — Scripts Python article #76 (Carnets de Pierre)
+========================================================
+Les fichiers exécutables sont dans le dossier scripts/ à la racine du projet.
+Lancer depuis la racine : python scripts/nom-du-script.py
+
+build-article-76.py
+  Regénère 76-les-outils-de-chasse.html et pages/76-… depuis TRAVAIL/a-retravailler/
+  Inclut : cadre Carnet n° 1, portrait Pierre, note footer, galerie, remerciement.
+
+patch-article-76-pierre-frame.py
+  Ajoute le cadre Jean-Claude / Pierre dans locales/articles/76-les-outils-de-chasse.json (EN/ES).
+
+patch-article-76-pierre-portrait-site.py
+  Insère le bloc « Qui est Pierre le Fouineur ? » dans le JSON EN/ES.
+
+patch-article-76-respect-ecrits.py
+  Remplace « récit composite / fictif » par « texte ancien / ami Pierre » (EN/ES).
+
+patch-article-76-ami-pierre.py
+  Précise : carnets de l'arrière-grand-père de mon ami Pierre (EN/ES).
+
+patch-article-76-i18n.py
+  Patches divers i18n article 76 (remerciement, etc.).
+
+fix-article-76-i18n-frame.py
+  Répare l'ouverture meta + highlight EN/ES si cassée.
+
+diff-76.py
+  Utilitaire de comparaison (debug).
+
+ORDRE TYPIQUE après modification du texte FR :
+  1. Éditer TRAVAIL/a-retravailler/ ou pages/76-les-outils-de-chasse.html
+  2. python scripts/build-article-76.py  (si source TRAVAIL)
+  3. Mettre à jour INFO/ (gabarits, script groupe) si le cadre change
+  4. python scripts/patch-article-76-*.py selon besoin pour EN/ES
+
+Référence textes : INFO/carnets-pierre/ et INFO/publication-groupe/

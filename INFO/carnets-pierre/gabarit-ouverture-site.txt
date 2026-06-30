@@ -1,0 +1,35 @@
+GABARIT — Ouverture d'un carnet sur le site
+============================================
+Remplacer [N], [SUJET COURT] pour chaque nouvel article.
+Les blocs ci-dessous vont après <div class="meta">…</div> et avant le corps du carnet (lead + récit).
+
+--- BLOC 1 : Carnet + Jean-Claude ---
+
+<div class="highlight">
+<p><strong>Carnet n° [N] — Jean-Claude —</strong> Mon ami Pierre m'a fait part des carnets de récits laissés par son arrière-grand-père, rédigés il y a longtemps : un carnet de route à travers les onze nations du Québec, composé avec le concours de leurs savoirs. Je te le transmets tel qu'il l'a écrit — je n'invente rien.</p>
+</div>
+
+--- BLOC 2 : Portrait Pierre (identique pour tous les carnets) ---
+
+<div class="pierre-portrait">
+<h2>Qui est Pierre le Fouineur ?</h2>
+<p>Mon ami Pierre m'a fait part, un jour, de vieux carnets trouvés chez lui — les récits laissés par <strong>son arrière-grand-père</strong>, lui aussi prénommé Pierre. On l'appelait <strong>Pierre le Fouineur</strong>.</p>
+<p>Ce n'était pas une moquerie, c'était un compliment. Coureur des bois, il marchait le Québec : portages, cabanes de troc où l'on échangeait farine, pelteries, histoires et silence. Il écoutait. Il notait. Nuit après nuit, dans des carnets de cuir usé, il couvait des mots — chasse, pêche, plantes, cérémonies. Les onze nations du territoire québécois y passent, chacune avec sa voix : il était le témoin qui écrit ; ils étaient ceux qui savaient.</p>
+<p>Les carnets dormirent longtemps — grenier, malles, oubli. Puis Pierre, son arrière-petit-fils, les retrouva par hasard, comme on découvre une flèche coincée dans l'écorce d'un bouleau, et m'en confia la lecture.</p>
+<p>Ce qu'il m'a remis n'est pas de l'or jaune. C'est mieux : une <strong>mine de récits vivants</strong>, au milieu des différentes nations du Québec — des textes anciens, respectueux, écrits avec le concours de ceux qui partageaient leur savoir. Je n'invente rien. Je transmets.</p>
+</div>
+
+--- BLOC 3 : Transition vers le carnet ---
+
+<p><em>Voici l'un de ces carnets, remis entre mes mains par Pierre.</em></p>
+
+--- NOTE DE BAS DE PAGE (footer-sources) ---
+
+<strong>Note :</strong> Texte ancien rédigé par l'arrière-grand-père de mon ami Pierre — Pierre le Fouineur, coureur des bois — avec le concours des savoirs des nations, et non par les Premières Nations elles-mêmes. Jean-Claude le transmet tel qu'il l'a reçu, en respect de ces écrits et des traditions qu'ils décrivent. Les techniques varient selon les familles et les territoires ; les nations concernées demeurent les autorités de leurs propres savoirs. Certaines méthodes décrites sont aujourd'hui réglementées ou réservées à la transmission pédagogique.
+
+--- REMERCIEMENT (fin de conclusion, avant galerie) ---
+
+<p><em>Merci à Pierre pour ce carnet, et aux nations dont les savoirs l'ont nourri.</em> — Jean-Claude</p>
+
+Référence complète : carnets-pierre/portrait-pierre-le-fouineur.txt
+Exemple publié : article #76 — 76-les-outils-de-chasse.html
