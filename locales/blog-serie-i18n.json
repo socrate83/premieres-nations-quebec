@@ -21,8 +21,8 @@
       "teaser": "The system of governance of the Iroquois Confederacy and its influence."
     },
     "05-medecine-traditionnelle.html": {
-      "title": "Traditional Medicine",
-      "teaser": "Healing practices and traditional medicine of the First Nations."
+      "title": "Traditional Medicine — Part 1",
+      "teaser": "Pharmacy and healing knowledge: part 1 of 3 (continues in #24, #56)."
     },
     "06-art-artisanat.html": {
       "title": "Art and Craft",
@@ -49,16 +49,16 @@
       "teaser": "A distinct people in the heart of Canada."
     },
     "12-langues-autochtones.html": {
-      "title": "Indigenous Languages",
-      "teaser": "Linguistic treasures threatened with disappearance."
+      "title": "Indigenous Languages — Part 1",
+      "teaser": "Endangered linguistic treasures: part 1 of 2 (continues in #64)."
     },
     "13-mythes-et-legendes.html": {
       "title": "Storytellers and their Stories",
       "teaser": "Myths, legends and the trickster."
     },
     "14-cuisine-traditionnelle.html": {
-      "title": "Traditional Indigenous Cuisine",
-      "teaser": "Territorial flavors and culinary traditions."
+      "title": "Traditional Indigenous Cuisine — Part 1",
+      "teaser": "Flavors of the land: part 1 of 4 (continues in #60, #66, #72)."
     },
     "15-lacrosse-jeu-createurs.html": {
       "title": "Lacrosse: The Game of Creators",
@@ -97,8 +97,8 @@
       "teaser": "Guardians of the earth for millennia."
     },
     "24-chamanes-medecine.html": {
-      "title": "Shamans and Medicine Men/Women",
-      "teaser": "Healers between the visible and invisible world."
+      "title": "Shamans and Medicine People — Part 2",
+      "teaser": "Healers and spiritual medicine: part 2 of 3 (continues in #56)."
     },
     "25-danses-traditionnelles.html": {
       "title": "Traditional Dances",
@@ -225,8 +225,8 @@
       "teaser": "The birch bark canoe of the First Nations of Quebec — a masterpiece of ingenuity, built without metal or saw, capable of navigating lakes and rapids. An age-old technology that changed the history of the continent."
     },
     "article56.html": {
-      "title": "Traditional Indigenous Medicine — Plants, Healers and Millennial Knowledge",
-      "teaser": "Before the colonizers, the indigenous peoples of Quebec had a plant pharmacopoeia of astonishing richness at their disposal — Labrador tea, cedar, yarrow, wild ginger. A holistic medicine passed down orally for millennia."
+      "title": "Traditional Indigenous Medicine — Plants and Healers — Part 3",
+      "teaser": "Medicinal plants and healers: part 3 of 3 (follows #5 and #24)."
     },
     "article57.html": {
       "title": "Sexuality without Guilt: When the body was not dirty",
@@ -241,8 +241,8 @@
       "teaser": "How the indigenous peoples of Quebec tamed death, sometimes chose their moment and integrated it naturally into the cycle of life."
     },
     "article60.html": {
-      "title": "Food without a Supermarket: When eating took 6 hours a day",
-      "teaser": "The indigenous gastronomy of Quebec: hunting, gathering, fishing and preparation as spiritual acts — the opposite of our industrial fast food."
+      "title": "Food Without Supermarkets — Part 2",
+      "teaser": "Ancestral gastronomy: part 2 of 4 (continues in #66, #72)."
     },
     "article61.html": {
       "title": "Childhood without a Room: When children slept with 20 people",
@@ -257,16 +257,16 @@
       "teaser": "Complete portrait of the 11 First Nations of Quebec: origins, territories, populations and meaning of their names."
     },
     "article64.html": {
-      "title": "Modern languages, endangered languages: the linguistic panorama of Quebec First Nations",
-      "teaser": "11 nations, 11 languages, millennia of oral wisdom — and a race against time to save them from oblivion."
+      "title": "Living Languages, Endangered Languages — Part 2",
+      "teaser": "Linguistic panorama of Quebec nations: part 2 of 2 (follows article #12)."
     },
     "article65.html": {
       "title": "Crafts in the heart of the territory: jewelry, sculptures and textiles from the First Nations",
       "teaser": "Crafts in the heart of the territory: jewelry, sculptures and textiles from the First Nations"
     },
     "article66.html": {
-      "title": "From bannock to smoked salmon: Quebec's indigenous cuisine between tradition and modernity",
-      "teaser": "From bannock to smoked salmon: Quebec's indigenous cuisine between tradition and modernity"
+      "title": "From Bannock to Smoked Salmon — Part 3",
+      "teaser": "Indigenous cuisine past and present: part 3 of 4 (continues in #72)."
     },
     "article67.html": {
       "title": "Rituals that bring people together: powwow, sweat lodge and living traditions",
@@ -289,8 +289,8 @@
       "teaser": "Powwow, drumming, sweat lodge, vision quest, rites of passage... Immerse yourself in the heart of the spiritual life of the 11 indigenous nations of Quebec."
     },
     "article72.html": {
-      "title": "Traditional Indigenous Food of Quebec — Territory, Memory and Renaissance",
-      "teaser": "Hunting, fishing, gathering, sagamitis, bannock... Immerse yourself in the traditional food systems of the 11 indigenous nations of Quebec and their contemporary gastronomic renaissance."
+      "title": "Traditional Indigenous Food in Quebec — Part 4",
+      "teaser": "Land, memory and culinary renaissance: part 4 of 4 (follows #14, #60, #66)."
     },
     "73-l-ours-gardien-des-mondes.html": {
       "title": "The Bear, Guardian of the Worlds — Sacred symbol of the First Nations of Quebec",
@@ -339,8 +339,8 @@
       "teaser": "El sistema de gobierno de la Confederación Iroquesa y su influencia."
     },
     "05-medecine-traditionnelle.html": {
-      "title": "Medicina Tradicional",
-      "teaser": "Prácticas curativas y medicina tradicional de las Primeras Naciones."
+      "title": "Medicina tradicional — Parte 1",
+      "teaser": "Farmacopea y saberes curativos: parte 1 de 3 (continúa en #24, #56)."
     },
     "06-art-artisanat.html": {
       "title": "Arte y artesanía",
@@ -367,16 +367,16 @@
       "teaser": "Un pueblo distinto en el corazón de Canadá."
     },
     "12-langues-autochtones.html": {
-      "title": "Lenguas Indígenas",
-      "teaser": "Tesoros lingüísticos amenazados de desaparición."
+      "title": "Lenguas indígenas — Parte 1",
+      "teaser": "Tesoros lingüísticos amenazados: parte 1 de 2 (continúa en #64)."
     },
     "13-mythes-et-legendes.html": {
       "title": "Los narradores y sus historias",
       "teaser": "Mitos, leyendas y el embaucador."
     },
     "14-cuisine-traditionnelle.html": {
-      "title": "Cocina Indígena Tradicional",
-      "teaser": "Sabores territoriales y tradiciones culinarias."
+      "title": "Cocina tradicional indígena — Parte 1",
+      "teaser": "Sabores del territorio: parte 1 de 4 (continúa en #60, #66, #72)."
     },
     "15-lacrosse-jeu-createurs.html": {
       "title": "Lacrosse: el juego de los creadores",
@@ -415,8 +415,8 @@
       "teaser": "Guardianes de la tierra desde hace milenios."
     },
     "24-chamanes-medecine.html": {
-      "title": "Chamanes y Medicina Hombres/Mujeres",
-      "teaser": "Curanderos entre el mundo visible y el invisible."
+      "title": "Chamanes y personas medicina — Parte 2",
+      "teaser": "Curanderos y medicina espiritual: parte 2 de 3 (continúa en #56)."
     },
     "25-danses-traditionnelles.html": {
       "title": "Danzas Tradicionales",
@@ -543,8 +543,8 @@
       "teaser": "La canoa de corteza de abedul de las Primeras Naciones de Quebec: una obra maestra de ingenio, construida sin metal ni sierra, capaz de navegar lagos y rápidos. Una tecnología milenaria que cambió la historia del continente."
     },
     "article56.html": {
-      "title": "Medicina tradicional indígena: plantas, curanderos y conocimientos milenarios",
-      "teaser": "Antes de los colonizadores, los pueblos indígenas de Quebec tenían a su disposición una farmacopea vegetal de asombrosa riqueza: té de labrador, cedro, milenrama y jengibre silvestre. Una medicina holística transmitida por vía oral durante milenios."
+      "title": "Medicina tradicional indígena — Plantas y curanderos — Parte 3",
+      "teaser": "Plantas medicinales y curanderos: parte 3 de 3 (continúa #5 y #24)."
     },
     "article57.html": {
       "title": "Sexualidad sin culpa: Cuando el cuerpo no estaba sucio",
@@ -559,8 +559,8 @@
       "teaser": "Cómo los pueblos indígenas de Quebec domesticaron la muerte, eligieron a veces su momento y la integraron de forma natural en el ciclo de la vida."
     },
     "article60.html": {
-      "title": "Comida sin Supermercado: Cuando comer tomaba 6 horas al día",
-      "teaser": "La gastronomía indígena de Quebec: caza, recolección, pesca y preparación como actos espirituales, lo opuesto a nuestra comida rápida industrial."
+      "title": "Alimentación sin supermercados — Parte 2",
+      "teaser": "Gastronomía ancestral: parte 2 de 4 (continúa en #66, #72)."
     },
     "article61.html": {
       "title": "Infancia sin habitación: Cuando los niños dormían con 20 personas",
@@ -575,16 +575,16 @@
       "teaser": "Retrato completo de las 11 Primeras Naciones de Quebec: orígenes, territorios, poblaciones y significado de sus nombres."
     },
     "article64.html": {
-      "title": "Lenguas modernas, lenguas en peligro de extinción: el panorama lingüístico de las Primeras Naciones de Quebec",
-      "teaser": "11 naciones, 11 idiomas, milenios de sabiduría oral y una carrera contra el tiempo para salvarlos del olvido."
+      "title": "Lenguas vivas, lenguas amenazadas — Parte 2",
+      "teaser": "Panorama lingüístico de las naciones de Quebec: parte 2 de 2 (continúa el artículo #12)."
     },
     "article65.html": {
       "title": "Artesanía en el corazón del territorio: joyas, esculturas y textiles de las Primeras Naciones",
       "teaser": "Artesanía en el corazón del territorio: joyas, esculturas y textiles de las Primeras Naciones"
     },
     "article66.html": {
-      "title": "Del bannock al salmón ahumado: la cocina indígena de Quebec entre tradición y modernidad",
-      "teaser": "Del bannock al salmón ahumado: la cocina indígena de Quebec entre tradición y modernidad"
+      "title": "De la bannique al salmón ahumado — Parte 3",
+      "teaser": "Cocina indígena tradición y modernidad: parte 3 de 4 (continúa en #72)."
     },
     "article67.html": {
       "title": "Rituales que unen a las personas: powwow, sauna y tradiciones vivas",
@@ -607,8 +607,8 @@
       "teaser": "Powwow, tambores, cabaña de sudor, búsqueda de visiones, ritos de iniciación... Sumérgete en el corazón de la vida espiritual de las 11 naciones indígenas de Quebec."
     },
     "article72.html": {
-      "title": "Comida tradicional indígena de Quebec: territorio, memoria y renacimiento",
-      "teaser": "Caza, pesca, recolección, sagamitis, bannock... Sumérgete en los sistemas alimentarios tradicionales de las 11 naciones indígenas de Quebec y su renacimiento gastronómico contemporáneo."
+      "title": "Alimentación tradicional indígena en Quebec — Parte 4",
+      "teaser": "Territorio, memoria y renacimiento culinario: parte 4 de 4 (continúa #14, #60, #66)."
     },
     "73-l-ours-gardien-des-mondes.html": {
       "title": "El Oso, Guardián de los Mundos — Símbolo sagrado de las Primeras Naciones de Quebec",

@@ -37,8 +37,8 @@
         },
         {
           "n": "5",
-          "title": "Médecine Traditionnelle",
-          "teaser": "Les pratiques de guérison et la pharmacopée traditionnelle des Premières Nations.",
+          "title": "Médecine Traditionnelle — Partie 1",
+          "teaser": "Pharmacopée et savoirs de guérison : partie 1 sur 3 (suite : #24, #56).",
           "file": "05-medecine-traditionnelle.html"
         },
         {
@@ -84,8 +84,8 @@
         },
         {
           "n": "12",
-          "title": "Les Langues Autochtones",
-          "teaser": "Des trésors linguistiques menacés de disparition.",
+          "title": "Les Langues Autochtones — Partie 1",
+          "teaser": "Trésors linguistiques menacés : partie 1 sur 2 (suite : #64).",
           "file": "12-langues-autochtones.html"
         },
         {
@@ -96,8 +96,8 @@
         },
         {
           "n": "14",
-          "title": "La Cuisine Traditionnelle Autochtone",
-          "teaser": "Saveurs du territoire et traditions culinaires.",
+          "title": "La Cuisine Traditionnelle Autochtone — Partie 1",
+          "teaser": "Saveurs du territoire : partie 1 sur 4 (suite : #60, #66, #72).",
           "file": "14-cuisine-traditionnelle.html"
         },
         {
@@ -161,8 +161,8 @@
         },
         {
           "n": "24",
-          "title": "Les Chamanes et les Hommes/Femmes Médecine",
-          "teaser": "Guérisseurs entre le monde visible et l'invisible.",
+          "title": "Les Chamanes et les Hommes/Femmes Médecine — Partie 2",
+          "teaser": "Guérisseurs et médecine spirituelle : partie 2 sur 3 (suite : #56).",
           "file": "24-chamanes-medecine.html"
         },
         {
@@ -368,8 +368,8 @@
         },
         {
           "n": "56",
-          "title": "La Médecine Traditionnelle Autochtone — Plantes, Guérisseurs et Savoirs Millénaires",
-          "teaser": "Avant les colonisateurs, les peuples autochtones du Québec disposaient d'une pharmacopée végétale d'une richesse stupéfiante — thé du Labrador, cèdre, achillée, gingembre sauvage. Une médecine holistique transmise oralement depuis des millénaires.",
+          "title": "La Médecine Traditionnelle Autochtone — Plantes et Guérisseurs — Partie 3",
+          "teaser": "Plantes médicinales et guérisseurs : partie 3 sur 3 (suite des articles #5 et #24).",
           "file": "article56.html"
         },
         {
@@ -392,8 +392,8 @@
         },
         {
           "n": "60",
-          "title": "La Nourriture sans Supermarché : Quand manger prenait 6 heures par jour",
-          "teaser": "La gastronomie autochtone du Québec : chasse, cueillette, pêche et préparation comme actes spirituels — à l'opposé de notre fast-food industriel.",
+          "title": "La Nourriture sans Supermarché — Partie 2",
+          "teaser": "Gastronomie ancestrale : partie 2 sur 4 (suite : #66, #72).",
           "file": "article60.html"
         }
       ]
@@ -421,8 +421,8 @@
         },
         {
           "n": "64",
-          "title": "Langues vivantes, langues menacées : le panorama linguistique des Premières Nations québécoises",
-          "teaser": "11 nations, 11 langues, des millénaires de sagesse orale — et une course contre la montre pour les sauver de l'oubli.",
+          "title": "Langues vivantes, langues menacées — Partie 2",
+          "teaser": "Panorama linguistique des nations du Québec : partie 2 sur 2 (suite de l'article #12).",
           "file": "article64.html"
         },
         {
@@ -433,8 +433,8 @@
         },
         {
           "n": "66",
-          "title": "De la bannique au saumon fumé : la cuisine autochtone du Québec entre tradition et modernité",
-          "teaser": "De la bannique au saumon fumé : la cuisine autochtone du Québec entre tradition et modernité",
+          "title": "De la bannique au saumon fumé — Partie 3",
+          "teaser": "Cuisine autochtone tradition et modernité : partie 3 sur 4 (suite : #72).",
           "file": "article66.html"
         },
         {
@@ -474,8 +474,8 @@
         },
         {
           "n": "72",
-          "title": "L'Alimentation Traditionnelle Autochtone du Québec — Territoire, Mémoire et Renaissance",
-          "teaser": "Chasse, pêche, cueillette, sagamité, banique... Plongez dans les systèmes alimentaires traditionnels des 11 nations autochtones du Québec et leur renaissance gastronomique contemporaine.",
+          "title": "L'Alimentation Traditionnelle Autochtone du Québec — Partie 4",
+          "teaser": "Territoire, mémoire et renaissance culinaire : partie 4 sur 4 (suite des articles #14, #60, #66).",
           "file": "article72.html"
         },
         {
