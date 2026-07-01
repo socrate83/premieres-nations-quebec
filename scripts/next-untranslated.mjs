@@ -15,6 +15,9 @@ const catalog = JSON.parse(
 );
 const outDir = path.join(root, 'locales', 'articles');
 
+/** Pages de redirection uniquement — ne pas traduire (contenu canonique ailleurs). */
+const REDIRECT_ONLY = new Set(['40-feu-sans-allumettes']);
+
 function isTranslated(slug) {
   const p = path.join(outDir, slug + '.json');
   if (!fs.existsSync(p)) return false;
@@ -52,6 +55,7 @@ items.sort((a, b) => articleNum(a) - articleNum(b));
 const missing = [];
 for (const it of items) {
   const slug = it.file.replace(/\.html$/i, '');
+  if (REDIRECT_ONLY.has(slug)) continue;
   if (!isTranslated(slug)) missing.push(slug);
 }
 
