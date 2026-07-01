@@ -311,6 +311,10 @@
     "77-les-techniques-de-peche.html": {
       "title": "Fishing Techniques — Pierre le Fouineur's Notebook No. 2",
       "teaser": "Harpoons, traps, nets and tobacco protocols: a notebook on fishing among the Innu, Atikamekw, Mi'kmaq, Wendat and the nations of Quebec."
+    },
+    "78-le-feu-pierre-le-fouineur.html": {
+      "title": "Fire Without Matches — Pierre le Fouineur's Notebook No. 3",
+      "teaser": "Friction, sacred circle and fire prayer: Notebook No. 3 on fire-making and respect for First Nations knowledge in Quebec."
     }
   },
   "es": {
@@ -625,6 +629,10 @@
     "77-les-techniques-de-peche.html": {
       "title": "Técnicas de Pesca — Cuaderno n° 2 de Pierre le Fouineur",
       "teaser": "Arpones, nasas, redes y protocolos del tabaco: un cuaderno sobre la pesca entre los Innu, Atikamekw, Mi'kmaq, Wendat y las naciones de Quebec."
+    },
+    "78-le-feu-pierre-le-fouineur.html": {
+      "title": "Fuego sin cerillas — Cuaderno n° 3 de Pierre le Fouineur",
+      "teaser": "Fricción, círculo sagrado y oración del fuego: cuaderno n° 3 sobre el encendido del fuego y el respeto de los saberes de las Primeras Naciones de Quebec."
     }
   }
 }

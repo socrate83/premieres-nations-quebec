@@ -1,6 +1,6 @@
 {
   "baseUrl": "",
-  "introNote": "Tous les articles numérotés du site (#1 à #77 et les prochains) : séries de 10 articles (Série 1 = #1–#10, Série 2 = #11–#20, …). Mettre à jour via scripts/reorganize-blog-series.py après chaque nouveau numéro.",
+  "introNote": "Tous les articles numérotés du site (#1 à #78 et les prochains) : séries de 10 articles (Série 1 = #1–#10, Série 2 = #11–#20, …). Mettre à jour via scripts/reorganize-blog-series.py après chaque nouveau numéro.",
   "featured": {
     "n": "★",
     "title": "La Famille et les Premières Nations",
@@ -464,7 +464,7 @@
       ]
     },
     {
-      "label": "Série 8 — articles 71 à 77",
+      "label": "Série 8 — articles 71 à 78",
       "items": [
         {
           "n": "71",
@@ -507,13 +507,19 @@
           "title": "Les Techniques de Pêche — Reportage vivant des onze nations du Québec",
           "teaser": "Harpons, nasses, filets et protocoles du tabac : un carnet de Pierre le Fouineur sur la pêche chez les Innu, Atikamekw, Mi'kmaq, Wendat et les nations du Québec.",
           "file": "77-les-techniques-de-peche.html"
+        },
+        {
+          "n": "78",
+          "title": "Le Feu sans allumettes — Liturgie des Anciens (Carnet n° 3)",
+          "teaser": "Friction, cercle sacré et prière du feu : le carnet n° 3 de Pierre le Fouineur sur l'allumage du feu et le respect des savoirs des Premières Nations du Québec.",
+          "file": "78-le-feu-pierre-le-fouineur.html"
         }
       ]
     }
   ],
   "stats": {
-    "articlesNumbered": 77,
+    "articlesNumbered": 78,
     "withFeatured": true,
-    "nextArticle": 78
+    "nextArticle": 79
   }
 }
