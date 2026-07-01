@@ -142,11 +142,11 @@
     },
     "35-navigateurs-foret.html": {
       "title": "The Forest Navigators",
-      "teaser": "Traveling without a map, without a compass, without GPS."
+      "teaser": "Traveling without a map, without a compass, without a GPS."
     },
     "36-route-commerces-sans-monnaie.html": {
       "title": "Commerce without Money",
-      "teaser": "Les routes d'échanges qui traversaient le continent avant l'euro et le dollar."
+      "teaser": "The trade routes that crossed the continent before the euro and the dollar."
     },
     "37-esclaves-autochtones.html": {
       "title": "Native Slaves",
@@ -301,16 +301,16 @@
       "teaser": "Rising, first salmon ceremonies, tobacco and reciprocity: the messenger of the rivers among the Innu, Mi'kmaq, Maliseet and the nations of Quebec."
     },
     "75-l-aigle.html": {
-      "title": "The Eagle, Messenger of the Skies — Sacred Symbol of the First Nations of Quebec",
-      "teaser": "Sacred feathers, vision and the link between earth and sky: the spiritual role of the eagle among the Anishinabeg, Huron-Wendat, Innu and the nations of Quebec."
+      "title": "The Eagle, Messenger of Heaven — Sacred symbol of the First Nations of Quebec",
+      "teaser": "Sacred feathers, vision and link between earth and sky: the spiritual role of the eagle among the Anishinabeg, Huron-Wendat, Innu and the nations of Quebec."
     },
     "76-les-outils-de-chasse.html": {
-      "title": "Hunting Tools and Techniques — A living report across Quebec's eleven nations",
-      "teaser": "Bows, canoes, traps and tobacco protocols: a territory-by-territory report among the Innu, Atikamekw, Mi'kmaq, Wendat and the nations of Quebec."
+      "title": "Hunting Tools and Techniques — Living reporting from the eleven nations of Quebec",
+      "teaser": "Bows, canoes, traps and tobacco protocols: a report from territory to territory among the Innu, Atikamekw, Mi'kmaq, Wendat and the nations of Quebec."
     },
     "77-les-techniques-de-peche.html": {
-      "title": "Fishing Techniques — Pierre le Fouineur's Notebook No. 2",
-      "teaser": "Harpoons, traps, nets and tobacco protocols: a notebook on fishing among the Innu, Atikamekw, Mi'kmaq, Wendat and the nations of Quebec."
+      "title": "Fishing Techniques — Living report from the eleven nations of Quebec",
+      "teaser": "Harpoons, traps, nets and tobacco protocols: a notebook by Pierre le Fouineur on fishing among the Innu, Atikamekw, Mi'kmaq, Wendat and the nations of Quebec."
     }
   },
   "es": {
@@ -435,7 +435,7 @@
       "teaser": "Guerreros, estrategas y soldados canadienses."
     },
     "30-wampum-ceintures.html": {
-      "title": "The Wampum - Cinturones de Protocolo",
+      "title": "The Wampum - Cinturones de protocolo",
       "teaser": "Palabras tejidas en cuentas de concha."
     },
     "31-clans-parente-premieres-nations.html": {
@@ -615,16 +615,16 @@
       "teaser": "Levantamiento, primeras ceremonias del salmón, tabaco y reciprocidad: el mensajero de los ríos entre los Innu, Mi'kmaq, Maliseet y las naciones de Quebec."
     },
     "75-l-aigle.html": {
-      "title": "El Águila, Mensajera de los Cielos — Símbolo sagrado de las Primeras Naciones de Quebec",
-      "teaser": "Plumas sagradas, visión y vínculo entre tierra y cielo: el papel espiritual del águila entre los Anishinabeg, Huron-Wendat, Innu y las naciones de Quebec."
+      "title": "El Águila, Mensajera del Cielo — Símbolo sagrado de las Primeras Naciones de Quebec",
+      "teaser": "Plumas sagradas, visión y vínculo entre la tierra y el cielo: el papel espiritual del águila entre los Anishinabeg, Huron-Wendat, Innu y las naciones de Quebec."
     },
     "76-les-outils-de-chasse.html": {
-      "title": "Herramientas y Técnicas de Caza — Reportaje vivo de las once naciones de Quebec",
-      "teaser": "Arcos, canoas, trampas y protocolos del tabaco: un reportaje de territorio en territorio entre los Innu, Atikamekw, Mi'kmaq, Wendat y las naciones de Quebec."
+      "title": "Herramientas y técnicas de caza: informes vivos de las once naciones de Quebec",
+      "teaser": "Arcos, canoas, trampas y protocolos de tabaco: un informe de territorio en territorio entre los innu, atikamekw, mi'kmaq, wendat y las naciones de Quebec."
     },
     "77-les-techniques-de-peche.html": {
-      "title": "Técnicas de Pesca — Cuaderno n° 2 de Pierre le Fouineur",
-      "teaser": "Arpones, nasas, redes y protocolos del tabaco: un cuaderno sobre la pesca entre los Innu, Atikamekw, Mi'kmaq, Wendat y las naciones de Quebec."
+      "title": "Técnicas de pesca: informe vivo de las once naciones de Quebec",
+      "teaser": "Arpones, trampas, redes y protocolos de tabaco: un cuaderno de Pierre le Fouineur sobre la pesca entre los innu, atikamekw, mi'kmaq, wendat y las naciones de Quebec."
     }
   }
 }
