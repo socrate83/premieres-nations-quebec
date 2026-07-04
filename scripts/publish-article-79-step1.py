@@ -149,7 +149,11 @@ def main():
     subprocess.run(["python", str(ROOT / "scripts/reorganize-blog-series.py")], check=True)
     subprocess.run(["python", str(ROOT / "scripts/sync-article-count-i18n.py")], check=True)
     subprocess.run(["python", str(ROOT / "scripts/build-sitemap.py")], check=True)
-    print("Article #79 partie 1 — prêt pour git push")
+    subprocess.run(
+        ["python", str(ROOT / "scripts/build-episode-part-i18n.py"), SLUG],
+        check=True,
+    )
+    print("Article #79 partie 1 — publié + EN/ES")
 
 
 if __name__ == "__main__":

@@ -11,7 +11,9 @@
           "part": 1,
           "file": "79-l-hiver-pierre-le-fouineur.html",
           "publish_date": "2026-07-04",
-          "status": "published"
+          "status": "published",
+          "i18n_status": "done",
+          "i18n_on": "2026-07-04"
         },
         {
           "part": 2,

@@ -272,16 +272,11 @@ def nav(i, production=False):
 
 
 PROD_HEAD_EXTRA = """
-<meta name="description" content="L'hiver au Québec : températures, neige, glace et vigilance sur le territoire — Carnet n° 4 de Pierre le Fouineur (partie 1/4).">
 <link rel="stylesheet" href="lang-switcher.css">
 <script src="article-i18n.js" defer></script>
 <script src="article-share.js" defer></script>
 <script src="lang-switcher.js" defer></script>
-<meta property="og:title" content="#79 — L'Hiver sur le territoire — Partie 1">
-<meta property="og:description" content="C'est quoi l'hiver au Québec — Carnet n° 4 de Pierre le Fouineur.">
-<meta property="og:url" content="https://socrate83.github.io/premieres-nations-quebec/79-l-hiver-pierre-le-fouineur.html">
 <meta property="og:type" content="article">
-<meta property="og:image" content="https://socrate83.github.io/premieres-nations-quebec/images/articles/79-hiver-territoire.png">
 <meta property="og:locale" content="fr_FR">
 <meta name="twitter:card" content="summary_large_image">
 """
@@ -301,7 +296,21 @@ PROD_NAV = """
 """
 
 
+def prod_head_meta(p):
+    slug_file = p["file"]
+    base = "https://socrate83.github.io/premieres-nations-quebec"
+    img = p.get("img") or "79-hiver-territoire.png"
+    return f"""
+<meta name="description" content="#79 — {TITLE} — Partie {p['part']}/4 — Carnet n° 4 de Pierre le Fouineur.">
+<meta property="og:title" content="#79 — {TITLE} — Partie {p['part']}">
+<meta property="og:description" content="{p['subtitle']} — Carnet n° 4 de Pierre le Fouineur.">
+<meta property="og:url" content="{base}/{slug_file}">
+<meta property="og:image" content="{base}/images/articles/{img}">
+"""
+
+
 def page(p, i, production=False):
+    slug_name = p["file"].replace(".html", "")
     top_img = ""
     if not p.get("no_top_img"):
         top_img = f'<img src="images/articles/{p["img"]}" alt="{p["img_alt"]}" class="img-center"><p class="img-caption">{p["img_caption"]}</p>'
@@ -320,14 +329,15 @@ def page(p, i, production=False):
         if production
         else "<div class=\"footer-sources\"><strong>Note :</strong> Texte de Pierre le Fouineur, transmis par Jean-Claude. Aperçu local.</div>"
     )
-    prod_head = PROD_HEAD_EXTRA if production and p["part"] == 1 else ""
+    prod_head = (PROD_HEAD_EXTRA + prod_head_meta(p)) if production else ""
     prod_nav = PROD_NAV if production else (
         '<nav style="display:flex;gap:1rem;justify-content:center;padding:.7rem;background:#f4efe6;border-bottom:2px solid #8b4513">'
         '<a href="Home.html" style="color:#2c5530;font-weight:700;text-decoration:none">← Accueil</a>'
         '<a href="preview-serie-79.html" style="color:#2c5530;font-weight:700;text-decoration:none">📋 #79 · 4 parties</a>'
         "</nav>"
     )
-    body_attr = f' data-pn-article-slug="{SLUG}"' if production and p["part"] == 1 else ""
+    body_attr = f' data-pn-article-slug="{slug_name}"' if production else ""
+    article_id = ' id="pn-article-root"' if production else ""
     return f"""<!DOCTYPE html>
 <html lang="fr">
 <head>
@@ -339,7 +349,7 @@ def page(p, i, production=False):
 </head>
 <body{body_attr}>
 {prod_nav}
-<article style="max-width:820px;margin:0 auto;padding:20px">
+<article{article_id} style="max-width:820px;margin:0 auto;padding:20px">
 {preview}<h1>❄️ #{ARTICLE_NUM} — {TITLE}<span class="part-badge">Partie {p["part"]} / 4</span><br><span style="font-size:.55em;color:#d4a574">{p["subtitle"]}</span></h1>
 <div class="meta">Article #{ARTICLE_NUM} — Carnet n° 4 de Pierre le Fouineur · Partie {p["part"]} sur 4</div>
 {top_img}
