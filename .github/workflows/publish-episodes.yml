@@ -1,0 +1,34 @@
+# Publication automatique des parties #79+ (file episodes-queue/)
+# Vérifie chaque jour si une partie est due ; copie HTML + images sur le site.
+name: Publier épisodes (#79+)
+
+on:
+  workflow_dispatch:
+  schedule:
+    # ~03 h Québec (été) — même créneau que les traductions
+    - cron: '0 7 * * *'
+
+permissions:
+  contents: write
+
+concurrency:
+  group: publish-episodes
+  cancel-in-progress: false
+
+jobs:
+  publish:
+    runs-on: ubuntu-latest
+    timeout-minutes: 15
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '20'
+
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+
+      - name: Publier partie(s) due(s)
+        run: node scripts/publish-next-episode.mjs

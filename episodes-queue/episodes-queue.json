@@ -1,0 +1,43 @@
+{
+  "version": 1,
+  "series": [
+    {
+      "article": "79",
+      "title": "L'Hiver sur le territoire",
+      "start_date": "2026-07-04",
+      "interval_days": 2,
+      "parts": [
+        {
+          "part": 1,
+          "file": "79-l-hiver-pierre-le-fouineur.html",
+          "publish_date": "2026-07-04",
+          "status": "published"
+        },
+        {
+          "part": 2,
+          "file": "79-l-hiver-pierre-le-fouineur-partie-2.html",
+          "publish_date": "2026-07-06",
+          "status": "queued",
+          "queue_file": "episodes-queue/79-l-hiver-pierre-le-fouineur-partie-2.html",
+          "image": "79-raquettes-traces.png"
+        },
+        {
+          "part": 3,
+          "file": "79-l-hiver-pierre-le-fouineur-partie-3.html",
+          "publish_date": "2026-07-08",
+          "status": "queued",
+          "queue_file": "episodes-queue/79-l-hiver-pierre-le-fouineur-partie-3.html",
+          "image": "79-traineau-chiens.png"
+        },
+        {
+          "part": 4,
+          "file": "79-l-hiver-pierre-le-fouineur-partie-4.html",
+          "publish_date": "2026-07-10",
+          "status": "queued",
+          "queue_file": "episodes-queue/79-l-hiver-pierre-le-fouineur-partie-4.html",
+          "image": "79-feu-bois-hiver.png"
+        }
+      ]
+    }
+  ]
+}

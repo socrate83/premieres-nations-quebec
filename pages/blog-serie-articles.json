@@ -1,6 +1,6 @@
 {
   "baseUrl": "",
-  "introNote": "Tous les articles numérotés du site (#1 à #78 et les prochains) : séries de 10 articles (Série 1 = #1–#10, Série 2 = #11–#20, …). Mettre à jour via scripts/reorganize-blog-series.py après chaque nouveau numéro.",
+  "introNote": "Tous les articles numérotés du site (#1 à #79 et les prochains) : séries de 10 articles (Série 1 = #1–#10, Série 2 = #11–#20, …). Mettre à jour via scripts/reorganize-blog-series.py après chaque nouveau numéro.",
   "featured": {
     "n": "★",
     "title": "La Famille et les Premières Nations",
@@ -464,7 +464,7 @@
       ]
     },
     {
-      "label": "Série 8 — articles 71 à 78",
+      "label": "Série 8 — articles 71 à 79",
       "items": [
         {
           "n": "71",
@@ -513,13 +513,19 @@
           "title": "Le Feu sans allumettes — Liturgie des Anciens (Carnet n° 3)",
           "teaser": "Friction, cercle sacré et prière du feu : le carnet n° 3 de Pierre le Fouineur sur l'allumage du feu et le respect des savoirs des Premières Nations du Québec.",
           "file": "78-le-feu-pierre-le-fouineur.html"
+        },
+        {
+          "n": "79",
+          "title": "L'Hiver sur le territoire — Partie 1 (Carnet n° 4)",
+          "teaser": "C'est quoi l'hiver au Québec : neige, glace, froid et vigilance sur le territoire — le carnet n° 4 de Pierre le Fouineur, publié en quatre parties.",
+          "file": "79-l-hiver-pierre-le-fouineur.html"
         }
       ]
     }
   ],
   "stats": {
-    "articlesNumbered": 78,
+    "articlesNumbered": 79,
     "withFeatured": true,
-    "nextArticle": 79
+    "nextArticle": 80
   }
 }

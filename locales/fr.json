@@ -11,13 +11,13 @@
   },
   "nav": {
     "home": "🏠 Accueil",
-    "articles": "📚 Articles 1–78",
+    "articles": "📚 Articles 1–79",
     "nations": "📰 Nations",
     "videos": "🎬 Vidéos",
     "audio": "📻 Audio",
     "podcasts": "🎙️ Podcasts",
     "backHome": "← Accueil",
-    "allArticles": "📚 Tous les articles (1–78)"
+    "allArticles": "📚 Tous les articles (1–79)"
   },
   "home": {
     "heroEyebrow": "Série complète · 11 nations + Inuit",
@@ -34,9 +34,9 @@
     "introP2": "Cette série d'articles vous invite à découvrir les 11 Premières Nations et les Inuit du Nunavik — leur histoire, leur culture, leurs traditions et leur place dans le Québec d'aujourd'hui. Une invitation au respect et à la connaissance.",
     "nationsTitle": "Les Nations",
     "nationsSub": "Cliquez sur une nation pour lire son article",
-    "serieTitle": "Série thématique — Les articles (78)",
-    "serieSub": "8 séries de dix articles (#1 à #78) : spiritualité, histoire, savoir-faire québécois, Sagesse Oubliée, culture vivante… Chaque carte ouvre l'article complet.",
-    "serieNotice": "Tous les articles au même endroit. Série 1 (#1–#10) à Série 8 (#71–#78) — lecture vocale sur chaque page.",
+    "serieTitle": "Série thématique — Les articles (79)",
+    "serieSub": "8 séries de dix articles (#1 à #79) : spiritualité, histoire, savoir-faire québécois, Sagesse Oubliée, culture vivante… Chaque carte ouvre l'article complet.",
+    "serieNotice": "Tous les articles au même endroit. Série 1 (#1–#10) à Série 8 (#71–#79) — lecture vocale sur chaque page.",
     "serieNoticeLink": "Liste complète →",
     "serieFeatured": "Coup de cœur",
     "serieRead": "Lire l'article",
@@ -49,7 +49,7 @@
     "communityP": "Partagez ces articles, discutez, découvrez davantage sur les peuples autochtones du Québec.",
     "communityFb": "📘 Rejoindre le groupe Facebook",
     "communitySite": "🌐 Site de la série",
-    "seeAllArticles": "📚 Voir tous les articles (#1 à #78) →",
+    "seeAllArticles": "📚 Voir tous les articles (#1 à #79) →",
     "nationCards": {
       "abenaquis": {
         "tag": "Algonquienne · Montérégie",
@@ -121,8 +121,8 @@
   },
   "articlesPage": {
     "title": "📚 Tous les articles",
-    "intro": "Série numérotée #1 à #78 — chaque article propose la lecture vocale (▶ Écouter).",
-    "metaTitle": "Tous les articles (1–78) — Premières Nations du Québec",
+    "intro": "Série numérotée #1 à #79 — chaque article propose la lecture vocale (▶ Écouter).",
+    "metaTitle": "Tous les articles (1–79) — Premières Nations du Québec",
     "seriesHeading": "Série {num} — articles {start} à {end}"
   },
   "videosPage": {
