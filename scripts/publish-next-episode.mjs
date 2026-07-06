@@ -166,6 +166,7 @@ function main() {
 
   if (process.env.GITHUB_ACTIONS !== 'true') {
     console.log('Hors CI — fichiers écrits localement :', published.join(', '));
+    publishFacebook();
     return;
   }
 
@@ -179,6 +180,26 @@ function main() {
       ...localeFiles,
     ],
   );
+
+  publishFacebook();
+}
+
+function publishFacebook() {
+  try {
+    execSync('python scripts/publish-facebook-episodes.py', { cwd: ROOT, stdio: 'inherit' });
+  } catch (err) {
+    console.warn('Facebook groupe :', err.message || err);
+    return;
+  }
+  if (process.env.GITHUB_ACTIONS !== 'true') return;
+  try {
+    execSync('git add episodes-queue/episodes-queue.json', { cwd: ROOT, stdio: 'pipe' });
+    execSync('git diff --cached --quiet', { cwd: ROOT, stdio: 'pipe' });
+  } catch {
+    execSync('git commit -m "Facebook auto #79 — statut episodes-queue"', { cwd: ROOT, stdio: 'inherit' });
+    execSync('git pull --rebase origin main', { cwd: ROOT, stdio: 'inherit' });
+    execSync('git push origin main', { cwd: ROOT, stdio: 'inherit' });
+  }
 }
 
 main();

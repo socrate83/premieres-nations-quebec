@@ -6,6 +6,7 @@
       "title": "L'Hiver sur le territoire",
       "start_date": "2026-07-04",
       "interval_days": 2,
+      "facebook_script": "episodes-queue/facebook-scripts/79-hiver-script-facebook.txt",
       "parts": [
         {
           "part": 1,
@@ -13,7 +14,9 @@
           "publish_date": "2026-07-04",
           "status": "published",
           "i18n_status": "done",
-          "i18n_on": "2026-07-04"
+          "i18n_on": "2026-07-04",
+          "fb_status": "pending",
+          "fb_script_part": 1
         },
         {
           "part": 2,
@@ -24,7 +27,9 @@
           "image": "79-raquettes-traces.png",
           "published_on": "2026-07-06",
           "i18n_status": "done",
-          "i18n_on": "2026-07-06"
+          "i18n_on": "2026-07-06",
+          "fb_status": "pending",
+          "fb_script_part": 2
         },
         {
           "part": 3,
@@ -32,7 +37,8 @@
           "publish_date": "2026-07-08",
           "status": "queued",
           "queue_file": "episodes-queue/79-l-hiver-pierre-le-fouineur-partie-3.html",
-          "image": "79-traineau-chiens.png"
+          "image": "79-traineau-chiens.png",
+          "fb_script_part": 3
         },
         {
           "part": 4,
@@ -40,7 +46,8 @@
           "publish_date": "2026-07-10",
           "status": "queued",
           "queue_file": "episodes-queue/79-l-hiver-pierre-le-fouineur-partie-4.html",
-          "image": "79-feu-bois-hiver.png"
+          "image": "79-feu-bois-hiver.png",
+          "fb_script_part": 4
         }
       ]
     }
