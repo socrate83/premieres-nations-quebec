@@ -101,7 +101,8 @@ function gitCommitPush(message, extraFiles = []) {
     return;
   } catch {
     execSync(`git commit -m ${JSON.stringify(message)}`, { cwd: ROOT, stdio: 'inherit' });
-    execSync('git push', { cwd: ROOT, stdio: 'inherit' });
+    execSync('git pull --rebase origin main', { cwd: ROOT, stdio: 'inherit' });
+    execSync('git push origin main', { cwd: ROOT, stdio: 'inherit' });
   }
 }
 

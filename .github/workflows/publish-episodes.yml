@@ -5,8 +5,8 @@ name: Publier épisodes (#79+)
 on:
   workflow_dispatch:
   schedule:
-    # ~03 h Québec (été) — même créneau que les traductions
-    - cron: '0 7 * * *'
+    # ~03 h 30 Québec (été) — 30 min après traductions nocturnes (évite conflit git push)
+    - cron: '30 7 * * *'
 
 permissions:
   contents: write

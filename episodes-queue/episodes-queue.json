@@ -19,9 +19,12 @@
           "part": 2,
           "file": "79-l-hiver-pierre-le-fouineur-partie-2.html",
           "publish_date": "2026-07-06",
-          "status": "queued",
+          "status": "published",
           "queue_file": "episodes-queue/79-l-hiver-pierre-le-fouineur-partie-2.html",
-          "image": "79-raquettes-traces.png"
+          "image": "79-raquettes-traces.png",
+          "published_on": "2026-07-06",
+          "i18n_status": "done",
+          "i18n_on": "2026-07-06"
         },
         {
           "part": 3,
