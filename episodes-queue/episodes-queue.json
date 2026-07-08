@@ -24,7 +24,7 @@
           "publish_date": "2026-07-06",
           "status": "published",
           "queue_file": "episodes-queue/79-l-hiver-pierre-le-fouineur-partie-2.html",
-          "image": "79-raquettes-traces.png",
+          "image": "79-p2-traces-neige.jpg",
           "published_on": "2026-07-06",
           "i18n_status": "done",
           "i18n_on": "2026-07-06",
@@ -37,7 +37,7 @@
           "publish_date": "2026-07-08",
           "status": "published",
           "queue_file": "episodes-queue/79-l-hiver-pierre-le-fouineur-partie-3.html",
-          "image": "79-traineau-chiens.png",
+          "image": "79-p3-traineau-chiens.jpg",
           "fb_script_part": 3,
           "published_on": "2026-07-08",
           "i18n_status": "done",
@@ -49,7 +49,7 @@
           "publish_date": "2026-07-10",
           "status": "queued",
           "queue_file": "episodes-queue/79-l-hiver-pierre-le-fouineur-partie-4.html",
-          "image": "79-feu-bois-hiver.png",
+          "image": "79-p4-bois.jpg",
           "fb_script_part": 4
         }
       ]
