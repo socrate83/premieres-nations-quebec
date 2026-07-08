@@ -35,10 +35,13 @@
           "part": 3,
           "file": "79-l-hiver-pierre-le-fouineur-partie-3.html",
           "publish_date": "2026-07-08",
-          "status": "queued",
+          "status": "published",
           "queue_file": "episodes-queue/79-l-hiver-pierre-le-fouineur-partie-3.html",
           "image": "79-traineau-chiens.png",
-          "fb_script_part": 3
+          "fb_script_part": 3,
+          "published_on": "2026-07-08",
+          "i18n_status": "done",
+          "i18n_on": "2026-07-08"
         },
         {
           "part": 4,
