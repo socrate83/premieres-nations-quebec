@@ -47,10 +47,13 @@
           "part": 4,
           "file": "79-l-hiver-pierre-le-fouineur-partie-4.html",
           "publish_date": "2026-07-10",
-          "status": "queued",
+          "status": "published",
           "queue_file": "episodes-queue/79-l-hiver-pierre-le-fouineur-partie-4.html",
           "image": "79-p4-bois.jpg",
-          "fb_script_part": 4
+          "fb_script_part": 4,
+          "published_on": "2026-07-10",
+          "i18n_status": "done",
+          "i18n_on": "2026-07-10"
         }
       ]
     }
