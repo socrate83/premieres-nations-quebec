@@ -1,6 +1,6 @@
 {
   "baseUrl": "",
-  "introNote": "Tous les articles numérotés du site (#1 à #79 et les prochains) : séries de 10 articles (Série 1 = #1–#10, Série 2 = #11–#20, …). Mettre à jour via scripts/reorganize-blog-series.py après chaque nouveau numéro.",
+  "introNote": "Tous les articles numérotés du site (#1 à #80 et les prochains) : séries de 10 articles (Série 1 = #1–#10, Série 2 = #11–#20, …). Mettre à jour via scripts/reorganize-blog-series.py après chaque nouveau numéro.",
   "featured": {
     "n": "★",
     "title": "La Famille et les Premières Nations",
@@ -464,7 +464,7 @@
       ]
     },
     {
-      "label": "Série 8 — articles 71 à 79",
+      "label": "Série 8 — articles 71 à 80",
       "items": [
         {
           "n": "71",
@@ -519,13 +519,19 @@
           "title": "L'Hiver sur le territoire — Partie 1 (Carnet n° 4)",
           "teaser": "C'est quoi l'hiver au Québec : neige, glace, froid et vigilance sur le territoire — le carnet n° 4 de Pierre le Fouineur, publié en quatre parties.",
           "file": "79-l-hiver-pierre-le-fouineur.html"
+        },
+        {
+          "n": "80",
+          "title": "Les routes d'eau et les portages de Pierre le Fouineur",
+          "teaser": "Carnets 1892-1921 : déplacements sur l'eau et à terre, avec les dates et points de repère du parcours.",
+          "file": "80-les-routes-deau-et-portages-pierre-le-fouineur.html"
         }
       ]
     }
   ],
   "stats": {
-    "articlesNumbered": 79,
+    "articlesNumbered": 80,
     "withFeatured": true,
-    "nextArticle": 80
+    "nextArticle": 81
   }
 }
