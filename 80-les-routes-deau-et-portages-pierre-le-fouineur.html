@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>#80 — Les routes d'eau et les portages de Pierre le Fouineur</title>
+<meta name="description" content="#80 — Itineraires de Pierre le Fouineur sur l'eau et a terre (1892-1921) : dates, portages, dangers et points d'echange avec les nations.">
+<link rel="stylesheet" href="lang-switcher.css">
+<script src="article-i18n.js" defer></script>
+<script src="article-share.js" defer></script>
+<script src="lang-switcher.js" defer></script>
+<meta property="og:type" content="article">
+<meta property="og:locale" content="fr_FR">
+<meta property="og:title" content="#80 — Les routes d'eau et les portages de Pierre le Fouineur">
+<meta property="og:description" content="Du Saguenay au Petit-Saut : les deplacements de Pierre, entre canot, rapides, cascades et marches de portage.">
+<meta property="og:url" content="https://socrate83.github.io/premieres-nations-quebec/80-les-routes-deau-et-portages-pierre-le-fouineur.html">
+<meta property="og:image" content="https://socrate83.github.io/premieres-nations-quebec/images/articles/79-p2-traces-neige.jpg">
+<meta name="twitter:card" content="summary_large_image">
+<style>
+body{font-family:Georgia,serif;max-width:980px;margin:0 auto;padding:40px 20px;line-height:1.8;background:#fcfaf7;color:#333}
+h1{color:#2c5530;border-bottom:4px solid #d4a574;padding-bottom:15px;font-size:2em;line-height:1.2}
+h2{color:#2c5530;margin-top:40px;border-left:6px solid #d4a574;padding-left:18px;font-size:1.35em}
+h3{color:#4a3728;margin-top:24px;font-size:1.1em}
+.meta{color:#666;font-size:.95em;margin-bottom:26px;font-style:italic;border-bottom:1px solid #ddd;padding-bottom:14px}
+.lead{font-size:1.1em;font-weight:bold;color:#2c5530;border:2px solid #d4a574;padding:18px;margin:28px 0;background:#fff;border-radius:10px}
+.highlight{background:#f4ece4;padding:20px;border-radius:12px;border-right:8px solid #2c5530;margin:24px 0}
+.renvoi{background:#eef5ee;border-left:4px solid #2c5530;padding:14px 16px;margin:20px 0;font-size:.95em}
+.map-static{position:relative;display:block;width:100%;max-width:860px}
+.map-static img{display:block;width:100%;border:2px solid #b8915f;border-radius:10px;box-shadow:0 4px 14px rgba(0,0,0,.18)}
+.map-point{position:absolute;width:14px;height:14px;border-radius:50%;border:2px solid #111;box-shadow:0 0 0 2px rgba(255,255,255,.7);transform:translate(-50%,-50%)}
+.map-point.eau{background:#0b4f8a}
+.map-point.portage{background:#c75b00}
+.map-point.arrivee{background:#17733f}
+.map-point.rencontre{background:#6d2ea4}
+.map-wrap{display:grid;grid-template-columns:1.3fr .7fr;gap:16px;margin:24px 0}
+#pn-map{height:520px;border-radius:12px;border:2px solid #b8915f;box-shadow:0 6px 20px rgba(0,0,0,.18);background:#f4ecdd;overflow:hidden;position:relative}
+#pn-map-inner{position:absolute;inset:0;transform-origin:center center;transition:transform .15s ease}
+#pn-map-img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;display:block}
+#pn-route{position:absolute;inset:0;width:100%;height:100%;pointer-events:none}
+#pn-points,#pn-labels{position:absolute;inset:0}
+.pn-dot{position:absolute;transform:translate(-50%,-50%);width:16px;height:16px;border-radius:50%;border:2px solid #111;cursor:pointer;box-shadow:0 0 0 2px rgba(255,255,255,.65)}
+.pn-dot:focus,.pn-dot:hover{outline:none;box-shadow:0 0 0 3px rgba(0,0,0,.25)}
+.pn-dot.active{width:19px;height:19px;border-width:3px}
+.pn-label{position:absolute;transform:translate(-50%,-50%);background:rgba(255,255,255,.95);border:1px solid #5e4426;border-radius:4px;padding:3px 7px;font-size:13px;font-weight:700;color:#222;box-shadow:0 1px 4px rgba(0,0,0,.25);white-space:nowrap}
+.map-tools{display:flex;gap:8px;margin:8px 0 0}
+.map-tools button{background:#2c5530;color:#fff;border:none;border-radius:6px;padding:7px 12px;cursor:pointer;font-weight:700}
+.map-tools button:hover{background:#1f3e24}
+.timeline{background:#fff;border:1px solid #d8c7ad;border-radius:12px;padding:12px;max-height:460px;overflow:auto}
+.timeline button{display:block;width:100%;text-align:left;margin:0 0 8px;padding:10px;border:1px solid #d8c7ad;border-radius:8px;background:#faf7f2;cursor:pointer}
+.timeline button:hover{background:#f1e8dc}
+.timeline .date{font-weight:bold;color:#2c5530}
+.legend{display:flex;gap:12px;flex-wrap:wrap;font-size:.9em;margin-top:8px}
+.dot{display:inline-block;width:10px;height:10px;border-radius:50%;margin-right:6px}
+.tableau{width:100%;border-collapse:collapse;margin:18px 0;font-size:.92em}
+.tableau th,.tableau td{border:1px solid #ccc;padding:8px 10px;text-align:left;vertical-align:top}
+.tableau th{background:#eef5ee;color:#2c5530}
+.footer-sources{margin-top:28px;padding:18px;background:#eee;border-radius:8px;font-size:.9em;color:#555}
+.nav-art{display:grid;grid-template-columns:1fr auto 1fr;gap:10px;margin:36px auto;max-width:900px;padding:0 20px}
+.nav-art a{text-decoration:none;background:#2c5530;color:#fff;padding:10px 18px;border-radius:6px;font-size:.9em}
+.nav-art a.nav-next{justify-self:end;background:#c8920a;color:#000;font-weight:700}
+@media (max-width:900px){.map-wrap{grid-template-columns:1fr}#pn-map,.timeline{max-height:none}}
+</style>
+<link rel="stylesheet" href="style.css">
+</head>
+<body data-pn-article-slug="80-les-routes-deau-et-portages-pierre-le-fouineur">
+
+<style id="pn-nav-accueil-style">
+.pn-nav-accueil{position:sticky;top:0;z-index:500;display:flex;flex-wrap:wrap;gap:.5rem 1rem;align-items:center;justify-content:center;padding:.65rem 1rem;background:#f4efe6;border-bottom:2px solid #8b4513;font-family:'Lato',Georgia,system-ui,sans-serif}
+.pn-nav-accueil a{color:#2c5530;text-decoration:none;font-weight:700;font-size:.82rem;padding:.45rem 1rem;border-radius:50px;border:1px solid rgba(44,85,48,.35)}
+.pn-nav-accueil a:hover{background:#2c5530;color:#fff}
+.pn-nav-accueil a.pn-nav-accueil__home{background:#2c5530;color:#fff}
+</style>
+<nav class="pn-nav-accueil" aria-label="Navigation">
+  <a class="pn-nav-accueil__home" href="Home.html">← Accueil</a>
+  <a href="Carnets.html">📜 Carnets</a>
+  <a href="Articles.html">📚 Articles</a>
+</nav>
+
+<article id="pn-article-root" style="max-width:920px;margin:0 auto;padding:20px">
+<h1>🚣 #80 — Les routes d'eau et les portages de Pierre le Fouineur<br><span style="font-size:.55em;color:#d4a574">Carnets 1892-1921 · Deplacements sur l'eau et a terre</span></h1>
+<div class="meta">Article #80 — Pierre le Fouineur, coureur des bois parmi les Premieres Nations du Quebec (fin XIXe - debut XXe).</div>
+
+<div class="highlight">
+<p><strong>Demande de Jean-Claude :</strong> raconter les chemins de Pierre sur les voies navigables <strong>et</strong> sur les sentiers de portage, avec les dates et les details de parcours consultables au clic.</p>
+</div>
+
+<div class="lead">A l'epoque de Pierre, la riviere est l'autoroute. Mais chaque rapide, chaque chute et chaque passage rocheux impose un choix : continuer en canot au risque de chavirer, ou sortir sur la berge et porter la charge a dos d'homme.</div>
+
+<h2>1) Parcours dates et passages</h2>
+<p>La carte a ete retiree sur demande (blocage reseau). Le detail reste ci-dessous avec les dates, les secteurs, le type de voie (eau/portage) et les notes de parcours.</p>
+<figure style="margin:18px 0 26px">
+  <div class="map-static">
+    <img src="images/articles/80-carte-quebec-routiere.png" alt="Carte routiere du Quebec et des regions traverses par Pierre">
+    <!-- Points principaux du parcours (position en pourcentage sur l'image) -->
+    <span class="map-point eau" style="left:48%;top:34%" title="1892-06-12 Depart Saguenay"></span>
+    <span class="map-point portage" style="left:47%;top:31%" title="1892-06-14 Portage Chute-Homme"></span>
+    <span class="map-point arrivee" style="left:45%;top:36%" title="1892-06-20 Arrivee Chicoutimi"></span>
+    <span class="map-point eau" style="left:56%;top:39%" title="1900-07-05 Depart lac Matapedia"></span>
+    <span class="map-point portage" style="left:58%;top:38%" title="1900-07-08 Portage Petite Riviere-Bleue"></span>
+    <span class="map-point eau" style="left:64%;top:18%" title="1913-05-12 Depart Sept-Iles"></span>
+    <span class="map-point portage" style="left:67%;top:19%" title="1913-05-14 Portage Roc de la Grotte"></span>
+    <span class="map-point rencontre" style="left:71%;top:20%" title="1913-05-20 Rencontre Mi'kmaq"></span>
+    <span class="map-point portage" style="left:50%;top:35%" title="1921-09-05 Portage Saut du Diable"></span>
+  </div>
+  <figcaption style="font-size:.9em;color:#666;margin-top:7px">Carte de contexte du Quebec (image fixe) avec points de reperes (eau, portage, arrivee, rencontre).</figcaption>
+</figure>
+
+<h2>2) Chronologie des segments de route</h2>
+<table class="tableau">
+  <thead>
+    <tr><th>Date</th><th>Secteur</th><th>Voie</th><th>Detail utile</th></tr>
+  </thead>
+  <tbody>
+    <tr><td>12 juin 1892</td><td>Saguenay</td><td>Eau</td><td>Depart en canot, courant fort, cap maintenu rive sud.</td></tr>
+    <tr><td>14 juin 1892</td><td>Chute-Homme</td><td>Terre (portage 3,5 km)</td><td>Contournement de rapides, charge repartie en 2 voyages.</td></tr>
+    <tr><td>20 juin 1892</td><td>Chicoutimi</td><td>Eau + arrivee</td><td>Depot de fourrure et ravitaillement.</td></tr>
+    <tr><td>08 juillet 1900</td><td>Matapedia</td><td>Terre (portage 2 km)</td><td>Bancs de sable, canot soulage puis remis a l'eau.</td></tr>
+    <tr><td>14 mai 1913</td><td>Roc de la Grotte</td><td>Terre (portage 1,5 km)</td><td>Passage cote, pente raide, guidage a la perche.</td></tr>
+    <tr><td>05 septembre 1921</td><td>Saut du Diable</td><td>Terre (portage 2 km)</td><td>Chute estimee ~15 m, franchissement a pied sur roche humide.</td></tr>
+  </tbody>
+</table>
+
+<h2>3) Ce que le parcours montre concretement</h2>
+<h3>3.1 Eau = vitesse, terre = securite</h3>
+<p>Les carnets montrent une logique simple : avancer vite quand la riviere est lisible, sortir a terre des que le risque depasse le gain de temps.</p>
+
+<h3>3.2 Les portages sont aussi des lieux d'apprentissage</h3>
+<p>Pierre note les aides recues de familles innues, atikamekw et autres groupes rencontres : lecture des berges, choix des appuis, et savoir de saison sur l'etat des passages.</p>
+
+<h3>3.3 Chaque date est un point de decision</h3>
+<p>Les dates ne sont pas un decor : elles documentent les changements de strategie (debit, glace, charge, meteo) et expliquent pourquoi certains troncons sont faits en deux temps.</p>
+
+<h2>4) Extraits narratifs (carnet de route)</h2>
+<blockquote class="quote">« Le Saguenay m'a pousse comme une bete vive ; j'ai serre la rive et compte les remous avant d'oser traverser. »</blockquote>
+<blockquote class="quote">« Au Chute-Homme, pas d'heroisme inutile : on prend la terre, on porte, on revient chercher le reste. »</blockquote>
+<blockquote class="quote">« Au Saut du Diable, le vacarme couvre les voix ; on avance en file et on pose le pied ou l'aine montre. »</blockquote>
+
+<div class="renvoi">
+  <strong>Renvoi de serie :</strong> pour les techniques de chasse et peche, voir <a href="76-les-outils-de-chasse.html">#76</a> et <a href="77-les-techniques-de-peche.html">#77</a>. Ici, on reste centre sur les <strong>deplacements</strong> et les decisions de route.
+</div>
+
+<div class="footer-sources">
+  <strong>Sources de travail (base narrative + verification geographique) :</strong><br>
+  - Notes de carnet de Pierre le Fouineur (selection de passages 1892-1921)<br>
+  - Reperes toponymiques regionaux (Saguenay, Matapedia, Cote-Nord, Bas-Saint-Laurent)<br>
+  - Logique de portage historique (lecture du courant, contournement de rapides, franchissements a charge)
+</div>
+</article>
+
+<nav class="nav-art">
+  <a href="79-l-hiver-pierre-le-fouineur-partie-4.html">← #79 Partie 4</a>
+  <a href="Carnets.html">📜 Carnets</a>
+  <a class="nav-next" href="Articles.html">Articles →</a>
+</nav>
+
+
+</body>
+</html>
