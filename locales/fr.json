@@ -50,6 +50,10 @@
     "communityFb": "📘 Rejoindre le groupe Facebook",
     "communitySite": "🌐 Site de la série",
     "seeAllArticles": "📚 Voir tous les articles (#1 à #80) →",
+    "carnetsTitle": "📜 Les Carnets de Pierre le Fouineur",
+    "carnetsDesc": "Récits d'un coureur des bois à travers les 11 Premières Nations — chasse, pêche, feu, hiver, portages. 5 carnets publiés. Lecture vocale · EN / ES.",
+    "carnetsDiscover": "Découvrir les carnets →",
+    "carnetsLatest": "Dernier : Les routes d'eau (n° 5) →",
     "nationCards": {
       "abenaquis": {
         "tag": "Algonquienne · Montérégie",
@@ -118,6 +122,30 @@
         "alt": "Inuit"
       }
     }
+  },
+  "carnetsPage": {
+    "metaTitle": "Les Carnets de Pierre le Fouineur — Premières Nations du Québec",
+    "title": "📜 Les Carnets de Pierre le Fouineur",
+    "intro": "Récits laissés par l'arrière-grand-père de mon ami Pierre — coureur des bois, troc avec les Premières Nations, mine de savoirs sur les onze nations du Québec. Je transmets tel qu'écrit, sans rien inventer.",
+    "portrait": "<strong>Pierre le Fouineur</strong> — coureur des bois au Québec. Il marchait les portages, écoutait les aînés, notait la nuit dans des carnets de cuir. Chaque carnet parcourt un savoir : chasse, pêche, feu, hiver, portages… Texte ancien, partagé en respect.",
+    "readNotebook": "Lire le carnet →",
+    "readPart1": "Lire la partie 1 →",
+    "seeAllArticles": "Voir les 80 articles de la série →",
+    "card76tag": "Carnet n° 1 · Article #76",
+    "card76title": "🏹 Les Techniques de Chasse",
+    "card76desc": "Arcs, canots, pièges, tabac sacré — onze nations, onze philosophies de la chasse.",
+    "card77tag": "Carnet n° 2 · Article #77",
+    "card77title": "🎣 Les Techniques de Pêche",
+    "card77desc": "Harpons, nasses, protocoles du tabac — respect du poisson et de l'eau.",
+    "card78tag": "Carnet n° 3 · Article #78",
+    "card78title": "🔥 Le Feu sans allumettes",
+    "card78desc": "Friction, cercle sacré, prière du feu — une liturgie des Anciens.",
+    "card79tag": "Carnet n° 4 · Article #79",
+    "card79title": "❄️ L'Hiver sur le territoire",
+    "card79desc": "Neige, traces, traîneaux et feu d'hiver — reportage en <strong>4 parties</strong> (une tous les 2 jours).",
+    "card80tag": "Carnet n° 5 · Article #80",
+    "card80title": "🚣 Les routes d'eau et les portages",
+    "card80desc": "Carnets 1892-1921 : déplacements sur l'eau et à terre, avec les dates et points de repère du parcours."
   },
   "articlesPage": {
     "title": "📚 Tous les articles",

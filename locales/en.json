@@ -50,6 +50,10 @@
     "communityFb": "📘 Join the Facebook group",
     "communitySite": "🌐 Series website",
     "seeAllArticles": "📚 See all articles (#1 to #80) →",
+    "carnetsTitle": "📜 Pierre le Fouineur's Notebooks",
+    "carnetsDesc": "Tales of a coureur des bois across Quebec's 11 First Nations — hunting, fishing, fire, winter, portages. 5 notebooks published. Read-aloud · EN / ES.",
+    "carnetsDiscover": "Explore the notebooks →",
+    "carnetsLatest": "Latest: Water routes (no. 5) →",
     "nationCards": {
       "abenaquis": {
         "tag": "Algonquian · Montérégie",
@@ -118,6 +122,30 @@
         "alt": "Inuit"
       }
     }
+  },
+  "carnetsPage": {
+    "metaTitle": "Pierre le Fouineur's Notebooks — First Nations of Quebec",
+    "title": "📜 Pierre le Fouineur's Notebooks",
+    "intro": "Stories left by my friend Pierre's great-grandfather — coureur des bois, trade with First Nations, a treasury of knowledge about Quebec's eleven nations. I pass them on as written, inventing nothing.",
+    "portrait": "<strong>Pierre le Fouineur</strong> — coureur des bois in Quebec. He walked the portages, listened to the Elders, wrote at night in leather notebooks. Each notebook explores one skill: hunting, fishing, fire, winter, portages… An old text, shared with respect.",
+    "readNotebook": "Read notebook →",
+    "readPart1": "Read part 1 →",
+    "seeAllArticles": "See all 80 articles in the series →",
+    "card76tag": "Notebook no. 1 · Article #76",
+    "card76title": "🏹 Hunting Techniques",
+    "card76desc": "Bows, canoes, traps, sacred tobacco — eleven nations, eleven philosophies of the hunt.",
+    "card77tag": "Notebook no. 2 · Article #77",
+    "card77title": "🎣 Fishing Techniques",
+    "card77desc": "Harpoons, traps, tobacco protocols — respect for fish and water.",
+    "card78tag": "Notebook no. 3 · Article #78",
+    "card78title": "🔥 Fire without matches",
+    "card78desc": "Friction, sacred circle, fire prayer — a liturgy of the Elders.",
+    "card79tag": "Notebook no. 4 · Article #79",
+    "card79title": "❄️ Winter on the territory",
+    "card79desc": "Snow, tracks, sleds and winter fire — a report in <strong>4 parts</strong> (one every 2 days).",
+    "card80tag": "Notebook no. 5 · Article #80",
+    "card80title": "🚣 Water routes and portages",
+    "card80desc": "Diaries 1892-1921: travel by water and land, with dates and landmarks along the route."
   },
   "articlesPage": {
     "title": "📚 All articles",

@@ -50,6 +50,10 @@
     "communityFb": "📘 Unirse al grupo de Facebook",
     "communitySite": "🌐 Sitio de la serie",
     "seeAllArticles": "📚 Ver todos los artículos (#1 a #80) →",
+    "carnetsTitle": "📜 Los Cuadernos de Pierre le Fouineur",
+    "carnetsDesc": "Relatos de un coureur des bois por las 11 Primeras Naciones — caza, pesca, fuego, invierno, portajes. 5 cuadernos publicados. Lectura en voz alta · EN / ES.",
+    "carnetsDiscover": "Descubrir los cuadernos →",
+    "carnetsLatest": "Último: Rutas de agua (n.° 5) →",
     "nationCards": {
       "abenaquis": {
         "tag": "Algonquiana · Montérégie",
@@ -118,6 +122,30 @@
         "alt": "Inuit"
       }
     }
+  },
+  "carnetsPage": {
+    "metaTitle": "Los Cuadernos de Pierre le Fouineur — Primeras Naciones de Québec",
+    "title": "📜 Los Cuadernos de Pierre le Fouineur",
+    "intro": "Relatos dejados por el bisabuelo de mi amigo Pierre — coureur des bois, trueque con las Primeras Naciones, mina de saberes sobre las once naciones de Québec. Los transmito tal como fueron escritos, sin inventar nada.",
+    "portrait": "<strong>Pierre le Fouineur</strong> — coureur des bois en Québec. Caminaba los portajes, escuchaba a los ancianos, anotaba de noche en cuadernos de cuero. Cada cuaderno recorre un saber: caza, pesca, fuego, invierno, portajes… Texto antiguo, compartido con respeto.",
+    "readNotebook": "Leer el cuaderno →",
+    "readPart1": "Leer la parte 1 →",
+    "seeAllArticles": "Ver los 80 artículos de la serie →",
+    "card76tag": "Cuaderno n.° 1 · Artículo #76",
+    "card76title": "🏹 Técnicas de caza",
+    "card76desc": "Arcos, canoas, trampas, tabaco sagrado — once naciones, once filosofías de la caza.",
+    "card77tag": "Cuaderno n.° 2 · Artículo #77",
+    "card77title": "🎣 Técnicas de pesca",
+    "card77desc": "Arpones, nasas, protocolos del tabaco — respeto del pez y del agua.",
+    "card78tag": "Cuaderno n.° 3 · Artículo #78",
+    "card78title": "🔥 Fuego sin cerillas",
+    "card78desc": "Fricción, círculo sagrado, oración del fuego — una liturgia de los Ancianos.",
+    "card79tag": "Cuaderno n.° 4 · Artículo #79",
+    "card79title": "❄️ El invierno en el territorio",
+    "card79desc": "Nieve, huellas, trineos y fuego de invierno — reportaje en <strong>4 partes</strong> (una cada 2 días).",
+    "card80tag": "Cuaderno n.° 5 · Artículo #80",
+    "card80title": "🚣 Rutas de agua y portajes",
+    "card80desc": "Cuadernos 1892-1921: desplazamientos por agua y tierra, con fechas y puntos de referencia del recorrido."
   },
   "articlesPage": {
     "title": "📚 Todos los artículos",
