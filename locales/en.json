@@ -11,13 +11,13 @@
   },
   "nav": {
     "home": "🏠 Home",
-    "articles": "📚 Articles 1–82",
+    "articles": "📚 Articles 1–81",
     "nations": "📰 Nations",
     "videos": "🎬 Videos",
     "audio": "📻 Audio",
     "podcasts": "🎙️ Podcasts",
     "backHome": "← Home",
-    "allArticles": "📚 All articles (1–82)"
+    "allArticles": "📚 All articles (1–81)"
   },
   "home": {
     "heroEyebrow": "Full series · 11 nations + Inuit",
@@ -34,8 +34,8 @@
     "introP2": "This series invites you to discover the 11 First Nations and the Inuit of Nunavik — their history, culture, traditions and place in Quebec today. An invitation to respect and understanding.",
     "nationsTitle": "The Nations",
     "nationsSub": "Click a nation to read its article",
-    "serieTitle": "Thematic series — Articles (82)",
-    "serieSub": "9 series (#1 to #82): spirituality, history, Quebec know-how, forgotten wisdom, living culture… Each card opens the full article.",
+    "serieTitle": "Thematic series — Articles (81)",
+    "serieSub": "9 series (#1 to #81): spirituality, history, Quebec know-how, forgotten wisdom, living culture… Each card opens the full article.",
     "serieNotice": "All articles in one place. Series 1 (#1–#10) to Series 9 (#81–#90) — listen button (▶ Listen) on each page.",
     "serieNoticeLink": "Full list →",
     "serieFeatured": "Featured",
@@ -48,7 +48,7 @@
     "communityTitle": "🤝 Join the community",
     "communityFb": "📘 Join the Facebook group",
     "communitySite": "🌐 Series website",
-    "seeAllArticles": "📚 See all articles (#1 to #82) →",
+    "seeAllArticles": "📚 See all articles (#1 to #81) →",
     "carnetsTitle": "📜 Pierre le Fouineur's Notebooks",
     "carnetsDesc": "Tales of a coureur des bois across Quebec's 11 First Nations — hunting, fishing, fire, winter, portages. 5 notebooks published. Read-aloud · EN / ES.",
     "carnetsDiscover": "Explore the notebooks →",
@@ -207,8 +207,8 @@
   },
   "articlesPage": {
     "title": "📚 All articles",
-    "intro": "Numbered series #1 to #82 — each article includes read-aloud (▶ Listen).",
-    "metaTitle": "All articles (1–82) — First Nations of Quebec",
+    "intro": "Numbered series #1 to #81 — each article includes read-aloud (▶ Listen).",
+    "metaTitle": "All articles (1–81) — First Nations of Quebec",
     "seriesHeading": "Series {num} — articles {start} to {end}"
   },
   "videosPage": {

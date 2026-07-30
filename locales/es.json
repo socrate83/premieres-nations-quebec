@@ -11,13 +11,13 @@
   },
   "nav": {
     "home": "🏠 Inicio",
-    "articles": "📚 Artículos 1–82",
+    "articles": "📚 Artículos 1–81",
     "nations": "📰 Naciones",
     "videos": "🎬 Videos",
     "audio": "📻 Audio",
     "podcasts": "🎙️ Podcasts",
     "backHome": "← Inicio",
-    "allArticles": "📚 Todos los artículos (1–82)"
+    "allArticles": "📚 Todos los artículos (1–81)"
   },
   "home": {
     "heroEyebrow": "Serie completa · 11 naciones + Inuit",
@@ -34,8 +34,8 @@
     "introP2": "Esta serie le invita a descubrir las 11 Primeras Naciones y los Inuit del Nunavik — su historia, cultura, tradiciones y lugar en el Québec de hoy. Una invitación al respeto y al conocimiento.",
     "nationsTitle": "Las Naciones",
     "nationsSub": "Haga clic en una nación para leer su artículo",
-    "serieTitle": "Serie temática — Artículos (82)",
-    "serieSub": "9 series (#1 a #82): espiritualidad, historia, saberes de Québec, sabiduría olvidada, cultura viva… Cada tarjeta abre el artículo completo.",
+    "serieTitle": "Serie temática — Artículos (81)",
+    "serieSub": "9 series (#1 a #81): espiritualidad, historia, saberes de Québec, sabiduría olvidada, cultura viva… Cada tarjeta abre el artículo completo.",
     "serieNotice": "Todos los artículos en un solo lugar. Serie 1 (#1–#10) a Serie 9 (#81–#90) — lectura en voz alta (▶ Escuchar) en cada página.",
     "serieNoticeLink": "Lista completa →",
     "serieFeatured": "Destacado",
@@ -48,7 +48,7 @@
     "communityTitle": "🤝 Únase a la comunidad",
     "communityFb": "📘 Unirse al grupo de Facebook",
     "communitySite": "🌐 Sitio de la serie",
-    "seeAllArticles": "📚 Ver todos los artículos (#1 a #82) →",
+    "seeAllArticles": "📚 Ver todos los artículos (#1 a #81) →",
     "carnetsTitle": "📜 Los Cuadernos de Pierre le Fouineur",
     "carnetsDesc": "Relatos de un coureur des bois por las 11 Primeras Naciones — caza, pesca, fuego, invierno, portajes. 5 cuadernos publicados. Lectura en voz alta · EN / ES.",
     "carnetsDiscover": "Descubrir los cuadernos →",
@@ -207,8 +207,8 @@
   },
   "articlesPage": {
     "title": "📚 Todos los artículos",
-    "intro": "Serie numerada #1 a #82 — cada artículo incluye lectura en voz alta (▶ Escuchar).",
-    "metaTitle": "Todos los artículos (1–82) — Primeras Naciones de Québec",
+    "intro": "Serie numerada #1 a #81 — cada artículo incluye lectura en voz alta (▶ Escuchar).",
+    "metaTitle": "Todos los artículos (1–81) — Primeras Naciones de Québec",
     "seriesHeading": "Serie {num} — artículos {start} a {end}"
   },
   "videosPage": {

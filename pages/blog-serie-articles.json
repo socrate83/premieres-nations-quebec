@@ -1,6 +1,6 @@
 {
   "baseUrl": "",
-  "introNote": "Tous les articles numérotés du site (#1 à #82 et les prochains) : séries de 10 articles (Série 1 = #1–#10, Série 2 = #11–#20, …). Mettre à jour via scripts/reorganize-blog-series.py après chaque nouveau numéro.",
+  "introNote": "Tous les articles numérotés du site (#1 à #81 et les prochains) : séries de 10 articles (Série 1 = #1–#10, Série 2 = #11–#20, …). Mettre à jour via scripts/reorganize-blog-series.py après chaque nouveau numéro.",
   "featured": {
     "n": "★",
     "title": "La Famille et les Premières Nations",
@@ -532,17 +532,17 @@
       "label": "Série 9 — articles 81 à 90",
       "items": [
         {
-          "n": "82",
+          "n": "81",
           "title": "Les habits des Premières Nations du Québec",
           "teaser": "Au-delà du cuir et de la fourrure : matériaux, motifs, manteaux peints naskapi, regalia de pow-wow et coiffes Gustoweh.",
-          "file": "82-les-habits-des-premieres-nations.html"
+          "file": "81-les-habits-des-premieres-nations.html"
         }
       ]
     }
   ],
   "stats": {
-    "articlesNumbered": 82,
+    "articlesNumbered": 81,
     "withFeatured": true,
-    "nextArticle": 83
+    "nextArticle": 82
   }
 }
