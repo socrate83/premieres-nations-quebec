@@ -11,13 +11,13 @@
   },
   "nav": {
     "home": "🏠 Accueil",
-    "articles": "📚 Articles 1–80",
+    "articles": "📚 Articles 1–82",
     "nations": "📰 Nations",
     "videos": "🎬 Vidéos",
     "audio": "📻 Audio",
     "podcasts": "🎙️ Podcasts",
     "backHome": "← Accueil",
-    "allArticles": "📚 Tous les articles (1–80)"
+    "allArticles": "📚 Tous les articles (1–82)"
   },
   "home": {
     "heroEyebrow": "Série complète · 11 nations + Inuit",
@@ -34,9 +34,9 @@
     "introP2": "Cette série d'articles vous invite à découvrir les 11 Premières Nations et les Inuit du Nunavik — leur histoire, leur culture, leurs traditions et leur place dans le Québec d'aujourd'hui. Une invitation au respect et à la connaissance.",
     "nationsTitle": "Les Nations",
     "nationsSub": "Cliquez sur une nation pour lire son article",
-    "serieTitle": "Série thématique — Les articles (80)",
-    "serieSub": "8 séries de dix articles (#1 à #80) : spiritualité, histoire, savoir-faire québécois, Sagesse Oubliée, culture vivante… Chaque carte ouvre l'article complet.",
-    "serieNotice": "Tous les articles au même endroit. Série 1 (#1–#10) à Série 8 (#71–#80) — lecture vocale sur chaque page.",
+    "serieTitle": "Série thématique — Les articles (82)",
+    "serieSub": "9 séries (#1 à #82) : spiritualité, histoire, savoir-faire québécois, Sagesse Oubliée, culture vivante… Chaque carte ouvre l'article complet.",
+    "serieNotice": "Tous les articles au même endroit. Série 1 (#1–#10) à Série 9 (#81–#90) — lecture vocale sur chaque page.",
     "serieNoticeLink": "Liste complète →",
     "serieFeatured": "Coup de cœur",
     "serieRead": "Lire l'article",
@@ -48,7 +48,7 @@
     "communityTitle": "🤝 Rejoignez la communauté",
     "communityFb": "📘 Rejoindre le groupe Facebook",
     "communitySite": "🌐 Site de la série",
-    "seeAllArticles": "📚 Voir tous les articles (#1 à #80) →",
+    "seeAllArticles": "📚 Voir tous les articles (#1 à #82) →",
     "carnetsTitle": "📜 Les Carnets de Pierre le Fouineur",
     "carnetsDesc": "Récits d'un coureur des bois à travers les 11 Premières Nations — chasse, pêche, feu, hiver, portages. 5 carnets publiés. Lecture vocale · EN / ES.",
     "carnetsDiscover": "Découvrir les carnets →",
@@ -207,8 +207,8 @@
   },
   "articlesPage": {
     "title": "📚 Tous les articles",
-    "intro": "Série numérotée #1 à #80 — chaque article propose la lecture vocale (▶ Écouter).",
-    "metaTitle": "Tous les articles (1–80) — Premières Nations du Québec",
+    "intro": "Série numérotée #1 à #82 — chaque article propose la lecture vocale (▶ Écouter).",
+    "metaTitle": "Tous les articles (1–82) — Premières Nations du Québec",
     "seriesHeading": "Série {num} — articles {start} à {end}"
   },
   "videosPage": {

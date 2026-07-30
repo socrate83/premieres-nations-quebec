@@ -323,6 +323,10 @@
     "80-les-routes-deau-et-portages-pierre-le-fouineur.html": {
       "title": "The water routes and portages of Pierre le Fouineur",
       "teaser": "Diaries 1892-1921: travel by water and land, with route dates and key landmarks."
+    },
+    "82-les-habits-des-premieres-nations.html": {
+      "title": "Clothing of the First Nations of Quebec",
+      "teaser": "Beyond leather and fur: materials, patterns, painted Naskapi coats, pow-wow regalia and Gustoweh headdresses."
     }
   },
   "es": {
@@ -649,6 +653,10 @@
     "80-les-routes-deau-et-portages-pierre-le-fouineur.html": {
       "title": "Las rutas acuaticas y los portajes de Pierre le Fouineur",
       "teaser": "Cuadernos 1892-1921: desplazamientos por agua y tierra, con fechas y puntos clave del recorrido."
+    },
+    "82-les-habits-des-premieres-nations.html": {
+      "title": "Los vestidos de las Primeras Naciones de Quebec",
+      "teaser": "Mas alla del cuero y la piel: materiales, motivos, mantos pintados naskapi, regalia de pow-wow y tocados Gustoweh."
     }
   }
 }
