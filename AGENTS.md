@@ -14,12 +14,13 @@ See `README.md` for the project overview and public links.
 **toujours en français**.
 
 **Gestion de GitHub :** le mainteneur ne touche pas à GitHub. L'agent gère tout de
-bout en bout — il **commite et pousse directement sur `main`** (ce qui déclenche le
-déploiement Pages) plutôt que de laisser des PR à fusionner — et fournit ensuite le
-**lien public** pour vérifier.
+bout en bout — preview locale, puis **« OK pour publier »** de Jean-Claude, puis
+commit/push sur `main` et **lien public** pour vérifier.
 
+**Mission Socrate (mémoire hors GitHub) :** `C:\Users\socra\.cursor\socrate\premieres-nations-quebec\`
+— rapports, traductions bilan, Facebook, journal. **GitHub = articles + site seulement.**
 
-This is a **pure static HTML/CSS/JS site**. There is **no `package.json`, no lockfile, and no
+**Gestion de GitHub :** preview locale, « OK pour publier », puis push `main` (contenu site). There is **no `package.json`, no lockfile, and no
 third-party dependencies** — every `scripts/*.mjs` file uses only Node.js built-in modules
 (`fs`, `path`, `url`, `child_process`, `https`). Node.js (v22) and Python 3 are preinstalled, so
 there is nothing to `npm install`; the startup update script is intentionally a no-op check.

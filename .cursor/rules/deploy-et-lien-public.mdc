@@ -1,5 +1,5 @@
 ---
-description: Après chaque modification du site, commit/push GitHub Pages et donner le lien public
+description: Push GitHub Pages et lien public — uniquement après OK publie de Jean-Claude
 alwaysApply: true
 ---
 
@@ -7,9 +7,10 @@ alwaysApply: true
 
 Après **toute modification** des fichiers du site (HTML, JSON, JS, CSS, workflows, locales) :
 
-1. **Terminer le travail** demandé par l'utilisateur.
-2. **Commit + push** sur `main` (sauf si l'utilisateur dit explicitement de ne pas pousser).
-3. **Toujours** conclure la réponse avec le lien public pour vérifier le résultat.
+1. **Terminer le travail** demandé par Jean-Claude.
+2. **Preview locale** — attendre « **OK, publie** » (ou « OK pour publier ») avant tout push.
+3. **Commit + push** sur `main` seulement après cet accord explicite.
+4. **Toujours** conclure la réponse push avec le lien public vérifié (page, i18n, images, catalogue).
 
 ## Liens publics (GitHub Pages)
 

@@ -1,14 +1,3 @@
 PREMIÈRES NATIONS DU QUÉBEC — dossier TRAVAIL
 =============================================
 
-  brouillons/         idées brutes, memoire_projet_rows.json
-  a-retravailler/     articles en cours (#76 chasse, etc.)
-  prets-a-publier/    ENVOYER-SUR-GITHUB.md
-  publies/            archive après mise en ligne
-
-  INFO/               scripts de présentation, gabarits Pierre, index Python
-                      (voir INFO/LISEZMOI.txt)
-
-Site : https://socrate83.github.io/premieres-nations-quebec/
-
-(Un seul endroit pour vos textes — plus de doublons à la racine.)

@@ -1,0 +1,23 @@
+---
+description: Mission Socrate — memoire hors GitHub, site = articles uniquement
+alwaysApply: true
+---
+
+# GitHub vs memoire
+
+**GitHub** = articles + site (HTML, images, catalogue, locales, Carnets.html, SEO).
+**Memoire Socrate** = `C:\Users\socra\.cursor\socrate\premieres-nations-quebec\`
+  rapports, traductions bilan, strategie FB, publication-groupe, journal, etat.
+
+Ne jamais commiter rapports/strategie/memoire-agent dans le depot site.
+
+## Chaque session — PREMIER
+```
+python C:\Users\socra\.cursor\socrate\premieres-nations-quebec\scripts\rapport-quotidien.py
+```
+Livrer dans le chat : rapport traductions + post FB du jour.
+
+## Push GitHub
+Uniquement contenu site, apres « OK pour publier ».
+
+Voir `GITHUB-vs-MEMOIRE.md` dans la memoire Socrate.

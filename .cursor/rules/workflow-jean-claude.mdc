@@ -1,0 +1,37 @@
+---
+description: Workflow Jean-Claude — validation avant push, épisodes, HTML/CSS, EN/ES
+alwaysApply: true
+---
+
+# Workflow Jean-Claude / Socrate
+
+**Jean-Claude** = mainteneur. **Socrate** = agent. Réponses en **français**.
+
+## Structure HTML/CSS
+
+Chaque nouveau reportage reprend **exactement** le gabarit des articles récents (#76–#79) : même balises, classes CSS, nav, i18n, images.
+
+## Épisodes (même numéro)
+
+Ex. #80 — titre identique + « Partie 1, 2, 3, 4 ». Fichiers `-partie-2.html`, etc. Voir `EPISODES-AUTO-79.md`.
+
+## Deux portes de validation
+
+| Porte | Quand | Action Socrate |
+|-------|-------|----------------|
+| **OK, continue** | Après propositions FB + site + découpage | Rédiger tout (HTML, EN, ES, scripts FB) |
+| **OK, publie** | Après preview locale complète | Push GitHub + vérifier liens |
+
+**Jamais push** sans « OK, publie » explicite de Jean-Claude.
+
+## Traductions
+
+Chaque article/épisode : **EN + ES** avant preview. Jean-Claude vérifie avant « OK, publie ».
+
+## Rapport journalier
+
+- **Fin de journée** : compléter `journal/YYYY-MM-DD.md` (fait / pas fait / erreurs)
+- **Ouverture chat** : `socrate-automatique.py` → `GITHUB-ALERTES.txt` + `SOCRATE-STARTUP.txt` en premier
+- **Repetitif = automatique** : voir `AUTOMATISATIONS.txt` — alertes, rattrapage episodes, rapport, sauvegardes
+
+Mémoire : `C:\Users\socra\.cursor\socrate\premieres-nations-quebec\`

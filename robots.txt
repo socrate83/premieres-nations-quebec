@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://socrate83.github.io/premieres-nations-quebec/sitemap.xml

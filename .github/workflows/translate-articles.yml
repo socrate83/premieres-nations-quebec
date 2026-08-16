@@ -1,5 +1,5 @@
 # Traduction EN + ES — automatique sur les serveurs GitHub (ne bloque pas votre PC).
-# Jusqu'à 10 articles par nuit, dans l'ordre numérique (#30, #31…).
+# Jusqu'à 20 articles par exécution (tout le reliquat en une fois si ≤20).
 # Après commit, le déploiement Pages met le site à jour.
 name: Traduire les articles (nocturne)
 
@@ -7,11 +7,11 @@ on:
   workflow_dispatch:
     inputs:
       count:
-        description: "Nombre d'articles pour cette exécution (défaut 10, ordre numérique)"
+        description: "Nombre d'articles pour cette exécution (défaut 20 = tout le reliquat en une fois)"
         required: false
-        default: '10'
+        default: '20'
   schedule:
-    # Chaque jour ~03:00 (Québec, été) — 10 articles non traduits, plus petit numéro d'abord.
+    # Chaque jour ~03:00 (Québec, été) — jusqu'à 20 non traduits, plus petit numéro d'abord.
     - cron: '0 7 * * *'
 
 permissions:
@@ -35,7 +35,7 @@ jobs:
       - name: Prochain numéro à traduire (#15, #16…)
         id: batch
         run: |
-          COUNT="${{ github.event.inputs.count || '10' }}"
+          COUNT="${{ github.event.inputs.count || '20' }}"
           SLUGS="$(node scripts/next-untranslated.mjs "$COUNT")"
           echo "slugs=$SLUGS" >> "$GITHUB_OUTPUT"
           if [ -z "$SLUGS" ]; then
@@ -46,7 +46,7 @@ jobs:
 
       - name: Traduire EN + ES
         if: steps.batch.outputs.slugs != ''
-        run: node scripts/build-article-translations.mjs --only "${{ steps.batch.outputs.slugs }}"
+        run: node scripts/build-article-translations.mjs --only "${{ steps.batch.outputs.slugs }}" --skip-existing
 
       - name: Mettre à jour cartes / vidéos / podcasts (EN + ES)
         if: steps.batch.outputs.slugs != ''

@@ -5,3 +5,8 @@ backups/
 Thumbs.db
 *.log
 .agents/
+# Memoire agent (dans ~/.cursor/socrate/) — ne pas versionner si recree par erreur
+INFO/memoire-agent/
+INFO/strategie-visiteurs/
+INFO/publication-groupe/
+.aider*

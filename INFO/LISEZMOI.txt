@@ -1,38 +1,52 @@
-INFO — dossier de référence (Jean-Claude / Socrate)
+INFO — dossier de référence (site GitHub)
+
 ==================================================
 
-Ce dossier regroupe les textes de présentation, gabarits et notes
-sur les scripts techniques — sans mélanger avec TRAVAIL/ (brouillons
-bruts à publier).
+
+
+Ce dossier = contenu lie au SITE (articles, carnets Pierre pour le HTML).
+
+Pas de rapports, strategie FB, ni memoire agent ici — voir memoire Socrate :
+
+  C:\Users\socra\.cursor\socrate\premieres-nations-quebec\
+
+
 
 Site : https://socrate83.github.io/premieres-nations-quebec/
 
+
+
 STRUCTURE
+
 ---------
 
-  carnets-pierre/          Série « Les Carnets de Pierre »
-    portrait-pierre-le-fouineur.txt   — histoire complète (référence)
-    gabarit-ouverture-site.txt        — blocs HTML/texte pour chaque carnet sur le site
 
-  publication-groupe/      Annonces Facebook (groupe Les Premières Nations au Québec)
-    76-chasse-script-facebook.txt     — post prêt pour l'article #76
-    gabarit-carnet-groupe.txt           — modèle pour carnets n° 2, 3…
 
-  scripts/                 Index des scripts Python (fichiers réels dans scripts/)
-    article-76-index.txt                — liste et rôle de chaque script #76
+  carnets-pierre/          Textes source pour les pages carnets sur le site
 
-  Après chaque NOUVEL article publié :
-  1. Mettre à jour blog-serie-articles.json (stats.articlesNumbered + nouvel item)
-  2. Lancer : python scripts/reorganize-blog-series.py
-     → séries de 10 (Série 1 = #1–#10, Série 2 = #11–#20, …) + Articles.html
-  3. Lancer : python scripts/sync-article-count-i18n.py
-     → met à jour « Articles 1–N » en haut du site (FR / EN / ES)
+    portrait-pierre-le-fouineur.txt
 
-TRAVAIL/ reste pour :
-  brouillons/         idées, textes bruts non structurés
-  a-retravailler/     articles en cours
-  prets-a-publier/    checklist avant GitHub
-  publies/            archive après mise en ligne
+    gabarit-ouverture-site.txt
 
-Quand un carnet est publié : copier le script groupe dans publication-groupe/
-avec le numéro d'article (ex. 77-peche-script-facebook.txt).
+
+
+  scripts/                 Index scripts article (fichiers reels dans scripts/)
+
+
+
+GitHub recoit : articles HTML, images, catalogue, traductions EN/ES, pages site.
+
+
+
+Apres chaque NOUVEL article :
+
+  1. blog-serie-articles.json + reorganize-blog-series.py
+
+  2. sync-article-count-i18n.py
+
+  3. OK pour publier de Jean-Claude -> push main
+
+
+
+Socrate (hors GitHub) : rapports, posts FB, strategie visiteurs, journal.
+

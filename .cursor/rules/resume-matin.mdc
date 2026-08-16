@@ -1,19 +1,27 @@
 ---
-description: Résumé du dernier contact au début de chaque conversation (Jean-Claude)
+description: Resume matin — rapport depuis memoire Socrate (pas GitHub)
 alwaysApply: true
 ---
 
-# Résumé de reprise — chaque matin / nouveau contact
+# Rapport quotidien — obligatoire en premier
 
-Au **premier message** de Jean-Claude dans une session (surtout « Bonjour » ou reprise après pause), commencer par un **résumé court en français** avant toute action :
+```
+python C:\Users\socra\.cursor\socrate\premieres-nations-quebec\scripts\socrate-automatique.py
+```
 
-1. **Où on en est** — dernière tâche terminée ou en cours
-2. **Dossier de travail** — `TRAVAIL/` (brouillons, a-retravailler, prets-a-publier, publies)
-3. **Chemin projet** — `C:\Users\socra\OneDrive\Desktop\premieres-nations-quebec`
-4. **Site public** — https://socrate83.github.io/premieres-nations-quebec/
-5. **Prochaines étapes** — ce qu'il avait dit vouloir faire ensuite
-6. **Rappel GitHub** — Jean-Claude ne touche pas à GitHub ; Socrate commit/push sur demande
+Equivalent detaille : `check-github-alerts.py` + `auto-fix-github-alerts.py` + `rapport-quotidien.py`  
+Index complet : `AUTOMATISATIONS.txt`
 
-Ton : concis, chaleureux, pas de long paragraphe. Puis proposer par quoi commencer aujourd'hui.
+**Lire en premier** : `GITHUB-ALERTES.txt` puis `SOCRATE-STARTUP.txt` — corriger alertes OUVERTES avant de repondre.
 
-Ne pas répéter le résumé complet à chaque message de la même session — seulement au début ou après longue coupure évidente.
+Afficher dans le chat (OUVERTURE — avant toute reponse) :
+0. **Verification erreurs** — GITHUB-ALERTES.txt : alertes ouvertes ? sauvegarde OK ? episodes dus ?
+1. **Alertes GitHub** — ou « aucune alerte »
+2. **Rapport traductions** (RAPPORT-TRADUCTIONS-DERNIER.txt)
+3. **Post Facebook du jour** (calendrier-fb-79.txt / FB-A-PUBLIER-DEMAIN.txt)
+4. **Site** — seulement si en attente de push
+
+Surveillance auto : tache Windows `Socrate-GitHub-Watch` (toutes les heures) via `scripts/install-github-watch.ps1`.
+
+Memoire : `C:\Users\socra\.cursor\socrate\premieres-nations-quebec\`
+GitHub : articles et site seulement.

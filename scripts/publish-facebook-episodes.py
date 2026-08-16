@@ -6,6 +6,7 @@ Config : FB_ACCESS_TOKEN + FB_GROUP_ID (env ou memoire-agent/facebook-config.jso
 """
 from __future__ import annotations
 
+import argparse
 import json
 import os
 import re
@@ -25,6 +26,7 @@ FB_CONFIG = MEM / "memoire-agent" / "facebook-config.json"
 LOG = MEM / "memoire-agent" / "facebook-publish-log.txt"
 GRAPH = "https://graph.facebook.com/v21.0"
 SITE_BASE = "https://socrate83.github.io/premieres-nations-quebec"
+QUIET = False
 
 
 def page_live(slug_file: str) -> bool:
@@ -42,6 +44,8 @@ def log(msg: str) -> None:
     LOG.parent.mkdir(parents=True, exist_ok=True)
     with LOG.open("a", encoding="utf-8") as f:
         f.write(line)
+    if QUIET:
+        return
     try:
         print(msg)
     except UnicodeEncodeError:
@@ -148,6 +152,12 @@ def save_manifest(data: dict) -> None:
 
 
 def main() -> int:
+    global QUIET
+    parser = argparse.ArgumentParser()
+    parser.add_argument("--quiet", action="store_true")
+    args = parser.parse_args()
+    QUIET = args.quiet
+
     if not MANIFEST.exists():
         log("Pas de manifest episodes-queue")
         return 0
@@ -171,16 +181,18 @@ def main() -> int:
             break
 
         if not token:
-            log(f"FB_ACCESS_TOKEN absent — a publier manuellement : episode {num}/4")
-            log(scripts[num]["message"][:200] + "...")
+            log(f"Mode B — a coller sur le groupe : episode {num}/4")
             pending = MEM / "publication-groupe" / "FB-A-PUBLIER-MAINTENANT.txt"
+            ep = scripts[num]
             pending.write_text(
-                f"Episode {num}/4 — coller token dans memoire-agent/facebook-config.json\n\n"
-                + scripts[num]["message"]
-                + f"\n\nLien commentaire:\n{scripts[num]['link']}\n",
+                f"# Episode {num}/4 — copier sur le groupe (PAS de lien dans le post)\n\n"
+                + ep["message"]
+                + f"\n\n--- LIEN EN COMMENTAIRE ---\n{ep['link']}\n"
+                + (f"\n--- IMAGE ---\n{ep['image']}\n" if ep.get("image") else "")
+                + f"\n--- Apres publication : dire a Socrate « ep {num} publie » ---\n",
                 encoding="utf-8",
             )
-            return 2
+            return 0
 
         try:
             post_id = post_to_group(group_id, token, scripts[num])
