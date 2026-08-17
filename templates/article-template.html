@@ -1,0 +1,39 @@
+<!doctype html>
+<html lang="fr">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>{{ title }}</title>
+  <meta name="description" content="{{ description }}">
+  <meta name="author" content="{{ author }}">
+  <link rel="stylesheet" href="/styles/main.css">
+  <!--
+    Template d'article
+    Utilisation: remplacer les variables {{ title }}, {{ description }}, {{ author }}, {{ date }}
+  -->
+</head>
+<body>
+  <article class="article">
+    <header class="article-header">
+      <h1 class="article-title">{{ title }}</h1>
+      <p class="article-meta">Publié le <time datetime="{{ date }}">{{ date }}</time> · par <span class="author">{{ author }}</span></p>
+    </header>
+
+    <section class="article-intro">
+      <p>{{ intro }}</p>
+    </section>
+
+    <section class="article-content">
+      <!-- Contenu principal de l'article -->
+      {{ content }}
+    </section>
+
+    <footer class="article-footer">
+      <p>Tags: {{ tags }}</p>
+      <p>&copy; {{ year }} {{ author }}</p>
+    </footer>
+  </article>
+
+  <script src="/scripts/main.js"></script>
+</body>
+</html>
