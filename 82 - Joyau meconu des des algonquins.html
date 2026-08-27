@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Hunter's Point / Wolf Lake : un joyau méconnu des Algonquins</title>
+<meta name="description" content="Hunter's Point, ou Opacikoteak Ecitacikewapan : siège de la Première Nation de Wolf Lake, en Abitibi-Témiscamingue — une nation algonquine qui, après plus de 140 ans, n'a jamais reçu de réserve.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,400;9..144,600;9..144,700&family=Inter:wght@400;500;600&family=IBM+Plex+Mono:wght@500&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="lang-switcher.css">
+<script src="article-i18n.js" defer></script>
+<script src="article-share.js" defer></script>
+<script src="lang-switcher.js" defer></script>
+<style>
+  :root{
+    --bg:#EDF2F1;
+    --paper:#F8FBFA;
+    --deep:#1B3A38;
+    --midnight:#0E2523;
+    --mid:#4E7C77;
+    --soft:#A9C8C3;
+    --accent:#CE8A42;
+    --ink:#1A2C2A;
+    --ink-soft:#45605C;
+    --hairline:#D5E2DF;
+  }
+  *{box-sizing:border-box;}
+  html{scroll-behavior:smooth;}
+  body{margin:0;background:var(--bg);color:var(--ink);font-family:'Inter',sans-serif;line-height:1.7;-webkit-font-smoothing:antialiased;}
+  .eyebrow{font-family:'IBM Plex Mono',monospace;font-size:0.72rem;letter-spacing:0.14em;text-transform:uppercase;color:var(--accent);}
+  h1,h2,h3{font-family:'Fraunces',serif;font-weight:600;color:var(--deep);margin:0;}
+
+  .hero{position:relative;min-height:76vh;display:flex;align-items:flex-end;
+    background:linear-gradient(180deg, rgba(14,37,35,0.30) 0%, rgba(14,37,35,0.40) 40%, rgba(14,37,35,0.95) 92%),
+    url('images/Une ile.png') center 50% / cover no-repeat;
+    color:#fff;}
+  .hero-inner{position:relative;max-width:760px;margin:0 auto;padding:3rem 1.75rem 3.5rem 1.75rem;text-align:center;width:100%;}
+  .hero .eyebrow{color:var(--soft);opacity:0.95;}
+  .hero h1{font-size:clamp(2.1rem,4.8vw,3.3rem);color:#fff;line-height:1.1;margin-top:0.9rem;letter-spacing:-0.01em;text-shadow:0 2px 24px rgba(0,0,0,0.4);}
+  .hero .sub{margin-top:1.1rem;font-size:1.05rem;color:var(--soft);font-weight:400;max-width:540px;margin-left:auto;margin-right:auto;}
+  .photo-credit{position:absolute;bottom:0.6rem;right:1rem;font-family:'IBM Plex Mono',monospace;font-size:0.65rem;color:rgba(255,255,255,0.55);}
+
+  .shell{max-width:700px;margin:0 auto;padding:3.5rem 1.75rem 1rem 1.75rem;}
+  .lede{font-family:'Fraunces',serif;font-size:1.28rem;font-weight:400;color:var(--deep);line-height:1.55;}
+  .lede::first-letter{font-size:3.6rem;font-weight:700;float:left;line-height:0.85;padding:0.06em 0.09em 0 0;color:var(--accent);}
+
+  .stat-bar{display:flex;gap:0.8rem;margin:1.6rem 0;flex-wrap:wrap;}
+  .stat-bar div{flex:1;min-width:130px;background:var(--paper);border:1px solid var(--hairline);border-radius:10px;padding:0.9rem 1rem;text-align:center;}
+  .stat-bar .num{font-family:'Fraunces',serif;font-weight:700;font-size:1.5rem;color:var(--accent);display:block;}
+  .stat-bar .label{font-family:'IBM Plex Mono',monospace;font-size:0.68rem;color:var(--ink-soft);margin-top:0.2rem;}
+
+  section.block{margin-top:3.2rem;}
+  section.block h2{font-size:1.5rem;line-height:1.25;margin-bottom:1.1rem;}
+  section.block h2 .num{display:inline-block;font-family:'IBM Plex Mono',monospace;font-size:0.85rem;color:var(--accent);vertical-align:super;margin-right:0.4em;}
+  section.block p{color:var(--ink-soft);font-size:1.02rem;margin:0 0 1rem 0;}
+  section.block p strong{color:var(--deep);}
+  section.block ul{color:var(--ink-soft);font-size:1.02rem;padding-left:1.2rem;}
+  section.block li{margin-bottom:0.6rem;}
+  section.block li strong{color:var(--deep);}
+
+  .divider{max-width:700px;margin:3.4rem auto;padding:0 1.75rem;}
+  .divider svg{width:100%;height:22px;display:block;}
+
+  .pullquote{font-family:'Fraunces',serif;font-style:italic;font-size:1.22rem;color:var(--deep);border-left:3px solid var(--accent);padding-left:1.2rem;margin:1.8rem 0;}
+
+  .closing{background:var(--paper);border:1px solid var(--hairline);border-radius:16px;padding:1.8rem;margin-top:1rem;}
+
+  footer{margin-top:4.5rem;background:var(--midnight);color:var(--soft);padding:3rem 1.75rem 2.5rem 1.75rem;}
+  .footer-inner{max-width:700px;margin:0 auto;text-align:center;}
+  .footer-inner h3{color:#fff;font-size:1.3rem;margin-bottom:0.6rem;}
+  .footer-inner p{color:var(--soft);opacity:0.85;font-size:0.96rem;margin:0 0 1.6rem 0;}
+  .cta-link{display:inline-block;font-family:'IBM Plex Mono',monospace;font-size:0.82rem;letter-spacing:0.03em;color:var(--midnight);background:var(--accent);padding:0.85rem 1.6rem;border-radius:999px;text-decoration:none;transition:transform 0.15s ease, background 0.15s ease;}
+  .cta-link:hover{background:#dc9a52;transform:translateY(-1px);}
+  .cta-link:focus-visible{outline:2px solid #fff;outline-offset:3px;}
+  .hashtags{margin-top:2.4rem;display:flex;flex-wrap:wrap;gap:0.55rem;justify-content:center;}
+  .hashtags span{font-family:'IBM Plex Mono',monospace;font-size:0.78rem;color:var(--soft);border:1px solid rgba(169,200,195,0.35);padding:0.35rem 0.75rem;border-radius:999px;}
+  .footer-meta{margin-top:2.4rem;padding-top:1.6rem;border-top:1px solid rgba(169,200,195,0.2);font-size:0.76rem;color:rgba(169,200,195,0.6);line-height:1.6;}
+
+  @media (max-width:520px){.hero{min-height:64vh;}.lede::first-letter{font-size:2.9rem;}}
+</style>
+</head>
+<body data-pn-article-slug="82">
+
+<header class="hero">
+  <div class="hero-inner">
+    <span class="eyebrow">Article 82 · Série Peuples autochtones du Québec</span>
+    <h1>Hunter's Point</h1>
+    <p class="sub">Le siège d'une nation algonquine qui, après plus de cent quarante ans de démarches, n'a jamais reçu de réserve.</p>
+  </div>
+  <span class="photo-credit">Photo : crédit à compléter</span>
+</header>
+
+<div id="pn-article-root" data-pn-article-slug="82">
+<main class="shell">
+<article class="article-ecoute">
+
+  <p class="lede">Cinq personnes y ont été recensées en 2021, et trois familles algonquines y vivent à l'année. Sur le papier, Hunter's Point — <em>Opacikoteak Ecitacikewapan</em> en algonquin — ressemble à un hameau en voie d'effacement. C'est pourtant le siège de la Première Nation de Wolf Lake, qui compte 232 membres inscrits et qui réclame depuis plus de cent quarante ans une chose que l'État ne lui a jamais accordée : une réserve.</p>
+
+  <div class="stat-bar">
+    <div><span class="num">5</span><span class="label">habitants recensés à Hunter's Point en 2021</span></div>
+    <div><span class="num">232</span><span class="label">membres inscrits à la Première Nation de Wolf Lake</span></div>
+    <div><span class="num">0</span><span class="label">réserve attribuée en plus de 140 ans de démarches</span></div>
+  </div>
+
+  <section class="block">
+    <h2><span class="num">01</span>Un nom venu d'un poste de traite</h2>
+    <p>Le lieu doit son nom à la Compagnie de la Baie d'Hudson. En 1846, celle-ci exploite un poste à Hunter's Lodge, sur un autre lac situé une vingtaine de kilomètres au sud ; son administrateur s'appelle <strong>James S. Hunter</strong>. Vers 1869, George Hunter, de la même famille, s'installe sur la pointe et y attire assez de résidents pour qu'un bureau de poste y ouvre en 1886.</p>
+    <p>Le nom algonquin, lui, décrit le lieu plutôt que l'homme : <em>Opacikoteak Ecitacikewapan</em> signifie « village construit sur de hautes montagnes ». L'établissement occupe 122 hectares en bordure du lac Hunter's Point, près de la confluence des rivières Ostaboningue et Audoin, à 37 kilomètres au nord-est de Témiscaming.</p>
+  </section>
+
+  <div class="divider" aria-hidden="true">
+    <svg viewBox="0 0 700 22" xmlns="http://www.w3.org/2000/svg"><path d="M0,11 C100,2 200,20 300,11 C400,2 500,20 600,11 C650,7 680,14 700,11" stroke="#4E7C77" stroke-width="1.5" fill="none" opacity="0.6"/></svg>
+  </div>
+
+  <section class="block">
+    <h2><span class="num">02</span>Quatre déplacements en un siècle et demi</h2>
+    <p>L'histoire de cette communauté n'est pas celle d'un enracinement, mais d'une suite de reculs. Les familles fondatrices — Paul, Constant, Reynolds, St. Denis, Tebiscon — appartenaient aux <em>Kiwe'gom'anishnabek</em>, les Anishinabek du lac Dumoine, établis au début du XIX<sup>e</sup> siècle à l'extrémité nord de ce lac.</p>
+    <p>Une épidémie les contraint à partir au milieu du siècle. Dans les années 1870, ils s'installent 25 kilomètres plus à l'est, à Grassy Lake — <em>Matashkweia sagahigan</em>. Au début du XX<sup>e</sup> siècle, l'empiétement sur leurs terres les repousse de 10 kilomètres jusqu'au lac du Loup, d'où leur nom actuel : <strong><em>Mahingan Sagahigan Anishinabek</em></strong>, le peuple du lac du Loup. Dans les années 1940, l'agent des Indiens fait pression pour un dernier déplacement de 32 kilomètres vers l'est. Ce sera Hunter's Point.</p>
+  </section>
+
+  <div class="divider" aria-hidden="true">
+    <svg viewBox="0 0 700 22" xmlns="http://www.w3.org/2000/svg"><path d="M0,11 C100,2 200,20 300,11 C400,2 500,20 600,11 C650,7 680,14 700,11" stroke="#CE8A42" stroke-width="1.5" fill="none" opacity="0.6"/></svg>
+  </div>
+
+  <section class="block">
+    <h2><span class="num">03</span>Une nation sans assise territoriale</h2>
+    <p>Wolf Lake n'a jamais reçu de réserve. Le fait s'énonce en une ligne et pèse sur tout le reste : sans assise territoriale reconnue, une Première Nation n'a pas de base foncière sur laquelle asseoir ses services, son logement ou son développement.</p>
+
+    <p class="pullquote">« Depuis plus de cent quarante ans, la nation cherche à faire reconnaître son titre sur des terres de réserve. »</p>
+
+    <p>Le conseil de bande siège donc à Témiscaming, la municipalité voisine, et non à Hunter's Point. Les membres inscrits vivent tous hors réserve — pour l'essentiel dans les réserves voisines de Timiskaming et de Kebaowek, ou ailleurs au Québec. La nation ne fait pas partie du Conseil tribal de la Nation algonquine Anishinabeg, et s'est dotée de son propre centre de santé et de mieux-être, le <strong>Mahingan Sagahigan</strong>.</p>
+  </section>
+
+  <div class="divider" aria-hidden="true">
+    <svg viewBox="0 0 700 22" xmlns="http://www.w3.org/2000/svg"><path d="M0,11 C100,2 200,20 300,11 C400,2 500,20 600,11 C650,7 680,14 700,11" stroke="#4E7C77" stroke-width="1.5" fill="none" opacity="0.6"/></svg>
+  </div>
+
+  <section class="block">
+    <h2><span class="num">04</span>Un territoire défendu sans titre</h2>
+    <p>L'absence de réserve n'a pas empêché la nation d'agir sur son territoire traditionnel, qui couvre les bassins supérieurs des rivières Kipawa et Dumoine et descend jusqu'à l'Outaouais.</p>
+    <p>Wolf Lake y a obtenu la protection de <strong>200 kilomètres carrés du canyon de la rivière Maganasipi</strong> — la « rivière du Loup » — qui étaient inscrits au calendrier des coupes. Elle collabore avec le gouvernement du Québec sur l'aménagement forestier, et avec des chercheurs de l'Université de Toronto et de l'Université Trent sur la protection du loup de l'Est algonquin, espèce menacée au sens de la <em>Loi sur les espèces en péril</em>, avec l'appui du Fonds autochtone pour les espèces en péril.</p>
+  </section>
+
+  <section class="block closing">
+    <h2 style="font-size:1.3rem;"><span class="num">05</span>Pourquoi ce lieu compte</h2>
+    <p>Cinq habitants recensés, aucune réserve attribuée, un conseil de bande installé dans la municipalité voisine : Hunter's Point coche toutes les cases de la marge administrative. C'est pourtant le point d'ancrage d'une nation qui n'a jamais cessé de revendiquer, de négocier et de protéger. La présence algonquine sur un territoire ne se mesure pas au nombre de maisons occupées.</p>
+  </section>
+
+</article>
+</main>
+</div>
+
+<footer>
+  <div class="footer-inner">
+    <h3>D'autres savoirs méconnus à découvrir</h3>
+    <p>Cette série explore des aspects peu connus de la vie des Premières Nations du Québec.</p>
+    <a class="cta-link" href="#" target="_blank" rel="noopener">Voir tous les articles de la série →</a>
+    <div class="hashtags">
+      <span>#HuntersPoint</span>
+      <span>#WolfLake</span>
+      <span>#MahinganSagahigan</span>
+      <span>#Algonquins</span>
+      <span>#AbitibiTémiscamingue</span>
+      <span>#PremièresNations</span>
+      <span>#Québec</span>
+    </div>
+    <div class="footer-meta">
+      Article 82 · Série « Peuples autochtones du Québec » · Jean-Claude, rédacteur et administrateur du groupe <a href="https://www.facebook.com/groups/1451283625021958" target="_blank" rel="noopener" style="color:inherit;">Les Premières Nations au Québec</a>.<br>
+      Sources texte : Première Nation de Wolf Lake — site officiel (Our Community, Lands and Resources), Wikipédia (Hunter's Point ; Première Nation de Wolf Lake), GrandQuébec.com, Le Reflet témiscamien.<br>
+      Image : images/Une ile.png — crédit à compléter.
+    </div>
+  </div>
+</footer>
+
+<script src="audio-player.js" defer></script>
+</body>
+</html>
