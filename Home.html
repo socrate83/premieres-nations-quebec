@@ -32,16 +32,17 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 
     /* HERO */
     .hero{position:relative;min-height:100vh;display:flex;align-items:center;justify-content:center;overflow:hidden;background:#000}
-    .hero-bg{position:absolute;inset:0;background:url('https://media.base44.com/images/public/69f23c5b09417d29099136be/41afc600c_generated_image.png') center/cover no-repeat;filter:brightness(0.35);transform:scale(1.05);animation:slowzoom 20s ease-in-out infinite alternate}
+    .hero-bg{position:absolute;inset:0;background:url('assets/images/41afc600c_generated_image.png') center/cover no-repeat;filter:brightness(0.35);transform:scale(1.05)}
+    .hero::before{content:"";position:absolute;inset:0;background:radial-gradient(circle at 50% 30%,rgba(200,146,10,0.15),transparent 45%),linear-gradient(135deg,rgba(10,10,10,0.75),rgba(10,10,10,0.35))}
     @keyframes slowzoom{from{transform:scale(1.05)}to{transform:scale(1.15)}}
     .hero-content{position:relative;z-index:2;text-align:center;padding:3rem 2rem;max-width:900px}
     .hero-eyebrow{font-size:0.8rem;letter-spacing:6px;text-transform:uppercase;color:var(--or-clair);font-weight:700;margin-bottom:1.5rem}
     .hero h1{font-family:'Playfair Display',serif;font-size:clamp(3rem,7vw,6.5rem);font-weight:900;color:#fff;line-height:1.05;text-shadow:0 4px 30px rgba(0,0,0,0.8);margin-bottom:1.5rem}
     .hero h1 span{color:var(--or-clair)}
     .hero-sub{font-family:'Playfair Display',serif;font-size:1.3rem;color:rgba(255,255,255,0.85);font-style:italic;max-width:650px;margin:0 auto 2.5rem;line-height:1.7}
-    .hero-cta{display:inline-block;background:var(--or);color:#000;font-weight:700;font-size:0.9rem;letter-spacing:2px;text-transform:uppercase;padding:1rem 2.5rem;border-radius:50px;cursor:pointer;transition:background 0.2s,transform 0.2s;border:none}
+    .hero-cta{display:inline-block;background:var(--or);color:#000;font-weight:700;font-size:0.9rem;letter-spacing:2px;text-transform:uppercase;padding:1rem 2.5rem;border-radius:50px;cursor:pointer;transition:transform 0.2s,background 0.2s;text-decoration:none}
     .hero-cta:hover{background:var(--or-clair);transform:translateY(-2px)}
-    .hero-scroll{position:absolute;bottom:2.5rem;left:50%;transform:translateX(-50%);color:rgba(255,255,255,0.5);font-size:0.75rem;letter-spacing:3px;text-transform:uppercase;animation:bob 2s infinite}
+    .hero-scroll{position:absolute;bottom:2.5rem;left:50%;transform:translateX(-50%);color:rgba(255,255,255,0.5);font-size:0.75rem;letter-spacing:3px;text-transform:uppercase;animation:bob 2s infinite ease-in-out}
     @keyframes bob{0%,100%{transform:translateX(-50%) translateY(0)}50%{transform:translateX(-50%) translateY(8px)}}
     .stats-bar{background:rgba(255,255,255,0.06);backdrop-filter:blur(10px);display:flex;justify-content:center;gap:4rem;padding:2rem;flex-wrap:wrap;border-bottom:1px solid rgba(255,255,255,0.1)}
     .stat-item{text-align:center}
@@ -73,11 +74,11 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 
     /* CARD ACTIONS */
     .card-actions{display:flex;gap:0.5rem;flex-wrap:wrap}
-    .btn-read{display:inline-flex;align-items:center;gap:0.3rem;background:var(--or);color:#000;font-weight:700;font-size:0.72rem;letter-spacing:1px;text-transform:uppercase;padding:0.42rem 0.9rem;border-radius:30px;text-decoration:none;transition:background 0.2s,transform 0.2s;cursor:pointer;border:none}
+    .btn-read{display:inline-flex;align-items:center;gap:0.3rem;background:var(--or);color:#000;font-weight:700;font-size:0.72rem;letter-spacing:1px;text-transform:uppercase;padding:0.42rem 0.9rem;border-radius:999px;text-decoration:none;transition:transform 0.2s,background 0.2s}
     .btn-read:hover{background:var(--or-clair);transform:translateY(-1px)}
 
     /* TOAST */
-    #toast{position:fixed;bottom:2rem;left:50%;transform:translateX(-50%) translateY(20px);background:var(--or);color:#000;font-weight:700;font-size:0.85rem;padding:0.7rem 1.8rem;border-radius:30px;opacity:0;transition:all 0.3s;z-index:9999;pointer-events:none}
+    #toast{position:fixed;bottom:2rem;left:50%;transform:translateX(-50%) translateY(20px);background:var(--or);color:#000;font-weight:700;font-size:0.85rem;padding:0.7rem 1.8rem;border-radius:30px;opacity:0;pointer-events:none;transition:opacity 0.25s,transform 0.25s;z-index:9999}
     #toast.show{opacity:1;transform:translateX(-50%) translateY(0)}
 
     /* COMMUNITY BAR */
@@ -85,9 +86,9 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
     .community-bar h3{font-family:'Playfair Display',serif;font-size:1.7rem;color:var(--or-clair);margin-bottom:0.8rem}
     .community-bar p{color:rgba(255,255,255,0.65);max-width:580px;margin:0 auto 1.8rem;font-size:0.95rem;line-height:1.7}
     .community-links{display:flex;justify-content:center;gap:1rem;flex-wrap:wrap}
-    .btn-fb{display:inline-flex;align-items:center;gap:0.6rem;background:#1877F2;color:#fff;font-weight:700;font-size:0.88rem;padding:0.8rem 1.8rem;border-radius:50px;text-decoration:none;transition:background 0.2s,transform 0.2s}
+    .btn-fb{display:inline-flex;align-items:center;gap:0.6rem;background:#1877F2;color:#fff;font-weight:700;font-size:0.88rem;padding:0.8rem 1.8rem;border-radius:50px;text-decoration:none;transition:transform 0.2s,background 0.2s}
     .btn-fb:hover{background:#1565d8;transform:translateY(-2px)}
-    .btn-site{display:inline-flex;align-items:center;gap:0.6rem;background:rgba(255,255,255,0.1);color:#fff;font-weight:700;font-size:0.88rem;padding:0.8rem 1.8rem;border-radius:50px;text-decoration:none;border:1px solid rgba(255,255,255,0.2);transition:background 0.2s,transform 0.2s}
+    .btn-site{display:inline-flex;align-items:center;gap:0.6rem;background:rgba(255,255,255,0.1);color:#fff;font-weight:700;font-size:0.88rem;padding:0.8rem 1.8rem;border-radius:50px;text-decoration:none;transition:transform 0.2s,background 0.2s}
     .btn-site:hover{background:rgba(255,255,255,0.18);transform:translateY(-2px)}
 
     /* QUOTE */
@@ -105,7 +106,7 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
     .footer-nav a{font-size:0.8rem;letter-spacing:1.5px;text-transform:uppercase;color:rgba(255,255,255,0.45);text-decoration:none;transition:color 0.2s}
     .footer-nav a:hover{color:var(--or-clair)}
     .footer-social{display:flex;justify-content:center;gap:1rem;margin:1.5rem 0;flex-wrap:wrap}
-    .footer-social a{display:inline-flex;align-items:center;gap:0.4rem;font-size:0.82rem;color:rgba(255,255,255,0.45);text-decoration:none;padding:0.4rem 1rem;border:1px solid rgba(255,255,255,0.1);border-radius:20px;transition:all 0.2s}
+    .footer-social a{display:inline-flex;align-items:center;gap:0.4rem;font-size:0.82rem;color:rgba(255,255,255,0.45);text-decoration:none;padding:0.4rem 1rem;border:1px solid rgba(255,255,255,0.1);border-radius:999px;transition:color 0.2s,border-color 0.2s}
     .footer-social a:hover{color:#fff;border-color:rgba(255,255,255,0.3)}
     .copy{font-size:0.75rem;color:rgba(255,255,255,0.2);margin-top:1.5rem}
 
@@ -119,17 +120,17 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
     .media-sec{padding:5rem 2rem;background:#0d0d0d;text-align:center}
     .media-sec .grid-title{margin-bottom:0.8rem}
     .media-cards{display:flex;justify-content:center;gap:1.5rem;flex-wrap:wrap;margin-top:3rem}
-    .media-card{background:#1A1A1A;border-radius:20px;padding:2.5rem 2rem;width:260px;border:1px solid rgba(255,255,255,0.07);text-decoration:none;color:#fff;transition:transform 0.3s,box-shadow 0.3s,border-color 0.3s;display:flex;flex-direction:column;align-items:center;gap:1rem}
+    .media-card{background:#1A1A1A;border-radius:20px;padding:2.5rem 2rem;width:260px;border:1px solid rgba(255,255,255,0.07);text-decoration:none;color:#fff;transition:transform 0.3s,box-shadow 0.3s,border-color 0.3s}
     .media-card:hover{transform:translateY(-8px);box-shadow:0 20px 60px rgba(0,0,0,0.5);border-color:rgba(200,146,10,0.4)}
     .media-card .m-icon{font-size:3.5rem}
     .media-card h3{font-family:'Playfair Display',serif;font-size:1.3rem;color:var(--or-clair)}
     .media-card p{font-size:0.88rem;color:rgba(255,255,255,0.5);line-height:1.6;text-align:center}
-    .media-card .m-badge{font-size:0.7rem;letter-spacing:2px;text-transform:uppercase;background:rgba(200,146,10,0.15);color:var(--or-clair);padding:0.3rem 0.8rem;border-radius:20px;border:1px solid rgba(200,146,10,0.3)}
+    .media-card .m-badge{font-size:0.7rem;letter-spacing:2px;text-transform:uppercase;background:rgba(200,146,10,0.15);color:var(--or-clair);padding:0.3rem 0.8rem;border-radius:20px;border:1px solid rgba(200,146,10,0.25);display:inline-block;margin-top:1rem}
 
     @media(max-width:600px){.stats-bar{gap:2rem}.nations-grid{text-align:center;max-width:1100px;margin:0 auto;padding:0 1rem}.community-links{flex-direction:column;align-items:center}}
-  
+
     /* COMPTEUR VISITES */
-    .visit-counter{display:inline-flex;align-items:center;gap:0.6rem;background:rgba(255,255,255,0.04);border:1px solid rgba(200,146,10,0.25);border-radius:30px;padding:0.5rem 1.4rem;margin:1rem auto;font-size:0.82rem;color:rgba(255,255,255,0.55)}
+    .visit-counter{display:inline-flex;align-items:center;gap:0.6rem;background:rgba(255,255,255,0.04);border:1px solid rgba(200,146,10,0.25);border-radius:30px;padding:0.5rem 1.4rem;margin:1rem auto 0;}
     .visit-counter span{color:var(--or-clair);font-weight:700;font-size:1rem}
 
     /* Série blog — articles numérotés 1 à 72 */
@@ -137,37 +138,37 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
     .serie-blog-wrap{margin-top:3.5rem;padding-top:3rem;border-top:1px solid rgba(255,255,255,0.09)}
     .serie-blog-wrap#serie-blog{scroll-margin-top:74px}
     .serie-blog-sub{margin-bottom:1.25rem}
-    .serie-notice{max-width:880px;margin:0 auto 1.5rem;padding:1rem 1.15rem;border-radius:14px;border:1px solid rgba(232,176,32,0.28);background:rgba(200,146,10,0.07);font-size:0.86rem;line-height:1.65;color:rgba(255,255,255,0.78)}
-    .carnets-pierre-wrap{max-width:880px;margin:2.5rem auto 0;padding:1.5rem 1.75rem;border-radius:16px;border:2px solid rgba(232,176,32,0.35);background:linear-gradient(135deg,rgba(139,46,46,0.15),rgba(200,146,10,0.08));text-align:center}
+    .serie-notice{max-width:880px;margin:0 auto 1.5rem;padding:1rem 1.15rem;border-radius:14px;border:1px solid rgba(232,176,32,0.28);background:rgba(200,146,10,0.07);font-size:0.86rem;line-height:1.65;color:rgba(255,255,255,0.7)}
+    .carnets-pierre-wrap{max-width:880px;margin:2.5rem auto 0;padding:1.5rem 1.75rem;border-radius:16px;border:2px solid rgba(232,176,32,0.35);background:linear-gradient(135deg,rgba(139,46,46,0.1),rgba(10,26,10,0.18))}
     .carnets-pierre-wrap h3{font-family:'Playfair Display',serif;font-size:clamp(1.2rem,2.5vw,1.65rem);color:var(--or-clair);margin-bottom:0.6rem}
     .carnets-pierre-wrap p{font-size:0.92rem;color:rgba(255,255,255,0.72);line-height:1.7;margin-bottom:1rem}
     .carnets-pierre-btns{display:flex;flex-wrap:wrap;gap:0.65rem;justify-content:center}
-    .carnets-pierre-btns a{display:inline-block;background:var(--or);color:#000;font-weight:700;font-size:0.78rem;letter-spacing:1px;text-transform:uppercase;padding:0.6rem 1.25rem;border-radius:50px;text-decoration:none}
+    .carnets-pierre-btns a{display:inline-block;background:var(--or);color:#000;font-weight:700;font-size:0.78rem;letter-spacing:1px;text-transform:uppercase;padding:0.6rem 1.25rem;border-radius:999px;text-decoration:none}
     .carnets-pierre-btns a.secondary{background:transparent;color:var(--or-clair);border:1px solid rgba(232,176,32,0.5)}
     .serie-load-err{text-align:center;color:#c98888;font-size:0.9rem;margin-top:1rem}
     .serie-group{margin-bottom:2.75rem}
     .serie-head-sm{font-family:'Playfair Display',serif;color:var(--or-clair);font-size:1.12rem;text-align:center;margin-bottom:1.1rem;border-bottom:1px solid rgba(200,146,10,0.25);padding-bottom:0.5rem}
     .serie-grid-blog{display:grid;grid-template-columns:repeat(auto-fill,minmax(220px,1fr));gap:1rem;max-width:1180px;margin:0 auto}
-    .serie-card{display:flex;flex-direction:column;align-items:flex-start;background:#161616;border:1px solid rgba(255,255,255,0.09);border-radius:14px;padding:1rem;min-height:130px;transition:border-color .2s,transform .2s}
+    .serie-card{display:flex;flex-direction:column;align-items:flex-start;background:#161616;border:1px solid rgba(255,255,255,0.09);border-radius:14px;padding:1rem;min-height:130px;transition:border-color 0.2s,transform 0.2s}
     .serie-card:hover{border-color:rgba(232,176,32,0.3);transform:translateY(-2px)}
     .serie-card.featured{border-color:rgba(232,176,32,0.45);background:linear-gradient(155deg,#1f1a12,#161616)}
-    .serie-num{min-width:2rem;height:2rem;display:inline-flex;align-items:center;justify-content:center;background:rgba(200,146,10,0.2);color:var(--or-clair);font-size:0.76rem;font-weight:800;border-radius:8px;margin-bottom:0.5rem}
+    .serie-num{min-width:2rem;height:2rem;display:inline-flex;align-items:center;justify-content:center;background:rgba(200,146,10,0.2);color:var(--or-clair);font-size:0.76rem;font-weight:800;border-radius:50%}
     .serie-card h4{font-family:'Playfair Display',serif;font-size:0.98rem;color:#fff;line-height:1.35;margin-bottom:auto;padding-bottom:0.6rem;font-weight:700}
-    a.btn-serie{display:inline-flex;justify-content:center;align-self:stretch;width:100%;box-sizing:border-box;background:var(--or);color:#000;font-weight:700;font-size:0.7rem;letter-spacing:1px;text-transform:uppercase;padding:0.5rem;border-radius:30px;text-decoration:none;margin-top:0.35rem;border:none;cursor:pointer;transition:background .2s}
+    a.btn-serie{display:inline-flex;justify-content:center;align-self:stretch;width:100%;box-sizing:border-box;background:var(--or);color:#000;font-weight:700;font-size:0.7rem;letter-spacing:1px;text-transform:uppercase;padding:0.7rem 1rem;border-radius:10px;text-decoration:none}
     a.btn-serie:hover{background:var(--or-clair)}
     #nations{scroll-margin-top:72px}
   </style>
   <link rel="stylesheet" href="lang-switcher.css">
 
   <meta property="og:title" content="Peuples Autochtones du Québec — Les 11 Premières Nations">
-  <meta property="og:description" content="Découvrez l">
+  <meta property="og:description" content="Découvrez l'histoire, la culture, les langues et les légendes des 11 nations autochtones du Québec.">
   <meta property="og:url" content="https://socrate83.github.io/premieres-nations-quebec/Home.html">
   <meta property="og:type" content="article">
   <meta property="og:image" content="https://socrate83.github.io/premieres-nations-quebec/images/articles/78-friction-feu.png">
   <meta property="og:locale" content="fr_FR">
   <meta name="twitter:card" content="summary_large_image">
   <meta name="twitter:title" content="Peuples Autochtones du Québec — Les 11 Premières Nations">
-  <meta name="twitter:description" content="Découvrez l">
+  <meta name="twitter:description" content="Découvrez l'histoire, la culture, les langues et les légendes des 11 nations autochtones du Québec.">
   <meta name="twitter:image" content="https://socrate83.github.io/premieres-nations-quebec/images/articles/78-friction-feu.png">
 </head>
 <body data-i18n-title="meta.siteTitle">
@@ -214,8 +215,8 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
   <section class="intro-sec">
     <h2 data-i18n="home.introTitle">Une histoire qui commence bien avant le Québec</h2>
     <div class="gold-line"></div>
-    <p data-i18n="home.introP1">Bien avant que Jacques Cartier n'aperçoive les rives du Saint-Laurent en 1534, des dizaines de nations autochtones habitaient ce territoire depuis des millénaires. Chasseurs, agriculteurs, navigateurs, diplomates — chaque peuple a développé une civilisation unique, adaptée à son territoire, profondément liée à la nature et transmise par une tradition orale d'une richesse extraordinaire.</p>
-    <p data-i18n="home.introP2">Cette série d'articles vous invite à découvrir les 11 Premières Nations et les Inuit du Nunavik — leur histoire, leur culture, leurs traditions et leur place dans le Québec d'aujourd'hui. Une invitation au respect et à la connaissance.</p>
+    <p data-i18n="home.introP1">Bien avant que Jacques Cartier n'aperçoive les rives du Saint-Laurent en 1534, des dizaines de nations autochtones habitaient ce territoire depuis des millénaires.</p>
+    <p data-i18n="home.introP2">Cette série d'articles vous invite à découvrir les 11 Premières Nations et les Inuit du Nunavik — leur histoire, leur culture, leurs traditions et leur place dans le Québec contemporain.</p>
   </section>
 
   <!-- NATIONS GRID -->
@@ -226,7 +227,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 
       <!-- ABENAQUIS -->
       <div class="nation-card" data-pn-nation-id="abenaquis">
-        <img src="https://media.base44.com/images/public/69f23c5b09417d29099136be/a6ec7c444_generated_image.png" alt="Abénaquis"/>
+        <img src="assets/images/a6ec7c444_generated_image.png" alt="Abénaquis"/>
         <div class="overlay"></div>
         <div class="card-body">
           <div class="card-tag" data-i18n-nation="abenaquis" data-i18n-field="tag">Algonquienne · Montérégie</div>
@@ -240,7 +241,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 
       <!-- ALGONQUINS -->
       <div class="nation-card" data-pn-nation-id="algonquins">
-        <img src="https://media.base44.com/images/public/69f23c5b09417d29099136be/2561ef1b7_generated_image.png" alt="Algonquins"/>
+        <img src="assets/images/2561ef1b7_generated_image.png" alt="Algonquins"/>
         <div class="overlay"></div>
         <div class="card-body">
           <div class="card-tag" data-i18n-nation="algonquins" data-i18n-field="tag">Algonquienne · Outaouais & Laurentides</div>
@@ -254,7 +255,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 
       <!-- ATIKAMEKW -->
       <div class="nation-card" data-pn-nation-id="atikamekw">
-        <img src="https://media.base44.com/images/public/69f23c5b09417d29099136be/3b05b2d46_generated_image.png" alt="Atikamekw"/>
+        <img src="assets/images/3b05b2d46_generated_image.png" alt="Atikamekw"/>
         <div class="overlay"></div>
         <div class="card-body">
           <div class="card-tag" data-i18n-nation="atikamekw" data-i18n-field="tag">Algonquienne · Haute-Mauricie</div>
@@ -268,7 +269,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 
       <!-- CRIS -->
       <div class="nation-card" data-pn-nation-id="cris">
-        <img src="https://media.base44.com/images/public/69f23c5b09417d29099136be/f338bd812_generated_image.png" alt="Cris"/>
+        <img src="assets/images/f338bd812_generated_image.png" alt="Cris"/>
         <div class="overlay"></div>
         <div class="card-body">
           <div class="card-tag" data-i18n-nation="cris" data-i18n-field="tag">Algonquienne · Baie-James</div>
@@ -282,7 +283,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 
       <!-- HURONS-WENDAT -->
       <div class="nation-card" data-pn-nation-id="huronswendat">
-        <img src="https://media.base44.com/images/public/69f23c5b09417d29099136be/cfa23dd96_generated_image.png" alt="Hurons-Wendat"/>
+        <img src="assets/images/cfa23dd96_generated_image.png" alt="Hurons-Wendat"/>
         <div class="overlay"></div>
         <div class="card-body">
           <div class="card-tag" data-i18n-nation="huronswendat" data-i18n-field="tag">Iroquoienne · Wendake · Québec</div>
@@ -296,7 +297,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 
       <!-- INNUS -->
       <div class="nation-card" data-pn-nation-id="innus">
-        <img src="https://media.base44.com/images/public/69f23c5b09417d29099136be/c2f2d3766_generated_image.png" alt="Innus"/>
+        <img src="assets/images/c2f2d3766_generated_image.png" alt="Innus"/>
         <div class="overlay"></div>
         <div class="card-body">
           <div class="card-tag" data-i18n-nation="innus" data-i18n-field="tag">Algonquienne · Côte-Nord</div>
@@ -310,7 +311,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 
       <!-- MALECITES -->
       <div class="nation-card" data-pn-nation-id="malecites">
-        <img src="https://media.base44.com/images/public/69f23c5b09417d29099136be/5c0074e92_generated_image.png" alt="Malécites"/>
+        <img src="assets/images/5c0074e92_generated_image.png" alt="Malécites"/>
         <div class="overlay"></div>
         <div class="card-body">
           <div class="card-tag" data-i18n-nation="malecites" data-i18n-field="tag">Algonquienne · Bas-Saint-Laurent</div>
@@ -324,7 +325,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 
       <!-- MICMACS -->
       <div class="nation-card" data-pn-nation-id="micmacs">
-        <img src="https://media.base44.com/images/public/69f23c5b09417d29099136be/d212a5852_generated_image.png" alt="Micmacs"/>
+        <img src="assets/images/d212a5852_generated_image.png" alt="Micmacs"/>
         <div class="overlay"></div>
         <div class="card-body">
           <div class="card-tag" data-i18n-nation="micmacs" data-i18n-field="tag">Algonquienne · Gaspésie</div>
@@ -338,7 +339,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 
       <!-- MOHAWKS -->
       <div class="nation-card" data-pn-nation-id="mohawks">
-        <img src="https://media.base44.com/images/public/69f23c5b09417d29099136be/101a12b1b_generated_image.png" alt="Mohawks"/>
+        <img src="assets/images/101a12b1b_generated_image.png" alt="Mohawks"/>
         <div class="overlay"></div>
         <div class="card-body">
           <div class="card-tag" data-i18n-nation="mohawks" data-i18n-field="tag">Iroquoienne · Vallée du Saint-Laurent</div>
@@ -352,7 +353,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 
       <!-- NASKAPIS -->
       <div class="nation-card" data-pn-nation-id="naskapis">
-        <img src="https://media.base44.com/images/public/69f23c5b09417d29099136be/f33531de6_generated_image.png" alt="Naskapis"/>
+        <img src="assets/images/f33531de6_generated_image.png" alt="Naskapis"/>
         <div class="overlay"></div>
         <div class="card-body">
           <div class="card-tag" data-i18n-nation="naskapis" data-i18n-field="tag">Algonquienne · Labrador québécois</div>
@@ -366,7 +367,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 
       <!-- INUITS -->
       <div class="nation-card" data-pn-nation-id="inuit">
-        <img src="https://media.base44.com/images/public/69f23c5b09417d29099136be/41afc600c_generated_image.png" alt="Inuit"/>
+        <img src="assets/images/41afc600c_generated_image.png" alt="Inuit"/>
         <div class="overlay"></div>
         <div class="card-body">
           <div class="card-tag" data-i18n-nation="inuit" data-i18n-field="tag">Inuit · Nunavik · Grand Nord</div>
@@ -391,8 +392,8 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 
     <div id="serie-blog" class="serie-blog-wrap">
       <h3 class="article-block-title" data-i18n="home.serieTitle">Série thématique — Les articles (81)</h3>
-      <p class="grid-sub serie-blog-sub" data-i18n="home.serieSub">9 séries (#1 à #81) : spiritualité, histoire, savoir-faire québécois, Sagesse Oubliée, culture vivante… Chaque carte ouvre l'article complet.</p>
-      <div class="serie-notice" role="note"><span data-i18n="home.serieNotice">Tous les articles au même endroit. Série 1 (#1–#10) à Série 9 (#81–#90) — lecture vocale sur chaque page.</span> <a href="Articles.html" style="color:#E8B020;font-weight:700;" data-i18n="home.serieNoticeLink">Liste complète →</a></div>
+      <p class="grid-sub serie-blog-sub" data-i18n="home.serieSub">9 séries (#1 à #81) : spiritualité, histoire, savoir-faire québécois, Sagesse Oubliée, culture vivante… Chaque carte ouvre un article.</p>
+      <div class="serie-notice" role="note"><span data-i18n="home.serieNotice">Tous les articles au même endroit. Série 1 (#1–#10) à Série 9 (#81–#90) — lecture vocale sur chaque page.</span></div>
       <div id="serie-blog-mount"></div>
       <p id="serie-blog-load-err" class="serie-load-err" hidden>Réessayer sans bloqueur de contenu ou recharger ; le fichier <code>blog-serie-articles.json</code> doit être accessible.</p>
     </div>
@@ -431,16 +432,16 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
   <!-- ARTICLE VEDETTE : LANGUES AUTOCHTONES -->
   <section style="padding:5rem 2rem;background:#0d0d0d;">
     <div style="max-width:1100px;margin:0 auto;">
-      <h2 style="font-family:'Playfair Display',serif;font-size:clamp(1.8rem,3vw,2.5rem);color:#fff;text-align:center;margin-bottom:0.5rem;"><span data-i18n="home.below.lang1Title">Les Langues Autochtones du Québec</span><br/><span style="color:#C8920A;" data-i18n="home.below.lang1Accent">Revitalisation et Survie Culturelle</span></h2>
-      <p style="text-align:center;color:rgba(255,255,255,0.45);font-size:0.8rem;letter-spacing:2px;text-transform:uppercase;margin-bottom:3rem;" data-i18n="home.below.lang1Date">📅 12 mai 2026 &nbsp;·&nbsp; Langue &amp; Culture</p>
+      <h2 style="font-family:'Playfair Display',serif;font-size:clamp(1.8rem,3vw,2.5rem);color:#fff;text-align:center;margin-bottom:0.5rem;"><span data-i18n="home.below.lang1Title">Les Langues Autochtones</span></h2>
+      <p style="text-align:center;color:rgba(255,255,255,0.45);font-size:0.8rem;letter-spacing:2px;text-transform:uppercase;margin-bottom:3rem;" data-i18n="home.below.lang1Date">📅 12 mai 2026 — 10 faits clés</p>
 
       <div style="background:#1a1a1a;border:1px solid rgba(200,146,10,0.3);border-radius:16px;overflow:hidden;max-width:860px;margin:0 auto 2rem;">
         <div style="padding:2rem;text-align:center;">
           <div style="font-size:4rem;margin-bottom:1rem;">🗣️</div>
-          <p style="color:rgba(255,255,255,0.7);font-size:0.95rem;line-height:1.8;margin-bottom:1.2rem;" data-i18n="home.below.lang1Body">Le cri, l'innu, l'atikamekw, le mi'kmaq — des langues millénaires menacées d'extinction. Des communautés qui les ramènent à la vie malgré les séquelles des pensionnats indiens et la pression de l'assimilation culturelle.</p>
+          <p style="color:rgba(255,255,255,0.7);font-size:0.95rem;line-height:1.8;margin-bottom:1.2rem;" data-i18n="home.below.lang1Body">Le cri, l'innu, l'atikamekw, le mi'kmaq — des langues qui portent les mémoires, les gestes, les paysages et les identités de nations vivantes.</p>
           <div style="display:flex;gap:1rem;flex-wrap:wrap;align-items:center;justify-content:center;">
-            <a href="LanguesAutochtones.html" style="background:#C8920A;color:#000;font-weight:700;font-size:0.8rem;letter-spacing:1px;text-transform:uppercase;padding:0.65rem 1.5rem;border-radius:30px;text-decoration:none;" data-i18n="home.below.readArticle">Lire l'article →</a>
-            <a href="https://www.facebook.com/groups/1451283625021958" target="_blank" style="background:#1877F2;color:#fff;font-weight:700;font-size:0.8rem;padding:0.65rem 1.2rem;border-radius:30px;text-decoration:none;" data-i18n="home.below.share">Partager 📢</a>
+            <a href="LanguesAutochtones.html" style="background:#C8920A;color:#000;font-weight:700;font-size:0.8rem;letter-spacing:1px;text-transform:uppercase;padding:0.65rem 1.5rem;border-radius:30px;text-decoration:none;">Lire l’article</a>
+            <a href="https://www.facebook.com/groups/1451283625021958" target="_blank" style="background:#1877F2;color:#fff;font-weight:700;font-size:0.8rem;padding:0.65rem 1.2rem;border-radius:30px;text-decoration:none;">Groupe Facebook</a>
           </div>
         </div>
       </div>
@@ -466,11 +467,11 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
   <!-- ARTICLE VEDETTE : LANGUES AUTOCHTONES -->
   <section style="padding:5rem 2rem;background:#0d0d0d;">
     <div style="max-width:1100px;margin:0 auto;">
-      <h2 style="font-family:'Playfair Display',serif;font-size:clamp(1.8rem,3vw,2.5rem);color:#fff;text-align:center;margin-bottom:0.5rem;"><span data-i18n="home.below.lang2Title">Les Langues Autochtones du Québec</span><br/><span style="color:#C8920A;" data-i18n="home.below.lang2Accent">Revitalisation et Résistance</span></h2>
-      <p style="text-align:center;color:rgba(255,255,255,0.45);font-size:0.8rem;letter-spacing:2px;text-transform:uppercase;margin-bottom:3rem;" data-i18n="home.below.lang2Date">📅 17 mai 2026 &nbsp;·&nbsp; Culture &amp; Langue</p>
+      <h2 style="font-family:'Playfair Display',serif;font-size:clamp(1.8rem,3vw,2.5rem);color:#fff;text-align:center;margin-bottom:0.5rem;"><span data-i18n="home.below.lang2Title">Les Langues Autochtones</span></h2>
+      <p style="text-align:center;color:rgba(255,255,255,0.45);font-size:0.8rem;letter-spacing:2px;text-transform:uppercase;margin-bottom:3rem;" data-i18n="home.below.lang2Date">📅 17 mai 2026 — 9 langues actives</p>
 
       <div style="background:#1a1a1a;border:1px solid rgba(200,146,10,0.3);border-radius:16px;overflow:hidden;max-width:860px;margin:0 auto 2rem;padding:2.5rem;text-align:center;">
-        <p style="color:rgba(255,255,255,0.7);font-size:0.95rem;line-height:1.8;margin-bottom:1.5rem;" data-i18n="home.below.lang2Body">Neuf langues autochtones survivent au Québec — dont certaines au bord de l'extinction. Découvrez comment les Premières Nations les revitalisent par l'immersion scolaire, les ressources numériques et la transmission intergénérationnelle.</p>
+        <p style="color:rgba(255,255,255,0.7);font-size:0.95rem;line-height:1.8;margin-bottom:1.5rem;" data-i18n="home.below.lang2Body">Neuf langues autochtones survivent au Québec — dont certaines sont en renaissance, d'autres menacées, toutes porteuses d'une mémoire collective.</p>
         <div style="display:grid;grid-template-columns:1fr 1fr;gap:1rem;margin-bottom:1.5rem;max-width:400px;margin-left:auto;margin-right:auto;">
           <div style="background:rgba(200,146,10,0.15);border:1px solid rgba(200,146,10,0.3);border-radius:8px;padding:1rem;">
             <div style="font-size:1.8rem;color:#E8B020;font-weight:bold;">9</div>
@@ -482,8 +483,8 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
           </div>
         </div>
         <div style="display:flex;gap:1rem;flex-wrap:wrap;justify-content:center;">
-          <a href="LanguesAutochtones.html" style="background:#C8920A;color:#000;font-weight:700;font-size:0.8rem;letter-spacing:1px;text-transform:uppercase;padding:0.65rem 1.5rem;border-radius:30px;text-decoration:none;" data-i18n="home.below.readArticle">Lire l'article →</a>
-          <a href="https://www.facebook.com/groups/1451283625021958" target="_blank" style="background:#1877F2;color:#fff;font-weight:700;font-size:0.8rem;padding:0.65rem 1.2rem;border-radius:30px;text-decoration:none;" data-i18n="home.below.share">Partager 📢</a>
+          <a href="LanguesAutochtones.html" style="background:#C8920A;color:#000;font-weight:700;font-size:0.8rem;letter-spacing:1px;text-transform:uppercase;padding:0.65rem 1.5rem;border-radius:30px;text-decoration:none;">Lire l’article</a>
+          <a href="https://www.facebook.com/groups/1451283625021958" target="_blank" style="background:#1877F2;color:#fff;font-weight:700;font-size:0.8rem;padding:0.65rem 1.2rem;border-radius:30px;text-decoration:none;">Groupe Facebook</a>
         </div>
       </div>
     </div>
@@ -492,38 +493,38 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
   <!-- ARTICLE VEDETTE : FEMMES AUTOCHTONES -->
   <section style="padding:5rem 2rem;background:#0d0d0d;">
     <div style="max-width:1100px;margin:0 auto;">
-      <h2 style="font-family:'Playfair Display',serif;font-size:clamp(1.8rem,3vw,2.5rem);color:#fff;text-align:center;margin-bottom:0.5rem;"><span data-i18n="home.below.womenTitle">Les Femmes Autochtones du Québec</span><br/><span style="color:#C8920A;" data-i18n="home.below.womenAccent">Piliers, Matriarches et Résistantes</span></h2>
-      <p style="text-align:center;color:rgba(255,255,255,0.45);font-size:0.8rem;letter-spacing:2px;text-transform:uppercase;margin-bottom:3rem;" data-i18n="home.below.womenDate">📅 8 mai 2026 &nbsp;·&nbsp; Société &amp; Droits</p>
+      <h2 style="font-family:'Playfair Display',serif;font-size:clamp(1.8rem,3vw,2.5rem);color:#fff;text-align:center;margin-bottom:0.5rem;"><span data-i18n="home.below.womenTitle">Les Femmes Autochtones</span></h2>
+      <p style="text-align:center;color:rgba(255,255,255,0.45);font-size:0.8rem;letter-spacing:2px;text-transform:uppercase;margin-bottom:3rem;" data-i18n="home.below.womenDate">📅 8 mai 2026 — L'influence des mères et aînées</p>
 
       <div style="background:#1a1a1a;border:1px solid rgba(200,146,10,0.3);border-radius:16px;overflow:hidden;max-width:860px;margin:0 auto 2rem;display:flex;flex-wrap:wrap;">
         <div style="flex:1;min-width:260px;max-width:420px;">
-          <img src="https://media.base44.com/images/public/69f23c5b09417d29099136be/ba24ebc77_generated_image.png"
+          <img src="assets/images/ba24ebc77_generated_image.png"
                alt="Femme aînée mohawk — matriarche des Premières Nations"
                style="width:100%;height:100%;object-fit:cover;display:block;min-height:280px;" />
         </div>
         <div style="flex:1;min-width:260px;padding:2rem;display:flex;flex-direction:column;justify-content:center;">
-          <span style="font-size:0.7rem;letter-spacing:3px;text-transform:uppercase;color:#E8B020;font-weight:700;margin-bottom:0.8rem;display:block;" data-i18n="home.below.womenBadge">✦ Article du jour</span>
-          <p style="color:rgba(255,255,255,0.7);font-size:0.95rem;line-height:1.8;margin-bottom:1.2rem;" data-i18n="home.below.womenBody">Bien avant l'arrivée des Européens, les femmes autochtones gouvernaient, décidaient et transmettaient. Chez les Wendat et les Mohawks, elles nommaient les chefs et pouvaient les destituer. La colonisation a tenté d'effacer ce pouvoir — elles le reconquièrent.</p>
+          <span style="font-size:0.7rem;letter-spacing:3px;text-transform:uppercase;color:#E8B020;font-weight:700;margin-bottom:0.8rem;display:block;" data-i18n="home.below.womenBadge">✦ Article</span>
+          <p style="color:rgba(255,255,255,0.7);font-size:0.95rem;line-height:1.8;margin-bottom:1.2rem;" data-i18n="home.below.womenBody">Bien avant l'arrivée des Européens, les femmes autochtones exerçaient des pouvoirs politiques, spirituels et économiques dans leurs communautés.</p>
           <div style="display:flex;gap:1rem;flex-wrap:wrap;align-items:center;">
-            <a href="FemmesAutochtones.html" style="background:#C8920A;color:#000;font-weight:700;font-size:0.8rem;letter-spacing:1px;text-transform:uppercase;padding:0.65rem 1.5rem;border-radius:30px;text-decoration:none;" data-i18n="home.below.readArticle">Lire l'article →</a>
-            <a href="https://www.facebook.com/groups/1451283625021958" target="_blank" style="background:#1877F2;color:#fff;font-weight:700;font-size:0.8rem;padding:0.65rem 1.2rem;border-radius:30px;text-decoration:none;" data-i18n="home.below.share">Partager 📢</a>
+            <a href="FemmesAutochtones.html" style="background:#C8920A;color:#000;font-weight:700;font-size:0.8rem;letter-spacing:1px;text-transform:uppercase;padding:0.65rem 1.5rem;border-radius:30px;text-decoration:none;">Lire l’article</a>
+            <a href="https://www.facebook.com/groups/1451283625021958" target="_blank" style="background:#1877F2;color:#fff;font-weight:700;font-size:0.8rem;padding:0.65rem 1.2rem;border-radius:30px;text-decoration:none;">Groupe Facebook</a>
           </div>
         </div>
       </div>
 
       <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:1rem;max-width:860px;margin:0 auto;">
         <div style="border-radius:10px;overflow:hidden;border:1px solid rgba(200,146,10,0.2);">
-          <img src="https://media.base44.com/images/public/69f23c5b09417d29099136be/9af16d09b_generated_image.png"
+          <img src="assets/images/9af16d09b_generated_image.png"
                alt="Conseil des femmes wendat" style="width:100%;height:160px;object-fit:cover;display:block;" />
           <p style="padding:0.7rem;font-size:0.78rem;color:rgba(255,255,255,0.55);text-align:center;" data-i18n="home.below.womenCap1">Conseil wendat — les Mères de clan désignaient les chefs</p>
         </div>
         <div style="border-radius:10px;overflow:hidden;border:1px solid rgba(200,146,10,0.2);">
-          <img src="https://media.base44.com/images/public/69f23c5b09417d29099136be/a1484cad5_generated_image.png"
+          <img src="assets/images/a1484cad5_generated_image.png"
                alt="Militante pour les femmes disparues" style="width:100%;height:160px;object-fit:cover;display:block;" />
           <p style="padding:0.7rem;font-size:0.78rem;color:rgba(255,255,255,0.55);text-align:center;" data-i18n="home.below.womenCap2">Lutte pour les femmes et filles disparues — ENFFADA</p>
         </div>
         <div style="border-radius:10px;overflow:hidden;border:1px solid rgba(200,146,10,0.2);">
-          <img src="https://media.base44.com/images/public/69f23c5b09417d29099136be/ba24ebc77_generated_image.png"
+          <img src="assets/images/ba24ebc77_generated_image.png"
                alt="Aînée mohawk" style="width:100%;height:160px;object-fit:cover;display:block;" />
           <p style="padding:0.7rem;font-size:0.78rem;color:rgba(255,255,255,0.55);text-align:center;" data-i18n="home.below.womenCap3">Les aînées — gardiennes du savoir et de la mémoire</p>
         </div>
@@ -534,9 +535,9 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
   <!-- DERNIERS ARTICLES -->
   <section style="padding:5rem 2rem;background:#0d0d0d;">
     <div style="max-width:1100px;margin:0 auto;">
-      <h2 id="serie-blog" style="font-family:'Playfair Display',serif;font-size:clamp(1.8rem,3vw,2.5rem);color:#fff;text-align:center;margin-bottom:0.5rem;" data-i18n="home.below.latestTitle">✦ Derniers Articles</h2>
-      <p style="text-align:center;color:rgba(255,255,255,0.5);font-size:0.9rem;letter-spacing:2px;text-transform:uppercase;margin-bottom:1rem;" data-i18n="home.below.latestSub">Art, culture et patrimoine autochtone</p>
-      <p style="text-align:center;margin-bottom:3rem;"><a href="Articles.html" style="color:#E8B020;font-weight:700;text-decoration:none;font-size:0.95rem;" data-i18n="home.seeAllArticles">📚 Voir tous les articles (#1 à #81) →</a></p>
+      <h2 id="serie-blog" style="font-family:'Playfair Display',serif;font-size:clamp(1.8rem,3vw,2.5rem);color:#fff;text-align:center;margin-bottom:0.5rem;" data-i18n="home.below.latestTitle">✦ Derniers articles</h2>
+      <p style="text-align:center;color:rgba(255,255,255,0.5);font-size:0.9rem;letter-spacing:2px;text-transform:uppercase;margin-bottom:1rem;" data-i18n="home.below.latestSub">Art, culture et patrimoine vivant</p>
+      <p style="text-align:center;margin-bottom:3rem;"><a href="Articles.html" style="color:#E8B020;font-weight:700;text-decoration:none;font-size:0.95rem;" data-i18n="home.seeAllArticles">📚 Voir tous les articles</a></p>
 
       <!-- CARTE PÊCHE AUTOCHTONE -->
       <div style="background:#1a1a1a;border:2px solid rgba(200,146,10,0.5);border-radius:16px;overflow:hidden;max-width:800px;margin:0 auto 2rem;display:flex;flex-wrap:wrap;">
@@ -546,29 +547,29 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
                style="width:100%;height:100%;object-fit:cover;display:block;min-height:250px;" />
         </div>
         <div style="flex:1;min-width:260px;padding:2rem;display:flex;flex-direction:column;justify-content:center;">
-          <span style="font-size:0.7rem;letter-spacing:3px;text-transform:uppercase;color:#E8B020;font-weight:700;margin-bottom:0.8rem;display:block;" data-i18n="home.below.a58Badge">✦ Pêche &amp; Rivières — 24 mai 2026</span>
-          <h3 style="font-family:'Playfair Display',serif;font-size:1.5rem;color:#fff;margin-bottom:1rem;line-height:1.3;" data-i18n="home.below.a58Title">La Pêche Autochtone — Filets, Nasses et Savoirs des Rivières</h3>
-          <p style="color:rgba(255,255,255,0.65);font-size:0.92rem;line-height:1.7;margin-bottom:1.5rem;" data-i18n="home.below.a58Body">Les Premières Nations ont développé des techniques de pêche sophistiquées et durables, utilisant filets et nasses. Découvrez comment les peuples autochtones ont maîtrisé les eaux du Québec précolonial.</p>
+          <span style="font-size:0.7rem;letter-spacing:3px;text-transform:uppercase;color:#E8B020;font-weight:700;margin-bottom:0.8rem;display:block;" data-i18n="home.below.a58Badge">✦ Pêche autochtone</span>
+          <h3 style="font-family:'Playfair Display',serif;font-size:1.5rem;color:#fff;margin-bottom:1rem;line-height:1.3;" data-i18n="home.below.a58Title">La Pêche Autochtone — Filets, Nasses et Respect</h3>
+          <p style="color:rgba(255,255,255,0.65);font-size:0.92rem;line-height:1.7;margin-bottom:1.5rem;" data-i18n="home.below.a58Body">Les Premières Nations ont développé des techniques de pêche remarquables, adaptées à chaque rivière et à chaque saison.</p>
           <div style="display:flex;gap:1rem;flex-wrap:wrap;align-items:center;">
-            <a href="77-les-techniques-de-peche.html" style="background:#C8920A;color:#000;font-weight:700;font-size:0.8rem;letter-spacing:1px;text-transform:uppercase;padding:0.6rem 1.5rem;border-radius:30px;text-decoration:none;" data-i18n="home.below.readArticle">Lire l'article →</a>
-            <a href="https://www.facebook.com/groups/1451283625021958" target="_blank" style="background:#1877F2;color:#fff;font-weight:700;font-size:0.8rem;padding:0.6rem 1.2rem;border-radius:30px;text-decoration:none;" data-i18n="home.below.share">Partager 📢</a>
+            <a href="77-les-techniques-de-peche.html" style="background:#C8920A;color:#000;font-weight:700;font-size:0.8rem;letter-spacing:1px;text-transform:uppercase;padding:0.6rem 1.5rem;border-radius:30px;text-decoration:none;">Lire l’article</a>
+            <a href="https://www.facebook.com/groups/1451283625021958" target="_blank" style="background:#1877F2;color:#fff;font-weight:700;font-size:0.8rem;padding:0.6rem 1.2rem;border-radius:30px;text-decoration:none;">Groupe Facebook</a>
           </div>
         </div>
       </div>
       <!-- CARTE ARTICLE 71 — CÉRÉMONIES SACRÉES -->
       <div style="background:#1a1a1a;border:2px solid rgba(200,146,10,0.5);border-radius:16px;overflow:hidden;max-width:800px;margin:0 auto 2rem;display:flex;flex-wrap:wrap;">
         <div style="flex:1;min-width:260px;max-width:400px;">
-          <img src="https://media.base44.com/images/public/69f23c5b09417d29099136be/abef7d299_generated_image.png"
+          <img src="assets/images/abef7d299_generated_image.png"
                alt="Pow-wow autochtone au Québec"
                style="width:100%;height:100%;object-fit:cover;display:block;min-height:250px;" />
         </div>
         <div style="flex:1;min-width:260px;padding:2rem;display:flex;flex-direction:column;justify-content:center;">
-          <span style="font-size:0.7rem;letter-spacing:3px;text-transform:uppercase;color:#E8B020;font-weight:700;margin-bottom:0.8rem;display:block;" data-i18n="home.below.a71Badge">✦ Spiritualité &amp; Culture — 13 mai 2026</span>
-          <h3 style="font-family:'Playfair Display',serif;font-size:1.5rem;color:#fff;margin-bottom:1rem;line-height:1.3;" data-i18n="home.below.a71Title">#71 — Les Cérémonies Sacrées des Peuples Autochtones du Québec</h3>
-          <p style="color:rgba(255,255,255,0.65);font-size:0.92rem;line-height:1.7;margin-bottom:1.5rem;" data-i18n="home.below.a71Body">Pow-wow, tambour sacré, loge de sudation, quête de vision, rites de passage... Plongez au cœur de la vie spirituelle des 11 nations du Québec — et de leur renaissance aujourd'hui.</p>
+          <span style="font-size:0.7rem;letter-spacing:3px;text-transform:uppercase;color:#E8B020;font-weight:700;margin-bottom:0.8rem;display:block;" data-i18n="home.below.a71Badge">✦ Spiritualité</span>
+          <h3 style="font-family:'Playfair Display',serif;font-size:1.5rem;color:#fff;margin-bottom:1rem;line-height:1.3;" data-i18n="home.below.a71Title">#71 — Les Cérémonies Sacrées des Peuples Autochtones</h3>
+          <p style="color:rgba(255,255,255,0.65);font-size:0.92rem;line-height:1.7;margin-bottom:1.5rem;" data-i18n="home.below.a71Body">Pow-wow, tambour sacré, loge de sudation, quête de vision — autant de rites qui expriment la relation entre les peuples, la terre et le monde spirituel.</p>
           <div style="display:flex;gap:1rem;flex-wrap:wrap;align-items:center;">
-            <a href="article71.html" style="background:#C8920A;color:#000;font-weight:700;font-size:0.8rem;letter-spacing:1px;text-transform:uppercase;padding:0.6rem 1.5rem;border-radius:30px;text-decoration:none;" data-i18n="home.below.readArticle">Lire l'article →</a>
-            <a href="https://www.facebook.com/groups/1451283625021958" target="_blank" style="background:#1877F2;color:#fff;font-weight:700;font-size:0.8rem;padding:0.6rem 1.2rem;border-radius:30px;text-decoration:none;" data-i18n="home.below.share">Partager 📢</a>
+            <a href="article71.html" style="background:#C8920A;color:#000;font-weight:700;font-size:0.8rem;letter-spacing:1px;text-transform:uppercase;padding:0.6rem 1.5rem;border-radius:30px;text-decoration:none;">Lire l’article</a>
+            <a href="https://www.facebook.com/groups/1451283625021958" target="_blank" style="background:#1877F2;color:#fff;font-weight:700;font-size:0.8rem;padding:0.6rem 1.2rem;border-radius:30px;text-decoration:none;">Groupe Facebook</a>
           </div>
         </div>
       </div>
@@ -576,17 +577,17 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
       <!-- GRILLE 3 IMAGES ARTICLE 71 -->
       <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:1rem;max-width:800px;margin:0 auto 3rem;">
         <div style="border-radius:10px;overflow:hidden;border:1px solid rgba(200,146,10,0.2);">
-          <img src="https://media.base44.com/images/public/69f23c5b09417d29099136be/811501d8b_generated_image.png"
+          <img src="assets/images/811501d8b_generated_image.png"
                alt="Cérémonie du tambour sacré" style="width:100%;height:160px;object-fit:cover;display:block;" />
           <p style="padding:0.7rem;font-size:0.78rem;color:rgba(255,255,255,0.55);text-align:center;" data-i18n="home.below.a71Cap1">Le tambour sacré — cœur de la vie spirituelle</p>
         </div>
         <div style="border-radius:10px;overflow:hidden;border:1px solid rgba(200,146,10,0.2);">
-          <img src="https://media.base44.com/images/public/69f23c5b09417d29099136be/caf7ea858_generated_image.png"
+          <img src="assets/images/caf7ea858_generated_image.png"
                alt="Loge de sudation autochtone" style="width:100%;height:160px;object-fit:cover;display:block;" />
           <p style="padding:0.7rem;font-size:0.78rem;color:rgba(255,255,255,0.55);text-align:center;" data-i18n="home.below.a71Cap2">Loge de sudation — purification du corps et de l'âme</p>
         </div>
         <div style="border-radius:10px;overflow:hidden;border:1px solid rgba(200,146,10,0.2);">
-          <img src="https://media.base44.com/images/public/69f23c5b09417d29099136be/8407fae80_generated_image.png"
+          <img src="assets/images/8407fae80_generated_image.png"
                alt="Transmission spirituelle aînés jeunes" style="width:100%;height:160px;object-fit:cover;display:block;" />
           <p style="padding:0.7rem;font-size:0.78rem;color:rgba(255,255,255,0.55);text-align:center;" data-i18n="home.below.a71Cap3">La transmission — l'enjeu du siècle</p>
         </div>
@@ -595,17 +596,17 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
       <!-- CARTE BIJOUX -->
       <div style="background:#1a1a1a;border:1px solid rgba(200,146,10,0.3);border-radius:16px;overflow:hidden;max-width:800px;margin:0 auto 2rem;display:flex;flex-wrap:wrap;">
         <div style="flex:1;min-width:260px;max-width:400px;">
-          <img src="https://media.base44.com/images/public/69f23c5b09417d29099136be/4a61aabf0_generated_image.png"
+          <img src="assets/images/4a61aabf0_generated_image.png"
                alt="Bijoux des Premières Nations du Québec"
                style="width:100%;height:100%;object-fit:cover;display:block;min-height:250px;" />
         </div>
         <div style="flex:1;min-width:260px;padding:2rem;display:flex;flex-direction:column;justify-content:center;">
-          <span style="font-size:0.7rem;letter-spacing:3px;text-transform:uppercase;color:#E8B020;font-weight:700;margin-bottom:0.8rem;display:block;" data-i18n="home.below.jewelBadge">✦ Art &amp; Culture — Mai 2026</span>
+          <span style="font-size:0.7rem;letter-spacing:3px;text-transform:uppercase;color:#E8B020;font-weight:700;margin-bottom:0.8rem;display:block;" data-i18n="home.below.jewelBadge">✦ Art & patrimoine</span>
           <h3 style="font-family:'Playfair Display',serif;font-size:1.5rem;color:#fff;margin-bottom:1rem;line-height:1.3;" data-i18n="home.below.jewelTitle">L'Art des Bijoux des Premières Nations</h3>
-          <p style="color:rgba(255,255,255,0.65);font-size:0.92rem;line-height:1.7;margin-bottom:1.5rem;" data-i18n="home.below.jewelBody">Wampum, piquants de porc-épic, argent et ivoire — découvrez comment les 11 nations du Québec ont transformé les ressources du territoire en œuvres d'une beauté et d'une signification profondes.</p>
+          <p style="color:rgba(255,255,255,0.65);font-size:0.92rem;line-height:1.7;margin-bottom:1.5rem;" data-i18n="home.below.jewelBody">Wampum, piquants de porc-épic, argent et ivoire — des formes d'art qui racontent des histoires, des alliances et des liens avec la terre.</p>
           <div style="display:flex;gap:1rem;flex-wrap:wrap;align-items:center;">
-            <a href="BijouxPremieresNations.html" style="background:#C8920A;color:#000;font-weight:700;font-size:0.8rem;letter-spacing:1px;text-transform:uppercase;padding:0.6rem 1.5rem;border-radius:30px;text-decoration:none;transition:background 0.2s;" data-i18n="home.below.readArticle">Lire l'article →</a>
-            <a href="https://www.facebook.com/groups/1451283625021958" target="_blank" style="background:#1877F2;color:#fff;font-weight:700;font-size:0.8rem;padding:0.6rem 1.2rem;border-radius:30px;text-decoration:none;" data-i18n="home.below.share">Partager 📢</a>
+            <a href="BijouxPremieresNations.html" style="background:#C8920A;color:#000;font-weight:700;font-size:0.8rem;letter-spacing:1px;text-transform:uppercase;padding:0.6rem 1.5rem;border-radius:30px;text-decoration:none;">Lire l’article</a>
+            <a href="https://www.facebook.com/groups/1451283625021958" target="_blank" style="background:#1877F2;color:#fff;font-weight:700;font-size:0.8rem;padding:0.6rem 1.2rem;border-radius:30px;text-decoration:none;">Groupe Facebook</a>
           </div>
         </div>
       </div>
@@ -613,17 +614,17 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
       <!-- GRILLE 3 IMAGES DU MÊME ARTICLE -->
       <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:1rem;max-width:800px;margin:0 auto;">
         <div style="border-radius:10px;overflow:hidden;border:1px solid rgba(200,146,10,0.2);">
-          <img src="https://media.base44.com/images/public/69f23c5b09417d29099136be/c1af84dd7_generated_image.png"
+          <img src="assets/images/c1af84dd7_generated_image.png"
                alt="Ceinture wampum haudenosaunee" style="width:100%;height:160px;object-fit:cover;display:block;" />
           <p style="padding:0.7rem;font-size:0.78rem;color:rgba(255,255,255,0.55);text-align:center;" data-i18n="home.below.jewelCap1">Ceinture wampum — Mohawks</p>
         </div>
         <div style="border-radius:10px;overflow:hidden;border:1px solid rgba(200,146,10,0.2);">
-          <img src="https://media.base44.com/images/public/69f23c5b09417d29099136be/c89b4df10_generated_image.png"
+          <img src="assets/images/c89b4df10_generated_image.png"
                alt="Art du quillwork" style="width:100%;height:160px;object-fit:cover;display:block;" />
           <p style="padding:0.7rem;font-size:0.78rem;color:rgba(255,255,255,0.55);text-align:center;" data-i18n="home.below.jewelCap2">Quillwork — piquants de porc-épic</p>
         </div>
         <div style="border-radius:10px;overflow:hidden;border:1px solid rgba(200,146,10,0.2);">
-          <img src="https://media.base44.com/images/public/69f23c5b09417d29099136be/477d4f792_generated_image.png"
+          <img src="assets/images/477d4f792_generated_image.png"
                alt="Artiste autochtone contemporaine" style="width:100%;height:160px;object-fit:cover;display:block;" />
           <p style="padding:0.7rem;font-size:0.78rem;color:rgba(255,255,255,0.55);text-align:center;" data-i18n="home.below.jewelCap3">Renaissance contemporaine</p>
         </div>
@@ -648,7 +649,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 
   <!-- QUOTE -->
   <section class="quote-sec">
-    <blockquote data-i18n="home.below.quoteText">« Ces peuples n'appartiennent pas au passé. Ils sont vivants, présents, et leur avenir se construit maintenant — sur les mêmes territoires qu'ils n'ont jamais quittés. »</blockquote>
+    <blockquote data-i18n="home.below.quoteText">« Ces peuples n'appartiennent pas au passé. Ils sont vivants, présents, et leur avenir se construit maintenant — sur les mêmes territoires que leurs ancêtres. »</blockquote>
     <p class="quote-src" data-i18n="home.below.quoteSrc">— Série « Peuples Autochtones du Québec »</p>
   </section>
 
@@ -659,7 +660,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
       <span data-i18n="home.below.footerVisit">👁 Visites sur cet appareil :</span> <span id="visit-count">…</span>
     </div>
     <h3 data-i18n="home.below.footerTitle">Peuples Autochtones du Québec</h3>
-    <p data-i18n="home.below.footerDesc">Cette série d'articles a été réalisée avec respect pour chacune des nations présentées. Elle vise à faire connaître leur histoire remarquable au grand public québécois et international.</p>
+    <p data-i18n="home.below.footerDesc">Cette série d'articles a été réalisée avec respect pour chacune des nations présentées. Elle vise à faire connaître leur histoire remarquable au Québec et au Canada.</p>
     <nav class="footer-nav">
       <a href="Abenaquis.html" >Abénaquis</a>
       <a href="Algonquins.html" >Algonquins</a>
@@ -677,7 +678,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
       <a href="https://www.facebook.com/groups/1451283625021958" target="_blank" data-i18n="home.below.footerFb">📘 Groupe Facebook</a>
       <a href="https://lucie-app-5fea0268.base44.app" target="_blank" data-i18n="home.below.footerSite">🌐 Site de la série</a>
     </div>
-    <p>🌐 <a href="https://tourismeautochtone.com" target="_blank">tourismeautochtone.com</a> · <a href="https://www.quebec.ca/gouvernement/portrait-quebec/premieres-nations-inuits" target="_blank" data-i18n="home.below.footerGov">Gouvernement du Québec</a></p>
+    <p>🌐 <a href="https://tourismeautochtone.com" target="_blank">tourismeautochtone.com</a> · <a href="https://www.quebec.ca/gouvernement/portrait-quebec/premieres-nations-inuits" target="_blank">quebec.ca</a></p>
     <h3 style="margin-top:2rem;" data-i18n="home.below.footerFaq">❓ Foire aux questions</h3>
     <p class="copy" data-i18n="home.below.footerCopy">FAQ · Série réalisée avec Lucie · Contenu à visée éducative · 2026</p>
   </footer>
@@ -694,7 +695,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 
   <!-- Bouton flottant question -->
   <style>
-    #chat-btn{position:fixed;bottom:2rem;right:2rem;width:56px;height:56px;background:var(--or);border-radius:50%;font-size:1.6rem;display:flex;align-items:center;justify-content:center;cursor:pointer;box-shadow:0 4px 15px rgba(0,0,0,0.4);z-index:1000;transition:transform 0.2s}
+    #chat-btn{position:fixed;bottom:2rem;right:2rem;width:56px;height:56px;background:var(--or);border-radius:50%;font-size:1.6rem;display:flex;align-items:center;justify-content:center;cursor:pointer;z-index:1000;box-shadow:0 10px 30px rgba(0,0,0,0.35);transition:transform 0.2s}
     #chat-btn:hover{transform:scale(1.1)}
     #chat-box{position:fixed;bottom:6rem;right:2rem;width:300px;background:#1a1a1a;border:1px solid var(--or);border-radius:16px;padding:1.2rem;z-index:1000;display:none;box-shadow:0 8px 30px rgba(0,0,0,0.5)}
     #chat-header{color:var(--or);font-weight:700;margin-bottom:0.8rem;font-size:0.95rem}
