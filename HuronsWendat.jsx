@@ -100,7 +100,7 @@ export default function HuronsWendat() {
 </head>
 <body>
   <section class="hero">
-    <img src="https://media.base44.com/images/public/69f23c5b09417d29099136be/18ce1ec32_generated_image.png" alt="Territoire wendat — Wendake" />
+    <img src="assets/images/18ce1ec32_generated_image.png" alt="Territoire wendat — Wendake" />
     <div class="hero-content">
       <p class="hero-nation">Premières Nations du Québec</p>
       <h1>Les Hurons-Wendat</h1>
