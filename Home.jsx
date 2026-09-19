@@ -21,7 +21,7 @@ export default function Home() {
 
     /* HERO */
     .hero{position:relative;min-height:100vh;display:flex;align-items:center;justify-content:center;overflow:hidden;background:#000}
-    .hero-bg{position:absolute;inset:0;background:url('https://media.base44.com/images/public/69f23c5b09417d29099136be/41afc600c_generated_image.png') center/cover no-repeat;filter:brightness(0.35);transform:scale(1.05);animation:slowzoom 20s ease-in-out infinite alternate}
+    .hero-bg{position:absolute;inset:0;background:url('assets/images/41afc600c_generated_image.png') center/cover no-repeat;filter:brightness(0.35);transform:scale(1.05);animation:slowzoom 20s ease-in-out infinite alternate}
     @keyframes slowzoom{from{transform:scale(1.05)}to{transform:scale(1.15)}}
     .hero-content{position:relative;z-index:2;text-align:center;padding:3rem 2rem;max-width:900px}
     .hero-eyebrow{font-size:0.8rem;letter-spacing:6px;text-transform:uppercase;color:var(--or-clair);font-weight:700;margin-bottom:1.5rem}
@@ -168,7 +168,7 @@ export default function Home() {
 
       <!-- ABENAQUIS -->
       <div class="nation-card">
-        <img src="https://media.base44.com/images/public/69f23c5b09417d29099136be/a6ec7c444_generated_image.png" alt="Abénaquis"/>
+        <img src="assets/images/a6ec7c444_generated_image.png" alt="Abénaquis"/>
         <div class="overlay"></div>
         <div class="card-body">
           <div class="card-tag">Algonquienne · Montérégie</div>
@@ -183,7 +183,7 @@ export default function Home() {
 
       <!-- ALGONQUINS -->
       <div class="nation-card">
-        <img src="https://media.base44.com/images/public/69f23c5b09417d29099136be/2561ef1b7_generated_image.png" alt="Algonquins"/>
+        <img src="assets/images/2561ef1b7_generated_image.png" alt="Algonquins"/>
         <div class="overlay"></div>
         <div class="card-body">
           <div class="card-tag">Algonquienne · Outaouais & Laurentides</div>
@@ -198,7 +198,7 @@ export default function Home() {
 
       <!-- ATIKAMEKW -->
       <div class="nation-card">
-        <img src="https://media.base44.com/images/public/69f23c5b09417d29099136be/3b05b2d46_generated_image.png" alt="Atikamekw"/>
+        <img src="assets/images/3b05b2d46_generated_image.png" alt="Atikamekw"/>
         <div class="overlay"></div>
         <div class="card-body">
           <div class="card-tag">Algonquienne · Haute-Mauricie</div>
@@ -213,7 +213,7 @@ export default function Home() {
 
       <!-- CRIS -->
       <div class="nation-card">
-        <img src="https://media.base44.com/images/public/69f23c5b09417d29099136be/f338bd812_generated_image.png" alt="Cris"/>
+        <img src="assets/images/f338bd812_generated_image.png" alt="Cris"/>
         <div class="overlay"></div>
         <div class="card-body">
           <div class="card-tag">Algonquienne · Baie-James</div>
@@ -228,7 +228,7 @@ export default function Home() {
 
       <!-- HURONS-WENDAT -->
       <div class="nation-card">
-        <img src="https://media.base44.com/images/public/69f23c5b09417d29099136be/cfa23dd96_generated_image.png" alt="Hurons-Wendat"/>
+        <img src="assets/images/cfa23dd96_generated_image.png" alt="Hurons-Wendat"/>
         <div class="overlay"></div>
         <div class="card-body">
           <div class="card-tag">Iroquoienne · Wendake · Québec</div>
@@ -243,7 +243,7 @@ export default function Home() {
 
       <!-- INNUS -->
       <div class="nation-card">
-        <img src="https://media.base44.com/images/public/69f23c5b09417d29099136be/c2f2d3766_generated_image.png" alt="Innus"/>
+        <img src="assets/images/c2f2d3766_generated_image.png" alt="Innus"/>
         <div class="overlay"></div>
         <div class="card-body">
           <div class="card-tag">Algonquienne · Côte-Nord</div>
@@ -258,7 +258,7 @@ export default function Home() {
 
       <!-- MALECITES -->
       <div class="nation-card">
-        <img src="https://media.base44.com/images/public/69f23c5b09417d29099136be/5c0074e92_generated_image.png" alt="Malécites"/>
+        <img src="assets/images/5c0074e92_generated_image.png" alt="Malécites"/>
         <div class="overlay"></div>
         <div class="card-body">
           <div class="card-tag">Algonquienne · Bas-Saint-Laurent</div>
@@ -273,7 +273,7 @@ export default function Home() {
 
       <!-- MICMACS -->
       <div class="nation-card">
-        <img src="https://media.base44.com/images/public/69f23c5b09417d29099136be/d212a5852_generated_image.png" alt="Micmacs"/>
+        <img src="assets/images/d212a5852_generated_image.png" alt="Micmacs"/>
         <div class="overlay"></div>
         <div class="card-body">
           <div class="card-tag">Algonquienne · Gaspésie</div>
@@ -288,7 +288,7 @@ export default function Home() {
 
       <!-- MOHAWKS -->
       <div class="nation-card">
-        <img src="https://media.base44.com/images/public/69f23c5b09417d29099136be/101a12b1b_generated_image.png" alt="Mohawks"/>
+        <img src="assets/images/101a12b1b_generated_image.png" alt="Mohawks"/>
         <div class="overlay"></div>
         <div class="card-body">
           <div class="card-tag">Iroquoienne · Vallée du Saint-Laurent</div>
@@ -303,7 +303,7 @@ export default function Home() {
 
       <!-- NASKAPIS -->
       <div class="nation-card">
-        <img src="https://media.base44.com/images/public/69f23c5b09417d29099136be/f33531de6_generated_image.png" alt="Naskapis"/>
+        <img src="assets/images/f33531de6_generated_image.png" alt="Naskapis"/>
         <div class="overlay"></div>
         <div class="card-body">
           <div class="card-tag">Algonquienne · Labrador québécois</div>
@@ -318,7 +318,7 @@ export default function Home() {
 
       <!-- INUITS -->
       <div class="nation-card">
-        <img src="https://media.base44.com/images/public/69f23c5b09417d29099136be/41afc600c_generated_image.png" alt="Inuit"/>
+        <img src="assets/images/41afc600c_generated_image.png" alt="Inuit"/>
         <div class="overlay"></div>
         <div class="card-body">
           <div class="card-tag">Inuit · Nunavik · Grand Nord</div>
