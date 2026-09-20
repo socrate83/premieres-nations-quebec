@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 630" role="img" aria-labelledby="title desc">
-  <title id="title">Pow-wow autochtone au Québec</title>
-  <desc id="desc">Illustration locale de remplacement pour supprimer la dépendance Base44.</desc>
+  <title id="title">Naskapis</title>
+  <desc id="desc">Illustration locale de secours pour l'accueil.</desc>
   <defs>
     <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1">
       <stop offset="0%" stop-color="#603813"/>
@@ -12,7 +12,6 @@
   <circle cx="155" cy="128" r="56" fill="rgba(255,255,255,0.18)"/>
   <path d="M165 70c38 70 39 122 0 176-38-54-38-106 0-176Z" fill="rgba(255,255,255,0.42)"/>
   <text x="110" y="570" font-size="28" fill="rgba(255,255,255,0.78)" font-family="Georgia, serif">Premières Nations du Québec</text>
-  <text x="600" y="196" text-anchor="middle" font-size="44" font-weight="700" fill="#ffffff" font-family="Georgia, serif">Pow-wow autochtone au</text>
-  <text x="600" y="252" text-anchor="middle" font-size="44" font-weight="700" fill="#ffffff" font-family="Georgia, serif">Québec</text>
-  <text x="600" y="510" text-anchor="middle" font-size="22" fill="rgba(255,255,255,0.82)" font-family="Arial, sans-serif">Illustration locale de remplacement (accueil)</text>
+  <text x="600" y="210" text-anchor="middle" font-size="44" font-weight="700" fill="#ffffff" font-family="Georgia, serif">Naskapis</text>
+  <text x="600" y="510" text-anchor="middle" font-size="22" fill="rgba(255,255,255,0.82)" font-family="Arial, sans-serif">Illustration locale de remplacement</text>
 </svg>
