@@ -33,8 +33,8 @@ Serve the repo root with any static file server, then open `http://localhost:800
 python3 -m http.server 8000     # from repo root
 ```
 
-Pages use root-relative links (`Home.html`, `assets/…`) and most images are hosted externally
-(`media.base44.com`), so serving from the repo root "just works". The language switcher
+Pages use root-relative links (`Home.html`, `assets/…`) and local assets/fallbacks under
+`assets/images/`, so serving from the repo root "just works". The language switcher
 (`lang-switcher.js` + `locales/`) runs client-side; some article bodies have no EN/ES translation
 and intentionally show a banner "Translation not available… French version is authoritative".
 
