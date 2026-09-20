@@ -115,7 +115,7 @@ export default function Atikamekw() {
 <body>
 
   <section class="hero">
-    <img src="https://media.base44.com/images/public/69f23c5b09417d29099136be/a00687526_generated_image.png" alt="Territoire atikamekw en Haute-Mauricie" />
+    <img src="assets/images/a00687526_generated_image.png" alt="Territoire atikamekw en Haute-Mauricie" />
     <div class="hero-content">
       <p class="hero-nation">Premières Nations du Québec</p>
       <h1>Les Atikamekw</h1>
@@ -220,7 +220,7 @@ export default function Atikamekw() {
           <p>L'artisanat atikamekw est d'une beauté saisissante. Maîtres du travail de l'<strong>écorce de bouleau</strong>, ils fabriquent des canots, des contenants, des toboggans et des raquettes d'une précision remarquable. Les broderies de perles, les vêtements en peaux et les objets en os et en bois témoignent d'une esthétique sophistiquée.</p>
         </div>
         <div>
-          <img src="https://media.base44.com/images/public/69f23c5b09417d29099136be/a00687526_generated_image.png" alt="Forêt boréale et territoire atikamekw" />
+          <img src="assets/images/a00687526_generated_image.png" alt="Forêt boréale et territoire atikamekw" />
           <p class="img-cap">Le Nitaskinan — territoire boréal ancestral des Atikamekw en Haute-Mauricie</p>
         </div>
       </div>
@@ -243,7 +243,7 @@ export default function Atikamekw() {
       <p>Les Atikamekw habitent leur territoire depuis des millénaires. Leur organisation sociale traditionnelle repose sur le <strong>clan familial étendu</strong> — chaque clan occupe et gère un territoire de chasse et de pêche transmis depuis les ancêtres. Ces territoires familiaux sont au cœur de leur gouvernance et de leur rapport au monde.</p>
       <p>La prise de décision se faisait par consensus, guidée par des <strong>chefs de clan</strong> reconnus pour leur sagesse et leur connaissance du territoire. Il n'existait pas de structure politique centralisée — chaque clan était autonome, et les grands rassemblements estivaux permettaient de régler les différends et de renforcer les alliances.</p>
       <p>Les Atikamekw entretenaient des réseaux d'échange étendus avec les nations voisines — Algonquins, Innus, Cris — échangeant fourrures, peaux tannées, viande séchée et objets artisanaux. Ces relations commerciales et diplomatiques leur ont permis de maintenir leur indépendance face aux pressions extérieures.</p>
-      <img src="https://media.base44.com/images/public/69f23c5b09417d29099136be/a00687526_generated_image.png" alt="Territoire atikamekw" class="img-wide" />
+      <img src="assets/images/a00687526_generated_image.png" alt="Territoire atikamekw" class="img-wide" />
       <p class="img-cap">Le Nitaskinan — territoire ancestral atikamekw en Haute-Mauricie, non cédé par traité</p>
     </div>
   </section>
@@ -349,12 +349,12 @@ export default function Atikamekw() {
     <h4>📢 Partager cet article</h4>
     <p>Vous avez aimé ? Faites découvrir les Atikamekw à votre entourage !</p>
     <div class="share-btns">
-      <a class="btn-fb-big" href="https://www.facebook.com/sharer/sharer.php?u=https://lucie-app-5fea0268.base44.app/Atikamekw" target="_blank">📘 Facebook</a>
+      <a class="btn-fb-big" href="https://www.facebook.com/sharer/sharer.php?u=https://socrate83.github.io/premieres-nations-quebec/Atikamekw.html" target="_blank">📘 Facebook</a>
       <a class="btn-group-big" href="https://www.facebook.com/groups/1451283625021958" target="_blank">👥 Groupe FB</a>
-      <a class="btn-messenger-big" href="https://www.facebook.com/dialog/send?link=https://lucie-app-5fea0268.base44.app/Atikamekw&app_id=291494419107518&redirect_uri=https://lucie-app-5fea0268.base44.app/Atikamekw" target="_blank">💬 Messenger</a>
-      <a class="btn-whatsapp-big" href="https://api.whatsapp.com/send?text=D%C3%A9couvre+cet+article+sur+les+Atikamekw+%3A+https://lucie-app-5fea0268.base44.app/Atikamekw" target="_blank">🟢 WhatsApp</a>
-      <a class="btn-email-big" href="mailto:?subject=Article+sur+les+Atikamekw&body=Je+te+partage+cet+article+sur+les+Atikamekw+%3A+https://lucie-app-5fea0268.base44.app/Atikamekw" target="_blank">📧 Courriel</a>
-      <button class="btn-copy-big" onclick="navigator.clipboard.writeText('https://lucie-app-5fea0268.base44.app/Atikamekw').then(function(){var t=document.getElementById('toast-share');t.style.opacity='1';t.style.transform='translateX(-50%) translateY(0)';setTimeout(function(){t.style.opacity='0';t.style.transform='translateX(-50%) translateY(20px)';},2500);})">🔗 Copier le lien</button>
+      <a class="btn-messenger-big" href="https://www.facebook.com/dialog/send?link=https://socrate83.github.io/premieres-nations-quebec/Atikamekw.html&app_id=291494419107518&redirect_uri=https://socrate83.github.io/premieres-nations-quebec/Atikamekw.html" target="_blank">💬 Messenger</a>
+      <a class="btn-whatsapp-big" href="https://api.whatsapp.com/send?text=D%C3%A9couvre+cet+article+sur+les+Atikamekw+%3A+https://socrate83.github.io/premieres-nations-quebec/Atikamekw.html" target="_blank">🟢 WhatsApp</a>
+      <a class="btn-email-big" href="mailto:?subject=Article+sur+les+Atikamekw&body=Je+te+partage+cet+article+sur+les+Atikamekw+%3A+https://socrate83.github.io/premieres-nations-quebec/Atikamekw.html" target="_blank">📧 Courriel</a>
+      <button class="btn-copy-big" onclick="navigator.clipboard.writeText('https://socrate83.github.io/premieres-nations-quebec/Atikamekw.html').then(function(){var t=document.getElementById('toast-share');t.style.opacity='1';t.style.transform='translateX(-50%) translateY(0)';setTimeout(function(){t.style.opacity='0';t.style.transform='translateX(-50%) translateY(20px)';},2500);})">🔗 Copier le lien</button>
     </div>
   </div>
   <div id="toast-share" style="position:fixed;bottom:2rem;left:50%;transform:translateX(-50%) translateY(20px);background:#C8920A;color:#000;font-weight:700;font-size:0.9rem;padding:0.7rem 2rem;border-radius:30px;opacity:0;transition:all 0.3s;z-index:9999;pointer-events:none">✅ Lien copié !</div>

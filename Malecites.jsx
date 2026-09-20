@@ -88,7 +88,7 @@ export default function Malecites() {
 </head>
 <body>
   <section class="hero">
-    <img src="https://media.base44.com/images/public/69f23c5b09417d29099136be/a00687526_generated_image.png" alt="Rivière Wolastoq — territoire malécite" />
+    <img src="assets/images/a00687526_generated_image.png" alt="Rivière Wolastoq — territoire malécite" />
     <div class="hero-content">
       <p class="hero-nation">Premières Nations du Québec</p>
       <h1>Les Malécites</h1>
@@ -146,7 +146,7 @@ export default function Malecites() {
       <div class="divider"></div>
       <p>Le territoire ancestral des Malécites est centré sur la <strong>rivière Wolastoq</strong> — le fleuve Saint-Jean — qui coule du Maine au Nouveau-Brunswick. En Québec, leur territoire s'étend dans le <strong>Bas-Saint-Laurent</strong>, notamment dans la région de Kamouraska, Rivière-du-Loup et la vallée de la rivière Madawaska.</p>
       <p>La rivière Wolastoq était l'axe vital de leur mode de vie — source de saumons, d'anguilles et de gibier aquatique, mais aussi route de commerce et de diplomatie reliant les communautés malécites du Maine, du Nouveau-Brunswick et du Québec. Sa beauté légendaire lui a valu son nom : <em>« la belle rivière brillante »</em>.</p>
-      <img src="https://media.base44.com/images/public/69f23c5b09417d29099136be/a00687526_generated_image.png" alt="Territoire malécite — forêt et rivière" class="img-wide"/>
+      <img src="assets/images/a00687526_generated_image.png" alt="Territoire malécite — forêt et rivière" class="img-wide"/>
       <p class="img-cap">Forêts et rivières du Bas-Saint-Laurent — territoire ancestral des Wolastoqiyik</p>
     </div>
   </section>
@@ -244,12 +244,12 @@ export default function Malecites() {
     <h4>📢 Partager cet article</h4>
     <p>Vous avez aimé ? Faites découvrir les Malécites à votre entourage !</p>
     <div class="share-btns">
-      <a class="btn-fb-big" href="https://www.facebook.com/sharer/sharer.php?u=https://lucie-app-5fea0268.base44.app/Malecites" target="_blank">📘 Facebook</a>
+      <a class="btn-fb-big" href="https://www.facebook.com/sharer/sharer.php?u=https://socrate83.github.io/premieres-nations-quebec/Malecites.html" target="_blank">📘 Facebook</a>
       <a class="btn-group-big" href="https://www.facebook.com/groups/1451283625021958" target="_blank">👥 Groupe FB</a>
-      <a class="btn-messenger-big" href="https://www.facebook.com/dialog/send?link=https://lucie-app-5fea0268.base44.app/Malecites&app_id=291494419107518&redirect_uri=https://lucie-app-5fea0268.base44.app/Malecites" target="_blank">💬 Messenger</a>
-      <a class="btn-whatsapp-big" href="https://api.whatsapp.com/send?text=D%C3%A9couvre+cet+article+sur+les+Malécites+%3A+https://lucie-app-5fea0268.base44.app/Malecites" target="_blank">🟢 WhatsApp</a>
-      <a class="btn-email-big" href="mailto:?subject=Article+sur+les+Malécites&body=Je+te+partage+cet+article+sur+les+Malécites+%3A+https://lucie-app-5fea0268.base44.app/Malecites" target="_blank">📧 Courriel</a>
-      <button class="btn-copy-big" onclick="navigator.clipboard.writeText('https://lucie-app-5fea0268.base44.app/Malecites').then(function(){var t=document.getElementById('toast-share');t.style.opacity='1';t.style.transform='translateX(-50%) translateY(0)';setTimeout(function(){t.style.opacity='0';t.style.transform='translateX(-50%) translateY(20px)';},2500);})">🔗 Copier le lien</button>
+      <a class="btn-messenger-big" href="https://www.facebook.com/dialog/send?link=https://socrate83.github.io/premieres-nations-quebec/Malecites.html&app_id=291494419107518&redirect_uri=https://socrate83.github.io/premieres-nations-quebec/Malecites.html" target="_blank">💬 Messenger</a>
+      <a class="btn-whatsapp-big" href="https://api.whatsapp.com/send?text=D%C3%A9couvre+cet+article+sur+les+Malécites+%3A+https://socrate83.github.io/premieres-nations-quebec/Malecites.html" target="_blank">🟢 WhatsApp</a>
+      <a class="btn-email-big" href="mailto:?subject=Article+sur+les+Malécites&body=Je+te+partage+cet+article+sur+les+Malécites+%3A+https://socrate83.github.io/premieres-nations-quebec/Malecites.html" target="_blank">📧 Courriel</a>
+      <button class="btn-copy-big" onclick="navigator.clipboard.writeText('https://socrate83.github.io/premieres-nations-quebec/Malecites.html').then(function(){var t=document.getElementById('toast-share');t.style.opacity='1';t.style.transform='translateX(-50%) translateY(0)';setTimeout(function(){t.style.opacity='0';t.style.transform='translateX(-50%) translateY(20px)';},2500);})">🔗 Copier le lien</button>
     </div>
   </div>
   <div id="toast-share" style="position:fixed;bottom:2rem;left:50%;transform:translateX(-50%) translateY(20px);background:#C8920A;color:#000;font-weight:700;font-size:0.9rem;padding:0.7rem 2rem;border-radius:30px;opacity:0;transition:all 0.3s;z-index:9999;pointer-events:none">✅ Lien copié !</div>

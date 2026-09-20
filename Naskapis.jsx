@@ -98,7 +98,7 @@ export default function Naskapis() {
 </head>
 <body>
   <section class="hero">
-    <img src="https://media.base44.com/images/public/69f23c5b09417d29099136be/7fe62bcc8_generated_image.png" alt="Aurores boréales sur le territoire naskapi — Schefferville" />
+    <img src="assets/images/7fe62bcc8_generated_image.png" alt="Aurores boréales sur le territoire naskapi — Schefferville" />
     <div class="hero-content">
       <p class="hero-nation">Premières Nations du Québec</p>
       <h1>Les Naskapis</h1>
@@ -155,7 +155,7 @@ export default function Naskapis() {
       <div class="divider"></div>
       <p>Le territoire traditionnel des Naskapis couvre les immenses plateaux subarctiques du <strong>Labrador québécois</strong> — une région de toundra, de tourbières, de lacs et de rivières qui s'étend sur des centaines de milliers de kilomètres carrés au nord du 52e parallèle. C'est l'un des espaces naturels les plus sauvages et les mieux préservés de la planète.</p>
       <p>Ce territoire est délimité au nord par la <strong>péninsule d'Ungava</strong>, au sud par les forêts de Schefferville et de Sept-Îles, à l'est par le Labrador canadien (Terre-Neuve-et-Labrador) et à l'ouest par les terres des Cris. Les Naskapis partageaient et négociaient l'usage de ce territoire avec les Innus du sud et les Inuit du nord — une coexistence millénaire basée sur la connaissance mutuelle et le respect des zones d'occupation.</p>
-      <img src="https://media.base44.com/images/public/69f23c5b09417d29099136be/7fe62bcc8_generated_image.png" alt="Aurores boréales — territoire naskapi" class="img-wide"/>
+      <img src="assets/images/7fe62bcc8_generated_image.png" alt="Aurores boréales — territoire naskapi" class="img-wide"/>
       <p class="img-cap">Les aurores boréales illuminent le ciel du territoire naskapi — un des spectacles les plus saisissants de la planète</p>
     </div>
   </section>
@@ -269,12 +269,12 @@ export default function Naskapis() {
     <h4>📢 Partager cet article</h4>
     <p>Vous avez aimé ? Faites découvrir les Naskapis à votre entourage !</p>
     <div class="share-btns">
-      <a class="btn-fb-big" href="https://www.facebook.com/sharer/sharer.php?u=https://lucie-app-5fea0268.base44.app/Naskapis" target="_blank">📘 Facebook</a>
+      <a class="btn-fb-big" href="https://www.facebook.com/sharer/sharer.php?u=https://socrate83.github.io/premieres-nations-quebec/Naskapis.html" target="_blank">📘 Facebook</a>
       <a class="btn-group-big" href="https://www.facebook.com/groups/1451283625021958" target="_blank">👥 Groupe FB</a>
-      <a class="btn-messenger-big" href="https://www.facebook.com/dialog/send?link=https://lucie-app-5fea0268.base44.app/Naskapis&app_id=291494419107518&redirect_uri=https://lucie-app-5fea0268.base44.app/Naskapis" target="_blank">💬 Messenger</a>
-      <a class="btn-whatsapp-big" href="https://api.whatsapp.com/send?text=D%C3%A9couvre+cet+article+sur+les+Naskapis+%3A+https://lucie-app-5fea0268.base44.app/Naskapis" target="_blank">🟢 WhatsApp</a>
-      <a class="btn-email-big" href="mailto:?subject=Article+sur+les+Naskapis&body=Je+te+partage+cet+article+sur+les+Naskapis+%3A+https://lucie-app-5fea0268.base44.app/Naskapis" target="_blank">📧 Courriel</a>
-      <button class="btn-copy-big" onclick="navigator.clipboard.writeText('https://lucie-app-5fea0268.base44.app/Naskapis').then(function(){var t=document.getElementById('toast-share');t.style.opacity='1';t.style.transform='translateX(-50%) translateY(0)';setTimeout(function(){t.style.opacity='0';t.style.transform='translateX(-50%) translateY(20px)';},2500);})">🔗 Copier le lien</button>
+      <a class="btn-messenger-big" href="https://www.facebook.com/dialog/send?link=https://socrate83.github.io/premieres-nations-quebec/Naskapis.html&app_id=291494419107518&redirect_uri=https://socrate83.github.io/premieres-nations-quebec/Naskapis.html" target="_blank">💬 Messenger</a>
+      <a class="btn-whatsapp-big" href="https://api.whatsapp.com/send?text=D%C3%A9couvre+cet+article+sur+les+Naskapis+%3A+https://socrate83.github.io/premieres-nations-quebec/Naskapis.html" target="_blank">🟢 WhatsApp</a>
+      <a class="btn-email-big" href="mailto:?subject=Article+sur+les+Naskapis&body=Je+te+partage+cet+article+sur+les+Naskapis+%3A+https://socrate83.github.io/premieres-nations-quebec/Naskapis.html" target="_blank">📧 Courriel</a>
+      <button class="btn-copy-big" onclick="navigator.clipboard.writeText('https://socrate83.github.io/premieres-nations-quebec/Naskapis.html').then(function(){var t=document.getElementById('toast-share');t.style.opacity='1';t.style.transform='translateX(-50%) translateY(0)';setTimeout(function(){t.style.opacity='0';t.style.transform='translateX(-50%) translateY(20px)';},2500);})">🔗 Copier le lien</button>
     </div>
   </div>
   <div id="toast-share" style="position:fixed;bottom:2rem;left:50%;transform:translateX(-50%) translateY(20px);background:#C8920A;color:#000;font-weight:700;font-size:0.9rem;padding:0.7rem 2rem;border-radius:30px;opacity:0;transition:all 0.3s;z-index:9999;pointer-events:none">✅ Lien copié !</div>

@@ -101,7 +101,7 @@ export default function Inuit() {
 </head>
 <body>
   <section class="hero">
-    <img src="https://media.base44.com/images/public/69f23c5b09417d29099136be/41afc600c_generated_image.png" alt="Nunavik — territoire inuit sous les aurores boréales" />
+    <img src="assets/images/41afc600c_generated_image.png" alt="Nunavik — territoire inuit sous les aurores boréales" />
     <div class="hero-content">
       <p class="hero-nation">Peuples autochtones du Québec</p>
       <h1>Les Inuit</h1>
@@ -159,7 +159,7 @@ export default function Inuit() {
       <div class="divider"></div>
       <p>Le <strong>Nunavik</strong> (« la grande terre » en inuktitut) couvre <strong>507 000 km²</strong> — soit un tiers de la superficie totale du Québec. Ce territoire immense s'étend au nord du 55e parallèle, de la Baie-James à l'ouest jusqu'au Labrador à l'est, et de la frontière avec la région de la Côte-Nord au sud jusqu'aux côtes de la Baie d'Hudson, du Détroit d'Hudson et de la Baie d'Ungava au nord.</p>
       <p>Le Nunavik est un territoire de toundra arctique et subarctique — paysage de lacs, de rivières, de tourbières, de pergélisol et de côtes rocheuses. En hiver, les températures descendent régulièrement à <strong>-40°C</strong> ; en été, le soleil ne se couche presque pas. Les <strong>aurores boréales</strong> illuminent les nuits d'hiver de couleurs fantastiques.</p>
-      <img src="https://media.base44.com/images/public/69f23c5b09417d29099136be/41afc600c_generated_image.png" alt="Nunavik sous les aurores boréales" class="img-wide"/>
+      <img src="assets/images/41afc600c_generated_image.png" alt="Nunavik sous les aurores boréales" class="img-wide"/>
       <p class="img-cap">Le Nunavik — 507 000 km² de toundra arctique, terre des Inuit depuis 4 000 ans</p>
     </div>
   </section>
@@ -283,12 +283,12 @@ export default function Inuit() {
     <h4>📢 Partager cet article</h4>
     <p>Vous avez aimé ? Faites découvrir les Inuit à votre entourage !</p>
     <div class="share-btns">
-      <a class="btn-fb-big" href="https://www.facebook.com/sharer/sharer.php?u=https://lucie-app-5fea0268.base44.app/Inuit" target="_blank">📘 Facebook</a>
+      <a class="btn-fb-big" href="https://www.facebook.com/sharer/sharer.php?u=https://socrate83.github.io/premieres-nations-quebec/Inuits.html" target="_blank">📘 Facebook</a>
       <a class="btn-group-big" href="https://www.facebook.com/groups/1451283625021958" target="_blank">👥 Groupe FB</a>
-      <a class="btn-messenger-big" href="https://www.facebook.com/dialog/send?link=https://lucie-app-5fea0268.base44.app/Inuit&app_id=291494419107518&redirect_uri=https://lucie-app-5fea0268.base44.app/Inuit" target="_blank">💬 Messenger</a>
-      <a class="btn-whatsapp-big" href="https://api.whatsapp.com/send?text=D%C3%A9couvre+cet+article+sur+les+Inuit+%3A+https://lucie-app-5fea0268.base44.app/Inuit" target="_blank">🟢 WhatsApp</a>
-      <a class="btn-email-big" href="mailto:?subject=Article+sur+les+Inuit&body=Je+te+partage+cet+article+sur+les+Inuit+%3A+https://lucie-app-5fea0268.base44.app/Inuit" target="_blank">📧 Courriel</a>
-      <button class="btn-copy-big" onclick="navigator.clipboard.writeText('https://lucie-app-5fea0268.base44.app/Inuit').then(function(){var t=document.getElementById('toast-share');t.style.opacity='1';t.style.transform='translateX(-50%) translateY(0)';setTimeout(function(){t.style.opacity='0';t.style.transform='translateX(-50%) translateY(20px)';},2500);})">🔗 Copier le lien</button>
+      <a class="btn-messenger-big" href="https://www.facebook.com/dialog/send?link=https://socrate83.github.io/premieres-nations-quebec/Inuits.html&app_id=291494419107518&redirect_uri=https://socrate83.github.io/premieres-nations-quebec/Inuits.html" target="_blank">💬 Messenger</a>
+      <a class="btn-whatsapp-big" href="https://api.whatsapp.com/send?text=D%C3%A9couvre+cet+article+sur+les+Inuit+%3A+https://socrate83.github.io/premieres-nations-quebec/Inuits.html" target="_blank">🟢 WhatsApp</a>
+      <a class="btn-email-big" href="mailto:?subject=Article+sur+les+Inuit&body=Je+te+partage+cet+article+sur+les+Inuit+%3A+https://socrate83.github.io/premieres-nations-quebec/Inuits.html" target="_blank">📧 Courriel</a>
+      <button class="btn-copy-big" onclick="navigator.clipboard.writeText('https://socrate83.github.io/premieres-nations-quebec/Inuits.html').then(function(){var t=document.getElementById('toast-share');t.style.opacity='1';t.style.transform='translateX(-50%) translateY(0)';setTimeout(function(){t.style.opacity='0';t.style.transform='translateX(-50%) translateY(20px)';},2500);})">🔗 Copier le lien</button>
     </div>
   </div>
   <div id="toast-share" style="position:fixed;bottom:2rem;left:50%;transform:translateX(-50%) translateY(20px);background:#C8920A;color:#000;font-weight:700;font-size:0.9rem;padding:0.7rem 2rem;border-radius:30px;opacity:0;transition:all 0.3s;z-index:9999;pointer-events:none">✅ Lien copié !</div>

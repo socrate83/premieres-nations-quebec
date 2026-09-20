@@ -99,7 +99,7 @@ export default function Cris() {
 </head>
 <body>
   <section class="hero">
-    <img src="https://media.base44.com/images/public/69f23c5b09417d29099136be/18ce1ec32_generated_image.png" alt="Baie-James au lever du soleil — territoire cri" />
+    <img src="assets/images/18ce1ec32_generated_image.png" alt="Baie-James au lever du soleil — territoire cri" />
     <div class="hero-content">
       <p class="hero-nation">Premières Nations du Québec</p>
       <h1>Les Cris</h1>
@@ -158,7 +158,7 @@ export default function Cris() {
       <div class="divider"></div>
       <p>Le territoire traditionnel des Cris, <strong>Eeyou Istchee</strong>, couvre environ <strong>400 000 km²</strong> dans le nord du Québec — un espace à peine imaginable, plus grand que la France entière. Il s'étend des rives de la <strong>Baie-James</strong> (à l'ouest) jusqu'aux forêts boréales de l'intérieur des terres, et de la Baie d'Hudson (au nord) jusqu'aux régions de l'Abitibi-Témiscamingue et du Lac-Saint-Jean (au sud).</p>
       <p>Ce territoire est caractérisé par une mosaïque de forêts boréales d'épinettes et de mélèzes, de vastes tourbières, de milliers de lacs et de rivières, et de toundra subarctique au nord. Les neuf communautés cries sont situées soit sur les rives de la Baie-James et de la Baie-d'Hudson, soit à l'intérieur des terres — chacune dans un environnement distinct.</p>
-      <img src="https://media.base44.com/images/public/69f23c5b09417d29099136be/18ce1ec32_generated_image.png" alt="Baie James territoire cri" class="img-wide"/>
+      <img src="assets/images/18ce1ec32_generated_image.png" alt="Baie James territoire cri" class="img-wide"/>
       <p class="img-cap">Eeyou Istchee — le vaste territoire cri autour de la Baie-James, au nord du Québec</p>
     </div>
   </section>
@@ -274,12 +274,12 @@ export default function Cris() {
     <h4>📢 Partager cet article</h4>
     <p>Vous avez aimé ? Faites découvrir les Cris à votre entourage !</p>
     <div class="share-btns">
-      <a class="btn-fb-big" href="https://www.facebook.com/sharer/sharer.php?u=https://lucie-app-5fea0268.base44.app/Cris" target="_blank">📘 Facebook</a>
+      <a class="btn-fb-big" href="https://www.facebook.com/sharer/sharer.php?u=https://socrate83.github.io/premieres-nations-quebec/Cris.html" target="_blank">📘 Facebook</a>
       <a class="btn-group-big" href="https://www.facebook.com/groups/1451283625021958" target="_blank">👥 Groupe FB</a>
-      <a class="btn-messenger-big" href="https://www.facebook.com/dialog/send?link=https://lucie-app-5fea0268.base44.app/Cris&app_id=291494419107518&redirect_uri=https://lucie-app-5fea0268.base44.app/Cris" target="_blank">💬 Messenger</a>
-      <a class="btn-whatsapp-big" href="https://api.whatsapp.com/send?text=D%C3%A9couvre+cet+article+sur+les+Cris+%3A+https://lucie-app-5fea0268.base44.app/Cris" target="_blank">🟢 WhatsApp</a>
-      <a class="btn-email-big" href="mailto:?subject=Article+sur+les+Cris&body=Je+te+partage+cet+article+sur+les+Cris+%3A+https://lucie-app-5fea0268.base44.app/Cris" target="_blank">📧 Courriel</a>
-      <button class="btn-copy-big" onclick="navigator.clipboard.writeText('https://lucie-app-5fea0268.base44.app/Cris').then(function(){var t=document.getElementById('toast-share');t.style.opacity='1';t.style.transform='translateX(-50%) translateY(0)';setTimeout(function(){t.style.opacity='0';t.style.transform='translateX(-50%) translateY(20px)';},2500);})">🔗 Copier le lien</button>
+      <a class="btn-messenger-big" href="https://www.facebook.com/dialog/send?link=https://socrate83.github.io/premieres-nations-quebec/Cris.html&app_id=291494419107518&redirect_uri=https://socrate83.github.io/premieres-nations-quebec/Cris.html" target="_blank">💬 Messenger</a>
+      <a class="btn-whatsapp-big" href="https://api.whatsapp.com/send?text=D%C3%A9couvre+cet+article+sur+les+Cris+%3A+https://socrate83.github.io/premieres-nations-quebec/Cris.html" target="_blank">🟢 WhatsApp</a>
+      <a class="btn-email-big" href="mailto:?subject=Article+sur+les+Cris&body=Je+te+partage+cet+article+sur+les+Cris+%3A+https://socrate83.github.io/premieres-nations-quebec/Cris.html" target="_blank">📧 Courriel</a>
+      <button class="btn-copy-big" onclick="navigator.clipboard.writeText('https://socrate83.github.io/premieres-nations-quebec/Cris.html').then(function(){var t=document.getElementById('toast-share');t.style.opacity='1';t.style.transform='translateX(-50%) translateY(0)';setTimeout(function(){t.style.opacity='0';t.style.transform='translateX(-50%) translateY(20px)';},2500);})">🔗 Copier le lien</button>
     </div>
   </div>
   <div id="toast-share" style="position:fixed;bottom:2rem;left:50%;transform:translateX(-50%) translateY(20px);background:#C8920A;color:#000;font-weight:700;font-size:0.9rem;padding:0.7rem 2rem;border-radius:30px;opacity:0;transition:all 0.3s;z-index:9999;pointer-events:none">✅ Lien copié !</div>

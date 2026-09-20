@@ -131,7 +131,7 @@ export default function Algonquins() {
 
   <!-- HERO -->
   <section class="hero">
-    <img src="https://media.base44.com/images/public/69f23c5b09417d29099136be/c3321ceee_generated_image.png" alt="Paysage algonquin au lever du soleil" />
+    <img src="assets/images/c3321ceee_generated_image.png" alt="Paysage algonquin au lever du soleil" />
     <div class="hero-content">
       <p class="hero-nation">Premières Nations du Québec</p>
       <h1>Les Algonquins</h1>
@@ -221,7 +221,7 @@ export default function Algonquins() {
           <p>L'artisanat algonquin est d'une beauté remarquable. Les <strong>boîtes et paniers en écorce de bouleau</strong> décorés de piquants de porc-épic, les <strong>mocassins brodés de motifs floraux</strong> et les vêtements en peaux tannées sont autant d'expressions d'une esthétique unique transmise de génération en génération.</p>
         </div>
         <div>
-          <img src="https://media.base44.com/images/public/69f23c5b09417d29099136be/f08d502c4_generated_image.png" alt="Artisanat traditionnel algonquin" />
+          <img src="assets/images/f08d502c4_generated_image.png" alt="Artisanat traditionnel algonquin" />
           <p class="img-cap">Artisanat traditionnel algonquin — boîtes d'écorce de bouleau, piquants de porc-épic, mocassins brodés</p>
         </div>
       </div>
@@ -251,7 +251,7 @@ export default function Algonquins() {
       <p>Les Algonquins habitent leur territoire depuis au moins <strong>8 000 à 9 000 ans</strong>, selon les données archéologiques. Leur société était organisée en <strong>bandes familiales</strong> liées par des liens de parenté, chaque bande responsable d'un territoire de chasse et de pêche bien défini.</p>
       <p>Les décisions importantes se prenaient collectivement, par consensus, sous la gouvernance de <strong>chefs (ogima)</strong> choisis pour leur sagesse, leur générosité et leur capacité à rassembler. Il n'existait pas de structure politique centralisée — chaque bande était souveraine sur son territoire.</p>
       <p>Les Algonquins entretenaient des relations d'alliance avec les <strong>Hurons-Wendat</strong> (alliés commerciaux), les <strong>Montagnais-Innus</strong> et les <strong>Atikamekw</strong>. Ils étaient souvent en conflit avec les <strong>Haudenosaunee (Iroquois)</strong>, qui cherchaient à contrôler les routes commerciales de la fourrure.</p>
-      <img src="https://media.base44.com/images/public/69f23c5b09417d29099136be/c3321ceee_generated_image.png" alt="Territoire algonquin" class="img-wide" />
+      <img src="assets/images/c3321ceee_generated_image.png" alt="Territoire algonquin" class="img-wide" />
       <p class="img-cap">Le territoire algonquin : lacs, forêts boréales et rivières — un monde en harmonie avec la nature depuis des millénaires</p>
     </div>
   </section>
@@ -377,12 +377,12 @@ export default function Algonquins() {
     <h4>📢 Partager cet article</h4>
     <p>Vous avez aimé ? Faites découvrir les Algonquins à votre entourage !</p>
     <div class="share-btns">
-      <a class="btn-fb-big" href="https://www.facebook.com/sharer/sharer.php?u=https://lucie-app-5fea0268.base44.app/Algonquins" target="_blank">📘 Facebook</a>
+      <a class="btn-fb-big" href="https://www.facebook.com/sharer/sharer.php?u=https://socrate83.github.io/premieres-nations-quebec/Algonquins.html" target="_blank">📘 Facebook</a>
       <a class="btn-group-big" href="https://www.facebook.com/groups/1451283625021958" target="_blank">👥 Groupe FB</a>
-      <a class="btn-messenger-big" href="https://www.facebook.com/dialog/send?link=https://lucie-app-5fea0268.base44.app/Algonquins&app_id=291494419107518&redirect_uri=https://lucie-app-5fea0268.base44.app/Algonquins" target="_blank">💬 Messenger</a>
-      <a class="btn-whatsapp-big" href="https://api.whatsapp.com/send?text=D%C3%A9couvre+cet+article+sur+les+Algonquins+%3A+https://lucie-app-5fea0268.base44.app/Algonquins" target="_blank">🟢 WhatsApp</a>
-      <a class="btn-email-big" href="mailto:?subject=Article+sur+les+Algonquins&body=Je+te+partage+cet+article+sur+les+Algonquins+%3A+https://lucie-app-5fea0268.base44.app/Algonquins" target="_blank">📧 Courriel</a>
-      <button class="btn-copy-big" onclick="navigator.clipboard.writeText('https://lucie-app-5fea0268.base44.app/Algonquins').then(function(){var t=document.getElementById('toast-share');t.style.opacity='1';t.style.transform='translateX(-50%) translateY(0)';setTimeout(function(){t.style.opacity='0';t.style.transform='translateX(-50%) translateY(20px)';},2500);})">🔗 Copier le lien</button>
+      <a class="btn-messenger-big" href="https://www.facebook.com/dialog/send?link=https://socrate83.github.io/premieres-nations-quebec/Algonquins.html&app_id=291494419107518&redirect_uri=https://socrate83.github.io/premieres-nations-quebec/Algonquins.html" target="_blank">💬 Messenger</a>
+      <a class="btn-whatsapp-big" href="https://api.whatsapp.com/send?text=D%C3%A9couvre+cet+article+sur+les+Algonquins+%3A+https://socrate83.github.io/premieres-nations-quebec/Algonquins.html" target="_blank">🟢 WhatsApp</a>
+      <a class="btn-email-big" href="mailto:?subject=Article+sur+les+Algonquins&body=Je+te+partage+cet+article+sur+les+Algonquins+%3A+https://socrate83.github.io/premieres-nations-quebec/Algonquins.html" target="_blank">📧 Courriel</a>
+      <button class="btn-copy-big" onclick="navigator.clipboard.writeText('https://socrate83.github.io/premieres-nations-quebec/Algonquins.html').then(function(){var t=document.getElementById('toast-share');t.style.opacity='1';t.style.transform='translateX(-50%) translateY(0)';setTimeout(function(){t.style.opacity='0';t.style.transform='translateX(-50%) translateY(20px)';},2500);})">🔗 Copier le lien</button>
     </div>
   </div>
   <div id="toast-share" style="position:fixed;bottom:2rem;left:50%;transform:translateX(-50%) translateY(20px);background:#C8920A;color:#000;font-weight:700;font-size:0.9rem;padding:0.7rem 2rem;border-radius:30px;opacity:0;transition:all 0.3s;z-index:9999;pointer-events:none">✅ Lien copié !</div>

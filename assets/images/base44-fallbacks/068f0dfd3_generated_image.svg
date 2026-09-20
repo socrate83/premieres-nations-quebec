@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 630" role="img" aria-labelledby="title desc">
+  <title id="title">Mocassins et vêtements d&apos;hiver en fourrure des Premières Nations</title>
+  <desc id="desc">Illustration locale de remplacement pour supprimer la dépendance Base44.</desc>
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#1f4037"/>
+      <stop offset="100%" stop-color="#99f2c8"/>
+    </linearGradient>
+  </defs>
+  <rect width="1200" height="630" fill="url(#bg)"/>
+  <circle cx="155" cy="128" r="56" fill="rgba(255,255,255,0.18)"/>
+  <path d="M165 70c38 70 39 122 0 176-38-54-38-106 0-176Z" fill="rgba(255,255,255,0.42)"/>
+  <text x="110" y="570" font-size="28" fill="rgba(255,255,255,0.78)" font-family="Georgia, serif">Premières Nations du Québec</text>
+  <text x="600" y="182" text-anchor="middle" font-size="44" font-weight="700" fill="#ffffff" font-family="Georgia, serif">Mocassins et vêtements</text>
+  <text x="600" y="238" text-anchor="middle" font-size="44" font-weight="700" fill="#ffffff" font-family="Georgia, serif">d&apos;hiver en fourrure des</text>
+  <text x="600" y="294" text-anchor="middle" font-size="44" font-weight="700" fill="#ffffff" font-family="Georgia, serif">Premières Nations</text>
+  <text x="600" y="510" text-anchor="middle" font-size="22" fill="rgba(255,255,255,0.82)" font-family="Arial, sans-serif">Illustration locale de remplacement</text>
+</svg>

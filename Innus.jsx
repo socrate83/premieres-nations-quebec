@@ -99,7 +99,7 @@ export default function Innus() {
 </head>
 <body>
   <section class="hero">
-    <img src="https://media.base44.com/images/public/69f23c5b09417d29099136be/821b5fe27_generated_image.png" alt="Côte-Nord et territoire innu" />
+    <img src="assets/images/821b5fe27_generated_image.png" alt="Côte-Nord et territoire innu" />
     <div class="hero-content">
       <p class="hero-nation">Premières Nations du Québec</p>
       <h1>Les Innus</h1>
@@ -159,7 +159,7 @@ export default function Innus() {
       <p>Le <strong>Nitassinan</strong> — « notre terre » en innu-aimun — couvre un territoire immense qui s'étend de la <strong>Côte-Nord du Saint-Laurent</strong> jusqu'au cœur du <strong>Labrador</strong>, englobant le Lac-Saint-Jean et les montagnes du Bouclier canadien. Ce territoire de plusieurs centaines de milliers de kilomètres carrés est l'un des plus vastes territoires ancestraux autochtones au Canada.</p>
       <p>La géographie du Nitassinan est d'une diversité remarquable : le <strong>fleuve Saint-Laurent</strong> et ses affluents forment la façade maritime, les <strong>rivières Manicouagan, Betsiamites, Romaine et Saint-Augustin</strong> découpent l'intérieur des terres, et les <strong>hauts plateaux du Labrador</strong> offrent les pâturages de caribou où les Innus effectuaient autrefois leurs grandes migrations de chasse.</p>
       <p>Comme les Atikamekw et les Algonquins, les Innus <strong>n'ont pas cédé leur territoire par traité</strong>. Les négociations territoriales du <strong>Projet Nitassinan</strong>, entamées dans les années 1970, sont toujours en cours — une des plus longues et complexes revendications territoriales de l'histoire canadienne.</p>
-      <img src="https://media.base44.com/images/public/69f23c5b09417d29099136be/821b5fe27_generated_image.png" alt="Côte-Nord et territoire innu" class="img-wide"/>
+      <img src="assets/images/821b5fe27_generated_image.png" alt="Côte-Nord et territoire innu" class="img-wide"/>
       <p class="img-cap">La Côte-Nord du Saint-Laurent — cœur du territoire innu, entre fleuve, forêts et toundra</p>
     </div>
   </section>
@@ -285,12 +285,12 @@ export default function Innus() {
     <h4>📢 Partager cet article</h4>
     <p>Vous avez aimé ? Faites découvrir les Innus à votre entourage !</p>
     <div class="share-btns">
-      <a class="btn-fb-big" href="https://www.facebook.com/sharer/sharer.php?u=https://lucie-app-5fea0268.base44.app/Innus" target="_blank">📘 Facebook</a>
+      <a class="btn-fb-big" href="https://www.facebook.com/sharer/sharer.php?u=https://socrate83.github.io/premieres-nations-quebec/Innus.html" target="_blank">📘 Facebook</a>
       <a class="btn-group-big" href="https://www.facebook.com/groups/1451283625021958" target="_blank">👥 Groupe FB</a>
-      <a class="btn-messenger-big" href="https://www.facebook.com/dialog/send?link=https://lucie-app-5fea0268.base44.app/Innus&app_id=291494419107518&redirect_uri=https://lucie-app-5fea0268.base44.app/Innus" target="_blank">💬 Messenger</a>
-      <a class="btn-whatsapp-big" href="https://api.whatsapp.com/send?text=D%C3%A9couvre+cet+article+sur+les+Innus+%3A+https://lucie-app-5fea0268.base44.app/Innus" target="_blank">🟢 WhatsApp</a>
-      <a class="btn-email-big" href="mailto:?subject=Article+sur+les+Innus&body=Je+te+partage+cet+article+sur+les+Innus+%3A+https://lucie-app-5fea0268.base44.app/Innus" target="_blank">📧 Courriel</a>
-      <button class="btn-copy-big" onclick="navigator.clipboard.writeText('https://lucie-app-5fea0268.base44.app/Innus').then(function(){var t=document.getElementById('toast-share');t.style.opacity='1';t.style.transform='translateX(-50%) translateY(0)';setTimeout(function(){t.style.opacity='0';t.style.transform='translateX(-50%) translateY(20px)';},2500);})">🔗 Copier le lien</button>
+      <a class="btn-messenger-big" href="https://www.facebook.com/dialog/send?link=https://socrate83.github.io/premieres-nations-quebec/Innus.html&app_id=291494419107518&redirect_uri=https://socrate83.github.io/premieres-nations-quebec/Innus.html" target="_blank">💬 Messenger</a>
+      <a class="btn-whatsapp-big" href="https://api.whatsapp.com/send?text=D%C3%A9couvre+cet+article+sur+les+Innus+%3A+https://socrate83.github.io/premieres-nations-quebec/Innus.html" target="_blank">🟢 WhatsApp</a>
+      <a class="btn-email-big" href="mailto:?subject=Article+sur+les+Innus&body=Je+te+partage+cet+article+sur+les+Innus+%3A+https://socrate83.github.io/premieres-nations-quebec/Innus.html" target="_blank">📧 Courriel</a>
+      <button class="btn-copy-big" onclick="navigator.clipboard.writeText('https://socrate83.github.io/premieres-nations-quebec/Innus.html').then(function(){var t=document.getElementById('toast-share');t.style.opacity='1';t.style.transform='translateX(-50%) translateY(0)';setTimeout(function(){t.style.opacity='0';t.style.transform='translateX(-50%) translateY(20px)';},2500);})">🔗 Copier le lien</button>
     </div>
   </div>
   <div id="toast-share" style="position:fixed;bottom:2rem;left:50%;transform:translateX(-50%) translateY(20px);background:#C8920A;color:#000;font-weight:700;font-size:0.9rem;padding:0.7rem 2rem;border-radius:30px;opacity:0;transition:all 0.3s;z-index:9999;pointer-events:none">✅ Lien copié !</div>

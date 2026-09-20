@@ -88,7 +88,7 @@ export default function Abenaquis() {
 </head>
 <body>
   <section class="hero">
-    <img src="https://media.base44.com/images/public/69f23c5b09417d29099136be/4d050ed37_generated_image.png" alt="Village abénaquis au lever du soleil" />
+    <img src="assets/images/4d050ed37_generated_image.png" alt="Village abénaquis au lever du soleil" />
     <div class="hero-content">
       <p class="hero-subtitle">Premières Nations du Québec</p>
       <h1>Les Abénaquis</h1>
@@ -176,7 +176,7 @@ export default function Abenaquis() {
           <p>La <strong>vannerie</strong> (fabrication de paniers) est l'une des expressions culturelles les plus emblématiques des Abénaquis. Ces paniers, ornés de motifs géométriques précis, ont longtemps été une source économique vitale.</p>
         </div>
         <div>
-          <img src="https://media.base44.com/images/public/69f23c5b09417d29099136be/817e860a3_generated_image.png" alt="Artisanat traditionnel abénaquis" />
+          <img src="assets/images/817e860a3_generated_image.png" alt="Artisanat traditionnel abénaquis" />
           <p class="img-caption">Artisanat traditionnel abénaquis — paniers de frêne noir, écorce de bouleau, broderies perlées</p>
         </div>
       </div>
@@ -206,7 +206,7 @@ export default function Abenaquis() {
       <p>Avant l'arrivée des Européens, les Abénaquis vivaient dans une société organisée mais décentralisée. Ils fonctionnaient par <strong>bandes familiales et clans</strong>, chacun lié à un territoire de chasse et de pêche. Les décisions importantes se prenaient par consensus, sous la guidance de <strong>sagamos</strong> (chefs) respectés pour leur sagesse et leurs qualités de médiateur.</p>
       <p>Les différentes bandes abénaquises partageaient une langue, une cosmologie et des pratiques culturelles communes, mais maintenaient une grande autonomie locale. Elles coexistaient parfois en tension, parfois en alliance, avec leurs voisins algonquiens au nord et les nations iroquoiennes (Haudenosaunee).</p>
       <p>Au 17e siècle, les Abénaquis entretenaient déjà des réseaux commerciaux étendus avec d'autres nations autochtones, échangeant fourrures, cuivre, coquillages (<strong>wampum</strong>) et biens artisanaux sur de vastes distances.</p>
-      <img src="https://media.base44.com/images/public/69f23c5b09417d29099136be/4d050ed37_generated_image.png" alt="Paysage abénaquis au lever du soleil" class="img-wide" />
+      <img src="assets/images/4d050ed37_generated_image.png" alt="Paysage abénaquis au lever du soleil" class="img-wide" />
       <p class="img-caption">Reconstitution artistique d'un village abénaquis au bord d'une rivière, au lever du soleil</p>
     </div>
   </section>
@@ -315,12 +315,12 @@ export default function Abenaquis() {
     <h4>📢 Partager cet article</h4>
     <p>Vous avez aimé ? Faites découvrir les Abénaquis à votre entourage !</p>
     <div class="share-btns">
-      <a class="btn-fb-big" href="https://www.facebook.com/sharer/sharer.php?u=https://lucie-app-5fea0268.base44.app/Abenaquis" target="_blank">📘 Facebook</a>
+      <a class="btn-fb-big" href="https://www.facebook.com/sharer/sharer.php?u=https://socrate83.github.io/premieres-nations-quebec/Abenaquis.html" target="_blank">📘 Facebook</a>
       <a class="btn-group-big" href="https://www.facebook.com/groups/1451283625021958" target="_blank">👥 Groupe FB</a>
-      <a class="btn-messenger-big" href="https://www.facebook.com/dialog/send?link=https://lucie-app-5fea0268.base44.app/Abenaquis&app_id=291494419107518&redirect_uri=https://lucie-app-5fea0268.base44.app/Abenaquis" target="_blank">💬 Messenger</a>
-      <a class="btn-whatsapp-big" href="https://api.whatsapp.com/send?text=D%C3%A9couvre+cet+article+sur+les+Abénaquis+%3A+https://lucie-app-5fea0268.base44.app/Abenaquis" target="_blank">🟢 WhatsApp</a>
-      <a class="btn-email-big" href="mailto:?subject=Article+sur+les+Abénaquis&body=Je+te+partage+cet+article+sur+les+Abénaquis+%3A+https://lucie-app-5fea0268.base44.app/Abenaquis" target="_blank">📧 Courriel</a>
-      <button class="btn-copy-big" onclick="navigator.clipboard.writeText('https://lucie-app-5fea0268.base44.app/Abenaquis').then(function(){var t=document.getElementById('toast-share');t.style.opacity='1';t.style.transform='translateX(-50%) translateY(0)';setTimeout(function(){t.style.opacity='0';t.style.transform='translateX(-50%) translateY(20px)';},2500);})">🔗 Copier le lien</button>
+      <a class="btn-messenger-big" href="https://www.facebook.com/dialog/send?link=https://socrate83.github.io/premieres-nations-quebec/Abenaquis.html&app_id=291494419107518&redirect_uri=https://socrate83.github.io/premieres-nations-quebec/Abenaquis.html" target="_blank">💬 Messenger</a>
+      <a class="btn-whatsapp-big" href="https://api.whatsapp.com/send?text=D%C3%A9couvre+cet+article+sur+les+Abénaquis+%3A+https://socrate83.github.io/premieres-nations-quebec/Abenaquis.html" target="_blank">🟢 WhatsApp</a>
+      <a class="btn-email-big" href="mailto:?subject=Article+sur+les+Abénaquis&body=Je+te+partage+cet+article+sur+les+Abénaquis+%3A+https://socrate83.github.io/premieres-nations-quebec/Abenaquis.html" target="_blank">📧 Courriel</a>
+      <button class="btn-copy-big" onclick="navigator.clipboard.writeText('https://socrate83.github.io/premieres-nations-quebec/Abenaquis.html').then(function(){var t=document.getElementById('toast-share');t.style.opacity='1';t.style.transform='translateX(-50%) translateY(0)';setTimeout(function(){t.style.opacity='0';t.style.transform='translateX(-50%) translateY(20px)';},2500);})">🔗 Copier le lien</button>
     </div>
   </div>
   <div id="toast-share" style="position:fixed;bottom:2rem;left:50%;transform:translateX(-50%) translateY(20px);background:#C8920A;color:#000;font-weight:700;font-size:0.9rem;padding:0.7rem 2rem;border-radius:30px;opacity:0;transition:all 0.3s;z-index:9999;pointer-events:none">✅ Lien copié !</div>
