@@ -131,7 +131,12 @@ function extractLabel(content, index) {
     const matches = [...snippet.matchAll(pattern)];
     if (matches.length) {
       const value = matches.at(-1)[1] || matches.at(-1)[2];
-      if (value) return value.replace(/\\"/g, '"').trim();
+      if (value) {
+        return value
+          .replace(/\\"/g, '"')
+          .replace(/\\+$/g, '')
+          .trim();
+      }
     }
   }
   return 'Illustration Premières Nations du Québec';
