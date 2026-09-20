@@ -61,7 +61,7 @@ function wrapLines(text, maxLength = 26) {
     }
   }
   if (current) lines.push(current);
-  return lines.slice(0, 3);
+  return lines.slice(0, 4);
 }
 
 function pickPalette(seed) {
