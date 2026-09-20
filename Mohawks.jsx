@@ -100,7 +100,7 @@ export default function Mohawks() {
 </head>
 <body>
   <section class="hero">
-    <img src="assets/images/18647dec7_generated_image.png" alt="Territoire mohawk — vallée du Saint-Laurent" />
+    <img src="assets/images/18647dec7_generated_image.png" alt="Territoire mohawk — vallée du Saint-Laurent" onerror="this.onerror=null;this.src='assets/images/base44-fallbacks/18647dec7_generated_image.svg';" />
     <div class="hero-content">
       <p class="hero-nation">Premières Nations du Québec</p>
       <h1>Les Mohawks</h1>

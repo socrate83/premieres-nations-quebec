@@ -88,7 +88,7 @@ export default function Abenaquis() {
 </head>
 <body>
   <section class="hero">
-    <img src="assets/images/4d050ed37_generated_image.png" alt="Village abénaquis au lever du soleil" />
+    <img src="assets/images/4d050ed37_generated_image.png" alt="Village abénaquis au lever du soleil" onerror="this.onerror=null;this.src='assets/images/base44-fallbacks/4d050ed37_generated_image.svg';" />
     <div class="hero-content">
       <p class="hero-subtitle">Premières Nations du Québec</p>
       <h1>Les Abénaquis</h1>
@@ -176,7 +176,7 @@ export default function Abenaquis() {
           <p>La <strong>vannerie</strong> (fabrication de paniers) est l'une des expressions culturelles les plus emblématiques des Abénaquis. Ces paniers, ornés de motifs géométriques précis, ont longtemps été une source économique vitale.</p>
         </div>
         <div>
-          <img src="assets/images/817e860a3_generated_image.png" alt="Artisanat traditionnel abénaquis" />
+          <img src="assets/images/817e860a3_generated_image.png" alt="Artisanat traditionnel abénaquis" onerror="this.onerror=null;this.src='assets/images/base44-fallbacks/817e860a3_generated_image.svg';" />
           <p class="img-caption">Artisanat traditionnel abénaquis — paniers de frêne noir, écorce de bouleau, broderies perlées</p>
         </div>
       </div>
@@ -206,7 +206,7 @@ export default function Abenaquis() {
       <p>Avant l'arrivée des Européens, les Abénaquis vivaient dans une société organisée mais décentralisée. Ils fonctionnaient par <strong>bandes familiales et clans</strong>, chacun lié à un territoire de chasse et de pêche. Les décisions importantes se prenaient par consensus, sous la guidance de <strong>sagamos</strong> (chefs) respectés pour leur sagesse et leurs qualités de médiateur.</p>
       <p>Les différentes bandes abénaquises partageaient une langue, une cosmologie et des pratiques culturelles communes, mais maintenaient une grande autonomie locale. Elles coexistaient parfois en tension, parfois en alliance, avec leurs voisins algonquiens au nord et les nations iroquoiennes (Haudenosaunee).</p>
       <p>Au 17e siècle, les Abénaquis entretenaient déjà des réseaux commerciaux étendus avec d'autres nations autochtones, échangeant fourrures, cuivre, coquillages (<strong>wampum</strong>) et biens artisanaux sur de vastes distances.</p>
-      <img src="assets/images/4d050ed37_generated_image.png" alt="Paysage abénaquis au lever du soleil" class="img-wide" />
+      <img src="assets/images/4d050ed37_generated_image.png" alt="Paysage abénaquis au lever du soleil" onerror="this.onerror=null;this.src='assets/images/base44-fallbacks/4d050ed37_generated_image.svg';" class="img-wide" />
       <p class="img-caption">Reconstitution artistique d'un village abénaquis au bord d'une rivière, au lever du soleil</p>
     </div>
   </section>

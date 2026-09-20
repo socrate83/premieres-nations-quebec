@@ -5,7 +5,6 @@ import path from 'node:path';
 const root = process.cwd();
 const siteBase = 'https://socrate83.github.io/premieres-nations-quebec';
 const assetDir = path.join(root, 'assets', 'images');
-const fallbackDir = path.join(assetDir, 'base44-fallbacks');
 const textExtensions = new Set(['.html', '.jsx', '.json']);
 const files = [];
 const assets = new Set();
@@ -138,6 +137,22 @@ function extractLabel(content, index) {
   return 'Illustration Premières Nations du Québec';
 }
 
+function resolveLocalAsset(file, assetUrl, index, original) {
+  const normalized = assetUrl.replaceAll('\\', '/');
+  const localRelative = normalized
+    .replace(/^\.\//, '')
+    .replace(/^\.\.\//, '')
+    .replace(/^assets\/images\//, '');
+  const assetFullPath = path.join(assetDir, localRelative);
+  if (fs.existsSync(assetFullPath)) return assetUrl;
+  const label = extractLabel(original, index);
+  if (assets.has(localRelative)) {
+    return assetPathForFile(file, localRelative);
+  }
+  const fallbackAsset = createFallbackSvg(path.posix.basename(localRelative), label);
+  return assetPathForFile(file, fallbackAsset);
+}
+
 function replaceSiteUrl(url) {
   const matched = url.match(/^https:\/\/lucie-app-[^.]+\.base44\.app(?:\/([^"'&\s?#]+))?/i);
   const slug = matched?.[1];
@@ -155,6 +170,7 @@ let changed = 0;
 let localReplacements = 0;
 let fallbackReplacements = 0;
 let siteReplacements = 0;
+let brokenLocalReplacements = 0;
 
 for (const file of files) {
   const original = fs.readFileSync(file, 'utf8');
@@ -169,6 +185,17 @@ for (const file of files) {
       const fallbackAsset = createFallbackSvg(fileName, label);
       fallbackReplacements++;
       return assetPathForFile(file, fallbackAsset);
+    }
+  );
+
+  updated = updated.replace(
+    /((?:\.\.\/)?assets\/images\/[^"'\\\s)]+\.(?:png|jpg|jpeg|webp|gif|svg))/gi,
+    (assetUrl, _unused, index) => {
+      const resolved = resolveLocalAsset(file, assetUrl, index, original);
+      if (resolved !== assetUrl) {
+        brokenLocalReplacements++;
+      }
+      return resolved;
     }
   );
 
@@ -187,5 +214,6 @@ console.log([
   `Fichiers modifiés: ${changed}`,
   `Images locales réutilisées: ${localReplacements}`,
   `Fallbacks SVG générés: ${fallbackReplacements}`,
+  `Chemins locaux cassés réparés: ${brokenLocalReplacements}`,
   `Liens Base44 remplacés: ${siteReplacements}`
 ].join('\n'));
