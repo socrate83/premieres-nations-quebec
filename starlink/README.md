@@ -17,3 +17,18 @@ Pour un **nom d’URL dédié** (ex. `guide-starlink`), créer un dépôt GitHub
 Tous les boutons « Commander » et les liens vers starlink.com (hors support) sont mis à jour automatiquement par `assets/js/referral.js`.
 
 **Ne pas** mettre le lien brut sans `?referral=` dans le HTML : tout passe par `referral.json`.
+
+## Images (`assets/images/`)
+
+| Fichier | Page |
+|---------|------|
+| `guide-starlink-visuel.png` | Accueil — bannière |
+| `ile-lac-isole.png` | Accueil, Canada — lieux isolés |
+| `test-debit-caravane.png` | Accueil, Démarrer — tests de débit |
+| `van-antenne-starlink.png` | Démarrer — kit / antenne |
+| `alimentation-dc.png` | Démarrer — alimentation |
+| `starlink-desert-rv.png` | Démarrer — emplacement |
+| `fourgon-plage.png` | Démarrer — mobilité |
+| `chalet-montagne-hiver.png` | Canada — hiver |
+| `camping-montagne.png` | Canada — usages |
+| `carte-disponibilite-fr.png` | Europe — disponibilité |
