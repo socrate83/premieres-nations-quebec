@@ -320,6 +320,22 @@ main { max-width: 1100px; margin: 0 auto; padding: 2rem 1.25rem 4rem; }
   margin-inline: auto;
 }
 
+.video-youtube-links {
+  font-size: 0.88rem;
+  color: var(--muted);
+  margin: 0.5rem 0 1.5rem;
+  text-align: center;
+}
+
+.video-youtube-links a {
+  color: var(--accent);
+  text-decoration: none;
+}
+
+.video-youtube-links a:hover {
+  text-decoration: underline;
+}
+
 .faq-item {
   border: 1px solid var(--border);
   border-radius: 10px;
