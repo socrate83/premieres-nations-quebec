@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Communauté &amp; contact — Le guide complet Starlink</title>
+  <meta name="description" content="Posez vos questions Starlink, contactez le guide et échangez avec d’autres utilisateurs francophones.">
+  <link rel="stylesheet" href="assets/css/style.css">
+  <style>
+    .contact-form { max-width: 520px; margin: 1.5rem 0 2rem; }
+    .contact-form label { display: block; font-weight: 600; margin: 0.75rem 0 0.35rem; font-size: 0.9rem; }
+    .contact-form input, .contact-form textarea {
+      width: 100%; padding: 0.65rem 0.75rem; border-radius: 8px;
+      border: 1px solid var(--border); background: var(--bg-card); color: var(--text);
+      font-family: inherit; font-size: 0.95rem;
+    }
+    .contact-form textarea { min-height: 120px; resize: vertical; }
+    .contact-form button {
+      margin-top: 1rem; padding: 0.65rem 1.25rem; border: 0; border-radius: 8px;
+      background: linear-gradient(135deg, var(--accent), #2563eb);
+      color: #fff; font-weight: 700; cursor: pointer; font-size: 0.95rem;
+    }
+    .channels { display: grid; gap: 1rem; margin: 2rem 0; max-width: var(--max); }
+    .channels .card h3 { margin-bottom: 0.35rem; }
+  </style>
+</head>
+<body>
+  <header class="site-header">
+    <div class="wrap">
+      <a class="brand" href="index.html">Guide <span>Starlink</span></a>
+      <nav aria-label="Navigation principale">
+        <ul>
+          <li><a href="index.html">Accueil</a></li>
+          <li><a href="demarrage.html">Démarrer</a></li>
+          <li><a href="canada.html">Canada</a></li>
+          <li><a href="europe.html">Europe</a></li>
+          <li><a href="faq.html">FAQ</a></li>
+          <li><a href="communaute.html" aria-current="page">Communauté</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <main class="prose">
+    <h1 class="section-title" style="border:0;margin-top:0">Communauté &amp; contact</h1>
+    <p>
+      Ce site est statique (pages HTML sur GitHub) : il n’y a pas de forum intégré comme sur Facebook.
+      Vous pouvez tout de même <strong>nous écrire</strong>, proposer des corrections et, à terme,
+      rejoindre un groupe d’entraide francophone.
+    </p>
+
+    <h2 class="section-title">Poser une question</h2>
+    <p>Le formulaire ouvre votre logiciel de courriel avec votre message (aucun compte requis).</p>
+    <form class="contact-form" id="contact-form" action="#" method="get">
+      <label for="nom">Prénom ou pseudo</label>
+      <input type="text" id="nom" name="nom" autocomplete="name" placeholder="Optionnel">
+
+      <label for="pays">Pays (Canada, France, etc.)</label>
+      <input type="text" id="pays" name="pays" placeholder="Ex. Québec, France">
+
+      <label for="message">Votre question ou commentaire</label>
+      <textarea id="message" name="message" required placeholder="Décrivez votre situation (zone, kit, problème)…"></textarea>
+
+      <button type="submit">Envoyer par courriel →</button>
+    </form>
+
+    <h2 class="section-title">Échanger avec d’autres personnes</h2>
+    <div class="channels">
+      <article class="card">
+        <h3>📘 Groupe Facebook (à venir)</h3>
+        <p>
+          Un groupe public « Guide Starlink francophone » pourra être créé pour les photos d’installation,
+          les retours d’expérience et l’entraide. Le lien sera ajouté ici dès qu’il sera ouvert.
+        </p>
+        <p style="font-size:0.88rem;color:var(--muted)">
+          En attendant, vous pouvez nous demander d’être prévenu via le formulaire ci-dessus.
+        </p>
+      </article>
+      <article class="card">
+        <h3>📋 FAQ collective</h3>
+        <p>Les bonnes questions reçues par courriel peuvent être reprises (sans nom) dans la
+          <a href="faq.html">FAQ</a> pour aider tout le monde.</p>
+      </article>
+      <article class="card">
+        <h3>🔗 Ressources officielles</h3>
+        <p>
+          <a href="https://www.starlink.com/" target="_blank" rel="noopener">Site Starlink</a> ·
+          <a href="https://support.starlink.com/" target="_blank" rel="noopener">Centre d’aide officiel</a>
+        </p>
+      </article>
+    </div>
+
+    <div class="notice">
+      <strong>Vie privée :</strong> n’envoyez pas de mots de passe, numéros de compte complets ni photos
+      montrant votre adresse exacte. Pour le support facturation, utilisez toujours le site officiel.
+    </div>
+  </main>
+
+  <footer class="site-footer">
+    <p><a href="index.html">← Accueil</a></p>
+  </footer>
+  <script src="assets/js/main.js" defer></script>
+  <script>
+    document.getElementById('contact-form').addEventListener('submit', function (e) {
+      e.preventDefault();
+      var nom = document.getElementById('nom').value.trim();
+      var pays = document.getElementById('pays').value.trim();
+      var msg = document.getElementById('message').value.trim();
+      if (!msg) return;
+      var body = msg + (pays ? '\n\nPays / région : ' + pays : '') + (nom ? '\n\nDe : ' + nom : '');
+      var subject = encodeURIComponent('Question — Guide Starlink francophone');
+      window.location.href = 'mailto:infodunet896@gmail.com?subject=' + subject + '&body=' + encodeURIComponent(body);
+    });
+  </script>
+</body>
+</html>
