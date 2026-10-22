@@ -314,6 +314,12 @@ main { max-width: 1100px; margin: 0 auto; padding: 2rem 1.25rem 4rem; }
   border: 0;
 }
 
+.video-wrap--short {
+  aspect-ratio: 9 / 16;
+  max-width: 300px;
+  margin-inline: auto;
+}
+
 .faq-item {
   border: 1px solid var(--border);
   border-radius: 10px;
