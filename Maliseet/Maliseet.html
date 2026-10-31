@@ -1,0 +1,381 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Les Wolastoqiyik (Malécites) — Histoire et Culture | Premières Nations du Québec</title>
+  <meta name="description" content="Découvrez les Wolastoqiyik (Malécites), peuple algonquien du fleuve Saint-Jean : territoire Wolastokuk, Confédération Wabanaki, langue wolastoqey et résilience."/>
+  <meta name="keywords" content="Wolastoqiyik, Malécites, Maliseet, Wolastoq, Saint-Jean, Wabanaki, Viger, Québec, Premières Nations"/>
+  <meta name="author" content="Jean-Claude Bescher"/>
+  <meta name="robots" content="index, follow"/><meta name="twitter:site" content="@JeanClaude89628"/>
+  <style>
+    @import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700;900&family=Lato:wght@300;400;700&display=swap');
+    :root{
+      --bleu-profond:#152B3D;
+      --bleu-moyen:#2A5F7E;
+      --turquoise:#3A8F8F;
+      --ocre-rouge:#B84C2A;
+      --ocre:#C47F2B;
+      --beige:#F4EDD6;
+      --creme:#FAF7F0;
+      --blanc:#FFFFFF;
+      --texte:#1E1E1E;
+      --texte-doux:#3A3A3A;
+    }
+    *{margin:0;padding:0;box-sizing:border-box}
+    html,body{scroll-behavior:smooth;height:100%;overflow-y:auto}
+    body{font-family:'Lato',sans-serif;background:var(--creme);color:var(--texte);line-height:1.8}
+
+    /* HERO */
+    .hero{position:relative;width:100%;height:60vh;min-height:380px;overflow:hidden;display:flex;align-items:center;justify-content:center}
+    .hero img{position:absolute;top:0;left:0;width:100%;height:100%;object-fit:cover;filter:brightness(0.48)}
+    .hero-content{position:relative;z-index:2;text-align:center;padding:2rem;max-width:900px}
+    .hero-nation{font-size:0.85rem;letter-spacing:5px;text-transform:uppercase;color:var(--turquoise);font-weight:700;margin-bottom:0.75rem}
+    .hero h1{font-family:'Playfair Display',serif;font-size:clamp(2.8rem,6vw,5.5rem);font-weight:900;color:#fff;text-shadow:2px 4px 24px rgba(0,0,0,0.7);line-height:1.1;margin-bottom:1.2rem}
+    .hero-sub{font-family:'Playfair Display',serif;font-size:1.25rem;color:rgba(255,255,255,0.9);font-style:italic}
+    .scroll-hint{position:absolute;bottom:2rem;left:50%;transform:translateX(-50%);color:rgba(255,255,255,0.6);font-size:0.78rem;letter-spacing:2px;text-transform:uppercase;animation:bob 2s infinite}
+    @keyframes bob{0%,100%{transform:translateX(-50%) translateY(0)}50%{transform:translateX(-50%) translateY(8px)}}
+
+    /* NAV */
+    .nav{background:var(--bleu-profond);padding:0.9rem 2rem;position:sticky;top:0;z-index:1000;display:flex;gap:1.4rem;justify-content:center;flex-wrap:wrap}
+    .nav a{color:#FFFFFF;text-decoration:none;font-size:0.82rem;letter-spacing:1.5px;text-transform:uppercase;font-weight:700;transition:color 0.2s;cursor:pointer}
+    .nav a:hover{color:var(--turquoise)}
+
+    /* LAYOUT */
+    .container{max-width:900px;margin:0 auto;padding:0 2rem}
+    .section{padding:5rem 2rem}
+    .section:nth-child(odd){background:var(--blanc)}
+    .section:nth-child(even){background:var(--beige)}
+    .sec-label{font-size:0.73rem;letter-spacing:4px;text-transform:uppercase;color:var(--bleu-moyen);font-weight:700;margin-bottom:0.6rem;text-align:center}
+    .sec-title{font-family:'Playfair Display',serif;font-size:clamp(1.9rem,3.5vw,2.8rem);color:var(--bleu-profond);text-align:center;line-height:1.2}
+    .divider{width:56px;height:4px;background:linear-gradient(to right,var(--bleu-moyen),var(--turquoise));margin:1.4rem auto 2.8rem;border-radius:2px}
+    p{font-size:1.04rem;line-height:1.9;color:var(--texte-doux);max-width:820px;margin:0 auto 1.5rem}
+
+    /* INTRO CARD */
+    .intro-wrap{background:var(--blanc);padding:4rem 2rem}
+    .intro-card{background:linear-gradient(135deg,var(--bleu-profond),var(--bleu-moyen));color:#fff;border-radius:18px;padding:3rem;text-align:center;max-width:820px;margin:0 auto;box-shadow:0 20px 60px rgba(21,43,61,0.3)}
+    .intro-kword{font-family:'Playfair Display',serif;font-size:3rem;color:var(--turquoise);margin-bottom:0.4rem}
+    .intro-card p{font-size:1.1rem;color:#fff;opacity:1;margin-bottom:0;line-height:1.9}
+    .intro-card strong{color:#fff}
+    .stats{display:flex;justify-content:center;gap:2.5rem;margin-top:2.5rem;flex-wrap:wrap}
+    .stat-n{font-family:'Playfair Display',serif;font-size:2.2rem;font-weight:900;color:var(--turquoise)}
+    .stat-l{font-size:0.78rem;letter-spacing:1.5px;text-transform:uppercase;color:rgba(255,255,255,0.75)}
+
+    /* HIGHLIGHT */
+    .highlight{background:#EAF6F8;border:2px solid var(--bleu-moyen);border-radius:14px;padding:2rem;max-width:820px;margin:2rem auto}
+    .highlight h3{font-family:'Playfair Display',serif;color:var(--bleu-profond);font-size:1.25rem;margin-bottom:1rem}
+    .highlight ul{list-style:none;padding:0}
+    .highlight ul li{padding:0.45rem 0 0.45rem 2rem;position:relative;font-size:0.97rem;color:var(--texte-doux)}
+    .highlight ul li::before{content:'◆';position:absolute;left:0;color:var(--turquoise);font-size:0.68rem;top:0.72rem}
+
+    /* CARDS */
+    .cards{display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:1.5rem;max-width:860px;margin:2.5rem auto}
+    .card{background:var(--blanc);border-radius:14px;padding:1.8rem 1.5rem;box-shadow:0 4px 20px rgba(0,0,0,0.08);border-top:4px solid var(--bleu-moyen);transition:transform 0.2s,box-shadow 0.2s}
+    .card:hover{transform:translateY(-4px);box-shadow:0 12px 36px rgba(0,0,0,0.13)}
+    .card-icon{font-size:2.1rem;margin-bottom:0.9rem}
+    .card h3{font-family:'Playfair Display',serif;font-size:1.15rem;color:var(--bleu-profond);margin-bottom:0.7rem}
+    .card p{font-size:0.93rem;margin:0;color:#444;line-height:1.7}
+
+    /* TIMELINE */
+    .timeline{position:relative;max-width:760px;margin:1rem auto}
+    .timeline::before{content:'';position:absolute;left:31px;top:0;bottom:0;width:3px;background:linear-gradient(to bottom,var(--bleu-moyen),var(--turquoise));border-radius:2px}
+    .tl-item{display:flex;gap:2rem;margin-bottom:2.5rem;align-items:flex-start}
+    .tl-dot{flex-shrink:0;width:64px;height:64px;background:var(--bleu-profond);border:3px solid var(--turquoise);border-radius:50%;display:flex;align-items:center;justify-content:center;font-family:'Playfair Display',serif;font-weight:900;font-size:0.68rem;color:var(--turquoise);text-align:center;line-height:1.2;z-index:1}
+    .tl-box{background:var(--blanc);border-radius:12px;padding:1.5rem;box-shadow:0 4px 18px rgba(0,0,0,0.07);flex:1;border-left:4px solid var(--bleu-moyen)}
+    .tl-box h3{font-family:'Playfair Display',serif;font-size:1.18rem;color:var(--bleu-profond);margin-bottom:0.45rem}
+    .tl-box p{font-size:0.95rem;margin:0;color:#444}
+
+    /* TWO COL */
+    .two-col{display:grid;grid-template-columns:1fr 1fr;gap:3rem;max-width:860px;margin:0 auto;align-items:center}
+    @media(max-width:640px){.two-col{grid-template-columns:1fr}.nav{gap:0.8rem}}
+    .two-col img{width:100%;border-radius:14px;box-shadow:0 10px 36px rgba(0,0,0,0.14)}
+
+    /* IMG */
+    .img-wide{width:100%;max-width:860px;margin:2rem auto;display:block;border-radius:16px;box-shadow:0 10px 36px rgba(0,0,0,0.14)}
+    .img-cap{text-align:center;font-style:italic;font-size:0.85rem;color:#777;margin-top:0.6rem}
+
+    /* QUOTE */
+    .quote-sec{background:linear-gradient(135deg,var(--bleu-profond),#0A2233);padding:5rem 2rem;text-align:center}
+    .quote-sec blockquote{font-family:'Playfair Display',serif;font-size:clamp(1.3rem,3vw,1.9rem);color:#fff;font-style:italic;max-width:720px;margin:0 auto;line-height:1.65}
+    .quote-src{color:rgba(255,255,255,0.6);font-size:0.85rem;margin-top:1.5rem;letter-spacing:2px;text-transform:uppercase}
+
+    /* COMMUNITIES */
+    .comm-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(200px,1fr));gap:1rem;max-width:860px;margin:2rem auto}
+    .comm-card{background:var(--blanc);border-radius:12px;padding:1.2rem 1.4rem;box-shadow:0 3px 14px rgba(0,0,0,0.07);border-left:4px solid var(--bleu-moyen)}
+    .comm-card h4{font-family:'Playfair Display',serif;color:var(--bleu-profond);font-size:1rem;margin-bottom:0.3rem}
+    .comm-card p{font-size:0.85rem;color:#555;margin:0}
+
+    /* FOOTER */
+    footer{background:var(--bleu-profond);color:var(--beige);text-align:center;padding:3rem 2rem}
+    footer h3{font-family:'Playfair Display',serif;font-size:1.5rem;color:var(--turquoise);margin-bottom:1rem}
+    footer p{font-size:0.88rem;color:rgba(244,237,214,0.82);max-width:600px;margin:0 auto 0.5rem;line-height:1.7}
+    footer .sources{margin-top:2rem;font-size:0.78rem;color:rgba(244,237,214,0.5)}
+    footer .sources a{color:var(--turquoise);text-decoration:none}
+
+    /* SHARE FOOTER */
+    .share-footer{background:#f5f0e8;border-top:3px solid var(--ocre);padding:3rem 2rem;text-align:center}
+    .share-footer h4{font-family:'Playfair Display',serif;font-size:1.4rem;color:#5a3a1a;margin-bottom:0.5rem}
+    .share-footer p{font-size:0.95rem;color:#5a3a1a;margin-bottom:1.8rem}
+    .share-btns{display:flex;flex-wrap:wrap;justify-content:center;gap:0.9rem}
+    .share-btns a,.share-btns button{display:inline-flex;align-items:center;gap:0.5rem;padding:0.85rem 1.6rem;border-radius:50px;font-size:0.95rem;font-weight:700;text-decoration:none;cursor:pointer;border:none;transition:transform 0.2s,opacity 0.2s;letter-spacing:0.5px}
+    .share-btns a:hover,.share-btns button:hover{transform:translateY(-2px);opacity:0.9}
+    .btn-fb-big{background:#1877F2;color:#fff}
+    .btn-group-big{background:#145dbf;color:#fff}
+    .btn-messenger-big{background:#0084FF;color:#fff}
+    .btn-whatsapp-big{background:#25D366;color:#000}
+    .btn-email-big{background:#555;color:#fff}
+    .btn-copy-big{background:var(--ocre);color:#000}
+
+    /* LEGENDES */
+    .legendes-sec{padding:5rem 2rem;background:linear-gradient(180deg,#0d0d0d,#111);text-align:center}
+    .legendes-sec h2{font-family:'Playfair Display',serif;font-size:clamp(1.8rem,3vw,2.4rem);color:#fff;margin-bottom:2.5rem}
+    .legende-grid{display:flex;flex-wrap:wrap;justify-content:center;gap:1.5rem;max-width:1100px;margin:0 auto}
+    .legende-card{background:rgba(255,255,255,0.04);border:1px solid rgba(58,143,143,0.2);border-radius:16px;padding:2rem 1.5rem;width:calc(50% - 1rem);min-width:280px;text-align:left;transition:transform 0.3s,border-color 0.3s}
+    .legende-card:hover{transform:translateY(-4px);border-color:rgba(58,143,143,0.5)}
+    .legende-icon{font-size:2.2rem;margin-bottom:0.8rem}
+    .legende-card h3{font-family:'Playfair Display',serif;font-size:1.15rem;color:var(--turquoise);margin-bottom:0.8rem;line-height:1.3}
+    .legende-card p{font-size:0.88rem;color:rgba(255,255,255,0.72);line-height:1.8}
+    @media(max-width:600px){.legende-card{width:100%}}
+  </style>
+  <link rel="stylesheet" href="../style.css">
+  <link rel="stylesheet" href="../lang-switcher.css">
+  <script src="../nation-i18n.js" defer></script>
+  <script src="../lang-switcher.js" defer></script>
+
+  <meta property="og:title" content="Les Wolastoqiyik (Malécites) — Histoire et Culture | Premières Nations du Québec">
+  <meta property="og:description" content="Découvrez les Wolastoqiyik (Malécites), peuple algonquien du fleuve Saint-Jean : territoire Wolastokuk, Confédération Wabanaki, langue wolastoqey et résilience.">
+  <meta property="og:url" content="https://socrate83.github.io/premieres-nations-quebec/Maliseet.html">
+  <meta property="og:type" content="article">
+  <meta property="og:image" content="https://socrate83.github.io/premieres-nations-quebec/images/articles/wolastoq_canoe.png">
+  <meta property="og:locale" content="fr_FR">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Les Wolastoqiyik (Malécites) — Histoire et Culture | Premières Nations du Québec">
+  <meta name="twitter:description" content="Découvrez les Wolastoqiyik (Malécites), peuple algonquien du fleuve Saint-Jean : territoire Wolastokuk, Confédération Wabanaki et résilience.">
+  <meta name="twitter:image" content="https://socrate83.github.io/premieres-nations-quebec/images/articles/wolastoq_canoe.png">
+</head>
+<body data-pn-nation="maliseet">
+<style id="pn-nav-accueil-style">
+.pn-nav-accueil{position:sticky;top:0;z-index:500;display:flex;flex-wrap:wrap;gap:0.5rem 1rem;align-items:center;justify-content:center;padding:0.65rem 1rem;background:#141414;border-bottom:2px solid #c8920a;font-family:'Lato',Georgia,system-ui,sans-serif}
+.pn-nav-accueil a{color:#e8b020;text-decoration:none;font-weight:700;font-size:0.82rem;padding:0.45rem 1rem;border-radius:50px;border:1px solid rgba(232,176,32,0.4);transition:background .2s,color .2s}
+.pn-nav-accueil a:hover{background:#c8920a;color:#000}
+.pn-nav-accueil a.pn-nav-accueil__home{background:#c8920a;color:#000;border-color:#c8920a}
+.pn-nav-accueil--light{background:#f4efe6;border-bottom:2px solid #8b4513}
+.pn-nav-accueil--light a{color:#2c5530;border-color:rgba(44,85,48,0.35)}
+.pn-nav-accueil--light a:hover{background:#2c5530;color:#fff}
+.pn-nav-accueil--light a.pn-nav-accueil__home{background:#2c5530;color:#fff}
+</style>
+<nav class="pn-nav-accueil" aria-label="Navigation">
+  <a class="pn-nav-accueil__home" href="../Home.html" data-i18n="nav.backHome">← Retour à l'accueil</a>
+  <a href="../Articles.html" data-i18n="nav.allArticles">📚 Tous les articles</a>
+</nav>
+
+  <section class="hero">
+    <img src="images/wabanaki_canoe.jpg" alt="Canoë traditionnel wabanaki sur le Wolastoq" />
+    <div class="hero-content">
+      <p class="hero-nation">Premières Nations du Québec</p>
+      <h1>Les Wolastoqiyik</h1>
+      <p class="hero-sub">Malécites — « Peuple de la belle et généreuse rivière » · Gardiens du Wolastoq</p>
+    </div>
+    <div class="scroll-hint">↓ Découvrir</div>
+  </section>
+
+  <nav class="nav" id="navbar">
+    <a onclick="goTo('origines')">Origines</a>
+    <a onclick="goTo('territoire')">Territoire</a>
+    <a onclick="goTo('organisation')">Organisation</a>
+    <a onclick="goTo('culture')">Culture</a>
+    <a onclick="goTo('histoire')">Histoire</a>
+    <a onclick="goTo('aujourd-hui')">Aujourd'hui</a>
+  </nav>
+
+  <article class="article-ecoute">
+<div id="pn-nation-root">
+<div class="intro-wrap">
+    <div class="intro-card">
+      <div class="intro-kword">Wolastoqey !</div>
+      <p>Les <strong>Wolastoqiyik</strong> — que les Européens ont appelés <em>Malécites</em> ou <em>Maliseet</em> — sont un peuple algonquien dont l'existence entière est rythmée par le <strong>Wolastoq</strong> (la rivière Saint-Jean). Leur nom signifie « peuple de la belle et généreuse rivière ». Pêcheurs, chasseurs et navigateurs exceptionnels, ils ont forgé une civilisation fluviale unique, profondément liée aux eaux, aux forêts et aux saisons du <em>Wolastokuk</em>. Aujourd'hui, la Première Nation Malécite de Viger perpétue un héritage millénaire de résilience et de solidarité.</p>
+      <div class="stats">
+        <div><div class="stat-n">~55 000 km²</div><div class="stat-l">de territoire traditionnel</div></div>
+        <div><div class="stat-n">~2 000</div><div class="stat-l">Wolastoqiyik au Canada</div></div>
+        <div><div class="stat-n">1</div><div class="stat-l">Communauté au Québec</div></div>
+      </div>
+    </div>
+  </div>
+
+  <section class="section" id="origines">
+    <div class="container">
+      <div class="sec-label">Aux racines du Wolastokuk</div>
+      <h2 class="sec-title">Origines et identité</h2>
+      <div class="divider"></div>
+      <p>Les Wolastoqiyik font partie de la grande famille des peuples <strong>algonquiens</strong> et occupent depuis des millénaires le bassin du fleuve Saint-Jean. Leur nom, <strong>Wolastoqiyik</strong>, vient de <em>Wolastoq</em> — « la belle et généreuse rivière » — et affirme une identité indissociable de cette artère d'eau. Le territoire entier s'appelle <strong>Wolastokuk</strong>.</p>
+      <p>Les Européens ont d'abord utilisé le terme <strong>Etchemins</strong>, puis <strong>Malécites</em> — un mot d'origine <em>mi'kmaq</em> signifiant « ceux qui parlent lentement », sans doute en référence aux différences linguistiques entre les deux nations. Aujourd'hui, <strong>Wolastoqiyik</strong> est le terme privilégié pour désigner le peuple dans son ensemble.</p>
+      <p>La langue <strong>Wolastoqey latuwewakon</strong> appartient à la famille des langues algonquiennes orientales et conserve des liens très proches avec le <em>passamaquoddy</em>. Elle est encore vivante au Maine et au Nouveau-Brunswick, et des projets de revitalisation voient le jour au Québec.</p>
+      <div class="highlight">
+        <h3>🌊 Cosmologie wolastoqiyik — Gluskap et le fleuve créateur</h3>
+        <ul>
+          <li><strong>Gluskap</strong> (ou <em>Keluwoskap</em>) est le héros créateur de la tradition wolastoqiyik. Selon la légende, il a créé le <strong>Wolastoq</strong> en abattant un arbre qui frappa le monstre <em>Aglebe'm</em>, libérant les eaux du fleuve.</li>
+          <li>Le <strong>Wolastoq</strong> n'est pas seulement une rivière : c'est un être vivant, spirituel, qui relie tous les sites de la nation — villages, lieux de pêche, cimetières et lieux de cérémonie.</li>
+          <li>Les <strong>aînés et aînées</strong> sont les gardiens de la tradition orale, de la langue et des enseignements spirituels. Leur parole guide la communauté.</li>
+          <li>La <strong>solidarité</strong> est la valeur fondamentale : le partage du poisson, du gros gibier et des ressources reste aujourd'hui un pilier de la vie communautaire.</li>
+        </ul>
+      </div>
+    </div>
+  </section>
+
+  <section class="section" id="territoire">
+    <div class="container">
+      <div class="sec-label">Wolastokuk</div>
+      <h2 class="sec-title">Territoire et géographie</h2>
+      <div class="divider"></div>
+      <p>Le territoire traditionnel des Wolastoqiyik, appelé <strong>Wolastokuk</strong>, s'étend sur environ <strong>55 000 km²</strong> depuis les sources du fleuve dans les monts Notre-Dame, à la frontière Québec-Maine, jusqu'à la baie de Fundy. Ce bassin versant immense constitue un paysage vivant où chaque cours d'eau, chaque île et chaque rapide porte un nom et une histoire.</p>
+      <img src="images/wabanaki_confederacy_map.png" alt="Carte de la Confédération Wabanaki et territoire wolastoqiyik" class="img-wide"/>
+      <p class="img-cap">Le Wolastokuk — territoire traditionnel des Wolastoqiyik, du Québec à la baie de Fundy</p>
+      <p>Le <strong>Wolastoq</strong> (fleuve Saint-Jean) est l'artère centrale de ce territoire. Long de 673 km, il traverse trois provinces et deux pays. En 2011, l'ensemble du bassin versant a été désigné <strong>lieu historique national du Canada</strong>, reconnaissant l'importance spirituelle, culturelle et historique de cette étendue d'eau pour le peuple wolastoqiyik.</p>
+      <p>Les villages traditionnels étaient situés stratégiquement au-dessus des plaines inondables — comme à <strong>Meductic</strong> — tandis que les champs cultivés occupaient les zones basses fertilisées par les crues printanières. Cette organisation intelligente permettait une exploitation durable des ressources.</p>
+    </div>
+  </section>
+
+  <section class="section" id="organisation">
+    <div class="container">
+      <div class="sec-label">Politique et alliance</div>
+      <h2 class="sec-title">Organisation sociale et Confédération Wabanaki</h2>
+      <div class="divider"></div>
+      <p>La société wolastoqiyik était organisée en <strong>bandes</strong> autonomes, chacune avec son <em>conseil de bande</em> composé d'un chef de guerre, d'un chef civil et de représentants familiaux. Pour les questions concernant l'ensemble de la nation, un <strong>conseil général</strong> réunissait les délégués de toutes les bandes.</p>
+      <p>Les Wolastoqiyik sont l'un des piliers de la <strong>Confédération Wabanaki</strong> — « peuple de l'aube » —, alliance défensive regroupant les Wolastoqiyik, Abenaki, Passamaquoddy, Penobscot et Mi'kmaq. Cette confédération a permis de résister pendant des siècles à l'expansion de la Haudenosaunee. Les conseils se tenaient dans des lieux de rassemblement comme l'île <strong>Kani Uten</strong>, près de l'embouchure du fleuve.</p>
+      <div class="highlight">
+        <h3>🏛️ La Confédération Wabanaki</h3>
+        <ul>
+          <li><strong>Alliance défensive</strong> contre l'expansion de la Confédération Haudenosaunee (Iroquoise).</li>
+          <li>Les Wolastoqiyik occupaient une position <strong>centrale</strong> grâce à leur contrôle du fleuve Saint-Jean, principale voie de communication intérieure.</li>
+          <li>Le <strong>Grand Conseil</strong> réunissait les chefs des nations membres pour les décisions de guerre, de paix et d'alliance.</li>
+          <li>Cette structure politique complexe a perduré du XVIIe siècle jusqu'à la conquête britannique.</li>
+        </ul>
+      </div>
+    </div>
+  </section>
+
+  <section class="section" id="culture">
+    <div class="container">
+      <div class="sec-label">Traditions vivantes</div>
+      <h2 class="sec-title">Culture, langue et savoir-faire</h2>
+      <div class="divider"></div>
+      <div class="two-col">
+        <div>
+          <p>La culture wolastoqiyik est marquée par une relation intime avec le fleuve et la forêt. Les <strong>canoës d'écorce de bouleau</strong> — légers, rapides et résistants — permettaient de parcourir les 700 km du réseau hydrographique. Construits entièrement à partir de matériaux naturels (écorce de bouleau, cèdre, racines de sapin, gomme d'épinette), ils étaient le moyen de transport et de commerce essentiel.</p>
+          <p>L'<strong>habitation traditionnelle</strong> était un wigwam couvert d'écorce de bouleau, adapté aux saisons rigoureuses du Wolastokuk. Les Wolastoqiyik maîtrisaient également la fabrication de <strong>raquettes</strong>, de <strong>toboggans</strong> et de <strong>harpons</strong> — technologies raffinées pour survivre dans un environnement exigeant.</p>
+        </div>
+        <div>
+          <img src="images/wabanaki_wigwam.jpg" alt="Wigwam wolastoqiyik — habitation traditionnelle" />
+          <p class="img-cap">Wigwam wolastoqiyik — structure d'écorce de bouleau adaptée aux saisons rigoureuses</p>
+        </div>
+      </div>
+      <div class="cards">
+        <div class="card"><div class="card-icon">🗣️</div><h3>Langue : Wolastoqey latuwewakon</h3><p>Langue algonquienne orientale, très proche du passamaquoddy. Elle est encore parlée au Maine et au Nouveau-Brunswick. Au Québec, des projets d'immersion et de transmission intergénérationnelle se développent.</p></div>
+        <div class="card"><div class="card-icon">🛶</div><h3>Canoë d'écorce</h3><p>Le canot wolastoqiyik était construit entièrement à partir de matériaux naturels. Léger et rapide, il permettait de transporter plusieurs familles et de franchir les portages entre bassins versants.</p></div>
+        <div class="card"><div class="card-icon">🌊</div><h3>Le Wolastoq</h3><p>Le fleuve Saint-Jean est le cœur du territoire. Source de nourriture, de transport et de spiritualité, il relie tous les sites de la nation depuis des millénaires.</p></div>
+        <div class="card"><div class="card-icon">🤝</div><h3>Solidarité</h3><p>La distribution de boîtes de viande et de poisson aux membres dispersés perpétue aujourd'hui le principe fondamental de partage wolastoqiyik.</p></div>
+        <div class="card"><div class="card-icon">🌲</div><h3>Forêt boréale</h3><p>La forêt du Wolastokuk fournissait nourriture, médicaments, matériaux de construction et bois de chauffe. Chaque plante, chaque arbre avait sa place dans le savoir traditionnel.</p></div>
+        <div class="card"><div class="card-icon">🐟</div><h3>Saumon et pêche</h3><p>Le saumon du Wolastoq est un aliment sacré. Les frayères étaient protégées et les techniques de pêche transmises de génération en génération avec un profond respect pour le poisson.</p></div>
+      </div>
+    </div>
+  </section>
+
+  <section class="quote-sec">
+    <blockquote>« Le Wolastoq est notre mère. Ses eaux nous nourrissent, ses rives nous abritent, et ses histoires nous instruisent. »</blockquote>
+    <p class="quote-src">— Sagesse wolastoqiyik traditionnelle</p>
+  </section>
+
+  <section class="section" id="histoire">
+    <div class="container">
+      <div class="sec-label">Des millénaires d'histoire</div>
+      <h2 class="sec-title">Histoire ancienne et contact européen</h2>
+      <div class="divider"></div>
+      <p>Les Wolastoqiyik habitent le <strong>Wolastokuk</strong> depuis au moins <strong>12 000 ans</strong>, selon les données archéologiques et les récits oraux. Ils étaient chasseurs-cueilleurs-pêcheurs semi-nomades, déplaçant leurs villages au rythme des saisons et des migrations du gibier.</p>
+      <p>Le premier contact documenté avec les Européens remonte à <strong>1604</strong>, lorsque <strong>Samuel de Champlain</strong> explore la région. Les Wolastoqiyik deviennent rapidement des partenaires commerciaux et alliés stratégiques des Français dans la traite des fourrures. Fort La Tour, construit sur le fleuve Saint-Jean au début du 17e siècle, devient un centre d'échange majeur.</p>
+      <p>Après la conquête britannique de 1763, les Wolastoqiyik doivent composer avec une nouvelle puissance qui ignore leurs droits. Les <strong>traités de paix et d'amitié</strong> signés avec la Couronne britannique visent à établir une coexistence pacifique, mais sont souvent bafoués. La perte progressive des terres et la politique d'assimilation marquent les siècles suivants.</p>
+      <div class="timeline">
+        <div class="tl-item">
+          <div class="tl-dot">1604</div>
+          <div class="tl-box"><h3>Premier contact</h3><p>Champlain explore le fleuve Saint-Jean. Début d'une alliance avec les Français qui durera plus de 150 ans.</p></div>
+        </div>
+        <div class="tl-item">
+          <div class="tl-dot">1620s</div>
+          <div class="tl-box"><h3>Fort La Tour</h3><p>Construction d'un poste de traite français au confluent du fleuve. Les Wolastoqiyik deviennent partenaires essentiels dans le commerce des fourrures.</p></div>
+        </div>
+        <div class="tl-item">
+          <div class="tl-dot">1763</div>
+          <div class="tl-box"><h3>Conquête britannique</h3><p>Après la défaite française, les Wolastoqiyik doivent négocier avec les Britanniques. Les droits ancestraux sont progressivement ignorés.</p></div>
+        </div>
+        <div class="tl-item">
+          <div class="tl-dot">1786</div>
+          <div class="tl-box"><h3>Premières réserves</h3><p>Les Britanniques assignent des terres aux Wolastoqiyik, notamment dans la vallée de la rivière Tobique. Le territoire traditionnel est déjà très réduit.</p></div>
+        </div>
+        <div class="tl-item">
+          <div class="tl-dot">1989</div>
+          <div class="tl-box"><h3>Reconnaissance québécoise</h3><p>L'Assemblée nationale du Québec reconnaît officiellement la Nation malécite comme la onzième nation autochtone du Québec. Tournant politique majeur.</p></div>
+        </div>
+        <div class="tl-item">
+          <div class="tl-dot">2011</div>
+          <div class="tl-box"><h3>Wolastoq NHS</h3><p>Le bassin versant du Wolastoq est désigné lieu historique national du Canada, reconnaissant l'importance spirituelle et culturelle du fleuve pour le peuple wolastoqiyik.</p></div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="section" id="aujourd-hui">
+    <div class="container">
+      <div class="sec-label">XXIe siècle</div>
+      <h2 class="sec-title">Les Wolastoqiyik aujourd'hui</h2>
+      <div class="divider"></div>
+      <p>La Première Nation Malécite de Viger est la seule bande wolastoqiyik reconnue au Québec. Ses membres sont dispersés principalement entre <strong>Lévis</strong>, <strong>Rivière-du-Loup</strong> et la région de <strong>Cacouna</strong>, avec la réserve de <strong>Kataskomiq</strong> près de Rivière-du-Loup comme territoire officiel.</p>
+      <p>Cette dispersion géographique rend la transmission culturelle plus difficile, mais la communauté reste mobilisée. Le <strong>séminaire Wahsipekuk</strong>, un programme d'immersion culturelle à bord d'un navire-école, permet aux jeunes de renouer avec leur patrimoine. La cuisine traditionnelle — basée sur les produits de la chasse, de la pêche et de la forêt — joue également un rôle clé dans cette revitalisation.</p>
+      <div class="cards">
+        <div class="card"><div class="card-icon">🌿</div><h3>Revitalisation linguistique</h3><p>Des projets d'immersion en wolastoqey voient le jour. Les aînés transmettent la langue aux jeunes, perpétuant une tradition orale millénaire.</p></div>
+        <div class="card"><div class="card-icon">⚖️</div><h3>Droits ancestraux</h3><p>La Première Nation Malécite de Viger défend les droits ancestraux sur le Wolastokuk et revendique une reconnaissance territoriale plus forte.</p></div>
+        <div class="card"><div class="card-icon">🛶</div><h3>Reprise du canot</h3><p>La construction de canots d'écorce traditionnels connaît un renouveau. Des lancements de canots wolastoqiyik ont lieu sur le fleuve, reliant le présent à la tradition.</p></div>
+        <div class="card"><div class="card-icon">🍽️</div><h3>Cuisine et partage</h3><p>La distribution de boîtes de viande et de poisson perpétue la valeur fondamentale de solidarité. La cuisine traditionnelle est un vecteur de rassemblement et de fierté.</p></div>
+      </div>
+      <p style="margin-top:2.5rem;font-style:italic;text-align:center;color:#555;">La Première Nation Malécite de Viger continue de défendre les droits ancestraux de son peuple et de promouvoir la reconnaissance du Wolastokuk comme territoire traditionnel. Les défis demeurent, mais la résilience culturelle et l'attachement au Wolastoq assurent la pérennité de la nation wolastoqiyik pour les générations futures.</p>
+    </div>
+  </section>
+</div>
+</article>
+<div id="pn-nation-tail">
+<div class="share-footer">
+    <h4 data-i18n="nationShare.title">📢 Partager cet article</h4>
+    <p>Vous avez aimé ? Faites découvrir les Wolastoqiyik à votre entourage !</p>
+    <div class="share-btns">
+      <a class="btn-fb-big" href="https://www.facebook.com/sharer/sharer.php?u=https://socrate83.github.io/premieres-nations-quebec/Maliseet.html" target="_blank" data-i18n="nationShare.facebook">📘 Facebook</a>
+      <a class="btn-group-big" href="https://www.facebook.com/groups/1451283625021958" target="_blank" data-i18n="nationShare.groupFb">👥 Groupe FB</a>
+      <a class="btn-messenger-big" href="https://www.facebook.com/dialog/send?link=https://socrate83.github.io/premieres-nations-quebec/Maliseet.html&app_id=291494419107518&redirect_uri=https://socrate83.github.io/premieres-nations-quebec/Maliseet.html" target="_blank" data-i18n="nationShare.messenger">💬 Messenger</a>
+      <a class="btn-whatsapp-big" href="https://api.whatsapp.com/send?text=D%C3%A9couvre+cet+article+sur+les+Wolastoqiyik+%3A+https://socrate83.github.io/premieres-nations-quebec/Maliseet.html" target="_blank" data-i18n="nationShare.whatsapp">🟢 WhatsApp</a>
+      <a class="btn-email-big" href="mailto:?subject=Article+sur+les+Wolastoqiyik&body=Je+te+partage+cet+article+sur+les+Wolastoqiyik+%3A+https://socrate83.github.io/premieres-nations-quebec/Maliseet.html" target="_blank" data-i18n="nationShare.email">📧 Courriel</a>
+      <button class="btn-copy-big" onclick="navigator.clipboard.writeText('https://socrate83.github.io/premieres-nations-quebec/Maliseet.html').then(function(){var t=document.getElementById('toast-share');t.style.opacity='1';t.style.transform='translateX(-50%) translateY(0)';setTimeout(function(){t.style.opacity='0';t.style.transform='translateX(-50%) translateY(20px)';},2500);})" data-i18n="nationShare.copyLink">🔗 Copier le lien</button>
+    </div>
+  </div>
+  <div id="toast-share" style="position:fixed;bottom:2rem;left:50%;transform:translateX(-50%) translateY(20px);background:#C8920A;color:#000;font-weight:700;font-size:0.9rem;padding:0.7rem 2rem;border-radius:30px;opacity:0;transition:all 0.3s;z-index:9999;pointer-events:none" data-i18n="nationShare.linkCopied">✅ Lien copié !</div>
+
+  <section class="legendes-sec">
+    <div class="gold-line"></div>
+    <h2 data-i18n="nationShare.legendesTitle">Légendes, histoires et anecdotes</h2>
+    <div class="legende-grid">
+      <div class="legende-card"><div class="legende-icon">🌊</div><h3>Gluskap et la création du Wolastoq</h3><p>Selon la tradition, le monstre <em>Aglebe'm</em> retenait toutes les eaux du monde, provoquant une sécheresse. Gluskap abattit un immense arbre qui frappa le monstre à la tête, libérant les eaux. L'arbre devint le fleuve Wolastoq, et ses branches formèrent les tributaires. Cette légende explique la puissance et la beauté du fleuve.</p></div>
+      <div class="legende-card"><div class="legende-icon">🐟</div><h3>Le saumon sacré</h3><p>Le saumon du Wolastoq est un don sacré. Les Wolastoqiyik pratiquaient une pêche respectueuse, ne prenant que ce dont ils avaient besoin et remerciant l'esprit du poisson. Les frayères étaient protégées et les techniques de pêche transmises avec soin.</p></div>
+      <div class="legende-card"><div class="legende-icon">🤝</div><h3>L'alliance franco-wolastoqiyik</h3><p>Dès 1604, les Wolastoqiyik accueillent les Français et leur enseignent à survivre dans le climat rigoureux. Cette alliance durera plus de 150 ans et sera déterminante dans l'histoire de l'Acadie. Les mariages entre Wolastoqiyik et Français renforçaient les liens communautaires.</p></div>
+      <div class="legende-card"><div class="legende-icon">🛶</div><h3>Le canot, artefact culturel</h3><p>Le canot d'écorce de bouleau n'est pas qu'un moyen de transport : c'est un artefact culturel porteur d'identité. Sa fabrication implique tout le savoir-faire wolastoqiyik — choix de l'écorce, traitement du cèdre, couture au racines de sapin, calfatage à la gomme d'épinette. Le canot incarne la relation entre le peuple et le fleuve.</p></div>
+    </div>
+  </section>
+<footer>
+    <h3>Wolastoqiyik — Peuple de la Belle Rivière</h3>
+    <p>Cet article est un hommage à la nation wolastoqiyik et à sa résilience millénaire sur les rives du Wolastoq.</p>
+    <p>🌐 <a href="https://www.vigerfirstnation.com" target="_blank">vigerfirstnation.com</a> | <a href="https://www.quebec.ca/en/government/quebec-at-a-glance/first-nations-and-inuit/profile-of-the-nations/malecite" target="_blank">Gouvernement du Québec — Profil des Malécites</a></p>
+    <div class="sources"><strong>Sources historiques :</strong><br/>
+    Encyclopédie canadienne — Wolastoqiyik (Maliseet) (2025) • Gouvernement du Québec — Profil des nations autochtones (2025) • Parcs Canada — Wolastoq National Historic Site (2011) • The Canadian Encyclopedia • Archives et records locaux</div>
+  </footer>
+</div>
+<script>
+    function goTo(id){var el=document.getElementById(id);if(!el)return;var nav=document.getElementById('navbar');var navH=nav?nav.offsetHeight:0;var top=el.getBoundingClientRect().top+document.documentElement.scrollTop-navH-10;document.documentElement.scrollTop=top;document.body.scrollTop=top;}
+  </script>
+  <script src="../audio-player.js" defer></script>
+</body>
+</html>
