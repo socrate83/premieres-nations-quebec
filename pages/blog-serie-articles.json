@@ -1,6 +1,6 @@
 {
   "baseUrl": "",
-  "introNote": "Tous les articles numérotés du site (#1 à #82 et les prochains) : séries de 10 articles (Série 1 = #1–#10, Série 2 = #11–#20, …). Mettre à jour via scripts/reorganize-blog-series.py après chaque nouveau numéro.",
+  "introNote": "Tous les articles numérotés du site (#1 à #84 et les prochains) : séries de 10 articles (Série 1 = #1–#10, Série 2 = #11–#20, …). Mettre à jour via scripts/reorganize-blog-series.py après chaque nouveau numéro.",
   "featured": {
     "n": "★",
     "title": "La Famille et les Premières Nations",
@@ -529,7 +529,7 @@
       ]
     },
     {
-      "label": "Série 9 — articles 81 à 82",
+      "label": "Série 9 — articles 81 à 84",
       "items": [
         {
           "n": "81",
@@ -542,13 +542,25 @@
           "title": "Hunter's Point / Wolf Lake : un joyau méconnu des Algonquins",
           "teaser": "Wolf Lake, Première Nation algonquine sans réserve depuis plus de 140 ans, et son territoire du lac Hunter's Point en Abitibi-Témiscamingue.",
           "file": "82 - Joyau meconu des des algonquins.html"
+        },
+        {
+          "n": "83",
+          "title": "Les Malécites (Maliseet) — Histoire et Culture",
+          "teaser": "Peuple de la vallée du Saint-Laurent et des Maritimes : histoire, résilience et identité malécite.",
+          "file": "Maliseet/Maliseet.html"
+        },
+        {
+          "n": "84",
+          "title": "Les Micmacs (Mi'kmaq) — Histoire et Culture",
+          "teaser": "Peuple autochtone de la Gaspésie et des Maritimes : langue mi'kmaw, territoire, légendes et résistance culturelle.",
+          "file": "Mi_kmaq/Micmacs.html"
         }
       ]
     }
   ],
   "stats": {
-    "articlesNumbered": 82,
+    "articlesNumbered": 84,
     "withFeatured": true,
-    "nextArticle": 83
+    "nextArticle": 85
   }
 }
