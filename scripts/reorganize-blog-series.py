@@ -1,5 +1,7 @@
 #!/usr/bin/env python3
-"""Réorganise blog-serie-articles.json en séries de 10 (1-10, 11-20, …) et régénère Articles.html."""
+"""Réorganise la série d'articles, régénère Articles.html et met à jour
+tous les compteurs du site : Home.html, Carnets.html, locales fr/en/es.
+"""
 import html
 import json
 import re
@@ -8,6 +10,9 @@ from pathlib import Path
 ROOT = Path(__file__).resolve().parent.parent
 CATALOG_PATHS = [ROOT / "blog-serie-articles.json", ROOT / "pages" / "blog-serie-articles.json"]
 ARTICLES_HTML = ROOT / "Articles.html"
+HOME_HTML = ROOT / "Home.html"
+CARNETS_HTML = ROOT / "Carnets.html"
+LOCALES = [ROOT / "locales" / "fr.json", ROOT / "locales" / "en.json", ROOT / "locales" / "es.json"]
 CHUNK = 10
 
 
@@ -15,15 +20,12 @@ def flatten_items(catalog):
     items = []
     for g in catalog.get("groups", []):
         for it in g.get("items", []):
-            n = int(str(it["n"]))
-            items.append((n, it))
+            items.append((int(str(it["n"])), it))
     items.sort(key=lambda x: x[0])
     return [it for _, it in items]
 
 
 def series_label(series_num: int, start: int, end: int) -> str:
-    if start == end:
-        return f"Série {series_num} — article {start}"
     return f"Série {series_num} — articles {start} à {end}"
 
 
@@ -31,14 +33,12 @@ def rebuild_groups(items):
     if not items:
         return []
     max_n = max(int(str(it["n"])) for it in items)
-    groups = []
-    series_num = 1
-    start = 1
+    groups, series_num, start = [], 1, 1
     while start <= max_n:
         end = min(start + CHUNK - 1, max_n)
-        chunk_items = [it for it in items if start <= int(str(it["n"])) <= end]
-        if chunk_items:
-            groups.append({"label": series_label(series_num, start, end), "items": chunk_items})
+        chunk = [it for it in items if start <= int(str(it["n"])) <= end]
+        if chunk:
+            groups.append({"label": series_label(series_num, start, end), "items": chunk})
             series_num += 1
         start += CHUNK
     return groups
@@ -46,13 +46,6 @@ def rebuild_groups(items):
 
 def escape(s):
     return html.escape(str(s or ""), quote=True)
-
-
-def item_href(it):
-    f = it.get("file", "")
-    if f.startswith("article") and f.endswith(".html") and not f.startswith("article"):
-        pass
-    return f
 
 
 def generate_catalog_html(catalog):
@@ -88,11 +81,9 @@ def patch_articles_html(catalog, max_n):
     text = ARTICLES_HTML.read_text(encoding="utf-8")
     new_ul = generate_catalog_html(catalog)
     text = re.sub(
-        r"<ul class=\"articles-catalog\">.*?</ul>",
-        f"<ul class=\"articles-catalog\">\n{new_ul}\n  </ul>",
-        text,
-        count=1,
-        flags=re.S,
+        r'<ul class="articles-catalog">.*?</ul>',
+        f'<ul class="articles-catalog">\n{new_ul}\n  </ul>',
+        text, count=1, flags=re.S,
     )
     text = re.sub(
         r"<title>Tous les articles \(1–\d+\)",
@@ -100,11 +91,83 @@ def patch_articles_html(catalog, max_n):
         text,
     )
     text = re.sub(
-        r'content="Catalogue des \d+ articles',
-        f'content="Catalogue des {max_n} articles',
+        r'<meta name="description" content="Catalogue des \d+ articles',
+        f'<meta name="description" content="Catalogue des {max_n} articles',
+        text,
+    )
+    text = re.sub(
+        r'<meta property="og:title" content="Tous les articles \(1–\d+\)',
+        f'<meta property="og:title" content="Tous les articles (1–{max_n})',
+        text,
+    )
+    text = re.sub(
+        r'<meta property="og:description" content="Catalogue des \d+ articles',
+        f'<meta property="og:description" content="Catalogue des {max_n} articles',
+        text,
+    )
+    text = re.sub(
+        r'<meta name="twitter:title" content="Tous les articles \(1–\d+\)',
+        f'<meta name="twitter:title" content="Tous les articles (1–{max_n})',
+        text,
+    )
+    text = re.sub(
+        r'<meta name="twitter:description" content="Catalogue des \d+ articles',
+        f'<meta name="twitter:description" content="Catalogue des {max_n} articles',
+        text,
+    )
+    text = re.sub(
+        r'Série numérotée #1 à #\d+',
+        f'Série numérotée #1 à #{max_n}',
         text,
     )
     ARTICLES_HTML.write_text(text, encoding="utf-8")
+
+
+def patch_home_html(max_n):
+    text = HOME_HTML.read_text(encoding="utf-8")
+    text = re.sub(
+        r'(Série thématique — Les articles \()\d+(\))',
+        f'\\g<1>{max_n}\\g<2>',
+        text,
+    )
+    text = re.sub(
+        r"(#1 à #)\d+",
+        f"\\g<1>{max_n}",
+        text,
+    )
+    HOME_HTML.write_text(text, encoding="utf-8")
+
+
+def patch_carnets_html(max_n):
+    text = CARNETS_HTML.read_text(encoding="utf-8")
+    text = re.sub(
+        r"(Voir les )\d+( articles de la série)",
+        f"\\g<1>{max_n}\\g<2>",
+        text,
+    )
+    CARNETS_HTML.write_text(text, encoding="utf-8")
+
+
+def patch_locales(max_n):
+    patterns = [
+        (r"(#1 à #)\d+", f"\\g<1>{max_n}"),
+        (r"(#1 to #)\d+", f"\\g<1>{max_n}"),
+        (r"(#1 a #)\d+", f"\\g<1>{max_n}"),
+        (r"(Tous les articles \(1–)\d+(\()", f"\\g<1>{max_n}\\g<2>"),
+        (r"(All articles \(1–)\d+(\()", f"\\g<1>{max_n}\\g<2>"),
+        (r"(Todos los artículos \(1–)\d+(\()", f"\\g<1>{max_n}\\g<2>"),
+        (r"(Série thématique — Les articles \()\d+(\))", f"\\g<1>{max_n}\\g<2>"),
+        (r"(Thematic series — Articles \()\d+(\))", f"\\g<1>{max_n}\\g<2>"),
+        (r"(Serie temática — Artículos \()\d+(\))", f"\\g<1>{max_n}\\g<2>"),
+        (r"(Tous les articles au même endroit\. Série 1 \(#1–#10\) à Série 9 \(#81–#)\d+(\()", f"\\g<1>{max_n}\\g<2>"),
+        (r"(All articles in one place\. Series 1 \(#1–#10\) to Series 9 \(#81–#)\d+(\()", f"\\g<1>{max_n}\\g<2>"),
+        (r"(Todos los artículos en un solo lugar\. Serie 1 \(#1–#10\) a Serie 9 \(#81–#)\d+(\()", f"\\g<1>{max_n}\\g<2>"),
+    ]
+    for path in LOCALES:
+        text = path.read_text(encoding="utf-8")
+        for pat, repl in patterns:
+            text = re.sub(pat, repl, text)
+        path.write_text(text, encoding="utf-8")
 
 
 def main():
@@ -127,6 +190,9 @@ def main():
         path.write_text(json.dumps(catalog, ensure_ascii=False, indent=2) + "\n", encoding="utf-8")
 
     patch_articles_html(catalog, max_n)
+    patch_home_html(max_n)
+    patch_carnets_html(max_n)
+    patch_locales(max_n)
 
     print(f"Réorganisé en {len(catalog['groups'])} séries, articles 1–{max_n}")
     for g in catalog["groups"]:
